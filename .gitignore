@@ -1,0 +1,9 @@
+*.aux
+*.bcf
+*.lof
+*.log
+*.maf
+*.mtc*
+*.out
+*.xml
+*.toc

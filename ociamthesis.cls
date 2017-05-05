@@ -67,7 +67,7 @@
 %
 
 \def\crest{{\includegraphics{figures/beltcrest.pdf}}}
-
+\def\crestcollege{{\includegraphics[width=0.25\linewidth]{figures/collegecrest.png}}}
 
 %
 % Define text area of page and margin offsets
@@ -200,7 +200,7 @@
   \begin{center}
   \vspace*{-3ex}
     { \LARGE {\bfseries {\@title}} \par}
-{\large \vspace*{25mm} {\crest \par} \vspace*{20mm}}
+{\large \vspace*{25mm} {\crest \crestcollege \par} \vspace*{20mm}}
     {{\Large Candidate no.\ \@candidateno} \par}
 {\large \vspace*{1ex}
     {Word count: {\@wordcount} \par}
@@ -216,7 +216,7 @@
 \else
   \begin{center}
     { \LARGE {\bfseries {\@title}} \par}
-{\large \vspace*{30mm} {\crest \par} \vspace*{25mm}}
+{\large \vspace*{30mm} {\crest \hspace{10mm} \crestcollege \par} \vspace*{25mm}}
     {{\Large \@author} \par}
 {\large \vspace*{1ex}
     {{\@college} \par}
