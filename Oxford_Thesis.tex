@@ -48,11 +48,25 @@
 % The science-type option: numerical in-text citation with references in order of appearance.
 \usepackage[style=numeric-comp, sorting=none, backend=biber, doi=false, isbn=false]{biblatex}
 \newcommand*{\bibtitle}{References}
-
+\usepackage{rotating}
+\usepackage{subfig}
 % The humanities-type option: author-year in-text citation with an alphabetical works cited.
 %\usepackage[style=authoryear, sorting=nyt, backend=biber, maxcitenames=2, useprefix, doi=false, isbn=false]{biblatex}
 %\newcommand*{\bibtitle}{Works Cited}
+\usepackage{ifthen} 
+\newboolean{uprightparticles}
+\setboolean{uprightparticles}{false} %Set true for upright particle symbols
 
+\newboolean{pdflatex}
+\setboolean{pdflatex}{true} % False for eps figures 
+
+\newboolean{articletitles}
+\setboolean{articletitles}{true} % False removes titles in references
+
+\newboolean{inbibliography}
+\setboolean{inbibliography}{false} %True once you enter the bibliography
+
+\input{lhcb-symbols-def}
 % This makes the bibliography left-aligned (not 'justified') and slightly smaller font.
 \renewcommand*{\bibfont}{\raggedright\small}
 
@@ -195,7 +209,13 @@
 \flushbottom
 \include{text/ch1-intro}
 \include{text/ch2-litreview}
-
+\include{text/ch3-detector}
+\include{text/ch4-selection}
+\include{text/ch5-massfit}
+\include{text/ch6-backgrounds}
+\include{text/ch7-cpfit}
+\include{text/ch8-systematics}
+\include{text/ch9-interpretation}
 
 %% APPENDICES %% 
 % Starts lettered appendices, adds a heading in table of contents, and adds a

@@ -1,44 +1,138 @@
+% $Id: introduction.tex 87303 2016-02-08 13:44:29Z lafferty $
 \begin{savequote}[8cm]
-Alles Gescheite ist schon gedacht worden.\\
-Man muss nur versuchen, es noch einmal zu denken.
+\textlatin{Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
 
-All intelligent thoughts have already been thought;\\
-what is necessary is only to try to think them again.
-  \qauthor{--- Johann Wolfgang von Goethe \cite{von_goethe_wilhelm_1829}}
+There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...
+  \qauthor{--- Cicero's \textit{de Finibus Bonorum et Malorum}}
 \end{savequote}
 
-\chapter{\label{ch:2-litreview}Background}
+\chapter{\label{ch:2-background}Background} 
 
 \minitoc
 
 \section{Introduction}
+\label{sec:Introduction}
 
-This document introduction won't serve as a complete primer on \LaTeX.  There are plenty of those online, and googling your questions will often get you answers, especially from \url{http://tex.stackexchange.com}.
+The CKM angle \Pgamma, defined as $\Pgamma \equiv arg\left(-\frac{\Vud{\Vub}^*}{\Vcd{\Vcb}^*}\right)$, is the least well known of the CKM angles. The latest \lhcb combination from direct measurements with charged and neutral \B decays and a variety for \D final states is $\left(70.9^{+7.1}_{-8.5}\right)^{\circ}$~\cite{LHCB-PAPER-2016-032-001}. Global fits to the CKM traingle from CKMfitter~\cite{CKMFitter2015} obtain a \Pgamma measurement of $(67.0^{+0.9}_{-2.0})^{\circ}$, where these uncertainties are driven by LQCD calculations. Therefore a degree level precison on a direct measurement of \Pgamma would test the consistency of these two measurements, which is an excellent test of the Standard Model. This can be achieved through a combination of many measurements of various \B and \D decays.
 
-Instead, let's talk a little about a few of the features and packages lumped into this template situation.  The \verb|savequote| environment at the beginning of chapters can add some wittiness to your thesis.  If you don't like the quotes, just remove that block.
+Direct measurements of \Pgamma can be made by exploiting the interference between the \decay{\bquark}{\cquark\uquarkbar\squark} and \decay{\bquark}{\uquark\cquarkbar\squark} transitions. These transitions are present in $B \to DK^{(*)}$ decays. This analysis measures \CP violation in \decay{\Bpm}{\D\Kstarpm} decays, where \D is either a \Dz or \Dzb, with D decays to 2 and 4 body final states. The interference is obtained by reconstructing the \Dz and \Dzb meson in the same final state, which leads to a measurement of \Pgamma.
 
-For when it comes time to do corrections, there are two useful commands here.  First, the \verb|mccorrect| command allows you to highlight a short correction \mccorrect{like this one}.  When the thesis is typeset normally, the correction will just appear as part of the text.  However, when you declare \verb|\correctionstrue| in the main \verb|Oxford_Thesis.tex| file, that correction will be highlighted in blue.  That might be useful for submitting a post-viva, corrected copy to your examiners so they can quickly verify you've completed the task.
+Two analysis methods were used for 2 body \D decays. Decays of the \D to \CP (even) eigenstates \Kp\Km and \pip\pim using the GLW method~\cite{GL,GW} and decays to quasi-flavour eigenstates \Kpm\pimp (i.e the Cabibbo allowed decay \decay{\Dz}{\Km\pip} and the doubly Cabibbo supressed decay \decay{\Dz}{\pim\Kp}) using the ADS method~\cite{ADS,ADS-2001}. An ADS/GLW analysis has been published for \decay{\Bpm}{D\Kpm} and \decay{\Bz}{\D\Kstarz} at \lhcb~\cite{LHCB-PAPER-2016-003,LHCB-PAPER-2014-028}. The four body final states \decay{\Dz}{\Km\pip\pim\pip}, \decay{\Dz}{\pip\pim\pip\pim} \decay{\Dz}{\Kp\pim\pip\pim} are also investigated, which are included in the \decay{\Bpm}{D\Kpm} ADS/GLW analysis~\cite{LHCB-PAPER-2016-003}. These \Dz decays contain similar physics to the 2-body modes, so the GLW and ADS methods can be extended to these final states.
 
-\begin{mccorrection}
-For larger chunks, like this paragraph or indeed entire figures, you can use the \verb|mccorrection| environment.  This environment highlights paragraph-sized and larger blocks with the same blue colour.
-\end{mccorrection}
+The \decay{\Bpm}{\D\Kstarpm} channel has previously been investigated at BaBar using a variety of D modes: non-\CP states $\Km\pip$, $\pim\Kp$, \CP even eigenstates $\Kp\Km$, $\pip\pim$ and \CP odd eigenstates $\KS\piz$, $\KS\phi$ and $\KS\omega$~\cite{BaBarDKstar}. The yield obtained in the favoured \decay{\Dz}{\Km\pip} mode in this analysis was $231 \pm 17$. In this BaBar analysis the non-resonant \decay{\B}{\D\KS\pi} contribution is considered negligible and therefore any effects of these non-resonant decays are ignored. Using yields in the \decay{\Bpm}{\D\Kpm} analysis~\cite{LHCB-PAPER-2016-003}, and estimated relative reconstruction/selection efficiencies and branching fraction it is expected that the Run 1 yields will be larger than those observed at BaBar. Therefore the analysis was motivated at this time. With the subsequent addition of a significant portion of Run 2 data this conclusion only holds stronger.
 
-Read through the \verb|Oxford_Thesis.tex| file to see the various options for one- and two-sided printing, including or excluding the separate abstract page, and turning corrections and draft footer on or off, and the separate option to centre your text on the page (for PDF submission) or offset it (for binding).  There is also a separate option for master's degree submissions, which changes identifying information to candidate number and includes a word count.  (Unfortunately, \LaTeX has a hard time doing word counts automatically, so you'll have to enter the count manually if you require this.)
+For the ADS decay, both favoured and supressed combinations of \Bm and \Dz decays are considered. The favoured \Bm decay is \decay{\Bm}{\Dz\Kstarm} and the suppressed is \decay{\Bm}{\Dzb\Kstarm}. Equivalently, the favoured \Dz decay is \decay{\Dz}{\Km\pip} and the supressed is \decay{\Dz}{\pim\Kp}. Therefore, the favoured combination has the \B meson and \kaon from the \D with the same sign: \decay{\Bm}{\D(\Km\pip)\Kstarm(\KS\pim)}, which is shortened to \decay{\Bm}{\D(\Km\pip)\Kstarm} in this note. The \D refers to a \Dz or \Dzb so this favoured combination also includes the suppressed \B decay followed by the suppressed \D decay. The supressed combination has the \B meson and \kaon from the \D with the opposite signs: \decay{\Bm}{\D(\Kp\pim)\Kstarm(\KS\pim)}, which is shortened to \decay{\Bm}{\D(\Kp\pim)\Kstarm} in this note. This is a combination of the suppressed \D decay followed by favoured \B decay and the favoured \B decay followed by the supressed \D decay. In this note the supressed ADS mode will be referred to as the ADS mode. These ideas can be extended to the 4 body modes with \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm(\KS\pim)} and \decay{\Bm}{\D(\Kp\pim\pip\pim)\Kstarm(\KS\pim)} being analagous to \decay{\Bm}{\D(\Km\pip)\Kstarm(\KS\pim)} and \decay{\Bm}{\D(\Kp\pim)\Kstarm(\KS\pim)}.
 
-\section{Cardiac Imaging}\label{app:imaging}
+Several physics observables are extracted in this analysis that relate to the physics parameters to be measured, namely \Pgamma, $r_B$, $\delta_B$ and $\kappa$. The parameter $r_B$ is the magnitude of the ratio between the supressed and favoured amplitudes, which governs the size of the interference between the two amplitudes and $\delta_B$ is the strong phase difference between these amplitudes. The coherence factor $\kappa$ is discussed in Section \ref{sec:interpretation:coherence}. The seven physics observables that are measured in this analysis are:
 
-Within months of Röntgen's discovery of the X-ray in \mccorrect{1895}\cite{gagliardi_rontgen_1996}, cardiac pathology was being investigated via non-invasive imaging \cite{gagliardi_cardiac_1996}.  Over the intervening years, cardiac imaging modalities and techniques have advanced significantly.  Clinically, cardiac imaging is used for two broad purposes: diagnosis of pathophysiology and guidance of interventional procedures.  These applications impose different requirements on imaging equipment, image acquisition time, computational complexity, spatial and temporal resolution, and tissue discrimination.  The common diagnostic and interventional cardiac imaging techniques in current clinical practice are reviewed below.  An accessible introduction to the physics of medical imaging can be found in Webb's \textit{Introduction to Biomedical Imaging} \cite{webb_introduction_2002}.  A comprehensive overview of the use of imaging in clinical cardiology is presented in Leeson's \textit{Cardiovascular Imaging} \cite{leeson_cardiovascular_2011}.
+\begin{enumerate}
+\item{The \CP asymmetry for the favoured mode
+\begin{equation}
+A_{\kaon\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\Kp\pim)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pim)\Kstarp}\right)}
+\label{eqn:Akpi}
+\end{equation}
+}
+\item{The \CP asymmetry for the \decay{\D}{\Kp\Km} mode
+\begin{equation}
+A_{\kaon\kaon} = \frac{\Gamma\left(\decay{\Bm}{\D(\kaon\kaon)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\kaon\kaon)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\kaon\kaon)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\kaon\kaon)\Kstarp}\right)} = A_{CP+}
+\label{eqn:Akk}
+\end{equation}
+}
+\item{The \CP asymmetry for the \decay{\D}{\pip\pim} mode
+\begin{equation}
+A_{\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\pi\pi)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\pi\pi)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\pi\pi)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\pi\pi)\Kstarp}\right)} = A_{CP+}
+\label{eqn:Apipi}
+\end{equation}
+}
+\item{The ratio of the \decay{\D}{\Kp\Km} over the favoured mode
+\begin{equation}
+R_{\kaon\kaon} = \frac{\Gamma\left(\decay{\Bm}{\D(\kaon\kaon)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\kaon\kaon)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pip)\Kstarp}\right)} \times \frac{|BF(D^0 \to K^-\pi^+)|}{|BF(D^0 \to K^-K^+)|} = R_{CP+}
+\label{eqn:Rkk}
+\end{equation}
+}
+\item{The ratio of the \decay{\D}{\pip\pim} over the favoured mode
+\begin{equation}
+R_{\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\pi\pi)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\pi\pi)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pim)\Kstarp}\right)} \times \frac{|BF(D^0 \to K^-\pi^+)|}{|BF(D^0 \to \pi^-\pi^+)|} = R_{CP+}
+\label{eqn:Rpipi}
+\end{equation}
+}
+\item{The ratio of the ADS mode over the favoured mode for \Bp decays
+\begin{equation}
+R^+_{K\pi} = \frac{\Gamma\left(\decay{\Bp}{\D(\Km\pip)\Kstarp}\right)}{\Gamma\left(\decay{\Bp}{\D(\Kp\pim)\Kstarp}\right)}
+\label{eqn:Rplus}
+\end{equation}
+}
+\item{The ratio of the ADS mode over the favoured mode for \Bm decays
+\begin{equation}
+R^-_{K\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Kp\pim)\Kstarm}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right)}
+\label{eqn:Rminus}
+\end{equation}
+}
+\item{The \CP asymmetry for the favoured \decay{\Dz}{\Km\pip\pim\pip} mode
+\begin{equation}
+A_{\kaon\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Km\pip\pi\pi)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\Kp\pim\pi\pi)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip\pi\pi)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pim\pi\pi)\Kstarp}\right)}
+\label{eqn:Akpipipi}
+\end{equation}
+}
+\item{The \CP asymmetry for the \decay{\D}{\pip\pim\pip\pim} mode
+\begin{equation}
+A_{\pi\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\pi\pi\pi\pi)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\pi\pi\pi\pi)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\pi\pi\pi\pi)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\pi\pi\pi\pi)\Kstarp}\right)}
+\label{eqn:Apipipipi}
+\end{equation}
+}
+\item{The ratio of the \decay{\D}{\pip\pim\pip\pim} over the favoured mode
+{\footnotesize
+\begin{equation}
+R_{\pi\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\pi\pi\pi\pi)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\pi\pi\pi\pi)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip\pi\pi)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pim\pi\pi)\Kstarp}\right)} \times \frac{|BF(D^0 \to \Km\pip\pi\pi)|}{|BF(D^0 \to \pim\pip\pi\pi)|}
+\label{eqn:Rpipipipi}
+\end{equation}}
+}
+\item{The ratio of the 4 body ADS mode over the 4 body favoured mode for \Bp decays
+\begin{equation}
+R^+_{K\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bp}{\D(\Km\pip\pim\pip)\Kstarp}\right)}{\Gamma\left(\decay{\Bp}{\D(\Kp\pim\pip\pim)\Kstarp}\right)}
+\label{eqn:Rplus4body}
+\end{equation}
+}
+\item{The ratio of the 4 body ADS mode over the 4 body favoured mode for \Bm decays
+\begin{equation}
+R^-_{K\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Kp\pim\pip\pim)\Kstarm}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm}\right)}
+\label{eqn:Rminus4body}
+\end{equation}
+}
+\end{enumerate}
 
-\subsection{Diagnostic Imaging}
-\label{sub:diagnostic}
+The observables $R^+_{K\pi}$ and $R^-_{K\pi}$ are being used for the ADS mode as opposed to the more usual $R_{ADS}$ and $A_{ADS}$. This was preferred due to their relatively low correlation. The same applies to $R^+_{K\pi\pi\pi}$ and $R^-_{K\pi\pi\pi}$ for the 4 body mode. Equations \ref{exp_Acp} - \ref{exp_Rpm4body} descibe the relationship between the physics observables measured in this analysis and the physics parameters \Pgamma, $r_B$, $\delta_B$ and $\kappa$.
 
-Beyond the chest X-ray (`plain film'), the key non-invasive imaging modalities in diagnostic cardiology are echocardiography, magnetic resonance imaging, and X-ray computed tomography, which are reviewed below.  Nuclear medicine, including positron emission tomography (PET) and single-photon emission computed tomography (SPECT), are not discussed here, as they do not play a role in the chapters to follow.
+\begin{equation}
+A_{CP+} = \frac{2 \kappa r_B\sin\delta_B\sin\gamma}{1 + r_B^2 + 2 \kappa r_B\cos\delta_B\cos\gamma}
+\label{exp_Acp}
+\end{equation}
 
-\subsubsection{Echocardiography}
+\begin{equation}
+R_{CP+} = 1 + r_B^2 + 2 \kappa r_B\cos\delta_B\cos\gamma
+\label{exp_Rcp}
+\end{equation}
 
-\begin{figure}
-\centering\includegraphics[width=0.7\textwidth]{figures/sample/Gray498.png} 
-\caption[Four-chamber illustration of the human heart.]{Four-chamber illustration of the human heart.  Clockwise from upper-left: right atrium, left atrium, left ventricle, right ventricle.}
-\label{fig:fourchamber}\end{figure}
+\begin{equation}
+R^{\pm}_{K\pi} = \frac{r_B^2 + r_D^2 + 2\kappa r_B r_D \cos(\delta_B + \delta_D \pm \gamma)}{1 + r_B^2r_D^2 + 2\kappa r_B r_D \cos(\delta_B - \delta_D \pm \gamma)}
+\label{exp_Rpm}
+\end{equation}
 
-The use of acoustic waves for medical diagnosis, inspired by naval sonar, was initially developed in the 1940s \cite{gagliardi_ultrasonography_1996}.  By 1954, the first clinically useful cardiac ultrasound -- examining motion of the mitral valve in stenosis -- was reported \cite{edler_ultrasonic_1957}.  These early scans were one-dimensional images (`A-mode'), sometimes repeated to generate a time axis (`M-mode').   The sector-scanning probe was developed in the 1970s \cite{bom_ultrasonic_1971,griffith_sector_1974}, leading to the `B-mode' that a modern cardiologist would recognise as an echocardiogram.
+\begin{equation}
+A_{\pi\pi\pi\pi} = \frac{2 \kappa\kappa_{4\pi} r_B\sin\delta_B\sin\gamma}{1 + r_B^2 + 2 \kappa\kappa_{4\pi} r_B\cos\delta_B\cos\gamma}
+\label{exp_A4pi}
+\end{equation}
+
+\begin{equation}
+R_{\pi\pi\pi\pi} = 1 + r_B^2 + 2 \kappa\kappa_{4\pi} r_B\cos\delta_B\cos\gamma
+\label{exp_R4pi}
+\end{equation}
+
+\begin{equation}
+R^{\pm}_{K\pi\pi\pi} = \frac{r_B^2 + \left(r_D^{K3\pi}\right)^2 + 2\kappa r_B \kappa_{K3\pi} r_D^{K3\pi} \cos(\delta_B + \delta_D^{K3\pi} \pm \gamma)}{1 + \left(r_Br_D^{K3\pi}\right)^2 + 2\kappa r_B \kappa_{K3\pi} r_D^{K3\pi} \cos(\delta_B - \delta_D^{K3\pi} \pm \gamma)}
+\label{exp_Rpm4body}
+\end{equation}
+
+%The selection for the ADS mode has been performed blinded, however it has been noted that the data has been looked at for a masters thesis at Annecy. In order to reduce further risk of bias the ADS mode is currently blinded: the extracted signal yields of candidates for \decay{\Bm}{\D(\Kp\pim)\Kstarm} and \decay{\Bp}{\D(\Km\pip)\Kstarp} are hidden during the first phase of this analysis.
+
+In Section \ref{sec:selection} of the note the methods for selecting \decay{\Bpm}{\D\Kstarpm} candidates are detailed, the various MC and PID efficienies are presented in Section \ref{sec:mc} as well as comparisons between data and MC, Section \ref{sec:massfit} details the mass parameterisation of the $K\pi$ favoured mode including discussion of the partially reconstructed backgrounds, and Section \ref{sec:backgrounds} goes on to discuss other backgrounds considered in the analysis, but not included in the mass fit. Finally Sections \ref{sec:cpfit}, \ref{sec:systematics} and \ref{sec:interpretation} contain the details and results of the \CP fit, discussion of systematic uncertainties and interpretation of results.
