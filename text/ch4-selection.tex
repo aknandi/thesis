@@ -1,61 +1,53 @@
 \clearpage
-\begin{savequote}[8cm]
-\textlatin{Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+%\begin{savequote}[8cm]
+%\textlatin{Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+%
+%There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...
+%  \qauthor{--- Cicero's \textit{de Finibus Bonorum et Malorum}}
+%\end{savequote}
 
-There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...
-  \qauthor{--- Cicero's \textit{de Finibus Bonorum et Malorum}}
-\end{savequote}
-
-\chapter{\label{ch:4-selection}Selection and mass fit of \decay{\Bpm}{\D\Kstarpm} decays} 
+\chapter{\label{ch:4-selection}Selection and mass parameterisation of \decay{\Bpm}{\D\Kstarpm} decays} 
 
 \minitoc
 
-\section{Selection}
+\section{Selection of \decay{\Bpm}{\D\Kstarpm} candidates}
 \label{sec:selection}
 
-The selection requirements for \decay{\Bpm}{\D\Kstarpm} candidates are described here.
+In this section, the reconstruction and selection for the signal mode, \decay{\Bpm}{\D\Kstarpm}, \decay{\Kstarpm}{\KS\pipm}, in the \decay{\Dz}{hh} and \decay{\Dz}{hhhh} final states is described, where $h$ represents a kaon or a pion. The \pipm from the \Kstarpm decay is referred to as the bachelor particle. The data analysed in this thesis corresponds to 3\invfb of $pp$ collisions at $\sqrt{s} = 7\tev \text{ and } 8\tev$ collected in 2011 and 2012 (known as Run 1), and 1.8\invfb at $\sqrt{s} = 13\tev$ collected in 2015 and 2016 (known as Run 2). {\color{red}probably cover this in the detector chapter}
 
-\subsection{Stripping and trigger}
+\subsection{Reconstruction and trigger requirements}
 \label{sec:selection:strippingandtrigger}
 
-The data used in the analysis is summarised in Table \ref{data}. All data is processed using \davinci and \decay{\Bpm}{\D\Kstarpm} candiates, where the \Kstarm decays to \KS$\pim$, are taken from stripping.
+\decay{\Bpm}{\D\Kstarpm}, \decay{\Kstarpm}{\KS\pipm} decays are recosntructed offline and stored in a centrally produced dataset in a stage known as stripping. {\color{red}describe stripping in detector chapter}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llllll}
-\hline
-Year & $\sqrt{s}$ / \tev & Integrated luminosity / \invfb & Reprocessing & Stripping & \davinci version \\
-\hline
-2011 & 7.0 & 1.0 & Reco14 & S21r1p1 & v39r1p1 \\
-2012 & 8.0 & 2.0 & Reco14 & S21r0p1 & v39r1p1 \\
-2015 & 13.0 & 0.3 & Reco15a & S24 & v38r1p1 \\
-2016 & 13.0 & 1.5 & Reco16 & S26 & v40r3p1 \\
-\hline
-\end{tabular}
-\caption{Summary of the data used in the analysis, where $\sqrt{s}$ represents the center of mass energy of the proton-proton collisions}
-\label{data}
-\end{table}
+In \lhcb\ \KS mesons can be reconstructed in two ways: the \velo using long tracks (LL), giving a better mass resolution, or using downstream tracks (DD), with the first hits being collected in the TT. As the \KS reconstruction types have differing resolutions and selection efficiencies, LL and DD candidates are treated as separated datasets throughout the selection and a slightly different selection is applied to each. {\color{red}probably cover this in the detector chapter}
 
-$B^{\pm} \to DK^{*\pm}$ candidates were selected using stripping lines in the {\tt BHADRON} stripping stream, {\tt B2D0KsPiLLD2HHBeauty2CharmLine} and {\tt B2D0KsPiDDD2HHBeauty2CharmLine}, producing two sets of candidates; one set of LL candidates and one set of DD candidates. The difference between these types of candidates is explained in Section \ref{sec:selection:pre-selection}. All B candidates are required to have passed the following triggers:
+{\color{red}List some stripping requirements}
+
+The {\tt DecayTreeFitter} (DTF) framework is used in this analysis to refit the entire decay chain of each \B candidate passing the stripping requirements, with one or more constraints imposed. During the refit, the best fit value of the four-momenta for each particle is found under the given constraints. The labels given by {\tt D0const} and {\tt KS0const} correspond to constraining the \D mass and \KS mass to their known values. The label {\tt PVconst} is used to indicate that the \B momentum vector direfction is constrained to be parallel to the vector joining the primary vertex (PV) to the \B decay vertex. The refitted \B mass used in this analysis is obtained after the refit with the {\tt D0const}, {\tt KS0const} and {\tt PVconst} constraints applied, which improved the \B mass resolution.
+
+The trigger decision for each candidate is catergorised as {\tt TOS} (Trigger On Signal) if the particles associated with the signal candidate triggered the event or {\tt TIS} (Trigger Independent of Signal) if other particle produced in the $pp$ interaction, that are not associated with the signal candidate, triggered the event. At the hardware trigger, the \B candidates are required to satisfy {\tt L0Hadron TOS} or {\tt L0Global TIS}. At the software trigger level, \B candidates are required to satisfy {\tt Hlt1TrackAllL0 TOS} and {\tt Hlt2TopoNBodyBBDT TOS}, where $N = 2,3 \text{ or } 4$. {\color{red}describe trigger lines in detector chapter}
+
+
+%%
+%\begin{itemize}
+%\item {\tt L0HadronDecision\_TOS} OR {\tt Bu\_L0Global\_TIS}
+%\item \tt Hlt1TrackAllL0Decision\_TOS
+%\item \tt Hlt2Topo\{2,3 or 4\}BodyBBDTDecision\_TOS
+%\end{itemize}
+%%
+%Or the corresponding Run 2 triggers:
 %
-\begin{itemize}
-\item {\tt L0HadronDecision\_TOS} OR {\tt Bu\_L0Global\_TIS}
-\item \tt Hlt1TrackAllL0Decision\_TOS
-\item \tt Hlt2Topo\{2,3 or 4\}BodyBBDTDecision\_TOS
-\end{itemize}
-%
-Or the corresponding Run 2 triggers:
-
-\begin{itemize}
-\item {\tt L0HadronDecision\_TOS} OR {\tt Bu\_L0Global\_TIS}
-\item {\tt Hlt1TrackMVADecision\_TOS} OR {\tt Bu\_Hlt1TwoTrackMVADecision\_TOS}
-\item \tt Hlt2Topo\{2,3 or 4\}BodyDecision\_TOS
-\end{itemize}
+%\begin{itemize}
+%\item {\tt L0HadronDecision\_TOS} OR {\tt Bu\_L0Global\_TIS}
+%\item {\tt Hlt1TrackMVADecision\_TOS} OR {\tt Bu\_Hlt1TwoTrackMVADecision\_TOS}
+%\item \tt Hlt2Topo\{2,3 or 4\}BodyDecision\_TOS
+%\end{itemize}
 
 \subsection{Pre-selection}
 \label{sec:selection:pre-selection}
 
-Offline selections are applied to candidates passing the stripping and trigger in order to reduce the level of combinatoric background. In \lhcb\ \KS mesons can be reconstructed in two ways: including the \velo using long tracks, giving a better mass resolution, or using downstream tracks, with the first hits being collected in the TT. As the \KS reconstruction types have differing resolutions and selection efficiencies, LL and DD candidates are treated as separated datasets throughout the selection and a slightly different selection is applied to each. Firstly, rectangular cuts are applied, followed by a multivariate selection, and finally PID requirements. The DecayTreeFitter package~\cite{Hulsbergen:2005pu} is used to improve the $B^{\pm}$ mass resolution. The decay chain is refitted constraining the \Dz and \KS masses to their nominal values and constraining the $B^{\pm}$ to point to the primary vertex. The following rectangular cuts applied straight after stripping:
+Further offline selections are applied to candidates passing the reconstruction and trigger requirements in order to reduce the level of combinatoric background. Firstly, rectangular cuts are applied, followed by a multivariate selection, and finally PID requirements. The following rectangular cuts applied:
 
 \begin{itemize}
 \item 0 $<$ Bu DTF vertex fit $\chi^2$ $<$ 100
@@ -65,54 +57,75 @@ Offline selections are applied to candidates passing the stripping and trigger i
 \item 15 MeV \KS mass window for LL candidates, 20 MeV for DD candidates
 \end{itemize}
 
-\subsection{Multivariate analysis with a Boosted Decision Tree (BDT)}
+\subsection{Multivariate analysis with a Boosted Decision Tree}
 \label{sec:selection:bdt}
 
-A single BDT~\cite{Breiman} with the gradient boost (BDTG) method using the TMVA framework is employed in order to reduce the combinatoric background level. A separate BDT is trained for LL and DD candidates, named BDTG\_LL and BDTG\_DD. Also, a different BDT is used for the two body and four body modes. For the two body modes, Sim08 2011 and 2012 MC samples for the decay $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$ with generator level cuts applied, detailed in Section \ref{sec:mc:tmva}, were used to provide a signal sample. High mass sideband region of the B mass (above 5600 MeV) in the favoured $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$ mode, from 2011 and 2012 data, was used as a sample of background combinatoric events. The MC used to calculate signal efficiencies is signal MC with no generator level cuts applied. For the four body modes, a signal sample of Sim09b 2015 and 2016 MC samples for the decay $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$ was used. High mass sideband region of the B mass (above 5600 MeV) in the favoured $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$ mode, from 2015 and 2016 data, was used as a sample of background combinatoric events. All samples used in training the BDTs are split into a training and testing sample before being used as an input in TMVA by separating odd and even event numbers.
+Various selection requirements can be placed on variables relating to particle in the decay chain. As these variables can have correlations, the separation power can be improved by using a multivariate analysis (MVA) method as opposed to linear selections on multiple variables. The MVA implemented in this analysis is a Boosted Decision Tree (BDT). Decision trees go through finding the best variable and value to split events in order ot separate signal and background, the process is repeated for each of the two subsets. This is repeated in order to build a tree, where the nodes are called leaves. If more than half of the weight of a leaf corresponds to signal, it is a signal leaf, otherwise it is a background leaf. Signal events on a background leaf and background events on a signal leaf are misclassified. In order to stablilise this process many trees can be built to construct a weighted average over all the trees. After each tree is built, the misclassified events are reweighted (boosted) and a new tree is build with the rewighted events. Each event receives a weight from -1 (most background-like) to +1 (most signal-like). 
 
-Pre-selection is applied to these training samples to allow a more accurate discrimination between signal and background in data. The pre-selection applied is slightly looser to that in Section \ref{sec:selection:pre-selection} to provide a larger sample in order to avoid overtraining of the BDT. The training samples had the following pre-selection applied:
+\subsubsection{Training samples}
+
+A single Boosted Decision Tree (BDT)~\cite{Breiman} with the gradient boost (BDTG) method using the Toolkit for Multivariate Analysis (TMVA) framework is employed in order to reduce the combinatoric background level. A separate BDT is trained for LL and DD candidates, named BDTG\_LL and BDTG\_DD. The BDT is mainly based on topological variables and so insensitive as to whether the \D daughters are kaons or pions. Therefore, the same BDT is used for all of the two-body modes, trained using $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$, and the same BDT is used for all of the four-body modes, trained using $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$; a different BDT is used for the two-body and four-body modes. For the two body modes, simulated 2011 and 2012 samples for the decay $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$ with generator level cuts applied, detailed in Section \ref{sec:mc:tmva}, were used to provide a signal sample. High mass sideband region of the B mass (above 5600 MeV) in the favoured $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$ mode, from 2011 and 2012 data, was used as a sample of background combinatoric events. The events used to calculate signal efficiencies are simulated signal with no generator level cuts applied. For the four body modes, a signal sample of simulated 2015 and 2016 samples for the decay $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$ was used. High mass sideband region of the B mass (above 5600 MeV) in the favoured $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$ mode, from 2015 and 2016 data, was used as a sample of background combinatoric events. All samples used in training the BDTs are split into a training and testing sample before being used as an input in TMVA by separating odd and even event numbers.
+
+Initial selection requirements are applied to the training samples to remove candidates that would not pass the final selection. This allows a more accurate discrimination between signal and background in data. The selection criteria on the training samples are:
 
 \begin{itemize}
-\item{0 $<$ Bu DTF vertex fit $\chi^2$ $<$ 100}
-\item{0 $<$ Bu IP $\chi^2$ $<$ 100}
-\item{500 MeV \Kstarm mass window}
-\item{15 MeV \KS mass window for LL candidates, 20 MeV for DD candidates}
+\item The \chisq of the decay chain refit, with {\tt D0const}, {\tt KS0const} and {\tt PVconst} constraints, lies between 0 and 100
+\item The \chisqip of the \B, with respect to the \B vertex, lies between 0 and 100
+\item The reconstructed \Kstarpm mass lies within 500\mev of the known \Kstar mass
+\item The reconstructed \KS mass lies with 15\mev of the known \KS mass for LL candidates and 20\mev for DD candidates
 \end{itemize}
 
-The variables used in the BDT, listed in Table \ref{BDTinputvariables}, are slightly different for LL and DD candidates, as the separation power of various \KS variables significantly differs between LL and DD candidates. One of the variables, used in both BDTs, which has a good separation power is the $p_T$ asymmetry of the B candidate (Bu ptasy 1.50). This is defined as the asymmetry between the $p_T$ of the B candidate and the $p_T$ of all other tracks in a cone of radius 1.50 around the B candidate, as shown in Equation \ref{ptasy}. This gives a quantitative measure of the track isolation of the B candidate. 
-
+Various input variables are used to exploit the topology of the decay; of particular importance are the \Bm vertex-fit \chisq per degree of freedom and the $p_T$ asymmetry between the \Bm candidate and other tracks from the same PV, defined as
 \begin{equation}
-A_{p_T} = \frac{p_T^B - p_T^{cone}}{p_T^B + p_T^{cone}}
-\label{ptasy}
+A_{p_T} = \frac{p_T^B - p_T^{\text{cone}}}{p_T^B + p_T^{\text{cone}}}
 \end{equation}
+where $p_T^B$ is the $p_T$ of the reconstructed \Bm signal candidate and $p_T^{\text{cone}}$ is the sum of the $p_T$ of all other tracks in a cone of radius 1.50 surrounding the \Bm candidate. This is a quantitative measure of the isolation of the \Bm candidate. Some of the variables are transformed using a logarithm function to increase their separation power. Another powerful variable used in the BDT is the \chisq of the decay chain refit, with {\tt D0const}, {\tt KS0const} and {\tt PVconst} constraints. Other input variables used include the logarithm of the \chisqip for the \B, bachelor, \D and all the \D decay products, the logarithm of the \chisqip for the \KS and both its decay products (for LL only) and the $p_T$ of the \KS candidate (for DD candidates only). For a given particle, \chisqip is the difference in the vertex fit \chisq of the PV with and without the particle under consideration. The variables used in the BDT are slightly different for LL and DD candidates, as the separation power of various \KS variables significantly differs between LL and DD candidates. 
 
-The distributions of the BDT input variables in the training signal and training background are shown in Figures \ref{BDTinputdist2bodyLL} and \ref{BDTinputdist2bodyDD}, for the two body BDTs and in Figures \ref{BDTinputdist4bodyLL} and \ref{BDTinputdist4bodyDD}, for the four body BDTs. The ranking of BDT variables is shown in Figure \ref{variableranking2body} and \ref{variableranking4body}. The signal and background output distributions of the BDT are shown in Figure \ref{BDTovertraining}. The training and testing distributions are in reasonable agreement, showing that the BDT is safe from overtraining effects.
+The distributions of the BDT input variables in the training signal and training background are shown in Figures \ref{BDTinputdist2bodyLL} and \ref{BDTinputdist2bodyDD}, for the two body BDTs and in Figures \ref{BDTinputdist4bodyLL} and \ref{BDTinputdist4bodyDD}, for the four body BDTs. Tables \ref{BDTinputvariables2body} and \ref{BDTinputvariables4body} show the list of input variables, in the two and four-body BDTs respectively, ranked by separation power.
 
-\begin{table}[h]
+\begin{table}
 \centering
-\begin{tabular}{|l|l|}
+\begin{tabular}{lll}
+Rank & LL variable & DD variable \\
 \hline
-BDT input variables (LL) & BDT input variables (DD) \\
-\hline
-log(Bu DTF $\chi^2/ndof$) & log(Bu DTF $\chi^2/ndof$) \\
-Bu ptasy 1.50 & Bu ptasy 1.50 \\
-log(Bu IP $\chi^2$ OWNPV) & log(Bu IP $\chi^2$ OWNPV) \\
-log(Bach IP $\chi^2$ OWNPV) & log(Bach IP $\chi^2$ OWNPV) \\
-log(\Dz IP $\chi^2$ OWNPV) & log(\Dz IP $\chi^2$ OWNPV) \\
-{\color{blue}log(\Dz daughter kaon IP $\chi^2$ OWNPV)} & {\color{blue}log(\Dz daughter kaon IP $\chi^2$ OWNPV)} \\
-{\color{blue}log(\Dz daughter pion IP $\chi^2$ OWNPV)} & {\color{blue}log(\Dz daughter pion IP $\chi^2$ OWNPV)} \\
-{\color{red}log(\Dz daughter kaon IP $\chi^2$ OWNPV)} & {\color{red}log(\Dz daughter kaon IP $\chi^2$ OWNPV)} \\
-{\color{red}log(\Dz daughter SS pion IP $\chi^2$ OWNPV)} & {\color{red}log(\Dz daughter SS pion IP $\chi^2$ OWNPV)} \\
-{\color{red}log(\Dz daughter pion max(IP $\chi^2$ OWNPV))} & {\color{red}log(\Dz daughter pion max(IP $\chi^2$ OWNPV))} \\
-{\color{red}log(\Dz daughter pion min(IP $\chi^2$ OWNPV))} & {\color{red}log(\Dz daughter pion min(IP $\chi^2$ OWNPV))} \\
-log(\KS IP $\chi^2$ OWNPV) & \KS $p_T$ \\
-log(\KS daughters max(IP $\chi^2$ OWNPV)) &  \\
-log(\KS daughters min(IP $\chi^2$ OWNPV)) &  \\
-\hline
+1 & log(\B refit \chisq) & log(\B refit \chisq) \\
+2 & log(\KS \chisqip) & log(\D daug kaon \chisqip) \\
+3 & log(max \KS daug \chisqip) & log(Bachelor \chisqip) \\
+4 & \B ptasy 1.50 & \B ptasy 1.50 \\
+5 & log(\D daug kaon \chisqip) & log(\D daug pion \chisqip) \\
+6 & log(Bachelor \chisqip) & log(\D \chisqip) \\
+7 & log(\D \chisqip) & log(\B \chisqip) \\
+8 & log(min \KS daug \chisqip) & \KS $p_T$ \\
+9 & log(\D daug pion \chisqip) & - \\
+10 & log(\B \chisqip) & - \\
 \end{tabular}
-\caption{Table showing the input variables used in both the LL and DD BDT training. Variables in blue are only used in the 2-body BDT, whereas those in red are only used in the 4-body BDT. The variable name $Bach$ refers to the bachelor particle, the pion coming from the \Kstarm. D daughter SS refers to the pion of the same sign of the kaon. Bu DTF $\chi^2/ndof$ is the $\chi^2$ per degree of freedom of the refitted B vertex given the DTF constaints, Bu ptasy is the $p_T$ asymmetry of the B candidate (defined in Equation \ref{ptasy}) using a cone of radius 1.50, and for a given particle IP $\chi^2$ OWNPV is the difference in the vertex fit $\chi^2$ of the PV with and without the particle under consideration.}
-\label{BDTinputvariables}
+\caption{Ranking for variables for BDTG\_LL and BDTG\_DD for the two-body BDTs}
+\label{BDTinputvariables2body}
 \end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{lll}
+Rank & LL variable & DD variable \\
+\hline
+1 & log(\B refit \chisq) & log(\B refit \chisq) \\
+2 & log(\KS \chisqip) & \B ptasy 1.50 \\
+3 & \B ptasy 1.50 & log(\B \chisqip) \\
+4 & log(\B \chisqip) & log(Bachelor \chisqip) \\
+5 & log(\D \chisqip) & \KS $p_T$ \\
+6 & log(\D daug kaon \chisqip) & log(\D \chisqip) \\
+7 & log(Bachelor \chisqip) & log(max \D daug \chisqip) \\
+8 & log(min \D daug \chisqip) & log(\D daug ss \chisqip) \\
+9 & log(max \KS daug \chisqip) & log(\D daug kaon \chisqip) \\
+10 & log(\D daug ss \chisqip) & log(min \D daug \chisqip) \\
+11 & log(min \KS daug \chisqip) & - \\
+12 & log(max \D daug \chisqip) & - \\
+\end{tabular}
+\caption{Ranking for variables for BDTG\_LL and BDTG\_DD for the four-body BDTs}
+\label{BDTinputvariables4body}
+\end{table}
+
+%Table showing the input variables used in both the LL and DD BDT training. Variables in blue are only used in the 2-body BDT, whereas those in red are only used in the 4-body BDT. The variable name $Bach$ refers to the bachelor particle, the pion coming from the \Kstarm. D daughter SS refers to the pion of the same sign of the kaon. Bu DTF $\chi^2/ndof$ is the $\chi^2$ per degree of freedom of the refitted B vertex given the DTF constaints, Bu ptasy is the $p_T$ asymmetry of the B candidate (defined in Equation \ref{ptasy}) using a cone of radius 1.50, and for a given particle IP $\chi^2$ OWNPV is the difference in the vertex fit $\chi^2$ of the PV with and without the particle under consideration.
 
 \begin{figure}[tb]
 \includegraphics[width=\linewidth]{figures/selection/inputvariables_KPi_LL_run1_1.pdf}
@@ -128,42 +141,6 @@ log(\KS daughters min(IP $\chi^2$ OWNPV)) &  \\
 \label{BDTinputdist2bodyDD}
 \end{figure}
 
-\begin{figure}
-\begin{verbatim}
-BDTG_LL
--------------------------------------------------------------------------
-Rank : Variable                                : Variable Importance
--------------------------------------------------------------------------
-   1 : log(Bu_D0constKS0constPVconst_CHI2NDOF) : 1.396e-01
-   2 : log(Ks_IPCHI2_OWNPV)                    : 1.266e-01
-   3 : log(max_Ksh_IPCHI2_OWNPV)               : 1.024e-01
-   4 : Bu_ptasy_1.50                           : 9.928e-02
-   5 : log(Dh1_IPCHI2_OWNPV)                   : 9.739e-02
-   6 : log(Bach_IPCHI2_OWNPV)                  : 9.650e-02
-   7 : log(D0_IPCHI2_OWNPV)                    : 8.777e-02
-   8 : log(min_Ksh_IPCHI2_OWNPV)               : 8.699e-02
-   9 : log(Dh2_IPCHI2_OWNPV)                   : 8.290e-02
-  10 : log(Bu_IPCHI2_OWNPV)                    : 8.056e-02
--------------------------------------------------------------------------
-
-BDTG_DD
--------------------------------------------------------------------------
-Rank : Variable                                : Variable Importance
--------------------------------------------------------------------------
-   1 : log(Bu_D0constKS0constPVconst_CHI2NDOF) : 1.459e-01
-   2 : log(Dh1_IPCHI2_OWNPV)                   : 1.287e-01
-   3 : log(Bach_IPCHI2_OWNPV)                  : 1.280e-01
-   4 : Bu_ptasy_1.50                           : 1.260e-01
-   5 : log(Dh2_IPCHI2_OWNPV)                   : 1.214e-01
-   6 : log(D0_IPCHI2_OWNPV)                    : 1.174e-01
-   7 : log(Bu_IPCHI2_OWNPV)                    : 1.171e-01
-   8 : Ks_PT                                   : 1.155e-01
--------------------------------------------------------------------------
-\end{verbatim}
-\caption{Ranking for variables for BDTG\_LL and BDTG\_DD for the two body BDTs}
-\label{variableranking2body}
-\end{figure}
-
 \begin{figure}[tb]
 \includegraphics[width=\linewidth]{figures/selection/inputvariables_KPiPiPi_LL_run2_1.pdf}
 \includegraphics[width=\linewidth]{figures/selection/inputvariables_KPiPiPi_LL_run2_2.pdf}
@@ -176,46 +153,6 @@ Rank : Variable                                : Variable Importance
 \includegraphics[width=\linewidth]{figures/selection/inputvariables_KPiPiPi_DD_run2_2.pdf}
 \caption{BDT input variable distributions for signal and background for 4-body DD}
 \label{BDTinputdist4bodyDD}
-\end{figure}
-
-\begin{figure}
-\begin{verbatim}
-BDTG_LL
--------------------------------------------------------------------------
-Rank : Variable                                : Variable Importance
--------------------------------------------------------------------------
-   1 : log(Bu_D0constKS0constPVconst_CHI2NDOF) : 1.109e-01
-   2 : log(Ks_IPCHI2_OWNPV)                    : 1.028e-01
-   3 : Bu_ptasy_1.50                           : 9.283e-02
-   4 : log(Bu_IPCHI2_OWNPV)                    : 8.911e-02
-   5 : log(D0_IPCHI2_OWNPV)                    : 8.245e-02
-   6 : log(Dh1_IPCHI2_OWNPV)                   : 7.997e-02
-   7 : log(Bach_IPCHI2_OWNPV)                  : 7.899e-02
-   8 : log(min_Dh_IPCHI2_OWNPV)                : 7.513e-02
-   9 : log(max_Ksh_IPCHI2_OWNPV)               : 7.480e-02
-  10 : log(Dhss_IPCHI2_OWNPV)                  : 7.469e-02
-  11 : log(min_Ksh_IPCHI2_OWNPV)               : 7.295e-02
-  12 : log(max_Dh_IPCHI2_OWNPV)                : 6.546e-02
--------------------------------------------------------------------------
-
-BDTG_DD
--------------------------------------------------------------------------
-Rank : Variable                                : Variable Importance
--------------------------------------------------------------------------
-   1 : log(Bu_D0constKS0constPVconst_CHI2NDOF) : 1.251e-01
-   2 : Bu_ptasy_1.50                           : 1.108e-01
-   3 : log(Bu_IPCHI2_OWNPV)                    : 1.080e-01
-   4 : log(Bach_IPCHI2_OWNPV)                  : 1.056e-01
-   5 : Ks_PT                                   : 1.054e-01
-   6 : log(D0_IPCHI2_OWNPV)                    : 1.052e-01
-   7 : log(max_Dh_IPCHI2_OWNPV)                : 9.205e-02
-   8 : log(Dhss_IPCHI2_OWNPV)                  : 8.864e-02
-   9 : log(Dh1_IPCHI2_OWNPV)                   : 8.393e-02
-  10 : log(min_Dh_IPCHI2_OWNPV)                : 7.533e-02
--------------------------------------------------------------------------
-\end{verbatim}
-\caption{Ranking for variables for BDTG\_LL and BDTG\_DD for the four body BDTs}
-\label{variableranking4body}
 \end{figure}
 
 \begin{figure}[tb]
@@ -234,20 +171,26 @@ Rank : Variable                                : Variable Importance
 \label{BDTovertraining}
 \end{figure}
 
-Other selection strategies were explored. Multiple BDTs were investigated, by training and implementing a \KS BDT and a \Dz BDT followed by a B BDT. Two approaches were tried: one using the same set of variables in all three BDTs and one using variables relating to the \KS in the \KS BDT and variables relating to the \Dz in the \Dz BDT. These methods were found to have little or no improvement on the single BDT. Many other variables were investigated in the BDT, including kinematic variables of the B and D. These were found to give no significant improvement in BDT performance. A 2-body BDT trained on Run 2 data and MC was investigated to apply to Run 2 data, which did not result in any improvement in performance compared to the BDT trained on Run 1. Therefore, it was not considered necessary to have BDTs trained separately for Run 1 and Run 2.
+Other selection strategies were explored. Multiple BDTs were investigated, by training and implementing a \KS BDT and a \Dz BDT followed by a B BDT. Two approaches were tried: one using the same set of variables in all three BDTs and one using variables relating to the \KS in the \KS BDT and variables relating to the \Dz in the \Dz BDT. These methods were found to have little or no improvement on the single BDT. Many other variables were investigated in the BDT, including kinematic variables of the \B and \D. These were found to give no significant improvement in BDT performance. A two-body BDT trained on Run 2 data and simulation was investigated to apply to Run 2 data, which did not result in any improvement in performance compared to the BDT trained on Run 1. Therefore, it was not considered necessary to have BDTs trained separately for Run 1 and Run 2.
 
-For the 2-body BDTs, a BDT selection of 0.6 is chosen for BDT\_LL and 0.7 for BDT\_DD for all D modes except the ADS mode. The ADS mode BDT selection is chosen to be 0.6 for BDT\_LL and 0.9 for BDT\_DD. This tighter BDT selection is justified in Figure \ref{adsoptimisation}. When applied to the $K\pi$ favoured mode in Run 1 the BDT selection gives a 95\% signal efficiency and 96\% background rejection for LL and 88\% signal efficiency and 94\% background rejection for DD. The signal efficiencies of the BDT cuts are given in Table \ref{bdtefficiencies2body}. These BDT selections, in conjuction with the \Kstarm mass window and \KS helicity angle, were optimised to reduce the fit error on the physics observables, as detailed in Section \ref{sec:cpfit:optimisation}. Many toy studies were run to calculate the fit uncertainty for each selection. To optimise the selection for the GLW modes, the fit error was minimised for $A_{KK}$, $R_{KK}$, $A_{\pi\pi}$ and $R_{\pi\pi}$. The BDT selection for the ADS modes was optimised to minimise the fit errors in $R^+$ and $R^-$, as illustated in Figure \ref{adsoptimisation}. 
+\subsubsection{BDT performance and choice of working point}
 
-In cases when the figure of merits in these optimisation studies were not especially sensitive to changes in the selection, the selection giving the highest coherence (i.e most stringent requirement on the \Kstarm) was chosen and the BDT signal and background efficiencies were taken into account.
+The results obtained from training are applied to the testing sample in order to check for overtraining, which occurs when the classifier has learned statistical fluctuations present in the training sample. The results are shown in Figure \ref{BDTovertraining}. The training and testing distributions are in reasonable agreement, showing that the BDT is safe from overtraining effects.
+
+The BDT selections, in conjuction with the \Kstarm mass window and \KS helicity angle, were optimised to reduce the fit error on the physics observables, as detailed in Section \ref{sec:cpfit:optimisation}. Many toy studies were run to calculate the fit uncertainty for each selection. To optimise the selection for the GLW modes, the fit error was minimised for $A_{KK}$, $R_{KK}$, $A_{\pi\pi}$ and $R_{\pi\pi}$. The BDT selection for the ADS modes was optimised to minimise the fit errors in $R^+$ and $R^-$, as illustated in Figure \ref{adsoptimisation}. In cases when the figure of merits in these optimisation studies were not especially sensitive to changes in the selection, the selection giving the highest coherence (i.e most stringent requirement on the \Kstarm) was chosen and the BDT signal and background efficiencies were taken into account.
+
+For the 2-body BDTs, a BDT selection of 0.6 is chosen for BDT\_LL and 0.7 for BDT\_DD for all D modes except the ADS mode. The ADS mode BDT selection is chosen to be 0.6 for BDT\_LL and 0.9 for BDT\_DD. This tighter BDT selection is justified in Figure \ref{adsoptimisation}. When applied to the $K\pi$ favoured mode in Run 1 the BDT selection gives a 95\% signal efficiency and 96\% background rejection for LL and 88\% signal efficiency and 94\% background rejection for DD. The signal efficiencies of the BDT cuts are given in Table \ref{bdtefficiencies2body}. 
 
 For the four-body modes the same optimisation point was chosen 0.6 for BDT\_LL and 0.7 for BDT\_DD for the \decay{\Dz}{\Kp\pim\pip\pim} \decay{\Dz}{\pi\pi\pi\pi} mode, and 0.6 for BDT\_LL and 0.9 for BDT\_DD for the \decay{\Dz}{\Kp\pim\pip\pim} mode. The optimisation point was verified by minimising the fit error in toys for $A_{K\pi\pi\pi}$, $R^+_{K\pi\pi\pi}$ and $R^-_{K\pi\pi\pi}$.
 
 
 \subsection{Other cuts}
 
-Some other selection requirements are implemented to tackle certain backgrounds.
+Some other selection requirements are implemented to isolate the signal candidates and tackle certain backgrounds.
 
 \begin{itemize}
+\item 25 MeV \Dz mass window, i.e. \textbar \Dz mass - PDG value \textbar $<$ 25 \mev
+\item 75 MeV \Kstarm mass window
 \item{\textbar $\cos$(Ks helicity angle) \textbar $>$ 0.3, discussed in Section \ref{sec:backgrounds:non-resonant}. This angle is defined as is the angle between the \KS and the bachelor pion in the \Kstarm rest frame}
 \item{\Dz FD significance $>$ 2 is required to remove charmless backgrounds, discussed in Section \ref{sec:backgrounds:charmless}}
 \item{\KS FD significance $>$ 5 (for LL candidates only) is required to remove $B \to D\pi\pi\pi$ background, discussed in Section \ref{sec:backgrounds:b2dpipipi}}
