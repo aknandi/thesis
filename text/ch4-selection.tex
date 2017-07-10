@@ -201,431 +201,15 @@ Some other selection requirements are implemented to isolate the signal candidat
 \end{itemize} 
 \end{itemize}
 
-
-\subsection{PID selection}
-\label{sec:selection:pid}
-
-The selection requirements are identical for each of the different D modes, $K\pi$, $KK$, $\pi\pi$ and $\pi K$, with the exception of the double misID veto. Therefore, it is essential to apply PID selection that efficiently distinguishes between pions and kaons. The PID cuts on the daughters of the D meson are designed so that no \decay{\Dz}{hh} candidate can appear in more than one category with a change in mass hypothesis. A PID requirement must be made on the bachelor pion in order to remove the \decay{\B}{\D\KS\kaon} background; this is discussed in more detail in Section \ref{sec:backgrounds:b2dkks}. 
-
-For the bachelor PID (pion coming from the \Kstarm) a requirement of PIDK $<$ 4 is applied. For the 2-body D modes the requirements on the D daughters are kaons must satisfy DLLK $>$ 2 and pions must satifsfy DLLK $<$ -2. For the \decay{\Dz}{K\pi\pi\pi} modes, e.g. \decay{\Dz}{\Km\pip\pim\pip}, the \Km must satisfy DLLK $>$ 2 and both \pip must satifsfy DLLK $<$ -2; no PID requirement is applied for the \pip. For the \decay{\Dz}{\pip\pim\pip\pim}, the two \pip mesons must satisfy DLLK $<$ -2 and no PID requirements is placed on the \pim mesons. The PID requirements are the same as those used in the \decay{\Bp}{\D\Kp} analysis~\cite{LHCb-PAPER-2016-003}. No PID requirements are made on the \KS daughters; the high purity of the \KS means that this is not necessary, this is justified in Section \ref{sec:backgrounds:contamination}. The efficiency of this PID selection for the $K\pi$ favoured mode in Run 1 is 74\% and the efficiency of $\pi K$ events in the favoured mode is 0.15\%. These efficiencies are discussed in more detail in Section \ref{sec:mc:pid}. 
-
-
-A brief look at ProbNN variables was undertaken early on in the analysis but cuts were not found that improved on the DLL cuts. Figure \ref{pidoptimisation} shows the variation of PID efficiencies with different selections. These results are based on a preliminary version of the selection and so the DLLK efficiencies are not the same as those quoted in this analysis.  The same PID selection is applied to both Run 1 and Run 2 datasets. It was found that for the given PID selection both PID efficiency and misID efficiency were improved for Run 2 compared to Run 1. More detail is given in Section \ref{sec:mc:pid}.
-
-\begin{figure}
-\includegraphics[width=0.5\linewidth]{figures/selection/pidOptimisation_bachelor.pdf}
-\put(-150,100) {(a)}
-\hfill
-\includegraphics[width=0.5\linewidth]{figures/selection/pidOptimisation_Ddaughters.pdf}
-\put(-150,100) {(b)}
-\caption{PID efficiencies and misID efficiencies for various PID selections applied to (a) the bachelor pion, and (b) the D daughters. The black curve is for selections using $DLLK$, the red curve is for selections using $ProbNNpi$ and the blue curve is for selections using $ProbNNpi \times (1-ProbNNk)$}
-\label{pidoptimisation}
-\end{figure}
-
-\subsection{Multiple candidates}
-\label{sec:selection:multiplecandidates}
-
-The selection may produce more than one signal event from the same B candidate. The rate of these multiple candidates was calculated after the final selection and only considering candidates in the range of the \CP fit (refitted \B mass $>$ 5230 \mev), see Section \ref{sec:massfit:range} for details on the fit range. The results are shown in Tables \ref{multiplecandidatesRun1} and \ref{multiplecandidatesRun2}. The rate is so low that no action is taken to remove the multiple candidates. In the ADS mode where it would have a significant effect, there are no multiple candidates.
-
-\begin{table}[h]
-\centering
-\begin{tabular}{ccc}
-\hline
-& LL & DD \\
-\hline
-$K\pi$ & 0.005 (4) & 0.004 (9) \\
-$K\pi$ & 0.008 (2) & 0.005 (3) \\
-$KK$ & 0 (0) & 0 (0) \\
-$\pi\pi$ & 0 (0) & 0 (0) \\
-$\pi K$ & 0 (0) & 0 (0) \\
-$K\pi\pi\pi$ & 0 (0) & 0.026 (7) \\
-$\pi K\pi\pi$ & 0 (0) & 0.05 (1) \\
-\hline
-\end{tabular}
-\caption{Multiple candidate rate for Run1. The number in brackets is the actual number of multiple candidates}
-\label{multiplecandidatesRun1}
-\end{table}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{ccc}
-\hline
-& LL & DD \\
-\hline
-$K\pi$ & 0.005 (7) & 0.005 (19) \\
-$K\pi$ & 0.005 (2) & 0.004 (5) \\
-$KK$ & 0 (0) & 0.006 (1) \\
-$\pi\pi$ & 0 (0) & 0.011 (1) \\
-$\pi K$ & 0 (0) & 0 (0) \\
-$K\pi\pi\pi$ & 0 (0) & 0.012 (9) \\
-$\pi K\pi\pi$ & 0 (0) & 0 (0) \\
-\hline
-\end{tabular}
-\caption{Multiple candidate rate for Run 2. The number in brackets is the actual number of multiple candidates}
-\label{multiplecandidatesRun2}
-\end{table}
-
-\clearpage
-
-\section{Mass parameterisation of the favoured mode}
-\label{sec:massfit}
-
-This section describes the mass parameterisation that is developed for the two and four-body favoured \D modes, namely \decay{\Bm}{\D(\Km\pip)\Kstarm} and \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm}. The fit to data is performed on the refitted invariant mass of \B candidates. The aim is to parameterise the invariant \B mass to be used in the simultaneous fit described in Section \ref{sec:cpfit} to extract the \CP observables. There are three components considered in the parameterisation of the mass shape:
-\begin{enumerate}
-\item Signal, \decay{\Bm}{\D\Kstarm} decays.
-\item Combinatoric background, where random tracks are combined in the reconstruction 
-\item Partially reconstructed background, where one particle has been missed in the reconstruction, for example \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, where the \piz is not reconstructed.
-\end{enumerate}
-
-The shape of each fit component, and any constraints in background yields imposed, is discussed in the following sections. The shapes for the LL and DD \KS categories are considered separately because of their different reconstructed \B mass resolutions.
-
-\subsection{Signal shape}
-\label{sec:massfit:signal}
-
-The signal can be described as the sum of two Gaussians with low mass tails to account for radiative effects. These modified Gaussians are known as Crystal Ball (CB) functions~\cite{Skwarnicki:1986xj}. This Double Crystal Ball shape is defined in Equation \ref{DCBshape}. 
-\begin{equation}
-\mathrm{DCB}(m; \mu,\sigma,\alpha,n,f_{cb}) = f_{cb} \cdot \mathrm{CB}(m; \mu,\sigma,\alpha,n) + (1-f_{cb}) \cdot \mathrm{CB}(m;\mu,f_{\sigma}\sigma,\alpha,n),
-\label{DCBshape}
-\end{equation}
-where
-\begin{equation*}
-  \mathrm{CB}(m; \mu,\sigma,\alpha,n)=
-\begin{cases}
-    e^{-((m-\mu)/ \sigma)^2/2},                                   & \text{if } \frac{m-\mu}{\sigma} \geq - \alpha, \\
-   \left ( \frac{n}{|\alpha|} \right ) ^n e^{-|\alpha|^2/2} \left ( \frac{n}{|\alpha|} - |\alpha| - \left ( \frac{m-\mu}{\sigma} \right ) \right ) ^{-n} ,    & \text{otherwise.}
-\end{cases}
-\end{equation*}
-
-The tail parameters, $\alpha$ and $n$, are fixed from simulation and both CBs share the same mean and tail parameters.  The width fraction between the CBs, $f_{\sigma}$, is fixed from simulation, but the mean and width, $\mu$ and $\sigma$, are left floating. The fits to signal MC are shown in Figure \ref{signalfits} and the shape parameters obtained from these fits are detailed in Table \ref{signalparameters}. 
-%The fitted mean value in data and MC was found to be slightly different, the values of the differences are shown in Table \ref{mcshifts}.
-
-\begin{figure}[h]
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_LL_KPi.pdf}
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_DD_KPi.pdf}
-\put(-400,70) {(a)}
-\put(-180,70) {(b)}
-\hfill
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_LL_KPiPiPi.pdf}
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_DD_KPiPiPi.pdf}
-\put(-400,70) {(c)}
-\put(-180,70) {(d)}
-\caption{Fits to signal MC for (a) $K\pi$ LL, (b) $K\pi$ DD, (c) $K\pi\pi\pi$ LL, and (d) $K\pi\pi\pi$ DD}
-\label{signalfits}
-\end{figure}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{c|cc|cc}
-\hline
-& \multicolumn{2}{c}{$K\pi$} & \multicolumn{2}{c}{$K\pi\pi\pi$} \\
-& LL & DD & LL & DD\\
-\hline
-$\mu$ & $5279.12 \pm 0.15$ & $5279.30 \pm 0.09$ & $5279.62 \pm 0.12$ & $5279.50 \pm 0.19$ \\
-$\sigma$ & $10.7 \pm 0.3$ & $10.8 \pm 0.2$ & $11.2 \pm 0.2$ & $11.6 \pm 0.3$ \\
-$f_{\sigma}$ & $2.04 \pm 0.10$ & $1.97 \pm 0.06$ & $2.08 \pm 0.07$ & $2.10 \pm 0.11$ \\
-$\alpha$ & $2.53 \pm 0.07$ & $2.46 \pm 0.04$ & $2.60 \pm 0.07$ & $2.50 \pm 0.10$ \\
-$n$ & 1.0 (fixed) & 1.0 (fixed) & 1.0 (fixed) & 1.0 (fixed) \\
-$f_{cb}$ & $0.82 \pm 0.03$ & $0.84 \pm 0.02$ & $0.80 \pm 0.03$ & $0.81 \pm 0.04	$ \\
-\hline
-\end{tabular}
-\caption{Signal shape parameters obtained by a fit to Run 1 and Run 2 signal MC combined for both $K\pi$ and $K\pi\pi\pi$. Parameter names are defined in Equation \ref{DCBshape}. All parameters except for the mean and width are fixed to these values in the mass fit}
-\label{signalparameters}
-\end{table}
-
-%\begin{table}
-%\centering
-%\begin{tabular}{ccc}
-%\hline
-%& Run 1 & 2015 \\
-%\hline
-%LL & +1.5 & +1.2 \\
-%DD & +0.4 & 0.0 \\
-%\hline
-%\end{tabular}
-%\caption{Difference (in MeV) in the fitted value of the mean between data and MC (data - MC)}
-%\label{mcshifts}
-%\end{table}
-
-
-\subsection{Combinatorial background}
-\label{sec:massfit:combinatorial}
-
-The combinatoric background comes from, for example, random tracks incorrectly reconstructed to form a \D meson. The combinatoric background is modelled using an exponential function with a freely floating slope parameter and yield. The slope parameter is allowed to float independently in the LL and DD categories and between two and four-body \D final states. Each \D final state can have a different combinatoric rate.
-
-
-%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Partially reconstructed backgrounds}
-\label{sec:massfit:partreco}
-
-Partially reconstructed decays refer to those in which one or more particle has failed to be reconstructed. These decays are parameterised by analytic functions based on a previous study of \decay{\Bm}{\D\Km}, \decay{\D}{h^+h^-} data, which has many similar aspects to this analysis.
-
-The partially reconstructed decays are of the form \decay{\B}{\Dstar\Kstar}, where the \Dstar decays to a \D meson and a pion or photon that is missed in reconstruction. These backgrounds are observed at a low reconstructed invariant mass due to the single particle missed from the invariant mass sum. The \B mass range is no large enough to include the case where more than one particle is lost. Three partially reconstructed decays contribute in the invariant mass fit:
-
-\begin{itemize}
-\item{\decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}}
-\item{\decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm}}
-\item{\decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm}}
-\end{itemize}
-
-where the particle in square brackets corresponds to the missing daughter. All of the decay modes listed are modelled using three analytic shapes; RooHORNSdini, RooHILLdini and RooLITTLEHORNSdini. These shapes are physically motivated, exploiting the decay kinematics of partially reconstructed decays.
-
-\decay{\B}{\Dstar\Kstar} is a Scalar $\to$ Vector Vector decay, therefore there are three different helicity amplitudes to consider due to the conservation of angular momentum. Each of these helicity amplitudes produces a \Dstar particle in a different helicity state, labelled +1, 0, -1. The helicity state of the \Dstar and the spin of the missing particle in the subsequent \Dstar decay determines the distribution of the reconstructed \B mass. 
-
-\subsubsection{Horns}
-
-Consider the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz}, where the \Dstarz is in helicity state 0. The helicity of the \Dstarz and the conservation of angular momentum mean that the spin-0 \piz meson will decay predominantly along $\theta = 0^{\circ}$ or $\theta = 180^{\circ}$. When $\theta = 0^{\circ}$, the fraction of momentum carried by the \piz in the \B rest frame is at its smallest, resulting in a larger reconstructed \B mass. Conversely, if $\theta = 180^{\circ}$, the fraction of momentum carried by the \piz is greatest, leading to a lower resonstructed \B mass. The distribution of the helicity angle of the missing particle, $\theta$, has a one-to-one correspondence with its momentum and therefore the reconstructed \B mass. This gives rise to a double peak structure. The \B mass distribution is a parabola, $p_{HORNS}(x)$, with kinematics endpoints $a$ and $b$ where
-
-\begin{align}
-p_{HORNS}(x) &= \begin{cases}
-\left(x - \frac{a+b}{2}\right)^2, & \text{ if $a \leq x \leq b$}\\ 	
-0, & \text{ otherwise.}
-\end{cases} 
-\end{align}
-
-The parabola is convolved with two Gaussians in order to account for resolution effects. Given a Gaussian function of mean $\mu$ and width $\sigma$, $G(\mu,\sigma)$, a Double Gaussian can be constructed as,
-
-\begin{equation}
-DG(x) = f_G G(x|\mu,\sigma) + \left(1-f_G\right) G(x|\mu,R_{\sigma}\sigma) \text{ , }
-\end{equation}
-
-where $\sigma$ is the width of the first Gaussian, $f_G$ is the fraction contained by the first gaussian and $R_{\sigma}$ is the relative width between the two. Additionally, selection effects can affect the shape such that one peak is higher than the other. This is taken into account by introducing a linear polynomial with a slope of $1 - \xi$, where $0 \leq \xi \leq 1$. As $\xi \rightarrow 0$, the left hand peak decreases in size relative to the right hand peak. The resulting Horns function is,
-
-\begin{equation}
-\text{Horns}(m) = \int_a^b dx \left(x - \frac{a+b}{2}\right)^2 DG(x|m,\sigma,f_G,R_{\sigma}) \left( \frac{1 - \xi_{HORNS}}{b - a}x + \frac{b\xi_{HORNS} - a}{b - a}\right),
-\end{equation}
-
-where $m$ is the mass variables to be fitted and $x$ is the integration variable in the convolution.
-
-\subsubsection{Hill}
-
-Consider the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\gamma}, where the \Dstarz is in helicity state 0. The helicity of the \Dstarz and the conservation of angular momentum mean that the spin-1 \Pgamma will decay predominantly along $\theta = 90^{\circ}$ or $\theta = 270^{\circ}$. The fraction of momentum carried by the photon is the same in both of these cases, so not double peak stucture is seen. The resultsing \B mass distribution is a parabola with negative curvature, $p_{HILL}(x)$, and kinematic endpoints $a$ and $b$ where
-
-\begin{align}
-p_{HILL}(x) &= \begin{cases}
--(x - a)(x - b), & \text{ if $a \leq x \leq b$}\\ 	
-0, & \text{ otherwise.}
-\end{cases} 
-\end{align}
-
-As with the Horns function, this parabola is convolved with a Double Gaussian and a linear polynomial to account for resolution and selection effects respectively. The resultsing Hill function is,
-
-\begin{equation}
-\text{Hill}(m) = \int_a^b dx \left[-(x - a)(x - b)\right] DG(x|m,\sigma,f_G,R_{\sigma}) \left( \frac{1 - \xi_{HILL}}{b - a}x + \frac{b\xi_{HILL} - a}{b - a}\right),
-\end{equation}
-
-where $m$ is the mass variables to be fitted and $x$ is the integration variable in the convolution.
-
-As the distribution of $\theta$ has a one-to-one correspondence with the reconstructed \B mass, a \Dstar of +1 or -1 would be indistiguishable in \B mass therefore these values are grouped together. This Hill function also applies to the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz}, where the \Dstarz is in helicity state $\pm$1.
-
-\subsubsection{Little Horns}
-
-For the configuration \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\gamma}, where the \Dstarz is in helicity state $\pm$1, a third shape is needed, named Little Horns. It is described by a parabola, $p_{LITTLEHORNS}(x)$, and kinematic endpoints $a$ and $b$ where
-
-\begin{align}
-p_{LITTLEHORNS}(x) &= \begin{cases}
-\left(x - \frac{a+b}{2}\right)^2 + \left(\frac{a-b}{2}\right)^2, & \text{ if $a \leq x \leq b$}\\ 	
-0, & \text{ otherwise.}
-\end{cases} 
-\end{align}
-
-Again, this distribution is convolved with a Double Gaussian and linear polynomial to descibe the resolution and selection effects respectively. This results in a Little Horns function
-
-\begin{equation}
-\text{LittleHorns}(m) = \int_a^b dx \left\{ \left[ \left( x - \frac{a+b}{2} \right) ^2 + \left( \frac{a-b}{2}\right)^2 \right] DG(x|m,\sigma,f_G,R_{\sigma}) \left( \frac{1 - \xi_{LITTLEHORNS}}{b - a}x + \frac{b\xi_{LITTLEHORNS} - a}{b - a} \right) \right\} ,
-\end{equation}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{cccc}
-Helicity of \Dstar & Missing particle & $\theta$ dependence & Function \\
-\hline
-0 & \piz & $\left(x - \frac{a+b}{2}\right)^2$ & Horns \\
-0 & \Pgamma & $-(x - a)(x - b)$ & Hill \\
-$\pm$1 & \piz & $-(x - a)(x - b)$ & Hill \\
-$\pm$1 & \Pgamma & $\left(x - \frac{a+b}{2}\right)^2 + \left(\frac{a-b}{2}\right)^2$ & Little Horns \\
-\end{tabular}
-\caption{Possible combinations of \Dstar helicity angle and missing particle}
-\label{helicityamplitudes}
-\end{table}
-
-In order to obtain values for the various parameters in these shapes, simulated events were generated and the full reconstruction and selection was applied, except for the PID selection. The shapes are taken from simulation are fitted separately using the RooHORNSdini, RooHILLdini and RooLITTLEHORNSdini, the fits are shown in Figures \ref{partrecofitsLL} and \ref{partrecofitsDD}. All the parameters for these shapes are fixed in the mass fit from fits to simultated events.
-
-\begin{figure}[h]
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi010_LL.pdf}
-\put(-180,80) {(a)}
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi101_LL.pdf}
-\put(-180,80) {(b)}
-\hfill
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bugamma010_LL.pdf}
-\put(-180,80) {(c)}
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bugamma101_LL.pdf}
-\put(-180,80) {(d)}
-\hfill
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi010_LL.pdf}
-\put(-180,80) {(e)}
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi101_LL.pdf}
-\put(-180,80) {(f)}
-\caption{Fit to $B \to D^*K^*$ Run 1 MC in all the different modes for LL candidates (a) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 010, (b) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 101, (c) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 010, (d) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 101, (e) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 010, and (f) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 101}
-\label{partrecofitsLL}
-\end{figure}
-
-\begin{figure}
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi010_DD.pdf}
-\put(-180,80) {(a)}
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi101_DD.pdf}
-\put(-180,80) {(b)}
-\hfill
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bugamma010_DD.pdf}
-\put(-180,80) {(c)}
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bugamma101_DD.pdf}
-\put(-180,80) {(d)}
-\hfill
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi010_DD.pdf}
-\put(-180,80) {(e)}
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi101_DD.pdf}
-\put(-180,80) {(f)}
-\caption{Fit to $B \to D^*K^*$ Run 1 MC in all the different modes for DD candidates (a) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 010, (b) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 101, (c) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 010, (d) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 101, (e) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 010, and (f) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 101}
-\label{partrecofitsDD}
-\end{figure}
-
-As there are six shapes in this low mass region of the mass fit, from 4900-5230 MeV, it is necessary to fix some yields in order to have a stable fit. The yield ratios between \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} and \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} are fixed separately for the 010 and 101 helicity amplitudes. The values fixed in the fit, given in Table \ref{fixedyieldratios}, are obtained from a ratio of braching fractions and selection efficiencies, an example calculation is given in Equation \ref{partrecoexample}. This calculation is performed for each of the ratios listed in Table \ref{fixedyieldratios}. Branching fractions for the partially reconstructed decays are given in Table \ref{partrecoBRs}. MC events are generated for each of the modes and the values of $\epsilon_{sel}$, used in Equation \ref{partrecoexample}, are given by the fraction of simulated events passing the selection.
-
-\begin{equation}
-\frac{N(\decay{\B}{(\decay{\Dstar}{\Dz\piz})\Kstar}\ 010)}{N(\decay{\B}{(\decay{\Dstar}{\Dz\gamma})\Kstar}\ 010)} = \frac{BR(\decay{\B}{(\decay{\Dstar}{\Dz\piz})\Kstar})}{BR(\decay{\B}{(\decay{\Dstar}{\Dz\gamma})\Kstar})} \times \frac{\epsilon_{sel}(\decay{\B}{(\decay{\Dstar}{\Dz\piz})\Kstar}\ 010)}{\epsilon_{sel}(\decay{\B}{(\decay{\Dstar}{\Dz\gamma})\Kstar}\ 010)}
-\label{partrecoexample}
-\end{equation}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{c|c}
-Mode & Branching ratio \\
-\hline
-\decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} & $(5.0 \pm 0.9) \times 10^{-4}$ \\
-\decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} & $(3.1 \pm 0.6) \times 10^{-4}$ \\
-\decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} & $(2.2 \pm 0.4) \times 10^{-4}$ \\
-\end{tabular}
-\caption{Branching ratios for the different partially reconstructed decay modes~\cite{PDG2014}}
-\label{partrecoBRs}
-\end{table}
-
-\begin{table}
-\centering
-\begin{tabular}{ccc}
-\hline
-& LL & DD \\
-\hline
-$\frac{Bu \gamma 010}{Bu \pi 010}$ & $0.53 \pm 0.14$ & $0.51 \pm 0.14$ \\[3mm]
-$\frac{Bd \pi 010}{Bu \pi 010}$ & $0.38 \pm 0.14$ & $0.37 \pm 0.14$ \\[3mm]
-$\frac{Bu \gamma 101}{Bu \pi 101}$ & $0.53 \pm 0.14$ & $0.51 \pm 0.14$ \\[3mm]
-$\frac{Bd \pi 101}{Bu \pi 101}$ & $0.38 \pm 0.14$ & $0.38 \pm 0.14$ \\[3mm]
-\hline
-\end{tabular}
-\caption{Yield ratios fixed in the mass fit for the partically reconstructed backgrounds}
-\label{fixedyieldratios}
-\end{table}
-
-Other backgrounds investigated in this analysis, but not included in the mass fit are discussed in Section \ref{sec:backgrounds}.
-
-
-\subsection{Mass fit}
-\label{sec:massfit:fit}
-
-A fit to the invariant B mass in the $K\pi$ and $K\pi\pi\pi$ favoured mode is performed using the shapes discussed in Sections \ref{sec:massfit:signal}, \ref{sec:massfit:combinatorial} and \ref{sec:massfit:partreco}. The yield of the signal and combinatoric shape are left to float without constraint. There are six shapes in the partially reconstructed background. The yield ratios between all the shapes with helicity amplitude 010 and yield ratios between the shapes with helicity amplitude 101 are fixed to the values detailed in Table \ref{fixedyieldratios}. The only parameters left floating in the partially reconstructed background are the yield ratio between the 010 and 101 amplitudes and the overall yield. 
-
-Figures \ref{massfitskpi} and \ref{massfitsk3pi} shows the fits to the invariant B mass distribution in the $K\pi$ and $K\pi\pi\pi$ favoured mode respectively for LL and DD candidates in both Run 1 and Run 2. The estimated $K\pi$ signal yield extracted from these fits for Run 1 is $220 \pm 16$ for LL and $505 \pm 24$ for DD, and for Run 2 is $388 \pm 21$ for LL and $901 \pm 33$ for DD. The fit results are shown in Table \ref{fitresultskpi}. For the $K\pi\pi\pi$ mode, the estimated signal yield extracted from these fits for Run 1 is $87 \pm 10$ for LL and $205 \pm 16$ for DD, and for Run 2 is $215 \pm 15$ for LL and $516 \pm 25$ for DD. The fit results are shown in Table \ref{fitresultsk3pi}.
-
-\begin{figure}
-\centering
-\subfloat[Run 1 LL]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_LL_KPi_run1.pdf}}
-\vspace{-12pt}
-\hfill
-\subfloat[Run 1 DD]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_DD_KPi_run1.pdf}}
-\vspace{-12pt}
-\hfill
-\subfloat[Run 2 LL]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_LL_KPi_run2.pdf}}
-\vspace{-12pt}
-\hfill
-\subfloat[Run 2 DD]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_DD_KPi_run2.pdf}}
-\caption{Fits to the invariant B mass distribution in the $K\pi$ favoured mode}
-\label{massfitskpi}
-\end{figure}
-
-\begin{figure}
-\centering
-\subfloat[Run 1 LL]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_LL_KPiPiPi_run1.pdf}}
-\vspace{-12pt}
-\hfill
-\subfloat[Run 1 DD]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_DD_KPiPiPi_run1.pdf}}
-\vspace{-12pt}
-\hfill
-\subfloat[Run 2 LL]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_LL_KPiPiPi_run2.pdf}}
-\vspace{-12pt}
-\hfill
-\subfloat[Run 2 DD]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_DD_KPiPiPi_run2.pdf}}
-\caption{Fits to the invariant B mass distribution in the $K\pi$ favoured mode}
-\label{massfitsk3pi}
-\end{figure}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{l|cc|cc}
-\hline
-& \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
-& LL & DD & LL & DD \\
-\hline
-decay & $(-4.8 \pm 0.5) \times 10^{-3}$ & $(-2.8 \pm 0.3) \times 10^{-3}$ & $(-4.4 \pm 0.5) \times 10^{-3}$ & $(-2.5 \pm 0.2) \times 10^{-3}$ \\
-frac\_010 & $0.15 \pm 0.08$ & $0.12 \pm 0.05$ & $0.18 \pm 0.05$ & $0.06 \pm 0.04$ \\
-mean & $5280.7 \pm 0.8$ & $5280.7 \pm 0.6$ & $5278.5 \pm 0.8$ & $5278.6 \pm 0.5$ \\
-nbkg & $167 \pm 20$ & $472 \pm 34$ & $223 \pm 24$ & $1100 \pm 50$ \\
-ndstkst & $338 \pm 23$ & $810 \pm 36$ & $654 \pm 31$ & $1397 \pm 49$ \\
-nsig & $220 \pm 16$ & $505 \pm 24$ & $388 \pm 21$ & $901 \pm 33$ \\
-sigma & $10.2 \pm 0.7$ & $11.5 \pm 0.5$ & $12.2 \pm 0.6$ & $11.5 \pm 0.4$ \\
-\hline
-\end{tabular}
-\caption{Fit results from the $K\pi$ favoured mode for LL and DD candidates, corresponding to the fits in Figure \ref{massfitskpi}. The parameter $decay$ is the combinatoric background slope, $frac\_010$ is the yield ratio between 010 and 101 helicity amplitudes, $sigma$ is the floating width of the signal shape, and $nsig$, $nbkg$ and $ndstkst$ are the yields of signal, combinatoric background and partially reconstructed decays respectively}
-\label{fitresultskpi}
-\end{table}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{l|cc|cc}
-\hline
-& \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
-& LL & DD & LL & DD \\
-\hline
-decay & $(-5.2 \pm 1.1) \times 10^{-3}$ & $(-2.3 \pm 0.4) \times 10^{-3}$ & $(-4.4 \pm 0.5) \times 10^{-3}$ & $(-2.1 \pm 0.2) \times 10^{-3}$ \\
-frac\_010 & $0.26 \pm 0.11$ & $0.20 \pm 0.08$ & $0.15 \pm 0.07$ & $0.16 \pm 0.05$ \\
-mean & $5281.3 \pm 1.3$ & $5283.9 \pm 0.9$ & $5278.7 \pm 1.0$ & $5277.7 \pm 0.7$ \\
-nbkg & $50 \pm 12$ & $252 \pm 24$ & $168 \pm 20$ & $707 \pm 40$ \\
-ndstkst & $154 \pm 15$ & $317 \pm 24$ & $342 \pm 23$ & $914 \pm 40$ \\
-nsig & $102 \pm 10$ & $226 \pm 16$ & $244 \pm 16$ & $578 \pm 27$ \\
-sigma & $11.4 \pm 1.0$ & $11.3 \pm 0.8$ & $12.9 \pm 0.8$ & $13.1 \pm 0.6$ \\
-\hline
-\end{tabular}
-\caption{Fit results from the $K\pi\pi\pi$ favoured mode for LL and DD candidates, corresponding to the fits in Figure \ref{massfitsk3pi}. The parameter $decay$ is the combinatoric background slope, $frac\_010$ is the yield ratio between 010 and 101 helicity amplitudes, $sigma$ is the floating width of the signal shape, and $nsig$, $nbkg$ and $ndstkst$ are the yields of signal, combinatoric background and partially reconstructed decays respectively}
-\label{fitresultsk3pi}
-\end{table}
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Choice of fit range}
-\label{sec:massfit:range}	
-
-Fixing the relative yields for the partially reconstructed shapes, as in Table \ref{fixedyieldratios}, is possible only under the assumption that \CP violation is negligible. This is a fair assumption for the favoured \decay{\Dz}{\Km\pip} decay, however in the other \D modes, for example \decay{\Dz}{\Kp\Km}, there is expected \CP violation for which the parameters are entirely unknown. Therefore, it is not possible make any constraints at all in these modes. The fit that would result from fitting six individual yields with an order of magnitude less data would be unstable and this lack of constraint in the low mass region would lead to a large amount of freedom in the combinatoric, significantly affecting the signal yield. 
-
-The overlap of the partially reconstructed and signal peaks is very small. There are a number of advantages to raising the lower range of the mass parameterisation up to 5230 \mev, which only removes 0.4\% of signal. The advantages include avoiding the need to fit the various partially reconstructed yields in each of the other D decays modes. These cannot use the same assumptions and fractions as determined in the Cabibbo-favoured mode due to expected CP violation. Further benefits are that low level broad backgrounds that may be present in the range 4900 - 5200 \mev do not need to considered as sources of systematics uncertainty. The shape and yield of the small amount of partially reconstructed background present in all \D decay categories above 5230 \mev is determined and fixed from the fit of data with the Cabibbo-favoured decay, taking into account the smaller branching fractions of the $D$ decays. It is less than an event for all the CP violating modes. Due to the assumptions present in the initial fit, uncertainties in the yield and shape and possible asymmetries in distribution between \Bp and \Bm are evaluated as systematic uncertainties. This systematic uncertainty is dealt with in Section \ref{sec:systematics:partreco}.
-
-
-\clearpage
-
-\section{Backgrounds}
+\subsection{Studies of peaking backgrounds}
 \label{sec:backgrounds}
 
-\subsection{Partially reconstructed $B \to D^*K^*$ decays}
+\subsubsection{Partially reconstructed $B \to D^*K^*$ decays}
 \label{sec:backgrounds:partreco}
 
 One of the major backgrounds in this analysis is from partially reconstructed \decay{\B}{\Dstar\Kstar} decays, discussed in detail in Section \ref{sec:massfit:partreco} and included in the mass fit.
 
-\subsection{Charmless backgrounds $B \to K^*hh$}
+\subsubsection{Charmless backgrounds $B \to K^*hh$}
 \label{sec:backgrounds:charmless}
 
 \B decays that do not proceed via a \D meson contribute to the charmless background. This is a peaking background under the signal region which is expected to be uniform in \D mass. The flight distance significance of the \Dz in the z direction is defined as,
@@ -728,7 +312,7 @@ $\pi K \pi\pi$ & $0.0 \pm 10.6$ & $1.4 \pm 1.5$ \\
 
 The \Dz FD significance is required to exceed 2$\sigma$, therefore from Tables \ref{charmlessyields} and \ref{charmlessyieldsRun2} it can be seen that all charmless contributions are consistent with zero. The expected yields in the $K\pi$ favoured and $KK$ modes are significantly less than 1\% of the expected signal yield. However, the charmless contribution in the $\pi\pi$ mode could be significant. A systematic is assigned to the possible charmless contribution in the $\pi\pi$ mode, details are given in Section \ref{sec:systematics}. 
 
-\subsection{\decay{\B}{\D\pi\pi\pi}}
+\subsubsection{\decay{\B}{\D\pi\pi\pi}}
 \label{sec:backgrounds:b2dpipipi}
 
 \decay{\B}{\D\pi\pi\pi} decays, with a branching fraction of $5.7 \times 10^{-3}$~\cite{PDG2014} (about 50 times the signal branching fraction), are expected to occur as a peaking background underneath the signal. In order to remove this background, events are selected with the requirement that the \KS has flown. For DD candidates this requirement is already satisfied, however for LL candidates the flight distance significance of the \KS in the z direction, with the equivalent definition as for \Dz given in Equation \ref{FDdefinition}, is required to exceed 5$\sigma$. 
@@ -746,7 +330,7 @@ The \decay{\B}{\D\pi\pi\pi} background is removed by taking the \KS mass sideban
 \label{strangelessfits}
 \end{figure}
 
-\subsection{Non-resonant $B \to DK_s\pi$}
+\subsubsection{Non-resonant $B \to DK_s\pi$}
 \label{sec:backgrounds:non-resonant}
 
 Non-resonant background is reduced by removing events in which the \KS\pion invariant mass is greater than 75 MeV from the nominal \Kstarpm mass. \decay{\Bpm}{\D\Kstarpm} is a Scalar $\to$ Scalar Vector decay, which means the \Kstarpm must be londitudially polarised, so the $K_s$ helicity angle of pure \D\Kstarpm events follows a $\cos^2\theta$ distribution, as shown in Figure \ref{helicitycut}, compared to the uniform distribution of non-resonant components. It can be seen from Figure \ref{helicitycut} that the \KS helicity angle distribution is not symmetric, this is discussed in detail in Appendix \ref{sec:app:helicityangle}. Removing events with an absolute value of $\cos^2\theta$ less than 0.3 improves the purity of \D\Kstarpm decays compared to non-resonant background.
@@ -779,7 +363,7 @@ It is necessary to estimate the fraction of non-resonant \decay{\B}{\D\KS\pi} in
 
 The parameter $\kappa$, defined in Section \ref{sec:interpretation:coherence}, is a measure of the non-$DK(892)^*$ contribution, which is expected to mainly consist of non-resonant contribution, but could include other resonances. In this analysis the value of $\kappa$ is estimated and then used alongside the \CP observables to extract \Pgamma, $r_B$ and $\delta_B$. The parameter $\kappa$ is estimated by constructing an amplitude model and generating many toys by varying the amplitudes and phases of the model components, this method is detailed in Section \ref{sec:interpretation:coherence}. The estimated value of $\kappa$ is $0.95 \pm 0.06$.
 
-\subsection{Favoured $\to$ Supressed crossfeed}
+\subsubsection{Favoured $\to$ Supressed crossfeed}
 \label{sec:backgrounds:crossfeed}
 
 The doubly Cabibo supressed ADS mode, \decay{\Bm}{\D(\Kp\pim)\Kstarm}, can have contamination coming from the favoured \decay{\Bm}{\D(\Km\pip)\Kstarm} mode, where the daughter mass hypotheses are swapped, i.e. the kaon is misidentified as a pion and the pion is misidentified as a kaon. The favoured mode has a braching ratio 281 times higher than the ADS mode. Implementation of PID cuts of the \D daughters significantly reduces this background, however in order to reduce it to negligible levels a veto is applied. The \Dz mass is reconstructed where both daughter mass hypotheses are swapped, this is required to be greater than 15 MeV away from the nominal \Dz mass. This veto window is illustrated in Figure \ref{Dmassveto}, which shows the MC distributions for DD canidates in Run 1. The veto is only applied to the ADS mode in this analysis. It is found to be 92.5\% efficient at retaining genuine signal, corresponding to events that lie within the red lines in Figure \ref{Dmassveto} (a), while only retaining 8.7\% of double misID background, coresponding to events that lie within the red lines in Figure \ref{Dmassveto} (b). For the 4-body modes the same background can appear in the suppressed \decay{\Bm}{\D(\Kp\pim\pip\pim)\Kstarm} mode due to contamination from the favoured \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm}. There are two \pip mesons that could be misidetified as a \Kp meson, therefore in this case two vetos need to be applied. The \Dz mass is reconstructed as a swapped mass hypothesis where the kaon is swapped with the lower momentum pion and the kaon is swapped with the higher momentum pion. The veto is applied to both these reconstructed masses as shown in Figure \ref{Dmassveto4body}.
@@ -918,7 +502,47 @@ Total & 0.592 $\pm$ 0.002 & (1.2 $\pm$ 0.2) $\times 10^{-6}$ \\
 
 \clearpage
 
-\subsection{Lambda contamination}
+\subsubsection{\decay{\Lb}{\Lc\Kstar} background for \decay{\D}{\Kp\Km} fit}
+\label{sec:backgrounds:Lb2LcKst}
+
+An additional source of background in the \decay{\Bm}{\D\Kstarm}, \decay{\D}{\Kp\Km} fit comes from the decay \decay{\Lb}{\Lc\Kstar}, \decay{\Lc}{p\kaon\pi}, where the proton is misidentified as a kaon and the \pion is missed in the reconstruction. This background is also present in the \decay{\Bm}{\D\Km} analysis~\cite{LHCb-PAPER-2016-003}. The shape used to model this contribution is a RooCruijff PDF, defined as,
+\begin{equation}
+  \mathrm{Cruijff}(m; \mu,\sigma_L,\sigma_R,\alpha_L,\alpha_R)=
+\begin{cases}
+    exp \left( -\frac{(m-\mu)^2}{2\sigma_L^2 + \alpha_L(m-\mu)^2} \right) ,     & \text{if } m-\mu < 0, \\
+    exp \left( -\frac{(m-\mu)^2}{2\sigma_R^2 + \alpha_R(m-\mu)^2} \right) ,     & \text{otherwise.}
+\end{cases}
+\label{Cruijff}
+\end{equation}%
+with the shape parameters taken from a fit to \decay{\Lb}{\Lc\kaon} MC processed through \decay{\Bm}{\D\Km} stripping, as \decay{\Lb}{\Lc\kaon} MC is not available and the shapes are expected to be similar. The fit is shown in Figure \ref{Lbfit} and the shape parameters are fixed the fit results in Table \ref{fitresultsLb}. The fixing of shape parameters is considered to be a source of systematic uncertainty, which is included in Section \ref{sec:systematics}. The reconstructed \B mass falls between 4800 and 5500 \mev.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/backgrounds/Lb2LcKst.pdf}
+\caption{Fit to \decay{\Lb}{\Lc(pK\pi)\kaon} MC using a RooCruijff PDF, where the \pion is missed in reconstruction and the proton is misidentified as a kaon. This contributes as a source of background in the \decay{\Bm}{\D\Kstarm}, \decay{\D}{\Kp\Km} fit.}
+\label{Lbfit}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cc}
+\hline
+Parameter & Value \\
+\hline
+$\mu$ & $5280 \pm 18$ \\
+$\sigma_L$ & $221 \pm 26$ \\
+$\sigma_R$ & $96 \pm 16$ \\
+$\alpha_L$ & $-0.19 \pm 0.19$ \\
+$\alpha_R$ & $-0.04 \pm 0.06$ \\
+\hline
+\end{tabular}
+\caption{Shape parameters from a fit to \decay{\Lb}{\Lc\kaon} MC using a RooCruijff PDF. These shape parameters are fixed with an associated systematic uncertainty.}
+\label{fitresultsLb}
+\end{table}
+
+The shape is assumed to be the same in each \decay{\D}{\Kp\Km} fit category. The \decay{\Lb}{\Lc\Kstar}, \decay{\Lc}{p\kaon\pi} yield compared to the signal yield in the favoured \decay{\Bm}{\D\Kstarm}, \decay{\D}{\Kp\Km} mode is allowed to vary in the fit. This fractional yield is the same for all fit categories. 
+
+\subsubsection{Lambda contamination}
 \label{sec:backgrounds:contamination}
 
 The \decay{\KS}{\pip\pim} decay could have contamination coming from \decay{\Lz}{\proton\pim}, where the proton is reconstructed as a pion. It is not possible to determine possible \Lz contamination from the \KS invariant mass spectrum, where one of the \KS daughters is assigned the proton mass, because a peak at the \Lz mass cannot be distinguished from the variation near the low mass threshold. In order to distinguish between \KS decays and \Lz contamination the Armenteros-Podolanski (AP) plot is used~\cite{APplot}. The transverse momentum of the daughters with respect to the mother particle, $p_T$, is plotted against the longitudinal momentum asymmetry, which is defined as,
@@ -956,7 +580,7 @@ where $p_L^{\pm}$ is the longitudinal momentum of the daughter particles with re
 \label{apexample}
 \end{figure}
 
-\subsection{\decay{\B}{\D\KS\kaon}}
+\subsubsection{\decay{\B}{\D\KS\kaon}}
 \label{sec:backgrounds:b2dkks}
 
 The decay \decay{\B}{\D\KS\kaon} has a branching fraction of $5.5 \times 10^{-4}$~\cite{PDG2014}, which is similar to the signal branching fraction. However, nearly all of this background is removed by the 75 MeV \Kstarpm mass window and the DLLK $<$ 4 requirement on the bachelor pion. Table \ref{b2dkkspid} shows the rate of misidentification of the bachelor pion for \decay{\B}{\D\KS\kaon} MC.
@@ -982,7 +606,7 @@ Average Run 2 & \multicolumn{2}{c}{$9.1 \pm 0.2$} & \multicolumn{2}{c}{$7.6 \pm 
 Table \ref{b2dkkspid} shows that by requiring DLLK $<$ 4 on the bachelor pion the background is supressed to about 8\%. The efficiency of the 75 MeV \Kstarpm mass window when applied to \decay{\B}{\D\KS\kaon} MC is 3\% for both LL and DD. Combined misID rate and selection efficiencies means the decay is negligible even if the PID performance in Run 2 is not identical. Any residual amount is investigated alongside the systematics for the residual low mass background in this region.
 
 
-\subsection{Other backgrounds}
+\subsubsection{Other backgrounds}
 
 Other backgrounds have been looked into and shown to have negligible contribution; a summary of these is given in Table \ref{ignoredbackgrounds}. No branching ratio has been measured for \decay{\Bm}{\Dz\Kstarm\piz} and \decay{\Bs}{\Dz\KS\pi\pi}, upper limits are guestimated hence this gives further motivation for restricting the mass range to 5230 \mevcc. As these backgrounds are estimated to have a low contribution in an area outside the mass range chosen for the \CP fit, they are considered negligible.
 
@@ -1014,5 +638,441 @@ Many other backgrounds have been looked into and have been found to be negligibl
 \item \decay{\Bu}{\D(\KS\pi\pi)\Kp}
 \item \decay{\Lb}{\Lambda_c^-(\proton\Kp[\pim])\Kstarp} with the \proton misIDed as a kaon
 \end{itemize}
+
+
+\subsection{PID selection}
+\label{sec:selection:pid}
+
+The selection requirements are identical for each of the different D modes, $K\pi$, $KK$, $\pi\pi$ and $\pi K$, with the exception of the double misID veto. Therefore, it is essential to apply PID selection that efficiently distinguishes between pions and kaons. The PID cuts on the daughters of the D meson are designed so that no \decay{\Dz}{hh} candidate can appear in more than one category with a change in mass hypothesis. A PID requirement must be made on the bachelor pion in order to remove the \decay{\B}{\D\KS\kaon} background; this is discussed in more detail in Section \ref{sec:backgrounds:b2dkks}. 
+
+For the bachelor PID (pion coming from the \Kstarm) a requirement of PIDK $<$ 4 is applied. For the 2-body D modes the requirements on the D daughters are kaons must satisfy DLLK $>$ 2 and pions must satifsfy DLLK $<$ -2. For the \decay{\Dz}{K\pi\pi\pi} modes, e.g. \decay{\Dz}{\Km\pip\pim\pip}, the \Km must satisfy DLLK $>$ 2 and both \pip must satifsfy DLLK $<$ -2; no PID requirement is applied for the \pip. For the \decay{\Dz}{\pip\pim\pip\pim}, the two \pip mesons must satisfy DLLK $<$ -2 and no PID requirements is placed on the \pim mesons. The PID requirements are the same as those used in the \decay{\Bp}{\D\Kp} analysis~\cite{LHCb-PAPER-2016-003}. No PID requirements are made on the \KS daughters; the high purity of the \KS means that this is not necessary, this is justified in Section \ref{sec:backgrounds:contamination}. The efficiency of this PID selection for the $K\pi$ favoured mode in Run 1 is 74\% and the efficiency of $\pi K$ events in the favoured mode is 0.15\%. These efficiencies are discussed in more detail in Section \ref{sec:mc:pid}. 
+
+
+A brief look at ProbNN variables was undertaken early on in the analysis but cuts were not found that improved on the DLL cuts. Figure \ref{pidoptimisation} shows the variation of PID efficiencies with different selections. These results are based on a preliminary version of the selection and so the DLLK efficiencies are not the same as those quoted in this analysis.  The same PID selection is applied to both Run 1 and Run 2 datasets. It was found that for the given PID selection both PID efficiency and misID efficiency were improved for Run 2 compared to Run 1. More detail is given in Section \ref{sec:mc:pid}.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{figures/selection/pidOptimisation_bachelor.pdf}
+\put(-150,100) {(a)}
+\hfill
+\includegraphics[width=0.5\linewidth]{figures/selection/pidOptimisation_Ddaughters.pdf}
+\put(-150,100) {(b)}
+\caption{PID efficiencies and misID efficiencies for various PID selections applied to (a) the bachelor pion, and (b) the D daughters. The black curve is for selections using $DLLK$, the red curve is for selections using $ProbNNpi$ and the blue curve is for selections using $ProbNNpi \times (1-ProbNNk)$}
+\label{pidoptimisation}
+\end{figure}
+
+\subsection{Multiple candidates}
+\label{sec:selection:multiplecandidates}
+
+The selection may produce more than one signal event from the same B candidate. The rate of these multiple candidates was calculated after the final selection and only considering candidates in the range of the \CP fit (refitted \B mass $>$ 5230 \mev), see Section \ref{sec:massfit:range} for details on the fit range. The results are shown in Tables \ref{multiplecandidatesRun1} and \ref{multiplecandidatesRun2}. The rate is so low that no action is taken to remove the multiple candidates. In the ADS mode where it would have a significant effect, there are no multiple candidates.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+\hline
+& LL & DD \\
+\hline
+$K\pi$ & 0.005 (4) & 0.004 (9) \\
+$K\pi$ & 0.008 (2) & 0.005 (3) \\
+$KK$ & 0 (0) & 0 (0) \\
+$\pi\pi$ & 0 (0) & 0 (0) \\
+$\pi K$ & 0 (0) & 0 (0) \\
+$K\pi\pi\pi$ & 0 (0) & 0.026 (7) \\
+$\pi K\pi\pi$ & 0 (0) & 0.05 (1) \\
+\hline
+\end{tabular}
+\caption{Multiple candidate rate for Run1. The number in brackets is the actual number of multiple candidates}
+\label{multiplecandidatesRun1}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+\hline
+& LL & DD \\
+\hline
+$K\pi$ & 0.005 (7) & 0.005 (19) \\
+$K\pi$ & 0.005 (2) & 0.004 (5) \\
+$KK$ & 0 (0) & 0.006 (1) \\
+$\pi\pi$ & 0 (0) & 0.011 (1) \\
+$\pi K$ & 0 (0) & 0 (0) \\
+$K\pi\pi\pi$ & 0 (0) & 0.012 (9) \\
+$\pi K\pi\pi$ & 0 (0) & 0 (0) \\
+\hline
+\end{tabular}
+\caption{Multiple candidate rate for Run 2. The number in brackets is the actual number of multiple candidates}
+\label{multiplecandidatesRun2}
+\end{table}
+
+\clearpage
+
+\section{Mass parameterisation of the favoured mode}
+\label{sec:massfit}
+
+This section describes the mass parameterisation that is developed for the two and four-body favoured \D modes, namely \decay{\Bm}{\D(\Km\pip)\Kstarm} and \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm}. The fit to data is performed on the refitted invariant mass of \B candidates. The aim is to parameterise the invariant \B mass to be used in the simultaneous fit described in Section \ref{sec:cpfit} to extract the \CP observables. There are three components considered in the parameterisation of the mass shape:
+\begin{enumerate}
+\item Signal, \decay{\Bm}{\D\Kstarm} decays.
+\item Combinatoric background, where random tracks are combined in the reconstruction 
+\item Partially reconstructed background, where one particle has been missed in the reconstruction, for example \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, where the \piz is not reconstructed.
+\end{enumerate}
+
+The shape of each fit component, and any constraints in background yields imposed, is discussed in the following sections. The shapes for the LL and DD \KS categories are considered separately because of their different reconstructed \B mass resolutions.
+
+\subsection{Signal shape}
+\label{sec:massfit:signal}
+
+The signal can be described as the sum of two Gaussians with low mass tails to account for radiative effects. These modified Gaussians are known as Crystal Ball (CB) functions~\cite{Skwarnicki:1986xj}. This Double Crystal Ball shape is defined in Equation \ref{DCBshape}. 
+\begin{equation}
+\mathrm{DCB}(m| \mu,\sigma,\alpha,n,f_{cb}) = f_{cb} \cdot \mathrm{CB}(m| \mu,\sigma,\alpha,n) + (1-f_{cb}) \cdot \mathrm{CB}(m|\mu,f_{\sigma}\sigma,\alpha,n),
+\label{DCBshape}
+\end{equation}
+where
+\begin{equation*}
+  \mathrm{CB}(m| \mu,\sigma,\alpha,n)=
+\begin{cases}
+    e^{-((m-\mu)/ \sigma)^2/2},                                   & \text{if } \frac{m-\mu}{\sigma} \geq - \alpha, \\
+   \left ( \frac{n}{|\alpha|} \right ) ^n e^{-|\alpha|^2/2} \left ( \frac{n}{|\alpha|} - |\alpha| - \left ( \frac{m-\mu}{\sigma} \right ) \right ) ^{-n} ,    & \text{otherwise.}
+\end{cases}
+\end{equation*}
+
+The tail parameters, $\alpha$ and $n$, are fixed from simulation and both CBs share the same mean and tail parameters.  The width fraction between the CBs, $f_{\sigma}$, is fixed from simulation, but the mean and width, $\mu$ and $\sigma$, are left floating. The fits to signal MC are shown in Figure \ref{signalfits} and the shape parameters obtained from these fits are detailed in Table \ref{signalparameters}. 
+%The fitted mean value in data and MC was found to be slightly different, the values of the differences are shown in Table \ref{mcshifts}.
+
+\begin{figure}[h]
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_LL_KPi.pdf}
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_DD_KPi.pdf}
+\put(-400,70) {(a)}
+\put(-180,70) {(b)}
+\hfill
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_LL_KPiPiPi.pdf}
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_DD_KPiPiPi.pdf}
+\put(-400,70) {(c)}
+\put(-180,70) {(d)}
+\caption{Fits to signal MC for (a) $K\pi$ LL, (b) $K\pi$ DD, (c) $K\pi\pi\pi$ LL, and (d) $K\pi\pi\pi$ DD}
+\label{signalfits}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c|cc|cc}
+\hline
+& \multicolumn{2}{c}{$K\pi$} & \multicolumn{2}{c}{$K\pi\pi\pi$} \\
+& LL & DD & LL & DD\\
+\hline
+$\mu$ & $5279.12 \pm 0.15$ & $5279.30 \pm 0.09$ & $5279.62 \pm 0.12$ & $5279.50 \pm 0.19$ \\
+$\sigma$ & $10.7 \pm 0.3$ & $10.8 \pm 0.2$ & $11.2 \pm 0.2$ & $11.6 \pm 0.3$ \\
+$f_{\sigma}$ & $2.04 \pm 0.10$ & $1.97 \pm 0.06$ & $2.08 \pm 0.07$ & $2.10 \pm 0.11$ \\
+$\alpha$ & $2.53 \pm 0.07$ & $2.46 \pm 0.04$ & $2.60 \pm 0.07$ & $2.50 \pm 0.10$ \\
+$n$ & 1.0 (fixed) & 1.0 (fixed) & 1.0 (fixed) & 1.0 (fixed) \\
+$f_{cb}$ & $0.82 \pm 0.03$ & $0.84 \pm 0.02$ & $0.80 \pm 0.03$ & $0.81 \pm 0.04	$ \\
+\hline
+\end{tabular}
+\caption{Signal shape parameters obtained by a fit to Run 1 and Run 2 signal MC combined for both $K\pi$ and $K\pi\pi\pi$. Parameter names are defined in Equation \ref{DCBshape}. All parameters except for the mean and width are fixed to these values in the mass fit}
+\label{signalparameters}
+\end{table}
+
+%\begin{table}
+%\centering
+%\begin{tabular}{ccc}
+%\hline
+%& Run 1 & 2015 \\
+%\hline
+%LL & +1.5 & +1.2 \\
+%DD & +0.4 & 0.0 \\
+%\hline
+%\end{tabular}
+%\caption{Difference (in MeV) in the fitted value of the mean between data and MC (data - MC)}
+%\label{mcshifts}
+%\end{table}
+
+
+\subsection{Combinatorial background}
+\label{sec:massfit:combinatorial}
+
+The combinatoric background comes from, for example, random tracks incorrectly reconstructed to form a \D meson. The combinatoric background is modelled using an exponential function with a freely floating slope parameter and yield. The slope parameter is allowed to float independently in the LL and DD categories and between two and four-body \D final states. Each \D final state can have a different combinatoric rate.
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Partially reconstructed backgrounds}
+\label{sec:massfit:partreco}
+
+Partially reconstructed decays refer to those in which one or more particle has failed to be reconstructed. These decays are parameterised by analytic functions based on a previous studies of \decay{\Bm}{\D\Km}, \decay{\D}{h^+h^-} data~\cite{LHCb-PAPER-2016-003} and \decay{\Bz}{\D\Kstarz}, \decay{\D}{h^+h^-} data~\cite{LHCb-PAPER-2016-006}, which have many similar aspects to this analysis.
+
+The partially reconstructed decays are of the form \decay{\B}{\Dstar\Kstar}, where the \Dstar decays to a \D meson and a pion or photon that is missed in reconstruction. These backgrounds are observed at a low reconstructed invariant mass due to the single particle missed from the invariant mass sum. The \B mass range is no large enough to include the case where more than one particle is lost. Three partially reconstructed decays contribute in the invariant mass fit:
+
+\begin{itemize}
+\item{\decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}}
+\item{\decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm}}
+\item{\decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm}}
+\end{itemize}
+
+where the particle in square brackets corresponds to the missing daughter. All of the decay modes listed are modelled using three analytic shapes; RooHORNSdini, RooHILLdini and RooLITTLEHORNSdini, developed by Paolo Gandini and Faye Cheung. These shapes are physically motivated, exploiting the decay kinematics of partially reconstructed decays.
+
+\decay{\B}{\Dstar\Kstar} is a Scalar $\to$ Vector Vector decay, therefore there are three different helicity amplitudes to consider due to the conservation of angular momentum. Each of these helicity amplitudes produces a \Dstar particle in a different helicity state, labelled +1, 0, -1. The helicity state of the \Dstar and the spin of the missing particle in the subsequent \Dstar decay determines the distribution of the reconstructed \B mass. 
+
+\subsubsection{Horns function}
+
+Consider the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz}, where the \Dstarz is in helicity state 0. The helicity of the \Dstarz and the conservation of angular momentum mean that the spin-0 \piz meson will decay predominantly along $\theta = 0^{\circ}$ or $\theta = 180^{\circ}$. When $\theta = 0^{\circ}$, the fraction of momentum carried by the \piz in the \B rest frame is at its smallest, resulting in a larger reconstructed \B mass. Conversely, if $\theta = 180^{\circ}$, the fraction of momentum carried by the \piz is greatest, leading to a lower resonstructed \B mass. The distribution of the helicity angle of the missing particle, $\theta$, has a one-to-one correspondence with its momentum and therefore the reconstructed \B mass. This gives rise to a double peak structure. The \B mass distribution is a parabola, $p_{HORNS}(x)$, with kinematics endpoints $a$ and $b$ where
+
+\begin{align}
+p_{HORNS}(x) &= \begin{cases}
+\left(x - \frac{a+b}{2}\right)^2, & \text{ if $a \leq x \leq b$}\\ 	
+0, & \text{ otherwise.}
+\end{cases} 
+\end{align}
+
+The parabola is convolved with two Gaussians in order to account for resolution effects. Given a Gaussian function of mean $\mu$ and width $\sigma$, $G(\mu,\sigma)$, a Double Gaussian can be constructed as,
+
+\begin{equation}
+DG(x) = f_G G(x|\mu,\sigma) + \left(1-f_G\right) G(x|\mu,R_{\sigma}\sigma) \text{ , }
+\end{equation}
+
+where $\sigma$ is the width of the first Gaussian, $f_G$ is the fraction contained by the first gaussian and $R_{\sigma}$ is the relative width between the two. Additionally, selection effects can affect the shape such that one peak is higher than the other. This is taken into account by introducing a linear polynomial with a slope of $1 - \xi$, where $0 \leq \xi \leq 1$. As $\xi \rightarrow 0$, the left hand peak decreases in size relative to the right hand peak. The resulting Horns function is,
+
+\begin{equation}
+\text{Horns}(m) = \int_a^b dx \left(x - \frac{a+b}{2}\right)^2 DG(x|m,\sigma,f_G,R_{\sigma}) \left( \frac{1 - \xi_{HORNS}}{b - a}x + \frac{b\xi_{HORNS} - a}{b - a}\right),
+\label{eqn:horns}
+\end{equation}
+
+where $m$ is the mass variables to be fitted and $x$ is the integration variable in the convolution.
+
+\subsubsection{Hill function}
+
+Consider the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\gamma}, where the \Dstarz is in helicity state 0. The helicity of the \Dstarz and the conservation of angular momentum mean that the spin-1 \Pgamma will decay predominantly along $\theta = 90^{\circ}$ or $\theta = 270^{\circ}$. The fraction of momentum carried by the photon is the same in both of these cases, so not double peak stucture is seen. The resultsing \B mass distribution is a parabola with negative curvature, $p_{HILL}(x)$, and kinematic endpoints $a$ and $b$ where
+
+\begin{align}
+p_{HILL}(x) &= \begin{cases}
+-(x - a)(x - b), & \text{ if $a \leq x \leq b$}\\ 	
+0, & \text{ otherwise.}
+\end{cases} 
+\end{align}
+
+As with the Horns function, this parabola is convolved with a Double Gaussian and a linear polynomial to account for resolution and selection effects respectively. The resultsing Hill function is,
+
+\begin{equation}
+\text{Hill}(m) = \int_a^b dx \left[-(x - a)(x - b)\right] DG(x|m,\sigma,f_G,R_{\sigma}) \left( \frac{1 - \xi_{HILL}}{b - a}x + \frac{b\xi_{HILL} - a}{b - a}\right),
+\label{eqn:hill}
+\end{equation}
+
+where $m$ is the mass variables to be fitted and $x$ is the integration variable in the convolution.
+
+As the distribution of $\theta$ has a one-to-one correspondence with the reconstructed \B mass, a \Dstar of +1 or -1 would be indistiguishable in \B mass therefore these values are grouped together. This Hill function also applies to the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz}, where the \Dstarz is in helicity state $\pm$1.
+
+\subsubsection{Little Horns function}
+
+For the configuration \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\gamma}, where the \Dstarz is in helicity state $\pm$1, a third shape is needed, named Little Horns. It is described by a parabola, $p_{LITTLEHORNS}(x)$, and kinematic endpoints $a$ and $b$ where
+
+\begin{align}
+p_{LITTLEHORNS}(x) &= \begin{cases}
+\left(x - \frac{a+b}{2}\right)^2 + \left(\frac{a-b}{2}\right)^2, & \text{ if $a \leq x \leq b$}\\ 	
+0, & \text{ otherwise.}
+\end{cases} 
+\end{align}
+
+Again, this distribution is convolved with a Double Gaussian and linear polynomial to descibe the resolution and selection effects respectively. This results in a Little Horns function
+
+\begin{multline}
+\text{LittleHorns}(m) = \int_a^b dx \biggl\{ \left[ \left( x - \frac{a+b}{2} \right) ^2 + \left( \frac{a-b}{2} \right) ^2 \right] DG(x|m,\sigma,f_G,R_{\sigma}) \\
+\left( \frac{1 - \xi_{LITTLEHORNS}}{b - a}x + \frac{b\xi_{LITTLEHORNS} - a}{b - a} \right) \biggr\}
+\label{eqn:littlehorns}
+\end{multline}
+
+\subsubsection{Total partially reconstructed function}
+
+Table \ref{helicityamplitudes} summarises the uses of the different analytic shapes described: Horns, Hill and Little Horns functions. In order to obtain values for the various parameters in these shapes simulated events were generated and the full reconstruction and selection was applied, except for the PID selection. The shapes are taken from simulation are fitted separately using the functions given by equations \ref{eqn:horns}, \ref{eqn:hill} and \ref{eqn:littlehorns}, the fits are shown in Figures \ref{partrecofitsLL} and \ref{partrecofitsDD}. All the parameters for these shapes are fixed in the mass fit from fits to simultated events. The values of these fixed parameters are given in Tables ?
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+Helicity of \Dstar & Missing particle & $\theta$ dependence & Function \\
+\hline
+0 & $\pi$ & $\left(x - \frac{a+b}{2}\right)^2$ & Horns, from Eq.~\ref{eqn:horns} \\
+0 & \Pgamma & $-(x - a)(x - b)$ & Hill, from Eq.~\ref{eqn:hill} \\
+$\pm$1 & $\pi$ & $-(x - a)(x - b)$ & Hill, from Eq.~\ref{eqn:hill} \\
+$\pm$1 & \Pgamma & $\left(x - \frac{a+b}{2}\right)^2 + \left(\frac{a-b}{2}\right)^2$ & Little Horns, from Eq.~\ref{eqn:littlehorns} \\
+\end{tabular}
+\caption{Possible combinations of \Dstar helicity angle and missing particle and how this relates to the dependence on the helicity angle and the \B mass parameterisation}
+\label{helicityamplitudes}
+\end{table}
+
+\begin{figure}[h]
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi010_LL.pdf}
+\put(-180,80) {(a)}
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi101_LL.pdf}
+\put(-180,80) {(b)}
+\hfill
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bugamma010_LL.pdf}
+\put(-180,80) {(c)}
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bugamma101_LL.pdf}
+\put(-180,80) {(d)}
+\hfill
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi010_LL.pdf}
+\put(-180,80) {(e)}
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi101_LL.pdf}
+\put(-180,80) {(f)}
+\caption{Fit to $B \to D^*K^*$ Run 1 MC in all the different modes for LL candidates (a) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 010, (b) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 101, (c) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 010, (d) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 101, (e) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 010, and (f) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 101}
+\label{partrecofitsLL}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi010_DD.pdf}
+\put(-180,80) {(a)}
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi101_DD.pdf}
+\put(-180,80) {(b)}
+\hfill
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bugamma010_DD.pdf}
+\put(-180,80) {(c)}
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bugamma101_DD.pdf}
+\put(-180,80) {(d)}
+\hfill
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi010_DD.pdf}
+\put(-180,80) {(e)}
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi101_DD.pdf}
+\put(-180,80) {(f)}
+\caption{Fit to $B \to D^*K^*$ Run 1 MC in all the different modes for DD candidates (a) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 010, (b) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 101, (c) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 010, (d) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 101, (e) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 010, and (f) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 101}
+\label{partrecofitsDD}
+\end{figure}
+
+As there are six shapes in this low mass region of the mass fit, from 4900-5230 MeV, it is necessary to fix some yields in order to have a stable fit. The total partially reconstructed PDF is given in Equation \ref{partrecofunction}.
+\begin{equation}
+P_{partreco} = f_0P_0 + (1 - f_0)P_{\pm 1}
+\label{partrecofunction}
+\end{equation}
+where $P_0$ and $P_{\pm 1}$, which represent the total PDF for the \Dstar helicity states 0 and $\pm$1 respectively, are given by
+\begin{align*}
+P_0 &= P^{Bu,\pi}_0 + c^{Bu,\gamma}_0P^{Bu,\gamma}_0 + c^{Bd,\pi}_0P^{Bd,\pi}_0 \\
+P_{\pm 1} &= P^{Bu,\pi}_{\pm 1} + c^{Bu,\gamma}_{\pm 1}P^{Bu,\gamma}_{\pm 1} + c^{Bd,\pi}_{\pm 1}P^{Bd,\pi}_{\pm 1} \text{ .}
+\end{align*}
+The yield ratios between \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} and \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} are fixed separately for the 0 and $\pm$1 helicity states of the \Dstar. These yield ratios, $c^{Bu,\gamma}_0$, $c^{Bd,\pi}_0$, $c^{Bu,\gamma}_{\pm 1}$ and $c^{Bd,\pi}_{\pm 1}$, that are fixed in the fit to the values given in Table \ref{fixedyieldratios}, are obtained from a ratio of braching fractions and selection efficiencies, an example calculation is given in Equation \ref{partrecoexample}. This calculation is performed for each of the ratios listed in Table \ref{fixedyieldratios}. Branching fractions for the partially reconstructed decays are given in Table \ref{partrecoBRs}. Simulated events are generated for each of the modes and the values of $\epsilon_{sel}$, used in Equation \ref{partrecoexample}, are given by the fraction of simulated events passing the selection.
+
+\begin{equation}
+\frac{N(\decay{\B}{(\decay{\Dstar}{\Dz\piz})\Kstar}\ 010)}{N(\decay{\B}{(\decay{\Dstar}{\Dz\gamma})\Kstar}\ 010)} = \frac{BR(\decay{\B}{(\decay{\Dstar}{\Dz\piz})\Kstar})}{BR(\decay{\B}{(\decay{\Dstar}{\Dz\gamma})\Kstar})} \times \frac{\epsilon_{sel}(\decay{\B}{(\decay{\Dstar}{\Dz\piz})\Kstar}\ 010)}{\epsilon_{sel}(\decay{\B}{(\decay{\Dstar}{\Dz\gamma})\Kstar}\ 010)}
+\label{partrecoexample}
+\end{equation}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c|c}
+Mode & Branching ratio \\
+\hline
+\decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} & $(5.0 \pm 0.9) \times 10^{-4}$ \\
+\decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} & $(3.1 \pm 0.6) \times 10^{-4}$ \\
+\decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} & $(2.2 \pm 0.4) \times 10^{-4}$ \\
+\end{tabular}
+\caption{Branching ratios for the different partially reconstructed decay modes~\cite{PDG2014}}
+\label{partrecoBRs}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{ccc}
+\hline
+& LL & DD \\
+\hline
+$c^{Bu,\gamma}_0$ & $0.53 \pm 0.14$ & $0.51 \pm 0.14$ \\[3mm]
+$c^{Bd,\pi}_0$ & $0.38 \pm 0.14$ & $0.37 \pm 0.14$ \\[3mm]
+$c^{Bu,\gamma}_{\pm 1}$ & $0.53 \pm 0.14$ & $0.51 \pm 0.14$ \\[3mm]
+$c^{Bd,\pi}_{\pm 1}$ & $0.38 \pm 0.14$ & $0.38 \pm 0.14$ \\[3mm]
+\hline
+\end{tabular}
+\caption{Yield ratios fixed in the mass fit for the partically reconstructed backgrounds}
+\label{fixedyieldratios}
+\end{table}
+
+Other backgrounds investigated in this analysis, but not included in the mass fit are discussed in Section \ref{sec:backgrounds}.
+
+
+\subsection{Mass fit}
+\label{sec:massfit:fit}
+
+A fit to the invariant B mass in the $K\pi$ and $K\pi\pi\pi$ favoured mode is performed using the shapes discussed in Sections \ref{sec:massfit:signal}, \ref{sec:massfit:combinatorial} and \ref{sec:massfit:partreco}. The total PDF is given by
+\begin{equation}
+P_{tot} = N_{sig}P_{sig} + N_{comb}P_{comb} + N_{dstkst}P_{dstkst} \text{ ,}
+\end{equation}
+where $N_{sig}$, $N_{comb}$ and $N_{dstkst}$ are the yields of the signal, combinatoric and partially reconstructed yields restpectively. The signal PDF, $P_{sig}$, is given by Equation~\ref{DCBshape}, the partially reconstructed PDF, $P_{dstkst}$, is given by Equation~\ref{partrecofunction} and the combintorial PDF is an exponential, $P_{comb} = e^{\beta m}$, where the slope parameter $\beta$ is able to vary in the fit. The yield of the signal and combinatoric shape, $N_{sig}$ and $N_{comb}$, are left to vary without constraint. Other parameters allowed to vary are the mean, $\mu$, and width, $\sigma$, of the signal PDF. The only parameters able to vary in the partially reconstructed background are the yield ratio between the 010 and 101 amplitudes, $f_0$, and the overall yield, $N_{dstkst}$.
+
+Figures \ref{massfitskpi} and \ref{massfitsk3pi} show the fits to the invariant B mass distribution in the $K\pi$ and $K\pi\pi\pi$ favoured mode respectively for LL and DD candidates in both Run 1 and Run 2. The estimated $K\pi$ signal yield extracted from these fits for Run 1 is $220 \pm 16$ for LL and $505 \pm 24$ for DD, and for Run 2 is $388 \pm 21$ for LL and $901 \pm 33$ for DD. The fit results are shown in Table \ref{fitresultskpi}. For the $K\pi\pi\pi$ mode, the estimated signal yield extracted from these fits for Run 1 is $87 \pm 10$ for LL and $205 \pm 16$ for DD, and for Run 2 is $215 \pm 15$ for LL and $516 \pm 25$ for DD. The fit results are shown in Table \ref{fitresultsk3pi}.
+
+\begin{figure}
+\centering
+\subfloat[Run 1 LL]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_LL_KPi_run1.pdf}}
+\vspace{-12pt}
+\hfill
+\subfloat[Run 1 DD]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_DD_KPi_run1.pdf}}
+\vspace{-12pt}
+\hfill
+\subfloat[Run 2 LL]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_LL_KPi_run2.pdf}}
+\vspace{-12pt}
+\hfill
+\subfloat[Run 2 DD]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_DD_KPi_run2.pdf}}
+\caption{Fits to the invariant B mass distribution in the $K\pi$ favoured mode}
+\label{massfitskpi}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfloat[Run 1 LL]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_LL_KPiPiPi_run1.pdf}}
+\vspace{-12pt}
+\hfill
+\subfloat[Run 1 DD]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_DD_KPiPiPi_run1.pdf}}
+\vspace{-12pt}
+\hfill
+\subfloat[Run 2 LL]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_LL_KPiPiPi_run2.pdf}}
+\vspace{-12pt}
+\hfill
+\subfloat[Run 2 DD]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_DD_KPiPiPi_run2.pdf}}
+\caption{Fits to the invariant B mass distribution in the $K\pi$ favoured mode}
+\label{massfitsk3pi}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l|cc|cc}
+\hline
+& \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
+& LL & DD & LL & DD \\
+\hline
+$\beta$ & $(-4.8 \pm 0.5) \times 10^{-3}$ & $(-2.8 \pm 0.3) \times 10^{-3}$ & $(-4.4 \pm 0.5) \times 10^{-3}$ & $(-2.5 \pm 0.2) \times 10^{-3}$ \\
+$f_0$ & $0.15 \pm 0.08$ & $0.12 \pm 0.05$ & $0.18 \pm 0.05$ & $0.06 \pm 0.04$ \\
+$\mu$ & $5280.7 \pm 0.8$ & $5280.7 \pm 0.6$ & $5278.5 \pm 0.8$ & $5278.6 \pm 0.5$ \\
+$N_{comb}$ & $167 \pm 20$ & $472 \pm 34$ & $223 \pm 24$ & $1100 \pm 50$ \\
+$N_{dstkst}$ & $338 \pm 23$ & $810 \pm 36$ & $654 \pm 31$ & $1397 \pm 49$ \\
+$N_{sig}$ & $220 \pm 16$ & $505 \pm 24$ & $388 \pm 21$ & $901 \pm 33$ \\
+$\sigma$ & $10.2 \pm 0.7$ & $11.5 \pm 0.5$ & $12.2 \pm 0.6$ & $11.5 \pm 0.4$ \\
+\hline
+\end{tabular}
+\caption{Fit results from the $K\pi$ favoured mode for LL and DD candidates, corresponding to the fits in Figure \ref{massfitskpi}. The parameter $\beta$ is the combinatoric background slope, $f_0$ is the yield ratio between 010 and 101 helicity amplitudes, $\sigma$ is the floating width of the signal shape, and $N_{sig}$, $N_{comb}$ and $N_{dstkst}$ are the yields of signal, combinatoric background and partially reconstructed decays respectively}
+\label{fitresultskpi}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l|cc|cc}
+\hline
+& \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
+& LL & DD & LL & DD \\
+\hline
+$\beta$ & $(-5.2 \pm 1.1) \times 10^{-3}$ & $(-2.3 \pm 0.4) \times 10^{-3}$ & $(-4.4 \pm 0.5) \times 10^{-3}$ & $(-2.1 \pm 0.2) \times 10^{-3}$ \\
+$f_0$ & $0.26 \pm 0.11$ & $0.20 \pm 0.08$ & $0.15 \pm 0.07$ & $0.16 \pm 0.05$ \\
+$\mu$ & $5281.3 \pm 1.3$ & $5283.9 \pm 0.9$ & $5278.7 \pm 1.0$ & $5277.7 \pm 0.7$ \\
+$N_{comb}$ & $50 \pm 12$ & $252 \pm 24$ & $168 \pm 20$ & $707 \pm 40$ \\
+$N_{dstkst}$ & $154 \pm 15$ & $317 \pm 24$ & $342 \pm 23$ & $914 \pm 40$ \\
+$N_{sig}$ & $102 \pm 10$ & $226 \pm 16$ & $244 \pm 16$ & $578 \pm 27$ \\
+$\sigma$ & $11.4 \pm 1.0$ & $11.3 \pm 0.8$ & $12.9 \pm 0.8$ & $13.1 \pm 0.6$ \\
+\hline
+\end{tabular}
+\caption{Fit results from the $K\pi\pi\pi$ favoured mode for LL and DD candidates, corresponding to the fits in Figure \ref{massfitsk3pi}. The parameter $\beta$ is the combinatoric background slope, $f_0$ is the yield ratio between 010 and 101 helicity amplitudes, $\sigma$ is the floating width of the signal shape, and $N_{sig}$, $N_{comb}$ and $N_{dstkst}$ are the yields of signal, combinatoric background and partially reconstructed decays respectively}
+\label{fitresultsk3pi}
+\end{table}
+
+An additional source of background coming from the decay \decay{\Lb}{\Lc(pK\pip)\Kstarm} is included in the fits for the \decay{\Bm}{\D(\Kp\Km)\Kstarm} mode, as discussed in detail in Section \ref{sec:backgrounds:Lb2LcKst}. The yield of \decay{\Lb}{\Lc(pK\pip)\Kstarm} compared to the signal yield in the \decay{\Bm}{\D(\Km\pip)\Kstarm} mode is allowed to vary.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Choice of fit range}
+\label{sec:massfit:range}	
+
+Fixing the relative yields for the partially reconstructed shapes, as in Table \ref{fixedyieldratios}, is possible only under the assumption that \CP violation is negligible. This is a fair assumption for the favoured \decay{\Dz}{\Km\pip} decay, however in the other \D modes, for example \decay{\Dz}{\Kp\Km}, there is expected \CP violation for which the parameters are entirely unknown. Therefore, it is not possible make any constraints at all in these modes. The fit that would result from fitting six individual yields with an order of magnitude less data would be unstable and this lack of constraint in the low mass region would lead to a large amount of freedom in the combinatoric, significantly affecting the signal yield. 
+
+The overlap of the partially reconstructed and signal peaks is very small. There are a number of advantages to raising the lower range of the mass parameterisation up to 5230 \mev, which only removes 0.4\% of signal. The advantages include avoiding the need to fit the various partially reconstructed yields in each of the other D decays modes. These cannot use the same assumptions and fractions as determined in the Cabibbo-favoured mode due to expected CP violation. Further benefits are that low level broad backgrounds that may be present in the range 4900 - 5200 \mev do not need to considered as sources of systematics uncertainty. The shape and yield of the small amount of partially reconstructed background present in all \D decay categories above 5230 \mev is determined and fixed from the fit of data with the Cabibbo-favoured decay, taking into account the smaller branching fractions of the $D$ decays. It is less than an event for all the CP violating modes. Due to the assumptions present in the initial fit, uncertainties in the yield and shape and possible asymmetries in distribution between \Bp and \Bm are evaluated as systematic uncertainties. This systematic uncertainty is dealt with in Section \ref{sec:systematics:partreco}.
+
 
 \clearpage
