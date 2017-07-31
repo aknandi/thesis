@@ -277,6 +277,8 @@ Run 2 combined & \multicolumn{4}{c}{$97.9420 \pm 0.0007$} \\
 \subsection{Likelihood function}
 \label{sec:cpfit:likelihood}
 
+The fit is performed by constructing a likelihoood function that is to be minimised.
+
 \subsection{Fitter bias in \CP fit}
 \label{sec:cpfit:fitterbias}
 
@@ -323,13 +325,15 @@ Using the inital yields and efficiencies from MC, the estimated yields for the v
 Toy studies were performed for different selections to calculate the fit uncertainty for each selection. The fit uncertainty was taken to be the mean of the uncertainty distribution. For optimising the selection for the GLW modes, the fit error was minimised for $A_{KK}$, $R_{KK}$, $A_{\pi\pi}$ and $R_{\pi\pi}$. Figure \ref{optimisation} shows an example of the optimisation studies performed. The BDT selection for the ADS modes was optimised to minimise the fit errors in $R^+$ and $R^-$. Studies were performed to investigate a tighter BDT cut for the ADS mode as illustrated in Figure \ref{adsoptimisation}. The tighter BDT cut for DD candidates was chosen as it resulted in a lower uncertainty on $R^+$ and $R^-$ due to a reduction in the background rejection from 7\% to 2\% while retaining 80\% of the signal. In cases when the figure of merits in these optimisation studies were not especially sensitive to changes in the selection, the selection giving the highest coherence was chosen. For the BDT selection the signal and background efficiencies were taken into account.
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/selection/optimisation.pdf}
+\centering
+\includegraphics[width=0.8\linewidth]{figures/selection/optimisation.pdf}
 \caption{Value of the uncertainty on $R_{KK}$ as a function of \KS helicity angle selection for different \Kstar mass selections. The black curve is using a \Kstar mass window of 100 MeV, the red curve is using a \Kstar mass window of 75 MeV and the blue curve is using a \Kstar mass window of 50 MeV. The minimum uncertainty is given for a \Kstar mass window of 75 MeV and \KS helicity angle of 0.3. This was the \Kstar selection chosen after investigating uncertainties in other variables}
 \label{optimisation}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/selection/ADSoptimisation.pdf}
+\centering
+\includegraphics[width=0.8\linewidth]{figures/selection/ADSoptimisation.pdf}
 \caption{Value of the uncertainty on $R^+$ and $R^-$ as a function of BDT\_DD cut in the ADS mode. These toys were run with a BDT LL cut of 0.6 on all modes and BDT DD cut of 0.7 on all modes other than the ADS. The black curve is the uncertainty of $R^+$ and the red curve is the uncertainty of $R^-$. Although the uncertainty continues to decrease for a BDT cut of 0.95, this resulted in a significant drop in signal efficiency, therefore a cut of 0.9 was chosen for the ADS}
 \label{adsoptimisation}
 \end{figure}
@@ -348,22 +352,9 @@ The choice of BDT selection in ADS mode remains optimal when tested against a sc
 \section{Fit results}
 \label{sec:cpfit:results}
 
-The fits to data are shown in Figures \ref{datafit2bodyRun1}, \ref{datafit4bodyRun1}, \ref{datafit2bodyRun2} and \ref{datafit4bodyRun2}. The \CP oberservables measured from the fit are below, where the first errors are statistical and the second are systematic.
+The fits to data are shown in Figures \ref{datafit2bodyRun1}, \ref{datafit4bodyRun1}, \ref{datafit2bodyRun2} and \ref{datafit4bodyRun2}. Table \ref{cpfitresultsphysics} shows the fit results of the physics parameters of interest and Table \ref{cpfitresultsshapes} shows the fit results for $K\pi$ and $K\pi\pi\pi$ signal yields and shape parameters. All the combinatoric yields are left floating in the fit and these results are tabulated in Appendix \ref{sec:app:cpfit}.
 
-\begin{align*}
-A_{K\pi} & = -0.004 \pm 0.023 \pm 0.008 \\
-A_{KK} & = 0.06 \pm 0.07 \pm 0.01 \\
-A_{\pi\pi} & = 0.15 \pm 0.13 \pm 0.02 \\
-R_{KK} & = 1.24 \pm 0.09 \pm 0.01 \\
-R_{\pi\pi} & = 1.08 \pm 0.15 \pm 0.03 \\
-R^+_{K\pi} & = 0.020 \pm 0.006 \pm 0.001 \\
-R^-_{K\pi} & = 0.002 \pm 0.004 \pm 0.001 \\
-A_{K\pi\pi\pi} & = -0.013 \pm 0.031 \pm 0.009 \\
-A_{\pi\pi\pi\pi} & = 0.03 \pm 0.11 \pm 0.01 \\
-R_{\pi\pi\pi\pi} & = 1.11 \pm 0.13 \pm 0.03 \\
-R^+_{K\pi\pi\pi} & = 0.016 \pm 0.008 \pm 0.003 \\
-R^-_{K\pi\pi\pi} & = 0.006 \pm 0.007 \pm 0.004 \\
-\end{align*}
+The fitted yields obtained for running the fit with \Bp and \Bm samples combined are given in Table \ref{fittedyields}. 
 
 \begin{sidewaysfigure}[h]
 \centering
@@ -441,14 +432,6 @@ R^-_{K\pi\pi\pi} & = 0.006 \pm 0.007 \pm 0.004 \\
 \label{datafit4bodyRun2}
 \end{sidewaysfigure}
 
-The statistical and systematic correlation matrices for the seven physics observables in the fit are shown in Tables \ref{statisticalcorrelations} and \ref{systematiccorrelations} respectively. Combined results from the $KK$ and $\pi\pi$ modes, taking correlations into account are,
-\begin{align*}
-R_{CP} = 1.20 \pm 0.08 \\
-A_{CP} = 0.08 \pm 0.06
-\end{align*}
-
-Table \ref{cpfitresultsphysics} shows the fit results of the physics parameters of interest and Table \ref{cpfitresultsshapes} shows the fit results for $K\pi$ and $K\pi\pi\pi$ signal yields and shape parameters. All the combinatoric yields are left floating in the fit and these results are tabulated in Appendix \ref{sec:app:cpfit}.
-
 \begin{table}[h]
 \centering
 {\footnotesize
@@ -499,115 +482,6 @@ exp\_kpipipi\_LL\_combs\_slope & $-0.0003$ & $-0.0014$ & $0.0015$ \\
 \label{cpfitresultsshapes}
 \end{table}
 
-\begin{sidewaystable}[h]
-\centering
-{\footnotesize
-\begin{tabular}{c|cccccccccccc} 
-\hline 
-& $A_{K\pi}$ & $A_{KK}$ & $A_{\pi\pi}$ & $R_{KK}$ & $R_{\pi\pi}$ & $R^+_{K\pi}$ & $R^-_{K\pi}$ & $A_{K\pi\pi\pi}$ & $A_{\pi\pi\pi\pi}$ & $R_{\pi\pi\pi\pi}$ & $R^+_{K\pi\pi\pi}$ & $R^-_{K\pi\pi\pi}$ \\ 
- \hline
-$A_{K\pi}$ & 1 & 0.00020  & 0.00017  & -0.00005  & -0.0006  & 0.076  & -0.014  & 0.0000027  & -0.000021  & 0.0011  & -0.0000045  & 0.0000028  \\
-$A_{KK}$ & & 1  & -0.00012  & -0.0030  & -0.000038  & -0.0011  & -0.0024  & 0.0000054  & -0.00012  & 0.000085  & 0.000004  & 0.0000032  \\
-$A_{\pi\pi}$ &  &  & 1  & -0.00062  & -0.022  & -0.0019  & -0.0017  & -0.0000021  & 0.000062  & 0.0010  & 0.000016  & 0.000017  \\
-$R_{KK}$ & & & & 1  & 0.064  & 0.034  & 0.014  & -0.0000029  & 0.000057  & 0.065  & 0.000087  & 0.00011  \\
-$R_{\pi\pi}$ & & & & & 1  & 0.027  & 0.017  & 0.000034  & -0.00013  & 0.030  & -0.00011  & -0.000056  \\
-$R^+_{K\pi}$ & & & & & & 1  & 0.020  & 0.000016  & 0.0000014  & 0.0095  & -0.000044  & -0.000033 \\
-$R^-_{K\pi}$ & & & & & & & 1  & 0.000010  & 0.00018  & -0.0050  & 0.0000095  & 0.000034  \\
-$A_{K\pi\pi\pi}$ & & & & & & & & 1  & -0.00048  & -0.0014  & 0.067  & -0.033  \\
-$A_{\pi\pi\pi\pi}$ & & & & & & & & & 1  & 0.00085  & 0.0029  & 0.0034  \\
-$R_{\pi\pi\pi\pi}$ & & & & & & & & & & 1  & 0.031  & 0.039  \\
-$R^+_{K\pi\pi\pi}$ & & & & & & & & & & & 1  & 0.028  \\
-$R^-_{K\pi\pi\pi}$ & & & & & & & & & & & & 1  \\
-\hline 
-\end{tabular}}
-\caption{Statistical correlation matrix for the seven physics observables from the \CP fit to data. The matrix is symmetric so only the top half is shown.}
-\label{statisticalcorrelations}
-\end{sidewaystable}
-\begin{sidewaystable}[h]
-\centering
-{\footnotesize
-\begin{tabular}{c|cccccccccccc} 
-\hline 
-& $A_{K\pi}$ & $A_{KK}$ & $A_{\pi\pi}$ & $R_{KK}$ & $R_{\pi\pi}$ & $R^+_{K\pi}$ & $R^-_{K\pi}$ & $A_{K\pi\pi\pi}$ & $A_{\pi\pi\pi\pi}$ & $R_{\pi\pi\pi\pi}$ & $R^+_{K3\pi}$ & $R^-_{K3\pi}$ \\ 
- \hline
-$A_{K\pi}$ & 1 & 0.83  & -0.0067  & 0.72  & -0.0035  & 0.0071  & -0.025  & 0.94  & 0.84  & 0.00071  & -0.011  & -0.003  \\
-$A_{KK}$ &  & 1  & -0.028  & 0.65  & 0.014  & 0.014  & -0.021  & 0.83  & 0.77  & 0.0034  & -0.0029  & 0.0045  \\
-$A_{\pi\pi}$ &  &  & 1  & 0.0061  & 0.014  & 0.03  & 0.016  & -0.0073  & 0.0031  & -0.019  & -0.0056  & -0.0094  \\
-$R_{KK}$ & & & & 1  & -0.032  & -0.0054  & -0.02  & 0.72  & 0.68  & -0.0028  & -0.00051  & 0.011  \\
-$R_{\pi\pi}$ & & & &  & 1  & 0.057  & 0.079  & -0.0092  & 0.0012  & -0.01  & -0.017  & 0.0097  \\
-$R^+_{K\pi}$ & & & & &  & 1  & 0.079  & -0.0082  & 0.0037  & -0.0022  & -0.0098  & -0.0099  \\
-$R^-_{K\pi}$ & & & & & &  & 1  & -0.013  & -0.0063  & -0.012  & 0.0067  & 0.03  \\
-$A_{K\pi\pi\pi}$ & & & & & & &   & 1  & 0.84  & -0.005  & -0.01  & -0.015  \\
-$A_{\pi\pi\pi\pi}$ & & & & & & & &   & 1  & 0.036  & 0.0053  & 0.00047  \\
-$R_{\pi\pi\pi\pi}$ & & & & & & & & &   & 1  & 0.0089  & -0.0086  \\
-$R^-_{K3\pi}$ & & & & & & & & & &   & 1  & 0.045  \\
-$R^-_{K3\pi}$ & & & & & & & & & & &   & 1  \\
-\hline 
-\end{tabular}}
-\caption{Systematic correlation matrix for the seven physics observables from the \CP fit to data. The matrix is symmetric so only the top half is shown.}
-\label{systematiccorrelations}
-\end{sidewaystable}
-
-The fitted yields obtained for running the fit with \Bp and \Bm samples combined are given in Table \ref{fittedyields}. 
-%The simultaneous fit was also performed with the \Bp and \Bm samples combined. In this fit no physics observables are extract, simply yields of the various signal channels are measured. The fits to data are shown in Figures \ref{datafitcombinedRun1} and \ref{datafitcombinedRun2} and the fitted yields are listed in Table \ref{fittedyields}.
-
-%\begin{figure}
-%\centering
-%\subfloat[$K\pi$, LL]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2kpi_LL_run1.pdf}}
-%\hfill
-%\subfloat[$KK$, LL]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2kk_LL_run1.pdf}}
-%\hfill
-%\subfloat[$\pi\pi$, LL]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2pipi_LL_run1.pdf}}
-%\hfill
-%\subfloat[$\pi K$, LL]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2pik_LL_run1.pdf}}
-%\hfill
-%\subfloat[$K\pi$, DD]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2kpi_DD_run1.pdf}}
-%\hfill
-%\subfloat[$KK$, DD]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2kk_DD_run1.pdf}}
-%\hfill
-%\subfloat[$\pi\pi$, DD]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2pipi_DD_run1.pdf}}
-%\hfill
-%\subfloat[$\pi K$, DD]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2pik_DD_run1.pdf}}
-%\hfill
-%\subfloat[$K\pi\pi\pi$, LL]{\includegraphics[width=0.26\linewidth]{combinedcanvas_d2kpipipi_LL_run1.pdf}}
-%\subfloat[$\pi\pi\pi\pi$, LL]{\includegraphics[width=0.26\linewidth]{combinedcanvas_d2pipipipi_LL_run1.pdf}}
-%\subfloat[$\pi K\pi\pi$, LL]{\includegraphics[width=0.26\linewidth]{combinedcanvas_d2pikpipi_LL_run1.pdf}}
-%\hfill
-%\subfloat[$K\pi\pi\pi$, DD]{\includegraphics[width=0.26\linewidth]{combinedcanvas_d2kpipipi_DD_run1.pdf}}
-%\subfloat[$\pi\pi\pi\pi$, DD]{\includegraphics[width=0.26\linewidth]{combinedcanvas_d2pipipipi_DD_run1.pdf}}
-%\subfloat[$\pi K\pi\pi$, DD]{\includegraphics[width=0.26\linewidth]{combinedcanvas_d2pikpipi_DD_run1.pdf}}
-%\caption{Results of the simultaneous fit for charged combined Run 1 data}
-%\label{datafitcombinedRun1}
-%\end{figure}
-%
-%\begin{figure}
-%\centering
-%\subfloat[$K\pi$, LL]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2kpi_LL_run2.pdf}}
-%\hfill
-%\subfloat[$KK$, LL]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2kk_LL_run2.pdf}}
-%\hfill
-%\subfloat[$\pi\pi$, LL]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2pipi_LL_run2.pdf}}
-%\hfill
-%\subfloat[$\pi K$, LL]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2pik_LL_run2.pdf}}
-%\hfill
-%\subfloat[$K\pi$, DD]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2kpi_DD_run2.pdf}}
-%\hfill
-%\subfloat[$KK$, DD]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2kk_DD_run2.pdf}}
-%\hfill
-%\subfloat[$\pi\pi$, DD]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2pipi_DD_run2.pdf}}
-%\hfill
-%\subfloat[$\pi K$, DD]{\includegraphics[width=0.25\linewidth]{combinedcanvas_d2pik_DD_run2.pdf}}
-%\hfill
-%\subfloat[$K\pi\pi\pi$, LL]{\includegraphics[width=0.26\linewidth]{combinedcanvas_d2kpipipi_LL_run2.pdf}}
-%\subfloat[$\pi\pi\pi\pi$, LL]{\includegraphics[width=0.26\linewidth]{combinedcanvas_d2pipipipi_LL_run2.pdf}}
-%\subfloat[$\pi K\pi\pi$, LL]{\includegraphics[width=0.26\linewidth]{combinedcanvas_d2pikpipi_LL_run2.pdf}}
-%\hfill
-%\subfloat[$K\pi\pi\pi$, DD]{\includegraphics[width=0.26\linewidth]{combinedcanvas_d2kpipipi_DD_run2.pdf}}
-%\subfloat[$\pi\pi\pi\pi$, DD]{\includegraphics[width=0.26\linewidth]{combinedcanvas_d2pipipipi_DD_run2.pdf}}
-%\subfloat[$\pi K\pi\pi$, DD]{\includegraphics[width=0.26\linewidth]{combinedcanvas_d2pikpipi_DD_run2.pdf}}
-%\caption{Results of the simultaneous fit for charged combined Run 2 data}
-%\label{datafitcombinedRun2}
-%\end{figure}
 
 \begin{table}
 \centering
@@ -772,32 +646,77 @@ Total & $0.0083$ & $0.009$ & $0.019$ & $0.012$ & $0.032$ & $0.0011$ & $0.0014$ &
 \section{Summary of results}
 \label{sec:cpfit:summary}
 
-\section{Combinatoric background in ADS}
-\label{sec:cpfit:comb}
+The \CP oberservables measured from the fit are below, where the first errors are statistical and the second are systematic.
 
-One seemingly unexpected feature that is clear from Fig.~\ref{datafit2bodyRun1} is that the level of combinatoric background between the favoured $K\pi$ mode and ADS mode is different. Table \ref{adscombinatoric} compares the number of events between 5400 and 5600 MeV for $K\pi$ and $\pi K$ modes at different points in the selection. The numbers for the ADS mode with the full selection (after PID) do not have the tighter BDT cut or veto applied in order to be able to give a fairer comparison. Discrepancy seems to be present from the start but becomes larger with each stage of the selection, especially PID cuts. In the LL data the final level of combintoric background prior to the divergence in cuts is statistically compatible with being the same. In the DD sample the level of combinatoric (50 vs 14) is harder to attribute to a fluctuation, although the numbers involved are clearly quite small. A similar discrepacny can the seen in the 4-body favoured and suppressed mode, which is slightly less pronounced. It is noted that differences were also seen in the corresponding analysis of \decay{\Bm}{\D\Km}, $D\to K\pi\pi\pi$~\cite{LHCb-PAPER-2016-003}, but these were of order 2 rather than 3.5 as seen here. 
+\begin{align*}
+A_{K\pi} & = -0.004 \pm 0.023 \pm 0.008 \\
+A_{KK} & = 0.06 \pm 0.07 \pm 0.01 \\
+A_{\pi\pi} & = 0.15 \pm 0.13 \pm 0.02 \\
+R_{KK} & = 1.24 \pm 0.09 \pm 0.01 \\
+R_{\pi\pi} & = 1.08 \pm 0.15 \pm 0.03 \\
+R^+_{K\pi} & = 0.020 \pm 0.006 \pm 0.001 \\
+R^-_{K\pi} & = 0.002 \pm 0.004 \pm 0.001 \\
+A_{K\pi\pi\pi} & = -0.013 \pm 0.031 \pm 0.009 \\
+A_{\pi\pi\pi\pi} & = 0.03 \pm 0.11 \pm 0.01 \\
+R_{\pi\pi\pi\pi} & = 1.11 \pm 0.13 \pm 0.03 \\
+R^+_{K\pi\pi\pi} & = 0.016 \pm 0.008 \pm 0.003 \\
+R^-_{K\pi\pi\pi} & = 0.006 \pm 0.007 \pm 0.004 \\
+\end{align*}
 
-\begin{table}[h]
+The statistical and systematic correlation matrices for the seven physics observables in the fit are shown in Tables \ref{statisticalcorrelations} and \ref{systematiccorrelations} respectively. Combined results from the $KK$ and $\pi\pi$ modes, taking correlations into account are,
+\begin{align*}
+R_{CP} = 1.20 \pm 0.08 \\
+A_{CP} = 0.08 \pm 0.06
+\end{align*}
+
+\begin{sidewaystable}[h]
 \centering
-\begin{tabular}{l|ll|ll}
-\hline
-& \multicolumn{2}{c}{LL} & \multicolumn{2}{c}{DD} \\
-& $K\pi$ & $\pi K$ & $K\pi$ & $\pi K$ \\
-\hline
-After stripping & 706538 & 686896 & 1064786 & 1019415 \\
-+ pre-selection & 454 & 457 & 2792 & 2150 \\
-+ BDT selection & 24 & 33 & 113 & 57 \\
-+ PID selection & 10 & 8 & 50 & 14 \\
-\hline
-\end{tabular}
-\caption{Comparison of the number of events between 5400 and 5600 MeV for $K\pi$ and $\pi K$ modes at different points in the selection.}
-\label{adscombinatoric}
-\end{table}
-
-The decays being investigated, \decay{\Bm}{\D(\Km\pip)\Kstarm(\KS(\pip\pim)\pim)} and \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm(\KS(\pip\pim)\pim)}, have a five and seven body final state respectively. The invariant mass sum of possible combinations of final state particles has been checked as well as various other background checks; these are shown in Appendix \ref{sec:app:combinatoric}. The results of this study remain inconclusive. Some differences in the distributions between the favoured and supressed modes are seen, as might be expected, however the majority of events used to make these plots would not be consistent with the $K^{*-}$ selection. We do learn that there are very few real $K^{*-}$ in the upper sideband, in either decay mode.
-
-In the absence of futher information it is concluded that the rate of combinatoric background is due to the different pion charge combination. Hence in the favoured mode the pion from the \D and the bachelor pion have opposite sign, while in the ADS mode they have the same sign. This introduces a difference to the yield of combinatoric straight out of stripping which invovles very loose cuts.
-
+{\footnotesize
+\begin{tabular}{c|cccccccccccc} 
+\hline 
+& $A_{K\pi}$ & $A_{KK}$ & $A_{\pi\pi}$ & $R_{KK}$ & $R_{\pi\pi}$ & $R^+_{K\pi}$ & $R^-_{K\pi}$ & $A_{K\pi\pi\pi}$ & $A_{\pi\pi\pi\pi}$ & $R_{\pi\pi\pi\pi}$ & $R^+_{K\pi\pi\pi}$ & $R^-_{K\pi\pi\pi}$ \\ 
+ \hline
+$A_{K\pi}$ & 1 & 0.00020  & 0.00017  & -0.00005  & -0.0006  & 0.076  & -0.014  & 0.0000027  & -0.000021  & 0.0011  & -0.0000045  & 0.0000028  \\
+$A_{KK}$ & & 1  & -0.00012  & -0.0030  & -0.000038  & -0.0011  & -0.0024  & 0.0000054  & -0.00012  & 0.000085  & 0.000004  & 0.0000032  \\
+$A_{\pi\pi}$ &  &  & 1  & -0.00062  & -0.022  & -0.0019  & -0.0017  & -0.0000021  & 0.000062  & 0.0010  & 0.000016  & 0.000017  \\
+$R_{KK}$ & & & & 1  & 0.064  & 0.034  & 0.014  & -0.0000029  & 0.000057  & 0.065  & 0.000087  & 0.00011  \\
+$R_{\pi\pi}$ & & & & & 1  & 0.027  & 0.017  & 0.000034  & -0.00013  & 0.030  & -0.00011  & -0.000056  \\
+$R^+_{K\pi}$ & & & & & & 1  & 0.020  & 0.000016  & 0.0000014  & 0.0095  & -0.000044  & -0.000033 \\
+$R^-_{K\pi}$ & & & & & & & 1  & 0.000010  & 0.00018  & -0.0050  & 0.0000095  & 0.000034  \\
+$A_{K\pi\pi\pi}$ & & & & & & & & 1  & -0.00048  & -0.0014  & 0.067  & -0.033  \\
+$A_{\pi\pi\pi\pi}$ & & & & & & & & & 1  & 0.00085  & 0.0029  & 0.0034  \\
+$R_{\pi\pi\pi\pi}$ & & & & & & & & & & 1  & 0.031  & 0.039  \\
+$R^+_{K\pi\pi\pi}$ & & & & & & & & & & & 1  & 0.028  \\
+$R^-_{K\pi\pi\pi}$ & & & & & & & & & & & & 1  \\
+\hline 
+\end{tabular}}
+\caption{Statistical correlation matrix for the seven physics observables from the \CP fit to data. The matrix is symmetric so only the top half is shown.}
+\label{statisticalcorrelations}
+\end{sidewaystable}
+\begin{sidewaystable}[h]
+\centering
+{\footnotesize
+\begin{tabular}{c|cccccccccccc} 
+\hline 
+& $A_{K\pi}$ & $A_{KK}$ & $A_{\pi\pi}$ & $R_{KK}$ & $R_{\pi\pi}$ & $R^+_{K\pi}$ & $R^-_{K\pi}$ & $A_{K\pi\pi\pi}$ & $A_{\pi\pi\pi\pi}$ & $R_{\pi\pi\pi\pi}$ & $R^+_{K3\pi}$ & $R^-_{K3\pi}$ \\ 
+ \hline
+$A_{K\pi}$ & 1 & 0.83  & -0.0067  & 0.72  & -0.0035  & 0.0071  & -0.025  & 0.94  & 0.84  & 0.00071  & -0.011  & -0.003  \\
+$A_{KK}$ &  & 1  & -0.028  & 0.65  & 0.014  & 0.014  & -0.021  & 0.83  & 0.77  & 0.0034  & -0.0029  & 0.0045  \\
+$A_{\pi\pi}$ &  &  & 1  & 0.0061  & 0.014  & 0.03  & 0.016  & -0.0073  & 0.0031  & -0.019  & -0.0056  & -0.0094  \\
+$R_{KK}$ & & & & 1  & -0.032  & -0.0054  & -0.02  & 0.72  & 0.68  & -0.0028  & -0.00051  & 0.011  \\
+$R_{\pi\pi}$ & & & &  & 1  & 0.057  & 0.079  & -0.0092  & 0.0012  & -0.01  & -0.017  & 0.0097  \\
+$R^+_{K\pi}$ & & & & &  & 1  & 0.079  & -0.0082  & 0.0037  & -0.0022  & -0.0098  & -0.0099  \\
+$R^-_{K\pi}$ & & & & & &  & 1  & -0.013  & -0.0063  & -0.012  & 0.0067  & 0.03  \\
+$A_{K\pi\pi\pi}$ & & & & & & &   & 1  & 0.84  & -0.005  & -0.01  & -0.015  \\
+$A_{\pi\pi\pi\pi}$ & & & & & & & &   & 1  & 0.036  & 0.0053  & 0.00047  \\
+$R_{\pi\pi\pi\pi}$ & & & & & & & & &   & 1  & 0.0089  & -0.0086  \\
+$R^-_{K3\pi}$ & & & & & & & & & &   & 1  & 0.045  \\
+$R^-_{K3\pi}$ & & & & & & & & & & &   & 1  \\
+\hline 
+\end{tabular}}
+\caption{Systematic correlation matrix for the seven physics observables from the \CP fit to data. The matrix is symmetric so only the top half is shown.}
+\label{systematiccorrelations}
+\end{sidewaystable}
 
 
 \clearpage
