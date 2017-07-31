@@ -89,7 +89,33 @@ In HLT1, tracks in the \velo are reconstructed
 
 \section{Simulation}
 
+Various MC samples were generated for signal and background studies. Both magnet polarities were generated, and both 2011 and 2012 samples were generated with \pythia 8 and Sim08. Also, 2015 and 2016 samples were generated using \pythia 8 and Sim09b. All MC was generated with all daughters in \lhcb acceptance. Signal MC is generated with the \Kstarm forced to \KS$\pim$.
+
 \cite{LHCb-DP-2011-002}
+
+
+\subsection{Using MC in TMVA training}
+\label{sec:mc:tmva}
+
+For $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$, the number of MC events passing the stripping and going on to be used as a signal training sample was found to be low, which resulted in overtraining of the BDT. In order to deal with this problem MC was produced with generator level cuts such that significantly more events pass the stripping, giving a larger signal sample size to be used in training. The following generator level cuts were applied:
+
+\begin{itemize}
+\item{Bu $p\ >$ 50 GeV}
+\item{Bu $p_T\ >$ 4.5 GeV}
+\item{Bu $\tau\ >$ 0.4 ps}
+\item{\Dz p $>$ 20 GeV}
+\item{\Dz $p_T\ >$ 2 GeV}
+\item{$K_s\ p\ >$ 4.5 GeV}
+\item{$K_s\ p_T\ >$ 0.45 GeV}
+\item{Bach $p\ >$ 5.5 GeV}
+\item{Bach $p_T\ > 5.5 GeV$}
+\item{$K_s$ daughters $p\ >$ 2 GeV}
+\item{\Dz daughters $p\ >$ 1.5 GeV}
+\end{itemize}
+
+These generator level cuts remove 89\% of events at generator level while keeping 78\% of LL candidates and 81\% of DD candidates. Not all generator level cuts are looser than those applied to the data in stripping, however the loss in good signal was deemed to be acceptable to be able to increase signal yields in the MC. Due to the \KS plus 3 track final state the reconstruction efficiency of this decay mode is very low.
+
+For $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$ BDT training Run 2 MC was produced. Run 2 MC can currently be produced in mDST format whereas Run 1 MC cannot. Therefore, a large amount of Run 2 MC was generated (10M events) in order to train the 4 body BDT and avoid overtraining. This allows training of the BDT without having to apply cuts to the sample at the generator level.
 
 \section{The \lhcb detector from CONF}
 \label{sec:detector}

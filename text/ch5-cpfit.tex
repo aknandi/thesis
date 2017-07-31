@@ -6,20 +6,180 @@ There is no one who loves pain itself, who seeks after it and wants to have it, 
   \qauthor{--- Cicero's \textit{de Finibus Bonorum et Malorum}}
 \end{savequote}
 
-\chapter{\label{ch:7-cpfit}Fits for \CP observables in two and four-body decays} 
+\chapter{\label{ch:5-cpfit}Fits for \CP observables in two- and four-body decays} 
 
 \minitoc
 
-\section{Fit to the B candidate invariant mass distribution}
-\label{sec:cpfit}
+In this section the \CP observables are measured using the yields of \btodkst in each \D decay mode for both \Bp and \Bm decays.
+
+The setup of the \CP fit is outlined in Section \ref{sec:cpfit:setup}, followed by the fit results in Section \ref{sec:cpfit:results}. Section \ref{sec:systematics} outlines the systematic uncertainties and the results of the \CP observables are summarised in Section \ref{sec:cpfit:summary}.
+
+\section{Setup of \CP fit}
+\label{sec:cpfit:setup}
 
 The fit to data is performed on the invariant mass of B candidates. A simultaneous fit stategy is employed to fit each of the D decay modes as well as two bins of B charge ($B^+$ and $B^-$), two bins of $K_s$ track type (LL and DD) and two bins of data type (Run 1 and Run 2), resulting in 56 bins in total.
 
-\subsection{Setup of \CP fit}
-
 As discussed in Section \ref{sec:massfit:range} the \CP fit is performed from 5230 MeV. The components and shapes of the \CP fit are the same as those described in Section \ref{sec:massfit}. The mean and width of the signal shape are shared across the different run periods and across modes of the same number of final state particles, but the mean and width are allowed to be different for the 2 and 4-body modes. The shape and yield of the partially reconstructed background is completely fixed, with separate values for LL and DD candidates. The shape is fixed as described in Section \ref{sec:massfit:partreco}, using the yield ratios given in Table \ref{fixedyieldratios}. The total yield is fixed from the fits in Figures \ref{massfitskpi} and \ref{massfitsk3pi}, the values for the total partially reconstructed yield in each of the simultaneous fit categories is given in Appendix \ref{sec:app:partrecoyields}. The shape of the combinatoric background is shared across all modes of the same number of final state particles, but has different values for LL and DD candidates, as well as two and four-body D modes.
 
-The \CP fit parameters are the physics observables $A_{K\pi}$, $A_{KK}$, $A_{\pi\pi}$, $R_{KK}$, $R_{\pi\pi}$, $R^+_{K\pi}$, $R^-_{K\pi}$, $A_{K\pi\pi\pi}$, $A_{\pi\pi\pi\pi}$, $A_{\pi\pi\pi\pi}$, $R^+_{K\pi\pi\pi}$ and $R^-_{K\pi\pi\pi}$, which relate to the physics parameters of interest as shown in Equations \ref{exp_Acp} - \ref{exp_R4pi}.
+The \CP fit parameters are the \CP observables $A_{K\pi}$, $A_{KK}$, $A_{\pi\pi}$, $R_{KK}$, $R_{\pi\pi}$, $R^+_{K\pi}$, $R^-_{K\pi}$, $A_{K\pi\pi\pi}$, $A_{\pi\pi\pi\pi}$, $R_{\pi\pi\pi\pi}$, $R^+_{K\pi\pi\pi}$ and $R^-_{K\pi\pi\pi}$, which relate to the physics parameters of interest as shown in Equations \ref{exp_Acp} - \ref{exp_R4pi}.
+
+\subsection{Corrections to yield ratios}
+\label{sec:cpfit:efficiencies}
+
+The \CP fit measures seven observables, $R_{KK}$, $R_{\pi\pi}$, $R^+_{K\pi}$, $R^-_{K\pi}$, $R_{\pi\pi\pi\pi}$, $R^+_{K\pi\pi\pi}$ and $R^-_{K\pi\pi\pi}$, which correspond to yield ratios with respect to the corresponding favoured mode. In order to extract these \CP observables from the yield ratios, various efficiency corrections must be applied.
+
+For the GLW modes, the fit takes the raw value of the yield ratio, $N(hh)/N(K\pi)$, and applied efficiency corrections to extract $R_{KK}$ and $R_{\pi\pi}$ as shown in Equation \ref{effcorrectionglw}, where $\epsilon_{sel}$ and $\epsilon_{pid}$ are the selection and PID efficiencies respectively. 
+
+\begin{equation}
+R_{hh} = \frac{N(hh)}{N(\pi\pi)} \times \frac{\BR(\decay{\Dz}{\Km\pip})}{\BR(\decay{\Dz}{h^+h^-})} \times \frac{\epsilon_{sel}(K\pi)}{\epsilon_{sel}(hh)} \times \frac{\epsilon_{pid}(K\pi)}{\epsilon_{pid}(hh)}
+\label{effcorrectionglw}
+\end{equation}
+
+As the final state in the ADS mode is almost identical to the charge favoured, the selection efficiencies that are common to both are assumed to cancel. There are only two differences between the selection for the ADS mode and the charge favoured mode; the tighter BDT selection for DD candidates and the double misID veto, which is only applied to the ADS mode. Equation \ref{effcorrectionads} describes the effciency corrections required to extract \Rptwo and \Rmtwo from the raw yield ratios, where $\epsilon_{BDT}$ and $\epsilon_{veto}$ are the BDT and veto efficiencies respectively.
+
+\begin{equation}
+R^{\pm}_{K\pi} = \frac{N(\pi K, B^{\pm})}{N(K\pi, B^{\pm})} \times \frac{\epsilon_{BDT}(K\pi)}{\epsilon_{BDT}(\pi K)} \times \frac{1}{\epsilon_{veto}(\pi K)}
+\label{effcorrectionads}
+\end{equation}
+
+For the four-body mode, efficiency corrections are applied equivalent to those in Equations \ref{effcorrectionglw} and \ref{effcorrectionads}. All the efficiency corrections that are used as inputs to the fit are summarised in Table \ref{fitinputs}. The final fit to the data measures $A_{K\pi}$, $A_{KK}$, $A_{\pi\pi}$, $R_{KK}$, $R_{\pi\pi}$, $R^+$,  $R^-$, $A_{K\pi\pi\pi}$, $A_{\pi\pi\pi\pi}$, $R_{\pi\pi\pi\pi}$, $R^+_{K3\pi}$ and  $R^-_{K3\pi}$, which all have the relevant efficiency corrections applied.
+
+\subsubsection{Signal efficiencies from simulation}
+\label{sec:cpfit:efficiencies:signal}
+
+The signal efficiency of the stripping, trigger and offline selection, $\epsilon_{sel}$, is extracted from samples of simulated signal events in order to be used in Equation \ref{effcorrectionglw}. These values have been calculated separately for \runone and \runtwo samples as well as LL and DD categories, as shown in Table \ref{seleff}. It can be seen that the LL selection efficiency drops in \runtwo, this is thought to be due to the \KS momentum being slightly higher in \runtwo giving fewer \KS mesons decay within the \velo. PID efficiencies have not been included in these calculations; they are extracted from the {\tt PIDCalib} package~\cite{PIDCalib} and are detailed in Section \ref{sec:cpfit:efficiencies:pid}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c|cc|cc}
+\hline
+& \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
+& LL & DD & LL & DD \\
+\hline
+$\epsilon_{sel}(K\pi)$ & $0.0939 \pm 0.0011$ & $0.2519 \pm 0.0018$ & $0.1266 \pm 0.0011$ & $0.3155 \pm 0.0017$ \\
+$\epsilon_{sel}(KK)$ & $0.0919 \pm 0.0011$ & $0.2450 \pm 0.0018$ & $0.1189 \pm 0.0010$ & $0.2923 \pm 0.0016$ \\
+$\epsilon_{sel}(\pi\pi)$ & $0.1015 \pm 0.0012$ & $0.2584 \pm 0.0018$ & $0.1292 \pm 0.0011$ & $0.3309 \pm 0.0017$ \\
+$\epsilon_{sel}(K\pi\pi\pi)$ & $0.0288 \pm 0.0006$ & $0.0816 \pm 0.0020$ & $0.0484 \pm 0.0004$ & $0.1229 \pm 0.0007$ \\
+$\epsilon_{sel}(\pi\pi\pi\pi)$ & $0.0272 \pm 0.0013$ & $0.0825 \pm 0.0022$ & $0.0436 \pm 0.0011$ & $0.1185 \pm 0.0017$ \\
+\hline
+\end{tabular}
+\caption{Summary of the selection efficiencies used in the \CP fit}
+\label{seleff}
+\end{table}
+
+The BDT effciency for the ADS mode is required for Equation \ref{effcorrectionads}, which is obtained from samples of simulated signal events. The results are given in Table \ref{bdteff}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c|cc|cc}
+\hline
+& \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
+& LL & DD & LL & DD \\
+\hline
+$\epsilon_{bdt}(K\pi)$ & $0.947 \pm 0.005$ & $0.896 \pm 0.004$ & $0.949 \pm 0.003$ & $0.907 \pm 0.002$ \\
+$\epsilon_{bdt}(\pi K)$ & $0.947 \pm 0.005$ & $0.802 \pm 0.005$ & $0.949 \pm 0.003$ & $0.826 \pm 0.003$ \\
+$\epsilon_{bdt}(K\pi\pi\pi)$ & $0.938 \pm 0.010$ & $0.903 \pm 0.007$ & $0.952 \pm 0.003$ & $0.928 \pm 0.002$ \\
+$\epsilon_{bdt}(\pi K\pi\pi)$ & $0.938 \pm 0.010$ & $0.838 \pm 0.009$ & $0.952 \pm 0.003$ & $0.870 \pm 0.003$ \\
+\hline
+\end{tabular}
+\caption{Summary of the BDT efficiencies used in the \CP fit}
+\label{bdteff}
+\end{table}
+
+
+\subsubsection{PID efficiencies}
+\label{sec:cpfit:efficiencies:pid}
+
+In this analysis the selection for the various D decays modes \decay{\D}{\kaon\pi, \kaon\kaon, \pi\pi, \pi\kaon} is almost identical apart for the particle identification requirements. Therefore it is very important to apply an efficient PID selection.
+
+As described in Section \ref{sec:selection:pid}, the PID requirements are $DLLK < 4$ for the pion from the \Kstarm and $DLLK > 2$ and $DLLK < -2$ for the \D daughters when applied to kaons and pions respectively. The efficiencies for the various selection are determined using the {\tt PIDCalib} package~\cite{PIDCalib}. The uncertainties in the PID efficiencies are systematic and come from:
+
+%LHCb-PROC-2011-008 ; CERN-LHCb-PROC-2011-008
+
+\begin{itemize}
+\item The use of finite samples of \Dstar calibration tracks
+\item The use of finite signal track samples
+\item The {\tt PIDCalib} procedure
+\end{itemize}
+
+The PID efficiencies are calculated individually for each year of data-taking and each magnet polarity. They are combined separately for \runone and \runtwo according to the efficiency corrected yields in each of the samples, to be used in the \CP fit as described in Equation \ref{effcorrectionglw}. The results of the PID efficienies are given in Table \ref{pideff}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c|cc|cc}
+\hline
+& \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
+& LL & DD & LL & DD \\
+\hline
+$\epsilon_{pid}(K\pi)$ & $0.734 \pm 0.002$ & $0.747 \pm 0.002$ & $0.811 \pm 0.002$ & $0.821 \pm 0.002$ \\
+$\epsilon_{pid}(KK)$ & $0.812 \pm 0.002$ & $0.825 \pm 0.002$ & $0.844 \pm 0.002$ & $0.853 \pm 0.002$ \\
+$\epsilon_{pid}(\pi\pi)$ & $0.670 \pm 0.002$ & $0.676 \pm 0.002$ & $0.779 \pm 0.002$ & $0.790 \pm 0.002$ \\
+$\epsilon_{pid}(K\pi\pi\pi)$ & $0.630 \pm 0.002$ & $0.636 \pm 0.002$ & $0.784 \pm 0.002$ & $0.798 \pm 0.002$ \\
+$\epsilon_{pid}(\pi\pi\pi\pi)$ & $0.675 \pm 0.002$ & $0.687 \pm 0.002$ & $0.822 \pm 0.002$ & $0.835 \pm 0.002$ \\
+\hline
+\end{tabular}
+\caption{Summary of the PID efficiencies used in the \CP fit}
+\label{pideff}
+\end{table}
+
+Another input to the fit is the efficiency of the double misID veto, which is required as a correction to the ADS observables, as in Equation \ref{effcorrectionads}. Veto efficiencies calculated from data are used in the \CP fit for both two- and four-body modes, given in Table \ref{vetoeff}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c|cc|cc}
+\hline
+& \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
+& LL & DD & LL & DD \\
+\hline
+$\epsilon_{veto}(\pi K)$ & $0.905 \pm 0.009$ & $0.919 \pm 0.005$ & $0.915 \pm 0.007$ & $0.917 \pm 0.004$ \\
+$\epsilon_{veto}(\pi K \pi\pi)$ & $0.895 \pm 0.005$ & $0.882 \pm 0.003$ & $0.916 \pm 0.003$ & $0.906 \pm 0.002$ \\
+\hline
+\end{tabular}
+\caption{Summary of the veto efficiencies used in the \CP fit}
+\label{vetoeff}
+\end{table}
+
+It can be seen from Table \ref{pideff} that the PID efficiency in \runtwo is higher than \runone for the PID selection used in this analysis. In order to check that the PID selection for \runone is suitable to be applied to \runtwo the misID efficiency (efficiency of a $K\pi$ candidate passing the $\pi K$ PID selection) was investigated. For the two-body mode, both the PID efficiency and misID efficiency is improved in \runtwo compared to \runone so the same PID selection can be applied to both datasets. For the four-body mode the misID efficiency is slightly worse in \runtwo compared to \runone. A low misID rate is required to reduce the crossfeed background discussed in Section \ref{sec:backgrounds:crossfeed}, which reports a negligible level of this crossfeed background in both \runone and \runtwo, therefore the misID rate is already sufficiently low and so the PID selection does not need to be tightened for \runtwo.
+
+\subsubsection{Summary of efficiency corrections}
+\label{sec:cpfit:efficiencies:summary}
+
+The \CP fit uses signal efficiencies, BDT efficiencies, PID efficiencies and double misID veto efficiencies from simulation, as well as branching ratios from Ref~\cite{PDG2016}. Table \ref{fitinputs} summarises the values used in the \CP fit. 
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c|cc|cc}
+\hline
+& \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
+& LL & DD & LL & DD \\
+\hline
+$BF(\decay{\Dz}{\Km\pip})$ & \multicolumn{4}{c}{$0.0393 \pm 0.0004$} \\
+$BF(\decay{\Dz}{\Kp\Km})$ & \multicolumn{4}{c}{$0.00401 \pm 0.00007$} \\
+$BF(\decay{\Dz}{\pip\pim})$ & \multicolumn{4}{c}{$0.001421 \pm 0.000025$} \\
+$\epsilon_{sel}(K\pi)$ & $0.0939 \pm 0.0011$ & $0.2519 \pm 0.0018$ & $0.1266 \pm 0.0011$ & $0.3155 \pm 0.0017$ \\
+$\epsilon_{sel}(KK)$ & $0.0919 \pm 0.0011$ & $0.2450 \pm 0.0018$ & $0.1189 \pm 0.0010$ & $0.2923 \pm 0.0016$ \\
+$\epsilon_{sel}(\pi\pi)$ & $0.1015 \pm 0.0012$ & $0.2584 \pm 0.0018$ & $0.1292 \pm 0.0011$ & $0.3309 \pm 0.0017$ \\
+$\epsilon_{pid}(K\pi)$ & $0.734 \pm 0.002$ & $0.747 \pm 0.002$ & $0.811 \pm 0.002$ & $0.821 \pm 0.002$ \\
+$\epsilon_{pid}(KK)$ & $0.812 \pm 0.002$ & $0.825 \pm 0.002$ & $0.844 \pm 0.002$ & $0.853 \pm 0.002$ \\
+$\epsilon_{pid}(\pi\pi)$ & $0.670 \pm 0.002$ & $0.676 \pm 0.002$ & $0.779 \pm 0.002$ & $0.790 \pm 0.002$ \\
+$\epsilon_{bdt}(K\pi)$ & $0.947 \pm 0.005$ & $0.896 \pm 0.004$ & $0.949 \pm 0.003$ & $0.907 \pm 0.002$ \\
+$\epsilon_{bdt}(\pi K)$ & $0.947 \pm 0.005$ & $0.802 \pm 0.005$ & $0.949 \pm 0.003$ & $0.826 \pm 0.003$ \\
+$\epsilon_{veto}(\pi K)$ & $0.905 \pm 0.009$ & $0.919 \pm 0.005$ & $0.915 \pm 0.007$ & $0.917 \pm 0.004$ \\
+$\epsilon_{sel}(K\pi\pi\pi)$ & $0.0288 \pm 0.0006$ & $0.0816 \pm 0.0020$ & $0.0484 \pm 0.0004$ & $0.1229 \pm 0.0007$ \\
+$\epsilon_{sel}(\pi\pi\pi\pi)$ & $0.0272 \pm 0.0013$ & $0.0825 \pm 0.0022$ & $0.0436 \pm 0.0011$ & $0.1185 \pm 0.0017$ \\
+$\epsilon_{pid}(K\pi\pi\pi)$ & $0.630 \pm 0.002$ & $0.636 \pm 0.002$ & $0.784 \pm 0.002$ & $0.798 \pm 0.002$ \\
+$\epsilon_{pid}(\pi\pi\pi\pi)$ & $0.675 \pm 0.002$ & $0.687 \pm 0.002$ & $0.822 \pm 0.002$ & $0.835 \pm 0.002$ \\
+$\epsilon_{bdt}(K\pi\pi\pi)$ & $0.938 \pm 0.010$ & $0.903 \pm 0.007$ & $0.952 \pm 0.003$ & $0.928 \pm 0.002$ \\
+$\epsilon_{bdt}(\pi K\pi\pi)$ & $0.938 \pm 0.010$ & $0.838 \pm 0.009$ & $0.952 \pm 0.003$ & $0.870 \pm 0.003$ \\
+$\epsilon_{veto}(\pi K \pi\pi)$ & $0.895 \pm 0.005$ & $0.882 \pm 0.003$ & $0.916 \pm 0.003$ & $0.906 \pm 0.002$ \\
+\hline
+\end{tabular}
+\caption{Table of branching fractions and efficiencies used in the \CP fit. Branching ratios are taken from the PDG~\cite{PDG2016}. All these values are fixed inputs and systematics are assigned based on the uncertainties, as detailed in Section \ref{sec:systematics}.}
+\label{fitinputs}
+\end{table}
+
+
+
 
 \subsection{Corrections to asymmetries}
 \label{sec:cpfit:asymmetries}
@@ -114,6 +274,39 @@ Run 2 combined & \multicolumn{4}{c}{$97.9420 \pm 0.0007$} \\
 \label{bachpidBplus}
 \end{table}
 
+\subsection{Likelihood function}
+\label{sec:cpfit:likelihood}
+
+\subsection{Fitter bias in \CP fit}
+\label{sec:cpfit:fitterbias}
+
+Data was generated accoring to the model described in Section \ref{sec:massfit}, assuming yields taken from the single data fit to the favoured mode and \CP parameters were estimated assuming values of $r_B = 0.1$, $\delta_B = 111^o$ and $\gamma = 70^o$. The generated data was then fitted back using the same model and the fit parameters were extracted. This process was repeated 2000 times and the results are shown in Figures \ref{pulls1} and \ref{pulls2}. The quality of the fit is tested by observing the pull distribution of each fit parameter. The pull of a given parameter x is given by,
+
+\begin{equation*}
+P_x = \begin{cases}
+	\frac{x_{fit} - x_{gen}}{\sigma_x^-}, & \text{if $x_{fit} - x_{gen} >$ 0}. \\
+	\frac{x_{gen} - x_{fit}}{\sigma_x^+}, & \text{if $x_{fit} - x_{gen} <$ 0}.
+	\end{cases}
+\end{equation*}
+
+where $x_{fit}$ is the value fo the parameter returned by the fit, $x_{gen}$ is the generated value of the parameter, and $\sigma_x^+$ and $\sigma_x^-$ are the upper and lower asymmetric errors respectively. All pull distributions are consistent with a mean of zero and width of 1. Therefore, the fit is considered stable and unbiased.
+ 
+\begin{figure}[h]
+\centering
+\includegraphics[page=1,trim = 0mm 24mm 0mm 0mm,clip,width=0.8\linewidth]{figures/results/toys.pdf}
+\includegraphics[page=2,trim = 0mm 165mm 0mm 10mm,clip,width=0.8\linewidth]{figures/results/toys.pdf}
+\caption{Pulls of the physics observables in the fit. The left hand column shows the fitted parameter distribution, the middle shows the fit error distribution and the right most plots are the pull distributions fitted with a Gaussian.}
+\label{pulls1}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[page=2,trim = 0mm 24mm 0mm 113mm,clip,width=0.8\linewidth]{figures/results/toys.pdf}
+\includegraphics[page=3,trim = 0mm 165mm 0mm 10mm,clip,width=0.8\linewidth]{figures/results/toys.pdf}
+\caption{Pulls of the physics observables in the fit. The left hand column shows the fitted parameter distribution, the middle shows the fit error distribution and the right most plots are the pull distributions fitted with a Gaussian.}
+\label{pulls2}
+\end{figure}
+
 \subsection{Optimisation of BDT and \Kstar selection using toys}
 \label{sec:cpfit:optimisation}
 
@@ -152,7 +345,7 @@ The final selection chosen was:
 The choice of BDT selection in ADS mode remains optimal when tested against a scenario of low combinatoric in the ADS mode. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Fit results}
+\section{Fit results}
 \label{sec:cpfit:results}
 
 The fits to data are shown in Figures \ref{datafit2bodyRun1}, \ref{datafit4bodyRun1}, \ref{datafit2bodyRun2} and \ref{datafit4bodyRun2}. The \CP oberservables measured from the fit are below, where the first errors are statistical and the second are systematic.
@@ -438,62 +631,6 @@ $\pi K\pi\pi$ & $13 \pm 7$ \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Fitter bias in \CP fit}
-
-Data was generated accoring to the model described in Section \ref{sec:massfit}, assuming yields taken from the single data fit to the favoured mode and \CP parameters were estimated assuming values of $r_B = 0.1$, $\delta_B = 111^o$ and $\gamma = 70^o$. The generated data was then fitted back using the same model and the fit parameters were extracted. This process was repeated 2000 times and the results are shown in Figures \ref{pulls1} and \ref{pulls2}. The quality of the fit is tested by observing the pull distribution of each fit parameter. The pull of a given parameter x is given by,
-
-\begin{equation*}
-P_x = \begin{cases}
-	\frac{x_{fit} - x_{gen}}{\sigma_x^-}, & \text{if $x_{fit} - x_{gen} >$ 0}. \\
-	\frac{x_{gen} - x_{fit}}{\sigma_x^+}, & \text{if $x_{fit} - x_{gen} <$ 0}.
-	\end{cases}
-\end{equation*}
-
-where $x_{fit}$ is the value fo the parameter returned by the fit, $x_{gen}$ is the generated value of the parameter, and $\sigma_x^+$ and $\sigma_x^-$ are the upper and lower asymmetric errors respectively. All pull distributions are consistent with a mean of zero and width of 1. Therefore, the fit is considered stable and unbiased.
- 
-\begin{figure}[h]
-\centering
-\includegraphics[page=1,trim = 0mm 24mm 0mm 0mm,clip,width=0.8\linewidth]{figures/results/toys.pdf}
-\includegraphics[page=2,trim = 0mm 165mm 0mm 10mm,clip,width=0.8\linewidth]{figures/results/toys.pdf}
-\caption{Pulls of the physics observables in the fit. The left hand column shows the fitted parameter distribution, the middle shows the fit error distribution and the right most plots are the pull distributions fitted with a Gaussian.}
-\label{pulls1}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-\includegraphics[page=2,trim = 0mm 24mm 0mm 113mm,clip,width=0.8\linewidth]{figures/results/toys.pdf}
-\includegraphics[page=3,trim = 0mm 165mm 0mm 10mm,clip,width=0.8\linewidth]{figures/results/toys.pdf}
-\caption{Pulls of the physics observables in the fit. The left hand column shows the fitted parameter distribution, the middle shows the fit error distribution and the right most plots are the pull distributions fitted with a Gaussian.}
-\label{pulls2}
-\end{figure}
-
-\subsection{Combinatoric background in ADS}
-\label{sec:cpfit:comb}
-
-One seemingly unexpected feature that is clear from Fig.~\ref{datafit2bodyRun1} is that the level of combinatoric background between the favoured $K\pi$ mode and ADS mode is different. Table \ref{adscombinatoric} compares the number of events between 5400 and 5600 MeV for $K\pi$ and $\pi K$ modes at different points in the selection. The numbers for the ADS mode with the full selection (after PID) do not have the tighter BDT cut or veto applied in order to be able to give a fairer comparison. Discrepancy seems to be present from the start but becomes larger with each stage of the selection, especially PID cuts. In the LL data the final level of combintoric background prior to the divergence in cuts is statistically compatible with being the same. In the DD sample the level of combinatoric (50 vs 14) is harder to attribute to a fluctuation, although the numbers involved are clearly quite small. A similar discrepacny can the seen in the 4-body favoured and suppressed mode, which is slightly less pronounced. It is noted that differences were also seen in the corresponding analysis of \decay{\Bm}{\D\Km}, $D\to K\pi\pi\pi$~\cite{LHCb-PAPER-2016-003}, but these were of order 2 rather than 3.5 as seen here. 
-
-\begin{table}[h]
-\centering
-\begin{tabular}{l|ll|ll}
-\hline
-& \multicolumn{2}{c}{LL} & \multicolumn{2}{c}{DD} \\
-& $K\pi$ & $\pi K$ & $K\pi$ & $\pi K$ \\
-\hline
-After stripping & 706538 & 686896 & 1064786 & 1019415 \\
-+ pre-selection & 454 & 457 & 2792 & 2150 \\
-+ BDT selection & 24 & 33 & 113 & 57 \\
-+ PID selection & 10 & 8 & 50 & 14 \\
-\hline
-\end{tabular}
-\caption{Comparison of the number of events between 5400 and 5600 MeV for $K\pi$ and $\pi K$ modes at different points in the selection.}
-\label{adscombinatoric}
-\end{table}
-
-The decays being investigated, \decay{\Bm}{\D(\Km\pip)\Kstarm(\KS(\pip\pim)\pim)} and \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm(\KS(\pip\pim)\pim)}, have a five and seven body final state respectively. The invariant mass sum of possible combinations of final state particles has been checked as well as various other background checks; these are shown in Appendix \ref{sec:app:combinatoric}. The results of this study remain inconclusive. Some differences in the distributions between the favoured and supressed modes are seen, as might be expected, however the majority of events used to make these plots would not be consistent with the $K^{*-}$ selection. We do learn that there are very few real $K^{*-}$ in the upper sideband, in either decay mode.
-
-In the absence of futher information it is concluded that the rate of combinatoric background is due to the different pion charge combination. Hence in the favoured mode the pion from the \D and the bachelor pion have opposite sign, while in the ADS mode they have the same sign. This introduces a difference to the yield of combinatoric straight out of stripping which invovles very loose cuts.
-
-
 \clearpage
 
 \section{Systematics}
@@ -633,6 +770,35 @@ Total & $0.0083$ & $0.009$ & $0.019$ & $0.012$ & $0.032$ & $0.0011$ & $0.0014$ &
 \end{sidewaystable}
 
 \section{Summary of results}
+\label{sec:cpfit:summary}
+
+\section{Combinatoric background in ADS}
+\label{sec:cpfit:comb}
+
+One seemingly unexpected feature that is clear from Fig.~\ref{datafit2bodyRun1} is that the level of combinatoric background between the favoured $K\pi$ mode and ADS mode is different. Table \ref{adscombinatoric} compares the number of events between 5400 and 5600 MeV for $K\pi$ and $\pi K$ modes at different points in the selection. The numbers for the ADS mode with the full selection (after PID) do not have the tighter BDT cut or veto applied in order to be able to give a fairer comparison. Discrepancy seems to be present from the start but becomes larger with each stage of the selection, especially PID cuts. In the LL data the final level of combintoric background prior to the divergence in cuts is statistically compatible with being the same. In the DD sample the level of combinatoric (50 vs 14) is harder to attribute to a fluctuation, although the numbers involved are clearly quite small. A similar discrepacny can the seen in the 4-body favoured and suppressed mode, which is slightly less pronounced. It is noted that differences were also seen in the corresponding analysis of \decay{\Bm}{\D\Km}, $D\to K\pi\pi\pi$~\cite{LHCb-PAPER-2016-003}, but these were of order 2 rather than 3.5 as seen here. 
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l|ll|ll}
+\hline
+& \multicolumn{2}{c}{LL} & \multicolumn{2}{c}{DD} \\
+& $K\pi$ & $\pi K$ & $K\pi$ & $\pi K$ \\
+\hline
+After stripping & 706538 & 686896 & 1064786 & 1019415 \\
++ pre-selection & 454 & 457 & 2792 & 2150 \\
++ BDT selection & 24 & 33 & 113 & 57 \\
++ PID selection & 10 & 8 & 50 & 14 \\
+\hline
+\end{tabular}
+\caption{Comparison of the number of events between 5400 and 5600 MeV for $K\pi$ and $\pi K$ modes at different points in the selection.}
+\label{adscombinatoric}
+\end{table}
+
+The decays being investigated, \decay{\Bm}{\D(\Km\pip)\Kstarm(\KS(\pip\pim)\pim)} and \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm(\KS(\pip\pim)\pim)}, have a five and seven body final state respectively. The invariant mass sum of possible combinations of final state particles has been checked as well as various other background checks; these are shown in Appendix \ref{sec:app:combinatoric}. The results of this study remain inconclusive. Some differences in the distributions between the favoured and supressed modes are seen, as might be expected, however the majority of events used to make these plots would not be consistent with the $K^{*-}$ selection. We do learn that there are very few real $K^{*-}$ in the upper sideband, in either decay mode.
+
+In the absence of futher information it is concluded that the rate of combinatoric background is due to the different pion charge combination. Hence in the favoured mode the pion from the \D and the bachelor pion have opposite sign, while in the ADS mode they have the same sign. This introduces a difference to the yield of combinatoric straight out of stripping which invovles very loose cuts.
+
+
 
 \clearpage
 

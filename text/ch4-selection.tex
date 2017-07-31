@@ -13,7 +13,7 @@
 \section{Selection of \decay{\Bpm}{\D\Kstarpm} candidates}
 \label{sec:selection}
 
-In this section, the reconstruction and selection for the signal mode, \decay{\Bpm}{\D\Kstarpm}, \decay{\Kstarpm}{\KS\pipm}, in the \decay{\Dz}{hh} and \decay{\Dz}{hhhh} final states is described, where $h$ represents a kaon or a pion. The \pipm from the \Kstarpm decay is referred to as the bachelor particle. The selection is developed for the favoured \decay{\Dz}{\Km\pip} and then applied to the other \D decay modes. The data analysed in this thesis corresponds to 3\invfb of $pp$ collisions at $\sqrt{s} = 7\tev \text{ and } 8\tev$ collected in 2011 and 2012 (known as Run 1), and 1.8\invfb at $\sqrt{s} = 13\tev$ collected in 2015 and 2016 (known as Run 2). {\color{red}probably cover this in the detector chapter}
+In this section, the reconstruction and selection for the signal mode, \btodkst, \decay{\Kstarpm}{\KS\pipm}, in the \decay{\Dz}{hh} and \decay{\Dz}{hhhh} final states is described, where $h$ represents a kaon or a pion. The \pipm from the \Kstarpm decay is referred to as the bachelor particle. The selection is developed for the favoured \decay{\Dz}{\Km\pip} and then applied to the other \D decay modes. The data analysed in this thesis corresponds to 3\invfb of $pp$ collisions at $\sqrt{s} = 7\tev \text{ and } 8\tev$ collected in 2011 and 2012 (known as Run 1), and 1.8\invfb at $\sqrt{s} = 13\tev$ collected in 2015 and 2016 (known as Run 2). {\color{red}probably cover this in the detector chapter}
 
 \subsection{Reconstruction and trigger requirements}
 \label{sec:selection:strippingandtrigger}
@@ -179,9 +179,9 @@ The results obtained from training are applied to the testing sample in order to
 
 The BDT selections, in conjuction with the \Kstarm mass window and \KS helicity angle, were optimised to reduce the fit error on the physics observables, as detailed in Section \ref{sec:cpfit:optimisation}. Many toy studies were run to calculate the fit uncertainty for each selection. To optimise the selection for the GLW modes, the fit error was minimised for $A_{KK}$, $R_{KK}$, $A_{\pi\pi}$ and $R_{\pi\pi}$. The BDT selection for the ADS modes was optimised to minimise the fit errors in $R^+$ and $R^-$, as illustated in Figure \ref{adsoptimisation}. In cases when the figure of merits in these optimisation studies were not especially sensitive to changes in the selection, the selection giving the highest coherence (i.e most stringent requirement on the \Kstarm) was chosen and the BDT signal and background efficiencies were taken into account.
 
-For the 2-body BDTs, a BDT selection of 0.6 is chosen for BDT\_LL and 0.7 for BDT\_DD for all D modes except the ADS mode. The ADS mode BDT selection is chosen to be 0.6 for BDT\_LL and 0.9 for BDT\_DD. This tighter BDT selection is justified in Figure \ref{adsoptimisation}. When applied to the $K\pi$ favoured mode in Run 1 the BDT selection gives a 95\% signal efficiency and 96\% background rejection for LL and 88\% signal efficiency and 94\% background rejection for DD. The signal efficiencies of the BDT cuts are given in Table \ref{bdtefficiencies2body}. 
+For the two-body BDTs, a BDT selection of 0.6 is chosen for BDT\_LL and 0.7 for BDT\_DD for all D modes except the ADS mode. The ADS mode BDT selection is chosen to be 0.6 for BDT\_LL and 0.9 for BDT\_DD. This tighter BDT selection is justified in Figure \ref{adsoptimisation}. When applied to the $K\pi$ favoured mode in Run 1 the BDT selection gives a 95\% signal efficiency and 96\% background rejection for LL and 88\% signal efficiency and 94\% background rejection for DD. 
 
-For the four-body modes the same optimisation point was chosen 0.6 for BDT\_LL and 0.7 for BDT\_DD for the \decay{\Dz}{\Kp\pim\pip\pim} \decay{\Dz}{\pi\pi\pi\pi} mode, and 0.6 for BDT\_LL and 0.9 for BDT\_DD for the \decay{\Dz}{\Kp\pim\pip\pim} mode. The optimisation point was verified by minimising the fit error in toys for $A_{K\pi\pi\pi}$, $R^+_{K\pi\pi\pi}$ and $R^-_{K\pi\pi\pi}$.
+For the four-body modes the same optimisation point was chosen 0.6 for BDT\_LL and 0.7 for BDT\_DD for the \decay{\Dz}{\Kp\pim\pip\pim} \decay{\Dz}{\pi\pi\pi\pi} mode, and 0.6 for BDT\_LL and 0.9 for BDT\_DD for the \decay{\Dz}{\Kp\pim\pip\pim} mode. The optimisation point was verified by minimising the fit error in toys for $A_{K\pi\pi\pi}$, $R^+_{K\pi\pi\pi}$ and $R^-_{K\pi\pi\pi}$. The signal efficiencies of the BDT selection is given in Table \ref{bdteff}. 
 
 
 \subsection{Other cuts}
@@ -645,10 +645,10 @@ Many other backgrounds have been looked into and have been found to be negligibl
 
 The selection requirements are identical for each of the different D modes, $K\pi$, $KK$, $\pi\pi$ and $\pi K$, with the exception of the double misID veto. Therefore, it is essential to apply PID selection that efficiently distinguishes between pions and kaons. The PID cuts on the daughters of the D meson are designed so that no \decay{\Dz}{hh} candidate can appear in more than one category with a change in mass hypothesis. A PID requirement must be made on the bachelor pion in order to remove the \decay{\B}{\D\KS\kaon} background; this is discussed in more detail in Section \ref{sec:backgrounds:b2dkks}. 
 
-For the bachelor PID (pion coming from the \Kstarm) a requirement of PIDK $<$ 4 is applied. For the 2-body D modes the requirements on the D daughters are kaons must satisfy DLLK $>$ 2 and pions must satifsfy DLLK $<$ -2. For the \decay{\Dz}{K\pi\pi\pi} modes, e.g. \decay{\Dz}{\Km\pip\pim\pip}, the \Km must satisfy DLLK $>$ 2 and both \pip must satifsfy DLLK $<$ -2; no PID requirement is applied for the \pip. For the \decay{\Dz}{\pip\pim\pip\pim}, the two \pip mesons must satisfy DLLK $<$ -2 and no PID requirements is placed on the \pim mesons. The PID requirements are the same as those used in the \decay{\Bp}{\D\Kp} analysis~\cite{LHCb-PAPER-2016-003}. No PID requirements are made on the \KS daughters; the high purity of the \KS means that this is not necessary, this is justified in Section \ref{sec:backgrounds:contamination}. The efficiency of this PID selection for the $K\pi$ favoured mode in Run 1 is 74\% and the efficiency of $\pi K$ events in the favoured mode is 0.15\%. These efficiencies are discussed in more detail in Section \ref{sec:mc:pid}. 
+For the bachelor PID (pion coming from the \Kstarm) a requirement of PIDK $<$ 4 is applied. For the 2-body D modes the requirements on the D daughters are kaons must satisfy DLLK $>$ 2 and pions must satifsfy DLLK $<$ -2. For the \decay{\Dz}{K\pi\pi\pi} modes, e.g. \decay{\Dz}{\Km\pip\pim\pip}, the \Km must satisfy DLLK $>$ 2 and both \pip must satifsfy DLLK $<$ -2; no PID requirement is applied for the \pip. For the \decay{\Dz}{\pip\pim\pip\pim}, the two \pip mesons must satisfy DLLK $<$ -2 and no PID requirements is placed on the \pim mesons. The PID requirements are the same as those used in the \decay{\Bp}{\D\Kp} analysis~\cite{LHCb-PAPER-2016-003}. No PID requirements are made on the \KS daughters; the high purity of the \KS means that this is not necessary, this is justified in Section \ref{sec:backgrounds:contamination}. The efficiency of this PID selection for the $K\pi$ favoured mode in Run 1 is 74\% and the efficiency of $\pi K$ events in the favoured mode is 0.15\%. These efficiencies are discussed in more detail in Section \ref{sec:cpfit:efficiencies:pid}. 
 
 
-A brief look at ProbNN variables was undertaken early on in the analysis but cuts were not found that improved on the DLL cuts. Figure \ref{pidoptimisation} shows the variation of PID efficiencies with different selections. These results are based on a preliminary version of the selection and so the DLLK efficiencies are not the same as those quoted in this analysis.  The same PID selection is applied to both Run 1 and Run 2 datasets. It was found that for the given PID selection both PID efficiency and misID efficiency were improved for Run 2 compared to Run 1. More detail is given in Section \ref{sec:mc:pid}.
+A brief look at ProbNN variables was undertaken early on in the analysis but cuts were not found that improved on the DLL cuts. Figure \ref{pidoptimisation} shows the variation of PID efficiencies with different selections. These results are based on a preliminary version of the selection and so the DLLK efficiencies are not the same as those quoted in this analysis.  The same PID selection is applied to both Run 1 and Run 2 datasets. It was found that for the given PID selection both PID efficiency and misID efficiency were improved for Run 2 compared to Run 1. More detail is given in Section \ref{sec:cpfit:efficiencies:pid}.
 
 \begin{figure}
 \includegraphics[width=0.5\linewidth]{figures/selection/pidOptimisation_bachelor.pdf}
@@ -708,7 +708,7 @@ $\pi K\pi\pi$ & 0 (0) & 0 (0) \\
 \section{Mass parameterisation of the favoured mode}
 \label{sec:massfit}
 
-This section describes the mass parameterisation that is developed for the two and four-body favoured \D modes, namely \decay{\Bm}{\D(\Km\pip)\Kstarm} and \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm}. The fit to data is performed on the refitted invariant mass of \B candidates. The aim is to parameterise the invariant \B mass to be used in the simultaneous fit described in Section \ref{sec:cpfit} to extract the \CP observables. There are three components considered in the parameterisation of the mass shape:
+This section describes the mass parameterisation that is developed for the two and four-body favoured \D modes, namely \decay{\Bm}{\D(\Km\pip)\Kstarm} and \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm}. The fit to data is performed on the refitted invariant mass of \B candidates. The aim is to parameterise the invariant \B mass to be used in the simultaneous fit described in Section \ref{ch:5-cpfit} to extract the \CP observables. There are three components considered in the parameterisation of the mass shape:
 \begin{enumerate}
 \item Signal, \decay{\Bm}{\D\Kstarm} decays.
 \item Combinatoric background, where random tracks are combined in the reconstruction 
@@ -734,20 +734,39 @@ where
 \end{cases}
 \end{equation*}
 
-The tail parameters, $\alpha$ and $n$, are fixed from simulation and both CBs share the same mean and tail parameters.  The width fraction between the CBs, $f_{\sigma}$, is fixed from simulation, but the mean and width, $\mu$ and $\sigma$, are left floating. The fits to signal MC are shown in Figure \ref{signalfits} and the shape parameters obtained from these fits are detailed in Table \ref{signalparameters}. 
-%The fitted mean value in data and MC was found to be slightly different, the values of the differences are shown in Table \ref{mcshifts}.
+Fits to the refitted \B mass distributions have been compared between \runone and \runtwo simulated signal samples, the signal PDFs are shown in Figures \ref{signalfitcomparison2body}. These shapes are consistent between \runone and \runtwo, therefore signal shapes are shared in the simultaneous fit. Further comparisons are made between two- and four-body modes. Figure \ref{signalfitcomparisonRun1} compare the signal PDFs obtained from simulated samples between $K\pi$ and $K\pi\pi\pi$ for \runone samples. These are noticablely different and so $K\pi$ and $K\pi\pi\pi$ are associated with different signal shapes in the mass fit.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/fitComponents/signalMC_KPi_run1vsrun2.pdf}
+\put(-260,100) {(a)}
+\put(-110,100) {(b)}
+\caption{Comparison of $K\pi$ signal fit functions for \runone (blue) and \runtwo MC (red) for (a) LL candidates and (b) DD candidates}
+\label{signalfitcomparison2body}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/fitComponents/signalMC_run1_KPivsKPiPiPi.pdf}
+\put(-260,100) {(a)}
+\put(-110,100) {(b)}
+\caption{Comparison of \runone signal fit functions for $K\pi$ (blue) and $K\pi\pi\pi$ (red) for (a) LL candidates and (b) DD candidates}
+\label{signalfitcomparisonRun1}
+\end{figure}
+
+For the signal shape in the mass fit, the tail parameters, $\alpha$ and $n$, are fixed from simulation and both CBs share the same mean and tail parameters.  The width fraction between the CBs, $f_{\sigma}$, is fixed from simulation, but the mean and width, $\mu$ and $\sigma$, are left floating. The fits to simulated signal samples are shown in Figure \ref{signalfits} and the shape parameters obtained from these fits are detailed in Table \ref{signalparameters}. 
 
 \begin{figure}[h]
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_LL_KPi.pdf}
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_DD_KPi.pdf}
-\put(-400,70) {(a)}
+\put(-390,70) {(a)}
 \put(-180,70) {(b)}
 \hfill
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_LL_KPiPiPi.pdf}
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_DD_KPiPiPi.pdf}
-\put(-400,70) {(c)}
+\put(-390,70) {(c)}
 \put(-180,70) {(d)}
-\caption{Fits to signal MC for (a) $K\pi$ LL, (b) $K\pi$ DD, (c) $K\pi\pi\pi$ LL, and (d) $K\pi\pi\pi$ DD}
+\caption{Fits to \runone and \runtwo simulated signal samples combined for (a) $K\pi$ LL, (b) $K\pi$ DD, (c) $K\pi\pi\pi$ LL, and (d) $K\pi\pi\pi$ DD}
 \label{signalfits}
 \end{figure}
 
@@ -766,23 +785,9 @@ $n$ & 1.0 (fixed) & 1.0 (fixed) & 1.0 (fixed) & 1.0 (fixed) \\
 $f_{cb}$ & $0.82 \pm 0.03$ & $0.84 \pm 0.02$ & $0.80 \pm 0.03$ & $0.81 \pm 0.04	$ \\
 \hline
 \end{tabular}
-\caption{Signal shape parameters obtained by a fit to Run 1 and Run 2 signal MC combined for both $K\pi$ and $K\pi\pi\pi$. Parameter names are defined in Equation \ref{DCBshape}. All parameters except for the mean and width are fixed to these values in the mass fit}
+\caption{Signal shape parameters obtained by a fit to \runone and \runtwo simulated signal samples combined for both $K\pi$ and $K\pi\pi\pi$. Parameter names are defined in Equation \ref{DCBshape}. All parameters except for the mean and width are fixed to these values in the mass fit}
 \label{signalparameters}
 \end{table}
-
-%\begin{table}
-%\centering
-%\begin{tabular}{ccc}
-%\hline
-%& Run 1 & 2015 \\
-%\hline
-%LL & +1.5 & +1.2 \\
-%DD & +0.4 & 0.0 \\
-%\hline
-%\end{tabular}
-%\caption{Difference (in MeV) in the fitted value of the mean between data and MC (data - MC)}
-%\label{mcshifts}
-%\end{table}
 
 
 \subsection{Combinatorial background}
@@ -878,7 +883,16 @@ Again, this distribution is convolved with a Double Gaussian and linear polynomi
 
 \subsubsection{Total partially reconstructed function}
 
-Table \ref{helicityamplitudes} summarises the uses of the different analytic shapes described: Horns, Hill and Little Horns functions. In order to obtain values for the various parameters in these shapes simulated events were generated and the full reconstruction and selection was applied, except for the PID selection. The shapes are taken from simulation are fitted separately using the functions given by equations \ref{eqn:horns}, \ref{eqn:hill} and \ref{eqn:littlehorns}, the fits are shown in Figures \ref{partrecofitsLL} and \ref{partrecofitsDD}. All the parameters for these shapes are fixed in the mass fit from fits to simultated events. The values of these fixed parameters are given in Tables ?
+Table \ref{helicityamplitudes} summarises the uses of the different analytic shapes described: Horns, Hill and Little Horns functions. In order to obtain values for the various parameters in these shapes simulated events were generated and the full reconstruction and selection was applied, except for the PID selection. Comparisons between \runone and \runtwo simulated events for partially reconstructed decays are shown in Figure \ref{parterecofits}. These distributions are considered sufficienctly similar to fix the shapes across all years. The parameters for the partially reconstructed shapes are obtained from performing individual fits to \runone simulated samples.
+
+\begin{figure}[!h]
+\includegraphics[width=\linewidth]{figures/compareMC/run1vsrun2MC_partreco_LL.pdf}
+\includegraphics[width=\linewidth]{figures/compareMC/run1vsrun2MC_partreco_DD.pdf}
+\caption{Comparison of partially reconstructed MC between Run 1 (blue) and 2015 (red). The different shapes correspond to different \Dstar\Kstar modes, descibed in Section \ref{sec:massfit:partreco}}
+\label{parterecofits}
+\end{figure}
+
+The shapes are taken from simulation are fitted separately using the functions given by equations \ref{eqn:horns}, \ref{eqn:hill} and \ref{eqn:littlehorns}, the fits are shown in Figures \ref{partrecofitsLL} and \ref{partrecofitsDD}. All the parameters for these shapes are fixed in the mass fit from fits to simultated events. The values of these fixed parameters are given in Tables ?
 
 \begin{table}[h]
 \centering
@@ -909,11 +923,11 @@ $\pm$1 & \Pgamma & $\left(x - \frac{a+b}{2}\right)^2 + \left(\frac{a-b}{2}\right
 \put(-180,80) {(e)}
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi101_LL.pdf}
 \put(-180,80) {(f)}
-\caption{Fit to $B \to D^*K^*$ Run 1 MC in all the different modes for LL candidates (a) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 010, (b) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 101, (c) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 010, (d) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 101, (e) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 010, and (f) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 101}
+\caption{Fit to $B \to D^*K^*$ \runone simulated samples in all the different modes for LL candidates (a) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 010, (b) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 101, (c) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 010, (d) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 101, (e) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 010, and (f) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 101}
 \label{partrecofitsLL}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi010_DD.pdf}
 \put(-180,80) {(a)}
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi101_DD.pdf}
@@ -928,7 +942,7 @@ $\pm$1 & \Pgamma & $\left(x - \frac{a+b}{2}\right)^2 + \left(\frac{a-b}{2}\right
 \put(-180,80) {(e)}
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi101_DD.pdf}
 \put(-180,80) {(f)}
-\caption{Fit to $B \to D^*K^*$ Run 1 MC in all the different modes for DD candidates (a) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 010, (b) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 101, (c) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 010, (d) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 101, (e) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 010, and (f) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 101}
+\caption{Fit to $B \to D^*K^*$ \runone simulated samples in all the different modes for DD candidates (a) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 010, (b) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 101, (c) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 010, (d) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 101, (e) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 010, and (f) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 101}
 \label{partrecofitsDD}
 \end{figure}
 
@@ -962,7 +976,7 @@ Mode & Branching ratio \\
 \label{partrecoBRs}
 \end{table}
 
-\begin{table}
+\begin{table}[h]
 \centering
 \begin{tabular}{ccc}
 \hline
