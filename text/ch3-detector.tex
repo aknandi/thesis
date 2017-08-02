@@ -9,13 +9,30 @@ There is no one who loves pain itself, who seeks after it and wants to have it, 
 
 \minitoc
 
-The Large Hadron Collider (LHC) is the worlds largest and most powerful particle accelerator, near Geneva, Switzerland. The LHC ring is 27km in circumference located 100m underground and consists of a series of superconducting magnets and accelerating modules to boost the particles energy. Two high energy proton or heavy ion beams travel in opposite directions at energies up to $\sqrt{s}=13\tev$. Hydrogen atoms are ionised to obtain protons, which get accelarated in stages through various parts of the LHC accelerator complex. Firstly, the protons are accelerated in Linac 2 to energies of 50\mev, followed by the Proton Syncrotron Booster (PSB), the Proton Syncrotron (PS) and the Super Proton Syncrotron (SPS), accelerating the protons to 1.4\gev, 25\gev and 450\gev respectively. Finally, they are injected into the LHC, reaching energies of up to $\sqrt{s}=13\tev$. Two proton beams are injected in opposite directions and focussed to collide at four locations around the LHC ring. These locations are where the four main particle physics detector are located, the Large Hadron Collider beauty (\lhcb) experiment as well as \atlas, \cms and \alice.
+The Large Hadron Collider (LHC) is the worlds largest and most powerful particle accelerator, near Geneva, Switzerland. The LHC ring is 27km in circumference, located 100m underground and consists of a series of superconducting magnets and accelerating modules to boost the particles energy. Two high energy proton or heavy ion beams travel in opposite directions at energies up to $\sqrt{s}=13\tev$. Hydrogen atoms are ionised to obtain protons, which get accelarated in stages through various parts of the LHC accelerator complex, as shown in Figure \ref{lhcdiagram}. Firstly, the protons are accelerated in Linac 2 to energies of 50\mev, followed by the Proton Syncrotron Booster (PSB), the Proton Syncrotron (PS) and the Super Proton Syncrotron (SPS), accelerating the protons to 1.4\gev, 25\gev and 450\gev respectively. Finally, they are injected into the LHC, reaching energies of up to $\sqrt{s}=13\tev$. Two proton beams are injected in opposite directions and focussed to collide at four locations around the LHC ring. These locations are where the four main particle physics detector are located, the Large Hadron Collider beauty (\lhcb) experiment as well as \atlas, \cms and \alice.
 
-There have been two major data taking periods of the \lhc, named Run 1 and Run 2. Run 1 occured between 2010 and 2012, where the beam energy was $\sqrt{s}=$7\tev and 8\tev. Instantaneous luminosity, number of pp interaction per bunch crossing, frequency of collisions. Luminosity leveling. Run 2 conditions.
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/detector/CCC-v2016.png}
+\caption{Diagram of the LHC accelerator complex}
+\label{lhcdiagram}
+\end{figure}
 
-This thesis uses the whole 3\invfb Run 1 dataset coressponding to 1\invfb of $\sqrt{s}=$7\tev recorded in 2011 and 2\invfb of $\sqrt{s}=$8\tev recorded in 2012, as well as 1.8\invfb of the Run 2 dataset, coressponding to all of the data recorded in 2015 and 2016 at $\sqrt{s}=$13\tev.
+There have been two major data taking periods of the \lhc, named \runone and \runtwo. \runone occured between 2010 and 2012, where the beam energy was $\sqrt{s}=$7\tev and 8\tev. Data collection for \runtwo began in 2015 and is due to end in 2018, with a beam energy of $\sqrt{s}=$13\tev. At LHCb the collision conditions are designed to have roughly one $pp$ interactions per bunch crossing and to limit the number of tracks. These conditions allow effective primary vertex selection, necessary for study of \B and \D meson decays, efficient processing of the track finding algorithm and reduced radiation damage and detector occupancy. This is achieved by reducing the transverse overlap of the two beams in order to reduce the area available for interactions, called luminosity levelling. It allows the peak luminosity and number of $pp$ intereactions per bunch crossing to be optimal, while maximising the intergrated luminosity. Most of the LHCb data was recorded at an instantaneous luminosity of $4 \times 10^{32}\text{cm}^{-2}\text{s}^{-1}$, with an average of 1.7 proton-proton collisions per bunch crossing for \runone and 1.1 for \runtwo. In \runone collisions occured at a frequency of 20 MHz, corresponding to collisions every 50\ns, compared to a bunch crossing rate of 40 MHz in \runtwo.
 
-The \lhcb detector~\cite{Alves:2008zz,LHCb-DP-2014-002} is a single-arm forward spectrometer covering the \mbox{pseudorapidity} range $2<\eta <5$, as shown in Figure~\ref{lhcbdetector}, designed for the study of particles containing \bquark or \cquark quarks.
+This thesis uses the whole \runonelumi \runone dataset coressponding to 1\invfb of $\sqrt{s}=$7\tev recorded in 2011 and 2\invfb of $\sqrt{s}=$8\tev recorded in 2012, as well as \runtwolumi of the \runtwo dataset, coressponding to all of the data recorded in 2015 and 2016 at $\sqrt{s}=$13\tev.
+
+The \lhcb detector is designed to study particles containing \bquark and \cquark quarks. These quarks are produced dominantly via gluon interactions. The gluons have highly asymmetric momenta, therefore the \bquark\bquarkbar quark pair is produced predominantly in the forward (or backward) direction, as shown in Figure \ref{bbar}. For this reason, the \lhcb detector~\cite{Alves:2008zz,LHCb-DP-2014-002} is a single-arm forward spectrometer, as shown in Figure~\ref{lhcbdetector}, covering the \mbox{pseudorapidity} range $2<\eta <5$, where $\eta$ is pseudorapidity, deifned as,
+\begin{equation}
+\eta \equiv -\ln \left[ \tan \left( \frac{\theta}{2} \right) \right]
+\end{equation}
+where $\theta$ is the angle between the particles mometum vector and the beam axis. This angular region contains 25\% of \bquark\bquarkbar pairs. The detector is described using a right-handed coordinate system, where $z$ represents the direction of the beam and $x$ and $y$ are the horizontal and vertical directions. It is composed of many sub-detectors that are each specialised for a specific role. These are the Vertex Locator (\velo), the Ring Imaging Cherenkov detectors (RICH1 and RICH2), the Tracker Turicensis (TT), the dipole magnet, the tracking stations T1-T3, the calorimeter system (SPD/PS, ECAL, HCAL) and the muon stations M1-M5. In Sections \ref{sec:detector:velo} to \ref{sec:detector:muon} individual descriptions of these sub-detectors are presented.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{figures/detector/08_rad_acc_scheme_right.pdf}
+\caption{The cross-section of \bquark\bquarkbar quark pair productions in simulated $pp$ collisions at 8 TeV as a function of the polar angles $\theta_1$ and $\theta_2$ with respect to the beam axis, $z$. The red portion indicates the region covered by the \lhcb detector}
+\label{bbar}
+\end{figure}
 
 \begin{figure}
 \includegraphics[width=\linewidth]{figures/detector/lhcb.pdf}
@@ -24,10 +41,27 @@ The \lhcb detector~\cite{Alves:2008zz,LHCb-DP-2014-002} is a single-arm forward 
 \end{figure}
 
 \section{The Vertex Locator}
+\label{sec:detector:velo}
 
-The Vertex Locator (\velo)~\cite{LHCb-DP-2014-001} provides precise tracking close to the interaction point to identify primary and secondary vertices, which is essential for studies of long-lived particles such as \B and \D mesons. The \velo is a silicon microstrip detector situated around the proton-proton interaction.. It consists of 42 silicon modules arranged along the beam, each providing a measurement of the radial coordinate, $r$, and azimuthal coordinate, $\phi$, using $R$ sensors and $\Phi$ sensors respectively. The sensors are positioned 7mm from the LHC beams. The \velo modules are retracted 29mm in the horizontal direction during the injection of the LHC beams and returned to their original position during stable beams in order to reduce damage due to radiation. The sensors are enclosed in a vacuum, which is separated from the LHC vacuum by corrugated foil sheets that protect the \velo modules against electromagnetic interference from the LHC beams.
+The Vertex Locator (\velo)~\cite{LHCb-DP-2014-001} provides precise tracking close to the interaction point to identify primary and secondary vertices, which is essential for studies of long-lived particles such as \B and \D mesons. The \velo is a silicon microstrip detector situated around the proton-proton interaction point. It consists of 42 silicon modules arranged along the beam, each providing a measurement of the radial coordinate, $r$, and azimuthal coordinate, $\phi$, using $R$ sensors and $\Phi$ sensors respectively, shown in Figure \ref{velolayout}. The sensors are positioned 7mm from the LHC beams. The \velo modules are retracted 29mm in the horizontal direction during the injection of the LHC beams and returned to their original position during stable beams in order to reduce damage due to radiation. The sensors are enclosed in a vacuum, which is separated from the LHC vacuum by corrugated foil sheets that protect the \velo modules against electromagnetic interference from the LHC beams.
 
-The \velo has a high spacial resolution, enabling precise determination of a particle's flight direction close to the primary interaction point. The performance of the \velo can be quantified by the primary vertex and impact parameter resolution~\cite{LHCb-DP-2014-001}. For vertices with 25 tracks, the primary vertex resolution is 13\mum in the transverse plane and 71\mum along the beam axis. The impact parameter resolution is less than 35\mum for particles with transverse momentum greater than 1\gevc.
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{figures/detector/VELO_detector_layout_crop.pdf}
+\hfill
+\includegraphics[width=0.3\linewidth]{figures/detector/randphisensors.pdf}
+\caption{Layout of the \velo detector (top). Schematic diagram showing the $R$ and $\Phi$ sensors (bottom).}
+\label{velolayout}
+\end{figure}
+
+The \velo has a high spacial resolution, enabling precise determination of a particle's flight direction close to the primary interaction point. The impact parameter (IP) of a track is defined  as the distance between the track and the PV at the track's point of closest approach to the PV. Long-lived \B and \D mesons studied in this analysis have their decay vertex displaced from the PV and as such tend to have a large IP. Therefore, the performance of the \velo can be quantified by the IP resolution~\cite{LHCb-DP-2014-001}, which, determined from 2012 data, is less than 35\mum for particles with transverse momentum greater than 1\gevc, as shown in Figure \ref{veloperformance}.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{figures/detector/IPRes-Vs-P-CompareIPxIPy-2012.pdf}
+\caption{IP resolution as a function of momentum in both the $x$ and $y$ planes.}
+\label{veloperformance}
+\end{figure}
 
 \section{Tracking and magnet}
 
@@ -43,7 +77,14 @@ Different reconstructed track types
 
 \section{The \rich detectors}
 
-The two \rich detectors (RICH 1 and RICH 2)~\cite{LHCb-DP-2012-003} are required for the identification of charged hadrons, specifically pions, kaons and protons. The decay modes of \bquark- and \cquark- flavoured hadrons involve hadronic multibody final states, making good particle identification of hadrons vital for reducing the combinatoric background. These detectors utilise the idea that Cherenkov radiation is produced whenever a charged particle, of velocity $v$, travelling through a dielectric medium, of refractive index $n$, exceeds the speed of light, $c$, in that medium. This produces a cone of light with an opening angle of $\theta_{CK}$ relative to direction of the particle's propagation, where $\theta_{CK} = \frac{1}{n\beta}$, where $\beta = v/c$. By measuring $\theta_{CK}$ as well as momentum information from the magnet and tracking systems, a mass hypothesis can be determined.
+The two \rich detectors (RICH 1 and RICH 2)~\cite{LHCb-DP-2012-003} are required for the identification of charged hadrons, specifically pions, kaons and protons. The decay modes of \bquark- and \cquark- flavoured hadrons involve hadronic multibody final states, making good particle identification of hadrons vital for reducing the combinatoric background. These detectors utilise the idea that Cherenkov radiation is produced whenever a charged particle, of velocity $v$, travelling through a dielectric medium, of refractive index $n$, exceeds the speed of light, $c$, in that medium. This produces a cone of light with an opening angle of $\theta_{CK}$ relative to direction of the particle's propagation, where $\theta_{CK} = \frac{1}{n\beta}$, where $\beta = v/c$. By measuring $\theta_{CK}$ as well as momentum information from the magnet and tracking systems, a mass hypothesis can be determined, as shown in Figure \ref{richseparation}.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\linewidth]{figures/detector/richseparation.pdf}
+\caption{Cherenkov angle as a function of momentum}
+\label{richseparation}
+\end{figure}
 
 RICH 1 is positioned upstream of the magnet covering the low momentum range, 2 to 60 \gevc, and using two radiators: C$_4$F$_{10}$ and Aerogel in Run 1, and subsequently removing the Aerogel radiator for Run 2. Why? RICH 2 is located downstream of the magnet and covers the high momentum range, 15 to 100\gevc, using a CF$_4$ radiator. Refractive index of radiators. The cone of Cherenkov radiation that radiates from the charged particle is reflected by spherical focussing primary mirrors and planar secondary mirrors to form a ring on Hybrid Photon Detectors (HPDs). The value of $\theta_{CK}$ can be determined from the diameter of the ring. 
 
@@ -52,8 +93,15 @@ Although the RICH system is designed primarily to provide separation between cha
 DLLX = \log{\mathcal{L}_X} - \log{\mathcal{L}_{\pi}} \text{ .}
 \end{equation}
 
-The performance of the \rich detectors
+The performance of the \rich detectors \ref{richperformance}
 
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{figures/detector/richperformance-data.pdf}
+\hfill
+\includegraphics[width=0.5\linewidth]{figures/detector/richperformance-mc.pdf}
+\caption{Plots of \rich performance}
+\label{richperformance}
+\end{figure}
 
 \section{Calorimeters}
 
@@ -62,6 +110,7 @@ The calorimeter system provides energy measurements and is essential for the fir
 All four components of the calorimeter system are composed of scintillator pads with a cell granulartity that decreases moving outwards, away from the beam pipe. The SPD/PS and ECAL have the variable segmentation split in to three sections, whereas the HCAL is split into two zones with larger cell sizes due to the larger size of hadronic showers.
 
 \section{Muon systems}
+\label{sec:detector:muon}
 
 The muon system~\cite{LHCb-DP-2013-001,LHCb-DP-2012-002} is designed, together with the calorimeter system, to provide information to the first level hardware trigger. It is composed of five stations, labelled M1 through to M5. Station M1 is located upstream from the calorimeteres and is only used in the first level trigger. Stations M2 - M5, located downstream from the calorimetersm, are interleaved with 80\cm thick iron absorbers and are designed to identify and trace penetrating muons. muons with momenta greater than 6\gevc will typically traverse all five stations. The five stations together have a width corresponding to 20 interaction lengths. 
 
@@ -89,42 +138,16 @@ In HLT1, tracks in the \velo are reconstructed
 
 \section{Simulation}
 
-Various MC samples were generated for signal and background studies. Both magnet polarities were generated, and both 2011 and 2012 samples were generated with \pythia 8 and Sim08. Also, 2015 and 2016 samples were generated using \pythia 8 and Sim09b. All MC was generated with all daughters in \lhcb acceptance. Signal MC is generated with the \Kstarm forced to \KS$\pim$.
+Various simulated samples were generated for signal and background studies. 
+
+%LHCb applications Gauss and Boule
+%Written using Gaudi
+%Gauss - generated particle events and their decays and transport of decay through detector
+%Evets geenrated using pythia, evtgen and photos
+%Transport of decay through detector - Geant4
+%Boole - detector response, trigger, reconstruction and stripping
+
+
+Both magnet polarities were generated, and both 2011 and 2012 samples were generated with \pythia 8 and Sim08. Also, 2015 and 2016 samples were generated using \pythia 8 and Sim09b. All MC was generated with all daughters in \lhcb acceptance. Signal MC is generated with the \Kstarm forced to \KS$\pim$.
 
 \cite{LHCb-DP-2011-002}
-
-
-\subsection{Using MC in TMVA training}
-\label{sec:mc:tmva}
-
-For $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$, the number of MC events passing the stripping and going on to be used as a signal training sample was found to be low, which resulted in overtraining of the BDT. In order to deal with this problem MC was produced with generator level cuts such that significantly more events pass the stripping, giving a larger signal sample size to be used in training. The following generator level cuts were applied:
-
-\begin{itemize}
-\item{Bu $p\ >$ 50 GeV}
-\item{Bu $p_T\ >$ 4.5 GeV}
-\item{Bu $\tau\ >$ 0.4 ps}
-\item{\Dz p $>$ 20 GeV}
-\item{\Dz $p_T\ >$ 2 GeV}
-\item{$K_s\ p\ >$ 4.5 GeV}
-\item{$K_s\ p_T\ >$ 0.45 GeV}
-\item{Bach $p\ >$ 5.5 GeV}
-\item{Bach $p_T\ > 5.5 GeV$}
-\item{$K_s$ daughters $p\ >$ 2 GeV}
-\item{\Dz daughters $p\ >$ 1.5 GeV}
-\end{itemize}
-
-These generator level cuts remove 89\% of events at generator level while keeping 78\% of LL candidates and 81\% of DD candidates. Not all generator level cuts are looser than those applied to the data in stripping, however the loss in good signal was deemed to be acceptable to be able to increase signal yields in the MC. Due to the \KS plus 3 track final state the reconstruction efficiency of this decay mode is very low.
-
-For $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$ BDT training Run 2 MC was produced. Run 2 MC can currently be produced in mDST format whereas Run 1 MC cannot. Therefore, a large amount of Run 2 MC was generated (10M events) in order to train the 4 body BDT and avoid overtraining. This allows training of the BDT without having to apply cuts to the sample at the generator level.
-
-\section{The \lhcb detector from CONF}
-\label{sec:detector}
-
-The \lhcb detector~\cite{Alves:2008zz,LHCb-DP-2014-002} is a single-arm forward spectrometer covering the \mbox{pseudorapidity} range $2<\eta <5$, designed for the study of particles containing \bquark or \cquark quarks. The detector includes a high-precision tracking system consisting of a silicon-strip vertex detector (\velo) surrounding the $pp$ interaction region, a large-area silicon-strip detector located upstream of a dipole magnet with a bending power of about $4{\mathrm{\,Tm}}$, and three stations of silicon-strip detectors and straw drift tubes placed downstream of the magnet. The tracking system provides a measurement of momentum, \ptot, of charged particles with a relative uncertainty that varies from 0.5\% at low momentum to 1.0\% at 200\gevc. The minimum distance of a track to a primary vertex (PV), the impact parameter (IP), is measured with a resolution of $(15+29/\pt)\mu m$, where \pt is the component of the momentum transverse to the beam, in\,\gevc. Different types of charged hadrons are distinguished using information from two ring-imaging Cherenkov detectors (\rich). Photons, electrons and hadrons are identified by a calorimeter system consisting of scintillating-pad and preshower detectors, an electromagnetic calorimeter and a hadronic calorimeter. Muons are identified by a system composed of alternating layers of iron and multiwire proportional chambers, and gas electron multiplier detectors. 
-
-The online event selection is performed by a trigger~\cite{LHCb-DP-2012-004}, which consists of a hardware stage, based on information from the calorimeter and muon systems, followed by a software stage, which applies a full event reconstruction. Signal events considered in the analysis must fulfil hardware and software trigger requirements. At the hardware stage, at least one of the two following criteria must be satisfied: either a particle produced in the decay of the signal \Bm candidate leaves a deposit with high transverse energy in the hadronic calorimeter, or the event is accepted because particles not associated with the signal candidate fulfil other trigger requirements.
-At the software stage, at least one charged particle should have a high \pt and a large \chisqip with respect to any PV, where \chisqip is defined as the difference in the vertex-fit \chisq of a given PV fitted with and without the considered track. A multivariate algorithm~\cite{BBDT} is used for the identification of secondary vertices that are consistent with the decay of a \bquark-hadron.
-The software trigger designed to select \decay{\Bm}{\D\Kstarm} candidates requires a two-, three- or four-track secondary vertex with a large scalar sum of the \pt of the associated charged particles and a significant displacement from the PVs.
-The PVs are fitted with and without the \B candidate tracks, and the PV that gives the smallest \chisqip is associated with the \B candidate.
-
-The analysis presented is based on $pp$ collision data corresponding to an integrated luminosity of 1\invfb at centre-of-mass energy 7\tev, 2\invfb at 8\tev collected in 2011 and 2012 (Run 1) and 1.8\invfb at 13\tev collected in 2015 and 2016 (Run 2). There are a number of differences between data collected in Run 2 and Run 1. The main difference is the energy of the collisions which increases the $b\bar{b}$ production cross-section~\cite{LHCb-PAPER-2015-037}. The average number of $pp$ interactions per bunch crossing is reduced in Run 2 in comparison with Run 1. The net effect therefore is that, despite the higher energy of the collision, the background levels and signal-to-background ratios in Run 1 and Run 2 for the type of decay analysed here are similar. Before the start of Run 2, the aerogel radiator was removed from the first \rich detector~\cite{LHCb-DP-2012-003}, which improves its resolution. Hence, for momenta typical of decays in this analysis, the PID selection criteria have resulted in an increased efficiency of signal selection while simultaneously decreasing the rate of misidentified backgrounds. For this decay mode, the combination of higher $b\bar{b}$ production cross section, improved particle identification and improved online selection have resulted in the rate of selected signal candidates in data increasing by a factor 3 per unit integrated luminosity.
