@@ -10,7 +10,7 @@ There is no one who loves pain itself, who seeks after it and wants to have it, 
 
 \minitoc
 
-The equations \ref{exp_Acp}, \ref{exp_Rcp} and \ref{exp_Rpm} are used to relate physics observables to physics parameters. 
+The \CP observables measured in this analysis can be used to determine the physics parameters, $r_B$, $\delta_B$, \Pgamma and $\kappa$, via Eqs.~\ref{exp_Acp}-\ref{exp_Rpm4body}. For this analysis, $\kappa$ is estimated as described in Section \ref{sec:interpretation:coherence}, and used as an extra constraint when determining $r_B$, $\delta_B$ and \Pgamma. The variations in acceptance across the four-body phase space and its effect on the intepretation is considered in Section \ref{sec:interpretation:inputs}. Section \ref{sec:interpretation:gammadini} discusses the determination of the physics parameters: $r_B$, $\delta_B$ and \Pgamma.
 
 \section{Coherence factor}
 \label{sec:interpretation:coherence}
@@ -151,67 +151,68 @@ For each Dalitz plot $\kappa$ is computed as the magnitude of the expression in 
 \label{kappadistribution}
 \end{figure}
 
-\section{External inputs}
+\section{Four-body phase space acceptance variations}
 \label{sec:interpretation:inputs}
 
-Several external inputs are required to interpret the results of the \CP observables from the \CP fit into information on $r_B$, $\delta_B$ and \Pgamma. The external parameters required are $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $\kappa_{4\pi}$ and $\kappa_{K3\pi}$. The parameters $\kappa_{4\pi}$ and $\kappa_{K3\pi}$ are to account for the fact that the four-body modes are not pure \CP or pure ADS modes. These parameters are measured in terms of the fractional \CP content of the decay \decay{\Dz}{\pip\pim\pip\pim}, $F_{CP}$, where $\kappa_{4\pi} = 2F_{CP} - 1$, and the coherence factor for the \decay{\Dz}{\Km\pip\pim\pip} decay, $R_{K3\pi} = \kappa_{K3\pi}$. These inputs $F_{CP}$ and $R_{K3\pi}$ are measurements taken from CLEO and LHCb measurements in Ref.~\cite{charmk3pi,LHCb-PAPER-2015-057,charm4pi}. The interpretation of \lhcb results depends on \lhcb acceptance across the four-body phase space. This effect is expected to be negligible.
+Several external inputs are required to interpret the results of the \CP observables from the \CP fit into information on $r_B$, $\delta_B$ and \Pgamma. The external parameters required are $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $\kappa_{4\pi}$ and $\kappa_{K3\pi}$. The parameters $\kappa_{4\pi}$ and $\kappa_{K3\pi}$ are to account for the fact that the four-body modes are not pure \CP or pure ADS modes. These parameters are measured in terms of the fractional \CP content of the decay \decay{\Dz}{\pip\pim\pip\pim}, $F_{CP}$, where $\kappa_{4\pi} = 2F_{CP} - 1$, and the coherence factor for the \decay{\Dz}{\Km\pip\pim\pip} decay, $R_{K3\pi} = \kappa_{K3\pi}$. These inputs $F_{CP}$ and $R_{K3\pi}$ are measurements taken from CLEO and LHCb measurements in Ref.~\cite{charmk3pi,LHCb-PAPER-2015-057,charm4pi}. The interpretation of \lhcb results depends on \lhcb acceptance across the four-body phase space. This would also affect the efficiency corrections for $A_{\pi\pi\pi\pi}$. These effects are expected to be negligible.
 
-Figures \ref{dalitzk3pi} and \ref{dalitz4pi} show plots of projections of the four-body phase space distributions for $K\pi\pi\pi$ and $\pi\pi\pi\pi$ respectively. These plots are comparisons of distributions for simulated generator level distributions without any acceptance effects and fully reconstrcuted selected MC events in my analysis. These distributions are shown to be very similar, which suggests that the use of the $K\pi\pi\pi$ coherence factor, $R_{K3\pi}$, and fractional \CP content, $F_{CP}$, from CLEO can be used directly in the interpretation of \lhcb results.  
+Figures \ref{dalitzk3pi} and \ref{dalitz4pi} show plots of projections of the four-body phase space distributions for $K\pi\pi\pi$ and $\pi\pi\pi\pi$ respectively. These plots are comparisons of distributions for simulated generator level distributions without any acceptance effects and fully reconstrcuted selected MC events in my analysis. These distributions are shown to be very similar, which suggests that the use of the $K\pi\pi\pi$ coherence factor, $R_{K3\pi}$, and fractional \CP content, $F_{CP}$, from CLEO can be used directly in the interpretation of \lhcb results. Therefore, the value of $F_{CP}$ used as an input when determining $r_B$, $\delta_B$ and \Pgamma is taken directly from the CLEO measurement, which is $0.734 \pm 0.028$~\cite{charm4pi}. Considering the corrections to $A_{\pi\pi\pi\pi}$, correction on the central value of $A_{\pi\pi\pi\pi}$ of ~1\% makes no difference to the results given that the statistical and systematic uncertainties are significantly larger than this correction. Therefore, it is concluded that small variations in efficiency lead to a negligible correction in the observables. The assumption that $R_{K3\pi}$ and $\delta_D^{K3\pi}$ require no corrections due to variations in acceptance over the four-body phase spacce is verified in the study below.
 
-\begin{figure}[h]
+\begin{figure}
 \includegraphics[width=\linewidth]{figures/results/dalitzDist_KPiPiPi.pdf}
 \caption{Comparison of Dalitz variable distributions for simulation of generator level distributions (blue) and fully reconstructed selected events (red) in the $K\pi\pi\pi$ mode.}
 \label{dalitzk3pi}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \includegraphics[width=\linewidth]{figures/results/dalitzDist_PiPiPiPi.pdf}
 \caption{Comparison of Dalitz variable distributions for simulation of generator level distributions (blue) and fully reconstructed selected events (red) in the $\pi\pi\pi\pi$ mode.}
 \label{dalitz4pi}
 \end{figure}
 
-The phase-space acceptance profile is primarily driven by the trigger, and then to some extent by the PID requirements. The effect of the BDT selection in relation to these is small. Hence it is expected that the phase-space acceptance profiles of the \decay{\D}{K\pi\pi\pi} and \decay{\D}{\pi\pi\pi\pi} decay modes in this analysis matches that of the \decay{\Bpm}{\D h^{\pm}} analysis. Hence it can be assumed that the same alterations to the interpretation are required as for the \decay{\Bpm}{\D h^{\pm}} analysis (no corrections for $R_{K3\pi}$ or $\delta_D^{K3\pi}$ and a small inflation of the uncertainty on $F_{CP}$). This assumption is verified in the studies detailed below.
+%The phase-space acceptance profile is primarily driven by the trigger, and then to some extent by the PID requirements. The effect of the BDT selection in relation to these is small. Hence it is expected that the phase-space acceptance profiles of the \decay{\D}{K\pi\pi\pi} and \decay{\D}{\pi\pi\pi\pi} decay modes in this analysis matches that of the \decay{\Bpm}{\D h^{\pm}} analysis. Hence it can be assumed that the same alterations to the interpretation are required as for the \decay{\Bpm}{\D h^{\pm}} analysis (no corrections for $R_{K3\pi}$ or $\delta_D^{K3\pi}$ and a small inflation of the uncertainty on $F_{CP}$). This assumption is verified in the studies detailed below.
 
-\subsection{Effect of non-uniform acceptance on $R_{K3\pi}$ and $\delta_D^{K3\pi}$}
+\subsubsection{Effect of non-uniform acceptance on $R_{K3\pi}$ and $\delta_D^{K3\pi}$}
 
 To assess the effects of small varaition in the four-body phase space for $K\pi\pi\pi$, the coherence factor and strong phase are calculated from the $K\pi\pi\pi$ amplitude models, as for the \decay{\Bpm}{\D h^{\pm}} analysis~\cite{B2DK_ADSGLW} using the AmpGen package, under the assumption of uniform acceptance and under the assumption of the total \lhcb acceptance. The differences give an estimate of the corrections that should be applied to the CLEO result before it is used in the \lhcb interpretation. The difference between the two was calculated to be 0.002 for the coherence factor and 0.7$^{\circ}$ for the strong phase difference, which are similar to the \decay{\Bpm}{\D h^{\pm}} analysis~\cite{B2DK_ADSGLW}. The values of the inputs taken from CLEO/LHCb are $R_{K3\pi} = 0.43^{+0.17}_{-0.13}$ and $\delta_D^{K3\pi} = \left(128^{+28}_{-17}\right)$~\cite{charmk3pi}. The size of the shifts due to the \lhcb phase space acceptance are negligible in comparison to the CLEO uncertainties and hence no further action is taken.
 
-\subsection{Effect of non-uniform acceptance on $F_{CP}$}
-
-When using an external value of $F_{CP}$ in this analysis~\cite{charm4pi} it is necessary to consider the potential distortion of the \lhcb acceptance. The acceptance will suppress certain regions of 4$\pi$ phase space, which may contain particular intermediate resonances, thus changing the overall CP content of the mode. Here we consider the approach taken in the \decay{\Bpm}{\D h^{\pm}} analysis, details of which can be found in LHCb-ANA-2014-071~\cite{B2DK_ADSGLW}, which involves determining the binned \lhcb acceptance and using it to reweight the CLEO-c data. The fit for $F_{CP}$ is then rerun on the weighted CLEO-c data and the difference in central values is used to get an idea of how the \lhcb acceptance might distort the true value of that parameter.
-
-In this analysis we calculate the normalised binned \lhcb acceptance to compare with the results from the \decay{\Bpm}{\D h^{\pm}} analysis. In the \decay{\Bpm}{\D h^{\pm}} analysis the kinematic variables chosen to determine the \lhcb acceptance were the momentum and polar angle ($\theta$) of each pion in the \D rest frame. The acceptance is then measured in different bins of momentum and $\theta$ using simulated \decay{\Bpm}{\D(4\pi)\pipm} decays. The acceptance in each bin is defined to be ratio of the simulated \decay{\Bpm}{\D(4\pi)\pipm} sample with all selection applied to simulated generator level sample produced without any acceptance cuts. The acceptance is normalised because it is the bin-to-bin differences that are important. Exactly the same procedure is implemented in this analyis. The binning scheme used in both cases is (numbered 1-4 from low to high):
-
-\begin{itemize}
-\item Momentum: 0.0-0.3, 0.3-0.5, 0.5-0.7, 0.7-1.0 \gevcc
-\item $\theta$: 0.30-1.00, 1.00-1.50, 1.50-2.00, 2.00-2.70 radians
-\end{itemize}
-
-The reconstruction and generator level distributions are shown in Figure \ref{acceptance} and the normalised acceptance in each bin is given in Table \ref{normalisedacceptance}.
-
-\begin{figure}[h]
-\includegraphics[width=\linewidth]{figures/results/acceptance4pi.pdf}
-\caption{Reconstruction (left) and generator level (right) distributions of \lhcb sample of simulated \decay{\Bpm}{\D(4\pi)\Kstarpm} decays.}
-\label{acceptance}
-\end{figure}
-
-\begin{table}
-\centering
-\begin{tabular}{c|cccc}
-& \multicolumn{4}{c}{Momentum bin} \\
-\hline
-$\theta$ bin & 1 & 2 & 3 & 4 \\ 
-\hline
-4 & $0.76 \pm 0.30$ & $0.92 \pm 0.26$ & $0.90 \pm 0.24$ & $1.0 \pm 0.3$ \\ 
-3 & $1.1 \pm 0.4$ & $0.88 \pm 0.24$ & $0.90 \pm 0.23$ & $1.0 \pm 0.3$ \\ 
-2 & $1.4 \pm 0.5$ & $1.0 \pm 0.3$ & $1.0 \pm 0.3$ & $1.1 \pm 0.3$ \\ 
-1 & $1.1 \pm 0.4$ & $1.2 \pm 0.3$ & $0.94 \pm 0.24$ & $0.88 \pm 0.25$ \\
-\end{tabular}
-\caption{Normalised acceptance for the \lhcb sample of simulated \decay{\Bpm}{\D(4\pi)\Kstarpm} decays. The bins are presented in the orientation shown in Figure \ref{acceptance}.}
-\label{normalisedacceptance}
-\end{table}
-
-The results in Table \ref{normalisedacceptance} are consistent with the \decay{\Bpm}{\D(4\pi)\pipm} results~\cite{B2DK_ADSGLW}, therefore it is considered sufficient to apply the result of the \decay{\Bpm}{\D(4\pi)\pipm} procedure to this analysis. In the \decay{\Bpm}{\D h^{\pm}} analysis, it is concluded that increasing the total uncertainty of $F_{CP}$ from 0.028 to 0.034 accounts for any uncertainty due to non-uniform \lhcb acceptance. Therefore, the value of $F_{CP}$ used as an input when determining $r_B$, $\delta_B$ and \Pgamma is $0.734 \pm 0.034$.
+%\subsubsection{Effect of non-uniform acceptance on $F_{CP}$}
+%
+%When using an external value of $F_{CP}$ in this analysis~\cite{charm4pi} it is necessary to consider the potential distortion of the \lhcb acceptance. The acceptance will suppress certain regions of 4$\pi$ phase space, which may contain particular intermediate resonances, thus changing the overall CP content of the mode. Here we consider the approach taken in the \decay{\Bpm}{\D h^{\pm}} analysis, details of which can be found in LHCb-ANA-2014-071~\cite{B2DK_ADSGLW}, which involves determining the binned \lhcb acceptance and using it to reweight the CLEO-c data. The fit for $F_{CP}$ is then rerun on the weighted CLEO-c data and the difference in central values is used to get an idea of how the \lhcb acceptance might distort the true value of that parameter.
+%
+%In this analysis we calculate the normalised binned \lhcb acceptance to compare with the results from the \decay{\Bpm}{\D h^{\pm}} analysis. In the \decay{\Bpm}{\D h^{\pm}} analysis the kinematic variables chosen to determine the \lhcb acceptance were the momentum and polar angle ($\theta$) of each pion in the \D rest frame. The acceptance is then measured in different bins of momentum and $\theta$ using simulated \decay{\Bpm}{\D(4\pi)\pipm} decays. The acceptance in each bin is defined to be ratio of the simulated \decay{\Bpm}{\D(4\pi)\pipm} sample with all selection applied to simulated generator level sample produced without any acceptance cuts. The acceptance is normalised because it is the bin-to-bin differences that are important. Exactly the same procedure is implemented in this analyis. The binning scheme used in both cases is (numbered 1-4 from low to high):
+%
+%\begin{itemize}
+%\item Momentum: 0.0-0.3, 0.3-0.5, 0.5-0.7, 0.7-1.0 \gevcc
+%\item $\theta$: 0.30-1.00, 1.00-1.50, 1.50-2.00, 2.00-2.70 radians
+%\end{itemize}
+%
+%The reconstruction and generator level distributions are shown in Figure \ref{acceptance} and the normalised acceptance in each bin is given in Table \ref{normalisedacceptance}.
+%
+%\begin{figure}
+%\includegraphics[width=\linewidth]{acceptance4pi.pdf}
+%\caption{Reconstruction (left) and generator level (right) distributions of \lhcb sample of simulated \decay{\Bpm}{\D(4\pi)\Kstarpm} decays.}
+%\label{acceptance}
+%\end{figure}
+%
+%\begin{table}
+%\centering
+%\begin{tabular}{c|cccc}
+%& \multicolumn{4}{c}{Momentum bin} \\
+%\hline
+%$\theta$ bin & 1 & 2 & 3 & 4 \\ 
+%\hline
+%4 & $0.76 \pm 0.30$ & $0.92 \pm 0.26$ & $0.90 \pm 0.24$ & $1.0 \pm 0.3$ \\ 
+%3 & $1.1 \pm 0.4$ & $0.88 \pm 0.24$ & $0.90 \pm 0.23$ & $1.0 \pm 0.3$ \\ 
+%2 & $1.4 \pm 0.5$ & $1.0 \pm 0.3$ & $1.0 \pm 0.3$ & $1.1 \pm 0.3$ \\ 
+%1 & $1.1 \pm 0.4$ & $1.2 \pm 0.3$ & $0.94 \pm 0.24$ & $0.88 \pm 0.25$ \\
+%\end{tabular}
+%\caption{Normalised acceptance for the \lhcb sample of simulated \decay{\Bpm}{\D(4\pi)\Kstarpm} decays. The bins are presented in the orientation shown in Figure \ref{acceptance}.}
+%\label{normalisedacceptance}
+%\end{table}
+%
+%The results in Table \ref{normalisedacceptance} are consistent with the \decay{\Bpm}{\D(4\pi)\pipm} results~\cite{B2DK_ADSGLW}, therefore it is considered sufficient to apply the result of the \decay{\Bpm}{\D(4\pi)\pipm} procedure to this analysis. In the \decay{\Bpm}{\D h^{\pm}} analysis, it is concluded that increasing the total uncertainty of $F_{CP}$ from 0.028 to 0.034 accounts for any uncertainty due to non-uniform \lhcb acceptance. Therefore, the value of $F_{CP}$ used as an input when determining $r_B$, $\delta_B$ and \Pgamma is $0.734 \pm 0.034$.
+%
 
 \section{Results in terms of $r_B$, $\delta_B$ and \Pgamma}
 \label{sec:interpretation:gammadini}

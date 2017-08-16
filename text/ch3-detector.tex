@@ -120,34 +120,66 @@ Each stations uses multiwire proportional chambers (MWPCs) apart from the inner 
 
 The \lhc bunch crossing rate is 40MHz, however there is insufficient processing power to read out the full detector and write every event to storage. A dedicated trigger system~\cite{LHCb-DP-2012-004} is implemented to retain interesting events while discarding background events. This occurs in two stages, the low level hardware trigger, called Level-0 (L0), and the high level software trigger, called High Level trigger (HLT). The L0 trigger operates at the bunch crossing rate of 40MHz, reducing the event rate to 1MHz. The HLT only processes events that have passed L0, accepting events at a rate of 3kHz.
 
-A set of cuts and thresholds defined in the trigger to select a specific decay is called a trigger line. An event is retained only if it passes at least one trigger line in both L0 and HLT.
+A sequence of reconstruction algorithms and thresholds defined in the trigger to select a specific decay is called a trigger line. This returns an accept or reject decision. An event is retained only if it passes at least one trigger line in both L0 and HLT.
 
 \subsection{Level-0 trigger}
 
-The L0 trigger only uses information that can be quickly read out from the calorimeter or muon systems, reducing the event rate from 40MHz to 1MHz, at which point the full detector is read out. The decay products of \B typically have high transverse energy and momentum due to the large \B  mass. Selections are made on global quantities. The L0 trigger selects high transverse energy clusters in the calorimeters due to hadrons, photons and electrons, and high transverse momentum muons in the muon system. The trigger also requires amaximum number of SPD hits to reject high multiplicity events which would uses excessive processing time in HLT. The trigger creates {\tt L0Hadron}, {\tt L0Photon} or {\tt L0Electron} candidates depending on where the energy has been depositied in the calorimeter.
+The L0 trigger only uses information that can be quickly read out from the calorimeter or muon systems, reducing the event rate from 40MHz to 1MHz, at which point the full detector is read out. The decay products of \B mesons typically have high transverse energy and momentum due to the large \B mass. Selections are made on global quantities. The L0 trigger selects high transverse energy clusters in the calorimeters due to hadrons, photons and electrons, and high transverse momentum muons in the muon system. The trigger also requires a maximum number of SPD hits to reject high multiplicity events which would use excessive processing time in HLT. The trigger creates {\tt L0Hadron}, {\tt L0Photon} or {\tt L0Electron} candidates depending on where the energy has been depositied in the calorimeter. Events containing at least one candidate above the fixed threshold in transverse energy required are accepted by the L0 trigger. Candidates for {\tt L0Muon} or {\tt L0DiMuon} are also created based on the hits in the muon systems and the transverse momentum of the candidate.
 
 \subsection{High Level Trigger}
 
-Events accepted by the L0 trigger are placed in a buffer to be processed by HLT, which is divided into two stages: HLT1, where the event is only partially reconstructed, and HLT2, where the full event is reconstructed.
+Events accepted by the L0 trigger are placed in a buffer to be processed by HLT, which has two stages: HLT1, performing partial event reconstruction, and HLT2, performing full event reconstruction. For HLT1, the event rate has been reduced to 1MHz allowing for the full detector to be read out.
 
-In HLT1, tracks in the \velo are reconstructed
+In HLT1, tracks in the \velo are reconstructed and are then used to construct vertices using at least five tracks. HLT1 lines that do not require muons select \velo tracks based on their smallest impact parameter to any PV. Poor quality \velo tracks are rejected. Muon candidates are selected by matching \velo tracks to those events triggered by {\tt L0Muon} or {\tt L0DiMuon} with the additional requirements of high momentum (above 6\gevc) and reasonable track quality (\chisqndf below 25). \velo tracks that are selected by their IP or as a muon candidate are reconstructed using information from the OT and IT-stations in order to determine their momentum. This process is known as forward tracking. Minimum momentum and transverse momentum constraints are applied to reduce processing time when fitting each reconstructed track using a Kalman filter based track fit. Selections are applied to the IP, momentum and mass of the candidates.
+
+In HLT2, the further reduction is event rate allows forward tracking to be performed on all \velo tracks with $p > 5\gevc$ and $\pt > 0.5gevc$. The HLT2 trigger includes trigger lines for selecting \bquark-hadron decays, prompt charm decays and muonic decays. A large proportion of the HLT2 bandwidth goes to topological trigger lines, which are specifically designed to target partially reconstructed \bquark-hadron decays. Tracks are then combined one-by-one requring the distance of closest approach (DOCA) to be less than 2mm, reaching a total of two, three or four tracks, resulting in the {\tt HLT2Topo(N)BodyBDTDecision} trigger lines, where $N = 2,3,4$ particles forming the vertex. Selection requirements are imposed on these lines based on a multivariate Boosted Decision Tree (BDT) classifier, which uses the sum of transverse momenta, minimum transverse momenta, mass, $m_{corr}$, DOCA, impact parameter significance and flight distance significance, where $m_{corr}$ is the corrected mass, defined as
+
+\begin{equation}
+m_{corr} \equiv \sqrt{m^2 + {| \pt^{miss} |}^2} + \pt^{miss} \text{ ,}
+\end{equation}
+
+where $\pt^{miss}$ represents the missing momentum in the transverse direction. This quantity allows for the case where not all final state particles are reconstructed. 
+
+Events that pass HLT2 are written to storage at an event rate of about 3kHz. These events subsequently undergo the full alignment, calibration and reconstruction processes.
 
 \section{Reconstruction}
 
 \subsection{Track reconstruction}
 
+Track reconstruction algorithms combine information of hits from different sub-detectors, e.g. \velo, TT, IT and OT. There are five catergories for track classification, shown in Figure \ref{tracktypes}:
+
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{figures/detector/tracktypes.pdf}
+\caption{Schematic diagram of the different tracking sub-detectors (\velo, TT, T-stations) and the different categories of reconstructed tracks (long, downstream ,upstream, \velo, T tracks).}
+\label{tracktypes}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Long tracks} traverse the entire tracking system from the \velo to the T-stations. These tracks have the most precise momentum measurement as they have experienced the full magnetic field.
+\item \textbf{Downstream tracks} only traverse the TT and T-stations. These tracks are usually due to the presence long-lived particles, such as \KS mesons, decaying after the \velo.
+\item \textbf{Upstream tracks} traverse the \velo and TT stations before being bent out of the detector by the magnetic field due to their lower momentum.
+\item \textbf{\velo tracks} leave the \lhcb acceptance after traversing part of the \velo. No momentum information can be pbtained from these tracks due to the absense of a magentic field.
+\item \textbf{T tracks} are one that only measure hits in the T-stations. These are typically produced in secondary interactions.
+\end{itemize}
+
+Track reconstruction starts with the reconstruction of \velo tracks, which are then propagated through to the TT to determine the particle trajectory. To define a long track, additional hits are searched for in the T-stations that match the partcle trajectory. This process finds combinations of clusters in different sub-detectors that are likely to have been fromed by a single charged particle travelling though the detector. The clusters are then fit with a \chisq fit using a third order polynomial. Downstream tracks are reconstructed by first searching for T tracks and then finding corresponding hits upstream in the TT by extrapolating the track trajectory through the magnetic field.
+
+The tracks are fitted to obatin a best estimate of the track parameters accounting for multiple scattering and energy lost through ionisation. The \chisq of this fit and a neural network classifier are used to reduce the number of fake tracks that are formed by wrongly matching clusters in different sub-detectors, and therefore do not correspond to the track of a real charged particle.
+
+%\subsection{Particle identification}
+%
+%Discussion of DLL variables. Already in \rich section?
+
+\subsection{Stripping}
+
+The events accepted by the trigger are written to storage. All processing that occurs after this point is known as ``offline''. These events are processed with more accurate alignment and calibration of the sub-detectors and more sophisticated reconstruction software than HLT. This offline processing stage is known as stripping. Each family of decays has its own stripping line, which refers to the reconstruction and selection of specified particles in the decay chain of interest. Various loose selection requirements are applied in the stripping line to reduce remove background event while reducing the processing time and storage requirements. An analysis initially involves taking events returned by the relevant stripping line and developing a more sophisticated selection procedure to further remove background events. The stripping lines used in this analysis are listed in Section \ref{sec:selection:strippingandtrigger}.
+
 \section{Simulation}
 
-Various simulated samples were generated for signal and background studies. 
+Various simulated samples were generated for signal and background studies. The simulated samples are generated using the \lhcb application \gauss and \boole, which are written using the \gaudi framework. \gauss generates particles and their decays as well as simulating the transport through the detector. \boole is then used to simulate the detector response. 
 
-%LHCb applications Gauss and Boule
-%Written using Gaudi
-%Gauss - generated particle events and their decays and transport of decay through detector
-%Evets geenrated using pythia, evtgen and photos
-%Transport of decay through detector - Geant4
-%Boole - detector response, trigger, reconstruction and stripping
+In the production of simulation samples used for analysis, the first step is the production of \bquark\bquarkbar pairs is simulated from $pp$ collisions using \pythia. One quark in the \bquark\bquarkbar pair is chosen to decay at random via user-specified process and its decay is simulated using \evtgen, with \photos modelling any final state radiation. The transport of the decay through the detector is modelled using \geant. 
 
+\boole is then used to simulate the detector response and return the output in the format of real data coming from the front end electronics. The simulated data is then processed by the trigger, reconstruction and stripping as for real data.
 
-Both magnet polarities were generated, and both 2011 and 2012 samples were generated with \pythia 8 and Sim08. Also, 2015 and 2016 samples were generated using \pythia 8 and Sim09b. All MC was generated with all daughters in \lhcb acceptance. Signal MC is generated with the \Kstarm forced to \KS$\pim$.
-
-\cite{LHCb-DP-2011-002}
+Both magnet polarities, and 2011, 2012, 2015 and 2016 samples were generated with \pythia 8. All simulated samples were generated with all daughters in \lhcb acceptance. Signal samples are simulated \btodkst decays with the \Kstarm forced to \KS$\pim$ and various \D final states. For the four-body \D final states, the simulated samples are produced assuming the \D decay is uniform over the whole phase space. Many other samples are generated to investigate various possible background decays.
