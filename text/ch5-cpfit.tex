@@ -21,7 +21,7 @@ The fit to data is performed on the invariant mass of B candidates. A simultaneo
 
 As discussed in Section \ref{sec:massfit:range} the \CP fit is performed from 5230 MeV. The components and shapes of the \CP fit are the same as those described in Section \ref{sec:massfit}. The mean and width of the signal shape are shared across the different run periods and across modes of the same number of final state particles, but the mean and width are allowed to be different for the 2 and 4-body modes. The shape and yield of the partially reconstructed background is completely fixed, with separate values for LL and DD candidates. The shape is fixed as described in Section \ref{sec:massfit:partreco}, using the yield ratios given in Table \ref{fixedyieldratios}. The total yield is fixed from the fits in Figures \ref{massfitskpi} and \ref{massfitsk3pi}, the values for the total partially reconstructed yield in each of the simultaneous fit categories is given in Appendix \ref{sec:app:partrecoyields}. The shape of the combinatoric background is shared across all modes of the same number of final state particles, but has different values for LL and DD candidates, as well as two and four-body D modes.
 
-The \CP fit parameters are the \CP observables $A_{K\pi}$, $A_{KK}$, $A_{\pi\pi}$, $R_{KK}$, $R_{\pi\pi}$, $R^+_{K\pi}$, $R^-_{K\pi}$, $A_{K\pi\pi\pi}$, $A_{\pi\pi\pi\pi}$, $R_{\pi\pi\pi\pi}$, $R^+_{K\pi\pi\pi}$ and $R^-_{K\pi\pi\pi}$, which relate to the physics parameters of interest as shown in Equations \ref{exp_Acp} - \ref{exp_R4pi}.
+The \CP fit parameters are the \CP observables \Akpi, \Akk, \Apipi, \Rkk, \Rpipi, \Rptwo, \Rmtwo, \Akpipipi, \Apipipipi, \Rpipipipi, \Rpfour and \Rmfour, which relate to the physics parameters of interest as shown in Equations \ref{exp_Acp} - \ref{exp_R4pi}.
 
 \subsection{Corrections to yield ratios}
 \label{sec:cpfit:efficiencies}
@@ -291,12 +291,27 @@ Run 2 combined & \multicolumn{4}{c}{$97.9420 \pm 0.0007$} \\
 \subsection{Likelihood function}
 \label{sec:cpfit:likelihood}
 
-The fit is performed by constructing a likelihoood function that is to be minimised.
+The fit is performed by constructing a likelihoood function that is to be minimised. A likelihood is assigned to each candidate in a given category by constructing the signal and background PDFs. The total log-likelihood is the sum of the log-likelihoods for each of the different categories.
+
+\begin{equation}
+\log\mathcal{L} = \sum_{\Bp,\Bm}\sum_{\text{LL,DD}}\mathop{\sum_{\text{Run 1,}}}_{\text{Run 2}} \left( \log\mathcal{L}_{\D\Kstar}^{\text{2-body}} + \log\mathcal{L}_{\D\Kstar}^{\text{4-body}} \right)
+\end{equation}
+
+The expression $\log\mathcal{L}_{\D\Kstar}^{\text{2-body}}$ consists of the sum of the log likelihoods for each of the two-body modes, and equivalently for $\log\mathcal{L}_{\D\Kstar}^{\text{4-body}}$. The likelihood for each mode is constructed from the signal, combinatorial and partially reconstructed PDFs, namely $P_{\text{sig}}$, $P_{\text{comb}}$ and $P_{\text{\Dstar\Kstar}}$, respectively, with coresponding yields $N_{\text{sig}}$, $N_{\text{comb}}$ and $N_{\text{\Dstar\Kstar}}$. This likelihood is given by,
+
+\begin{equation}
+\log\mathcal{L}_{\D\Kstar}^{\text{(2/4)-body}} = \mathop{\sum_{\text{(2/4)-body}}}_{\text{modes}} \log\left(N_{\text{sig}}P_{\text{sig}}^{\text{(2/4)-body}} + N_{\text{comb}}P_{\text{comb}}^{\text{(2/4)-body}} + N_{\text{\Dstar\Kstar}}P_{\text{\Dstar\Kstar}}\right) \text{ .}
+\label{likelihood}
+\end{equation}
+
+The two- and four-body log-likelihoods are slightly different due to the different shapes of the signal and combinatorial PDFs. Also, the likelihood for  the \decay{\Dz}{\Kp\Km} mode has an additional $N_{\Lambda}P_{\Lambda}$ term from the $\decay{\Lb}{\Lc\Kstar}$ background, discussed in Section \ref{sec:backgrounds:Lb2LcKst}.
+
+The signal yield $N_{\text{sig}}$ in each category is not calculated directly, but from the total signal yield for all categories in the \decay{\Dz}{\Km\pip} mode and the \CP observables.
 
 \subsection{Fitter bias in \CP fit}
 \label{sec:cpfit:fitterbias}
 
-Data was generated accoring to the model described in Section \ref{sec:massfit}, assuming yields taken from the single data fit to the favoured two- and four-body modes and \CP parameters were estimated assuming values of $r_B = 0.1$, $\delta_B = 111^o$ and $\gamma = 70^o$. The generated data was then fitted back using the same model and the fit parameters were extracted. This process was repeated 1000 times and the results are shown in Figures \ref{pulls1} and \ref{pulls2}. The quality of the fit is tested by observing the pull distribution of each fit parameter. The pull of a given parameter x is given by,
+Data was generated according to the model described in Section \ref{sec:massfit}, using the yields taken from the single data fits to the favoured two- and four-body modes and \CP parameters were estimated assuming values of $r_B = 0.1$, $\delta_B = 111^o$ and $\gamma = 70^o$. The generated data was then fitted back using the same model and the fit parameters were extracted. This process was repeated 1000 times. The quality of the fit is tested by observing the pull distribution of each fit parameter $x$, which is given by,
 
 \begin{equation*}
 P_x = \begin{cases}
@@ -305,20 +320,20 @@ P_x = \begin{cases}
 	\end{cases}
 \end{equation*}
 
-where $x_{fit}$ is the value fo the parameter returned by the fit, $x_{gen}$ is the generated value of the parameter, and $\sigma_x^+$ and $\sigma_x^-$ are the upper and lower asymmetric errors respectively. All pull distributions are consistent with a mean of zero and width of 1. Therefore, the fit is considered stable and unbiased.
+where $x_{fit}$ is the value of the parameter returned by the fit, $x_{gen}$ is the generated value of the parameter, and $\sigma_x^+$ and $\sigma_x^-$ are the upper and lower asymmetric errors respectively. The results of the pull distributions for the \CP observables are shown in Figures \ref{pulls1} and \ref{pulls2}. All pull distributions are consistent with a mean of zero and width of 1, therefore, the fit is considered stable and unbiased.
  
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
-\includegraphics[page=1,trim = 0mm 24mm 0mm 0mm,clip,width=0.8\linewidth]{figures/results/toys.pdf}
-\includegraphics[page=2,trim = 0mm 165mm 0mm 10mm,clip,width=0.8\linewidth]{figures/results/toys.pdf}
+\includegraphics[page=1,trim = 0mm 24mm 0mm 0mm,clip,width=0.85\linewidth]{figures/results/toys.pdf}
+\includegraphics[page=2,trim = 0mm 165mm 0mm 15mm,clip,width=0.85\linewidth]{figures/results/toys.pdf}
 \caption{Pulls of the physics observables in the fit. The left hand column shows the fitted parameter distribution, the middle shows the fit error distribution and the right most plots are the pull distributions fitted with a Gaussian.}
 \label{pulls1}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
-\includegraphics[page=2,trim = 0mm 24mm 0mm 113mm,clip,width=0.8\linewidth]{figures/results/toys.pdf}
-\includegraphics[page=3,trim = 0mm 165mm 0mm 10mm,clip,width=0.8\linewidth]{figures/results/toys.pdf}
+\includegraphics[page=2,trim = 0mm 24mm 0mm 113mm,clip,width=0.85\linewidth]{figures/results/toys.pdf}
+\includegraphics[page=3,trim = 0mm 165mm 0mm 15mm,clip,width=0.85\linewidth]{figures/results/toys.pdf}
 \caption{Pulls of the physics observables in the fit. The left hand column shows the fitted parameter distribution, the middle shows the fit error distribution and the right most plots are the pull distributions fitted with a Gaussian.}
 \label{pulls2}
 \end{figure}
@@ -326,7 +341,7 @@ where $x_{fit}$ is the value fo the parameter returned by the fit, $x_{gen}$ is 
 \subsection{Optimisation of BDT and \Kstar selection using toys}
 \label{sec:cpfit:optimisation}
 
-The BDT selection, \Kstar mass window and \KS helicity selection were optimised simultaneously with the aim of minimising the uncertainty on the \CP parameters. The selection was applied to data with no \Kstar selection and a loose ($>-0.8$) BDT selection. A single fit was performed to the favoured mode, as in Section \ref{sec:massfit:fit}, to give the expected signal, combinatoric and partially reconstructed yields. The signal and background efficiencies were calculated for the various selctions explored:
+The BDT selection, \Kstar mass window and \KS helicity selection were optimised simultaneously with the aim of minimising the uncertainty on the \CP parameters, \Akpi, \Akk, \Apipi, \Rkk, \Rpipi, \Rptwo, \Rmtwo, \Akpipipi, \Apipipipi, \Rpipipipi, \Rpfour and \Rmfour. The selection was applied to data with no \Kstar selection and a loose ($>-0.8$) BDT selection. A single fit was performed to the two- and four-body favoured modes, as in Section \ref{sec:massfit:fit}, to give the expected signal, combinatoric and partially reconstructed yields. The signal and background efficiencies were calculated, from simulations and data, for the various selctions explored:
 
 \begin{itemize}
 \item{\Kstar mass window: 100, 75 and 50 MeV}
@@ -334,7 +349,7 @@ The BDT selection, \Kstar mass window and \KS helicity selection were optimised 
 \item{BDT selection: -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.7, 0.8, 0.9, 0.95}
 \end{itemize}
 
-Using the inital yields and efficiencies from simulation, the estimated yields for the various selections were calculated. Pseudoexperiments were generated with the expected yields and efficiencies. For the signal yield, the favoured mode was estimated from the data fit and the yield ratios and asymmetries were inferred from physics parameters using Equations \ref{exp_Acp}, \ref{exp_Rcp} and \ref{exp_Rpm}. For this optimisation process values of $r_B = 0.1$, $\delta_B = 150^{\circ}$ and $\gamma = 70^{\circ}$ were assumed. The value for \Pgamma is taken from the central value of the current \lhcb combination and $r_B$ is assumed to be the same as for \decay{\B}{\D\kaon}. A value of $\delta_B$ is chosen to be similar to values from previous analysis, although the value is completely unknown. The optimisation was repeated for various values of $\delta_B$ and it was found that the choice of selection is not sensitive to $\delta_B$.
+Using the initial yields and efficiencies from simulation, the estimated yields for the various selections were calculated. Pseudoexperiments were generated with the expected yields and efficiencies. For the signal yield, the favoured mode was estimated from the data fit and the yield ratios and asymmetries were inferred from physics parameters using Equations \ref{exp_Acp}, \ref{exp_Rcp} and \ref{exp_Rpm}. For this optimisation process values of $r_B = 0.1$, $\delta_B = 150^{\circ}$ and $\gamma = 70^{\circ}$ were assumed. The value for \Pgamma is taken from the central value of the current \lhcb combination and $r_B$ is assumed to be the same as for \decay{\B}{\D\kaon}. A value of $\delta_B$ is chosen to be similar to values from previous analysis, although the value is completely unknown. The optimisation was repeated for various values of $\delta_B$ and it was found that the choice of selection is not sensitive to $\delta_B$.
 
 Pseudoexperiments were performed for different selections to calculate the fit uncertainty for each selection. The fit uncertainty was taken to be the mean of the uncertainty distribution. For optimising the selection for the GLW modes, the fit error was minimised for $A_{KK}$, $R_{KK}$, $A_{\pi\pi}$ and $R_{\pi\pi}$. Figure \ref{optimisation} shows an example of the optimisation studies performed. The BDT selection for the ADS modes was optimised to minimise the fit errors in $R^+$ and $R^-$. Studies were performed to investigate a tighter BDT cut for the ADS mode as illustrated in Figure \ref{adsoptimisation}. The tighter BDT cut for DD candidates was chosen as it resulted in a lower uncertainty on $R^+$ and $R^-$ due to a reduction in the background rejection from 7\% to 2\% while retaining 80\% of the signal. In cases when the figure of merits in these optimisation studies were not especially sensitive to changes in the selection, the selection giving the highest coherence was chosen. For the BDT selection the signal and background efficiencies were taken into account.
 
