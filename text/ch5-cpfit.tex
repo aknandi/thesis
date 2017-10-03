@@ -19,14 +19,14 @@ The setup of the \CP fit is outlined in Section \ref{sec:cpfit:setup}, followed 
 
 The fit to data is performed on the invariant mass of B candidates. A simultaneous fit stategy is employed to fit each of the D decay modes as well as two bins of B charge ($B^+$ and $B^-$), two bins of $K_s$ track type (LL and DD) and two bins of data type (Run 1 and Run 2), resulting in 56 bins in total.
 
-As discussed in Section \ref{sec:massfit:range} the \CP fit is performed from 5230 MeV. The components and shapes of the \CP fit are the same as those described in Section \ref{sec:massfit}. The mean and width of the signal shape are shared across the different run periods and across modes of the same number of final state particles, but the mean and width are allowed to be different for the 2 and 4-body modes. The shape and yield of the partially reconstructed background is completely fixed, with separate values for LL and DD candidates. The shape is fixed as described in Section \ref{sec:massfit:partreco}, using the yield ratios given in Table \ref{fixedyieldratios}. The total yield is fixed from the fits in Figures \ref{massfitskpi} and \ref{massfitsk3pi}, the values for the total partially reconstructed yield in each of the simultaneous fit categories is given in Appendix \ref{sec:app:partrecoyields}. The shape of the combinatoric background is shared across all modes of the same number of final state particles, but has different values for LL and DD candidates, as well as two and four-body D modes.
+As discussed in Section \ref{sec:massfit:range} the \CP fit is performed from 5230 MeV. The components and shapes of the \CP fit are the same as those described in Section \ref{sec:massfit}. The mean and width of the signal shape are shared across the different run periods and across modes of the same number of final state particles, but the mean and width are allowed to be different for the two- and four-body modes. The shape and yield of the partially reconstructed background is completely fixed, with different shape parameters for LL and DD candidates. The shape is fixed as described in Section \ref{sec:massfit:partreco}, using the yield ratios given in Table \ref{fixedyieldratios}. The total yield is fixed from the fits in Figures \ref{massfitskpi} and \ref{massfitsk3pi}, the values for the total partially reconstructed yield in each of the simultaneous fit categories is given in Appendix \ref{sec:app:partrecoyields}. The shape of the combinatoric background is shared across all modes of the same number of final state particles, but has different values for LL and DD candidates, as well as two and four-body D modes.
 
 The \CP fit parameters are the \CP observables \Akpi, \Akk, \Apipi, \Rkk, \Rpipi, \Rptwo, \Rmtwo, \Akpipipi, \Apipipipi, \Rpipipipi, \Rpfour and \Rmfour, which relate to the physics parameters of interest as shown in Equations \ref{exp_Acp} - \ref{exp_R4pi}.
 
 \subsection{Corrections to yield ratios}
 \label{sec:cpfit:efficiencies}
 
-The \CP fit measures seven \CP observables, \Rkk, \Rpipi, \Rptwo, \Rmtwo, \Rpipipipi, \Rpfour and \Rmfour, which relate to the yield ratios with respect to \decay{\Bm}{\D(\Km\pip)\Kstarm} and \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm} for two- and four-bosy observables respectively. In order to extract these \CP observables from the raw yield ratios, various efficiency corrections, taken from simulated signal samples, must be applied.
+The \CP fit measures seven observables, \Rkk, \Rpipi, \Rptwo, \Rmtwo, \Rpipipipi, \Rpfour and \Rmfour, which relate to the yield ratios with respect to \decay{\Bm}{\D(\Km\pip)\Kstarm} and \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm} for two- and four-body observables respectively. In order to extract these \CP observables from the raw yield ratios, various efficiency corrections, taken from simulated signal samples, must be applied.
 
 For the GLW modes, the fit takes the raw value of the yield ratio and applies efficiency corrections to extract \Rkk, \Rpipi and \Rpipipipi as shown in Equation \ref{effcorrectionglw2body} and \ref{effcorrectionglw4body}, where $\epsilon_{sel}$ and $\epsilon_{pid}$ are the selection and PID efficiencies respectively. The values for these selection and PID efficiency corrections are given in Tables \ref{seleff} and \ref{pideff} respectively.
 
@@ -41,7 +41,7 @@ R_{\pi\pi\pi\pi} = \frac{N(\decay{\Bm}{\D(\pip\pim\pip\pim)\Kstarm})}{N(\decay{\
 \label{effcorrectionglw4body}
 \end{equation}}
 
-As the final state in the ADS mode is almost identical to the charge favoured, the selection efficiencies that are common to both are assumed to cancel. There are only two differences between the selection for the ADS mode and the charge favoured mode; the tighter BDT selection for DD candidates and the double misID veto, which is only applied to the ADS mode. Equations \ref{effcorrectionads2body} and \ref{effcorrectionads4body} describe the effciency corrections required to extract \Rptwo, \Rmtwo, \Rpfour and \Rmfour from the raw yield ratios, where $\epsilon_{bdt}$ and $\epsilon_{veto}$ are the BDT and veto efficiencies respectively. The values for these BDT and veto efficiency corrections are given in Tables \ref{bdteff} and \ref{vetoeff} respectively.
+As the final state in the ADS modes are almost identical to the corresponding charge favoured mode, the selection efficiencies that are common to both are assumed to cancel. There are only two differences between the selection for the ADS mode and the charge favoured mode; the tighter BDT selection for DD candidates and the double misID veto, which is only applied to the ADS mode. Equations \ref{effcorrectionads2body} and \ref{effcorrectionads4body} describe the effciency corrections required to extract \Rptwo, \Rmtwo, \Rpfour and \Rmfour from the raw yield ratios, where $\epsilon_{bdt}$ and $\epsilon_{veto}$ are the BDT and veto efficiencies respectively. The values for these BDT and veto efficiency corrections are given in Tables \ref{bdteff} and \ref{vetoeff} respectively.
 
 {\footnotesize
 \begin{equation}
@@ -103,7 +103,7 @@ $\epsilon_{bdt}(\pi K\pi\pi)$ & $0.938 \pm 0.010$ & $0.838 \pm 0.009$ & $0.952 \
 \subsubsection{PID efficiencies}
 \label{sec:cpfit:efficiencies:pid}
 
-In this analysis the selection for the various D decays modes \decay{\D}{\kaon\pi, \kaon\kaon, \pi\pi, \pi\kaon} is almost identical apart for the particle identification requirements. Therefore it is very important to apply an efficient PID selection.
+In this analysis the selection for the various \D decays modes \decay{\D}{\kaon\pi, \kaon\kaon, \pi\pi, \pi\kaon} is almost identical apart for the particle identification requirements. Therefore it is very important to apply an efficient PID selection.
 
 As described in Section \ref{sec:selection:pid}, the PID requirements are $DLLK < 4$ for the pion from the \Kstarm and $DLLK > 2$ and $DLLK < -2$ for the \D daughters when applied to kaons and pions respectively. The efficiencies for the various selection are determined using the {\tt PIDCalib} package~\cite{PIDCalib}. The uncertainties in the PID efficiencies are systematic and come from:
 
@@ -297,14 +297,14 @@ The fit is performed by constructing a likelihoood function that is to be minimi
 \log\mathcal{L} = \sum_{\Bp,\Bm}\sum_{\text{LL,DD}}\mathop{\sum_{\text{Run 1,}}}_{\text{Run 2}} \left( \log\mathcal{L}_{\D\Kstar}^{\text{2-body}} + \log\mathcal{L}_{\D\Kstar}^{\text{4-body}} \right)
 \end{equation}
 
-The expression $\log\mathcal{L}_{\D\Kstar}^{\text{2-body}}$ consists of the sum of the log likelihoods for each of the two-body modes, and equivalently for $\log\mathcal{L}_{\D\Kstar}^{\text{4-body}}$. The likelihood for each mode is constructed from the signal, combinatorial and partially reconstructed PDFs, namely $P_{\text{sig}}$, $P_{\text{comb}}$ and $P_{\text{\Dstar\Kstar}}$, respectively, with coresponding yields $N_{\text{sig}}$, $N_{\text{comb}}$ and $N_{\text{\Dstar\Kstar}}$. This likelihood is given by,
+The expression $\log\mathcal{L}_{\D\Kstar}^{\text{2-body}}$ consists of the sum of the log likelihoods for each of the two-body modes, and equivalently for $\log\mathcal{L}_{\D\Kstar}^{\text{4-body}}$. The likelihood for each mode is constructed from the signal, combinatorial and partially reconstructed PDFs, namely $P_{\text{sig}}$, $P_{\text{comb}}$ and $P_{\text{\Dstar\Kstar}}$, respectively, with coresponding yields $N_{\text{sig}}$, $N_{\text{comb}}$ and $N_{\text{\Dstar\Kstar}}$. The two- and four-body log-likelihoods are slightly different due to the different shapes of the signal and combinatorial PDFs. The log-likelihood is given by,
 
 \begin{equation}
 \log\mathcal{L}_{\D\Kstar}^{\text{(2/4)-body}} = \mathop{\sum_{\text{(2/4)-body}}}_{\text{modes}} \log\left(N_{\text{sig}}P_{\text{sig}}^{\text{(2/4)-body}} + N_{\text{comb}}P_{\text{comb}}^{\text{(2/4)-body}} + N_{\text{\Dstar\Kstar}}P_{\text{\Dstar\Kstar}}\right) \text{ .}
 \label{likelihood}
 \end{equation}
 
-The two- and four-body log-likelihoods are slightly different due to the different shapes of the signal and combinatorial PDFs. Also, the likelihood for  the \decay{\Dz}{\Kp\Km} mode has an additional $N_{\Lambda}P_{\Lambda}$ term from the $\decay{\Lb}{\Lc\Kstar}$ background, discussed in Section \ref{sec:backgrounds:Lb2LcKst}.
+The likelihood for  the \decay{\Dz}{\Kp\Km} mode has an additional $N_{\Lambda}P_{\Lambda}$ term from the $\decay{\Lb}{\Lc\Kstar}$ background, discussed in Section \ref{sec:backgrounds:Lb2LcKst}.
 
 The signal yield $N_{\text{sig}}$ in each category is not calculated directly, but from the total signal yield for all categories in the \decay{\Dz}{\Km\pip} mode and the \CP observables.
 

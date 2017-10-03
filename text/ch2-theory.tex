@@ -22,133 +22,148 @@ There is no one who loves pain itself, who seeks after it and wants to have it, 
 
 \subsection{The ADS method}
 
-\section{Previous \Pgamma measurements with \decay{\Bpm}{\D\Kstarpm} decays}
+\subsection{Physical observables}
 
-\section{Analysis overview}
+Twelve quantities, collectively referred to as \CP observables, are measured in this analysis:
 
-\section{Introduction from ANA note}
-\label{sec:Introduction}
-
-The CKM angle \Pgamma, defined as $\Pgamma \equiv arg\left(-\frac{\Vud{\Vub}^*}{\Vcd{\Vcb}^*}\right)$, is the least well known of the CKM angles. The latest \lhcb combination from direct measurements with charged and neutral \B decays and a variety for \D final states is $\left(70.9^{+7.1}_{-8.5}\right)^{\circ}$~\cite{LHCB-PAPER-2016-032-001}. Global fits to the CKM traingle from CKMfitter~\cite{CKMfitter2015} obtain a \Pgamma measurement of $(67.0^{+0.9}_{-2.0})^{\circ}$, where these uncertainties are driven by LQCD calculations. Therefore a degree level precison on a direct measurement of \Pgamma would test the consistency of these two measurements, which is an excellent test of the Standard Model. This can be achieved through a combination of many measurements of various \B and \D decays.
-
-Direct measurements of \Pgamma can be made by exploiting the interference between the \decay{\bquark}{\cquark\uquarkbar\squark} and \decay{\bquark}{\uquark\cquarkbar\squark} transitions. These transitions are present in $B \to DK^{(*)}$ decays. This analysis measures \CP violation in \decay{\Bpm}{\D\Kstarpm} decays, where \D is either a \Dz or \Dzb, with D decays to 2 and 4 body final states. The interference is obtained by reconstructing the \Dz and \Dzb meson in the same final state, which leads to a measurement of \Pgamma.
-
-Two analysis methods were used for 2 body \D decays. Decays of the \D to \CP (even) eigenstates \Kp\Km and \pip\pim using the GLW method~\cite{GL,GW} and decays to quasi-flavour eigenstates \Kpm\pimp (i.e the Cabibbo allowed decay \decay{\Dz}{\Km\pip} and the doubly Cabibbo supressed decay \decay{\Dz}{\pim\Kp}) using the ADS method~\cite{ADS,ADS-2001}. An ADS/GLW analysis has been published for \decay{\Bpm}{D\Kpm} and \decay{\Bz}{\D\Kstarz} at \lhcb~\cite{LHCb-PAPER-2016-003,LHCb-PAPER-2014-028}. The four body final states \decay{\Dz}{\Km\pip\pim\pip}, \decay{\Dz}{\pip\pim\pip\pim} \decay{\Dz}{\Kp\pim\pip\pim} are also investigated, which are included in the \decay{\Bpm}{D\Kpm} ADS/GLW analysis~\cite{LHCb-PAPER-2016-003}. These \Dz decays contain similar physics to the 2-body modes, so the GLW and ADS methods can be extended to these final states.
-
-The \decay{\Bpm}{\D\Kstarpm} channel has previously been investigated at BaBar using a variety of D modes: non-\CP states $\Km\pip$, $\pim\Kp$, \CP even eigenstates $\Kp\Km$, $\pip\pim$ and \CP odd eigenstates $\KS\piz$, $\KS\phi$ and $\KS\omega$~\cite{BaBarDKstar}. The yield obtained in the favoured \decay{\Dz}{\Km\pip} mode in this analysis was $231 \pm 17$. In this BaBar analysis the non-resonant \decay{\B}{\D\KS\pi} contribution is considered negligible and therefore any effects of these non-resonant decays are ignored. Using yields in the \decay{\Bpm}{\D\Kpm} analysis~\cite{LHCb-PAPER-2016-003}, and estimated relative reconstruction/selection efficiencies and branching fraction it is expected that the Run 1 yields will be larger than those observed at BaBar. Therefore the analysis was motivated at this time. With the subsequent addition of a significant portion of Run 2 data this conclusion only holds stronger.
-
-For the ADS decay, both favoured and supressed combinations of \Bm and \Dz decays are considered. The favoured \Bm decay is \decay{\Bm}{\Dz\Kstarm} and the suppressed is \decay{\Bm}{\Dzb\Kstarm}. Equivalently, the favoured \Dz decay is \decay{\Dz}{\Km\pip} and the supressed is \decay{\Dz}{\pim\Kp}. Therefore, the favoured combination has the \B meson and \kaon from the \D with the same sign: \decay{\Bm}{\D(\Km\pip)\Kstarm(\KS\pim)}, which is shortened to \decay{\Bm}{\D(\Km\pip)\Kstarm} in this note. The \D refers to a \Dz or \Dzb so this favoured combination also includes the suppressed \B decay followed by the suppressed \D decay. The supressed combination has the \B meson and \kaon from the \D with the opposite signs: \decay{\Bm}{\D(\Kp\pim)\Kstarm(\KS\pim)}, which is shortened to \decay{\Bm}{\D(\Kp\pim)\Kstarm} in this note. This is a combination of the suppressed \D decay followed by favoured \B decay and the favoured \B decay followed by the supressed \D decay. In this note the supressed ADS mode will be referred to as the ADS mode. These ideas can be extended to the 4 body modes with \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm(\KS\pim)} and \decay{\Bm}{\D(\Kp\pim\pip\pim)\Kstarm(\KS\pim)} being analagous to \decay{\Bm}{\D(\Km\pip)\Kstarm(\KS\pim)} and \decay{\Bm}{\D(\Kp\pim)\Kstarm(\KS\pim)}.
-
-Several physics observables are extracted in this analysis that relate to the physics parameters to be measured, namely \Pgamma, $r_B$, $\delta_B$ and $\kappa$. The parameter $r_B$ is the magnitude of the ratio between the supressed and favoured amplitudes, which governs the size of the interference between the two amplitudes and $\delta_B$ is the strong phase difference between these amplitudes. The coherence factor $\kappa$ is discussed in Section \ref{sec:interpretation:coherence}. The seven physics observables that are measured in this analysis are:
-
-\begin{enumerate}
-\item{The \CP asymmetry for the favoured mode
-\begin{equation}
-A_{\kaon\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\Kp\pim)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pim)\Kstarp}\right)}
-\label{eqn:Akpi}
-\end{equation}
-}
-\item{The \CP asymmetry for the \decay{\D}{\Kp\Km} mode
-\begin{equation}
-A_{\kaon\kaon} = \frac{\Gamma\left(\decay{\Bm}{\D(\kaon\kaon)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\kaon\kaon)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\kaon\kaon)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\kaon\kaon)\Kstarp}\right)} = A_{CP+}
-\label{eqn:Akk}
-\end{equation}
-}
-\item{The \CP asymmetry for the \decay{\D}{\pip\pim} mode
-\begin{equation}
-A_{\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\pi\pi)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\pi\pi)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\pi\pi)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\pi\pi)\Kstarp}\right)} = A_{CP+}
-\label{eqn:Apipi}
-\end{equation}
-}
-\item{The ratio of the \decay{\D}{\Kp\Km} over the favoured mode
-\begin{equation}
-R_{\kaon\kaon} = \frac{\Gamma\left(\decay{\Bm}{\D(\kaon\kaon)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\kaon\kaon)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pip)\Kstarp}\right)} \times \frac{|BF(D^0 \to K^-\pi^+)|}{|BF(D^0 \to K^-K^+)|} = R_{CP+}
-\label{eqn:Rkk}
-\end{equation}
-}
-\item{The ratio of the \decay{\D}{\pip\pim} over the favoured mode
-\begin{equation}
-R_{\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\pi\pi)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\pi\pi)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pim)\Kstarp}\right)} \times \frac{|BF(D^0 \to K^-\pi^+)|}{|BF(D^0 \to \pi^-\pi^+)|} = R_{CP+}
-\label{eqn:Rpipi}
-\end{equation}
-}
-\item{The ratio of the ADS mode over the favoured mode for \Bp decays
-\begin{equation}
-R^+_{K\pi} = \frac{\Gamma\left(\decay{\Bp}{\D(\Km\pip)\Kstarp}\right)}{\Gamma\left(\decay{\Bp}{\D(\Kp\pim)\Kstarp}\right)}
-\label{eqn:Rplus}
-\end{equation}
-}
-\item{The ratio of the ADS mode over the favoured mode for \Bm decays
-\begin{equation}
-R^-_{K\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Kp\pim)\Kstarm}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right)}
-\label{eqn:Rminus}
-\end{equation}
-}
-\item{The \CP asymmetry for the favoured \decay{\Dz}{\Km\pip\pim\pip} mode
-\begin{equation}
-A_{\kaon\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Km\pip\pi\pi)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\Kp\pim\pi\pi)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip\pi\pi)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pim\pi\pi)\Kstarp}\right)}
-\label{eqn:Akpipipi}
-\end{equation}
-}
-\item{The \CP asymmetry for the \decay{\D}{\pip\pim\pip\pim} mode
-\begin{equation}
-A_{\pi\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\pi\pi\pi\pi)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\pi\pi\pi\pi)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\pi\pi\pi\pi)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\pi\pi\pi\pi)\Kstarp}\right)}
-\label{eqn:Apipipipi}
-\end{equation}
-}
-\item{The ratio of the \decay{\D}{\pip\pim\pip\pim} over the favoured mode
+\begin{itemize}
+\item{The \CP asymmetry for the favoured decay mode
 {\footnotesize
 \begin{equation}
-R_{\pi\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\pi\pi\pi\pi)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\pi\pi\pi\pi)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip\pi\pi)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pim\pi\pi)\Kstarp}\right)} \times \frac{|BF(D^0 \to \Km\pip\pi\pi)|}{|BF(D^0 \to \pim\pip\pi\pi)|}
+A_{\kaon\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\Kp\pim)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pim)\Kstarp}\right)} \text{ .}
+\label{eqn:Akpi}
+\end{equation}}%
+\noindent%
+This asymmetry should be essentially zero due to the very small interference expected in this configuration of \B- and \D-meson decays.
+}
+\item{The \CP asymmetry for the \decay{\D}{\Kp\Km} decay mode
+{\footnotesize
+\begin{equation}
+A_{\kaon\kaon} = \frac{\Gamma\left(\decay{\Bm}{\D(\Kp\Km)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\Kp\Km)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Kp\Km)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\Km)\Kstarp}\right)} \text{ . }
+\label{eqn:Akk}
+\end{equation}
+}}
+\item{The \CP asymmetry for the \decay{\D}{\pip\pim} decay mode
+{\footnotesize
+\begin{equation}
+A_{\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\pip\pim)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\pip\pim)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\pip\pim)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\pip\pim)\Kstarp}\right)} \text{ . }
+\label{eqn:Apipi}
+\end{equation}}
+}
+Assuming negligible direct \CP violation in \D-meson decays, the observables $A_{\kaon\kaon}$ and $A_{\pi\pi}$ should be equal and are often labelled together as $A_{CP+}$.
+\item{The ratio of the rate for the \decay{\D}{\Kp\Km} decay mode to that of the favoured decay mode, scaled by the branching fractions
+{\footnotesize
+\begin{equation}
+R_{\kaon\kaon} = \frac{\Gamma\left(\decay{\Bm}{\D(\Kp\Km)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\Km)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pim)\Kstarp}\right)} \cdot \frac{\BR(D^0 \to K^-\pi^+)}{\BR(D^0 \to K^+K^-)} \text{ . }
+\label{eqn:Rkk}
+\end{equation}
+}}
+\item{The ratio of the rate for the \decay{\D}{\pip\pim} decay mode to that of the favoured decay mode, scaled by the branching fractions
+{\footnotesize
+\begin{equation}
+R_{\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\pip\pim)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\pip\pim)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pim)\Kstarp}\right)} \cdot \frac{\BR(D^0 \to K^-\pi^+)}{\BR(D^0 \to \pi^+\pi^-)} \text{ . }
+\label{eqn:Rpipi}
+\end{equation}}
+}
+Assuming negligible direct \CP violation in \D-meson decays, the observables $R_{\kaon\kaon}$ and $R_{\pi\pi}$ should be equal and are often labelled together as $R_{CP+}$.
+\item{The ratio of the rate for the ADS decay mode to that of the favoured decay mode for \Bp decays
+{\footnotesize
+\begin{equation}
+R^+_{K\pi} = \frac{\Gamma\left(\decay{\Bp}{\D(\Km\pip)\Kstarp}\right)}{\Gamma\left(\decay{\Bp}{\D(\Kp\pim)\Kstarp}\right)} \text{ . }
+\label{eqn:Rplus}
+\end{equation}
+}}
+\item{The ratio of the rate for the ADS decay mode to that of the favoured decay mode for \Bm decays
+{\footnotesize
+\begin{equation}
+R^-_{K\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Kp\pim)\Kstarm}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip)\Kstarm}\right)} \text{ . }
+\label{eqn:Rminus}
+\end{equation}
+}}
+\item{The \CP asymmetry for the favoured \decay{\Dz}{\Km\pip\pim\pip} decay mode
+{\footnotesize
+\begin{equation}
+A_{\kaon\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\Kp\pim\pip\pim)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pim\pip\pim)\Kstarp}\right)} \text{ . }
+\label{eqn:Akpipipi}
+\end{equation}}%
+\noindent%
+This asymmetry should be essentially zero due to the very small interference expected in this configuration of \B- and \D-meson decays.
+}
+\item{The \CP asymmetry for the \decay{\D}{\pip\pim\pip\pim} decay mode
+{\footnotesize
+\begin{equation}
+A_{\pi\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\pip\pim\pip\pim)\Kstarm}\right) - \Gamma\left(\decay{\Bp}{\D(\pip\pim\pip\pim)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\pip\pim\pip\pim)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\pip\pim\pip\pim)\Kstarp}\right)} \text{ . }
+\label{eqn:Apipipipi}
+\end{equation}
+}}
+\item{The ratio of the rate for the \decay{\D}{\pip\pim\pip\pim} decay mode to that of the favoured decay mode, scaled by the branching fractions
+{\footnotesize
+\begin{equation}
+R_{\pi\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\pip\pim\pip\pim)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\pip\pim\pip\pim)\Kstarp}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm}\right) + \Gamma\left(\decay{\Bp}{\D(\Kp\pim\pip\pim)\Kstarp}\right)} \cdot \frac{\mathcal{B}(D^0 \to \Km\pip\pim\pip)}{\mathcal{B}(D^0 \to \pip\pim\pip\pim)} \text{ . }
 \label{eqn:Rpipipipi}
 \end{equation}}
 }
-\item{The ratio of the 4 body ADS mode over the 4 body favoured mode for \Bp decays
+\item{The ratio of the rate for the four-body ADS decay mode to that of the four-body favoured decay mode for \Bp decays
+{\footnotesize
 \begin{equation}
-R^+_{K\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bp}{\D(\Km\pip\pim\pip)\Kstarp}\right)}{\Gamma\left(\decay{\Bp}{\D(\Kp\pim\pip\pim)\Kstarp}\right)}
+R^+_{K\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bp}{\D(\Km\pip\pim\pip)\Kstarp}\right)}{\Gamma\left(\decay{\Bp}{\D(\Kp\pim\pip\pim)\Kstarp}\right)} \text{ . }
 \label{eqn:Rplus4body}
 \end{equation}
-}
-\item{The ratio of the 4 body ADS mode over the 4 body favoured mode for \Bm decays
+}}
+\item{The ratio of the rate of the four-body ADS decay mode to that of the four-body favoured decay mode for \Bm decays
+{\footnotesize
 \begin{equation}
-R^-_{K\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Kp\pim\pip\pim)\Kstarm}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm}\right)}
+R^-_{K\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Kp\pim\pip\pim)\Kstarm}\right)}{\Gamma\left(\decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm}\right)} \text{ . }
 \label{eqn:Rminus4body}
 \end{equation}
-}
-\end{enumerate}
+}}
+\end{itemize}
 
-The observables $R^+_{K\pi}$ and $R^-_{K\pi}$ are being used for the ADS mode as opposed to the more usual $R_{ADS}$ and $A_{ADS}$. This was preferred due to their relatively low correlation. The same applies to $R^+_{K\pi\pi\pi}$ and $R^-_{K\pi\pi\pi}$ for the 4 body mode. Equations \ref{exp_Acp} - \ref{exp_Rpm4body} descibe the relationship between the physics observables measured in this analysis and the physics parameters \Pgamma, $r_B$, $\delta_B$ and $\kappa$.
+\noindent
+In contrast to the GLW decay modes, for the ADS decay mode the ratios are measured separately for the positive and negative charges. These observables have statistical uncertainties that are more Gaussian than asymmetry variables for the very low yields that are expected. 
+
+Several \CP observables measured in this analysis can be related to the physics parameters to be determined, namely \Pgamma, $r_B$, $\delta_B$ and $\kappa$. The parameter $r_B$ is the magnitude of the ratio between the suppressed and favoured amplitudes of the \B-meson decay and $\delta_B$ is the strong-phase difference between these amplitudes. The expectation value is $r_B$ $\sim 0.1$, similar to that in the \decay{\Bm}{\D\Km} decay due to the similarity of the hadronic interactions. Both $r_B$ and $\delta_B$ are averaged over the region of \D\KS\pim phase space corresponding to the \Kstarm-meson selection window. The coherence factor $\kappa$ accounts for the contribution of \CP violation from $\Bm \to D \KS \pim$ decays that are not due to an intermediate $K^*(892)^{-}$ resonance~\cite{Gronau2003198}, where $\kappa = 1$ denotes pure $K^*(892)^{-}$. Assuming a negligible effect from charm mixing~\cite{charmmixing}, the relationships between the \CP observables and physics parameters are given in the following equations,
 
 \begin{equation}
-A_{CP+} = \frac{2 \kappa r_B\sin\delta_B\sin\gamma}{1 + r_B^2 + 2 \kappa r_B\cos\delta_B\cos\gamma}
+A_{\CP+} = \frac{2 \kappa r_B\sin\delta_B\sin\gamma}{1 + r_B^2 + 2 \kappa r_B\cos\delta_B\cos\gamma}
 \label{exp_Acp}
 \end{equation}
 
 \begin{equation}
-R_{CP+} = 1 + r_B^2 + 2 \kappa r_B\cos\delta_B\cos\gamma
+R_{\CP+} = 1 + r_B^2 + 2 \kappa r_B\cos\delta_B\cos\gamma
 \label{exp_Rcp}
 \end{equation}
 
 \begin{equation}
-R^{\pm}_{K\pi} = \frac{r_B^2 + r_D^2 + 2\kappa r_B r_D \cos(\delta_B + \delta_D \pm \gamma)}{1 + r_B^2r_D^2 + 2\kappa r_B r_D \cos(\delta_B - \delta_D \pm \gamma)}
+R^{\pm}_{K\pi} = \frac{r_B^2 + \left(r_D^{K\pi}\right)^2 + 2\kappa r_B r_D^{K\pi} \cos(\delta_B + \delta_D^{K\pi} \pm \gamma)}{1 + r_B^2\left(r_D^{K\pi}\right)^2 + 2\kappa r_B r_D^{K\pi} \cos(\delta_B - \delta_D^{K\pi} \pm \gamma)}
 \label{exp_Rpm}
 \end{equation}
 
 \begin{equation}
-A_{\pi\pi\pi\pi} = \frac{2 \kappa\kappa_{4\pi} r_B\sin\delta_B\sin\gamma}{1 + r_B^2 + 2 \kappa\kappa_{4\pi} r_B\cos\delta_B\cos\gamma}
+A_{\pi\pi\pi\pi} = \frac{2 \kappa\left(2F_{4\pi} - 1\right) r_B\sin\delta_B\sin\gamma}{1 + r_B^2 + 2 \kappa\kappa_{4\pi} r_B\cos\delta_B\cos\gamma}
 \label{exp_A4pi}
 \end{equation}
 
 \begin{equation}
-R_{\pi\pi\pi\pi} = 1 + r_B^2 + 2 \kappa\kappa_{4\pi} r_B\cos\delta_B\cos\gamma
+R_{\pi\pi\pi\pi} = 1 + r_B^2 + 2 \kappa\left(2F_{4\pi} - 1\right) r_B\cos\delta_B\cos\gamma
 \label{exp_R4pi}
 \end{equation}
 
 \begin{equation}
-R^{\pm}_{K\pi\pi\pi} = \frac{r_B^2 + \left(r_D^{K3\pi}\right)^2 + 2\kappa r_B \kappa_{K3\pi} r_D^{K3\pi} \cos(\delta_B + \delta_D^{K3\pi} \pm \gamma)}{1 + \left(r_Br_D^{K3\pi}\right)^2 + 2\kappa r_B \kappa_{K3\pi} r_D^{K3\pi} \cos(\delta_B - \delta_D^{K3\pi} \pm \gamma)}
+R^{\pm}_{K\pi\pi\pi} = \frac{r_B^2 + \left(r_D^{K3\pi}\right)^2 + 2\kappa r_B \kappa_{K3\pi} r_D^{K3\pi} \cos(\delta_B + \delta_D^{K3\pi} \pm \gamma)}{1 + \left(r_Br_D^{K3\pi}\right)^2 + 2\kappa r_B \kappa_{K3\pi} r_D^{K3\pi} \cos(\delta_B - \delta_D^{K3\pi} \pm \gamma)} \text{ .}
 \label{exp_Rpm4body}
 \end{equation}
+These relationships depend on several parameters describing the \D-meson decay, which are taken from other existing measurements. The parameters $r_D^{K\pi}$ and $\delta_D^{K\pi}$ are the magnitude of the amplitude ratio and the strong phase difference between the suppressed and favoured amplitudes of the \D-meson decay, namely \decay{\Dz}{\Kp\pim} and \decay{\Dz}{\Km\pip} respectively. Similarly, the parameters $r_D^{K3\pi}$ and $\delta_D^{K3\pi}$ are the equivalent quantities for the decays \decay{\Dz}{\Kp\pim\pip\pim} and \decay{\Dz}{\Km\pip\pim\pip}, averaged over phase space. Two-body \decay{\D}{\Kmp\pipm} decays are characterised by a single strong phase, however for multibody \decay{\D}{\Kmp\pipm\pimp\pipm} decays the strong phase varies over the phase space. By averaging the strong phase variation the interference effects are diluted, which is accounted for by the parameter $\kappa_{K3\pi}$. The parameter $F_{4\pi} \sim 0.75$~\cite{charm4pi} accounts for the fact that \decay{\D}{\pip\pim\pip\pim}, though predominantly CP even, is not a pure CP-eigenstate.
 
-%The selection for the ADS mode has been performed blinded, however it has been noted that the data has been looked at for a masters thesis at Annecy. In order to reduce further risk of bias the ADS mode is currently blinded: the extracted signal yields of candidates for \decay{\Bm}{\D(\Kp\pim)\Kstarm} and \decay{\Bp}{\D(\Km\pip)\Kstarp} are hidden during the first phase of this analysis.
 
-In Section \ref{sec:selection} of the note the methods for selecting \decay{\Bpm}{\D\Kstarpm} candidates are detailed, the various MC and PID efficienies are presented in Section \ref{sec:mc} as well as comparisons between data and MC, Section \ref{sec:massfit} details the mass parameterisation of the $K\pi$ favoured mode including discussion of the partially reconstructed backgrounds, and Section \ref{sec:backgrounds} goes on to discuss other backgrounds considered in the analysis, but not included in the mass fit. Finally Sections \ref{sec:cpfit}, \ref{sec:systematics} and \ref{sec:interpretation} contain the details and results of the \CP fit, discussion of systematic uncertainties and interpretation of results.
+
+\section{Previous \Pgamma measurements with \decay{\Bpm}{\D\Kstarpm} decays}
+
+A key characteristic of the Standard Model is that \CP violation originates from a single phase in the CKM quark-mixing matrix~\cite{Cabibbo,KM}. In the Standard Model the CKM matrix is unitary, leading to the condition, $\Vud\Vubs + \Vcd\Vcbs + \Vtd\Vtbs = 0$. This relation is represented as a triangle in the complex plane, with angles $\alpha$, $\beta$ and \Pgamma, and an area proportional to the amount of \CP violation in the Standard Model~\cite{CKMtriangle}. Overconstraining this unitarity triangle can lead to signs of physics beyond the Standard Model. The CKM angle $\Pgamma \equiv \arg\left(-\frac{\Vud{\Vub}^*}{\Vcd{\Vcb}^*}\right)$ is the least well-known angle of the CKM unitarity triangle. The latest \lhcb combination from direct measurements with charged and neutral \B-meson decays to a variety of \D-meson final states is $\Pgamma = \left(72.2^{+6.8}_{-7.3}\right)^{\circ}$~\cite{LHCB-PAPER-2016-032}. Global fits to the CKM triangle from CKMfitter~\cite{CKMfitter} obtain a \Pgamma measurement of $(66.9^{+0.9}_{-3.4})^{\circ}$, where this determination of \Pgamma excludes all direct measurements. The uncertainties on the indirect measurement are dominated by lattice QCD calculations and are expected to decrease as lattice calculations become more accurate. Therefore, precision at the level of $1^\circ$ on a direct measurement of \Pgamma would check the consistency of these two measurements, which is an excellent test of the Standard Model. This can be achieved through a combination of measurements of various \B-meson decays that are sensitive to \Pgamma.
+
+Direct measurements of \Pgamma can be made by exploiting the interference between the \decay{\bquark}{\cquark\uquarkbar\squark} and \decay{\bquark}{\uquark\cquarkbar\squark} transitions. These transitions are present in $\B \to \D^{(*)}\kaon^{(*)}$ decays. This analysis measures \CP violation in $\B^\pm \to \D \Kstar(892)^\pm$ decays, where \D denotes a superposition of \Dz and \Dzb meson states. The effect of the interference is observed by reconstructing the \D meson in a final state accessible to both \Dz and \Dzb meson states, which gives sensitivity to the weak phase \Pgamma. For this analysis, only \D mesons decaying to two or four charged kaons and/or pions are considered. The branching fraction of $\B^- \to \D \Kstar(892)^-$ is of a similar magnitude to \decay{\Bm}{\D\Km},\footnote{The inclusion of charge-conjugate processes is implied, except when discussing ratios or asymmetries between \Bp and \Bm decays.} which has been extensively analysed at \lhcb~\cite{LHCB-PAPER-2016-003, LHCB-PAPER-2014-041, LHCB-PAPER-2015-014}. However, the reconstruction efficiencies associated with the \Kstarm-meson decay, detected through the \KS\pim final state, are expected to be lower due to the presence of a long-lived neutral particle. %The \Kstarm-meson decay to \Km\piz is not considered, as this would have an even lower reconstruction efficiency
+
+Two main classes of \D-meson decays are used. The first employs \D-meson decays into the \CP eigenstates \Kp\Km and \pip\pim; these are referred to here as the ``GLW'' decay modes~\cite{GL,GW}. The second class of decay modes involves \D-meson decays to \Kmp\pipm. One of these is the favoured combination, which is used as a control mode for many aspects of the analysis. In the favoured decay, the pion from the \D meson and the pion from the \Kstarm meson have opposite charge, while in the suppressed decay (referred to here as the ``ADS'' ~\cite{ADS,ADS-2001} decay mode) the pion from the \D meson and pion from the \Kstarm meson have the same charge. The ADS decay mode is a combination of a CKM-favoured \B-meson decay, \decay{\Bm}{\Dz\Kstarm}, followed by a doubly Cabibbo-suppressed \D-meson decay, \decay{\Dz}{\Kp\pim}, and a CKM- and colour-suppressed \B-meson decay, \decay{\Bm}{\Dzb\Kstarm}, followed by a Cabibbo-favoured \D-meson decay, \decay{\Dzb}{\Kp\pim}. Both paths to the same final state have amplitudes of similar size, and interference effects are therefore magnified in comparison to the GLW decay modes, where the decay path via the \Dz meson dominates. Studies of these \D-meson decay modes have been published for \decay{\Bm}{D\Km} and \decay{\Bz}{\D\Kstarz} decays by the \lhcb collaboration~\cite{LHCB-PAPER-2016-003, LHCB-PAPER-2014-028}. The four-body final states \decay{\D}{\Kmp\pipm\pimp\pipm} and \decay{\D}{\pip\pim\pip\pim}, which are included in Ref.~\cite{LHCB-PAPER-2016-003}, are also investigated in this paper. This is the first time four-body \D-meson decay modes have been studied using \decay{\Bm}{\D\Kstarm} decays. The GLW and ADS methods can be extended to these inclusive four-body final states, provided external information is available on the overall behaviour of the intermediate resonances, averaged over phase space~\cite{charminfo,charm4pi}. The \decay{\Bm}{\D\Kstarm} channel has previously been investigated by the BaBar collaboration using a variety of \D-meson  decay modes: \Km\pip, which is not a \CP eigenstate, \CP-even eigenstates \Kp\Km, \pip\pim, and \CP-odd eigenstates \KS\piz, $\KS\phi$ and $\KS\omega$~\cite{BaBarDKstar}. 
+Also, both the BaBar and Belle collaborations have performed studies on \decay{\Bm}{\D\Kstarm} with \decay{\D}{\KS\pip\pim}~\cite{BaBarGGSZ,BelleGGSZ}.
+
+\section{Analysis overview}
