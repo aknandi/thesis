@@ -22,7 +22,40 @@ In this section, the reconstruction and selection for the signal mode, \btodkst,
 
 In \lhcb\ \KS mesons can be reconstructed in two ways: the \velo using long tracks (LL), giving a better mass resolution, or using downstream tracks (DD), with the first hits being collected in the TT. As the \KS reconstruction types have differing resolutions and selection efficiencies, LL and DD candidates are treated as separated datasets throughout the selection and a slightly different selection is applied to each. {\color{red}probably cover this in the detector chapter}
 
-{\color{red}List some stripping requirements}
+$B^{\pm} \to DK^{*\pm}$ candidates were selected using stripping lines in the {\tt BHADRON} stripping stream, {\tt B2D0KsPiLLD2HHBeauty2CharmLine} and {\tt B2D0KsPiDDD2HHBeauty2CharmLine}. The stripping requirements are summarized in Table \ref{strippingrequirements}. These stripping lines also have the requirement that one of the following Hlt2 trigger lines must be fired: Hlt2Topo.*DecisionTIS, Hlt2Topo.*DecisionTOS, Hlt2IncPhi.*DecisionTIS or Hlt2IncPhi.*DecisionTOS.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\hline
+Particle & Variable & Cut value \\
+\hline
+Charged track & $p_T$ & $>$ 100 \mevc \\
+& $p$ & $>$ 1000 \mevc \\
+& Min IP $\chi^2$ & $>$ 4 \\
+\hline
+\KS & $p_T$ & $>$ 250 \mevc \\
+& Vertex $\chi^2$/ndof & $<$ 25 \\
+& \textbar M(\KS) - 497.6 \mevcc \textbar & $<$ 35 \mevcc for LL, 64 \mevcc for DD \\
+& Measured mass (MM) & $\in$ [467,527] \mevcc \\
+\hline
+\KS daughters & $p$ & $>$ 2 \gevc \\
+& Min IP $\chi2$ PV & $>$ 9 for LL, 4 for DD \\ 
+\hline
+Bachelor pion & Track $\chi^2$/ndof & $<$ 2.5 ($<$ 4 in S26) \\
+& $p_T$ & $>$ 250 \mevc \\
+& $p$ & $>$ 2500 \mevc \\
+\hline
+\Bpm & Vertex $\chi^2$/ndof & $<$ 10 \\
+& Min IP $\chi^2$ & $<$ 25 \\
+& $\tau$ & $>$ 0.2 ps \\
+& cos($\theta_{dira}$) & $>$ 0.999 \\
+& M(\Dz\KS\pion) & $\in$ [4750,5800] \mevcc \\
+\hline
+\end{tabular}
+\caption{Summary of the stripping selection requirements for \decay{\Bpm}{\D\Kstarpm} candidates}
+\label{strippingrequirements}
+\end{table}
 
 The {\tt DecayTreeFitter} (DTF) framework is used in this analysis to refit the entire decay chain of each \B candidate passing the stripping requirements, with one or more constraints imposed. During the refit, the best fit value of the four-momenta for each particle is found under the given constraints. The labels given by {\tt D0const} and {\tt KS0const} correspond to constraining the \D mass and \KS mass to their known values. The label {\tt PVconst} is used to indicate that the \B momentum vector direfction is constrained to be parallel to the vector joining the primary vertex (PV) to the \B decay vertex. The refitted \B mass used in this analysis is obtained after the refit with the {\tt D0const}, {\tt KS0const} and {\tt PVconst} constraints applied, which improved the \B mass resolution.
 
@@ -207,6 +240,16 @@ For the four-body modes the same optimisation point was chosen 0.6 for BDT\_LL a
 \subsection{Other cuts}
 
 Some other selection requirements are implemented to isolate the signal candidates and tackle certain backgrounds.
+
+Figure \ref{helicitycut} shows that the MC distribution of the cosine of Ks helicity angle is asymmetric. Physically the Ks helicity angle is expected to follow a symmetric $cos^2\theta$ distribution, however the observed asymmetry in this variable, manifest in both data and MC, was found to be due to the momentum and transverse momentum cuts placed on the bachelor pion in the stripping line. Figure \ref{helictyasymmetry} illustrates this point.
+
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{figures/helicityAngleAsymmetry.pdf}
+\put(-360,150) {(a)}
+\put(-150,150) {(b)}
+\caption{\KS helicity angle MC distribution at generator level with (a) no cuts applied, and (b) bachelor $p > 2500$ MeV and bachelor $p_T > 250$ MeV, as in the stripping line}
+\label{helictyasymmetry}
+\end{figure}
 
 \begin{itemize}
 \item The reconstructed \Dz mass must lie within 25 \mev of the known \Dz mass
