@@ -1,0 +1,79 @@
+\begin{figure}[!h]
+\centering
+\resizebox{0.48\linewidth}{!}{
+	\begin{tikzpicture}[scale=0.98]
+        % MAP OUT VERTICES (I have 8 of them)
+        \coordinate (a) at (0,2); %b quark start
+        \coordinate (b) at (0,1); %ubar quark start
+        \coordinate (c) at (5,1); %ubar quark end
+        \coordinate (d) at (5,2); %c quark end
+        \coordinate (e) at (2,2); %start the W+
+        \coordinate (f) at (5,2.67); %s quark
+        \coordinate (g) at (5,3.33); %ubar quark
+        \coordinate (h) at (4.0,3); %W end
+        % DRAW LINES
+        \draw[antiparticle] (b)  -- (c); %ubar quark
+        \draw[particle] (a)  -- (e); %bbar quark
+        \draw[particle] (e)  -- (d); %ubar quark 
+        \draw[photon] (e) -- (h); %W+
+        \draw[antiparticle] (h)  to (g); %W to ubar quark
+        \draw[particle] (h)  to (f); %W to s quark 
+        %DRAW LABELS
+        \node at ($(a)$) [label={[label distance=-4mm] b},left] {};
+        \node at ($(b)$) [label={[label distance=-4mm] $\bar{\rm u}$},left] {};
+        \node at ($(c)$) [label={[label distance=-4mm] $\bar{\rm u}$},right]{};
+        \node at ($(d)$) [label={[label distance=-4mm] c},right] {};
+        \node at ($(f)$) [label={[label distance=-4mm] s},right] {};
+        \node at ($(g)$) [label={[label distance=-4mm] $\bar{\rm u}$},right]{};
+        \node at ($(e)$) [label={[xshift=25pt,yshift=10pt] $W^-$},above] {};
+
+        %ADD BRACES
+        \draw
+        [black,decorate,decoration={brace,amplitude=5pt},xshift=-20pt,yshift=0pt]
+          (0,0.8)  -- (0,2.2) node [black,midway,left=0pt,xshift=-5pt]{$\Bm$};
+        \draw
+        [black,decorate,decoration={brace,amplitude=5pt},xshift=20pt,yshift=0pt]
+          (5,3.53) -- (5,2.47) node [black,midway,right=0pt,xshift=5pt]{$\Kstarm$};
+         \draw 	[black,decorate,decoration={brace,amplitude=5pt},xshift=20pt,yshift=0pt]
+          (5,2.2)  -- (5,0.8) node [black,midway,right=0pt,xshift=5pt] {$\Dz$};
+            \end{tikzpicture}
+        }
+\resizebox{0.47\linewidth}{!}{
+\begin{tikzpicture}[scale=0.98]
+        % MAP OUT VERTICES (I have 8 of them)
+        \coordinate (a) at (0,3); %b quark start
+        \coordinate (b) at (0,1); %ubar quark start
+        \coordinate (c) at (5,1); %ubar quark end
+        \coordinate (d) at (5,3); %u quark end
+        \coordinate (e) at (2,3); %start the W+
+        \coordinate (f) at (5,1.67); %s quark
+        \coordinate (g) at (5,2.33); %cbar quark
+        \coordinate (h) at (4.0,2); %W end
+        % DRAW LINES
+        \draw[antiparticle] (b)  -- (c); %ubar quark
+        \draw[particle] (a)  -- (e); %b quark
+        \draw[particle] (e)  -- (d); %u quark 
+        \draw[photon] (e) -- (h); %W+
+        \draw[antiparticle] (h)  to (g); %W to cbar quark
+        \draw[particle] (h)  to (f); %W to s quark 
+        %DRAW LABELS
+        \node at ($(a)$) [label={[label distance=-4mm] b},left] {};
+        \node at ($(b)$) [label={[label distance=-4mm] $\bar{\rm u}$},left] {};
+        \node at ($(c)$) [label={[label distance=-4mm] $\bar{\rm u}$},right]{};
+        \node at ($(d)$) [label={[label distance=-4mm] u},right] {};
+        \node at ($(f)$) [label={[label distance=-4mm] s},right] {};
+        \node at ($(g)$) [label={[label distance=-4mm] $\bar{\rm c}$},right]{};
+        \node at ($(e)$) [label={[xshift=25pt,yshift=-40pt] $W^-$},above] {};
+
+        %ADD BRACES
+        \draw 	[black,decorate,decoration={brace,amplitude=5pt},xshift=-20pt,yshift=0pt]
+        (0,0.8)  -- (0,3.2) node [black,midway,left=0pt,xshift=-5pt] {$\Bm$};
+        \draw [black,decorate,decoration={brace,amplitude=5pt},xshift=20pt,yshift=0pt]
+        (5,1.85)  -- (5,0.8) node [black,midway,right=0pt,xshift=5pt] {$\Kstarm$};
+         \draw [black,decorate,decoration={brace,amplitude=5pt},xshift=20pt,yshift=0pt]
+        (5,3.2)  -- (5,2.15) node [black,midway,right=0pt,xshift=5pt] {$\bar{\rm \Dz}$};
+        \end{tikzpicture}
+    }
+    \caption{Leading order Feynman diagrams for \decay{\Bm}{\D\Kstarm}.}
+    \label{fig:B2DKstarmdiagram}
+\end{figure}

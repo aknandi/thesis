@@ -64,7 +64,6 @@ The SM satisfies all necessary conditions for baryogenisis, however the amount o
 \section{The CKM matrix}
 
 Quarks in the Standard Model can interact via the strong, weak or electromagnetic interactions. For the weak interactions of the quarks, the eigenstates that take part in the W boson mediated interaction (weak eigenstates) are different to the flavour eigenstates that hadronise to produce the observable meson states \eg\ a \Bm-meson consists of \uquarkbar\bquark. The Cabibo-Kobayashi-Maskawa (CKM) matrix, given in \eqn \ref{CKMmatrix}, describes the relationship between the weak eigenstates ($d'$, $s'$, $b'$) and flavour eigenstates (\dquark, \squark, \bquark) of the quarks. 
-
 \begin{equation}
 \left(
 \begin{array}{c} d' \\ s' \\ b'  \end{array} \right) =
@@ -72,15 +71,12 @@ Quarks in the Standard Model can interact via the strong, weak or electromagneti
 \begin{array}{c} d \\ s \\ b \end{array} \right)
 \label{CKMmatrix}
 \end{equation}
-
 The elements of this matrix, $V_{ij}$, define the coupling of a $j \to i$ quark transition. Similarly $V_{ij}^*$ defined the coupling of a $\bar{j} \to \bar{i}$ antiquark transition. By definition the CKM matrix is unitary, i.e. $V_{CKM}V_{CKM}^* = \mathds{1}$, assuming there are only three generations of quarks. The CKM matrix is a complex, $3 \times 3$ matrix, which yields 18 parameters. The unitarity requirements brings the number of free parameters down to nine. Each of the five strong phases can be redefined, leaving four free parameters: three amplitudes and one phase. This free phase parameter is the source of \CP violation in the SM.
 
 If the CKM matrix was equivalent to the identity matrix there would be no cross-generation weak interaction of the quarks \eg\ a \uquark quark transition mediated by a W boson could only result in a \dquark, not a \squark or \bquark quark. From empirical determination, the magnitude of the elements in the CKM matrix are:
-
 \begin{equation}
 | V_{CKM} | = \begin{pmatrix} 0.97434^{+0.00011}_{0.00012} & 0.22506 \pm 0.00050 & 0.00357 \pm 0.00015 \\ 0.22492 \pm 0.00050 & 0.97351 \pm 0.00013 & 0.0411 \pm 0.0013 \\ 0.00875^{+0.00032}_{-0.00033} & 0.0403 \pm 0.0013 & 0.99915 \pm 0.00005 \end{pmatrix}
 \end{equation}
-
 It can be seen that quark transitions within the same generation is highly favoured, these are known as Cabbibo-favoured decays. Also, quark transitions across one generation are suppressed, and are even more suppressed across two generations. These are known as Cabibbo-suppressed transitions.
 
 \section{The CKM unitarity triangle}
@@ -99,103 +95,13 @@ The latest published \lhcb combination from direct measurements with charged and
 \section{Tree-level determination of \Pgamma using \decay{\Bpm}{\D K^{(*)\pm}} decays}
 
 Direct measurements of \Pgamma can be made by exploiting the interference between \decay{\bquark}{\cquark\uquarkbar\squark} and \decay{\bquark}{\uquark\cquarkbar\squark} transitions. These transitions are present at tree-level in $\Bpm \to \D\kaon^{(*)\pm}$ decays, represented by the Feynman diagrams shown in \fig\ref{fig:B2DKstarmdiagram}, showing \decay{\Bm}{\Dz\Kstarm} (left) and \decay{\Bm}{\Dzb\Kstarm} (right). 
-
-%\begin{figure}[!ht]
-%	\subfloat[$A(B^-{\rightarrow}D^0K^{*-}) = A_B$]{\includegraphics[width=.45\linewidth]{figures/theory/B2DKst_FD1.pdf}}
-%	\hfill
-%	\subfloat[$A(B^-{\rightarrow}\bar{D^0}K^{*-}) = {A_B}{r_B}e^{i(\delta_B - \gamma)}$]{\includegraphics[width=.45\linewidth]{figures/theory/B2DKst_FD2.pdf}}
-%	\caption{Leading order Feynman diagrams for $B^{\pm}{\rightarrow}DK^{*\pm}$. The parameter $r_B$ is the ratio of amplitudes, $\delta_B$ corresponds to the strong phase difference and $\gamma$ corresponds to the weak phase difference between the two diagrams.} 
-%	\label{feyn}
-%\end{figure}
-
-\begin{figure}[!h]
-\centering
-\resizebox{0.48\linewidth}{!}{
-	\begin{tikzpicture}[scale=0.98]
-        % MAP OUT VERTICES (I have 8 of them)
-        \coordinate (a) at (0,2); %b quark start
-        \coordinate (b) at (0,1); %ubar quark start
-        \coordinate (c) at (5,1); %ubar quark end
-        \coordinate (d) at (5,2); %c quark end
-        \coordinate (e) at (2,2); %start the W+
-        \coordinate (f) at (5,2.67); %s quark
-        \coordinate (g) at (5,3.33); %ubar quark
-        \coordinate (h) at (4.0,3); %W end
-        % DRAW LINES
-        \draw[antiparticle] (b)  -- (c); %ubar quark
-        \draw[particle] (a)  -- (e); %bbar quark
-        \draw[particle] (e)  -- (d); %ubar quark 
-        \draw[photon] (e) -- (h); %W+
-        \draw[antiparticle] (h)  to (g); %W to ubar quark
-        \draw[particle] (h)  to (f); %W to s quark 
-        %DRAW LABELS
-        \node at ($(a)$) [label={[label distance=-4mm] b},left] {};
-        \node at ($(b)$) [label={[label distance=-4mm] $\bar{\rm u}$},left] {};
-        \node at ($(c)$) [label={[label distance=-4mm] $\bar{\rm u}$},right]{};
-        \node at ($(d)$) [label={[label distance=-4mm] c},right] {};
-        \node at ($(f)$) [label={[label distance=-4mm] s},right] {};
-        \node at ($(g)$) [label={[label distance=-4mm] $\bar{\rm u}$},right]{};
-        \node at ($(e)$) [label={[xshift=25pt,yshift=10pt] $W^-$},above] {};
-
-        %ADD BRACES
-        \draw
-        [black,decorate,decoration={brace,amplitude=5pt},xshift=-20pt,yshift=0pt]
-          (0,0.8)  -- (0,2.2) node [black,midway,left=0pt,xshift=-5pt]{$\Bm$};
-        \draw
-        [black,decorate,decoration={brace,amplitude=5pt},xshift=20pt,yshift=0pt]
-          (5,3.53) -- (5,2.47) node [black,midway,right=0pt,xshift=5pt]{$\Kstarm$};
-         \draw 	[black,decorate,decoration={brace,amplitude=5pt},xshift=20pt,yshift=0pt]
-          (5,2.2)  -- (5,0.8) node [black,midway,right=0pt,xshift=5pt] {$\Dz$};
-            \end{tikzpicture}
-        }
-\resizebox{0.47\linewidth}{!}{
-\begin{tikzpicture}[scale=0.98]
-        % MAP OUT VERTICES (I have 8 of them)
-        \coordinate (a) at (0,3); %b quark start
-        \coordinate (b) at (0,1); %ubar quark start
-        \coordinate (c) at (5,1); %ubar quark end
-        \coordinate (d) at (5,3); %u quark end
-        \coordinate (e) at (2,3); %start the W+
-        \coordinate (f) at (5,1.67); %s quark
-        \coordinate (g) at (5,2.33); %cbar quark
-        \coordinate (h) at (4.0,2); %W end
-        % DRAW LINES
-        \draw[antiparticle] (b)  -- (c); %ubar quark
-        \draw[particle] (a)  -- (e); %b quark
-        \draw[particle] (e)  -- (d); %u quark 
-        \draw[photon] (e) -- (h); %W+
-        \draw[antiparticle] (h)  to (g); %W to cbar quark
-        \draw[particle] (h)  to (f); %W to s quark 
-        %DRAW LABELS
-        \node at ($(a)$) [label={[label distance=-4mm] b},left] {};
-        \node at ($(b)$) [label={[label distance=-4mm] $\bar{\rm u}$},left] {};
-        \node at ($(c)$) [label={[label distance=-4mm] $\bar{\rm u}$},right]{};
-        \node at ($(d)$) [label={[label distance=-4mm] u},right] {};
-        \node at ($(f)$) [label={[label distance=-4mm] s},right] {};
-        \node at ($(g)$) [label={[label distance=-4mm] $\bar{\rm c}$},right]{};
-        \node at ($(e)$) [label={[xshift=25pt,yshift=-40pt] $W^-$},above] {};
-
-        %ADD BRACES
-        \draw 	[black,decorate,decoration={brace,amplitude=5pt},xshift=-20pt,yshift=0pt]
-        (0,0.8)  -- (0,3.2) node [black,midway,left=0pt,xshift=-5pt] {$\Bm$};
-        \draw [black,decorate,decoration={brace,amplitude=5pt},xshift=20pt,yshift=0pt]
-        (5,1.85)  -- (5,0.8) node [black,midway,right=0pt,xshift=5pt] {$\Kstarm$};
-         \draw [black,decorate,decoration={brace,amplitude=5pt},xshift=20pt,yshift=0pt]
-        (5,3.2)  -- (5,2.15) node [black,midway,right=0pt,xshift=5pt] {$\bar{\rm \Dz}$};
-        \end{tikzpicture}
-    }
-    \caption{Leading order Feynman diagrams for \decay{\Bm}{\D\Kstarm}.}
-    \label{fig:B2DKstarmdiagram}
-\end{figure}
-
+\input{text/FD_B2DKst}
 The ratio of the amplitudes between the \decay{\Bm}{\Dzb\Kstarm} decay and the \decay{\Bm}{\Dz\Kstarm} and their charge conjugates is shown in \eqn\ref{ratiodiagrams}.
-
 \begin{equation}
 \frac{\mathcal{A}\left(\decay{\Bm}{\Dzb\Kstarm}\right)}{\mathcal{A}\left(\decay{\Bm}{\Dz\Kstarm}\right)} = \rb e^{i(\deltab - \gamma)} \text{ , }
 \frac{\mathcal{A}\left(\decay{\Bp}{\Dz\Kstarp}\right)}{\mathcal{A}\left(\decay{\Bp}{\Dzb\Kstarp}\right)} = \rb e^{i(\deltab + \gamma)}
 \label{ratiodiagrams}
 \end{equation}
-
 There are three parameters introduced in \eqn\ref{ratiodiagrams}: \rb, \deltab and \Pgamma. The angle \Pgamma is the \CP violating weak phase angle form the CKM traingle, \rb is the magntiude of ratio of the amplitudes and \deltab is difference in strong phase between the suppressed and favoured decays.
 
 The effect of the interference between the two diagrams in \fig\ref{fig:B2DKstarmdiagram} can be observed by reconstructing the \D meson in a final state accessible to both \Dz and \Dzb meson states, with the final state labelled $f(D)$. This interference gives sensitivity to the weak phase \Pgamma. In the following description we assume \CP violation in the charm sector is negligible, and effects of \D mixing are neglected. The ampltiudes of the \Bm and \Bp decays are given by \eqn\ref{BandDdecaysminus} and \ref{BandDdecaysplus}, where $A_D$ is the amplitude of \decay{\Dz}{f(D)} and $\bar{A_{D}}$ is the ampltiude of \decay{\Dzb}{f(D)}. The two terms in these equations correspond to the two diagrams in \fig\ref{fig:B2DKstarmdiagram}.
@@ -204,36 +110,69 @@ The effect of the interference between the two diagrams in \fig\ref{fig:B2DKstar
 \mathcal{A}\left(\decay{\Bp}{[f(D)]\Kstarp}\right) &= \bar{A_{D}} + A_{D}\rb e^{i(\deltab + \gamma)} \label{BandDdecaysplus}
 \end{align}
 
+The values of the complex amplitudes, $A_{D}$ and $\bar{A_{D}}$, depend on the \D meson final state chosen.
+
 
 \subsection{The GLW method}
 
-One method for extracting \Pgamma from $\Bm \to \D\Kstarm$ decays involves \D decays into the \CP-even eigenstates \Kp\Km and \pip\pim; these are referred to as the ``GLW'' decay modes~\cite{GL,GW}.
+The GLW method~\cite{GL,GW} uses \D decay modes that are \CP eigenstates, such as the \CP-even eigenstates \decay{\D}{\Kp\Km} and \decay{\D}{\pip\pim}. As the final states are \CP eigenstates, the expressions from \eqn\ref{BandDdecaysminus} and \ref{BandDdecaysplus} can be simplified to
+\begin{align}
+\mathcal{A}\left(\decay{\Bm}{[f_{GLW}]\Kstarm}\right) &\propto 1 + \rb e^{i(\deltab - \gamma)} \label{glwBdecaym} \\
+\mathcal{A}\left(\decay{\Bp}{[f_{GLW}]\Kstarp}\right) &\propto 1 + \rb e^{i(\deltab + \gamma)} \label{glwBdecayp}
+\end{align}
+assuming that \CP violation in \D decays is negligible and $\mathcal{A}\left(\decay{\Bm}{\Dz\Kstarm}\right) = \mathcal{A}\left(\decay{\Bp}{\Dzb\Kstarp}\right)$. The partial widths can be expressed as
+\begin{align}
+\Gamma\left(\decay{\Bm}{[f_{GLW}]\Kstarm}\right) &= \left|\mathcal{A}\left(\decay{\Bm}{[f_{GLW}]\Kstarm}\right)\right|^2 \nonumber \\
+&\hspace{48pt} \propto 1 + \rb^2 + 2\rb\cos(\deltab - \gamma) \label{widthBm} \\
+\Gamma\left(\decay{\Bp}{[f_{GLW}]\Kstarp}\right) &= \left| \mathcal{A}\left(\decay{\Bp}{[f_{GLW}]\Kstarp}\right)\right|^2 \nonumber \\
+&\hspace{48pt} \propto 1 + \rb^2 + 2\rb\cos(\deltab + \gamma) \label{widthBp}
+\end{align}
+The four-body \D decay mode \decay{\D}{\pip\pim\pip\pim} is an approximate \CP eigenstate, although as it is not a pure \CP eigenstate its sensitivity to \Pgamma is reduced. The parameter $F_{4\pi} \sim 0.75$~\cite{charm4pi} is the \CP-even fraction, which accounts for the dilution effect. The corresponding equations for \ref{widthBm} and \ref{widthBp} are
+\begin{align}
+\Gamma\left(\decay{\Bm}{[f_{qGLW}]\Kstarm}\right) \propto 1 + \rb^2 + 2\rb\left(2F_{4\pi} - 1\right)\cos(\deltab - \gamma) \label{widthBm4body} \\
+\Gamma\left(\decay{\Bp}{[f_{GLW}]\Kstarp}\right) \propto 1 + \rb^2 + 2\rb\left(2F_{4\pi} - 1\right)\cos(\deltab + \gamma) \label{widthBp4body}
+\end{align}
+
 
 \subsection{The ADS method}
 
-The second class of decay modes involves \D decays to \Kmp\pipm, which is not a \CP eigenstate. In the favoured decay, the pion from the \D meson and that from the \Kstarm meson have opposite charge, while in the suppressed decay (referred to here as the ``ADS'' ~\cite{ADS,ADS-2001} decay mode) the pion from the \D meson that from the \Kstarm meson have the same charge. The ADS decay mode is a combination of a CKM-favoured \decay{\Bm}{\Dz\Kstarm} decay, followed by a doubly Cabibbo-suppressed \decay{\Dz}{\Kp\pim} decay, and a CKM- and colour-suppressed \decay{\Bm}{\Dzb\Kstarm} decay, followed by a Cabibbo-favoured \decay{\Dzb}{\Kp\pim} decay. Both paths to the same final state have amplitudes of similar size, and interference effects are therefore magnified in comparison to the GLW decay modes, where the decay path via the CKM-favoured \decay{\Bm}{\Dz\Kstarm} dominates.
+The ADS method~\cite{ADS,ADS-2001} uses \D decay modes where $f(D)$ is a non-\CP eigenstate such as \decay{\D}{\Km\pip}. A key feature of this method is that although the \Dz and \Dzb decay to the same final state they proceed by very different amplitudes. The Feynman diagrams for the doubly Cabbibo-favoured \decay{\Dz}{\Km\pip} decay and the doubly Cabbibo-suppressed \decay{\Dzb}{\Kp\pim} decay are shown in \fig\ref{fig:D2KPidiagram}.
+\input{text/FD_D2KPi}
+
+The ratio of the amplitude between \decay{\Dzb}{\Km\pip} and \decay{\Dz}{\Km\pip} is given in \eqn\ref{ratioads}. The parameter $r_D$ is the magntiude of ratio of the amplitudes and $\delta_D$ is difference in strong phase between the suppressed and favoured decays.
+\begin{equation}
+\frac{\mathcal{A}\left(\decay{\Dzb}{\Km\pip}\right)}{\mathcal{A}\left(\decay{\Dz}{\Km\pip}\right)} = r_D^{K\pi}e^{-\delta_D^{K\pi}}
+\label{ratioads}
+\end{equation}
+
+The amplitudes for the various \decay{\Bpm}{\D\Kstarpm} decays with ADS decay modes. 
+\begin{align}
+\mathcal{A}\left(\decay{\Bm}{[\Kp\pim]\Kstarm}\right) &\propto r_D^{K\pi}e^{-\delta_D^{K\pi}} + \rb e^{i(\deltab - \gamma)} \label{adsBdecaym} \\
+\mathcal{A}\left(\decay{\Bp}{[\Km\pip]\Kstarp}\right) &\propto r_D^{K\pi}e^{-\delta_D^{K\pi}} + \rb e^{i(\deltab + \gamma)} \label{adsBdecayp} \\
+\mathcal{A}\left(\decay{\Bm}{[\Km\pip]\Kstarm}\right) &\propto 1 + \rb r_D^{K\pi} e^{i(\deltab - \gamma)}e^{-\delta_D^{K\pi}} \label{favBdecaym} \\
+\mathcal{A}\left(\decay{\Bp}{[\Kp\pim]\Kstarp}\right) &\propto 1 + \rb r_D^{K\pi} e^{i(\deltab + \gamma)}e^{-\delta_D^{K\pi}} \label{favBdecayp} 
+\end{align}
+In the favoured decay, the pion from the \D meson and that from the \Kstarm meson have opposite charge, while in the suppressed decay the pion from the \D meson and that from the \Kstarm meson have the same charge. The ADS decay mode is a combination of a CKM-favoured \decay{\Bm}{\Dz\Kstarm} decay, followed by a doubly Cabibbo-suppressed \decay{\Dz}{\Kp\pim} decay, and a CKM- and colour-suppressed \decay{\Bm}{\Dzb\Kstarm} decay, followed by a Cabibbo-favoured \decay{\Dzb}{\Kp\pim} decay. Both paths to the same final state have amplitudes of similar size, and interference effects are therefore magnified in comparison to the GLW decay modes, where the decay path via the CKM-favoured \decay{\Bm}{\Dz\Kstarm} dominates.
+
+Two-body \decay{\D}{\Kmp\pipm} decays are characterised by a single strong phase, however for multibody \decay{\D}{\Kmp\pipm\pimp\pipm} decays the strong phase varies over the phase space. By averaging the strong phase variation the interference effects are diluted, which is accounted for by the parameter $\kappa_{K3\pi}$.
 
 \subsection{The coherence factor}
 
-The $K^*$ has a large natural width (about 50 MeV), therefore non-resonant processes may be non-neglibigle, which would affect the measurement of \Pgamma. Due to the large natural width, the amplitudes and phases of the different decays may be different at each point in phasespace:
-
+The $K^*(892)$ meson has a large natural width (about 50 MeV~\cite{PDG2016}), therefore non-resonant \decay{\Bm}{\D\KS\pim} processes may be non-neglibigle, which would affect the measurement of \Pgamma. Due to the large natural width, the amplitudes and phases of the different decays may be different at each point in phasespace:
 \begin{align*}
 A(B^- \to D^0 K^{*-}) &= A_c(p) e^{i\delta_c(p)} \\
 A(B^- \to \bar{D^0} K^{*-}) &= A_u(p) e^{i\delta_u(p) e^{-i\gamma}} \\
 A(D^0 \to K^-\pi^+) &= A_{K\pi} e^{i\delta_{K\pi}} \\
 A(D^0 \to K^+\pi^-) &= A_{{\pi}K} e^{i\delta_{{\pi}K}} 
 \end{align*}
-
 \begin{align*}
-r_s &= \frac{\Gamma(B^- \to \bar{D^0}K^{*-})}{\Gamma(B^- \to D^0K^{*-})} = \frac{\int \left|A_u(p)\right|^2 \mathrm{d}p}{\int \left|A_c(p)\right|^2 \mathrm{d}p}
+r_B &= \frac{\Gamma(B^- \to \bar{D^0}K^{*-})}{\Gamma(B^- \to D^0K^{*-})} = \frac{\int \left|A_u(p)\right|^2 \mathrm{d}p}{\int \left|A_c(p)\right|^2 \mathrm{d}p}
 \end{align*}
-
 \begin{align}
-\kappa e^{i\delta_s} &= \frac{\int \mathrm{d}p A_c(p)A_u(p)e^{i\delta(p)}}{\sqrt{\int \mathrm{d}p \left|A_u(p)\right|^2 \int \mathrm{d}p \left|A_c(p)\right|^2}}
+\kappa e^{i\delta_B} &= \frac{\int \mathrm{d}p A_c(p)A_u(p)e^{i\delta(p)}}{\sqrt{\int \mathrm{d}p \left|A_u(p)\right|^2 \int \mathrm{d}p \left|A_c(p)\right|^2}}
 \label{kappadefinition}
 \end{align}
-
-where p represents a point in phasespace, and $0 \leq \kappa \leq 1$ and $0 \leq \delta_s \leq 2\pi$. The amplitudes include both resonant $B^- \to DK^{*-}$ and non-resonant contributions, which is what the $\kappa$ factor accounts for.
+where p represents a point in phasespace, and $0 \leq \kappa \leq 1$ and $0 \leq \delta_B \leq 2\pi$. The amplitudes include both resonant $B^- \to DK^{*-}$ and non-resonant contributions, which is what the coherence factor, $\kappa$, accounts for.
 
 Using this formalism it can be shown that the $\kappa$ factor can be included in the expressions of the CP observables as shown in Equations \ref{exp_Acp}, \ref{exp_Rcp} and \ref{exp_Rpm}. The value for $\kappa$ can be estimated and then used alongside the CP observables to extract \Pgamma, $r_B$ and $\delta_B$.
 
@@ -340,38 +279,31 @@ R^-_{K\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Kp\pim\pip\pim)\Kstarm}\rig
 In contrast to the GLW decay modes, for the ADS decay mode the ratios are measured separately for the positive and negative charges. These observables have statistical uncertainties that are more Gaussian than asymmetry variables for the very low yields that are expected. 
 
 Several \CP observables measured in this analysis can be related to the physics parameters to be determined, namely \Pgamma, $r_B$, $\delta_B$ and $\kappa$. The parameter $r_B$ is the magnitude of the ratio between the suppressed and favoured amplitudes of the \B-meson decay and $\delta_B$ is the strong-phase difference between these amplitudes. The expectation value is $r_B$ $\sim 0.1$, similar to that in the \decay{\Bm}{\D\Km} decay due to the similarity of the hadronic interactions. Both $r_B$ and $\delta_B$ are averaged over the region of \D\KS\pim phase space corresponding to the \Kstarm-meson selection window. The coherence factor $\kappa$ accounts for the contribution of \CP violation from $\Bm \to D \KS \pim$ decays that are not due to an intermediate $K^*(892)^{-}$ resonance~\cite{Gronau2003198}, where $\kappa = 1$ denotes pure $K^*(892)^{-}$. Assuming a negligible effect from charm mixing~\cite{charmmixing}, the relationships between the \CP observables and physics parameters are given in the following equations,
-
 \begin{equation}
 A_{\CP+} = \frac{2 \kappa r_B\sin\delta_B\sin\gamma}{1 + r_B^2 + 2 \kappa r_B\cos\delta_B\cos\gamma}
 \label{exp_Acp}
 \end{equation}
-
 \begin{equation}
 R_{\CP+} = 1 + r_B^2 + 2 \kappa r_B\cos\delta_B\cos\gamma
 \label{exp_Rcp}
 \end{equation}
-
 \begin{equation}
 R^{\pm}_{K\pi} = \frac{r_B^2 + \left(r_D^{K\pi}\right)^2 + 2\kappa r_B r_D^{K\pi} \cos(\delta_B + \delta_D^{K\pi} \pm \gamma)}{1 + r_B^2\left(r_D^{K\pi}\right)^2 + 2\kappa r_B r_D^{K\pi} \cos(\delta_B - \delta_D^{K\pi} \pm \gamma)}
 \label{exp_Rpm}
 \end{equation}
-
 \begin{equation}
-A_{\pi\pi\pi\pi} = \frac{2 \kappa\left(2F_{4\pi} - 1\right) r_B\sin\delta_B\sin\gamma}{1 + r_B^2 + 2 \kappa\kappa_{4\pi} r_B\cos\delta_B\cos\gamma}
+A_{\pi\pi\pi\pi} = \frac{2 \kappa\left(2F_{4\pi} - 1\right) r_B\sin\delta_B\sin\gamma}{1 + r_B^2 + 2 \kappa\left(2F_{4\pi} - 1\right) r_B\cos\delta_B\cos\gamma}
 \label{exp_A4pi}
 \end{equation}
-
 \begin{equation}
 R_{\pi\pi\pi\pi} = 1 + r_B^2 + 2 \kappa\left(2F_{4\pi} - 1\right) r_B\cos\delta_B\cos\gamma
 \label{exp_R4pi}
 \end{equation}
-
 \begin{equation}
 R^{\pm}_{K\pi\pi\pi} = \frac{r_B^2 + \left(r_D^{K3\pi}\right)^2 + 2\kappa r_B \kappa_{K3\pi} r_D^{K3\pi} \cos(\delta_B + \delta_D^{K3\pi} \pm \gamma)}{1 + \left(r_Br_D^{K3\pi}\right)^2 + 2\kappa r_B \kappa_{K3\pi} r_D^{K3\pi} \cos(\delta_B - \delta_D^{K3\pi} \pm \gamma)} \text{ .}
 \label{exp_Rpm4body}
 \end{equation}
 These relationships depend on several parameters describing the \D-meson decay, which are taken from other existing measurements. The parameters $r_D^{K\pi}$ and $\delta_D^{K\pi}$ are the magnitude of the amplitude ratio and the strong phase difference between the suppressed and favoured amplitudes of the \D-meson decay, namely \decay{\Dz}{\Kp\pim} and \decay{\Dz}{\Km\pip} respectively. Similarly, the parameters $r_D^{K3\pi}$ and $\delta_D^{K3\pi}$ are the equivalent quantities for the decays \decay{\Dz}{\Kp\pim\pip\pim} and \decay{\Dz}{\Km\pip\pim\pip}, averaged over phase space. Two-body \decay{\D}{\Kmp\pipm} decays are characterised by a single strong phase, however for multibody \decay{\D}{\Kmp\pipm\pimp\pipm} decays the strong phase varies over the phase space. By averaging the strong phase variation the interference effects are diluted, which is accounted for by the parameter $\kappa_{K3\pi}$. The parameter $F_{4\pi} \sim 0.75$~\cite{charm4pi} accounts for the fact that \decay{\D}{\pip\pim\pip\pim}, though predominantly CP even, is not a pure CP-eigenstate.
-
 
 
 \section{Previous \Pgamma measurements with \decay{\Bpm}{\D K^{(*)\pm}} decays}
@@ -390,3 +322,5 @@ The \decay{\Bm}{\D\Kstarm} channel is analagous to the \decay{\Bm}{\D\Km} in its
 In this analysis, the \decay{\Bm}{\D\Kstarm} channel is investigated where \D mesons decaying to two or four charged kaons and/or pions are considered. These final states can be broadly classified into two categories: Gronau-London-Wyler (GLW) and Atwood-Dunietz-Soni (ADS) modes, named after the people who developed the respective methods of extracting \Pgamma.
 
 \section{Analysis overview}
+
+The work presented measures the \CP observables in \decay{\Bm}{\D\Kstarm} decays as well as consideing the interpretation of these observables in terms of \rb, \deltab and \Pgamma. The analysis strategy is to first develop a procedure, based on our understanding of the data and underlying theory, to select \decay{\Bm}{\D(\Km\pip)\Kstarm} signal decays while removing unwanted background events, discussed in Section \ref{sec:selection}. The same selection with a few adjustements can subsequently be applied to the other two- and four- body \D decay modes. After applying this selection, a fit model is developed to described the \B mass distribution of the remaining \decay{\Bm}{\D(\Km\pip)\Kstarm} candidates, detailed in Section \ref{sec:massfit}. This model must include various components in order to fully describe the shape of the \B mass distribution. Using the fit model developed based on the \decay{\Bm}{\D(\Km\pip)\Kstarm} mode, a simultaneous fit is then performed to all the seven \D modes separated by \B charge in order to extract the \CP observables defined in \eqn\ref{eqn:Akpi}-\ref{eqn:Rminus4body}, detailed in Section \ref{ch:5-cpfit}. Section \ref{ch:6-interpretation} discusses the interpretation of the \CP observables using \eqn\ref{exp_Acp}-\ref{exp_Rpm4body}, in terms of the physics parameters: \rb, \deltab and \Pgamma.

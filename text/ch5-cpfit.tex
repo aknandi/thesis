@@ -17,9 +17,9 @@ The setup of the \CP fit is outlined in Section \ref{sec:cpfit:setup}, followed 
 \section{Setup of \CP fit}
 \label{sec:cpfit:setup}
 
-The fit to data is performed on the invariant mass of B candidates. A simultaneous fit stategy is employed to fit each of the D decay modes as well as two bins of B charge ($B^+$ and $B^-$), two bins of $K_s$ track type (LL and DD) and two bins of data type (Run 1 and Run 2), resulting in 56 bins in total.
+The fit to data is performed on the invariant mass of B candidates. A simultaneous fit stategy is employed to fit each of the D decay modes as well as two bins of B charge ($B^+$ and $B^-$), two bins of $K_s$ track type (LL and DD) and two bins of data type (\runone and \runtwo), resulting in 56 bins in total.
 
-As discussed in Section \ref{sec:massfit:range} the \CP fit is performed from 5230 MeV. The components and shapes of the \CP fit are the same as those described in Section \ref{sec:massfit}. The mean and width of the signal shape are shared across the different run periods and across modes of the same number of final state particles, but the mean and width are allowed to be different for the two- and four-body modes. The shape and yield of the partially reconstructed background is completely fixed, with different shape parameters for LL and DD candidates. The shape is fixed as described in Section \ref{sec:massfit:partreco}, using the yield ratios given in Table \ref{fixedyieldratios}. The total yield is fixed from the fits in Figures \ref{massfitskpi} and \ref{massfitsk3pi}, the values for the total partially reconstructed yield in each of the simultaneous fit categories is given in Appendix \ref{sec:app:partrecoyields}. The shape of the combinatoric background is shared across all modes of the same number of final state particles, but has different values for LL and DD candidates, as well as two and four-body D modes.
+As discussed in Section \ref{sec:massfit:range} the \CP fit is performed from 5230 MeV. The components and shapes of the \CP fit are the same as those described in Section \ref{sec:massfit}. The mean and width of the signal shape are shared across the different run periods and across modes of the same number of final state particles, but the mean and width are allowed to be different for the two- and four-body modes. The shape and yield of the partially reconstructed background is completely fixed, with different shape parameters for LL and DD candidates. The shape is fixed as described in Section \ref{sec:massfit:partreco}, using the yield ratios given in Table \ref{fixedyieldratios}. The total yield is fixed from the fits in Figures \ref{massfitskpi} and \ref{massfitsk3pi}, the values for the total partially reconstructed yield in each of the simultaneous fit categories is given in Section \ref{sec:cpfit:partrecoyields}. The shape of the combinatoric background is shared across all modes of the same number of final state particles, but has different values for LL and DD candidates, as well as two and four-body D modes.
 
 The \CP fit parameters are the \CP observables \Akpi, \Akk, \Apipi, \Rkk, \Rpipi, \Rptwo, \Rmtwo, \Akpipipi, \Apipipipi, \Rpipipipi, \Rpfour and \Rmfour, which relate to the physics parameters of interest as shown in Equations \ref{exp_Acp} - \ref{exp_R4pi}.
 
@@ -194,9 +194,7 @@ $\epsilon_{veto}(\pi K \pi\pi)$ & $0.895 \pm 0.005$ & $0.882 \pm 0.003$ & $0.916
 \subsection{Partially reconstructed yield in \CP fit}
 \label{sec:cpfit:partrecoyields}
 
-\minitoc
-
-Table \ref{partrecofixedyields} shows the fixed values of the total partially reconstructed yield in the \CP fit.
+The \CP fit fully fixes the shape and yield of the partially reconstructed background in each of the different \D modes. Table \ref{partrecofixedyields} shows the fixed values of the total partially reconstructed yield in the \CP fit.
 
 \begin{table}[h]
 \centering
@@ -239,7 +237,7 @@ The \Bpm production asymmetry is estimated using the measurements of production 
 
 \subsubsection{Detection asymmetry}
 
-The detection asymmetry arises from differences of matter and antimatter particles as they travel through the detector. The pion detection asymmetry has been measured at LHCb at $(0.08 \pm 0.30)\%$~\cite{pi_det_asym}. However, for the kaon asymmetry the best measured value at LHCb is not $A_K$, but $A_{K\pi}$, where $A_{K\pi} = A_K - A_{\pi}$. The $K\pi$ asymmetry is calculated performing a weighted average based on the kaon momentum distribution in the signal MC. The value of $A_{K\pi}$ obtained is $(-1.06 \pm 0.16)\%$~\cite{k_det_asym}. The overall detection asymmetry in the different decay modes depends on the number of charged kaons and pions in the final state, as well as the \CP observable being measured. Table \ref{detectionasymmetry} summarises the different detection asymmetry factors that apply to each observable in the fit. The uncertainties will be applied as a systematic.
+The detection asymmetry arises from differences of matter and antimatter particles as they travel through the detector. The pion detection asymmetry has been measured at \lhcb at $(0.08 \pm 0.30)\%$~\cite{pi_det_asym}. However, for the kaon asymmetry the best measured value at \lhcb is not $A_K$, but $A_{K\pi}$, where $A_{K\pi} = A_K - A_{\pi}$. The $K\pi$ asymmetry is calculated performing a weighted average based on the kaon momentum distribution in the simulated signal sample. The value of $A_{K\pi}$ obtained is $(-1.06 \pm 0.16)\%$~\cite{k_det_asym}. The values are obtained using \runone data, but the same results are used for \runtwo data. The changes to the detector between the data-taking periods are not expected to significantly affect the $A_{\text{det}}$ measurement. The overall detection asymmetry in the different decay modes depends on the number of charged kaons and pions in the final state, as well as the \CP observable being measured. Table \ref{detectionasymmetry} summarises the different detection asymmetry factors that apply to each observable in the fit. The uncertainties will be applied as a systematic.
 
 {\footnotesize
 \begin{table}[h]
@@ -366,7 +364,7 @@ where $x_{fit}$ is the value of the parameter returned by the fit, $x_{gen}$ is 
 \subsection{Optimisation of BDT and \Kstar selection using toys}
 \label{sec:cpfit:optimisation}
 
-The BDT selection, \Kstar mass window and \KS helicity selection were optimised simultaneously with the aim of minimising the uncertainty on the \CP parameters, \Akpi, \Akk, \Apipi, \Rkk, \Rpipi, \Rptwo, \Rmtwo, \Akpipipi, \Apipipipi, \Rpipipipi, \Rpfour and \Rmfour. The selection was applied to data with no \Kstar selection and a loose ($>-0.8$) BDT selection. A single fit was performed to the two- and four-body favoured modes, as in Section \ref{sec:massfit:fit}, to give the expected signal, combinatoric and partially reconstructed yields. The signal and background efficiencies were calculated, from simulations and data, for the various selctions explored:
+The BDT selection, \Kstar mass window and \KS helicity selection were optimised simultaneously with the aim of minimising the uncertainty on the \CP parameters, \Akpi, \Akk, \Apipi, \Rkk, \Rpipi, \Rptwo, \Rmtwo, \Akpipipi, \Apipipipi, \Rpipipipi, \Rpfour and \Rmfour. The selection was applied to data with no \Kstarm selection, i.e. no requirements on the \Kstarm mass or \KS helicity angle, and a loose ($>-0.8$) BDT selection. A single fit was performed to the two- and four-body favoured modes, as in Section \ref{sec:massfit:fit}, to give the expected signal, combinatoric and partially reconstructed yields. The signal and background efficiencies were calculated, from simulation and data, for the various selctions explored:
 
 \begin{itemize}
 \item{\Kstar mass window: 100, 75 and 50 MeV}
@@ -374,9 +372,9 @@ The BDT selection, \Kstar mass window and \KS helicity selection were optimised 
 \item{BDT selection: -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.7, 0.8, 0.9, 0.95}
 \end{itemize}
 
-Using the initial yields and efficiencies from simulation, the estimated yields for the various selections were calculated. Pseudoexperiments were generated with the expected yields and efficiencies. For the signal yield, the favoured mode was estimated from the data fit and the yield ratios and asymmetries were inferred from physics parameters using Equations \ref{exp_Acp}, \ref{exp_Rcp} and \ref{exp_Rpm}. For this optimisation process values of $r_B = 0.1$, $\delta_B = 150^{\circ}$ and $\gamma = 70^{\circ}$ were assumed. The value for \Pgamma is taken from the central value of the current \lhcb combination and $r_B$ is assumed to be the same as for \decay{\B}{\D\kaon}. A value of $\delta_B$ is chosen to be similar to values from previous analysis, although the value is completely unknown. The optimisation was repeated for various values of $\delta_B$ and it was found that the choice of selection is not sensitive to $\delta_B$.
+Using the initial yields and efficiencies from simulation, the estimated yields for the various selections were calculated. Pseudoexperiments were generated with the expected yields and efficiencies. For the signal yield, the favoured mode was estimated from the data fit and the yield ratios and asymmetries were inferred from physics parameters using Equations \ref{exp_Acp}, \ref{exp_Rcp} and \ref{exp_Rpm}. For this optimisation process values of $r_B = 0.1$, $\delta_B = 150^{\circ}$ and $\gamma = 70^{\circ}$ were assumed. The value for \Pgamma is taken from the central value of the current \lhcb combination and $r_B$ is assumed to be the same as for \decay{\Bm}{\D\Km}. A value of $\delta_B$ is chosen to be similar to values from previous analysis, although the value is completely unknown. The optimisation was repeated for various values of $\delta_B$ and it was found that the choice of selection is not sensitive to $\delta_B$.
 
-Pseudoexperiments were performed for different selections to calculate the fit uncertainty for each selection. The fit uncertainty was taken to be the mean of the uncertainty distribution. For optimising the selection for the GLW modes, the fit error was minimised for $A_{KK}$, $R_{KK}$, $A_{\pi\pi}$ and $R_{\pi\pi}$. Figure \ref{optimisation} shows an example of the optimisation studies performed. The BDT selection for the ADS modes was optimised to minimise the fit errors in $R^+$ and $R^-$. Studies were performed to investigate a tighter BDT cut for the ADS mode as illustrated in Figure \ref{adsoptimisation}. The tighter BDT cut for DD candidates was chosen as it resulted in a lower uncertainty on $R^+$ and $R^-$ due to a reduction in the background rejection from 7\% to 2\% while retaining 80\% of the signal. In cases when the figure of merits in these optimisation studies were not especially sensitive to changes in the selection, the selection giving the highest coherence was chosen. For the BDT selection the signal and background efficiencies were taken into account.
+Pseudoexperiments were performed for different selections to calculate the fit uncertainty for each selection. The fit uncertainty was taken to be the mean of the uncertainty distribution. For optimising the selection for the GLW modes, the fit error was minimised for $A_{KK}$, $R_{KK}$, $A_{\pi\pi}$ and $R_{\pi\pi}$. Figure \ref{optimisation} shows an example of the optimisation studies performed. The BDT selection for the ADS modes was optimised to minimise the fit errors in $R^+$ and $R^-$. Studies were performed to investigate a tighter BDT cut for the ADS mode as illustrated in Figure \ref{adsoptimisation}. The tighter BDT cut for DD candidates was chosen as it resulted in a lower uncertainty on $R^+$ and $R^-$ due to a reduction in the background rejection from 7\% to 2\% while retaining 80\% of the signal. 
 
 \begin{figure}
 \centering
@@ -392,7 +390,7 @@ Pseudoexperiments were performed for different selections to calculate the fit u
 \label{adsoptimisation}
 \end{figure}
 
-The final selection chosen was:
+In cases when the figure of merits in these optimisation studies were not especially sensitive to changes in the selection, the selection giving the highest coherence, i.e. tighter \Kstarm selection, was chosen. For the BDT selection the signal and background efficiencies were also taken into account. The final selection chosen was:
 
 \begin{itemize}
 \item{75 MeV \Kstar mass window}
@@ -406,9 +404,7 @@ The choice of BDT selection in ADS mode remains optimal when tested against a sc
 \section{Fit results}
 \label{sec:cpfit:results}
 
-The fits to data are shown in Figures \ref{datafit2bodyRun1}, \ref{datafit4bodyRun1}, \ref{datafit2bodyRun2} and \ref{datafit4bodyRun2}. Table \ref{cpfitresultsphysics} shows the fit results of the physics parameters of interest and Table \ref{cpfitresultsshapes} shows the fit results for $K\pi$ and $K\pi\pi\pi$ signal yields and shape parameters. All the combinatoric yields are left floating in the fit and these results are tabulated in Appendix \ref{sec:app:cpfit}.
-
-The fitted yields obtained for running the fit with \Bp and \Bm samples combined are given in Table \ref{fittedyields}. 
+The fits to data are shown in Figures \ref{datafit2bodyRun1}, \ref{datafit4bodyRun1}, \ref{datafit2bodyRun2} and \ref{datafit4bodyRun2}. Table \ref{cpfitresultsphysics} shows the fit results of the physics parameters of interest and Table \ref{cpfitresultsshapes} shows the fit results for \kpi and \kpipipi signal yields and shape parameters. All the combinatoric yields are left floating in the fit and these results are shown in Table \ref{cpfitresultscomb}. The fitted yields obtained for running the fit with \Bp and \Bm samples combined are given in Table \ref{fittedyields}. 
 
 \begin{sidewaysfigure}[h]
 \centering
@@ -536,8 +532,6 @@ exp\_kpipipi\_LL\_combs\_slope & $-0.0003$ & $-0.0014$ & $0.0015$ \\
 \label{cpfitresultsshapes}
 \end{table}
 
-Table \ref{cpfitresultscomb} shows the fit results for all the combintoric yields.
-
 \begin{table}[h]
 \centering
 {\tiny
@@ -632,21 +626,21 @@ $\pi K\pi\pi$ & $13 \pm 7$ \\
 \section{Systematics}
 \label{sec:systematics}
 
-In this section, various sources of systematic uncertainty that affect the measurement are investigated. Many fixed parameters are used in the fit model and each need to be assigned a systematic uncertainty. Systematics are computed either by multiple fits to data with certain parameters smeared or in a toy setup where the generation is different to the fit model. 
+In this section, various sources of systematic uncertainty that affect the measurement are investigated. Many fixed parameters are used in the fit model and each need to be assigned a systematic uncertainty. Systematics are computed either by multiple fits to data with certain parameters smeared or by using pseudoexperiments where the generation is different to the fit model. 
 
 \subsection{Sources of systematic uncertainty}
 
-The branching ratios, MC efficiencies, PID efficiencies, veto efficiencies, and production, detection and PID asymmetries all have associated systematic uncertainties. These are estimated by performing multiple fits to data where the relevant fixed parameter are varied according to a Gaussian whose width is the assigned uncertainty. For each fit observable a histogram is created containing the results for each data fit, the RMS of this histogram is taken to be the systematic uncertainty for this parameter.
+Branching fractions~\cite{PDG2016}, various efficiencies and asymmetries are used as inputs to the simultaneous fit in order to relate the measured yields to the \CP observables. Each of these inputs has an associated uncertainty which needs to be propagated to the \CP observables giving rise to the systematic uncertainties. The systematic uncertainties due to the use of fixed inputs from branching ratios, simulation efficiencies, asymmetry corrections and shape parameters are estimated by performing multiple fits to data where each relevant parameter is varied according to a Gaussian distribution with the width as the assigned uncertainty. Any correlations between the parameters are ignored. The standard deviation of the fitted parameter distribution is assigned as the systematic uncertainty. 
 
-Signal shape, partially reconstructed contribution, combinatoric shape and charmless contribution all all have associated systematic uncertainties. These are computed using a toy setup where the generated model is different to the fit model. The systematic is taken to be the difference between the mean of the fitted distribution and the generated value.
+Other systematic uncertainties arise from the modelling of the signal and partially reconstructed backgrounds and the effect of any residual charmless \B decays. The systematic uncertainties from these sources are computed by generating pseudoexperiments. In each case the generated model is varied according to the systematic effects being estimated. The systematic uncertainty on each observable is taken to be the difference between the mean of the fitted parameter distribution and the generated value. A summary of the components of the systematic uncertainties for the \CP observables is given in Table~\ref{systematics}.
 
 \subsubsection{Branching ratios}
 
 The branching ratios for the different \D decays are used in the \CP fit as shown in Equations \ref{effcorrectionglw2body} and \ref{effcorrectionglw4body}. The values used for the branching ratios are given in Table \ref{fitinputs} along with their uncertainties~\cite{PDG2014}. A systematic is assigned by performing 1000 fits to data each time varying the branching ratio values by a Gaussian with a width corresponding to the uncertainty of each branching ratio.
 
-\subsubsection{MC efficiencies}
+\subsubsection{Simulation efficiencies}
 
-Selection efficincies and BDT efficiencies are used in the \CP fit as shown in Equations \ref{effcorrectionglw2body}, \ref{effcorrectionglw4body}, \ref{effcorrectionads2body} and \ref{effcorrectionads4body}. The values used in the \CP fit are shown in Table \ref{fitinputs} along with their uncertainties. These values are fixed in the \CP fit. The Run 2 uncertainties are estimated assuming 2016 MC efficiencies have the same central value as 2015 but with twice the uncertainty.  A systematic is assigned by performing 1000 fits to data each time varying these fixed parameters according to a Gaussian whose width is the assigned unceratinty for that parameter.
+Selection efficincies and BDT efficiencies are used in the \CP fit as shown in Equations \ref{effcorrectionglw2body}, \ref{effcorrectionglw4body}, \ref{effcorrectionads2body} and \ref{effcorrectionads4body}. The values used in the \CP fit are shown in Table \ref{fitinputs} along with their uncertainties. These values are fixed in the \CP fit. The \runtwo uncertainties are estimated assuming efficiencies from 2016 simulated samples have the same central value as 2015 but with twice the uncertainty. A systematic is assigned by performing 1000 fits to data each time varying these fixed parameters according to a Gaussian whose width is the assigned unceratinty for that parameter.
 
 \subsubsection{PID efficiencies}
 
@@ -654,24 +648,25 @@ PID efficiencies are used in the \CP fit as shown in Equations \ref{effcorrectio
 
 \subsubsection{Veto efficiencies}
 
-Veto efficiencies are required in the \CP fit to correct for the veto applied in the two- and four-body ADS modes, as shown in Equations \ref{effcorrectionads2body} and \ref{effcorrectionads4body}, with the actual values used shown in Tables \ref{fitinputs} as well as the uncertainties. The Run 2 uncertainties are estimated assuming 2016 MC efficiencies have the same central value as 2015 but with twice the uncertainty. A systematic is assigned by performing 1000 fits to data each time varying the veto efficiencies according to a Gaussian whose width is the assigned unceratinty for that value.
+Veto efficiencies are required in the \CP fit to correct for the veto applied in the two- and four-body ADS modes, as shown in Equations \ref{effcorrectionads2body} and \ref{effcorrectionads4body}, with the actual values used shown in Tables \ref{fitinputs} as well as the uncertainties. The Run 2 uncertainties are estimated assuming efficiencies from 2016 simulated samples have the same central value as 2015 but with twice the uncertainty. A systematic is assigned by performing 1000 fits to data each time varying the veto efficiencies according to a Gaussian whose width is the assigned unceratinty for that value.
 
 \subsubsection{Asymmetry corrections}
 
-Corrections must be made in the \CP for various sources of asymmetry as detailed in Section \ref{sec:cpfit:asymmetries}, namely production asymmetry, detection asymmetry and PID asymmetry. For each source of asymmetry a correction is applied in the \CP fit and a systematic is assigned separately to each based on the uncertainty of each correction. Details of the values used with their corresponding uncertainties are given in Section \ref{sec:cpfit:asymmetries}. It is worth noting that for production asymmetry, the Run 2 value is taken to have the same central value as Run 1 with double the uncertainty. 
+Corrections must be made in the \CP for various sources of asymmetry as detailed in Section \ref{sec:cpfit:asymmetries}, namely production asymmetry, detection asymmetry and PID asymmetry. For each source of asymmetry a correction is applied in the \CP fit and a systematic is assigned separately to each based on the uncertainty of each correction. Details of the values used with their corresponding uncertainties are given in Section \ref{sec:cpfit:asymmetries}. It is worth noting that for production asymmetry, the \runtwo value is taken to have the same central value as Run 1 with double the uncertainty. 
 
 \subsubsection{Signal shape}
 \label{sec:systematics:signal}
 
-The signal shape, described in Section \ref{sec:massfit:signal}, is modelled as a Double Crystal Ball with all the parameters fixed from MC apart from the mean and width. From signal MC it can be seen that the signal shape has more than one characteristic width a low mass tail. There are two sources of unceratinty in the choice of signal shape: the tail parameters, $\alpha$ and $n$, and the width ratio and yield fraction, $f_{\sigma}$ and $f_{cb}$, between the two CBs. These two sources of uncertainty are treated separately and combined. The uncertainty in the tail parameters is quantified by generating 1000 toys with a Double Johnson signal shape, but fitting back with the original fit model. The Double Johnson is taken to have the same width ratio and yield fraction as the Double Crystal Ball used in the \CP fit. The results from this method are given in the first row of Table \ref{signalshapeSystematics}.
+The signal shape, described in Section \ref{sec:massfit:signal}, is modelled as a Double Crystal Ball with all the parameters fixed from simulation apart from the mean and width. From simualted signal samples it can be seen that the signal shape has more than one characteristic width a low mass tail. There are two sources of unceratinty in the choice of signal shape: the tail parameters, $\alpha$ and $n$, and the width ratio and yield fraction, $f_{\sigma}$ and $f_{cb}$, between the two CBs. These two sources of uncertainty are treated separately and combined. The uncertainty in the tail parameters is quantified by generating 1000 toys with a Double Johnson signal shape, but fitting back with the original fit model. The Double Johnson is taken to have the same width ratio and yield fraction as the Double Crystal Ball used in the \CP fit. The results from this method are given in the first row of Table \ref{signalshapeSystematics}.
 
-For the uncertainty in the width ratio and yield fraction, a systematic is assigned by performing 1000 fits to data each time varying the width ratio and yield fraction according to a Gaussian whose width is the assigned unceratinty for that value, which is taken from the fits to MC, as given in Table \ref{signalparameters}. The results from this method are given in the second row of Table \ref{signalshapeSystematics}.
+For the uncertainty in the width ratio and yield fraction, a systematic is assigned by performing 1000 fits to data each time varying the width ratio and yield fraction according to a Gaussian whose width is the assigned unceratinty for that value, which is taken from the fits to simulated samples, as given in Table \ref{signalparameters}. The results from this method are given in the second row of Table \ref{signalshapeSystematics}.
 
 The systematic from generating a Double Johnson distribution and that from varying the Doule Crystal Ball parameters are added in quadrature to give the total signal shape systematic.
 
 \begin{table}[h]
 \centering
 {\footnotesize
+\resizebox{\textwidth}{!}{
 \begin{tabular}{ccccccccc}
 \hline
 & $A_{K\pi}$ & $A_{KK}$ & $A_{\pi\pi}$ & $R_{KK}$ & $R_{\pi\pi}$ & $R^+_{K\pi}$ & $R^-_{K\pi}$ \\
@@ -681,7 +676,7 @@ Vary params & $2.3 \times 10^{-4}$ & $1.1 \times 10^{-3}$ & $1.4 \times 10^{-3}$
 \hline
 Total & $1.1 \times 10^{-3}$ & $3.1 \times 10^{-3}$ & $1.1 \times 10^{-2}$ & $3.0 \times 10^{-2}$ & $2.7 \times 10^{-2}$ & $1.1 \times 10^{-3}$ & $1.3 \times 10^{-3}$ \\
 \hline
-\end{tabular}
+\end{tabular}}
 \begin{tabular}{cccccc}
 \hline
 & $A_{K\pi\pi\pi}$ & $A_{\pi\pi\pi\pi}$ & $R_{\pi\pi\pi\pi}$ & $R^+_{K3\pi}$ & $R^-_{K3\pi}$ \\
@@ -698,19 +693,19 @@ Total & $1.7 \times 10^{-3}$ & $2.2 \times 10^{-3}$ & $1.0 \times 10^{-2}$ & $3.
 
 \subsubsection{Combinatoric}
 
-The shape of the combinatoric is fixed across all \D modes, the statistics are not enough to have the shapes floating. In order to get an idea of the variation in combinatoric shape between different \D modes, fits are performed to the high B mass region (5400 - 5600 \mevcc) using an exponential as the fit model, as shown in Figures \ref{combinatoricLL} and \ref{combinatoricDD}. The data used for these fits is Run 1 data with stripping and pre-selection applied, except for \Kstar selection and \Dz and \KS FD significance cuts. PID selection on the \D daughters is also applied in order to be sure of accessing the difference between the different \D modes. The full selection was not applied as there is not enough statistics to perform a meaningful fit.
+The shape of the combinatoric is fixed across all \D modes, the statistics are not enough to have the shapes floating. In order to get an idea of the variation in combinatoric shape between different \D modes, fits are performed to the high B mass region (5400 - 5600 \mevcc) using an exponential as the fit model, as shown in Figures \ref{combinatoricLL} and \ref{combinatoricDD}. The data used for these fits is \runone data with stripping and pre-selection applied, except for \Kstar selection and \Dz and \KS FD significance cuts. PID selection on the \D daughters is also applied in order to be sure of accessing the difference between the different \D modes. The full selection was not applied as there is not enough statistics to perform a meaningful fit.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=\linewidth]{figures/fitComponents/combinatoricFits_LL.pdf}
-\caption{Fits to the combinatoric background in the high B mass region for LL candidates. The fitted values for the exponential slope parameter are given on each plot}
+\caption{Fits to the combinatoric background in the high B mass region for LL candidates. The fitted values for the exponential slope parameter are given on each plot.}
 \label{combinatoricLL}
 \end{figure}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=\linewidth]{figures/fitComponents/combinatoricFits_DD.pdf}
-\caption{Fits to the combinatoric background in the high B mass region for DD candidates. The fitted values for the exponential slope parameter are given on each plot}
+\caption{Fits to the combinatoric background in the high B mass region for DD candidates. The fitted values for the exponential slope parameter are given on each plot.}
 \label{combinatoricDD}
 \end{figure}
 
@@ -719,11 +714,11 @@ The systematic is assigned by generating 1000 toys with the combinatoric shape p
 \subsubsection{Partially reconstructed}
 \label{sec:systematics:partreco}
 
-The partially reconstructed decays have a completely fixed shape and yield contributing to the \CP fit. The shape parameters are fixed from fits to MC, yield ratios are fixed from branching ratios and MC efficiencies and total yield is fixed from the fit to $K\pi$ invariant mass. The estimated yield is divided equally between \Bp and \Bm bins. In order to assign a systematic three different modifications are made to the partially reconstructed region:
+The partially reconstructed decays have a completely fixed shape and yield contributing to the \CP fit. The shape parameters are fixed from fits to simulated samples, yield ratios are fixed from branching ratios and simulation efficiencies and total yield is fixed from the fit to \kpi invariant mass. The estimated yield is divided equally between \Bp and \Bm bins. In order to assign a systematic three different modifications are made to the partially reconstructed region:
 
 \begin{itemize}
-\item The yield is incrased by 20\%. The uncertainty in the yield from the fit to $K\pi$ invariant mass is about 5\%, but this is considered to be an underestimate, therefore a conservative systematic of 20\% is used
-\item All partially reconstructed shape are smeared by the difference in signal width between MC and data. The width for all partially reconstructed shapes is increased by 4\% of LL bins and 5\% for DD bins
+\item The yield is incrased by 20\%. The uncertainty in the yield from the fit to \kpi invariant mass is about 5\%, but this is considered to be an underestimate, therefore a conservative systematic of 20\% is used
+\item All partially reconstructed shape are smeared by the difference in signal width between simulatied samples and data. The width for all partially reconstructed shapes is increased by 4\% of LL bins and 5\% for DD bins
 \item A 10\% asymmetry is introduced for the partially reconstructed shapes
 \end{itemize}
 
@@ -731,114 +726,125 @@ These adjustments are applied simultaneously. The systematic is assigned by gene
 
 \subsubsection{Charmless}
 
-Section \ref{sec:backgrounds:charmless} shows that there is a possibility for residual charmless contribution in \decay{\D}{\pi\pi} mode. Charmless events in the $\pi\pi$ mode were generated according to a Gaussian whose mean is the expected number of charmless events and the width is the corresponding unceratinty, as given in Tables \ref{charmlessyields} and \ref{charmlessyieldsRun2}. This value is rounded to a whole number and randomly distributed between \Bp and \Bm as a component of the yield in the signal region. The systematic is assigned by generating 1000 toys with a charmless contrbution introduced, but fitting back with the original fit model.
+Section \ref{sec:backgrounds:charmless} shows that there is a possibility for residual charmless contribution in \pipi mode. Charmless events in the \pipi mode were generated according to a Gaussian whose mean is the expected number of charmless events and the width is the corresponding unceratinty, as given in Tables \ref{charmlessyields} and \ref{charmlessyieldsRun2}. This value is rounded to a whole number and randomly distributed between \Bp and \Bm as a component of the yield in the signal region. The systematic is assigned by generating 1000 toys with a charmless contrbution introduced, but fitting back with the original fit model.
 
 \subsection{Results of systematic uncertainties}
 
 Table \ref{systematics} summarises the systematics for various different sources. If the systematic unceratinty was found to be more than 2 orders of magntiude smaller than the statistical unceratinty then a value of zero is given. Systematics from MC efficiencies and branching ratios mainly affects $R_{KK}$ and $R_{\pi\pi}$. Production and detection asymmetry systematics contribute to $A_{K\pi}$, $A_{KK}$ and $A_{\pi\pi}$. PID efficiencies and PID asymmetry correction do not contribute much to the systematic uncertainty. The signal shape systematic have a non-negligible effect on the uncertainty for all the physics observables. All systematic uncertainties are smaller than the corresponding statistical uncertainty. 
 
-\begin{sidewaystable}
+\begin{sidewaystable}[htbp]
 \centering
 {\footnotesize
 \begin{tabular}{ccccccccccccc}
-\hline
-& $A_{K\pi}$ & $A_{KK}$ & $A_{\pi\pi}$ & $R_{KK}$ & $R_{\pi\pi}$ & $R^+_{K\pi}$ & $R^-_{K\pi}$ & $A_{K\pi\pi\pi}$ & $A_{\pi\pi\pi\pi}$ & $R_{\pi\pi\pi\pi}$ & $R^+_{K3\pi}$ & $R^-_{K3\pi}$ \\
+\hline	
+%\rule{0pt}{4ex}
+\rule{0pt}{2.5ex}\rule[-1.2ex]{0pt}{0ex} & $A_{K\pi}$ & $A_{KK}$ & $A_{\pi\pi}$ & $R_{KK}$ & $R_{\pi\pi}$ & $R^+_{K\pi}$ & $R^-_{K\pi}$ & $A_{K\pi\pi\pi}$ & $A_{\pi\pi\pi\pi}$ & $R_{\pi\pi\pi\pi}$ & $R^+_{K\pi\pi\pi}$ & $R^-_{K\pi\pi\pi}$ \\
 \hline
 Statistical & $0.023$ & $0.07$ & $0.13$ & $0.09$ & $0.15$ & $0.006$ & $0.004$ & $0.031$ & $0.11$ & $0.13$ & $0.008$ & $0.007$ \\
 \hline
-BRs  & $0.0$ & $0.0$ & $0.013$ & $0.001$ & $0.012$ & $0.0$ & $0.0$ & $0.0$ & $0.0008$ & $0.027$ & $0.0$ & $0.0$ \\
-MC efficiencies  & $0.0$ & $0.0$ & $0.007$ & $0.0$ & $0.006$ & $0.0002$ & $0.0$ & $0.0$ & $0.0005$ & $0.010$ & $0.0$ & $0.0$ \\
-PID efficiencies  & $0.0$ & $0.0$ & $0.002$ & $0.0$ & $0.002$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ & $0.003$ & $0.0$ & $0.0$ \\
-Veto efficiencies  & $0.0$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ & $0.0001$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ \\
-$A_{prod}$  & $0.0073$ & $0.007$ & $0.0$ & $0.008$ & $0.0$ & $0.0$ & $0.0$ & $0.0079$ & $0.0077$ & $0.0$ & $0.0$ & $0.0$ \\
-$A_{det}$  & $0.0034$ & $0.003$ & $0.0$ & $0.003$ & $0.0$ & $0.0001$ & $0.0$ & $0.0034$ & $0.0030$ & $0.0$ & $0.0001$ & $0.0$ \\
-$A_{pid}$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ & $0.0$ \\
-Signal shape & $0.0011$ & $0.003$ & $0.011$ & $0.030$ & $0.027$ & $0.0011$ & $0.0013$ & $0.0017$ & $0.0022$ & $0.010$ & $0.0030$ & $0.0038$ \\
-Combinatoric shape  & $0.0012$ & $0.003$ & $0.004$ & $0.005$ & $0.009$ & $0.0002$ & $0.0003$ & $0.0001$ & $0.0018$ & $0.0$ & $0.0012$ & $0.0004$ \\
-Partially reconstructed shape  & $0.0007$ & $0.001$ & $0.001$ & $0.003$ & $0.005$ & $0.0$ & $0.0003$ & $0.0003$ & $0.0005$ & $0.002$ & $0.0008$ & $0.0001$ \\
-Charmless  & $0.0008$ & $0.0$ & $0.002$ & $0.003$ & $0.007$ & $0.0$ & $0.0003$ & $0.0009$ & $0.0030$ & $0.002$ & $0.0008$ & $0.0001$ \\
+Branching fractions & $-$ & $-$ & $0.013$ & $0.001$ & $0.012$ & $-$ & $-$ & $-$ & $0.0008$ & $0.027$ & $-$ & $-$ \\
+Selection efficiencies  & $-$ & $-$ & $0.007$ & $-$ & $0.006$ & $0.0002$ & $-$ & $-$ & $0.0008$ & $0.014$ & $-$ & $-$ \\
+PID efficiencies  & $-$ & $-$ & $0.002$ & $-$ & $0.002$ & $-$ & $-$ & $-$ & $-$ & $0.002$ & $-$ & $-$ \\
+Veto efficiencies  & $-$ & $-$ & $-$ & $-$ & $-$ & $0.0001$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ \\
+$A_{\text{prod}}$  & $0.0073$ & $0.007$ & $-$ & $0.008$ & $-$ & $-$ & $-$ & $0.0079$ & $0.0077$ & $-$ & $-$ & $-$ \\
+$A_{\text{det}}$  & $0.0034$ & $0.003$ & $-$ & $0.003$ & $-$ & $0.0001$ & $-$ & $0.0034$ & $0.0030$ & $-$ & $0.0001$ & $-$ \\
+Signal shape & $0.0011$ & $0.003$ & $0.011$ & $0.003$ & $0.027$ & $0.0011$ & $0.0013$ & $0.0017$ & $0.0022$ & $0.010$ & $0.0030$ & $0.0038$ \\
+Combinatorial shape  & $0.0012$ & $0.003$ & $0.004$ & $0.005$ & $0.009$ & $0.0002$ & $0.0003$ & $0.0001$ & $0.0018$ & $-$ & $0.0012$ & $0.0004$ \\
+Partially reconstructed shape  & $0.0007$ & $0.001$ & $0.001$ & $0.003$ & $0.005$ & $-$ & $0.0003$ & $0.0003$ & $0.0005$ & $0.002$ & $0.0008$ & $0.0001$ \\
+Charmless  & $0.0008$ & $-$ & $0.002$ & $0.003$ & $0.007$ & $-$ & $0.0003$ & $0.0009$ & $0.0030$ & $0.002$ & $0.0008$ & $0.0001$ \\
+\decay{\Lb}{\Lc\Kstarm} & $0.0002$ & $-$ & $0.011$ & $-$ & $0.001$ & $0.0001$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ \\
+\decay{\Bs}{\D\Kstar(1410)^0} & $-$ & $-$ & $-$ & $-$ & $-$ & $0.0005$ & $0.0001$ & $-$ & $-$ & $-$ & $-$ & $-$ \\
 \hline
-Total & $0.0083$ & $0.009$ & $0.019$ & $0.012$ & $0.032$ & $0.0011$ & $0.0014$ & $0.0088$ & $0.0093$ & $0.031$ & $0.0034$ & $0.0038$ \\
+Total systematic & $0.0083$ & $0.009$ & $0.022$ & $0.012$ & $0.032$ & $0.0012$ & $0.0014$ & $0.0088$ & $0.0093$ & $0.032$ & $0.0034$ & $0.0038$ \\
 \hline
 \end{tabular}}
-\caption{Summary of systematic uncertainties}
+\caption{Summary of systematic uncertainties. Uncertainties are not shown if they are more than two orders of magnitude smaller than the statistical uncertainty.}
 \label{systematics}
 \end{sidewaystable}
 
 \section{Summary of results}
 \label{sec:cpfit:summary}
 
-The \CP oberservables measured from the fit are below, where the first errors are statistical and the second are systematic.
+The \CP observables determined from the fit shown in Figs.~\ref{datafit2bodyRun1} -~\ref{datafit4bodyRun2} are  
+\begin{alignat*}{13}
+A_{K\pi} &= &\ -&0.004&\ &\pm&\ &0.023&\ &\pm&\ &0.008& \\
+A_{KK} &= &&0.06&\ &\pm&\ &0.07&\ &\pm&\ &0.01& \\
+A_{\pi\pi} &= &&0.15&\ &\pm&\ &0.13&\ &\pm&\ &0.02& \\
+R_{KK} &= &&1.22&\ &\pm&\ &0.09&\ &\pm&\ &0.01& \\
+R_{\pi\pi} &= &&1.08&\ &\pm&\ &0.14&\ &\pm&\ &0.03& \\
+R^+_{K\pi} &= &&0.020&\ &\pm&\ &0.006&\ &\pm&\ &0.001& \\ 
+R^-_{K\pi} &= &&0.002&\ &\pm&\ &0.004&\ &\pm&\ &0.001& \\
+A_{K\pi\pi\pi} &= &\ -&0.013&\ &\pm&\ &0.031&\ &\pm&\ &0.009& \\
+A_{\pi\pi\pi\pi} &= &&0.02&\ &\pm&\ &0.11&\ &\pm&\ &0.01& \\
+R_{\pi\pi\pi\pi} &= &&1.08&\ &\pm&\ &0.13&\ &\pm&\ &0.03& \\
+R^+_{K\pi\pi\pi} &= &&0.016&\ &\pm&\ &0.007&\ &\pm&\ &0.003& \\ 
+R^-_{K\pi\pi\pi} &= &&0.006&\ &\pm&\ &0.006&\ &\pm&\ &0.004&
+\end{alignat*}
+where the first uncertainty is statistical and the second is systematic. The correlation matrices for the statistical and systematic uncertainties are given in Tables~\ref{statisticalcorrelations} and \ref{systematiccorrelations}, respectively. The large correlations of the systematic uncertainties are mainly due to contributions from production and detection asymmetries. Combined results from the \Kp\Km and \pip\pim decay modes, taking correlations into account, are
+\begin{alignat*}{13}
+R_{\CP+} &= &\ &1.18&\ &\pm&\ &0.08&\ &\pm&\ &0.01& \\
+A_{\CP+} &= &\ &0.08&\ &\pm&\ &0.06&\ &\pm&\ &0.01&
+\end{alignat*}
+where the first uncertainty is statistical and the second is systematic. In addition, $R^+$ and $R^-$ for the \Kp\pim and \Kp\pim\pip\pim decay modes can be transformed into the more commonly used $R_{ADS} = \left(R^- + R^+\right)/2\ $and \mbox{$A_{ADS} = \left(R^- - R^+\right)/\left(R^- + R^+\right)$}. These results, taking correlations into account, are
+\begin{alignat*}{13}
+R_{ADS}^{K\pi} &= &\ &0.011&\ &\pm&\ &0.004&\ &\pm&\ &0.001& \\
+A_{ADS}^{K\pi} &= &\ -&0.81&\ &\pm&\ &0.17&\ &\pm&\ &0.04& \\
+R_{ADS}^{K\pi\pi\pi} &= &\ &0.011&\ &\pm&\ &0.005&\ &\pm&\ &0.003& \\
+A_{ADS}^{K\pi\pi\pi} &= &\ -&0.45&\ &\pm&\ &0.21&\ &\pm&\ &0.14&
+\end{alignat*}
+where the first uncertainty is statistical and the second is systematic. The measured asymmetries and ratios for the two-body \D meson decay modes are consistent with, and more precise than, the previous measurements from \babar~\cite{BaBarDKstar}.
 
-\begin{align*}
-A_{K\pi} & = -0.004 \pm 0.023 \pm 0.008 \\
-A_{KK} & = 0.06 \pm 0.07 \pm 0.01 \\
-A_{\pi\pi} & = 0.15 \pm 0.13 \pm 0.02 \\
-R_{KK} & = 1.24 \pm 0.09 \pm 0.01 \\
-R_{\pi\pi} & = 1.08 \pm 0.15 \pm 0.03 \\
-R^+_{K\pi} & = 0.020 \pm 0.006 \pm 0.001 \\
-R^-_{K\pi} & = 0.002 \pm 0.004 \pm 0.001 \\
-A_{K\pi\pi\pi} & = -0.013 \pm 0.031 \pm 0.009 \\
-A_{\pi\pi\pi\pi} & = 0.03 \pm 0.11 \pm 0.01 \\
-R_{\pi\pi\pi\pi} & = 1.11 \pm 0.13 \pm 0.03 \\
-R^+_{K\pi\pi\pi} & = 0.016 \pm 0.008 \pm 0.003 \\
-R^-_{K\pi\pi\pi} & = 0.006 \pm 0.007 \pm 0.004 \\
-\end{align*}
-
-The statistical and systematic correlation matrices for the seven physics observables in the fit are shown in Tables \ref{statisticalcorrelations} and \ref{systematiccorrelations} respectively. Combined results from the $KK$ and $\pi\pi$ modes, taking correlations into account are,
-\begin{align*}
-R_{CP} = 1.20 \pm 0.08 \\
-A_{CP} = 0.08 \pm 0.06
-\end{align*}
-
-\begin{sidewaystable}[h]
+\begin{table}[htbp]
 \centering
-{\footnotesize
+{\scriptsize
+\resizebox{\textwidth}{!}{
 \begin{tabular}{c|cccccccccccc} 
 \hline 
-& $A_{K\pi}$ & $A_{KK}$ & $A_{\pi\pi}$ & $R_{KK}$ & $R_{\pi\pi}$ & $R^+_{K\pi}$ & $R^-_{K\pi}$ & $A_{K\pi\pi\pi}$ & $A_{\pi\pi\pi\pi}$ & $R_{\pi\pi\pi\pi}$ & $R^+_{K\pi\pi\pi}$ & $R^-_{K\pi\pi\pi}$ \\ 
+\rule{0pt}{2.5ex}\rule[-1.2ex]{0pt}{0ex}& $A_{K\pi}$ & $A_{KK}$ & $A_{\pi\pi}$ & $R_{KK}$ & $R_{\pi\pi}$ & $R^+_{K\pi}$ & $R^-_{K\pi}$ & $A_{K\pi\pi\pi}$ & $A_{\pi\pi\pi\pi}$ & $R_{\pi\pi\pi\pi}$ & $R^+_{K\pi\pi\pi}$ & $R^-_{K\pi\pi\pi}$ \\ 
  \hline
-$A_{K\pi}$ & 1 & 0.00020  & 0.00017  & -0.00005  & -0.0006  & 0.076  & -0.014  & 0.0000027  & -0.000021  & 0.0011  & -0.0000045  & 0.0000028  \\
-$A_{KK}$ & & 1  & -0.00012  & -0.0030  & -0.000038  & -0.0011  & -0.0024  & 0.0000054  & -0.00012  & 0.000085  & 0.000004  & 0.0000032  \\
-$A_{\pi\pi}$ &  &  & 1  & -0.00062  & -0.022  & -0.0019  & -0.0017  & -0.0000021  & 0.000062  & 0.0010  & 0.000016  & 0.000017  \\
-$R_{KK}$ & & & & 1  & 0.064  & 0.034  & 0.014  & -0.0000029  & 0.000057  & 0.065  & 0.000087  & 0.00011  \\
-$R_{\pi\pi}$ & & & & & 1  & 0.027  & 0.017  & 0.000034  & -0.00013  & 0.030  & -0.00011  & -0.000056  \\
-$R^+_{K\pi}$ & & & & & & 1  & 0.020  & 0.000016  & 0.0000014  & 0.0095  & -0.000044  & -0.000033 \\
-$R^-_{K\pi}$ & & & & & & & 1  & 0.000010  & 0.00018  & -0.0050  & 0.0000095  & 0.000034  \\
-$A_{K\pi\pi\pi}$ & & & & & & & & 1  & -0.00048  & -0.0014  & 0.067  & -0.033  \\
-$A_{\pi\pi\pi\pi}$ & & & & & & & & & 1  & 0.00085  & 0.0029  & 0.0034  \\
-$R_{\pi\pi\pi\pi}$ & & & & & & & & & & 1  & 0.031  & 0.039  \\
-$R^+_{K\pi\pi\pi}$ & & & & & & & & & & & 1  & 0.028  \\
-$R^-_{K\pi\pi\pi}$ & & & & & & & & & & & & 1  \\
+$A_{K\pi}$ & 1 & $-$ & $-$ & $-$ & $-$ & 0.08 & $-$0.01{\color{white}$-$} & $-$ & $-$ & $-$ & $-$ & $-$ \\
+$A_{KK}$ & & 1 & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ \\
+$A_{\pi\pi}$ & & & 1 & $-$ & $-$0.02{\color{white}$-$} & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ \\
+$R_{KK}$ & & & & 1 & 0.05 & 0.02 & $-$0.01{\color{white}$-$} & $-$ & $-$ & $-$ & $-$ & $-$ \\
+$R_{\pi\pi}$ & & & & & 1 & 0.03 & 0.02 & $-$ & $-$ & $-$ & $-$ & $-$ \\
+$R^+_{K\pi}$ & & & & & & 1 & 0.02 & $-$ & $-$ & $-$ & $-$ & $-$ \\
+$R^-_{K\pi}$ & & & & & & & 1 & $-$ & $-$ & $-$ & $-$ & $-$ \\
+$A_{K\pi\pi\pi}$ & & & & & & & & 1 & $-$ & $-$ & 0.07 & $-$0.03{\color{white}$-$} \\
+$A_{\pi\pi\pi\pi}$ & & & & & & & & & 1 & 0.01 & $-$ & $-$ \\
+$R_{\pi\pi\pi\pi}$ & & & & & & & & & & 1 & 0.04 & 0.04 \\
+$R^+_{K\pi\pi\pi}$ & & & & & & & & & & & 1 & 0.03 \\
+\rule[-1.2ex]{0pt}{0ex}$R^-_{K\pi\pi\pi}$ & & & & & & & & & & & & 1 \\
 \hline 
-\end{tabular}}
-\caption{Statistical correlation matrix for the seven physics observables from the \CP fit to data. The matrix is symmetric so only the top half is shown.}
+\end{tabular}}}
+\caption{Correlation matrix of the statistical uncertainties for the twelve physics observables from the simultaneous fit to data. Only half of the symmetric matrix is shown.}
 \label{statisticalcorrelations}
-\end{sidewaystable}
-\begin{sidewaystable}[h]
+\end{table}
+
+\begin{table}[htbp]
 \centering
-{\footnotesize
+{\scriptsize
+\resizebox{\textwidth}{!}{
 \begin{tabular}{c|cccccccccccc} 
 \hline 
-& $A_{K\pi}$ & $A_{KK}$ & $A_{\pi\pi}$ & $R_{KK}$ & $R_{\pi\pi}$ & $R^+_{K\pi}$ & $R^-_{K\pi}$ & $A_{K\pi\pi\pi}$ & $A_{\pi\pi\pi\pi}$ & $R_{\pi\pi\pi\pi}$ & $R^+_{K3\pi}$ & $R^-_{K3\pi}$ \\ 
+\rule{0pt}{2.5ex}\rule[-1.2ex]{0pt}{0ex}& $A_{K\pi}$ & $A_{KK}$ & $A_{\pi\pi}$ & $R_{KK}$ & $R_{\pi\pi}$ & $R^+_{K\pi}$ & $R^-_{K\pi}$ & $A_{K\pi\pi\pi}$ & $A_{\pi\pi\pi\pi}$ & $R_{\pi\pi\pi\pi}$ & $R^+_{K\pi\pi\pi}$ & $R^-_{K\pi\pi\pi}$ \\ 
  \hline
-$A_{K\pi}$ & 1 & 0.83  & -0.0067  & 0.72  & -0.0035  & 0.0071  & -0.025  & 0.94  & 0.84  & 0.00071  & -0.011  & -0.003  \\
-$A_{KK}$ &  & 1  & -0.028  & 0.65  & 0.014  & 0.014  & -0.021  & 0.83  & 0.77  & 0.0034  & -0.0029  & 0.0045  \\
-$A_{\pi\pi}$ &  &  & 1  & 0.0061  & 0.014  & 0.03  & 0.016  & -0.0073  & 0.0031  & -0.019  & -0.0056  & -0.0094  \\
-$R_{KK}$ & & & & 1  & -0.032  & -0.0054  & -0.02  & 0.72  & 0.68  & -0.0028  & -0.00051  & 0.011  \\
-$R_{\pi\pi}$ & & & &  & 1  & 0.057  & 0.079  & -0.0092  & 0.0012  & -0.01  & -0.017  & 0.0097  \\
-$R^+_{K\pi}$ & & & & &  & 1  & 0.079  & -0.0082  & 0.0037  & -0.0022  & -0.0098  & -0.0099  \\
-$R^-_{K\pi}$ & & & & & &  & 1  & -0.013  & -0.0063  & -0.012  & 0.0067  & 0.03  \\
-$A_{K\pi\pi\pi}$ & & & & & & &   & 1  & 0.84  & -0.005  & -0.01  & -0.015  \\
-$A_{\pi\pi\pi\pi}$ & & & & & & & &   & 1  & 0.036  & 0.0053  & 0.00047  \\
-$R_{\pi\pi\pi\pi}$ & & & & & & & & &   & 1  & 0.0089  & -0.0086  \\
-$R^-_{K3\pi}$ & & & & & & & & & &   & 1  & 0.045  \\
-$R^-_{K3\pi}$ & & & & & & & & & & &   & 1  \\
+$A_{K\pi}$ & 1 & 0.82 & $-$ & 0.72 & $-$ & 0.01 & $-$0.02{\color{white}$-$} & 0.94 & 0.84 & $-$ & $-$0.01{\color{white}$-$} & $-$ \\
+$A_{KK}$ & & 1 & $-$0.04{\color{white}$-$} & 0.65 & 0.02 & 0.01 & $-$0.02{\color{white}$-$} & 0.83 & 0.77 & $-$ & $-$ & $-$\\
+$A_{\pi\pi}$ & & & 1 & $-$ & $-$ & 0.05 & 0.03 & $-$0.01{\color{white}$-$} & $-$ & $-$0.01{\color{white}$-$} & $-$0.01{\color{white}$-$} & $-$0.01{\color{white}$-$} \\
+$R_{KK}$ & & & & 1 & $-$0.03{\color{white}$-$} & $-$ & $-$0.02{\color{white}$-$} & 0.72 & 0.68 & $-$ & $-$ & 0.01 \\
+$R_{\pi\pi}$ & & & & & 1 & 0.06 & 0.08 & $-$0.01{\color{white}$-$} & $-$ & $-$0.01{\color{white}$-$} & $-$0.02{\color{white}$-$} & 0.01 \\
+$R^+_{K\pi}$ & & & & & & 1 & 0.08 & $-$0.01{\color{white}$-$} & $-$ & $-$ & $-$0.01{\color{white}$-$} & $-$0.01{\color{white}$-$} \\
+$R^-_{K\pi}$ & & & & & &  & 1 & $-$0.01{\color{white}$-$} & $-$0.01{\color{white}$-$} & $-$0.01{\color{white}$-$} & 0.01 & 0.03 \\
+$A_{K\pi\pi\pi}$ & & & & & & & & 1 & 0.84 & $-$ & $-$0.01{\color{white}$-$} & $-$0.02{\color{white}$-$} \\
+$A_{\pi\pi\pi\pi}$ & & & & & & & & & 1 & 0.03 & 0.01 & $-$ \\
+$R_{\pi\pi\pi\pi}$ & & & & & & & & & & 1 & 0.01 & $-$0.01{\color{white}$-$} \\
+$R^+_{K\pi\pi\pi}$ & & & & & & & & & & & 1 & 0.05 \\
+\rule[-1.2ex]{0pt}{0ex}$R^-_{K\pi\pi\pi}$ & & & & & & & & & & & & 1 \\
 \hline 
-\end{tabular}}
-\caption{Systematic correlation matrix for the seven physics observables from the \CP fit to data. The matrix is symmetric so only the top half is shown.}
+\end{tabular}}}
+\caption{Correlation matrix of the systematic uncertainties for the twelve physics observables from the simultaneous fit to data. Only half of the symmetric matrix is shown.}
 \label{systematiccorrelations}
-\end{sidewaystable}
+\end{table}
 
 
 \clearpage

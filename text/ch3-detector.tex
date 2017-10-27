@@ -145,6 +145,7 @@ Events that pass HLT2 are written to storage at an event rate of about 3kHz. The
 \section{Reconstruction}
 
 \subsection{Track reconstruction}
+\label{sec:detector:tracks}
 
 Track reconstruction algorithms combine information of hits from different sub-detectors, e.g. \velo, TT, IT and OT. There are five catergories for track classification, shown in Figure \ref{tracktypes}:
 
@@ -171,6 +172,7 @@ The tracks are fitted to obatin a best estimate of the track parameters accounti
 %Discussion of DLL variables. Already in \rich section?
 
 \subsection{Stripping}
+\label{sec:detector:stripping}
 
 The events accepted by the trigger are written to storage. All processing that occurs after this point is known as ``offline''. These events are processed with more accurate alignment and calibration of the sub-detectors and more sophisticated reconstruction software than HLT. This offline processing stage is known as stripping. Each family of decays has its own stripping line, which refers to the reconstruction and selection of specified particles in the decay chain of interest. Various loose selection requirements are applied in the stripping line to reduce remove background event while reducing the processing time and storage requirements. An analysis initially involves taking events returned by the relevant stripping line and developing a more sophisticated selection procedure to further remove background events. The stripping lines used in this analysis are listed in Section \ref{sec:selection:strippingandtrigger}.
 

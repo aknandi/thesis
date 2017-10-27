@@ -13,16 +13,18 @@
 \section{Selection of \decay{\Bpm}{\D\Kstarpm} candidates}
 \label{sec:selection}
 
-In this section, the reconstruction and selection for the signal mode, \btodkst, \decay{\Kstarpm}{\KS\pipm}, in the \decay{\Dz}{hh} and \decay{\Dz}{hhhh} final states is described, where $h$ represents a kaon or a pion. The \pipm from the \Kstarpm decay is referred to as the bachelor particle. The selection is developed for the favoured \decay{\Dz}{\Km\pip} and then applied to the other \D decay modes. The data analysed in this thesis corresponds to 3\invfb of $pp$ collisions at $\sqrt{s} = 7\tev \text{ and } 8\tev$ collected in 2011 and 2012 (known as Run 1), and 1.8\invfb at $\sqrt{s} = 13\tev$ collected in 2015 and 2016 (known as Run 2). {\color{red}probably cover this in the detector chapter}
+In this section, the reconstruction and selection for the signal mode, \btodkst, \decay{\Kstarpm}{\KS\pipm}, in the \decay{\Dz}{hh} and \decay{\Dz}{hhhh} final states is described, where $h$ represents a kaon or a pion. The \pipm from the \Kstarpm decay is referred to as the bachelor particle. The selection is developed for the favoured \decay{\Dz}{\Km\pip} and then applied to the other \D decay modes. The data analysed in this thesis corresponds to 3\invfb of $pp$ collisions at $\sqrt{s} = 7\tev \text{ and } 8\tev$ collected in 2011 and 2012 (known as Run 1), and 1.8\invfb at $\sqrt{s} = 13\tev$ collected in 2015 and 2016 (known as Run 2).
 
 \subsection{Reconstruction and trigger requirements}
 \label{sec:selection:strippingandtrigger}
 
-\decay{\Bpm}{\D\Kstarpm}, \decay{\Kstarpm}{\KS\pipm} decays are recosntructed offline and stored in a centrally produced dataset in a stage known as stripping. {\color{red}describe stripping in detector chapter}
+\decay{\Bpm}{\D\Kstarpm}, \decay{\Kstarpm}{\KS\pipm} decays are recosntructed offline and stored in a centrally produced dataset in a stage known as stripping, described in Section \ref{sec:detector:stripping}.  
 
-In \lhcb\ \KS mesons can be reconstructed in two ways: the \velo using long tracks (LL), giving a better mass resolution, or using downstream tracks (DD), with the first hits being collected in the TT. As the \KS reconstruction types have differing resolutions and selection efficiencies, LL and DD candidates are treated as separated datasets throughout the selection and a slightly different selection is applied to each. {\color{red}probably cover this in the detector chapter}
+The \KS meson is reconstructed through its decay to two charged pions. Reconstructed tracks can be classified in to different types as described in Section \ref{sec:detector:tracks}. If the pions from the \KS decay leave sufficient hits in the \velo to be included in the track reconstruction they are called long tracks and the reconstructed \KS meson is referred to as LL. Due to the high boost from the $pp$ collision many \KS particles decay outside the \velo. If the pions from the \KS decay do not leave sufficient hits in the \velo, they are called downstream tracks and the reconstructed \KS meson is referred to as DD, with the first hits being recorded in the TT, which typically results in poorer mass resolution. These \KS reconstruction types, LL and DD, are treated as separate data samples and a slightly different selection is applied to each.
 
-$B^{\pm} \to DK^{*\pm}$ candidates were selected using stripping lines in the {\tt BHADRON} stripping stream, {\tt B2D0KsPiLLD2HHBeauty2CharmLine} and {\tt B2D0KsPiDDD2HHBeauty2CharmLine}. The stripping requirements are summarized in Table \ref{strippingrequirements}. These stripping lines also have the requirement that one of the following Hlt2 trigger lines must be fired: Hlt2Topo.*DecisionTIS, Hlt2Topo.*DecisionTOS, Hlt2IncPhi.*DecisionTIS or Hlt2IncPhi.*DecisionTOS.
+\decay{\Bpm}{\D\Kstarpm} candidates were selected using stripping lines in the {\tt BHADRON} stripping stream, named {\tt B2D0KsPiLLD2HHBeauty2CharmLine} and {\tt B2D0KsPiDDD2HHBeauty2CharmLine}. The stripping requirements for these lines are summarized in Table \ref{strippingrequirements}. The trigger decision for each candidate is catergorised as {\tt TOS} (Trigger On Signal) if the particles associated with the signal candidate triggered the event or {\tt TIS} (Trigger Independent of Signal) if other particle produced in the $pp$ interaction, that are not associated with the signal candidate, triggered the event. These stripping lines also have the requirement that one of the following Hlt2 trigger lines must be fired: Hlt2Topo.*DecisionTIS, Hlt2Topo.*DecisionTOS, Hlt2IncPhi.*DecisionTIS or Hlt2IncPhi.*DecisionTOS. The offline trigger requirements for this analysis are summarised in Table \ref{table:triggerrequirements}.
+
+%  At the hardware trigger, the \B candidates are required to satisfy {\tt L0Hadron TOS} or {\tt L0Global TIS}. At the software trigger level, \B candidates are required to satisfy {\tt Hlt1TrackAllL0 TOS} and {\tt Hlt2TopoNBodyBBDT TOS}, where $N = 2,3 \text{ or } 4$. 
 
 \begin{table}[h]
 \centering
@@ -57,30 +59,23 @@ Bachelor pion & Track $\chi^2$/ndof & $<$ 2.5 ($<$ 4 in S26) \\
 \label{strippingrequirements}
 \end{table}
 
-The {\tt DecayTreeFitter} (DTF) framework is used in this analysis to refit the entire decay chain of each \B candidate passing the stripping requirements, with one or more constraints imposed. During the refit, the best fit value of the four-momenta for each particle is found under the given constraints. The labels given by {\tt D0const} and {\tt KS0const} correspond to constraining the \D mass and \KS mass to their known values. The label {\tt PVconst} is used to indicate that the \B momentum vector direfction is constrained to be parallel to the vector joining the primary vertex (PV) to the \B decay vertex. The refitted \B mass used in this analysis is obtained after the refit with the {\tt D0const}, {\tt KS0const} and {\tt PVconst} constraints applied, which improved the \B mass resolution.
+\begin{table}
+\begin{tabular}{c|cc}
+& \runone & \runtwo \\
+\hline
+L0 & \multicolumn{2}{c}{{\tt L0HadronDecision\_TOS}} \\
+ & \multicolumn{2}{c}{\tt Bu\_L0Global\_TIS} \\
+HLT1 & {\tt Hlt1TrackAllL0Decision\_TOS} & {\tt Hlt1TrackMVADecision\_TOS} \\
+ &  & {\tt Hlt1TwoTrackMVADecision\_TOS} \\
+HLT2 & {\tt Hlt2TopoNBodyBBDTDecision\_TOS} & {\tt Hlt2TopoNBodyDecision\_TOS} 
+\end{tabular}
+\caption{Table summarising the trigger requirements}
+\label{table:triggerrequirements}
+\end{table}
 
-The trigger decision for each candidate is catergorised as {\tt TOS} (Trigger On Signal) if the particles associated with the signal candidate triggered the event or {\tt TIS} (Trigger Independent of Signal) if other particle produced in the $pp$ interaction, that are not associated with the signal candidate, triggered the event. At the hardware trigger, the \B candidates are required to satisfy {\tt L0Hadron TOS} or {\tt L0Global TIS}. At the software trigger level, \B candidates are required to satisfy {\tt Hlt1TrackAllL0 TOS} and {\tt Hlt2TopoNBodyBBDT TOS}, where $N = 2,3 \text{ or } 4$. {\color{red}describe trigger lines in detector chapter}
+The {\tt DecayTreeFitter} (DTF) framework is used in this analysis to refit the entire decay chain of each \B candidate passing the stripping requirements, with one or more constraints imposed. During the refit, the best fit value of the four-momenta for each particle is found under the given constraints. The labels given by {\tt D0const} and {\tt KS0const} correspond to constraining the \D mass and \KS mass to their known values. The label {\tt PVconst} is used to indicate that the \B momentum vector direction is constrained to be parallel to the vector joining the primary vertex (PV) to the \B decay vertex. The refitted \B mass used in this analysis is obtained after the refit with the {\tt D0const}, {\tt KS0const} and {\tt PVconst} constraints applied, which improved the \B mass resolution.
 
-
-%%
-%\begin{itemize}
-%\item {\tt L0HadronDecision\_TOS} OR {\tt Bu\_L0Global\_TIS}
-%\item \tt Hlt1TrackAllL0Decision\_TOS
-%\item \tt Hlt2Topo\{2,3 or 4\}BodyBBDTDecision\_TOS
-%\end{itemize}
-%%
-%Or the corresponding Run 2 triggers:
-%
-%\begin{itemize}
-%\item {\tt L0HadronDecision\_TOS} OR {\tt Bu\_L0Global\_TIS}
-%\item {\tt Hlt1TrackMVADecision\_TOS} OR {\tt Bu\_Hlt1TwoTrackMVADecision\_TOS}
-%\item \tt Hlt2Topo\{2,3 or 4\}BodyDecision\_TOS
-%\end{itemize}
-
-\subsection{Pre-selection}
-\label{sec:selection:pre-selection}
-
-Further offline selections are applied to candidates passing the reconstruction and trigger requirements in order to reduce the level of combinatoric background. Firstly, rectangular cuts are applied, followed by a multivariate selection, and finally PID requirements. The following rectangular cuts applied:
+At this point some reduction has been made in order to reduce to the dataset to a reasonable size for storage. However, the background levels are still very high, therefore a selection must be developed to achieve a signal peak with as many events as possible while removing the other events. Further offline selections are applied to candidates passing the reconstruction and trigger requirements in order to reduce the level of combinatoric background. Requirements on individual variables are applied, as well as a multivariate selection, and particle identification requirements. The following simple offline selection criteria are applied:
 
 \begin{itemize}
 \item 0 $<$ Bu DTF vertex fit $\chi^2$ $<$ 100
@@ -90,16 +85,18 @@ Further offline selections are applied to candidates passing the reconstruction 
 \item 15 MeV \KS mass window for LL candidates, 20 MeV for DD candidates
 \end{itemize}
 
+In order to significantly reduce the combinatorial background while retaining signal events, more sophisticated techniques need to be applied.
+
 \subsection{Multivariate analysis with a Boosted Decision Tree}
 \label{sec:selection:bdt}
 
-Various selection requirements can be placed on variables relating to particle in the decay chain. As these variables can have correlations, the separation power can be improved by using a multivariate analysis (MVA) method as opposed to linear selections on multiple variables. The MVA implemented in this analysis is a Boosted Decision Tree (BDT). Decision trees go through finding the best variable and value to split events in order ot separate signal and background, the process is repeated for each of the two subsets. This is repeated in order to build a tree, where the nodes are called leaves. If more than half of the weight of a leaf corresponds to signal, it is a signal leaf, otherwise it is a background leaf. Signal events on a background leaf and background events on a signal leaf are misclassified. In order to stablilise this process many trees can be built to construct a weighted average over all the trees. After each tree is built, the misclassified events are reweighted (boosted) and a new tree is build with the rewighted events. Each event receives a weight from -1 (most background-like) to +1 (most signal-like). 
+Various selection requirements can be placed on variables relating to particle in the decay chain. As these variables can have correlations, the separation power can be improved by using a multivariate analysis (MVA) method, which exploits these correlations, as opposed to linear selections on multiple variables. The MVA implemented in this analysis is a Boosted Decision Tree (BDT)~\cite{Breiman}. Decision trees go through finding the best variable and value to split events into two subsets in order to separate signal and background, the process is repeated for each of the two subsets. This is repeated in order to build a tree, where the nodes are called leaves. If more than half of the weight of a leaf corresponds to signal, it is a signal leaf, otherwise it is a background leaf. Signal events on a background leaf and background events on a signal leaf are misclassified. In order to stablilise this process many trees can be built to construct a weighted average over all the trees. After each tree is built, the misclassified events are reweighted (boosted) and a new tree is build with the rewighted events. Each event receives a weight from -1 (most background-like) to +1 (most signal-like). 
 
 \subsubsection{Training samples}
 
-A single Boosted Decision Tree (BDT)~\cite{Breiman} with the gradient boost (BDTG) method using the Toolkit for Multivariate Analysis (TMVA) framework is employed in order to reduce the combinatoric background level. A separate BDT is trained for LL and DD candidates, named BDTG\_LL and BDTG\_DD. The BDT is mainly based on topological variables and so insensitive as to whether the \D daughters are kaons or pions. Therefore, the same BDT is used for all of the two-body modes, trained using $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$, and the same BDT is used for all of the four-body modes, trained using $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$; a different BDT is used for the two-body and four-body modes. For the two body modes, simulated 2011 and 2012 samples for the decay $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$ with generator level cuts applied, detailed below, were used to provide a signal sample. High mass sideband region of the B mass (above 5600 MeV) in the favoured $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$ mode, from 2011 and 2012 data, was used as a sample of background combinatoric events. 
+A single Boosted Decision Tree (BDT) with the gradient boost (BDTG) method using the Toolkit for Multivariate Analysis (TMVA) framework~\cite{TMVA} is employed in order to reduce the combinatoric background level. A separate BDT is trained for LL and DD candidates, named BDTG\_LL and BDTG\_DD respectively. The BDTs are mainly based on topological variables, so as insensitive as to whether the \D daughters are kaons or pions. Therefore, the same BDT is used for all of the two-body modes, trained using $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$, and the same BDT is used for all of the four-body modes, trained using $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$; a different BDT is used for the two-body and four-body modes. For the two body modes, simulated 2011 and 2012 samples for the decay $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$ with generator level cuts applied, detailed below, were used to provide a signal sample. High mass sideband region of the B mass (above 5600 MeV) in the favoured $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$ mode, from 2011 and 2012 data, was used as a sample of background combinatoric events. 
 
-For $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$, the number of simulated events passing the stripping and going on to be used as a signal training sample was found to be low, which resulted in overtraining of the BDT. In order to deal with this problem MC was produced with generator level cuts such that significantly more events pass the stripping, giving a larger signal sample size to be used in training. The following generator level cuts were applied:
+Due to the five track final state the reconstruction efficiency of this decay mode is very low. For $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$, the number of simulated events passing the stripping and going on to be used as a signal training sample was found to be low, which resulted in overtraining of the BDT. In order to deal with this problem, a simulated sample was produced with generator level selection applied such that significantly more events pass the stripping, giving a larger signal sample size to be used in training. The following generator level selection was applied:
 
 \begin{itemize}
 \item{Bu $p\ >$ 50 GeV}
@@ -115,9 +112,11 @@ For $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D K^{*\pm}$, the number of simulated events 
 \item{\Dz daughters $p\ >$ 1.5 GeV}
 \end{itemize}
 
-These generator level cuts remove 89\% of events at generator level while keeping 78\% of LL candidates and 81\% of DD candidates. Not all generator level cuts are looser than those applied to the data in stripping, however the loss in good signal was deemed to be acceptable to be able to increase signal yields in the MC. Due to the \KS plus 3 track final state the reconstruction efficiency of this decay mode is very low.For $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$ BDT training Run 2 MC was produced. Run 2 MC can currently be produced in mDST format whereas Run 1 MC cannot. Therefore, a large amount of Run 2 MC was generated (10M events) in order to train the 4 body BDT and avoid overtraining. This allows training of the BDT without having to apply cuts to the sample at the generator level.
+The generator level selection removes 89\% of events at generator level while keeping 78\% of LL candidates and 81\% of DD candidates. Not all generator level selections are looser than those applied to the data in stripping, however the loss in good signal was deemed to be acceptable to be able to increase signal yields in the simulated sample. Signal efficiencies are calculated from simulated signal samples with no generator level selection applied.
 
-The events used to calculate signal efficiencies are simulated signal with no generator level cuts applied. For the four body modes, a signal sample of simulated 2015 and 2016 samples for the decay $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$ was used. High mass sideband region of the B mass (above 5600 MeV) in the favoured $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$ mode, from 2015 and 2016 data, was used as a sample of background combinatoric events. All samples used in training the BDTs are split into a training and testing sample before being used as an input in TMVA by separating odd and even event numbers.
+For $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$ BDT training simulated samples for \runtwo was produced. \runtwo MC can currently be produced in mDST format whereas \runone MC cannot. Therefore, a large \runtwo simulated sample was generated (10M events) in order to train the 4 body BDT and avoid overtraining. This allows training of the BDT without having to apply selections to the sample at the generator level. A signal sample of simulated 2015 and 2016 events for the decay $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$ was used. High mass sideband region of the B mass (above 5600 MeV) in the favoured $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D K^{*\pm}$ mode, from 2015 and 2016 data, was used as a sample of background combinatoric events. All samples used in training the BDTs are split into a training and testing sample before being used as an input to the multivariate algorithm.
+
+\subsubsection{Setup and implementation of the multivariate algoritm}
 
 Initial selection requirements are applied to the training samples to remove candidates that would not pass the final selection. This allows a more accurate discrimination between signal and background in data. The selection criteria on the training samples are:
 
@@ -162,8 +161,8 @@ Rank & LL variable & DD variable \\
 Rank & LL variable & DD variable \\
 \hline
 1 & log(\B refit \chisq) & log(\B refit \chisq) \\
-2 & log(\KS \chisqip) & \B ptasy 1.50 \\
-3 & \B ptasy 1.50 & log(\B \chisqip) \\
+2 & log(\KS \chisqip) & $A_{\pt}$ \\
+3 & $A_{\pt}$ & log(\B \chisqip) \\
 4 & log(\B \chisqip) & log(Bachelor \chisqip) \\
 5 & log(\D \chisqip) & \KS $p_T$ \\
 6 & log(\D daug kaon \chisqip) & log(\D \chisqip) \\
@@ -174,11 +173,9 @@ Rank & LL variable & DD variable \\
 11 & log(min \KS daug \chisqip) & - \\
 12 & log(max \D daug \chisqip) & - \\
 \end{tabular}
-\caption{Ranking for variables for BDTG\_LL and BDTG\_DD for the four-body BDTs}
+\caption{Ranking for variables for BDTG\_LL and BDTG\_DD for the four-body BDTs. The variable name $Bach$ refers to the bachelor particle, the pion coming from the \Kstarm. D daughter SS refers to the pion of the same sign of the kaon. Bu DTF $\chi^2/ndof$ is the $\chi^2$ per degree of freedom of the refitted B vertex given the DTF constaints, $A_{\pt}$ is the $p_T$ asymmetry of the B candidate (defined in Equation \ref{ptasy}) using a cone of radius 1.50, and for a given particle IP $\chi^2$ OWNPV is the difference in the vertex fit $\chi^2$ of the PV with and without the particle under consideration.}
 \label{BDTinputvariables4body}
 \end{table}
-
-%Table showing the input variables used in both the LL and DD BDT training. Variables in blue are only used in the 2-body BDT, whereas those in red are only used in the 4-body BDT. The variable name $Bach$ refers to the bachelor particle, the pion coming from the \Kstarm. D daughter SS refers to the pion of the same sign of the kaon. Bu DTF $\chi^2/ndof$ is the $\chi^2$ per degree of freedom of the refitted B vertex given the DTF constaints, Bu ptasy is the $p_T$ asymmetry of the B candidate (defined in Equation \ref{ptasy}) using a cone of radius 1.50, and for a given particle IP $\chi^2$ OWNPV is the difference in the vertex fit $\chi^2$ of the PV with and without the particle under consideration.
 
 \begin{figure}[tb]
 \includegraphics[width=\linewidth]{figures/selection/inputvariables_KPi_LL_run1_1.pdf}
@@ -224,32 +221,22 @@ Rank & LL variable & DD variable \\
 \label{BDTovertraining}
 \end{figure}
 
-Other selection strategies were explored. Multiple BDTs were investigated, by training and implementing a \KS BDT and a \Dz BDT followed by a B BDT. Two approaches were tried: one using the same set of variables in all three BDTs and one using variables relating to the \KS in the \KS BDT and variables relating to the \Dz in the \Dz BDT. These methods were found to have little or no improvement on the single BDT. Many other variables were investigated in the BDT, including kinematic variables of the \B and \D. These were found to give no significant improvement in BDT performance. A two-body BDT trained on Run 2 data and simulation was investigated to apply to Run 2 data, which did not result in any improvement in performance compared to the BDT trained on Run 1. Therefore, it was not considered necessary to have BDTs trained separately for Run 1 and Run 2.
+Other selection strategies were explored. Multiple BDTs were investigated, by training and implementing a \KS BDT and a \Dz BDT followed by a \B BDT, designed to select true \KS, \Dz and \B candidates respectively. Two approaches were tried: one using the same set of variables in all three BDTs and one using variables relating to the \KS in the \KS BDT and variables relating to the \Dz in the \Dz BDT. These methods were found to have little or no improvement on the single BDT. Many other variables were investigated in the BDT, including kinematic variables of the \B and \D. These were found to give no significant improvement in BDT performance. A two-body BDT trained on \runtwo data and simulation was investigated to apply to \runtwo data, which did not result in any improvement in performance compared to the BDT trained on \runone. Therefore, it was not considered necessary to have BDTs trained separately for \runone and \runtwo.
 
-\subsubsection{BDT performance and choice of working point}
+\subsubsection{Performance of the multivariate algoritm and choice of working point}
 
 The results obtained from training are applied to the testing sample in order to check for overtraining, which occurs when the classifier has learned statistical fluctuations present in the training sample. The results are shown in Figure \ref{BDTovertraining}. The training and testing distributions are in reasonable agreement, showing that the BDT is safe from overtraining effects.
 
-The BDT selections, in conjuction with the \Kstarm mass window and \KS helicity angle, were optimised to reduce the fit error on the physics observables, as detailed in Section \ref{sec:cpfit:optimisation}. Many toy studies were run to calculate the fit uncertainty for each selection. To optimise the selection for the GLW modes, the fit error was minimised for $A_{KK}$, $R_{KK}$, $A_{\pi\pi}$ and $R_{\pi\pi}$. The BDT selection for the ADS modes was optimised to minimise the fit errors in $R^+$ and $R^-$, as illustated in Figure \ref{adsoptimisation}. In cases when the figure of merits in these optimisation studies were not especially sensitive to changes in the selection, the selection giving the highest coherence (i.e most stringent requirement on the \Kstarm) was chosen and the BDT signal and background efficiencies were taken into account.
+The BDT selections, in conjuction with the \Kstarm mass window and \KS helicity angle, were optimised to reduce the fit error on the \CP observables, as detailed in Section \ref{sec:cpfit:optimisation}. Many toy studies were run to calculate the fit uncertainty for each selection. To optimise the selection for the GLW modes, the fit error was minimised for $A_{KK}$, $R_{KK}$, $A_{\pi\pi}$ and $R_{\pi\pi}$. The BDT selection for the ADS modes was optimised to minimise the fit errors in $R^+$ and $R^-$, as illustated in Figure \ref{adsoptimisation}. In cases when the figure of merits in these optimisation studies were not especially sensitive to changes in the selection, the selection giving the highest coherence (i.e most stringent requirement on the \Kstarm) was chosen and the BDT signal and background efficiencies were taken into account.
 
-For the two-body BDTs, a BDT selection of 0.6 is chosen for BDT\_LL and 0.7 for BDT\_DD for all D modes except the ADS mode. The ADS mode BDT selection is chosen to be 0.6 for BDT\_LL and 0.9 for BDT\_DD. This tighter BDT selection is justified in Figure \ref{adsoptimisation}. When applied to the $K\pi$ favoured mode in Run 1 the BDT selection gives a 95\% signal efficiency and 96\% background rejection for LL and 88\% signal efficiency and 94\% background rejection for DD. 
+For the two-body BDTs, a BDT selection of 0.6 is chosen for BDT\_LL and 0.7 for BDT\_DD for all D modes except the ADS mode. The ADS mode BDT selection is chosen to be 0.6 for BDT\_LL and 0.9 for BDT\_DD. This tighter BDT selection is justified in Figure \ref{adsoptimisation}. Averaged across the whole dataset used for the analysis, the BDT selection applied to the favoured \decay{\Bm}{\D(\Km\pip)\Kstarm} channel gives a signal efficiency of 95\% (90\%) and a background rejection of 94\% (95\%) for long (downstream) candidates. Similarly, 
 
-For the four-body modes the same optimisation point was chosen 0.6 for BDT\_LL and 0.7 for BDT\_DD for the \decay{\Dz}{\Kp\pim\pip\pim} \decay{\Dz}{\pi\pi\pi\pi} mode, and 0.6 for BDT\_LL and 0.9 for BDT\_DD for the \decay{\Dz}{\Kp\pim\pip\pim} mode. The optimisation point was verified by minimising the fit error in toys for $A_{K\pi\pi\pi}$, $R^+_{K\pi\pi\pi}$ and $R^-_{K\pi\pi\pi}$. The signal efficiencies of the BDT selection is given in Table \ref{bdteff}. 
+For the four-body modes the same optimisation point was chosen 0.6 for BDT\_LL and 0.7 for BDT\_DD for the \decay{\Dz}{\Kp\pim\pip\pim} \decay{\Dz}{\pi\pi\pi\pi} mode, and 0.6 for BDT\_LL and 0.9 for BDT\_DD for the \decay{\Dz}{\Kp\pim\pip\pim} mode. The optimisation point was verified by minimising the fit error in toys for $A_{K\pi\pi\pi}$, $R^+_{K\pi\pi\pi}$ and $R^-_{K\pi\pi\pi}$. Averaged across the whole dataset, the four-body favoured \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm} channel gives a signal efficiency of 95\% (93\%) and a background rejection of 96\% (97\%) for long (downstream) candidates.
 
 
-\subsection{Other cuts}
+\subsection{Further selection requirements}
 
 Some other selection requirements are implemented to isolate the signal candidates and tackle certain backgrounds.
-
-Figure \ref{helicitycut} shows that the MC distribution of the cosine of Ks helicity angle is asymmetric. Physically the Ks helicity angle is expected to follow a symmetric $cos^2\theta$ distribution, however the observed asymmetry in this variable, manifest in both data and MC, was found to be due to the momentum and transverse momentum cuts placed on the bachelor pion in the stripping line. Figure \ref{helictyasymmetry} illustrates this point.
-
-\begin{figure}[h]
-\includegraphics[width=\linewidth]{figures/helicityAngleAsymmetry.pdf}
-\put(-360,150) {(a)}
-\put(-150,150) {(b)}
-\caption{\KS helicity angle MC distribution at generator level with (a) no cuts applied, and (b) bachelor $p > 2500$ MeV and bachelor $p_T > 250$ MeV, as in the stripping line}
-\label{helictyasymmetry}
-\end{figure}
 
 \begin{itemize}
 \item The reconstructed \Dz mass must lie within 25 \mev of the known \Dz mass
@@ -267,12 +254,14 @@ Figure \ref{helicitycut} shows that the MC distribution of the cosine of Ks heli
 \subsection{Studies of peaking backgrounds}
 \label{sec:backgrounds}
 
-\subsubsection{Partially reconstructed $B \to D^*K^*$ decays}
+There are many backgrounds to be consisdered where certain particles in the decay are missed in the reconstrcution process, or incorrectly identified. These effects can result in backgrounds that form peaking stuctures in the \B mass spectrum, which are dangerous if they significantly affect the \B mass spectrum. These backgrounds must either be reduced to negligible levels using targeted selection choices, or correctly modelled and included in the fit to the invariant \B mass spectrum. This Section discusses each of the peaking backgrounds individually and the strategy employed to deal with them.
+
+\subsubsection{Partially reconstructed \boldmath$B \to D^*K^*$ decays}
 \label{sec:backgrounds:partreco}
 
 One of the major backgrounds in this analysis is from partially reconstructed \decay{\B}{\Dstar\Kstar} decays, discussed in detail in Section \ref{sec:massfit:partreco} and included in the mass fit.
 
-\subsubsection{Charmless backgrounds $B \to K^*hh$}
+\subsubsection{Charmless backgrounds \boldmath$B \to K^*hh$}
 \label{sec:backgrounds:charmless}
 
 \B decays that do not proceed via a \D meson contribute to the charmless background. This is a peaking background under the signal region which is expected to be uniform in \D mass. The flight distance significance of the \Dz in the z direction is defined as,
@@ -375,7 +364,7 @@ $\pi K \pi\pi$ & $0.0 \pm 10.6$ & $1.4 \pm 1.5$ \\
 
 The \Dz FD significance is required to exceed 2$\sigma$, therefore from Tables \ref{charmlessyields} and \ref{charmlessyieldsRun2} it can be seen that all charmless contributions are consistent with zero. The expected yields in the $K\pi$ favoured and $KK$ modes are significantly less than 1\% of the expected signal yield. However, the charmless contribution in the $\pi\pi$ mode could be significant. A systematic is assigned to the possible charmless contribution in the $\pi\pi$ mode, details are given in Section \ref{sec:systematics}. 
 
-\subsubsection{\decay{\B}{\D\pi\pi\pi}}
+\subsubsection{\boldmath \decay{\B}{\D\pi\pi\pi}}
 \label{sec:backgrounds:b2dpipipi}
 
 \decay{\B}{\D\pi\pi\pi} decays, with a branching fraction of $5.7 \times 10^{-3}$~\cite{PDG2014} (about 50 times the signal branching fraction), are expected to occur as a peaking background underneath the signal. In order to remove this background, events are selected with the requirement that the \KS has flown. For DD candidates this requirement is already satisfied, however for LL candidates the flight distance significance of the \KS in the z direction, with the equivalent definition as for \Dz given in Equation \ref{FDdefinition}, is required to exceed 5$\sigma$. 
@@ -396,7 +385,7 @@ The \decay{\B}{\D\pi\pi\pi} background is removed by taking the \KS mass sideban
 \subsubsection{Non-resonant $B \to DK_s\pi$}
 \label{sec:backgrounds:non-resonant}
 
-Non-resonant background is reduced by removing events in which the \KS\pion invariant mass is greater than 75 MeV from the nominal \Kstarpm mass. \decay{\Bpm}{\D\Kstarpm} is a Scalar $\to$ Scalar Vector decay, which means the \Kstarpm must be londitudially polarised, so the $K_s$ helicity angle of pure \D\Kstarpm events follows a $\cos^2\theta$ distribution, as shown in Figure \ref{helicitycut}, compared to the uniform distribution of non-resonant components. It can be seen from Figure \ref{helicitycut} that the \KS helicity angle distribution is not symmetric, this is discussed in detail in Appendix \ref{sec:app:helicityangle}. Removing events with an absolute value of $\cos^2\theta$ less than 0.3 improves the purity of \D\Kstarpm decays compared to non-resonant background.
+Non-resonant background is reduced by removing events in which the \KS\pion invariant mass is greater than 75 MeV from the nominal \Kstarpm mass. \decay{\Bpm}{\D\Kstarpm} is a Scalar $\to$ Scalar Vector decay, which means the \Kstarpm must be londitudially polarised, so the $K_s$ helicity angle of pure \D\Kstarpm events follows a $\cos^2\theta$ distribution, as shown in Figure \ref{helicitycut}, compared to the uniform distribution of non-resonant components. It can be seen from Figure \ref{helicitycut} that the \KS helicity angle distribution is not symmetric. Removing events with an absolute value of $\cos^2\theta$ less than 0.3 improves the purity of \D\Kstarpm decays compared to non-resonant background.
 
 \begin{figure}[h]
 \includegraphics[width=\linewidth]{figures/backgrounds/KsHelicityCut.pdf}
@@ -404,6 +393,16 @@ Non-resonant background is reduced by removing events in which the \KS\pion inva
 \put(-170,100) {(b)}
 \caption{MC distribution of the cosine of Ks helicity angle for (a) LL candidates and (b) DD candidates}
 \label{helicitycut}
+\end{figure}
+
+It can be observed from Figure \ref{helicitycut} that the \KS helicity angle distribution is not symmetric. Figure \ref{helictyasymmetry}(a) shows the \KS helicity angle distribution in a simulated signal sample with no generator level selection applied. This distribution is symmetric as expected. However, Figure \ref{helictyasymmetry}(b) shows the same distrbution but with momentum and transverse momentum selections placed on the bachelor pion that are present in the stripping line, which reproduces the oberved asymmetry. Therefore, the asymmetry in this variable, manifest in both data and simulation, is due to the momentum and transverse momentum selections placed on the bachelor pion in the stripping line.
+
+\begin{figure}[h]
+\includegraphics[width=\linewidth]{figures/helicityAngleAsymmetry.pdf}
+\put(-360,150) {(a)}
+\put(-150,150) {(b)}
+\caption{\KS helicity angle simulated sample distribution at generator level with (a) no selection applied, and (b) bachelor $p > 2500$ MeV and bachelor $p_T > 250$ MeV, as in the stripping line}
+\label{helictyasymmetry}
 \end{figure}
 
 It is necessary to estimate the fraction of non-resonant \decay{\B}{\D\KS\pi} in the signal candidates. Figure \ref{kshelicitycomparison} shows a comparison of \KS helicity angle and the \KS momentum between signal MC and sWeighted data. There is a discrepancy in both \KS helicity angle distribution and the \KS momentum distribution. The discrepancy in the momentum distribution was corrrected by reweighting the MC, the resulting helicity angle distribution is consistent with the data, as shown in Figure \ref{kshelicitycomparisonreweighted}.
@@ -703,7 +702,7 @@ Many other backgrounds have been looked into and have been found to be negligibl
 \end{itemize}
 
 
-\subsection{PID selection}
+\subsection{Particle identification requirements}
 \label{sec:selection:pid}
 
 The selection requirements are identical for each of the different D modes, $K\pi$, $KK$, $\pi\pi$ and $\pi K$, with the exception of the double misID veto. Therefore, it is essential to apply PID selection that efficiently distinguishes between pions and kaons. The PID cuts on the daughters of the D meson are designed so that no \decay{\Dz}{hh} candidate can appear in more than one category with a change in mass hypothesis. A PID requirement must be made on the bachelor pion in order to remove the \decay{\B}{\D\KS\kaon} background; this is discussed in more detail in Section \ref{sec:backgrounds:b2dkks}. 
@@ -723,55 +722,12 @@ A brief look at ProbNN variables was undertaken early on in the analysis but cut
 \label{pidoptimisation}
 \end{figure}
 
-\subsection{Multiple candidates}
-\label{sec:selection:multiplecandidates}
-
-The selection may produce more than one signal event from the same B candidate. The rate of these multiple candidates was calculated after the final selection and only considering candidates in the range of the \CP fit (refitted \B mass $>$ 5230 \mev), see Section \ref{sec:massfit:range} for details on the fit range. The results are shown in Tables \ref{multiplecandidatesRun1} and \ref{multiplecandidatesRun2}. The rate is so low that no action is taken to remove the multiple candidates. In the ADS mode where it would have a significant effect, there are no multiple candidates.
-
-\begin{table}[h]
-\centering
-\begin{tabular}{ccc}
-\hline
-& LL & DD \\
-\hline
-$K\pi$ & 0.005 (4) & 0.004 (9) \\
-$K\pi$ & 0.008 (2) & 0.005 (3) \\
-$KK$ & 0 (0) & 0 (0) \\
-$\pi\pi$ & 0 (0) & 0 (0) \\
-$\pi K$ & 0 (0) & 0 (0) \\
-$K\pi\pi\pi$ & 0 (0) & 0.026 (7) \\
-$\pi K\pi\pi$ & 0 (0) & 0.05 (1) \\
-\hline
-\end{tabular}
-\caption{Multiple candidate rate for Run1. The number in brackets is the actual number of multiple candidates}
-\label{multiplecandidatesRun1}
-\end{table}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{ccc}
-\hline
-& LL & DD \\
-\hline
-$K\pi$ & 0.005 (7) & 0.005 (19) \\
-$K\pi$ & 0.005 (2) & 0.004 (5) \\
-$KK$ & 0 (0) & 0.006 (1) \\
-$\pi\pi$ & 0 (0) & 0.011 (1) \\
-$\pi K$ & 0 (0) & 0 (0) \\
-$K\pi\pi\pi$ & 0 (0) & 0.012 (9) \\
-$\pi K\pi\pi$ & 0 (0) & 0 (0) \\
-\hline
-\end{tabular}
-\caption{Multiple candidate rate for Run 2. The number in brackets is the actual number of multiple candidates}
-\label{multiplecandidatesRun2}
-\end{table}
-
 \clearpage
 
-\section{Mass parameterisation of the favoured mode}
+\section{Mass parameterisation of the favoured modes}
 \label{sec:massfit}
 
-This section describes the mass parameterisation that is developed for the two and four-body favoured \D modes, namely \decay{\Bm}{\D(\Km\pip)\Kstarm} and \decay{\Bm}{\D(\Km\pip\pim\pip)\Kstarm}. The fit to data is performed on the refitted invariant mass of \B candidates. The aim is to parameterise the invariant \B mass to be used in the simultaneous fit described in Section \ref{ch:5-cpfit} to extract the \CP observables. There are three components considered in the parameterisation of the mass shape:
+This section describes the mass parameterisation that is developed for the two and four-body favoured \D modes, namely \kpi and \kpipipi. The fit to data is performed on the refitted invariant mass of \B candidates. The aim is to parameterise the invariant \B mass to be used in the simultaneous fit described in Section \ref{ch:5-cpfit} to extract the \CP observables. There are three components considered in the parameterisation of the mass shape:
 \begin{enumerate}
 \item Signal, \decay{\Bm}{\D\Kstarm} decays.
 \item Combinatoric background, where random tracks are combined in the reconstruction 
@@ -797,14 +753,14 @@ where
 \end{cases}
 \end{equation*}
 
-Fits to the refitted \B mass distributions have been compared between \runone and \runtwo simulated signal samples, the signal PDFs are shown in Figures \ref{signalfitcomparison2body}. These shapes are consistent between \runone and \runtwo, therefore signal shapes are shared in the simultaneous fit. Further comparisons are made between two- and four-body modes. Figure \ref{signalfitcomparisonRun1} compare the signal PDFs obtained from simulated samples between $K\pi$ and $K\pi\pi\pi$ for \runone samples. These are noticablely different and so $K\pi$ and $K\pi\pi\pi$ are associated with different signal shapes in the mass fit.
+Fits to the refitted \B mass distributions have been compared between \runone and \runtwo simulated signal samples, the signal PDFs are shown in Figures \ref{signalfitcomparison2body}. These shapes are consistent between \runone and \runtwo, therefore signal shapes are shared in the simultaneous fit. Further comparisons are made between two- and four-body modes. Figure \ref{signalfitcomparisonRun1} compare the signal PDFs obtained from simulated samples between \kpi and \kpipipi for \runone samples. These are noticablely different and so \kpi and \kpipipi are associated with different signal shapes in the mass fit.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{figures/fitComponents/signalMC_KPi_run1vsrun2.pdf}
 \put(-260,100) {(a)}
 \put(-110,100) {(b)}
-\caption{Comparison of $K\pi$ signal fit functions for \runone (blue) and \runtwo MC (red) for (a) LL candidates and (b) DD candidates}
+\caption{Comparison of \kpi signal fit functions for \runone (blue) and \runtwo simulated samples (red) for (a) LL candidates and (b) DD candidates}
 \label{signalfitcomparison2body}
 \end{figure}
 
@@ -813,7 +769,7 @@ Fits to the refitted \B mass distributions have been compared between \runone an
 \includegraphics[width=0.7\linewidth]{figures/fitComponents/signalMC_run1_KPivsKPiPiPi.pdf}
 \put(-260,100) {(a)}
 \put(-110,100) {(b)}
-\caption{Comparison of \runone signal fit functions for $K\pi$ (blue) and $K\pi\pi\pi$ (red) for (a) LL candidates and (b) DD candidates}
+\caption{Comparison of \runone signal fit functions for \kpi (blue) and \kpipipi (red) simulated samples for (a) LL candidates and (b) DD candidates}
 \label{signalfitcomparisonRun1}
 \end{figure}
 
@@ -829,7 +785,7 @@ For the signal shape in the mass fit, the tail parameters, $\alpha$ and $n$, are
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_DD_KPiPiPi.pdf}
 \put(-390,70) {(c)}
 \put(-180,70) {(d)}
-\caption{Fits to \runone and \runtwo simulated signal samples combined for (a) $K\pi$ LL, (b) $K\pi$ DD, (c) $K\pi\pi\pi$ LL, and (d) $K\pi\pi\pi$ DD}
+\caption{Fits to \runone and \runtwo simulated signal samples combined for (a) \kpi LL, (b) \kpi DD, (c) \kpipipi LL, and (d) \kpipipi DD}
 \label{signalfits}
 \end{figure}
 
@@ -837,7 +793,7 @@ For the signal shape in the mass fit, the tail parameters, $\alpha$ and $n$, are
 \centering
 \begin{tabular}{c|cc|cc}
 \hline
-& \multicolumn{2}{c}{$K\pi$} & \multicolumn{2}{c}{$K\pi\pi\pi$} \\
+& \multicolumn{2}{c}{\kpi} & \multicolumn{2}{c}{\kpipipi} \\
 & LL & DD & LL & DD\\
 \hline
 $\mu$ & $5279.12 \pm 0.15$ & $5279.30 \pm 0.09$ & $5279.62 \pm 0.12$ & $5279.50 \pm 0.19$ \\
@@ -848,7 +804,7 @@ $n$ & 1.0 (fixed) & 1.0 (fixed) & 1.0 (fixed) & 1.0 (fixed) \\
 $f_{cb}$ & $0.82 \pm 0.03$ & $0.84 \pm 0.02$ & $0.80 \pm 0.03$ & $0.81 \pm 0.04	$ \\
 \hline
 \end{tabular}
-\caption{Signal shape parameters obtained by a fit to \runone and \runtwo simulated signal samples combined for both $K\pi$ and $K\pi\pi\pi$. Parameter names are defined in Equation \ref{DCBshape}. All parameters except for the mean and width are fixed to these values in the mass fit}
+\caption{Signal shape parameters obtained by a fit to \runone and \runtwo simulated signal samples combined for both \kpi and \kpipipi. Parameter names are defined in Equation \ref{DCBshape}. All parameters except for the mean and width are fixed to these values in the mass fit}
 \label{signalparameters}
 \end{table}
 
@@ -1058,7 +1014,7 @@ $c^{Bd,\pi}_{\pm 1}$ & $0.38 \pm 0.14$ & $0.38 \pm 0.14$ \\[3mm]
 Other backgrounds investigated in this analysis, but not included in the mass fit are discussed in Section \ref{sec:backgrounds}.
 
 
-\subsection{Mass fit}
+\subsection{Mass fit to the data in the favoured modes}
 \label{sec:massfit:fit}
 
 A fit to the invariant B mass in the $K\pi$ and $K\pi\pi\pi$ favoured mode is performed using the shapes discussed in Sections \ref{sec:massfit:signal}, \ref{sec:massfit:combinatorial} and \ref{sec:massfit:partreco}. The total PDF is given by
@@ -1067,7 +1023,7 @@ P_{tot} = N_{sig}P_{sig} + N_{comb}P_{comb} + N_{dstkst}P_{dstkst} \text{ ,}
 \end{equation}
 where $N_{sig}$, $N_{comb}$ and $N_{dstkst}$ are the yields of the signal, combinatoric and partially reconstructed yields restpectively. The signal PDF, $P_{sig}$, is given by Equation~\ref{DCBshape}, the partially reconstructed PDF, $P_{dstkst}$, is given by Equation~\ref{partrecofunction} and the combintorial PDF is an exponential, $P_{comb} = e^{\beta m}$, where the slope parameter $\beta$ is able to vary in the fit. The yield of the signal and combinatoric shape, $N_{sig}$ and $N_{comb}$, are left to vary without constraint. Other parameters allowed to vary are the mean, $\mu$, and width, $\sigma$, of the signal PDF. The only parameters able to vary in the partially reconstructed background are the yield ratio between the 010 and 101 amplitudes, $f_0$, and the overall yield, $N_{dstkst}$.
 
-Figures \ref{massfitskpi} and \ref{massfitsk3pi} show the fits to the invariant B mass distribution in the $K\pi$ and $K\pi\pi\pi$ favoured mode respectively for LL and DD candidates in both Run 1 and Run 2. The estimated $K\pi$ signal yield extracted from these fits for Run 1 is $220 \pm 16$ for LL and $505 \pm 24$ for DD, and for Run 2 is $388 \pm 21$ for LL and $901 \pm 33$ for DD. The fit results are shown in Table \ref{fitresultskpi}. For the $K\pi\pi\pi$ mode, the estimated signal yield extracted from these fits for Run 1 is $87 \pm 10$ for LL and $205 \pm 16$ for DD, and for Run 2 is $215 \pm 15$ for LL and $516 \pm 25$ for DD. The fit results are shown in Table \ref{fitresultsk3pi}.
+Figures \ref{massfitskpi} and \ref{massfitsk3pi} show the fits to the invariant B mass distribution in the \kpi and \kpipipi favoured mode respectively for LL and DD candidates in both Run 1 and Run 2. The estimated \kpi signal yield extracted from these fits for Run 1 is $220 \pm 16$ for LL and $505 \pm 24$ for DD, and for Run 2 is $388 \pm 21$ for LL and $901 \pm 33$ for DD. The fit results are shown in Table \ref{fitresultskpi}. For the \kpipipi mode, the estimated signal yield extracted from these fits for Run 1 is $87 \pm 10$ for LL and $205 \pm 16$ for DD, and for Run 2 is $215 \pm 15$ for LL and $516 \pm 25$ for DD. The fit results are shown in Table \ref{fitresultsk3pi}.
 
 \begin{figure}
 \centering
@@ -1081,7 +1037,7 @@ Figures \ref{massfitskpi} and \ref{massfitsk3pi} show the fits to the invariant 
 \vspace{-12pt}
 \hfill
 \subfloat[Run 2 DD]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_DD_KPi_run2.pdf}}
-\caption{Fits to the invariant B mass distribution in the $K\pi$ favoured mode}
+\caption{Fits to the invariant B mass distribution in the \kpi favoured mode}
 \label{massfitskpi}
 \end{figure}
 
@@ -1097,12 +1053,13 @@ Figures \ref{massfitskpi} and \ref{massfitsk3pi} show the fits to the invariant 
 \vspace{-12pt}
 \hfill
 \subfloat[Run 2 DD]{\includegraphics[width=0.7\linewidth]{figures/fitComponents/massFit_DD_KPiPiPi_run2.pdf}}
-\caption{Fits to the invariant B mass distribution in the $K\pi$ favoured mode}
+\caption{Fits to the invariant B mass distribution in the \kpipipi favoured mode}
 \label{massfitsk3pi}
 \end{figure}
 
 \begin{table}[h]
 \centering
+\resizebox{\textwidth}{!}{
 \begin{tabular}{l|cc|cc}
 \hline
 & \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
@@ -1116,13 +1073,14 @@ $N_{dstkst}$ & $338 \pm 23$ & $810 \pm 36$ & $654 \pm 31$ & $1397 \pm 49$ \\
 $N_{sig}$ & $220 \pm 16$ & $505 \pm 24$ & $388 \pm 21$ & $901 \pm 33$ \\
 $\sigma$ & $10.2 \pm 0.7$ & $11.5 \pm 0.5$ & $12.2 \pm 0.6$ & $11.5 \pm 0.4$ \\
 \hline
-\end{tabular}
-\caption{Fit results from the $K\pi$ favoured mode for LL and DD candidates, corresponding to the fits in Figure \ref{massfitskpi}. The parameter $\beta$ is the combinatoric background slope, $f_0$ is the yield ratio between 010 and 101 helicity amplitudes, $\sigma$ is the floating width of the signal shape, and $N_{sig}$, $N_{comb}$ and $N_{dstkst}$ are the yields of signal, combinatoric background and partially reconstructed decays respectively}
+\end{tabular}}
+\caption{Fit results from the \kpi favoured mode for LL and DD candidates, corresponding to the fits in Figure \ref{massfitskpi}. The parameter $\beta$ is the combinatoric background slope, $f_0$ is the yield ratio between 010 and 101 helicity amplitudes, $\sigma$ is the floating width of the signal shape, and $N_{sig}$, $N_{comb}$ and $N_{dstkst}$ are the yields of signal, combinatoric background and partially reconstructed decays respectively}
 \label{fitresultskpi}
 \end{table}
 
 \begin{table}[h]
 \centering
+\resizebox{\textwidth}{!}{
 \begin{tabular}{l|cc|cc}
 \hline
 & \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
@@ -1136,8 +1094,8 @@ $N_{dstkst}$ & $154 \pm 15$ & $317 \pm 24$ & $342 \pm 23$ & $914 \pm 40$ \\
 $N_{sig}$ & $102 \pm 10$ & $226 \pm 16$ & $244 \pm 16$ & $578 \pm 27$ \\
 $\sigma$ & $11.4 \pm 1.0$ & $11.3 \pm 0.8$ & $12.9 \pm 0.8$ & $13.1 \pm 0.6$ \\
 \hline
-\end{tabular}
-\caption{Fit results from the $K\pi\pi\pi$ favoured mode for LL and DD candidates, corresponding to the fits in Figure \ref{massfitsk3pi}. The parameter $\beta$ is the combinatoric background slope, $f_0$ is the yield ratio between 010 and 101 helicity amplitudes, $\sigma$ is the floating width of the signal shape, and $N_{sig}$, $N_{comb}$ and $N_{dstkst}$ are the yields of signal, combinatoric background and partially reconstructed decays respectively}
+\end{tabular}}
+\caption{Fit results from the \kpipipi favoured mode for LL and DD candidates, corresponding to the fits in Figure \ref{massfitsk3pi}. The parameter $\beta$ is the combinatoric background slope, $f_0$ is the yield ratio between 010 and 101 helicity amplitudes, $\sigma$ is the floating width of the signal shape, and $N_{sig}$, $N_{comb}$ and $N_{dstkst}$ are the yields of signal, combinatoric background and partially reconstructed decays respectively}
 \label{fitresultsk3pi}
 \end{table}
 
@@ -1147,9 +1105,9 @@ An additional source of background coming from the decay \decay{\Lb}{\Lc(pK\pip)
 \subsection{Choice of fit range}
 \label{sec:massfit:range}	
 
-Fixing the relative yields for the partially reconstructed shapes, as in Table \ref{fixedyieldratios}, is possible only under the assumption that \CP violation is negligible. This is a fair assumption for the favoured \decay{\Dz}{\Km\pip} decay, however in the other \D modes, for example \decay{\Dz}{\Kp\Km}, there is expected \CP violation for which the parameters are entirely unknown. Therefore, it is not possible make any constraints at all in these modes. The fit that would result from fitting six individual yields with an order of magnitude less data would be unstable and this lack of constraint in the low mass region would lead to a large amount of freedom in the combinatoric, significantly affecting the signal yield. 
+Fixing the relative yields for the partially reconstructed shapes, as in Table \ref{fixedyieldratios}, is possible only under the assumption that \CP violation is negligible. This is a fair assumption for the favoured \kpi decay, however in the other \D final states, for example \pik, there is expected \CP violation for which the parameters are entirely unknown. Therefore, it is not possible make any constraints at all in these modes. The fit that would result from fitting six individual yields with an order of magnitude less data would be unstable and this lack of constraint in the low mass region would lead to a large amount of freedom in the combinatoric, significantly affecting the signal yield. 
 
-The overlap of the partially reconstructed and signal peaks is very small. There are a number of advantages to raising the lower range of the mass parameterisation up to 5230 \mev, which only removes 0.4\% of signal. The advantages include avoiding the need to fit the various partially reconstructed yields in each of the other D decays modes. These cannot use the same assumptions and fractions as determined in the Cabibbo-favoured mode due to expected CP violation. Further benefits are that low level broad backgrounds that may be present in the range 4900 - 5200 \mev do not need to considered as sources of systematics uncertainty. The shape and yield of the small amount of partially reconstructed background present in all \D decay categories above 5230 \mev is determined and fixed from the fit of data with the Cabibbo-favoured decay, taking into account the smaller branching fractions of the $D$ decays. It is less than an event for all the CP violating modes. Due to the assumptions present in the initial fit, uncertainties in the yield and shape and possible asymmetries in distribution between \Bp and \Bm are evaluated as systematic uncertainties. This systematic uncertainty is dealt with in Section \ref{sec:systematics:partreco}.
+The overlap of the partially reconstructed and signal peaks is very small. There are a number of advantages to raising the lower range of the mass parameterisation up to 5230 \mev, which only removes 0.4\% of signal. The advantages include avoiding the need to fit the various partially reconstructed yields in each of the other D decays modes. These cannot use the same assumptions and fractions as determined in the Cabibbo-favoured mode due to expected CP violation. Further benefits are that low level broad backgrounds that may be present in the range 4900 - 5200 \mev do not need to considered as sources of systematics uncertainty. The shape and yield of the small amount of partially reconstructed background present in all \D decay categories above 5230 \mev is determined and fixed from the fit of data with the Cabibbo-favoured decay, taking into account the smaller branching fractions of the \D decays. It is less than an event for all the CP violating modes. Due to the assumptions present in the initial fit, uncertainties in the yield and shape and possible asymmetries in distribution between \Bp and \Bm are evaluated as systematic uncertainties. This systematic uncertainty is dealt with in Section \ref{sec:systematics:partreco}.
 
 
 \clearpage

@@ -10,7 +10,7 @@ There is no one who loves pain itself, who seeks after it and wants to have it, 
 
 \minitoc
 
-The \CP observables measured in this analysis can be used to determine the physics parameters, $r_B$, $\delta_B$, \Pgamma and $\kappa$, via Eqs.~\ref{exp_Acp}-\ref{exp_Rpm4body}. For this analysis, $\kappa$ is estimated as described in Section \ref{sec:interpretation:coherence}, and used as an extra constraint when determining $r_B$, $\delta_B$ and \Pgamma. The variations in acceptance across the four-body phase space and its effect on the intepretation is considered in Section \ref{sec:interpretation:inputs}. Section \ref{sec:interpretation:gammadini} discusses the determination of the physics parameters: $r_B$, $\delta_B$ and \Pgamma.
+The \CP observables measured in this analysis can be used to determine the physics parameters, $r_B$, $\delta_B$, \Pgamma and $\kappa$, via Eqs.~\ref{exp_Acp} - \ref{exp_Rpm4body}. For this analysis, $\kappa$ is estimated as described in Section \ref{sec:interpretation:coherence}, and used as an extra constraint when determining $r_B$, $\delta_B$ and \Pgamma. The variations in acceptance across the four-body phase space and its effect on the intepretation is considered in Section \ref{sec:interpretation:inputs} and Section \ref{sec:interpretation:gammadini} discusses the determination of the physics parameters: $r_B$, $\delta_B$ and \Pgamma. Finally, Section \ref{sec:interpretation:futuresensitivity} discusses the expected sensitivity of the \btodkst channel in the future with an increased dataset.
 
 \section{Coherence factor}
 \label{sec:interpretation:coherence}
@@ -218,8 +218,7 @@ To assess the effects of small varaition in the four-body phase space for $K\pi\
 \label{sec:interpretation:gammadini}
 
 The physics observables can be used to get a handle on the physics parameters of interest: $r_B$, $\delta_B$ and \Pgamma. 
-The results of the physics observables in the \CP fit, given in Table \ref{cpfitresultsphysics}, can be related to the physics parameters via Equations ~\ref{exp_Acp} - ~\ref{exp_Rpm4body}. The coherence factor is used as determined in the previous section. Further external parameters are required are $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $\kappa_{4\pi}$ and $\kappa_{K3\pi}$. The parameters $\kappa_{4\pi}$ and $\kappa_{K3\pi}$ are to account for the fact that the four-body modes are not pure \CP or pure ADS modes. These parameters are measured in terms of the fractional \CP content of the decay \decay{\Dz}{\pip\pim\pip\pim}, $F_{CP}$, where $\kappa_{4\pi} = 2F_{CP} - 1$, and the coherence factor for the \decay{\Dz}{\Km\pip\pim\pip} decay, $R_{K3\pi} = \kappa_{K3\pi}$. For all these HFAG provides the latest values, uncertainties and correlations.
-The physics observables and other parameters are combined using the gammadini package. This framework performs a minimisation. The physics parameters involved are $r_B, \delta_B, \gamma, \kappa, r_D^{K\pi}, \delta_D^{K\pi}, r_D^{K3\pi}, \delta_D^{K3\pi}, \kappa_{4\pi}, \kappa_{K3\pi}$ where $\kappa, r_D^{K\pi}, \delta_D^{K\pi}, r_D^{K3\pi}, \delta_D^{K3\pi}, \kappa_{4\pi}, \kappa_{K3\pi}$ are constrained to their determined/measured values. 
+The results of the physics observables in the \CP fit, given in Table \ref{cpfitresultsphysics}, can be related to the physics parameters via Equations ~\ref{exp_Acp} - ~\ref{exp_Rpm4body}. The coherence factor is used as determined in the previous section. The parameters $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $\kappa_{K3\pi}$ and $F_{4\pi}$ are also required as external inputs and are taken from Ref.~\cite{HFAG,charmk3pi,LHCb-PAPER-2015-057,charm4pi}. The parameters $F_{4\pi}$ and $\kappa_{K3\pi}$ are to account for the fact that the four-body modes are not pure \CP or pure ADS modes. The physics observables and other parameters are combined using the gammadini package. This framework performs a minimisation. The physics parameters involved are $r_B, \delta_B, \gamma, \kappa, r_D^{K\pi}, \delta_D^{K\pi}, r_D^{K3\pi}, \delta_D^{K3\pi}, F_{4\pi}, \kappa_{K3\pi}$ where $\kappa, r_D^{K\pi}, \delta_D^{K\pi}, r_D^{K3\pi}, \delta_D^{K3\pi}, F_{4\pi}, \kappa_{K3\pi}$ are constrained to their determined/measured values. 
 A global $\chi^2$ minimisation is performed where
 \begin{equation}
 \chi^2 = \sum_i \chi^2_i = (x(\theta) - x_0)^TV_0^{-1}(x(\theta)-x_0)
@@ -227,7 +226,9 @@ A global $\chi^2$ minimisation is performed where
 In this expression, $x(\theta)$ is the set of observables caluculated from the fundamental set of paraemters $\theta$ and $x_0$ are the measured values. $V_0$ is the covariance matrix.
 The sensitivity of a given parameter is determined by calculating the $\chi^2$ at fixed points in parameter space. The difference between this $\chi^2$ value and that of the global minimum, quantifies the confidence in the global minimum. 
 
-The results of the fit parameters is shown in Table \ref{gammadinifit}. Figures \ref{gammadiniplots2body} and \ref{gammadiniplotsallmodes} give the results as 2D contour plots of $r_B$ versus \Pgamma and $\delta_B$ versus \Pgamma. Figure \ref{gammadiniplots2body} shows the contour plots using the two-body modes only and Figure \ref{gammadiniplotsallmodes} show the contour plots using the observables from both the two- and four-body decays. The addition of the four-body modes slight improves the constraints on the physics parameters, but in particular it provides additional distinction between the two minima. The nominal expected value of $\gamma \sim 70^\circ$ is consistent with the data at less than $2\sigma$. As expected by assuming $\gamma=70^\circ$ there is a solution of $\delta_B$ that is consistent with being small and in the first quadrant. The preferred value of $r_B$ is also quite consistent with expectation of being similar to that of $B \to DK \sim 0.1$.
+Using the measured values of the \CP observables, their uncertainties and the covariance matrices, a global $\chi^2$ minimisation is performed, resulting in a minimum $\chi^2$ of 3.0 with 9 degrees of freedom. A scan of physics parameters is performed for a range of values and the difference in $\chi^2$ between the parameter scan values and the global minimum, $\Delta\chi^2$, is evaluated. The confidence level for any pair of parameters is calculated assuming that these are normally distributed, which enables the $\Delta \chi^2 = 2.30,\ 6.18,\ 11.8$ contours to be drawn, corresponding to 68.3\%, 95.5\%, 99.7\% confidence levels, respectively. 
+
+The results of the fit parameters is shown in Table \ref{gammadinifit}. Figures \ref{gammadiniplots2body} and \ref{gammadiniplotsallmodes} give the results as 2D contour plots of $r_B$ versus \Pgamma and $\delta_B$ versus \Pgamma. Figure \ref{gammadiniplots2body} shows the contour plots using the two-body modes only and Figure \ref{gammadiniplotsallmodes} show the contour plots using the observables from both the two- and four-body decays. The addition of the four-body modes slight improves the constraints on the physics parameters, but in particular it provides additional distinction between the two minima. The data are consistent with the value of $\gamma$ indicated by previous measurements~\cite{LHCb-PAPER-2016-032, CKMFitter}, $\sim 70^\circ$, and result in a value of $r_B = 0.11 \pm 0.02$. This value of $r_B$ is determined at the point where the global $\chi^2$ of the fit is minimised.
 
 Calculating the values of $r_B$, $\delta_B$ and \Pgamma from running 100 pseudoexperiments gives values of:
 \begin{align*}
@@ -273,6 +274,9 @@ $F_{CP}$ & 0.74 & -0.03 & 0.03
 \caption{Results of fit parameters}
 \label{gammadinifit}
 \end{table}
+
+\section{Expected future sensitivity to $r_B$, $\delta_B$ and \Pgamma}
+\label{sec:interpretation:futuresensitivity}
 
 
 \clearpage
