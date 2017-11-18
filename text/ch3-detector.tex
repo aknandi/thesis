@@ -9,6 +9,8 @@ There is no one who loves pain itself, who seeks after it and wants to have it, 
 
 \minitoc
 
+{\color{red} Need figures for tracker, RICH and calorimeter. And more about performance}
+
 The Large Hadron Collider (LHC) is the worlds largest and most powerful particle accelerator, near Geneva, Switzerland. The LHC ring is 27km in circumference, located 100m underground and consists of a series of superconducting magnets and accelerating modules to boost the particles energy. Two high energy proton or heavy ion beams travel in opposite directions at energies up to $\sqrt{s}=13\tev$. Hydrogen atoms are ionised to obtain protons, which get accelarated in stages through various parts of the LHC accelerator complex, as shown in Figure \ref{lhcdiagram}. Firstly, the protons are accelerated in Linac 2 to energies of 50\mev, followed by the Proton Syncrotron Booster (PSB), the Proton Syncrotron (PS) and the Super Proton Syncrotron (SPS), accelerating the protons to 1.4\gev, 25\gev and 450\gev respectively. Finally, they are injected into the LHC, reaching energies of up to $\sqrt{s}=13\tev$. Two proton beams are injected in opposite directions and focussed to collide at four locations around the LHC ring. These locations are where the four main particle physics detector are located, the Large Hadron Collider beauty (\lhcb) experiment as well as \atlas, \cms and \alice.
 
 \begin{figure}
@@ -71,10 +73,11 @@ The TT and IT are constrcuted from silicon microstrip detectors. The TT is a pla
 
 The dipole magnet enables the momentum of charged particles to be measured by bending the trajectory of the particles in the horizontal plane. Since positively and negatively charged particles will bend in opposite directions, a charge detection asymmetry can result if the left and right halves of the detector have different tracking efficiencies. This would affect CP violation studies, such as the one descibed in this thesis, which involve the measurements of charge asymmetries. Hence, to minimise systematics, the magnetic field direction is reversed regularly when taking data.
 
+In \runone, the efficiency of the OT to detect a hit in the central half of the straw is estimated to be 99.2\%, and the position resolution is determined to be approximately 200\mum~\cite{LHCb-DP-2013-003}. 
 Performance~\cite{LHCb-DP-2013-002, LHCb-DP-2013-003}
+%1412.6352 Fig 15,16,17
 
-Different reconstructed track types
-
+	
 \section{The \rich detectors}
 
 The two \rich detectors (RICH 1 and RICH 2)~\cite{LHCb-DP-2012-003} are required for the identification of charged hadrons, specifically pions, kaons and protons. The decay modes of \bquark- and \cquark- flavoured hadrons involve hadronic multibody final states, making good particle identification of hadrons vital for reducing the combinatoric background. These detectors utilise the idea that Cherenkov radiation is produced whenever a charged particle, of velocity $v$, travelling through a dielectric medium, of refractive index $n$, exceeds the speed of light, $c$, in that medium. This produces a cone of light with an opening angle of $\theta_{CK}$ relative to direction of the particle's propagation, where $\theta_{CK} = \frac{1}{n\beta}$, where $\beta = v/c$. By measuring $\theta_{CK}$ as well as momentum information from the magnet and tracking systems, a mass hypothesis can be determined, as shown in Figure \ref{richseparation}.
@@ -154,6 +157,7 @@ Track reconstruction algorithms combine information of hits from different sub-d
 \caption{Schematic diagram of the different tracking sub-detectors (\velo, TT, T-stations) and the different categories of reconstructed tracks (long, downstream ,upstream, \velo, T tracks).}
 \label{tracktypes}
 \end{figure}
+%1412.6352 figure 14
 
 \begin{itemize}
 \item \textbf{Long tracks} traverse the entire tracking system from the \velo to the T-stations. These tracks have the most precise momentum measurement as they have experienced the full magnetic field.

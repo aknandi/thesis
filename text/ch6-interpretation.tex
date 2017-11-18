@@ -218,8 +218,7 @@ To assess the effects of small varaition in the four-body phase space for $K\pi\
 \label{sec:interpretation:gammadini}
 
 The physics observables can be used to get a handle on the physics parameters of interest: $r_B$, $\delta_B$ and \Pgamma. 
-The results of the physics observables in the \CP fit, given in Table \ref{cpfitresultsphysics}, can be related to the physics parameters via Equations ~\ref{exp_Acp} - ~\ref{exp_Rpm4body}. The coherence factor is used as determined in the previous section. The parameters $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $\kappa_{K3\pi}$ and $F_{4\pi}$ are also required as external inputs and are taken from Ref.~\cite{HFAG,charmk3pi,LHCb-PAPER-2015-057,charm4pi}. The parameters $F_{4\pi}$ and $\kappa_{K3\pi}$ are to account for the fact that the four-body modes are not pure \CP or pure ADS modes. The physics observables and other parameters are combined using the gammadini package. This framework performs a minimisation. The physics parameters involved are $r_B, \delta_B, \gamma, \kappa, r_D^{K\pi}, \delta_D^{K\pi}, r_D^{K3\pi}, \delta_D^{K3\pi}, F_{4\pi}, \kappa_{K3\pi}$ where $\kappa, r_D^{K\pi}, \delta_D^{K\pi}, r_D^{K3\pi}, \delta_D^{K3\pi}, F_{4\pi}, \kappa_{K3\pi}$ are constrained to their determined/measured values. 
-A global $\chi^2$ minimisation is performed where
+The results of the physics observables in the \CP fit, given in Table \ref{cpfitresultsphysics}, can be related to the physics parameters via Equations ~\ref{exp_Acp} - ~\ref{exp_Rpm4body}. The coherence factor is used as determined in the previous section. The parameters $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $\kappa_{K3\pi}$ and $F_{4\pi}$ are also required as external inputs and are taken from Ref.~\cite{HFAG,charmk3pi,LHCb-PAPER-2015-057,charm4pi}. The four-body \D decay mode \decay{\D}{\pip\pim\pip\pim} is an approximate \CP eigenstate, although as it is not a pure \CP eigenstate its sensitivity to \Pgamma is reduced. The parameter $F_{4\pi} \sim 0.75$~\cite{charm4pi} is the \CP-even fraction, which accounts for the dilution effect. Two-body \decay{\D}{\Kmp\pipm} decays are characterised by a single strong phase, however for multibody \decay{\D}{\Kmp\pipm\pimp\pipm} decays the strong phase varies over the phase space. By averaging the strong phase variation the interference effects are diluted, which is accounted for by the parameter $\kappa_{K3\pi}$. The physics observables and other parameters are combined using the gammadini package. This framework performs a minimisation. The physics parameters involved are $r_B, \delta_B, \gamma, \kappa, r_D^{K\pi}, \delta_D^{K\pi}, r_D^{K3\pi}, \delta_D^{K3\pi}, F_{4\pi}, \kappa_{K3\pi}$ where $\kappa, r_D^{K\pi}, \delta_D^{K\pi}, r_D^{K3\pi}, \delta_D^{K3\pi}, F_{4\pi}, \kappa_{K3\pi}$ are constrained to their previously determined values. A global $\chi^2$ minimisation is performed where
 \begin{equation}
 \chi^2 = \sum_i \chi^2_i = (x(\theta) - x_0)^TV_0^{-1}(x(\theta)-x_0)
 \end{equation}
@@ -228,29 +227,27 @@ The sensitivity of a given parameter is determined by calculating the $\chi^2$ a
 
 Using the measured values of the \CP observables, their uncertainties and the covariance matrices, a global $\chi^2$ minimisation is performed, resulting in a minimum $\chi^2$ of 3.0 with 9 degrees of freedom. A scan of physics parameters is performed for a range of values and the difference in $\chi^2$ between the parameter scan values and the global minimum, $\Delta\chi^2$, is evaluated. The confidence level for any pair of parameters is calculated assuming that these are normally distributed, which enables the $\Delta \chi^2 = 2.30,\ 6.18,\ 11.8$ contours to be drawn, corresponding to 68.3\%, 95.5\%, 99.7\% confidence levels, respectively. 
 
-The results of the fit parameters is shown in Table \ref{gammadinifit}. Figures \ref{gammadiniplots2body} and \ref{gammadiniplotsallmodes} give the results as 2D contour plots of $r_B$ versus \Pgamma and $\delta_B$ versus \Pgamma. Figure \ref{gammadiniplots2body} shows the contour plots using the two-body modes only and Figure \ref{gammadiniplotsallmodes} show the contour plots using the observables from both the two- and four-body decays. The addition of the four-body modes slight improves the constraints on the physics parameters, but in particular it provides additional distinction between the two minima. The data are consistent with the value of $\gamma$ indicated by previous measurements~\cite{LHCb-PAPER-2016-032, CKMFitter}, $\sim 70^\circ$, and result in a value of $r_B = 0.11 \pm 0.02$. This value of $r_B$ is determined at the point where the global $\chi^2$ of the fit is minimised.
-
-Calculating the values of $r_B$, $\delta_B$ and \Pgamma from running 100 pseudoexperiments gives values of:
+The results of the fit parameters is shown in Table \ref{gammadinifit}. Figures \ref{gammadiniplots2body} and \ref{gammadiniplotsallmodes} give the results as 2D contour plots of $r_B$ versus \Pgamma and $\delta_B$ versus \Pgamma. Figure \ref{gammadiniplots2body} shows the contour plots using the two-body modes only and Figure \ref{gammadiniplotsallmodes} show the contour plots using the observables from both the two- and four-body decays. The addition of the four-body modes slight improves the constraints on the physics parameters, but in particular it provides additional distinction between the two minima. The data are consistent with the value of $\gamma$ indicated by previous measurements~\cite{LHCb-PAPER-2016-032, CKMFitter}, $\sim 70^\circ$. The values of $r_B$, $\delta_B$ and \Pgamma are determined at the point where the global $\chi^2$ of the fit is minimised. Calculating the values of $r_B$, $\delta_B$ and \Pgamma from running 100 pseudoexperiments gives values of:
 \begin{align*}
-r_B &= 0.116^{+0.015}_{-0.019} \\
-\delta_B &= \left(40.4^{+17.0}_{-17.0}\right)^{\circ} \\
-\Pgamma &= \left(39.8^{+19.0}_{-16.0}\right)^{\circ} 
+r_B &= 0.113^{+0.015}_{-0.021} \\
+\delta_B &= \left(43.3^{+19.0}_{-19.0}\right)^{\circ} \\
+\Pgamma &= \left(40.0^{+18.0}_{-16.0}\right)^{\circ} 
 \end{align*}
 
 These confidence level distributions for $r_B$, $\delta_B$ and \Pgamma are not Gaussian beyond 1$\sigma$ and $\delta_B$ and \Pgamma contain another minimum, as can be seen from Figure \ref{gammadiniplotsallmodes}, therefore the results quoted cannot be extrapolated to consider 2$\sigma$ or 3$\sigma$ values. 
 
 \begin{figure}[h]
 \centering
-\subfloat[$r_B$ versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/results/rBu_dkstar_gamma_2Dscan_nomixing_2body.pdf}}
-\subfloat[$\delta_B$ versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/results/deltaBu_dkstar_gamma_2Dscan_nomixing_2body.pdf}}
+\subfloat[$r_B$ versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/rBu_dkstar_gamma_2Dscan_nomixing_2body.pdf}}
+\subfloat[$\delta_B$ versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/deltaBu_dkstar_gamma_2Dscan_nomixing_2body.pdf}}
 \caption{2D contour plots using the two-body modes only}
 \label{gammadiniplots2body}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\subfloat[$r_B$ versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/results/rBu_dkstar_gamma_2Dscan_nomixing.pdf}}
-\subfloat[$\delta_B$ versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/results/deltaBu_dkstar_gamma_2Dscan_nomixing.pdf}}
+\subfloat[$r_B$ versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/rBu_dkstar_gamma_2Dscan_nomixing_all.pdf}}
+\subfloat[$\delta_B$ versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/deltaBu_dkstar_gamma_2Dscan_nomixing_all.pdf}}
 \caption{2D contour plots using both the two- and four-body modes}
 \label{gammadiniplotsallmodes}
 \end{figure}
@@ -260,14 +257,14 @@ These confidence level distributions for $r_B$, $\delta_B$ and \Pgamma are not G
 \begin{tabular}{cccc}
 Fit parameter & Value & Negative error & Positive error \\
 \hline
-\Pgamma & 40 & -16 & 19 \\
-$r_B$ & 0.116 & -0.019 & 0.017 \\
-$\delta_B$ & 40 & -19 & 18 \\
+\Pgamma & 41 & -16 & 19 \\
+$r_B$ & 0.113 & -0.019 & 0.016 \\
+$\delta_B$ & 43 & -20 & 19 \\
 $\kappa$ & 0.96 & -0.06 & 0.06 \\
 $r_D^{K\pi}$ & 0.0591 & -0.0003 & 0.0003 \\
 $\delta_D^{K\pi}$ & 193 & -11 & 11 \\
 $r_D^{K3\pi}$ & 0.0549 & -0.0006 & 0.0006 \\
-$\delta_D^{K3\pi}$ & 133 & -22 & 22 \\
+$\delta_D^{K3\pi}$ & 134 & -22 & 22 \\
 $R_{K3\pi}$ & 0.44 & -0.15 & 0.15 \\
 $F_{CP}$ & 0.74 & -0.03 & 0.03
 \end{tabular}
@@ -277,6 +274,39 @@ $F_{CP}$ & 0.74 & -0.03 & 0.03
 
 \section{Expected future sensitivity to $r_B$, $\delta_B$ and \Pgamma}
 \label{sec:interpretation:futuresensitivity}
+
+The \btodkst mode has shown an increase of three times the yield per unit intergrated luminosity from \runone to \runtwo, mainly due to the increase in centre of mass energy of the $pp$ collisions from 7 and 8\tev to 13\tev. As previously stated, the data used in this analysis was collected in 2011 and 2012, forming the \runone \dataset, and 2015 and 2016, forming the \runtwo \dataset. The current running period of the LHC, namely \runtwo, is currently ongoing. The projected yields for the end of Run 2 and the end of Run 3 can be estimated using the forcasts for the stored integrated luminosity during these data taking periods. These projections can be found in \tab~\ref{projectedyields}. In order to do this assumptions that the yield per unit intergrated luminosity remains the same for the rest of \runtwo and for Run 3. The projections for Run 3 have large errors as the centre of mass energy may increase to 14\tev, resulting in an increase in the yield per unit intergrated luminosity, and the collected integrated luminosity is very speculative. Also, between Run 2 and Run 3 many upgrades to the detector will be performed, which have not been taken into account for these projections.
+
+\begin{table}
+\begin{tabular}{cccc}
+Year & Intergrated Luminosity & \kpi yield & Yield per \invfb \\
+\hline
+\runone & 3\invfb & 725 & 242 \\
+\runtwo (up to 2016) & 1.8\invfb & 1390 & 771 \\
+\runtwo (after 2016) & 1.6\invfb & 1233 & 771 \\
+Run 3 & 14\invfb & 10800 & 771 \\
+\end{tabular}
+\caption{Projected yields}
+\label{projectedyields}
+\end{table}
+
+Using the assumptions made in \tab~\ref{projectedyields}, the projected future sensitivity to the physics parameters \rb, \deltab and \Pgamma can be estimated. Figure \ref{gammadiniplotsrun2} gives the projected results at the end of Run 2 as 2D contour plots of \rb versus \Pgamma and \deltab versus \Pgamma. The equivalent plots are shown in Figure \ref{gammadiniplotsrun3} for the end of Run 3. 
+
+\begin{figure}[h]
+\centering
+\subfloat[\rb versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/rBu_dkstar_gamma_2Dscan_nomixing_endofrun2.pdf}}
+\subfloat[\deltab versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/deltaBu_dkstar_gamma_2Dscan_nomixing_endofrun2.pdf}}
+\caption{2D contour plots projected to the end of \runtwo assuming the central values remain the same.}
+\label{gammadiniplotsrun2}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\subfloat[\rb versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/rBu_dkstar_gamma_2Dscan_nomixing_endofrun3.pdf}}
+\subfloat[\deltab versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/deltaBu_dkstar_gamma_2Dscan_nomixing_endofrun3.pdf}}
+\caption{2D contour plots projected to the end of Run 3 assuming the central values remain the same.}
+\label{gammadiniplotsrun3}
+\end{figure}
 
 
 \clearpage

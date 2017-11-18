@@ -161,13 +161,14 @@ gluonloop/.style={circle, decorate, draw=black, decoration={coil,aspect=1.2,ampl
 %%%%% ABSTRACT SEPARATE
 % This is used to create the separate, one-page abstract that you are required to hand into the Exam
 % Schools.  You can comment it out to generate a PDF for printing or whatnot.
-\begin{abstractseparate}
-	\input{text/abstract} % Create an abstract.tex file in the 'text' folder for your abstract.
-\end{abstractseparate}
+%temp\begin{abstractseparate}
+%temp	\input{text/abstract} % Create an abstract.tex file in the 'text' folder for your abstract.
+%temp\end{abstractseparate}
 
 
 % JEM: Pages are roman numbered from here, though page numbers are invisible until ToC.  This is in
 % keeping with most typesetting conventions.
+%\iffalse
 \begin{romanpages}
 
 % Title page is created here
@@ -220,8 +221,7 @@ gluonloop/.style={circle, decorate, draw=black, decoration={coil,aspect=1.2,ampl
 
 % The Roman pages, like the Roman Empire, must come to its inevitable close.
 \end{romanpages}
-
-
+%\fi
 %%%%% CHAPTERS
 % Add or remove any chapters you'd like here, by file name (excluding '.tex'):
 \flushbottom
@@ -236,24 +236,14 @@ gluonloop/.style={circle, decorate, draw=black, decoration={coil,aspect=1.2,ampl
 %% APPENDICES %% 
 % Starts lettered appendices, adds a heading in table of contents, and adds a
 %    page that just says "Appendices" to signal the end of your main text.
-\startappendices
+%temp\startappendices
 % Add or remove any appendices you'd like here:
-%\include{text/appendix-1}
-%\include{text/appendix-2}
-%\include{text/appendix-3}
-%\include{text/appendix-4}
-%\include{text/appendix-5}
-%\include{text/appendix-6}
-%\include{text/appendix-7}
-\include{text/appendix-8}
+
+%\include{text/appendix-8}
 
 %%%%% REFERENCES
 
 % JEM: Quote for the top of references (just like a chapter quote if you're using them).  Comment to skip.
-\begin{savequote}[8cm]
-The first kind of intellectual and artistic personality belongs to the hedgehogs, the second to the foxes \dots
-  \qauthor{--- Sir Isaiah Berlin \cite{berlin_hedgehog_2013}}
-\end{savequote}
 
 \setlength{\baselineskip}{0pt} % JEM: Single-space References
 
