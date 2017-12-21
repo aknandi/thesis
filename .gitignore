@@ -9,5 +9,6 @@
 *.toc
 *.bbl
 *.blg
+*.bak
 Oxford_Thesis.pdf
 firstDraftChapters/*
