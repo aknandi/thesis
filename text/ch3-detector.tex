@@ -1,17 +1,15 @@
-\begin{savequote}[8cm]
-\textlatin{Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
-
-There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...
-  \qauthor{--- Cicero's \textit{de Finibus Bonorum et Malorum}}
-\end{savequote}
+%\begin{savequote}[8cm]
+%\textlatin{Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+%
+%There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...
+%  \qauthor{--- Cicero's \textit{de Finibus Bonorum et Malorum}}
+%\end{savequote}
 
 \chapter{\label{ch:3-detector}The LHCb detector} 
 
 \minitoc
 
-{\color{red} Need figures for tracker, RICH and calorimeter. And more about performance}
-
-The Large Hadron Collider (LHC) is the worlds largest and most powerful particle accelerator, near Geneva, Switzerland. The LHC ring is 27km in circumference, located 100m underground and consists of a series of superconducting magnets and accelerating modules to boost the particles energy. Two high energy proton or heavy ion beams travel in opposite directions at energies up to $\sqrt{s}=13\tev$. Hydrogen atoms are ionised to obtain protons, which get accelarated in stages through various parts of the LHC accelerator complex, as shown in Figure \ref{lhcdiagram}. Firstly, the protons are accelerated in Linac 2 to energies of 50\mev, followed by the Proton Syncrotron Booster (PSB), the Proton Syncrotron (PS) and the Super Proton Syncrotron (SPS), accelerating the protons to 1.4\gev, 25\gev and 450\gev respectively. Finally, they are injected into the LHC, reaching energies of up to $\sqrt{s}=13\tev$. Two proton beams are injected in opposite directions and focussed to collide at four locations around the LHC ring. These locations are where the four main particle physics detector are located, the Large Hadron Collider beauty (\lhcb) experiment as well as \atlas, \cms and \alice.
+The Large Hadron Collider (LHC) is the worlds largest and most powerful particle accelerator, near Geneva, Switzerland. The LHC ring is 27km in circumference, located 100m underground and consists of a series of superconducting magnets and accelerating modules to boost the particles energy. Two high energy proton or heavy ion beams travel in opposite directions at energies up to $\sqrt{s}=13\tev$. Hydrogen atoms are ionised to obtain protons, which get accelarated in stages through various parts of the LHC accelerator complex, as shown in Figure \ref{lhcdiagram}. Firstly, the protons are accelerated in Linac 2 to energies of 50\mev, followed by the Proton Syncrotron Booster (PSB), the Proton Syncrotron (PS) and the Super Proton Syncrotron (SPS), accelerating the protons to 1.4\gev, 25\gev and 450\gev respectively. Finally, they are injected into the LHC, reaching energies of up to $\sqrt{s}=13\tev$. Two proton beams are injected in opposite directions and focussed to collide at four locations around the LHC ring. These locations are where the four main particle physics detectors are located, the Large Hadron Collider beauty (\lhcb) experiment as well as \atlas, \cms and \alice.
 
 \begin{figure}
 \includegraphics[width=\linewidth]{figures/detector/CCC-v2016.png}
@@ -19,7 +17,7 @@ The Large Hadron Collider (LHC) is the worlds largest and most powerful particle
 \label{lhcdiagram}
 \end{figure}
 
-There have been two major data taking periods of the \lhc, named \runone and \runtwo. \runone occured between 2010 and 2012, where the beam energy was $\sqrt{s}=$7\tev and 8\tev. Data collection for \runtwo began in 2015 and is due to end in 2018, with a beam energy of $\sqrt{s}=$13\tev. At LHCb the collision conditions are designed to have roughly one $pp$ interactions per bunch crossing and to limit the number of tracks. These conditions allow effective primary vertex selection, necessary for study of \B and \D meson decays, efficient processing of the track finding algorithm and reduced radiation damage and detector occupancy. This is achieved by reducing the transverse overlap of the two beams in order to reduce the area available for interactions, called luminosity levelling. It allows the peak luminosity and number of $pp$ intereactions per bunch crossing to be optimal, while maximising the intergrated luminosity. Most of the LHCb data was recorded at an instantaneous luminosity of $4 \times 10^{32}\text{cm}^{-2}\text{s}^{-1}$, with an average of 1.7 proton-proton collisions per bunch crossing for \runone and 1.1 for \runtwo. In \runone collisions occured at a frequency of 20 MHz, corresponding to collisions every 50\ns, compared to a bunch crossing rate of 40 MHz in \runtwo.
+There have been two major data taking periods of the \lhc, named \runone and \runtwo. \runone occured between 2010 and 2012, where the beam energy was $\sqrt{s}=$7\tev and 8\tev. Data collection for \runtwo began in 2015 and is due to end in 2018, with a beam energy of $\sqrt{s}=$13\tev. At LHCb the collision conditions are designed to have roughly one $pp$ interactions per bunch crossing and limit the number of tracks. These conditions allow effective primary vertex selection, necessary for study of \B and \D meson decays, efficient processing of the track finding algorithm and reduced radiation damage and detector occupancy. This is achieved by reducing the transverse overlap of the two beams in order to reduce the area available for interactions, called luminosity levelling. It allows the peak luminosity and number of $pp$ intereactions per bunch crossing to be optimal, while maximising the intergrated luminosity. Most of the LHCb data was recorded at an instantaneous luminosity of $4 \times 10^{32}\text{cm}^{-2}\text{s}^{-1}$, with an average of 1.7 proton-proton collisions per bunch crossing for \runone and 1.1 for \runtwo. In \runone collisions occured at a frequency of 20 MHz, corresponding to collisions every 50\ns, compared to a bunch crossing rate of 40 MHz in \runtwo.
 
 This thesis uses the whole \runonelumi \runone dataset coressponding to 1\invfb of $\sqrt{s}=$7\tev recorded in 2011 and 2\invfb of $\sqrt{s}=$8\tev recorded in 2012, as well as \runtwolumi of the \runtwo dataset, coressponding to all of the data recorded in 2015 and 2016 at $\sqrt{s}=$13\tev.
 
@@ -56,7 +54,7 @@ The Vertex Locator (\velo)~\cite{LHCb-DP-2014-001} provides precise tracking clo
 \label{velolayout}
 \end{figure}
 
-The \velo has a high spacial resolution, enabling precise determination of a particle's flight direction close to the primary interaction point. The impact parameter (IP) of a track is defined  as the distance between the track and the PV at the track's point of closest approach to the PV. Long-lived \B and \D mesons studied in this analysis have their decay vertex displaced from the PV and as such tend to have a large IP. Therefore, the performance of the \velo can be quantified by the IP resolution~\cite{LHCb-DP-2014-001}, which, determined from 2012 data, is less than 35\mum for particles with transverse momentum greater than 1\gevc, as shown in Figure \ref{veloperformance}.
+The \velo has a high spatial resolution, enabling precise determination of a particle's flight direction close to the primary interaction point. The impact parameter (IP) of a track is defined  as the distance between the track and the PV at the track's point of closest approach to the PV. Long-lived \B and \D mesons studied in this analysis have their decay vertex displaced from the PV and as such tend to have a large IP. Therefore, the performance of the \velo can be quantified by the IP resolution~\cite{LHCb-DP-2014-001}, which, determined from 2012 data, is less than 35\mum for particles with transverse momentum greater than 1\gevc, as shown in Figure \ref{veloperformance}.
 
 \begin{figure}
 \centering
@@ -67,9 +65,23 @@ The \velo has a high spacial resolution, enabling precise determination of a par
 
 \section{Tracking and magnet}
 
-The \lhcb tracking system consists of the \velo and four planar tracking stations further downstream: the Track Turicensis (TT) upstream of the dipole magnet, made of silicon microstrips, and tracking stations T1-T3 downstream of the magnet. The tracking stations T1-T3 have an inner region (Inner Tracker, IT) consisting of silicon microstrips, same as for the TT, and an outer region (Outer Tracker, OT) consisting of straw tubes. Charged particles require a minimum momentum of 1.5\gevc to reach the tracking stations T1-T3.
+The \lhcb tracking system consists of the \velo and four planar tracking stations further downstream: the Track Turicensis (TT) upstream of the dipole magnet, made of silicon microstrips, and tracking stations T1-T3 downstream of the magnet; as shown in Figure \ref{tracking}. The tracking stations T1-T3 have an inner region (Inner Tracker, IT) consisting of silicon microstrips, same as for the TT, and an outer region (Outer Tracker, OT) consisting of straw tubes. Charged particles require a minimum momentum of 1.5\gevc to reach the tracking stations T1-T3.
 
-The TT and IT are constrcuted from silicon microstrip detectors. The TT is a planar detector 150\cm wide and 130\cm tall, covering the full detector acceptance with an active area of 8.4\ma. It is composed of four layers of modules with the first and fourth layers mounted vertically and the second and third layers are mounted at $+5^{\circ}$ and $-5^{\circ}$ from the vertical respectively. This gives a single hit resolution of around 50\mum. For the IT, each T-station contains four IT boxes arragned in a cross shape around the beam pipe, 120\cm wide and 40\cm tall. The OT is a straw drift tube detector. The straw tubes in each station are in four layers, with the same rotation of layers as in the TT and IT.
+\begin{figure}
+\centering
+\includegraphics[width=0.7\linewidth]{figures/detector/tracking.pdf}
+\caption{Display of the reconstructed tracks and assigned hits in an event in the x-z plane. The insert shows a zoom into the \velo region in the x-y plane. Reproduced from Ref \cite{LHCb-DP-2014-002}.}
+\label{tracking}
+\end{figure}
+
+The TT and IT are constructed from silicon microstrip detectors, arranged as shown in Figures \ref{itandot}. The TT is a planar detector 150\cm wide and 130\cm tall, covering the full detector acceptance with an active area of 8.4\ma. It is composed of four layers of modules with the first and fourth layers mounted vertically and the second and third layers are mounted at $+5^{\circ}$ and $-5^{\circ}$ from the vertical respectively. This gives a single hit resolution of around 50\mum. For the IT, each T-station contains four IT boxes arragned in a cross shape around the beam pipe, 120\cm wide and 40\cm tall. The OT is a straw drift tube detector. The straw tubes in each station are in four layers, with the same rotation of layers as in the TT and IT.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{figures/detector/InnerAndOuterTracker.pdf}
+\caption{Arrangement of the layers of the IT and OT.}
+\label{itandot}
+\end{figure}
 
 The dipole magnet enables the momentum of charged particles to be measured by bending the trajectory of the particles in the horizontal plane. Since positively and negatively charged particles will bend in opposite directions, a charge detection asymmetry can result if the left and right halves of the detector have different tracking efficiencies. This would affect CP violation studies, such as the one descibed in this thesis, which involve the measurements of charge asymmetries. Hence, to minimise systematics, the magnetic field direction is reversed regularly when taking data.
 
@@ -80,7 +92,7 @@ Performance~\cite{LHCb-DP-2013-002, LHCb-DP-2013-003}
 	
 \section{The \rich detectors}
 
-The two \rich detectors (RICH 1 and RICH 2)~\cite{LHCb-DP-2012-003} are required for the identification of charged hadrons, specifically pions, kaons and protons. The decay modes of \bquark- and \cquark- flavoured hadrons involve hadronic multibody final states, making good particle identification of hadrons vital for reducing the combinatoric background. These detectors utilise the idea that Cherenkov radiation is produced whenever a charged particle, of velocity $v$, travelling through a dielectric medium, of refractive index $n$, exceeds the speed of light, $c$, in that medium. This produces a cone of light with an opening angle of $\theta_{CK}$ relative to direction of the particle's propagation, where $\theta_{CK} = \frac{1}{n\beta}$, where $\beta = v/c$. By measuring $\theta_{CK}$ as well as momentum information from the magnet and tracking systems, a mass hypothesis can be determined, as shown in Figure \ref{richseparation}.
+The two \rich detectors (RICH 1 and RICH 2)~\cite{LHCb-DP-2012-003} are required for the identification of charged hadrons, specifically pions, kaons and protons. The decay modes of \bquark- and \cquark- flavoured hadrons involve hadronic multibody final states, therefore good particle identification of hadrons vital for reducing the combinatoric background. These detectors utilise the idea that Cherenkov radiation is produced whenever a charged particle, of velocity $v$, travelling through a dielectric medium, of refractive index $n$, exceeds the speed of light, $c$, in that medium. This produces a cone of light with an opening angle of $\theta_{CK}$ relative to direction of the particle's propagation, where $\theta_{CK} = \frac{1}{n\beta}$, where $\beta = v/c$. By measuring $\theta_{CK}$ as well as momentum information from the magnet and tracking systems, a mass hypothesis can be determined, as shown in Figure \ref{richseparation}.
 
 \begin{figure}
 \centering
@@ -89,20 +101,28 @@ The two \rich detectors (RICH 1 and RICH 2)~\cite{LHCb-DP-2012-003} are required
 \label{richseparation}
 \end{figure}
 
-RICH 1 is positioned upstream of the magnet covering the low momentum range, 2 to 60 \gevc, and using two radiators: C$_4$F$_{10}$ and Aerogel in Run 1, and subsequently removing the Aerogel radiator for Run 2. Why? RICH 2 is located downstream of the magnet and covers the high momentum range, 15 to 100\gevc, using a CF$_4$ radiator. Refractive index of radiators. The cone of Cherenkov radiation that radiates from the charged particle is reflected by spherical focussing primary mirrors and planar secondary mirrors to form a ring on Hybrid Photon Detectors (HPDs). The value of $\theta_{CK}$ can be determined from the diameter of the ring. 
+RICH 1 is positioned upstream of the magnet covering the low momentum range, 2 to 60 \gevc, and using two radiators: C$_4$F$_{10}$ and Aerogel in Run 1, and subsequently removing the Aerogel radiator for Run 2. Why? RICH 2 is located downstream of the magnet and covers the high momentum range, 15 to 100\gevc, using a CF$_4$ radiator. The C$_4$F$_{10}$ and CF$_4$ radiator gases were because their refractive indices are well matched to the momentum spectrum of particles from \B decays at \lhcb. The RICH 1 and RICH 2 radiators, C$_4$F$_{10}$ and CF$_4$, have refractive indices 1.0014 and 1.0005 respectively. The cone of Cherenkov radiation that radiates from the charged particle is reflected by spherical focussing primary mirrors and planar secondary mirrors to form a ring on Hybrid Photon Detectors (HPDs). The value of $\theta_{CK}$ can be determined from the diameter of the ring. High refractive index, low momneetum threshold
 
 Although the RICH system is designed primarily to provide separation between charged hadrons (\pion, $K$ and $p$), it can provide some information on leptons. Similarly, the calorimeters and muon systems can provide some hadron identification. A global likelihood hypothesis for each particle type (\pion, $K$, $p$, $e$, $\mu$) is formed by combining the particle likelihood hypotheses as determined by each subdetector, $\mathcal{L}_X$ for particle hypothesis $X$. Since the most abundant particles from a $pp$ interaction are pions, the pion hypothesis is initially assumed. For each track the relative differences between a particle hypothesis, $X$, log-likelihood compared to the pion hypothesis is computed:
 \begin{equation}
 DLLX = \log{\mathcal{L}_X} - \log{\mathcal{L}_{\pi}} \text{ .}
 \end{equation}
 
-The performance of the \rich detectors \ref{richperformance}
+One of the main measures of the \rich performance is the resolution of the Cherenkov angle with which the photons can be reconstructed. 
+
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/detector/cherenkov.pdf}
+\caption{Cherenkov angle distributions for the RICH 1 gas (left) and RICH 2 gas (right).}
+\label{cherenkov}
+\end{figure}
+
+The PID performance of hadrons can be directly determined from background-free calibration samples of protons, kaons and pions. The kaon PID performance of the \lhcb detector is shown in Figure \ref{richperformance}.
 
 \begin{figure}
 \includegraphics[width=0.5\linewidth]{figures/detector/richperformance-data.pdf}
 \hfill
 \includegraphics[width=0.5\linewidth]{figures/detector/richperformance-mc.pdf}
-\caption{Plots of \rich performance}
+\caption{PID performance of the \rich detector in 2011. The efficiency to correctly identify kaons are shown by the red data points and the corresponding pion misidentification probability is given by the black data points.}
 \label{richperformance}
 \end{figure}
 
@@ -110,19 +130,25 @@ The performance of the \rich detectors \ref{richperformance}
 
 The calorimeter system provides energy measurements and is essential for the first level of the trigger to select particles with high transverse energy. It consists of four systems: the scintillating-pad (SPD) and pre-shower (PS) detectors, the electromagnetic calorimeter (ECAL) and hadronic calorimeter (HCAL)~\cite{LHCb-DP-2013-004}. The calorimeter system provides energy measurements using the mechanism of detecting scintillation light using photomultiplier tubes (PMTs) and is located downstream of RICH 2, between the first two muon stations. The ECAL is required to measure electrons and photons and the HCAL to measure charged and neutral hadrons.  The SPD/PS detectors are nearest the interaction point and designed to help the ECAL with electron identification. Between the SPD and PS is a 15\mm lead converter, 2.5 radiation lengths thick, to initiate showering before the PS. The ECAL is composed of 4\mm thick alternating lead absorber and polystyrene scintillator layers with an acceptance of 300mrad horizontally and 250mrad vertically. The thickness of the ECAL corresponds to 25 radiation lengths, chosen to fully contain high energy photon showers for optimum energy resolution. The HCAL has the scintillating tiles mounted parallel to the beam axis to increase the contact area between the scintillator tiles and optical fibres maximising the amount of scintillation light collected. The polystyrene scintillator tiles are separated by 100m thick iron absorber plates. The HCAL has a thickness limited to 5.6 nuclear interaction lengths due to space limitations. The measured energy resolution is $\sigma_E/E = (69 \pm 5)\%/\sqrt{E} \oplus (9 \pm 2)\%$ for $E$ in \gev.
 
-All four components of the calorimeter system are composed of scintillator pads with a cell granulartity that decreases moving outwards, away from the beam pipe. The SPD/PS and ECAL have the variable segmentation split in to three sections, whereas the HCAL is split into two zones with larger cell sizes due to the larger size of hadronic showers.
+All four components of the calorimeter system are composed of scintillator pads with a cell granulartity that decreases moving outwards, away from the beam pipe, as shown in Figure \ref{calorimeter}. The SPD/PS and ECAL have the variable segmentation split in to three sections, whereas the HCAL is split into two zones with larger cell sizes due to the larger size of hadronic showers.
+
+\begin{figure}
+\includegraphics[width=\linewidth]{figures/detector/calorimeters.pdf}
+\caption{Segmentation of the SPD/PS and ECAL (left) and the HCAL (right). One quarter of the detector face is shown.}
+\label{calorimeter}
+\end{figure}
 
 \section{Muon systems}
 \label{sec:detector:muon}
 
-The muon system~\cite{LHCb-DP-2013-001,LHCb-DP-2012-002} is designed, together with the calorimeter system, to provide information to the first level hardware trigger. It is composed of five stations, labelled M1 through to M5. Station M1 is located upstream from the calorimeteres and is only used in the first level trigger. Stations M2 - M5, located downstream from the calorimetersm, are interleaved with 80\cm thick iron absorbers and are designed to identify and trace penetrating muons. muons with momenta greater than 6\gevc will typically traverse all five stations. The five stations together have a width corresponding to 20 interaction lengths. 
+The muon system~\cite{LHCb-DP-2013-001,LHCb-DP-2012-002} is designed, together with the calorimeter system, to provide information to the first level hardware trigger. It is composed of five stations, labelled M1 through to M5. Station M1 is located upstream from the calorimeteres and is only used in the first level trigger. Stations M2 - M5, located downstream from the calorimeters, are interleaved with 80\cm thick iron absorbers and are designed to identify and trace penetrating muons. Muons with momenta greater than 6\gevc will typically traverse all five stations. The five stations together have a width corresponding to 20 interaction lengths. 
 
-Each stations uses multiwire proportional chambers (MWPCs) apart from the inner most region of M1, which consists of gas electron multipliers (GEMs) due to their radiation hardness. Stations M1 to M3 have the best spatial resolution and measure transverse momentum with a resolutions of 20\%.
+Each station uses multiwire proportional chambers (MWPCs) apart from the inner most region of M1, which consists of gas electron multipliers (GEMs) due to their radiation hardness. Stations M1 to M3 have the best spatial resolution and measure transverse momentum with a resolution of 20\%.
 
 \section{Trigger system}
 \label{sec:detector:trigger}
 
-The \lhc bunch crossing rate is 40MHz, however there is insufficient processing power to read out the full detector and write every event to storage. A dedicated trigger system~\cite{LHCb-DP-2012-004} is implemented to retain interesting events while discarding background events. This occurs in two stages, the low level hardware trigger, called Level-0 (L0), and the high level software trigger, called High Level trigger (HLT). The L0 trigger operates at the bunch crossing rate of 40MHz, reducing the event rate to 1MHz. The HLT only processes events that have passed L0, accepting events at a rate of 3kHz.
+The \lhc bunch crossing rate is 40MHz, however there is insufficient processing power to read out the full detector and write every event to storage. A dedicated trigger system~\cite{LHCb-DP-2012-004} is implemented to retain interesting events while discarding background events. This occurs in two stages, the low level hardware trigger  using momentum and transverse momentum requirements, called Level-0 (L0), and the high level software trigger reconstructing the tracks in the event, called High Level trigger (HLT). The L0 trigger operates at the bunch crossing rate of 40MHz, reducing the event rate to 1MHz. The HLT only processes events that have passed L0, accepting events at a rate of 3kHz.
 
 A sequence of reconstruction algorithms and thresholds defined in the trigger to select a specific decay is called a trigger line. This returns an accept or reject decision. An event is retained only if it passes at least one trigger line in both L0 and HLT.
 
