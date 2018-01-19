@@ -867,57 +867,5 @@ $\sigma$ & $11.4 \pm 1.0$ & $11.3 \pm 0.8$ & $12.9 \pm 0.8$ & $13.1 \pm 0.6$ \\
 \label{fitresultsk3pi}
 \end{table}
 
-\subsubsection{\boldmath \decay{\Lb}{\Lc\Kstar} background in \kk mass spectrum}
-\label{sec:massfit:Lb2LcKst}
-
-The mass fit model described in this section is used to model all \Dz modes, however, there is an additional source of background included in the \kk model that does not occur in the other modes. This additional background in the \kk \Bm mass spectrum comes from the decay \decay{\Lb}{\Lc(p\Km\pip)\Kstarm}, where the proton is misidentified as a kaon and the \pion is missed in the reconstruction. This background only contributes to the \kk mass spectrum as the combination of the misidentification of the proton and the pion being missed in the reconstruction results in a reconstructed \Bm mass distribution in the mass fit region. The decay mode \decay{\Lc}{p\Km\pip} accounts for over 6\% of the \Lc branching fraction~\cite{PDG2016}, whereas \Lc decays that may contribute as background to the other \Dz decay modes, e.g. \decay{\Lc}{p\pim\pip}, are suppressed by an order of magnitude. Therefore, this background is only considered for the \kk decay model.
-
-The shape used to model this \decay{\Lb}{\Lc(p\Km\pip)\Kstarm} contribution is a Cruijff PDF, defined as,
-\begin{equation}
-  \mathrm{Cruijff}(m; \mu,\sigma_L,\sigma_R,\alpha_L,\alpha_R)=
-\begin{cases}
-    exp \left( -\frac{(m-\mu)^2}{2\sigma_L^2 + \alpha_L(m-\mu)^2} \right) ,     & \text{if } m-\mu < 0, \\
-    exp \left( -\frac{(m-\mu)^2}{2\sigma_R^2 + \alpha_R(m-\mu)^2} \right) ,     & \text{otherwise.}
-\end{cases}
-\label{Cruijff}
-\end{equation}%
-where $\mu$ is the peak position, $\sigma_{L,R}$ is the width on the left and right sides of the peak and $\alpha_{L,R}$ is a modification constant. The shape parameters can be taken from using a simulated sample of \decay{\Lc}{p\Km\pip} events, reconstructed as \decay{\Bm}{\D\Kstarm} signal events, and performing a fit to the \Bm mass distribution. However, due to reasons relating to timing and speed of generation, a simulated sample of \decay{\Lc}{p\Km\pip} events was not available. Instead, the shape parameters are taken from a fit to a simulated sample of \decay{\Lb}{\Lc\Km} events reconstructed as \decay{\Bm}{\D\Km} events; this shape is expected to be similar to \decay{\Lc}{p\Km\pip}, and any uncertainty in the shape is accounted for as a systematic uncertainty, described in Section \ref{sec:systematics}.
-
-The fit to the \Bm mass spectrum is shown in Figure \ref{Lbfit}, where it can be seen that the reconstructed \Bm mass falls between 4800 and 5500 \mevcc, and the results from this fit are shown in Table \ref{fitresultsLb}. All the values for the shape parameters are fixed in the simultaneous fit to the values in Table \ref{fitresultsLb}, which is considered to be a source of systematic uncertainty, detailed in Section \ref{sec:systematics}. 
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.7\linewidth]{figures/backgrounds/Lb2LcKst.pdf}
-\caption{Fit to distribution of simulated \decay{\Lb}{\Lc(p\Km\pip)\Km} sample using a Cruijff PDF, where the \pip is missed in reconstruction and the proton is misidentified as a kaon. This contributes as a source of background in the \decay{\Bm}{\D\Kstarm}, \decay{\D}{\Kp\Km} fit.}
-\label{Lbfit}
-\end{figure}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{cc}
-\hline
-Parameter & Value \\
-\hline
-$\mu$ & $5280 \pm 18$ \\
-$\sigma_L$ & $221 \pm 26$ \\
-$\sigma_R$ & $96 \pm 16$ \\
-$\alpha_L$ & $-0.19 \pm 0.19$ \\
-$\alpha_R$ & $-0.04 \pm 0.06$ \\
-\hline
-\end{tabular}
-\caption{Shape parameters from a fit to simulated \decay{\Lb}{\Lc\Km} events using a Cruijff PDF. These shape parameters are fixed with an associated systematic uncertainty.}
-\label{fitresultsLb}
-\end{table}
-
-The shape is assumed to be the same in each \kk fit category, across \KS reconstruction types and data-taking periods. The \decay{\Lb}{\Lc(p\kaon\pi)\Kstarm} yield compared to the signal yield in the favoured \kpi mode is allowed to vary in the simultaneous fit. This fractional yield is required to be the same for all fit categories.
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Choice of fit range}
-\label{sec:massfit:range}	
-
-Fixing the relative yields for the partially reconstructed shapes, as described in Section \ref{sec:massfit:partreco}, assumes that no \CP violation occurs, i.e. the relative yields for \Bm and \Bp are the same. This is a reasonable assumption for the favoured \kpi and \kpipipi decays considered in this section, where we do not expect \CP violation. However in the other \D final states, for example \pik, \CP violation is expected in the partially reconstructed background for which the parameters are entirely unknown. Therefore, it is not possible make any constraints on the yield ratios in these modes. The fit that would result from fitting six individual yields with an order of magnitude less data would be unstable and this lack of constraint in the low mass region would lead to a large amount of freedom in the combinatorial, significantly affecting the signal yield. 
-
-The overlap of the partially reconstructed and signal peaks is very small. There are a number of advantages to raising the lower range of the mass parameterisation up to 5230 \mev, which only removes 0.4\% of signal. The advantages include avoiding the need to fit the various partially reconstructed yields in each of the other D decays modes. These cannot use the same assumptions and fractions as determined in the Cabibbo-favoured mode due to expected CP violation. Further benefits are that low level broad backgrounds that may be present in the range 4900 - 5200 \mev do not need to considered as sources of systematics uncertainty. The shape and yield of the small amount of partially reconstructed background present in all \D decay categories above 5230 \mev is determined and fixed from the fits to data of the \kpi and \kpipipi decays, taking into account the smaller branching fractions of the \D decays. It is less than an event for all the CP violating modes. Due to the assumptions present in the initial fit, uncertainties in the yield and shape and possible asymmetries in distribution between \Bp and \Bm are evaluated as systematic uncertainties. This systematic uncertainty is dealt with in Section \ref{sec:systematics:partreco}.
-
 
 \clearpage
