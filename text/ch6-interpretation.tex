@@ -1,41 +1,21 @@
 \clearpage
-\begin{savequote}[8cm]
-\textlatin{Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
-
-There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...
-  \qauthor{--- Cicero's \textit{de Finibus Bonorum et Malorum}}
-\end{savequote}
+%\begin{savequote}[8cm]
+%\textlatin{Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...}
+%
+%There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...
+%  \qauthor{--- Cicero's \textit{de Finibus Bonorum et Malorum}}
+%\end{savequote}
 
 \chapter{\label{ch:6-interpretation}Extraction of CKM angle \Pgamma} 
 
 \minitoc
 
-The \CP observables measured in this analysis can be used to determine the physics parameters, $r_B$, $\delta_B$, \Pgamma and $\kappa$, via Eqs.~\ref{exp_Acp} - \ref{exp_Rpm4body}. For this analysis, $\kappa$ is estimated as described in Section \ref{sec:interpretation:coherence}, and used as an extra constraint when determining $r_B$, $\delta_B$ and \Pgamma. The variations in acceptance across the four-body phase space and its effect on the intepretation is considered in Section \ref{sec:interpretation:inputs} and Section \ref{sec:interpretation:gammadini} discusses the determination of the physics parameters: $r_B$, $\delta_B$ and \Pgamma. Finally, Section \ref{sec:interpretation:futuresensitivity} discusses the expected sensitivity of the \btodkst channel in the future with an increased dataset.
+The \CP observables measured from \btodkst decays can be used to determine the physics parameters, \rb, \deltab, \Pgamma and $\kappa$, via Eqs.~\ref{exp_Acp} - \ref{exp_Rpm4body}. For this analysis, $\kappa$ is estimated as described in Section \ref{sec:interpretation:coherence}, and used as an extra constraint when determining \rb, \deltab and \Pgamma. The variations in acceptance across the four-body phase space and the effect of this on the intepretation is considered in Section \ref{sec:interpretation:inputs}, and Section \ref{sec:interpretation:gammadini} discusses the determination of the physics parameters: \rb, \deltab and \Pgamma. Finally, Section \ref{sec:interpretation:futuresensitivity} discusses the expected sensitivity of the \btodkst channel in the future with an increased dataset.
 
 \section{Coherence factor}
 \label{sec:interpretation:coherence}
 
-The $K^*$ has a large natural width (about 50 MeV), therefore non-resonant processes may be non-neglibigle, which would affect the measurement of \Pgamma. Due to the large natural width, the amplitudes and phases of the different decays may be different at each point in phasespace:
-
-\begin{align*}
-A(B^- \to D^0 K^{*-}) &= A_c(p) e^{i\delta_c(p)} \\
-A(B^- \to \bar{D^0} K^{*-}) &= A_u(p) e^{i\delta_u(p) e^{-i\gamma}} \\
-A(D^0 \to K^-\pi^+) &= A_{K\pi} e^{i\delta_{K\pi}} \\
-A(D^0 \to K^+\pi^-) &= A_{{\pi}K} e^{i\delta_{{\pi}K}} 
-\end{align*}
-
-\begin{align*}
-r_s &= \frac{\Gamma(B^- \to \bar{D^0}K^{*-})}{\Gamma(B^- \to D^0K^{*-})} = \frac{\int \left|A_u(p)\right|^2 \mathrm{d}p}{\int \left|A_c(p)\right|^2 \mathrm{d}p}
-\end{align*}
-
-\begin{align}
-\kappa e^{i\delta_s} &= \frac{\int \mathrm{d}p A_c(p)A_u(p)e^{i\delta(p)}}{\sqrt{\int \mathrm{d}p \left|A_u(p)\right|^2 \int \mathrm{d}p \left|A_c(p)\right|^2}}
-\label{kappadefinition}
-\end{align}
-
-where p represents a point in phasespace, and $0 \leq \kappa \leq 1$ and $0 \leq \delta_s \leq 2\pi$. The amplitudes include both resonant $B^- \to DK^{*-}$ and non-resonant contributions, which is what the $\kappa$ factor accounts for.
-
-Using this formalism it can be shown that the $\kappa$ factor can be included in the expressions of the CP observables as shown in Equations \ref{exp_Acp}, \ref{exp_Rcp} and \ref{exp_Rpm}. The value for $\kappa$ can be estimated and then used alongside the CP observables to extract \Pgamma, $r_B$ and $\delta_B$.
+Due to the large natural width of the \Kstarm, in the region near the \Kstarm mass interference may occur between the signal \Kstarm decay amplitude and amplitudes due to other \decay{\Bm}{\D\KS\pim} contributions, for example higher \KS\pim resonances and non-resonant decays. The presence of these interfering contributions when analysing the \btodkst decays dilute the sensitivity to \Pgamma, which is quantified by a coherence factor, $\kappa$, where $0 \leq \kappa \leq 1$ and $\kappa = 1$ denotes a pure \Kstarm contribution, giving maximum sensitivity to \Pgamma. The parameter $\kappa$ is discussed in more detail in Section \ref{sec:theory:gamma}. In this section the parameter $\kappa$ is estimated in order to be used as an extra input, along with the \CP observables, in the extraction of \rb, \deltab and \Pgamma.
 
 \subsection{Decay model}
 \label{sec:interpretation:model}
@@ -278,6 +258,7 @@ $F_{CP}$ & 0.74 & -0.03 & 0.03
 The \btodkst mode has shown an increase of three times the yield per unit intergrated luminosity from \runone to \runtwo, mainly due to the increase in centre of mass energy of the $pp$ collisions from 7 and 8\tev to 13\tev. As previously stated, the data used in this analysis was collected in 2011 and 2012, forming the \runone \dataset, and 2015 and 2016, forming the \runtwo \dataset. The current running period of the LHC, namely \runtwo, is currently ongoing. The projected yields for the end of Run 2 and the end of Run 3 can be estimated using the forcasts for the stored integrated luminosity during these data taking periods. These projections can be found in \tab~\ref{projectedyields}. In order to do this assumptions that the yield per unit intergrated luminosity remains the same for the rest of \runtwo and for Run 3. The projections for Run 3 have large errors as the centre of mass energy may increase to 14\tev, resulting in an increase in the yield per unit intergrated luminosity, and the collected integrated luminosity is very speculative. Also, between Run 2 and Run 3 many upgrades to the detector will be performed, which have not been taken into account for these projections.
 
 \begin{table}
+\resizebox{\textwidth}{!}{
 \begin{tabular}{cccc}
 Year & Intergrated Luminosity & \kpi yield & Yield per \invfb \\
 \hline
@@ -285,7 +266,7 @@ Year & Intergrated Luminosity & \kpi yield & Yield per \invfb \\
 \runtwo (up to 2016) & 1.8\invfb & 1390 & 771 \\
 \runtwo (after 2016) & 1.6\invfb & 1233 & 771 \\
 Run 3 & 14\invfb & 10800 & 771 \\
-\end{tabular}
+\end{tabular}}
 \caption{Projected yields}
 \label{projectedyields}
 \end{table}
