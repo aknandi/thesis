@@ -121,54 +121,56 @@ For each Dalitz plot, $\kappa$ is computed as the magnitude of the expression in
 \section{Four-body phase space acceptance variations}
 \label{sec:interpretation:inputs}
 
-Several external inputs, relating to the \Dz decays, are required to interpret the results of the \CP observables from the \CP fit into information on $r_B$, $\delta_B$ and \Pgamma. The external parameters required are $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $R_{K3\pi}$ and $F_{4\pi}$. The parameters $R_{K3\pi}$ and $F_{4\pi}$ are to account for the fact that the four-body modes are not pure \CP or pure ADS modes. These parameters correspond to the fractional \CP content of the \decay{\Dz}{\pip\pim\pip\pim} decay, $F_{4\pi}$, and the coherence factor for the \decay{\Dz}{\Km\pip\pim\pip} decay, $R_{K3\pi}$. 
+Several parameters relating to the \Dz decays, which appear in Eqs.~\ref{exp_Acp} - \ref{exp_Rpm4body}, are required to interpret the results of the \CP observables from the \CP fit into information on $r_B$, $\delta_B$ and \Pgamma. These parameters, namely $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $R_{K3\pi}$ and $F_{4\pi}$, are taken from previous measurements and used as inputs alongside the \CP observables and $\kappa$. For multibody \decay{\D}{\Kmp\pipm\pimp\pipm} decays the strong phase varies over the phasespace. In this analysis, interference effects are diluted by averaging the strong phase variation, which is accounted for by the coherence factor, $R_{K3\pi}$~\cite{charmk3pi,LHCb-PAPER-2015-057}. The four-body \Dz decay mode \decay{\D}{\pip\pim\pip\pim} is an approximate \CP eigenstate; as it is not a pure \CP eigenstate its sensitivity to \Pgamma is reduced. The parameter $F_{4\pi} \sim 0.75$~\cite{charm4pi} is the \CP-even fraction, which accounts for the dilution effect.
 
-These parameters $F_{4\pi}$ and $R_{K3\pi}$ have been measured at CLEO and \lhcb measurements in Ref.~\cite{charmk3pi,LHCb-PAPER-2015-057,charm4pi}. However, the interpretation of \lhcb results have a dependence on \lhcb acceptance across the four-body phase space. Therefore the $F_{4\pi}$ and $R_{K3\pi}$ parameter values taken from CLEO may need to have corrections applied to be used for the interpretation of results from \lhcb. The difference in \lhcb acceptance across the four-body phase space would also affect the efficiency corrections for $A_{\pi\pi\pi\pi}$. These effects are expected to be negligible.
+These parameters $F_{4\pi}$ and $R_{K3\pi}$ have been measured at CLEO and \lhcb~\cite{charmk3pi,LHCb-PAPER-2015-057,charm4pi}. However, the interpretation of \lhcb results have a dependence on \lhcb acceptance across the four-body phase space. Therefore, the $F_{4\pi}$ and $R_{K3\pi}$ parameter values taken from CLEO may need to have corrections applied to be used for the interpretation of results from \lhcb. The difference in \lhcb acceptance across the four-body phase space would also affect the efficiency corrections for $A_{\pi\pi\pi\pi}$. These effects are expected to be negligible.
 
 Figures \ref{dalitzk3pi} and \ref{dalitz4pi} show plots of projections of the four-body phase space distributions for \kpipipi and \pipipipi modes respectively. These plots are comparisons of distributions for simulated generator level signal distributions without any acceptance effects, and fully reconstructed simulated signal events used in this analysis. These distributions are very similar, which suggests that the use of the \kpipipi coherence factor, $R_{K3\pi}$, and fractional \CP content, $F_{4\pi}$, from CLEO can be used directly in the interpretation of \lhcb results. 
 
-The value of $F_{4\pi}$, taken directly from the CLEO measurement, is $0.734 \pm 0.028$~\cite{charm4pi}. Based on similarities in acceptance compared to the \decay{\Bm}{\D\Km} analysis~\cite{B2DK_ADSGLW}, it is concluded that increasing the total uncertainty of $F_{4\pi}$ from 0.028 to 0.034 accounts for any uncertainty due to non-uniform \lhcb acceptance. Therefore, the value of $F_{4\pi}$ used as an input when determining $r_B$, $\delta_B$ and \Pgamma is $0.734 \pm 0.034$. Now considering the efficiency corrections to $A_{\pi\pi\pi\pi}$, a correction on the central value of $A_{\pi\pi\pi\pi}$ of ~1\% makes no significant difference to the results given that the statistical and systematic uncertainties are significantly larger than this correction. Therefore, it is concluded that small variations in efficiency lead to a negligible correction in the observables. 
+The value of $F_{4\pi}$, taken directly from the CLEO measurement, is $0.734 \pm 0.028$~\cite{charm4pi}. Based on similarities in acceptance of this analysis compared to a previous \lhcb analysis on \decay{\Bm}{\D\Km} decays~\cite{B2DK_ADSGLW}, it is concluded that increasing the total uncertainty of $F_{4\pi}$ from 0.028 to 0.034 accounts for any uncertainty due to non-uniform \lhcb acceptance. Therefore, the value of $F_{4\pi}$ used as an input when determining $r_B$, $\delta_B$ and \Pgamma is $0.734 \pm 0.034$. When considering the efficiency corrections to $A_{\pi\pi\pi\pi}$, it is found that a correction on the central value of $A_{\pi\pi\pi\pi}$ of ~1\% makes no significant difference to the results given that the statistical and systematic uncertainties are significantly larger than this correction. Therefore, it is concluded that small variations in efficiency lead to a negligible correction in the observables. 
 
-\begin{figure}
-\includegraphics[width=\linewidth]{figures/results/dalitzDist_KPiPiPi.pdf}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\linewidth]{figures/results/dalitzDist_KPiPiPi.pdf}
 \caption{Comparison of Dalitz variable distributions for simulation of generator level distributions (blue) and fully reconstructed selected events (red) in the \kpipipi mode.}
 \label{dalitzk3pi}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=\linewidth]{figures/results/dalitzDist_PiPiPiPi.pdf}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\linewidth]{figures/results/dalitzDist_PiPiPiPi.pdf}
 \caption{Comparison of Dalitz variable distributions for simulation of generator level distributions (blue) and fully reconstructed selected events (red) in the \pipipipi mode.}
 \label{dalitz4pi}
 \end{figure}
 
-Further studies are performed to assess whether the parameters $R_{K3\pi}$ and $\delta_D^{K3\pi}$ require any corrections, when used in the interpretation, due to variations in acceptance over the four-body phase space. To assess the effects of small variation in the four-body phase space for \kpipipi decays, the coherence factor and strong phase are calculated from the \kpipipi amplitude models, both under the assumption of uniform acceptance and total \lhcb acceptance. The differences between these two scenarios give an estimate of the corrections that should be applied to the CLEO result before it is used in the \lhcb interpretation. The difference is calculated to be 0.002 for the coherence factor and 0.7$^{\circ}$ for the strong phase difference. The values of the inputs taken from CLEO/LHCb are $R_{K3\pi} = 0.43^{+0.17}_{-0.13}$ and $\delta_D^{K3\pi} = \left(128^{+28}_{-17}\right)$~\cite{charmk3pi}. Thereforer, the size of the shifts due to the \lhcb phase space acceptance are negligible in comparison to the CLEO uncertainties and hence no further action is taken.
+Further studies are performed to assess whether the parameters $R_{K3\pi}$ and $\delta_D^{K3\pi}$ require any corrections, when used in the interpretation, due to variations in acceptance over the four-body phase space. To assess the effects of small variation in the four-body phase space for \kpipipi decays, the coherence factor and strong phase are calculated from the \kpipipi amplitude models, both under the assumption of uniform acceptance and total \lhcb acceptance. The differences between these two scenarios gives an estimate of the corrections that should be applied to the CLEO result before it is used in the \lhcb interpretation. The difference is calculated to be 0.002 for the coherence factor and 0.7$^{\circ}$ for the strong phase difference. The values of the inputs taken from CLEO/LHCb are $R_{K3\pi} = 0.43^{+0.17}_{-0.13}$ and $\delta_D^{K3\pi} = \left(128^{+28}_{-17}\right)$~\cite{charmk3pi}. Therefore, the size of the shifts due to the \lhcb phase space acceptance are negligible in comparison to the CLEO uncertainties and hence no further action is taken.
 
 
 \section{Results in terms of $r_B$, $\delta_B$ and \Pgamma}
 \label{sec:interpretation:gammadini}
 
-The \CP observables, measured in the \CP fit and listed in Section \ref{sec:cpfit:summary}, can be used to get a handle on the physics parameters of interest: $r_B$, $\delta_B$ and \Pgamma. These observables can be related to the physics parameters via Equations ~\ref{exp_Acp} - ~\ref{exp_Rpm4body}. The coherence factor is estimated, as described in the Section \ref{sec:interpretation:coherence}, and used as an input in the extraction of information on $r_B$, $\delta_B$ and \Pgamma. The parameters $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $R_{K3\pi}$ and $F_{4\pi}$ are required as external inputs and are taken from Ref.~\cite{HFAG,charmk3pi,LHCb-PAPER-2015-057,charm4pi}. The four-body \Dz decay mode \decay{\Dz}{\pip\pim\pip\pim} is an approximate \CP eigenstate, although as it is not a pure \CP eigenstate its sensitivity to \Pgamma is reduced. The parameter $F_{4\pi} \sim 0.75$~\cite{charm4pi} is the \CP-even fraction, which accounts for the dilution effect. Two-body \decay{\D}{\Kmp\pipm} decays are characterised by a single strong phase, however for multibody \decay{\D}{\Kmp\pipm\pimp\pipm} decays the strong phase varies over the phase space. By averaging the strong phase variation the interference effects are diluted, which is accounted for by the coherence factor, $R_{K3\pi}$. The \CP observables and other parameters are combined, and a minimisation is performed. The physics parameters involved are $r_B,\ \delta_B,\ \gamma,\ \kappa,\ r_D^{K\pi},\ \delta_D^{K\pi},\ r_D^{K3\pi},\ \delta_D^{K3\pi},\ F_{4\pi},\ R_{K3\pi}$ where $\kappa,\ r_D^{K\pi},\ \delta_D^{K\pi},\ r_D^{K3\pi},\ \delta_D^{K3\pi},\ F_{4\pi},\ R_{K3\pi}$ are constrained to their previously determined values. A global $\chi^2$ minimisation is performed where
+The \CP observables, measured in the \CP fit and listed in Section \ref{sec:cpfit:summary}, can be used to get a handle on the physics parameters of interest: $r_B$, $\delta_B$ and \Pgamma. These observables can be related to the physics parameters via Equations ~\ref{exp_Acp} - ~\ref{exp_Rpm4body}. The coherence factor is estimated, as described in the Section \ref{sec:interpretation:coherence}, and used as an input in the extraction of information on $r_B$, $\delta_B$ and \Pgamma. The parameters $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $R_{K3\pi}$ and $F_{4\pi}$ are required as external inputs and are taken from Ref.~\cite{HFAG,charmk3pi,LHCb-PAPER-2015-057,charm4pi}. The \CP observables and other parameters are combined, and a minimisation is performed. The parameters $\kappa,\ r_D^{K\pi},\ \delta_D^{K\pi},\ r_D^{K3\pi},\ \delta_D^{K3\pi},\ F_{4\pi},\ R_{K3\pi}$ are constrained to their previously determined values. A global $\chi^2$ minimisation is performed where
 \begin{equation}
 \chi^2 = \sum_i \chi^2_i = (x(\theta) - x_0)^TV_0^{-1}(x(\theta)-x_0)
 \end{equation}
-In this expression, $x(\theta)$ is the set of observables calculated from the fundamental set of parameters $\theta$ and $x_0$ are the measured values. $V_0$ is the covariance matrix. The sensitivity of a given parameter is determined by calculating the $\chi^2$ at fixed points in parameter space. The difference between this $\chi^2$ value and that of the global minimum, quantifies the confidence in the global minimum. 
+In this expression, $x(\theta)$ is the set of observables calculated from the fundamental set of physics parameters, $\theta$. The set, $x_0$, are the measured values of the observables and $V_0$ is the covariance matrix. The sensitivity of a given parameter is determined by calculating the $\chi^2$ at fixed points in parameter space. The difference between this $\chi^2$ value and that of the global minimum, $\Delta\chi^2$, quantifies the confidence in the global minimum. 
 
 Using the measured values of the \CP observables, their uncertainties and the covariance matrices, a global $\chi^2$ minimisation is performed, resulting in a minimum $\chi^2$ of 3.0 with 9 degrees of freedom. A scan of physics parameters is performed for a range of values and the difference in $\chi^2$ between the parameter scan values and the global minimum, $\Delta\chi^2$, is evaluated. The confidence level for any pair of parameters is calculated assuming that these are normally distributed, which enables the $\Delta \chi^2 = 2.30,\ 6.18,\ 11.8$ contours to be drawn, corresponding to 68.3\%, 95.5\%, 99.7\% confidence levels, respectively. 
 
-The results of the fit parameters is shown in Table \ref{gammadinifit}. Figures \ref{gammadiniplots2body} and \ref{gammadiniplotsallmodes} give the results as 2D contour plots of $r_B$ versus \Pgamma and $\delta_B$ versus \Pgamma. Figure \ref{gammadiniplots2body} shows the contour plots using the two-body modes only and Figure \ref{gammadiniplotsallmodes} show the contour plots using the observables from both the two- and four-body decays. The addition of the four-body modes slightly improves the constraints on the physics parameters, but in particular it provides additional distinction between the two minima. The data are consistent with the value of $\gamma$ indicated by previous measurements~\cite{LHCb-PAPER-2016-032, CKMFitter}, $\sim 70^\circ$. The values of $r_B$, $\delta_B$ and \Pgamma are determined at the point where the global $\chi^2$ of the fit is minimised. Calculating the values of $r_B$, $\delta_B$ and \Pgamma from running 100 pseudoexperiments gives values of:
+The results of the parameters, from this $\chi^2$ minimisation procedure, are shown in Table \ref{gammadinifit}. Figures \ref{gammadiniplots2body} and \ref{gammadiniplotsallmodes} give the results as 2D contour plots of $r_B$ versus \Pgamma and $\delta_B$ versus \Pgamma. Figure \ref{gammadiniplots2body} shows the contour plots using the \CP observables from the two-body modes only and Figure \ref{gammadiniplotsallmodes} show the contour plots using the \CP observables from both the two- and four-body decays. The addition of the four-body modes slightly improves the constraints on the physics parameters, but in particular it provides additional distinction between the two minima. The data are consistent with the value of $\gamma$ indicated by previous measurements~\cite{LHCb-PAPER-2016-032, CKMFitter}, $\sim 70^\circ$. The values of $r_B$, $\delta_B$ and \Pgamma are determined at the point where the global $\chi^2$ of the fit is minimised. The values of these physics parameters are calculated to be:
 \begin{align*}
 r_B &= 0.113^{+0.015}_{-0.021} \\
 \delta_B &= \left(43.3^{+19.0}_{-19.0}\right)^{\circ} \\
 \Pgamma &= \left(40.0^{+18.0}_{-16.0}\right)^{\circ} 
 \end{align*}
 
-These confidence level distributions for $r_B$, $\delta_B$ and \Pgamma are not Gaussian beyond 1$\sigma$, and $\delta_B$ and \Pgamma contain a second minimum, as can be seen from Figure \ref{gammadiniplotsallmodes}, therefore the results quoted cannot be extrapolated to consider 2$\sigma$ or 3$\sigma$ values. 
+The confidence level distributions for $r_B$, $\delta_B$ and \Pgamma are not Gaussian beyond 1$\sigma$, and $\delta_B$ and \Pgamma contain a second minimum, as can be seen from Figure \ref{gammadiniplotsallmodes}. Therefore, the results quoted cannot be extrapolated to consider 2$\sigma$ or 3$\sigma$ values. 
 
 \begin{figure}[h]
 \centering
 \subfloat[$r_B$ versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/rBu_dkstar_gamma_2Dscan_nomixing_2body.pdf}}
 \subfloat[$\delta_B$ versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/deltaBu_dkstar_gamma_2Dscan_nomixing_2body.pdf}}
-\caption{2D contour plots using the two-body modes only}
+\caption{Contour plots showing 2D scans of the physics parameters using the two-body modes only. The dashed lines represent the $\Delta \chi^2 = 2.30,\ 6.18,\ 11.8$ contours, corresponding to 68.3\%, 95.5\%, 99.7\% confidence levels (CL), respectively. The colour scale represents 1 - CL.}
 \label{gammadiniplots2body}
 \end{figure}
 
@@ -176,7 +178,7 @@ These confidence level distributions for $r_B$, $\delta_B$ and \Pgamma are not G
 \centering
 \subfloat[$r_B$ versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/rBu_dkstar_gamma_2Dscan_nomixing_all.pdf}}
 \subfloat[$\delta_B$ versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/deltaBu_dkstar_gamma_2Dscan_nomixing_all.pdf}}
-\caption{2D contour plots using both the two- and four-body modes}
+\caption{Contour plots showing 2D scans of the physics parameters using both the two- and four-body modes. The dashed lines represent the $\Delta \chi^2 = 2.30,\ 6.18,\ 11.8$ contours, corresponding to 68.3\%, 95.5\%, 99.7\% confidence levels (CL), respectively. The colour scale represents 1 - CL.}
 \label{gammadiniplotsallmodes}
 \end{figure}
 
@@ -196,26 +198,28 @@ $\delta_D^{K3\pi}$ & 134 & -22 & 22 \\
 $R_{K3\pi}$ & 0.44 & -0.15 & 0.15 \\
 $F_{CP}$ & 0.74 & -0.03 & 0.03
 \end{tabular}
-\caption{Results of fit parameters}
+\caption{Results of fit parameters.}
 \label{gammadinifit}
 \end{table}
 
 \section{Expected future sensitivity to $r_B$, $\delta_B$ and \Pgamma}
 \label{sec:interpretation:futuresensitivity}
 
-The \btodkst mode has shown an increase of three times the yield per unit integrated luminosity from \runone to \runtwo, mainly due to the increase in centre of mass energy of the $pp$ collisions from 7 and 8\tev to 13\tev. As previously stated, the data used in this analysis was collected in 2011 and 2012, forming the \runone \dataset, and 2015 and 2016, forming the \runtwo \dataset. The current running period of the LHC, namely \runtwo, is currently ongoing. The projected yields for the end of Run 2 and the end of Run 3 can be estimated using the forecasts for the stored integrated luminosity during these data taking periods. These projections can be found in \tab~\ref{projectedyields}. In order to do this assumptions that the yield per unit integrated luminosity remains the same for the rest of \runtwo and for Run 3. The projections for Run 3 have large errors as the centre of mass energy may increase to 14\tev, resulting in an increase in the yield per unit integrated luminosity, and the collected integrated luminosity is very speculative. Also, between Run 2 and Run 3 many upgrades to the detector will be performed, which have not been taken into account for these projections.
+In this thesis, the \btodkst mode has shown an increase of three times the yield per unit integrated luminosity from \runone to \runtwo, mainly due to the increase in centre of mass energy of the $pp$ collisions from 7 and 8\tev to 13\tev. As previously stated, the data used in this analysis was collected in 2011 and 2012, forming the \runone \dataset, and 2015 and 2016, forming the \runtwo \dataset. The current running period of the LHC, namely \runtwo, is currently ongoing. The projected yields for the end of Run 2 and the end of Run 3 is estimated using the forecasts for the stored integrated luminosity during these data-taking periods. The projections of the integrated luminosities can be found in \tab~\ref{projectedyields}. In order to do make projections about the future sensitivity of the \btodkst mode, it is assumed that the yield per unit integrated luminosity remains the same for the rest of \runtwo and for Run 3, during which time the centre-of-mass energy is not expected to increase. There are many large uncertainties in these projections partially due to the speculative nature of the predicted collected integrated luminosity. Another limitation is due to that fact that the centre of mass energy may increase to 14\tev in Run 3, which is the design centre-of-mass-energy of the machine, resulting in an increase in the yield per unit integrated luminosity.  Also, between Run 2 and Run 3 many upgrades to the detector will be performed, which have not been taken into account for these projections.
 
 \begin{table}
 \resizebox{\textwidth}{!}{
 \begin{tabular}{cccc}
+\hline
 Year & Integrated Luminosity & \kpi yield & Yield per \invfb \\
 \hline
 \runone & 3\invfb & 725 & 242 \\
 \runtwo (up to 2016) & 1.8\invfb & 1390 & 771 \\
-\runtwo (after 2016) & 1.6\invfb & 1233 & 771 \\
-Run 3 & 14\invfb & 10800 & 771 \\
+\textbf{Run 2 (after 2016)} & \textbf{1.6\invfb} & \textbf{1233} & \textbf{771} \\
+\textbf{Run 3} & \textbf{14\invfb} & \textbf{10800} & \textbf{771} \\
+\hline
 \end{tabular}}
-\caption{Projected yields}
+\caption{Yields and projected yields for different data-taking periods of the LHC. The entries in bold are projected yields, whereas the other entries refer to data used in this thesis.}
 \label{projectedyields}
 \end{table}
 
@@ -225,7 +229,7 @@ Using the assumptions made in \tab~\ref{projectedyields}, the projected future s
 \centering
 \subfloat[\rb versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/rBu_dkstar_gamma_2Dscan_nomixing_endofrun2.pdf}}
 \subfloat[\deltab versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/deltaBu_dkstar_gamma_2Dscan_nomixing_endofrun2.pdf}}
-\caption{2D contour plots projected to the end of \runtwo assuming the central values remain the same.}
+\caption{Contour plots showing projected 2D scans of the physics parameters at the end of \runtwo, assuming the central values remain the same. The dashed lines represent the $\Delta \chi^2 = 2.30,\ 6.18,\ 11.8$ contours, corresponding to 68.3\%, 95.5\%, 99.7\% confidence levels (CL), respectively. The colour scale represents 1 - CL.}
 \label{gammadiniplotsrun2}
 \end{figure}
 
@@ -233,7 +237,7 @@ Using the assumptions made in \tab~\ref{projectedyields}, the projected future s
 \centering
 \subfloat[\rb versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/rBu_dkstar_gamma_2Dscan_nomixing_endofrun3.pdf}}
 \subfloat[\deltab versus \Pgamma]{\includegraphics[width=0.5\linewidth]{figures/interpretation/deltaBu_dkstar_gamma_2Dscan_nomixing_endofrun3.pdf}}
-\caption{2D contour plots projected to the end of Run 3 assuming the central values remain the same.}
+\caption{Contour plots showing projected 2D scans of the physics parameters at the end of Run 3, assuming the central values remain the same. The dashed lines represent the $\Delta \chi^2 = 2.30,\ 6.18,\ 11.8$ contours, corresponding to 68.3\%, 95.5\%, 99.7\% confidence levels (CL), respectively. The colour scale represents 1 - CL.}
 \label{gammadiniplotsrun3}
 \end{figure}
 
