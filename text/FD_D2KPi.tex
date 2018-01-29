@@ -41,13 +41,13 @@
 \resizebox{0.47\linewidth}{!}{
 \begin{tikzpicture}[scale=0.98]
         % MAP OUT VERTICES (I have 8 of them)
-        \coordinate (a) at (0,2); %cbar quark start
-        \coordinate (b) at (0,1); %u quark start
-        \coordinate (c) at (5,1); %u quark end
-        \coordinate (d) at (5,2); %dbar quark end
+        \coordinate (a) at (0,2); %c quark start
+        \coordinate (b) at (0,1); %ubar quark start
+        \coordinate (c) at (5,1); %ubar quark end
+        \coordinate (d) at (5,2); %d quark end
         \coordinate (e) at (2,2); %start the W+
-        \coordinate (f) at (5,2.67); %ubar quark
-        \coordinate (g) at (5,3.33); %s quark
+        \coordinate (f) at (5,2.67); %u quark
+        \coordinate (g) at (5,3.33); %sbar quark
         \coordinate (h) at (4.0,3); %W end
         % DRAW LINES
         \draw[antiparticle] (b)  -- (c); %ubar quark
@@ -57,25 +57,25 @@
         \draw[antiparticle] (h)  to (g); %W to ubar quark
         \draw[particle] (h)  to (f); %W to s quark 
         %DRAW LABELS
-        \node at ($(a)$) [label={[label distance=-4mm] $\bar{\rm c}$},left] {};
-        \node at ($(b)$) [label={[label distance=-4mm] u},left] {};
-        \node at ($(c)$) [label={[label distance=-4mm] u},right]{};
-        \node at ($(d)$) [label={[label distance=-4mm] $\bar{\rm d}$},right]{};
-        \node at ($(f)$) [label={[label distance=-4mm] $\bar{\rm u}$},right]{};
-        \node at ($(g)$) [label={[label distance=-4mm] s},right]{};
-        \node at ($(e)$) [label={[xshift=25pt,yshift=10pt] $W^-$},above] {};
+        \node at ($(a)$) [label={[label distance=-4mm] c},left] {};
+        \node at ($(b)$) [label={[label distance=-4mm] $\bar{\rm u}$},left] {};
+        \node at ($(c)$) [label={[label distance=-4mm] $\bar{\rm u}$},right]{};
+        \node at ($(d)$) [label={[label distance=-4mm] d},right]{};
+        \node at ($(f)$) [label={[label distance=-4mm] u},right]{};
+        \node at ($(g)$) [label={[label distance=-4mm] $\bar{\rm s}$},right]{};
+        \node at ($(e)$) [label={[xshift=25pt,yshift=10pt] $W^+$},above] {};
 
         %ADD BRACES
         \draw
         [black,decorate,decoration={brace,amplitude=5pt},xshift=-20pt,yshift=0pt]
-          (0,0.8)  -- (0,2.2) node [black,midway,left=0pt,xshift=-5pt]{\Dzb};
+          (0,0.8)  -- (0,2.2) node [black,midway,left=0pt,xshift=-5pt]{\Dz};
         \draw
         [black,decorate,decoration={brace,amplitude=5pt},xshift=20pt,yshift=0pt]
-          (5,3.53) -- (5,2.47) node [black,midway,right=0pt,xshift=5pt]{\Km};
+          (5,3.53) -- (5,2.47) node [black,midway,right=0pt,xshift=5pt]{\Kp};
          \draw 	[black,decorate,decoration={brace,amplitude=5pt},xshift=20pt,yshift=0pt]
-          (5,2.2)  -- (5,0.8) node [black,midway,right=0pt,xshift=5pt] {\pip};
+          (5,2.2)  -- (5,0.8) node [black,midway,right=0pt,xshift=5pt] {\pim};
             \end{tikzpicture}
     }
-    \caption{Leading order Feynman diagrams for \decay{\Dz}{\Km\pip} (left) and \decay{\Dzb}{\Km\pip} (right).}
+    \caption{Leading order Feynman diagrams for \decay{\Dz}{\Km\pip} (left) and \decay{\Dz}{\Kp\pim} (right).}
     \label{fig:D2KPidiagram}
 \end{figure}
