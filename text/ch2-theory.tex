@@ -49,7 +49,7 @@ gluon ($g$) & Strong & $0$ \\
 \hline
 BEH (scalar) & - & $0$
 \end{tabular}
-\caption{Gauge bosons in the Standard Model. The Brout-Englert-Higgs boson ($BEH$) is not a Gauge boson, but a elementary neutral scalar boson, which couples to all particles with mass.}
+\caption{Gauge bosons in the Standard Model. The Brout-Englert-Higgs boson ($BEH$) is not a Gauge boson, but a neutral scalar boson, which couples to all particles with mass.}
 \label{SMbosons}
 \end{table}
 
@@ -64,7 +64,21 @@ One of the key problems with the SM is that is does not explain why our universe
 
 The SM satisfies all necessary conditions for baryogenisis, however the amount of asymmetry that can be generated from \CP violation in the SM is many orders of magnitude smaller than the asymmetry observed from astrophysical observations~\cite{SMasy}. New Physics models that introduce new sources of \CP violation{\color{red}{[ref]}}, such as supersymmetric models, can be developed by theorists and searched for at the LHC and other experiments. However, it is also necessary to make precise measurements of \CP violation in the SM to improve our understanding of matter-antimatter asymmetry and search for indirect signs of New Physics.
 
-%CP violation in mixing, decay, decay and mixing
+\CP violation is probed using many different processes. The different types of \CP violation in the SM can be split into three categories:
+\begin{itemize}
+\item \textbf{Direct CPV in decay}: this is when the rate of decay of a particle is not equal to the rate of the decay of the corresonding antiparticle \eg
+\begin{equation*}
+\Gamma\left(\decay{\Bm}{\D\Km}\right) \neq \Gamma\left(\decay{\Bp}{\D\Kp}\right)
+\end{equation*}
+\item \textbf{Indirect CPV in mixing}: Neutral mesons can oscillate between their particle and antiparticle states, $\Bz \leftrightarrow \Bzb$, as shown in Figure \ref{mixing}. Indeirect \CP violation occurs when \decay{\Bz}{\Bzb} and \decay{\Bzb}{\Bz} proceed at different rates. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{figures/theory/mixing.pdf}
+\caption{Feynman diagram of mixing between \Bz and \Bzb.}
+\label{mixing}
+\end{figure}
+\item \textbf{CPV from the interference of mixing and decay}: A \Dz meson can decay to a \Kp\pim final state via a doubly Cabibbo suppressed decay. However, this process can also proceed via \decay{\Dz}{\Dzb} mixing, where the \Dzb decays to \Kp\pim, via a Cabibbo favoured decay. These two decay paths to the same final states interfere with each other, which cna result in another form of \CP violation.
+\end{itemize} 
 
 \section{The CKM matrix}
 
@@ -78,13 +92,31 @@ This means that the eigenstates that take part in the weak interaction (weak eig
 V_{CKM} \left( \begin{array}{c} d \\ s \\ b \end{array} \right)
 \label{CKMmatrix}
 \end{equation}
-The elements of this matrix, $V_{ij}$, define the coupling of a $j \to i$ quark transition. Similarly $V_{ij}^*$ define the coupling of a $\bar{j} \to \bar{i}$ antiquark transition. By definition the CKM matrix, $V_{CKM}$, is unitary, i.e. $V_{CKM}V_{CKM}^* = \mathds{1}$, assuming there are only three generations of quarks. The CKM matrix is a complex, $3 \times 3$ matrix, which yields 18 parameters. The unitarity requirement brings the number of free parameters down to nine. Each of the five strong phases can be redefined, leaving four free parameters: three amplitudes and one phase. This free phase parameter is the source of \CP violation in the SM.
+The elements of this matrix, $V_{ij}$, define the coupling of a $j \to i$ quark transition. Similarly $V_{ij}^*$ define the coupling of a $\bar{j} \to \bar{i}$ antiquark transition. By definition the CKM matrix, $V_{CKM}$, is unitary, i.e. $V_{CKM}V_{CKM}^* = \mathds{1}$, assuming there are only three generations of quarks. The CKM matrix is a complex, $3 \times 3$ matrix, which yields 18 parameters. The unitarity requirement brings the number of free parameters down to nine. Five strong phases can be absorbed into the quark fields as they are not physically observable, leaving four free parameters: three amplitudes and one phase. This free phase parameter is the source of \CP violation in the SM.
+\begin{equation}
+V_{CKM} = \begin{pmatrix} 1 & 0 & 0 \\ 
+0 & c_{23} & s_{23} \\ 
+0 & -s_{23} & c_{23} \end{pmatrix}
+\begin{pmatrix} c_{13} & 0 & s_{13}e^{-i\delta_{13}} \\ 
+0 & 1 & 0 \\ 
+-s_{13}e^{i\delta_{13}} & 0 & c_{13} \end{pmatrix}
+\begin{pmatrix} c_{12} & s_{12} & 0 \\ 
+-s_{12} & c_{12} & 0 \\ 
+0 & 0 & 1 \end{pmatrix}
+\label{standard}
+\end{equation}
 
 If the CKM matrix was equivalent to the identity matrix there would be no cross-generation weak interaction of the quarks \eg\ a \uquark quark transition mediated by a W boson could only result in a \dquark, not a \squark or \bquark quark. From empirical determination, the magnitude of the elements in the CKM matrix are~\cite{PDG2016}:
 \begin{equation}
 | V_{CKM} | = \begin{pmatrix} 0.97434^{+0.00011}_{0.00012} & 0.22506 \pm 0.00050 & 0.00357 \pm 0.00015 \\ 0.22492 \pm 0.00050 & 0.97351 \pm 0.00013 & 0.0411 \pm 0.0013 \\ 0.00875^{+0.00032}_{-0.00033} & 0.0403 \pm 0.0013 & 0.99915 \pm 0.00005 \end{pmatrix}
 \end{equation}
-It can be seen that quark transitions within the same generation is highly favoured, these are known as Cabibbo-favoured decays. Also, quark transitions across one generation are suppressed, and are even more suppressed across two generations. These are known as Cabibbo-suppressed transitions.
+It can be seen that quark transitions within the same generation is highly favoured, these are known as Cabibbo-favoured decays. Also, quark transitions across one generation are suppressed, and are even more suppressed across two generations. These are known as Cabibbo-suppressed transitions. This structure in the CKM matrix is illustrated in the Wolfenstein parameterisation, given in Eq.~\ref{wolf}. This is an approximation of the standard parameterisation given in Eq.~\ref{standard}, where each of the parameters, $A$, $\lambda$, $\rho$ and $\eta$ are of order one.
+\begin{equation}
+V_{CKM} = \begin{pmatrix} 1 - \lambda^2/2 & \lambda & A\lambda^3(\rho - i\eta) \\ 
+-\lambda & 1 - \lambda^2/2 & A\lambda^2 \\ 
+A\lambda^3(1 - \rho - i\eta) & -A\lambda^2 & 1 \end{pmatrix}
+\label{wolf}
+\end{equation}
 
 \section{The CKM unitarity triangle}
 
@@ -120,6 +152,8 @@ When the \D meson is reconstructed in a final state accessible to both \Dz and \
 \centering
 %\includegraphics[trim = 20mm 120mm 100mm 20mm,clip,width=0.7\linewidth]{figures/theory/test.pdf}
 \includegraphics[trim = 0mm 120mm 0mm 30mm,clip,width=\linewidth]{figures/theory/pathDiagrams.pdf}
+\put(-420,70) {\tiny $\rb^{DK^*} e^{i(\deltab^{DK^*} - \gamma)}$}
+\put(-210,70) {\tiny $\rb^{DK^*} e^{i(\deltab^{DK^*} + \gamma)}$}
 \caption{Diagram of the interfering amplitudes of \decay{\Bm}{\D\Kstarm} (left) and \decay{\Bp}{\D\Kstarp} (right)}
 \label{paths}
 \end{figure}
@@ -232,7 +266,7 @@ Expanding and integrating over the defined \Kstar region gives,
 \subsubsection{\CP observables}
 \label{sec:theory:observables}
 
-Using the GLW and ADS methods, discussed in Sections \ref{sec:theory:glw} and \ref{sec:theory:ads}, we can construct observable quantities that can be used to extract \rb, \deltab and \Pgamma. This is achieved by considering asymmetries between the decay rates \Bm and \Bp decays, as well as ratios of decay rates in comparison to the favoured modes for the different \D final states. No \CP asymmetry is expected in the two- and four-body favoured \D decay modes. Twelve quantities, collectively referred to as \CP observables, are measured in this analysis:
+Using the GLW and ADS methods, discussed in Sections \ref{sec:theory:glw} and \ref{sec:theory:ads}, observable quantities are constructed that can be used to extract \rb, \deltab and \Pgamma. This is achieved by considering asymmetries between the decay rates \Bm and \Bp decays, as well as ratios of decay rates in comparison to the favoured modes for the different \Dz final states. No \CP asymmetry is expected in the two- and four-body favoured \Dz decay modes. Twelve quantities, collectively referred to as \CP observables, are measured in this analysis:
 
 \begin{itemize}
 \item{The \CP asymmetry for the favoured decay mode
@@ -309,7 +343,7 @@ R^-_{K\pi\pi\pi} = \frac{\Gamma\left(\decay{\Bm}{\D(\Kp\pim\pip\pim)\Kstarm}\rig
 \end{itemize}
 
 \noindent
-The asymmetries $A_{\kaon\pi}$ and $A_{\kaon\pi\pi\pi}$ should be essentially zero due to the very small interference expected in the configuration of \B and \D decays. Due to negligible direct \CP violation in \D decays~\cite{charmcpv}, the observables $A_{\kaon\kaon}$ and $A_{\pi\pi}$ should be equal and are often labelled together as $A_{\CP+}$; similarly the observables $R_{\kaon\kaon}$ and $R_{\pi\pi}$ should be equal and are labelled $R_{\CP+}$. The analogous observables to $R_{\CP+}$ and $A_{\CP+}$ for the ADS mode are $R_{ADS}$ and $A_{ADS}$. However, $R_{ADS}$ and $A_{ADS}$ are not used for the ADS decay mode, instead the ratios are measured separately for the positive and negative charges. The reason for this choice is that the uncertainty in $A_{ADS}$ depends on the value of $R_{ADS}$, therefore these observables are statistically dependent, raising problems for the low yields expected in the ADS mode. Hence the statistically independent observables $R^+_{K\pi}$ and $R^-_{K\pi}$ are preferred.
+The asymmetries $A_{\kaon\pi}$ and $A_{\kaon\pi\pi\pi}$ should be essentially zero due to the very small interference expected in the configuration of \B and \D decays. Due to negligible direct \CP violation in \D decays~\cite{charmcpv}, the observables $A_{\kaon\kaon}$ and $A_{\pi\pi}$ should be equal and are often labelled together as $A_{\CP+}$; similarly the observables $R_{\kaon\kaon}$ and $R_{\pi\pi}$ should be equal and are labelled $R_{\CP+}$. \footnote{The analogous observables to $R_{\CP+}$ and $A_{\CP+}$ for the ADS mode are $R_{ADS}$ and $A_{ADS}$. However, $R_{ADS}$ and $A_{ADS}$ are not used for the ADS decay mode, instead the ratios are measured separately for the positive and negative charges. The reason for this choice is that the uncertainty in $A_{ADS}$ depends on the value of $R_{ADS}$, therefore these observables are statistically dependent, raising problems for the low yields expected in the ADS mode. Hence the statistically independent observables $R^+_{K\pi}$ and $R^-_{K\pi}$ are preferred.}
 
 The \CP observables measured in this analysis can be related to the physics parameters to be determined, namely \Pgamma, $r_B$ and $\delta_B$. Given there is a negligible effect from both charm mixing~\cite{charmmixing} and \CP violation in \D decays~\cite{charmcpv}, the relationships between the \CP observables and physics parameters are given in the following equations,
 
@@ -338,7 +372,7 @@ R^{\pm}_{K\pi\pi\pi} = \frac{r_B^2 + \left(r_D^{K3\pi}\right)^2 + 2\kappa r_B \k
 \label{exp_Rpm4body}
 \end{equation}
 
-These relationships depend on several parameters describing the \D decays, which are taken from existing measurements.
+These six relationships contain 10 unknown parameters: the three parameters of interest, namely \rb, \deltab and \Pgamma, the coherence factor, $\kappa$, relating to the \Bm decay, which has a value specific to this analysis and six parameters describing the various \Dz decays, namely $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $R_{K3\pi}$ and $F_{4\pi}$, which have all been previously measured~\cite{charm4pi,charmk3pi,LHCb-PAPER-2015-057}. Therefore, the strategy taken in this thesis to extract \rb, \deltab and \Pgamma is to take the six parameters describing the various \Dz decays directly from existing measurements.
 
 
 \section{Previous \Pgamma measurements with \decay{\Bpm}{\D K^{(*)\pm}} decays}
@@ -358,4 +392,4 @@ In this analysis, the \decay{\Bm}{\D\Kstarm(\KS\pim)} channel is investigated wh
 
 \section{Analysis overview}
 
-The work presented measures the \CP observables in \decay{\Bm}{\D\Kstarm} decays as well as considering the interpretation of these observables in terms of \rb, \deltab and \Pgamma. The analysis strategy is to first develop a procedure, based on our understanding of the data and underlying theory, to select \decay{\Bm}{\D(\Km\pip)\Kstarm} signal decays while removing unwanted background events, discussed in Section \ref{sec:selection}. The same selection with a few adjustments can subsequently be applied to the other two- and four- body \D decay modes. After applying this selection, a fit model is developed to described the \B mass distribution of the remaining \decay{\Bm}{\D(\Km\pip)\Kstarm} candidates, detailed in Section \ref{sec:massfit}. This model must include various components in order to fully describe the shape of the \B mass distribution. Using the fit model developed based on the \decay{\Bm}{\D(\Km\pip)\Kstarm} mode, a simultaneous fit is then performed to all the seven \D modes separated by \B charge in order to extract the \CP observables defined in \eqn\ref{eqn:Akpi}-\ref{eqn:Rminus4body}, detailed in Section \ref{ch:5-cpfit}. Section \ref{ch:6-interpretation} discusses determination of $\kappa$ using \eqn\ref{kappadefinition} as well as the interpretation of the \CP observables using \eqn\ref{exp_Acp}-\ref{exp_Rpm4body}, in terms of the physics parameters: \rb, \deltab and \Pgamma.
+The work presented measures the \CP observables in \decay{\Bm}{\D\Kstarm} decays as well as considering the interpretation of these observables in terms of \rb, \deltab and \Pgamma. The analysis strategy is to first develop a procedure, based on our understanding of the data, to select \decay{\Bm}{\D(\Km\pip)\Kstarm} signal decays while removing unwanted background events, discussed in Section \ref{sec:selection}. The same selection with a few adjustments can subsequently be applied to the other two- and four- body \D decay modes. After applying this selection, a fit model is developed to described the \B mass distribution of the remaining \decay{\Bm}{\D(\Km\pip)\Kstarm} candidates, detailed in Section \ref{sec:massfit}. This model must include various components in order to fully describe the shape of the \B mass distribution. Using the fit model developed based on the \decay{\Bm}{\D(\Km\pip)\Kstarm} mode, a simultaneous fit is then performed to all the seven \D modes separated by \B charge in order to extract the \CP observables defined in \eqn\ref{eqn:Akpi}-\ref{eqn:Rminus4body}, detailed in Section \ref{ch:5-cpfit}. Section \ref{ch:6-interpretation} discusses determination of $\kappa$ using \eqn\ref{kappadefinition} as well as the interpretation of the \CP observables using \eqn\ref{exp_Acp}-\ref{exp_Rpm4body}, in terms of the physics parameters: \rb, \deltab and \Pgamma.
