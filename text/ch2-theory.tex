@@ -64,7 +64,7 @@ One of the key problems with the SM is that is does not explain why our universe
 
 The SM satisfies all necessary conditions for baryogenisis, however the amount of asymmetry that can be generated from \CP violation in the SM is many orders of magnitude smaller than the asymmetry observed from astrophysical observations~\cite{SMasy}. New Physics models that introduce new sources of \CP violation{\color{red}{[ref]}}, such as supersymmetric models, can be developed by theorists and searched for at the LHC and other experiments. However, it is also necessary to make precise measurements of \CP violation in the SM to improve our understanding of matter-antimatter asymmetry and search for indirect signs of New Physics.
 
-\CP violation is probed using many different processes. The different types of \CP violation in the SM can be split into three categories:
+\CP violation (CPV) is probed using many different processes. The different types of \CP violation in the SM can be split into three categories:
 \begin{itemize}
 \item \textbf{Direct CPV in decay}: this is when the rate of decay of a particle is not equal to the rate of the decay of the corresonding antiparticle \eg
 \begin{equation*}
@@ -83,7 +83,7 @@ The SM satisfies all necessary conditions for baryogenisis, however the amount o
 \section{The CKM matrix}
 
 Quarks in the Standard Model can interact via the strong, weak or electromagnetic interactions. The weak interaction couples to a rotation of the flavour eigenstates.
-This means that the eigenstates that take part in the weak interaction (weak eigenstates) are different to the flavour eigenstates that hadronise to produce the observable meson states. The Cabibbo-Kobayashi-Maskawa (CKM) matrix, given in \eqn \ref{CKMmatrix}, describes the relationship between the weak eigenstates ($d'$, $s'$, $b'$) and flavour eigenstates (\dquark, \squark, \bquark) of the quarks. 
+Therefore, the eigenstates that take part in the weak interaction (weak eigenstates) are different to the flavour eigenstates that hadronise to produce the observable meson states. The Cabibbo-Kobayashi-Maskawa (CKM) matrix, $V_{CKM}$, given in \eqn \ref{CKMmatrix}, describes the relationship between the weak eigenstates ($d'$, $s'$, $b'$) and flavour eigenstates (\dquark, \squark, \bquark) of the quarks. 
 \begin{equation}
 \left(
 \begin{array}{c} d' \\ s' \\ b'  \end{array} \right) =
@@ -92,7 +92,9 @@ This means that the eigenstates that take part in the weak interaction (weak eig
 V_{CKM} \left( \begin{array}{c} d \\ s \\ b \end{array} \right)
 \label{CKMmatrix}
 \end{equation}
-The elements of this matrix, $V_{ij}$, define the coupling of a $j \to i$ quark transition. Similarly $V_{ij}^*$ define the coupling of a $\bar{j} \to \bar{i}$ antiquark transition. By definition the CKM matrix, $V_{CKM}$, is unitary, i.e. $V_{CKM}V_{CKM}^* = \mathds{1}$, assuming there are only three generations of quarks. The CKM matrix is a complex, $3 \times 3$ matrix, which yields 18 parameters. The unitarity requirement brings the number of free parameters down to nine. Five strong phases can be absorbed into the quark fields as they are not physically observable, leaving four free parameters: three amplitudes and one phase. This free phase parameter is the source of \CP violation in the SM.
+The elements of this matrix, $V_{ij}$, define the coupling of a $j \to i$ quark transition. Similarly $V_{ij}^*$ define the coupling of a $\bar{j} \to \bar{i}$ antiquark transition. By definition the CKM matrix, $V_{CKM}$, is unitary, i.e. $V_{CKM}V_{CKM}^* = \mathds{1}$, assuming there are only three generations of quarks. The CKM matrix is a complex, $3 \times 3$ matrix, which yields 18 parameters. The unitarity requirement, coresponding to nine complex equations, reduces the number of free parameters, and five strong phases can be absorbed into the quark fields as they are not physically observable. This leave four independent free parameters to describe the CKM matrix: three amplitudes and one phase. This free phase parameter is the source of \CP violation in the SM. 
+
+A standard representation of the CKM matrix uses 3 angles, $\theta_{12}$, $\theta_{23}$ and $\theta_{13}$, and one \CP violating phase, $\delta$, as shown in Equation \ref{standard}. Couplings between the quark generation $i$ and $j$ vanish if $\theta_{ij} = 0$, and $s_{ij}$ and $c_{ij}$ represent $\sin\theta_{ij}$ and $\cos\theta_{ij}$.
 \begin{equation}
 V_{CKM} = \begin{pmatrix} 1 & 0 & 0 \\ 
 0 & c_{23} & s_{23} \\ 
@@ -110,26 +112,40 @@ If the CKM matrix was equivalent to the identity matrix there would be no cross-
 \begin{equation}
 | V_{CKM} | = \begin{pmatrix} 0.97434^{+0.00011}_{0.00012} & 0.22506 \pm 0.00050 & 0.00357 \pm 0.00015 \\ 0.22492 \pm 0.00050 & 0.97351 \pm 0.00013 & 0.0411 \pm 0.0013 \\ 0.00875^{+0.00032}_{-0.00033} & 0.0403 \pm 0.0013 & 0.99915 \pm 0.00005 \end{pmatrix}
 \end{equation}
-It can be seen that quark transitions within the same generation is highly favoured, these are known as Cabibbo-favoured decays. Also, quark transitions across one generation are suppressed, and are even more suppressed across two generations. These are known as Cabibbo-suppressed transitions. This structure in the CKM matrix is illustrated in the Wolfenstein parameterisation, given in Eq.~\ref{wolf}. This is an approximation of the standard parameterisation given in Eq.~\ref{standard}, where each of the parameters, $A$, $\lambda$, $\rho$ and $\eta$ are of order one.
+It can be seen that quark transitions within the same generation is highly favoured, these are known as Cabibbo-favoured decays. Also, quark transitions across one generation are suppressed, and are even more suppressed across two generations. These are known as Cabibbo-suppressed transitions. 
+
+This structure in the CKM matrix is illustrated by the Wolfenstein parameterisation, given in Eq.~\ref{wolf}, which uses parameters, $A$, $\lambda$, $\rho$ and $\eta$. 
 \begin{equation}
 V_{CKM} = \begin{pmatrix} 1 - \lambda^2/2 & \lambda & A\lambda^3(\rho - i\eta) \\ 
 -\lambda & 1 - \lambda^2/2 & A\lambda^2 \\ 
 A\lambda^3(1 - \rho - i\eta) & -A\lambda^2 & 1 \end{pmatrix}
 \label{wolf}
-\end{equation}
+\end{equation} 
+This is an approximation of the standard parameterisation given in Eq.~\ref{standard}, expanded in powers of the small parameter $\lambda = \sin\theta_{12} = 0.22$. The other parameters are deinfed by, $A\lambda^2 = s_{23}$ and $A\lambda^3(\rho - i\eta) = s_{13}e^{-i\delta}$. The \CP violation can be determined by measuring $\rho - i\eta$.
 
 \section{The CKM unitarity triangle}
 
-Verifying the unitarity of the CKM matrix is of the utmost importance since non-unitarity is a clear sign of New Physics~\cite{CKMtriangle}. The unitarity of the CKM matrix leads to nine unitarity conditions, for example $\Vud\Vubs + \Vcd\Vcbs + \Vtd\Vtbs = 0$, which is the most easily applicable to \B physics. These relations can be represented as a triangle in the complex plane. The triangle representing the condition $\Vud\Vubs + \Vcd\Vcbs + \Vtd\Vtbs = 0$ is often chosen as all the quantities are experimentally measurable and are of reasonable relative size; it has angles $\alpha$, $\beta$ and \Pgamma, and an area proportional to the amount of \CP violation in the quark sector of the Standard Model~\cite{CKMtriangle}. The values of $\alpha$, $\beta$ and \Pgamma can be accessed by looking at various \B meson decays. Overconstraining this unitarity triangle may lead to signs of physics beyond the Standard Model. 
+Verifying the unitarity of the CKM matrix is of the utmost importance since non-unitarity is a clear sign of physics Beyond the Standard Model~\cite{CKMtriangle}. The unitarity of the CKM matrix leads to nine unitarity conditions, for example $\Vud\Vubs + \Vcd\Vcbs + \Vtd\Vtbs = 0$, which is the most easily applicable to \B physics. These relations can be represented as a triangle in the complex plane, as shown in Figure \ref{triangle}. The triangle representing the condition $\Vud\Vubs + \Vcd\Vcbs + \Vtd\Vtbs = 0$ is often chosen as all the quantities are experimentally measurable and are of reasonable relative size; it has angles $\alpha$, $\beta$ and \Pgamma, and an area proportional to the amount of \CP violation in the quark sector of the Standard Model~\cite{CKMtriangle}. 
+\begin{figure}
+\centering
+\includegraphics[width=0.4\linewidth]{figures/theory/triangle.pdf}
+\caption{CKM triangle}
+\label{triangle}
+\end{figure}
 
-The CKM angle $\Pgamma \equiv \arg\left(-\frac{\Vud{\Vub}^*}{\Vcd{\Vcb}^*}\right)$ is the least well-known angle of the CKM unitarity triangle. The latest published \lhcb combination from direct measurements with charged and neutral \B decays to a \D meson (reconstructed in one of a variety of final states) and a kaon is $\Pgamma = \left(72.2^{+6.8}_{-7.3}\right)^{\circ}$~\cite{LHCb-PAPER-2016-032}. This is the most precise determination of \Pgamma from direct measurements from a single experiment; other experiments are consistent, but less precise. These direct measurement of \Pgamma involve only tree level process. A global fit to the CKM triangle from CKMfitter~\cite{CKMFitter}, shown in \fig\ref{globalfit}, use the current best measurements of various quantities, such as $\beta$, $\Delta m_d$ and $\Delta m_s$, as inputs, where $\Delta m_d$ and $\Delta m_s$ are the mass difference between the mass eigenstates of \Bz-\Bzb and \Bs-\Bsb respectively. Assuming the Standard Model, i.e. unitarity of CKM matrix, \Pgamma is extracted. The measurements for these inputs used include loop processes and therefore are sensitive to New Physics. This method obtains a \Pgamma measurement of $(66.9^{+0.9}_{-3.4})^{\circ}$, where this determination of \Pgamma excludes all direct measurements and assumes the Standard Model. The uncertainties on the indirect measurement are expected to decrease as lattice QCD calculations become more accurate. Therefore, precision at the level of $1^\circ$ on a direct measurement of \Pgamma would test the consistency of the direct and indirect measurements and thereby the Standard Model. This precision can be achieved through a combination of measurements of various \B decays that are sensitive to \Pgamma.
+The values of $\alpha$, $\beta$ and \Pgamma can be accessed by looking at various \B meson decays. Overconstraining this unitarity triangle, will allows verification as to whether or not the triangle closes, i.e. whether it truely is a triangle. Obtaining inconsistent results when overconstraining the unitarity triangle would suggest that the CKM is not unitary, which is incompatible with the Standard Model. 
 
+The CKM angle $\Pgamma \equiv \arg\left(-\frac{\Vud{\Vub}^*}{\Vcd{\Vcb}^*}\right)$ in the angle with the largest uncertainty in the CKM unitarity triangle. This angle is measured using the \lhcb detector from the rates of decays of a range of different decays that can be generalised as, charged and neutral \B decays to a \D meson (reconstructed in one of a variety of final states) and a kaon. These are known as direct measurements. In order to obtain the most precise direct measurement of \Pgamma, the individual measurements from each of these \Pgamma-sensitive decays are combined to produce a single value with a lower uncertainty. The latest published \lhcb combination is $\Pgamma = \left(72.2^{+6.8}_{-7.3}\right)^{\circ}$~\cite{LHCb-PAPER-2016-032}. This is the most precise determination of \Pgamma from direct measurements from a single experiment; other experiments are consistent, but less precise. These direct measurements of \Pgamma involve only tree level process, making them theoretically clean. New particles that are not predicted in the Standard Model can only enter at higher order, and are therefore highly suppressed. As \Pgamma can be determined at tree-level, direct measurements are dominated by Standard Model contributions.
+
+A global fit to the CKM triangle from CKMfitter~\cite{CKMFitter}, shown in \fig\ref{globalfit}, uses the current best measurements of various quantities, such as $\beta$, $\Delta m_d$ and $\Delta m_s$, as inputs, where $\Delta m_d$ and $\Delta m_s$ are the mass difference between the mass eigenstates of \Bz-\Bzb and \Bs-\Bsb respectively. When performing this fit any information on \Pgamma from direct measurements is ignored. Assuming the Standard Model, i.e. unitarity of CKM matrix, \Pgamma is extracted. The measurements for these inputs used include loop processes. The presence of the loop in the Feunman diagram allows additional Beyond the Standard Model diagrams, where new particles appear in the loop contributing to the amplitude at the same order. Therefore, these loop processes are sensitive to New Physics. This method obtains a \Pgamma measurement of $(66.9^{+0.9}_{-3.4})^{\circ}$, where this determination of \Pgamma excludes all direct measurements and assumes the Standard Model. The leading uncertainties on the indirect measurement are from lattice QCD; these uncertainties are expected to decrease as lattice QCD calculations become more accurate. 
 \begin{figure}[!ht]
 \centering
 \includegraphics[trim = 0mm 0mm 0mm 180mm,clip,width=0.9\linewidth]{figures/theory/rhoeta_small_global.pdf}
 \caption{Diagram showing the current state of measurements of the unitarity triangle. The black line shows the fit obtained by CKM fitter}
 \label{globalfit}
 \end{figure}
+
+The direct and indirect measurements of \Pgamma are currently consistent with each other, however, the result of \Pgamma from direct measurements has a relatively large uncertainty and higher central value. Therefore, improving the precision of the direct measurement of \Pgamma is necessary to verify whether or not the direct and indirect measurements are consistent, thereby testing the consistency of the Standard Model. Improvements in the precision can be achieved through a combination of measurements of various \B decays that are sensitive to \Pgamma.
 
 \section{Tree-level determination of \Pgamma using \decay{\Bpm}{\D K^{(*)\pm}} decays}
 \label{sec:theory:gamma}
@@ -189,7 +205,7 @@ The four-body \D decay mode \decay{\D}{\pip\pim\pip\pim} is a self-conjugate dec
 The theorists Gronau, London and Wyler proposed looking at \D decay modes where $f(D)$ is a non-\CP eigenstate such as \decay{\D}{\Km\pip}, referred to as the ADS method~\cite{ADS,ADS-2001}. A key feature of this method is that although the \Dz and \Dzb decay to the same final state they proceed by very different amplitudes. The Feynman diagrams for the doubly Cabibbo-favoured \decay{\Dz}{\Km\pip} decay and the doubly Cabibbo-suppressed \decay{\Dz}{\Kp\pim} decay are shown in \fig\ref{fig:D2KPidiagram}.
 \input{text/FD_D2KPi}
 
-The ratio of the amplitude between \decay{\Dzb}{\Km\pip} and \decay{\Dz}{\Km\pip} is given by,
+The ratio of the amplitude between \decay{\Dzb}{\Km\pip} and \decay{\Dz}{\Km\pip} is given by\footnote{The \CP operator acting on the state $\ket{\Dz}$ can result in either, $\CP\ket{\Dz} = \ket{\Dzb}$ or $\CP\ket{\Dz} = - \ket{\Dzb}$. This has consequences for the definition of the strong phase difference. In the ADS formalism, which is used here, the definition $\CP\ket{\Dz} = \ket{\Dzb}$ is used resulting in \ref{ratioads}. The alternative definition, $\CP\ket{\Dz} = - \ket{\Dzb}$, used by HFAG and CLEO-c, would result in $r_D^{K\pi}e^{-i(\pi + \delta_D^{K\pi})}$. The consequence of this is, the measured value of the strong phase difference is taken from Refs.~\cite{charmk3pi,LHCb-PAPER-2015-057} must be offset by $180^{\circ}$ when used in this thesis.}
 \begin{equation}
 \frac{\mathcal{A}\left(\decay{\Dzb}{\Km\pip}\right)}{\mathcal{A}\left(\decay{\Dz}{\Km\pip}\right)} = r_D^{K\pi}e^{-i\delta_D^{K\pi}}
 \label{ratioads}
@@ -377,7 +393,7 @@ These six relationships contain 10 unknown parameters: the three parameters of i
 
 \section{Previous \Pgamma measurements with \decay{\Bpm}{\D K^{(*)\pm}} decays}
 
-Increased sensitivity to \Pgamma can be achieved by increasing the size of the \dataset analysed and including many different \D meson final states. At \lhcb the \decay{\Bm}{\D\Km} channel is considered a golden mode for tree level \Pgamma measurements as it is straightforward to reconstruct and has a fairly high branching fraction of $3.7 \times 10^{-4}$~\cite{PDG2016}. This \decay{\Bm}{\D\Km} channel is thoroughly exploited at \lhcb having yielded many \Pgamma sensitive measurements using an extensive range of \D meson final states:
+The \decay{\Bm}{\D\Km} channel is a very important mode for tree level \Pgamma measurements, as it is straightforward to reconstruct and has a fairly high branching fraction of $3.7 \times 10^{-4}$~\cite{PDG2016}. This \decay{\Bm}{\D\Km} channel is thoroughly exploited at \lhcb having yielded many \Pgamma sensitive measurements using an extensive range of \D meson final states:
 \begin{itemize}
 \item \decay{\D}{\Kp\pim}, \Kp\Km, \pip\pim~\cite{LHCb-PAPER-2017-021},
 \item \decay{\D}{\Kp\pim\pip\pim}, \pip\pim\pip\pim~\cite{LHCb-PAPER-2016-003},
@@ -386,9 +402,13 @@ Increased sensitivity to \Pgamma can be achieved by increasing the size of the \
 \item \decay{\D}{\KS\Kp\Km}~\cite{LHCb-PAPER-2013-068}.
 \end{itemize}
 
-The \decay{\Bm}{\D\Kstarm} channel is analogous to the \decay{\Bm}{\D\Km} in its physical properties as well as having a comparable branching fraction of $5.3 \times 10^{-4}$~\cite{PDG2016}. However, prior to the work presented in this thesis the \decay{\Bm}{\D\Kstarm} channel had not been investigated at \lhcb. The \Kstarm decays almost exclusively to \Kz\pim and \Km\piz final states, both of which involve a neutral particle; this makes \decay{\Bm}{\D\Kstarm} much more difficult to reconstruct at \lhcb than \decay{\Bm}{\D\Km}. The \decay{\Bm}{\D\Kstarm} channel has previously been investigated by the BaBar collaboration using a variety of two-body \D decay modes~\cite{BaBarDKstar}. Also, both the BaBar and Belle collaborations have performed studies on \decay{\Bm}{\D\Kstarm} with \decay{\D}{\KS\pip\pim}~\cite{BaBarGGSZ,BelleGGSZ}. 
+Other experiments, other \Pgamma sensitive decays \Bz and \Bs. Why is \Pgamma less well known despite it being the only tree level angle?
 
-In this analysis, the \decay{\Bm}{\D\Kstarm(\KS\pim)} channel is investigated where the \D meson decays to two or four charged kaons and/or pions are considered. 
+The \decay{\Bm}{\D\Kstarm} channel is analogous to the \decay{\Bm}{\D\Km} in its physical properties as well as having a comparable branching fraction of $5.3 \times 10^{-4}$~\cite{PDG2016}. However, prior to the work presented in this thesis the \decay{\Bm}{\D\Kstarm} channel had not been investigated at \lhcb. The \Kstarm decays almost exclusively to \Kz\pim and \Km\piz final states, both of which involve a neutral particle; this makes \decay{\Bm}{\D\Kstarm} much more difficult to reconstruct at \lhcb than \decay{\Bm}{\D\Km}. 
+
+The \decay{\Bm}{\D\Kstarm} channel has previously been investigated by the BaBar collaboration using a variety of \CP-even, \CP-odd and non-\CP two-body \D decay modes, namely \Km\Kp, \pim\pip, \KS\piz, $\KS\phi$, $\KS\omega$ and \Km\pip~\cite{BaBarDKstar}. This study produced confidence levels for \Pgamma, excluding $[85,99]^{\circ}$ at the level of two sigma. Also, both the BaBar and Belle collaborations have performed studies on \decay{\Bm}{\D\Kstarm} with \decay{\D}{\KS\pip\pim}~\cite{BaBarGGSZ,BelleGGSZ}, obtaining results of $\Pgamma = (76 \pm 22 \pm 5 \pm 5)^{\circ}$ (mod $180^{\circ}$) and $\Pgamma = (53^{+15}_{-18} \pm 3 \pm 9)^{\circ}$, respectively. In all of these measurements the \Kstarm meson is reconstructed in the \KS\pim mode, with \decay{\KS}{\pip\pim}.
+
+In this analysis, the \decay{\Bm}{\D\Kstarm} channel is investigated, with \decay{\Kstarm}{\KS\pim} and \decay{\KS}{\pim\pip}, where the \Dz meson in reconstructed in its decay to two or four charged kaons and/or pions. The \Kstarm meson can be reconstructed from its decay to \Km\piz, however, the \piz meson decays almost exclusively to two photons, which are difficult to reconstruct, and therefore the \piz meson has a much poorer reconstruction efficiency than the \KS meson. Also, due to the properties of the detector, the reconstruction efficiency of the \piz has a larger uncertainty. Both the reduced statistics due to the poor reconstruction efficiency and the large uncertainty of the reconstruction efficiency, it is not considered beneficial to include the reconstruction of the \Kstarm meson in the \Km\piz mode.
 
 \section{Analysis overview}
 
