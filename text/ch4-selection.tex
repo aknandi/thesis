@@ -13,32 +13,22 @@
 \section{Selection of \btodkst candidates}
 \label{sec:selection}
 
-In this section, the reconstruction and selection procedure for the signal mode, \btodkst(\KS\pim), in the \decay{\Dz}{\Km\pip}, \Kp\Km, \pip\pim, \Kp\pim, \Km\pip\pim\pip, \pip\pim\pip\pim and \Kp\pim\pip\pim final states is described. The \pim from the \Kstarm decay is referred to as the bachelor particle. The selection is developed for the favoured \kpi mode and then applied with minor alterations to the other \D decay modes. The data analysed in this thesis corresponds to 3\invfb of $pp$ collisions at $\sqrt{s} = 7\tev \text{ and } 8\tev$ collected in 2011 and 2012 (known as Run 1), and 1.8\invfb at $\sqrt{s} = 13\tev$ collected in 2015 and 2016 (known as Run 2).
+In this section, the reconstruction and selection procedure for the signal mode, \decay{\Bm}{\D\Kstarm}(\KS\pim) is described, where the particles in brackets refers to the decay products of the proceeding particle. The symbol \D refers to a superposition of \Dz and \Dzb mesons. In this thesis the \Dz meson decays to \Km\pip, \Kp\Km, \pip\pim, \Kp\pim, \Km\pip\pim\pip, \pip\pim\pip\pim and \Kp\pim\pip\pim final states are investigated. The \pim from the \Kstarm decay is referred to as the bachelor particle. The selection is developed for the favoured \kpi mode and then applied with minor alterations to the other \D decay modes. The data analysed in this thesis corresponds to 1\invfb and 2\invfb of $pp$ collisions at $\sqrt{s} = 7\tev \text{ and } 8\tev$ collected in 2011 and 2012 (referred to in this thesis as Run 1), and 1.8\invfb at $\sqrt{s} = 13\tev$ collected in 2015 and 2016 (referred to in this thesis as Run 2).
 
 \subsection{Reconstruction and trigger requirements}
 \label{sec:selection:strippingandtrigger}
 
-\btodkst(\KS\pim) decays are reconstructed offline and stored in a centrally produced dataset in the pre-selection stage described in Section \ref{sec:detector:stripping}. At this point of the data-processing chain some loose requirements have been made in order to reduce to the \dataset to a reasonable size for storage. However, the amount of combinatorial background, which is background originating from reconstructing random pion and kaon tracks to form fake \Dz, \KS or \Kstarm candidates, is still very high. Therefore further offline selection is applied to candidates passing the reconstruction and trigger requirements in order to reduce the level of combinatorial background as well as to target specific peaking backgrounds.
+\btodkst(\KS\pim) decays are reconstructed offline and stored in a centrally produced dataset in a stage known as stripping, described in Section \ref{sec:detector:stripping}. At this point of the data-processing chain some loose requirements have been made in order to reduce to the \dataset to a reasonable size for storage. However, the amount of combinatorial background, which is background originating from reconstructing random pion and kaon tracks to form fake \Bm, \Dz, \KS or \Kstarm candidates, is still very high. Therefore further offline selection is applied to candidates passing the stripping and trigger requirements in order to reduce the level of combinatorial background as well as to target specific peaking backgrounds.
 
 The \KS meson is reconstructed through its decay to two charged pions. Reconstructed tracks can be classified in to different types as described in Section \ref{sec:detector:tracks}. If the pions from the \KS decay leave sufficient hits in the \velo to be included in the track reconstruction they are called long tracks and the reconstructed \KS meson is referred to as LL. Due to the high boost from the $pp$ collision many \KS particles decay outside the \velo. If the pions from the \KS decay do not leave sufficient hits in the \velo, they are called downstream tracks and the reconstructed \KS meson is referred to as DD, with the first hits being recorded in the TT, which typically results in poorer mass resolution. The LL \KS mesons tend to have higher combinatorial background levels as there are many more tracks in the \velo to be misreconstructed compared to further downstream. Due to these difference, the \KS reconstruction types, LL and DD, are treated as separate data samples and a slightly different selection is applied to each. The \Kstarm meson is reconstructed from its decay to a \KS meson and a \pim meson, while the \Dz meson is reconstructed via its decay to two- or four-body final states containing kaons and pions. Finally, the \Bm meson is reconstructed from the addition of the \Dz and \Kstarm meson candidate tracks.
 
-\decay{\Bpm}{\D\Kstarpm} candidates undergo the pre-selection phase which place certain constraints on the on the reconstructed decay chain. These requirements include loose $p$ and \pt thresholds on all charged tracks. The \KS candidates are required to have a reconstructed mass within 30 \mevcc of the known mass. The \KS candidate is also required to have a good quality vertex that is well separated from the primary vertex. The \Dz candidates are required to have a reconstructed mass within 100 \mevcc of the known mass. The \Bm candidate is required to have a mass in the range 4750 - 5800 \mevcc, have an \chisqip $<$ 25 and a good quality vertex, where \chisqip is the difference in the vertex fit \chisq of the PV with and without the particle under consideration.
+The \KS candidates are required to have a reconstructed mass within 15 \mevcc of the known mass for LL \KS candidates and within 20\mevcc for DD \KS candidates. The \KS candidate is also required to have a good quality vertex that is well separated from the primary vertex. The \Kstarm candidate is formed from a reconstructed \KS candidate and a \pim candidate, and is required to have a reconstructed mass within 75\mev of the known \Kstarm mass. Similarly the \Dz candidate is reconstructed from the relevant kaon and pion candidates, \eg~in the case of \kpi, a \Km and \pip are reconstructed to form a \Dz candidate, which is required to form a good quality vertex, with a reconstructed mass within 25\mevcc of the known \Dz mass. The \Bm candidate is reconstructed from a \Dz and a \KS candidate forming a good quality vertex. The resulting reconstructed \Bm candidate is required to have a mass in the range 4750 - 5800 \mevcc and an \chisqip $<$ 25, where \chisqip is the difference in the vertex fit \chisq of the PV with and without the particle under consideration. Additionally,there are loose $p$ and \pt threshold requirements on all charged tracks.
 
 The trigger decision for each candidate is categorised as {\tt TOS} (Trigger On Signal) if the particles associated with the signal candidate triggered the event or {\tt TIS} (Trigger Independent of Signal) if other particle produced in the $pp$ interaction, that are not associated with the signal candidate, triggered the event. At the hardware trigger, the \Bm candidates are required to satisfy {\tt L0Hadron TOS} or {\tt L0Global TIS}. At the software trigger level, \Bm candidates are required to satisfy {\tt Hlt1TrackAllL0 TOS} and {\tt Hlt2TopoNBodyBBDT TOS}, where $N = 2,3 \text{ or } 4$. These trigger classifications were described in Section \ref{sec:detector:trigger}.
 
 The {\tt DecayTreeFitter} (DTF) framework~\cite{Hulsbergen:2005pu} is used in this analysis to perform the reconstruction fit again for all the reconstructed tracks in the decay for each \Bm candidate passing the stripping requirements, with one or more constraints imposed. This procedure improves the resolution of the \Bm mass peak. During this refit, the best fit value of the four-momenta for each particle is found under the given constraints. The labels given by {\tt D0const} and {\tt KS0const} correspond to constraining the \Dz mass and \KS mass to their known values. The label {\tt PVconst} is used to indicate that the \Bm momentum vector direction is constrained to be parallel to the vector joining the primary vertex (PV) to the \Bm decay vertex. The \Bm mass used in this analysis is constructed for each \Bm candidate by fitting the tracks in the decay with requirements that the \Dz and \KS mass are constrained to their known values and the \Bm momentum vector direction is constrained to be parallel to the vector joining the primary vertex (PV) to the \Bm decay vertex. This results in an improved the \Bm mass resolution.
 
-The offline selection involves imposing requirements on individual variables, as well as using a multivariate classifier, and particle identification requirements. The following simple offline selection criteria are applied:
-
-\begin{itemize}
-\item The \chisq of the decay chain refit per degree of freedom, with {\tt D0const}, {\tt KS0const} and {\tt PVconst} constraints, must lie between 0 and 100, 
-\item The \chisqip of the \Bm candidate, with respect to the \Bm vertex, must be greater than zero, 
-\item The reconstructed \Dz mass must lie within 25 \mev of the known \Dz mass, 
-\item The reconstructed \Kstarm mass must lie within 75\mev of the known \Kstarm mass, 
-\item The reconstructed \KS mass must lie with 15\mev of the known \KS mass for LL candidates and 20\mev for DD candidates.
-\end{itemize}
-
-The selection on the \chisq of the decay chain refit per degree of freedom and \chisqip of the \Bm candidate are extremely loose requirements to remove outliers. The requirements on the masses of the intermediate states reduce the probability of the sample containing \Dz, \KS or \Kstar candidates that do not correspond to a true \Dz, \KS or \Kstar meson state. However, the requirements cannot be too close to the true meson mass as this would results in remove a significant proportion of the signal candidates. The signal efficiencies of the \Dz, \KS and \Kstar mass requirements, shown graphically in Figure \ref{masscuts}, are 96\%, 98\% and 82\% respectively. 
+The offline selection involves imposing requirements on individual variables, such as the reconstructed masses of the intermediate meson states, as well as using a multivariate classifier, and particle identification requirements. The requirements on the masses of the intermediate states reduce the probability of the sample containing \Dz, \KS or \Kstar candidates that do not correspond to a true \Dz, \KS or \Kstar meson state. However, the requirements cannot be too close to the true meson mass as this would result in the removal of a significant proportion of the signal candidates. The signal efficiencies of the \Dz, \KS and \Kstar mass requirements, shown graphically in Figure \ref{masscuts}, are 96\%, 98\% and 82\% respectively. 
 
 \begin{figure}
 \includegraphics[width=\linewidth]{figures/selection/massDistDD_MC.pdf}
@@ -84,7 +74,7 @@ Alternative particle identification variables exist, called ProbNN variables, th
 \label{pidoptimisation}
 \end{figure}
 
-\subsection{Studies of peaking backgrounds}
+\subsection{Peaking backgrounds and selection used to supress them}
 \label{sec:backgrounds}
 
 There are many backgrounds to be considered where certain particles in the decay chain are missed in the reconstruction process, or incorrectly identified. These effects can result in backgrounds that form peaking structures in the \Bm mass spectrum, which are dangerous if they significantly affect the \Bm mass spectrum. These backgrounds must either be reduced to negligible levels using targeted selection choices, or correctly modelled and included in the fit to the invariant \Bm mass spectrum. This section discusses each of the peaking backgrounds individually and the strategy employed to deal with them.
@@ -92,9 +82,9 @@ There are many backgrounds to be considered where certain particles in the decay
 \subsubsection{Partially reconstructed \boldmath$B \to D^*K^*$ decays}
 \label{sec:backgrounds:partreco}
 
-The main class of backgrounds in this analysis is the partially reconstructed \decay{\B}{\Dstar\Kstar} decays, including \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} and \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm}, where the particle in square brackets in not reconstructed. As each of these backgrounds involved a pion or photon being missed in the reconstruction, the reconstructed \Bm mass for these backgrounds appears below the signal peak. These partially reconstructed backgrounds are modelled and included as a component in the fit to the \Bm mass spectrum, which is discussed in detail in Section \ref{sec:massfit:partreco}.
+The main class of backgrounds in this analysis is the partially reconstructed \decay{\B}{\Dstar\Kstar} decays, including \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} and \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm}, where the particle in square brackets in not reconstructed. As each of these backgrounds involved a pion or photon being missed in the reconstruction, the reconstructed \Bm mass for these backgrounds appears below the signal peak. This background is irreducible as it is very similar to the signal, therefore these partially reconstructed backgrounds are modelled and included as a component in the fit to the \Bm mass spectrum, which is discussed in detail in Section \ref{sec:massfit:partreco}.
 
-\subsubsection{Backgrounds corresponding to \boldmath$B \to K^*hh$ decays}
+\subsubsection{Backgrounds of type to \boldmath$B \to K^*hh'$ decays}
 \label{sec:backgrounds:charmless}
 
 Backgrounds that involve the same final state particles, but do not proceed via one of the intermediate state particles are very important, as they would peak in the same region of \Bm mass as the signal. These backgrounds need to be properly understood and reduced to negligible levels such that they do not incorrectly contribute to the estimate of the signal yield. 
@@ -128,7 +118,7 @@ In the final selection, the \Dz FD significance is required to exceed 2$\sigma$,
 
 Having considered backgrounds without the \Dz meson present, we now consider backgrounds that do not occur via a \KS meson. These \decay{\Bm}{\D\pim\pip\pim} decays, with a branching fraction of $5.7 \times 10^{-3}$~\cite{PDG2014} (about 50 times the signal \decay{\Bm}{\D\Kstarm(\KS(\pip\pim)\pim)} branching fraction), are expected to occur as a peaking background underneath the signal. In order to remove this background, events are selected with the requirement that the \KS has travelled within the detector. For DD candidates this requirement is already satisfied, however for LL candidates a minimum requirement on the flight distance significance of the \KS in the z direction, defined in Equation \ref{FDdefinition}, is used to remove this background. 
 
-The \decay{\Bm}{\D\pim\pip\pim} background is estimated by taking the \KS mass sidebands ($>$ 20 MeV from nominal \KS mass) in data and performing a fit to the invariant \Bm mass distribution. A Gaussian is used to model the signal and an exponential for the combinatorial background. A modified selection is applied that does not use any DTF variables, as described in Section \ref{sec:backgrounds:charmless}. This fit is performed on \kpi data requiring the \KS FD significance to be greater than zero and 5$\sigma$, as shown in Figure \ref{strangelessfits}. Using these fits the estimated \decay{\B}{\D\pi\pi\pi} yield in the signal region with \KS FD significance $>$ 0 is $77 \pm 11$ and with \KS FD significance $>$ 5 is $1.0 \pm 1.0$. For the final selection, the FD significance is required to be greater than 5$\sigma$ as it removes all of the \decay{\Bm}{\D\pim\pip\pim} background.
+The \decay{\Bm}{\D\pim\pip\pim} background is estimated by taking the \KS mass sidebands ($>$ 20 MeV from nominal \KS mass) in data and performing a fit to the invariant \Bm mass distribution. A Gaussian is used to model the signal and an exponential for the combinatorial background. A modified selection is applied that does not use any DTF variables, as described in Section \ref{sec:backgrounds:charmless}. This fit is performed on \kpi data requiring the \KS FD significance to be greater than zero and 5$\sigma$, as shown in Figure \ref{strangelessfits}. Using these fits the estimated \decay{\B}{\D\pi\pi\pi} yield in the signal region with \KS FD significance $>$ 0 is $77 \pm 11$ and with \KS FD significance $>$ 5 is $1.0 \pm 1.0$. For the final selection, the FD significance is required to be greater than 5$\sigma$ as it supresses the \decay{\Bm}{\D\pim\pip\pim} background to a negligible level.
 
 
 \begin{figure}
@@ -145,7 +135,7 @@ The \decay{\Bm}{\D\pim\pip\pim} background is estimated by taking the \KS mass s
 \subsubsection{Non-resonant \boldmath$B \to DK_s\pi$}
 \label{sec:backgrounds:non-resonant}
 
-The \Kstarm meson has a large natural width (about 50\mevcc~\cite{PDG2016}) therefore \decay{\Bm}{\D\KS\pim} may be non-negligible in this region, which would affect the measurement of \Pgamma. This is accounted for by the coherence factor $\kappa$, discussed in Section \ref{sec:theory:gamma}. It is necessary to optimise the selection to get maximum sensitivity to \Pgamma, which involves optimising between obtaining a high yield and a high coherence. This is achieved, firstly by only accepting \Kstarm candidates that have a reconstructed mass within 75\mevcc to the known mass and secondly by exploiting the vector properties of the signal decay. 
+The \Kstarm meson has a large natural width (about 50\mevcc~\cite{PDG2016}) therefore \decay{\Bm}{\D\KS\pim} may be non-negligible in this region, which would affect the measurement of \Pgamma. The purity of the \Kstarm in the sample can be increase by, firstly by only accepting \Kstarm candidates that have a reconstructed mass within 75\mevcc to the known mass and secondly by exploiting the vector properties of the signal decay. 
 
 As the \Kstarm meson is a vector meson, the \decay{\Bm}{\D\Kstarm} decay is a Scalar $\to$ Scalar Vector decay, forcing the \Kstarm to be longitudinally polarised. If we define the \KS helicity angle, $\theta_{\KS}$, as the angle between the \KS and the bachelor pion in the \Kstarm rest frame, $\cos(\theta_{\KS})$ for pure \decay{\Bm}{\D\Kstarm} follows a parabolic distribution, as shown in Figure \ref{helicitycut}. As \decay{\Bm}{\D\KS\pim} decays are expected to be uniformly distributed in $\cos(\theta_{\KS})$, by removing candidates that have a small absolute value of $\cos(\theta_{\KS})$ a large amount of non-resonant background can be removed while retaining almost all of the pure \decay{\Bm}{\D\Kstarm} signal. Removing events with an absolute value of $\cos(\theta_{\KS})$ less than 0.3 retains 97\% of true \decay{\Bm}{\D\Kstarm} decays, while rejecting 30\% of the non-resonant background. The optimisation of the \Kstarm mass and \KS helicity angle selection is discussed in detail in Section \ref{sec:cpfit:optimisation}.
 
@@ -157,15 +147,13 @@ As the \Kstarm meson is a vector meson, the \decay{\Bm}{\D\Kstarm} decay is a Sc
 \label{helicitycut}
 \end{figure}
 
-Having determined the \Kstarm selection, the value of the coherence factor, $\kappa$, is estimated and then used alongside the \CP observables to extract \Pgamma, $r_B$ and $\delta_B$. The parameter $\kappa$ is estimated by constructing an amplitude model and using this to generate many models, where the amplitudes and phases of the model components are varied; this method is detailed in Section \ref{sec:interpretation:coherence}. The resulting estimate for the value of $\kappa$ is $0.95 \pm 0.06$.
-
-It can be observed from Figure \ref{helicitycut} that the \KS helicity angle distribution is not symmetric. Figure \ref{helictyasymmetry}(a) shows the \KS helicity angle distribution in a simulated signal sample with no generator level selection applied, which is symmetric as expected. However, Figure \ref{helictyasymmetry}(b) shows the same distribution but with momentum, $p$, and transverse momentum, $p_T$, thresholds placed on the bachelor pion that are present in the stripping line, which reproduces the observed asymmetry. Therefore, the asymmetry in this variable, manifest in both data and simulation, is due to the momentum and transverse momentum selections placed on the bachelor pion in the stripping line.
+It can be observed from Figure \ref{helicitycut} that the \KS helicity angle distribution is not symmetric. The asymmetry in this variable, manifest in both data and simulation, is due to the momentum and transverse momentum selections placed on the bachelor pion in the stripping stage of the selection.
 
 \begin{figure}[h]
 \includegraphics[width=\linewidth]{figures/helicityAngleAsymmetry.pdf}
 \put(-360,150) {(a)}
 \put(-150,150) {(b)}
-\caption{Distribution of the cosine of \KS helicity angle from a simulated sample of \kpi events at generator level with (a) no selection applied, and (b) bachelor $p > 2500$ MeV and bachelor $p_T > 250$ MeV applied, as in the stripping line.}
+\caption{Distribution of the cosine of \KS helicity angle from a simulated sample of \kpi events at generator level with (a) no selection applied, and (b) bachelor $p > 2500$ MeV and bachelor $p_T > 250$ MeV applied, as is applied in the stripping stage of the selection.}
 \label{helictyasymmetry}
 \end{figure}
 
@@ -192,7 +180,7 @@ For the four-body modes, the equivalent background can appear in the suppressed 
 \label{Dmassveto4body}
 \end{figure}
 
-In order to determine the overall crossfeed contamination in the suppressed \pik mode the efficiency of the \Dz mass window, double misidentification veto and PID requirements are taken into account for both the normal and swapped \Dz mass hypothesis. The proportion of events expected in the \Bm mass spectrum of the suppressed \pik mode relative to the total \pik is estimated to be $9.5 \times 10^{-3}$ for LL and $6.5 \times 10^{-3}$ for DD in Run 1, and $5.6 \times 10^{-3}$ for LL and $5.3 \times 10^{-3}$ in Run 2. Similarly for the 4-body mode, proportion of events expected in the \Bm mass spectrum of the suppressed \pikpipi mode relative to the total \pikpipi is estimated to be $2.7 \times 10^{-3}$ for LL and $1.0 \times 10^{-3}$ for DD in Run 1, and $1.4 \times 10^{-3}$ for LL and $6.3 \times 10^{-4}$ in Run 2. Therefore, the contribution of the crossfeed in both the two- and four-body ADS modes is negligible at less than 0.1\% of the signal.
+In order to determine the overall crossfeed contamination in the suppressed \pik mode the efficiency of the \Dz mass window, double misidentification veto and PID requirements are taken into account for both the normal and swapped \Dz mass hypothesis. The proportion of \kpi events expected in the \Bm mass spectrum of the suppressed \pik mode relative to the total \pik is estimated to be $9.5 \times 10^{-3}$ for LL and $6.5 \times 10^{-3}$ for DD in Run 1, and $5.6 \times 10^{-3}$ for LL and $5.3 \times 10^{-3}$ in Run 2. Similarly for the 4-body mode, proportion of \kpipipi events expected in the \Bm mass spectrum of the suppressed \pikpipi mode relative to the total \pikpipi is estimated to be $2.7 \times 10^{-3}$ for LL and $1.0 \times 10^{-3}$ for DD in Run 1, and $1.4 \times 10^{-3}$ for LL and $6.3 \times 10^{-4}$ in Run 2. Therefore, the contribution of the crossfeed in both the two- and four-body ADS modes is negligible at less than 0.1\% of the signal.
 
 
 \subsubsection{\boldmath \decay{\Lb}{\Lc\Kstar} background in the \kk mass spectrum}
@@ -203,32 +191,9 @@ An additional source of background in the \kk \Bm mass spectrum comes from the d
 \subsubsection{\boldmath \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} background}
 \label{sec:backgrounds:bs}
 
-The decay \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} or $\Dzb K_1(1400)^0$, \decay{(K_1,K^*)}{K^{*}(892)^-\pip}, where the \pip is missed in reconstruction could contribute region of the \pik ADS mode just below the \Bm mass peak. In the \decay{\Bm}{\D h^-} analysis~\cite{LHCb-PAPER-2016-003} the equivalent \decay{\Bs}{\D K^*(892)^0} background is a significant contribution to the model in the \pik ADS mode and contributes to the \Bm mass spectrum in the region containing the signal peak. In this analysis the low mass limit of the simultaneous fit is at 5230 \mev and therefore this background will be almost entirely removed. However, it is possible that a small contribution still remains and contributes to the signal region. Figure \ref{adsfullrange} shows the \B mass distribution over the full mass range for the \kpi and \pik modes. The \pik mode does not have many events and therefore it is difficult to draw any conclusions from this plot, however, the signal and partially reconstructed background can be seen. There is also possible evidence of an excess at about 5180\mev.
+The decay \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} or $\Dzb K_1(1400)^0$, \decay{(K_1,K^*)}{K^{*}(892)^-\pip}, where the \pip is missed in reconstruction could contribute region of the \pik ADS mode just below the \Bm mass peak. In this analysis the low mass limit of the simultaneous fit is at 5230 \mev and therefore this background will be almost entirely removed. However, it is possible that a small contribution still remains and contributes to the signal region. 
 
-\begin{figure}
-\centering
-\includegraphics[width=0.6\linewidth]{figures/backgrounds/adsfullrange.pdf}
-\caption{\B mass distribution for both the charge favoured \kpi mode (top) and the ADS mode (bottom) after the full selection, summed over run period and \KS reconstruction type.}
-\label{adsfullrange}
-\end{figure}
-
-In order to obtain an idea of how much this \Bs background would contribute to the \Bm mass spectrum, and as such affect the results of the fit, a simple fit to data was performed to the \pik mode from 5150 - 5600 \mev in \Bm mass. The shape of the \Bs background generated using RapidSim, as shown in Figure \ref{Bsshape}, is subsequently fitted using a one-dimensional kernel estimation probability density function. The model used to perform a fit to the \Bm mass spectrum in the \pik mode consists of a Gaussian signal shape, combinatorial described by an exponential and the \Bs background shape described. As there are so few events in the ADS mode the signal shape parameters were fixed from the full fit in order to maintain fit stability. The fit described is shown in Figure \ref{adsfit}. It can be seen that $\sim$2 \Bs events enter the simultaneous fit region above 5230\mev.
-
-\begin{figure}
-\centering
-\includegraphics[width=0.5\linewidth]{figures/backgrounds/BsShape.pdf}
-\caption{Simulation of \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0}, \decay{\bar{K}^{*}(1410)^0}{K^{*}(892)^-\pip}, where the \pip is missed in reconstruction, generated using RapidSim. The \decay{\Bs}{\Dzb\bar{K}_1(1400)^0} has a very similar shape.}
-\label{Bsshape}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{figures/backgrounds/adsfit.pdf}
-\caption{Simple fit to data of the \B mass distribution in the ADS mode from 5150\mev. The components are the signal (red), combinatorial (green) and \Bs background (black).}
-\label{adsfit}
-\end{figure}
-
-Alternatively, the \Bs background contribution can be estimated by using the \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} branching fraction of $\left(3.9 \pm 3.5\right) \times 10^{-4}$~\cite{PDG2016} and the efficiency \Bm mass requirement being greater than 5230\mev taken from the \Bs shape in Figure \ref{Bsshape}, which is $6.4 \times 10^{-4}$. This gives an estimate of $2.6 \pm 2.6$ \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} events in \pik mode above 5230\mev, which is consistent with the estimate from Figure \ref{adsfit}. This estimated \Bs background is used to assign a systematic uncertainty to the \CP observables, discussed in more detail in Section \ref{sec:systematics}.
+The \Bs background contribution can be estimated by using the \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} branching fraction of $\left(3.9 \pm 3.5\right) \times 10^{-4}$~\cite{PDG2016} and the efficiency of the \Bm mass requirement being greater than 5230\mev, which is $6.4 \times 10^{-4}$. This efficiency is extracted from a simulated sample of \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0}, \decay{\bar{K}^{*}(1410)^0}{K^{*}(892)^-\pip} events, where the \pip is missed in reconstruction. This gives an estimate of $2.6 \pm 2.6$ \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} events in \pik mode above 5230\mev. This estimated \Bs background is used to assign a systematic uncertainty to the \CP observables, discussed in more detail in Section \ref{sec:systematics}.
 
 
 \subsubsection{Lambda contamination}
@@ -241,7 +206,7 @@ The \decay{\KS}{\pip\pim} decay could have contamination coming from \decay{\Lz}
 \label{longitudinalpasy}
 \end{equation}
 
-where $p_L^{\pm}$ is the longitudinal momentum of the daughter particles with respect to the direction of the mother. The decay products of the \decay{\KS}{\pip\pim} decay have the same mass and therefore on average their momenta is symmetrically distributed. Whereas for the \decay{\Lz}{\proton\pim}, the proton would, on average, take a larger proportion of the momentum resulting in an asymmetric distribution. Contamination from \Lz baryons would be clearly seen as a distinct structure on the AP plot, as illustrated in Figure \ref{apexample}. The resulting AP plots from this analysis for both data and simulation are shown in Figure \ref{applots}, these curves are the same shape as the expected distribution for a sample of pure \KS mesons. Therefore, there is no contamination from \decay{\Lz}{\proton\pim} decays in the data.
+where $p_L^{\pm}$ is the longitudinal momentum of the daughter particles with respect to the direction of the mother. The decay products of the \decay{\KS}{\pip\pim} decay have the same mass and therefore on average their momenta is symmetrically distributed. Whereas for the \decay{\Lz}{\proton\pim}, the proton would, on average, take a larger proportion of the momentum resulting in an asymmetric distribution. Contamination from \Lz baryons would be clearly seen as a distinct structure on the AP plot, as illustrated in Figure \ref{apexample}. 
 
 \begin{figure}
 \centering
@@ -249,6 +214,8 @@ where $p_L^{\pm}$ is the longitudinal momentum of the daughter particles with re
 \caption{An example Armenteros-Podolanski plot showing where the signal regions for \KS, \Lz and \Lbar are located in the AP plane. Reproduced from Ref.~\cite{APplot}.}
 \label{apexample}
 \end{figure}
+
+The resulting AP plots from this analysis for both data and simulation are shown in Figure \ref{applots}, these curves are the same shape as the expected distribution for a sample of pure \KS mesons. Therefore, there is no contamination from \decay{\Lz}{\proton\pim} decays in the data.
 
 \begin{figure}[h]
 \includegraphics[width=0.5\linewidth]{figures/backgrounds/APplot_LL.pdf}
@@ -275,11 +242,9 @@ Various selection requirements can be placed on variables relating to individual
 
 A Boosted Decision Tree (BDT) with the gradient boost (BDTG) method using the Toolkit for Multivariate Analysis (TMVA) framework~\cite{TMVA} is employed in order to reduce the combinatorial background level. A separate BDT is trained for LL and DD candidates, named BDTG\_LL and BDTG\_DD respectively. The BDTs are mainly based on topological variables, so are insensitive as to whether the \Dz daughters are kaons or pions. Therefore, the same BDT is used for all of the two-body \Dz decay modes, trained using \kpi decays, and another BDT is used for all of the four-body \Dz decay modes, trained using \kpipipi decays. For the two body modes, simulated samples for the decay \kpi were used to provide a signal sample. Events from data in the favoured \kpi mode in the region of \Bm mass above 5600 MeV were used as a sample of background combinatorial events. 
 
-As there are five tracks in the final state of \kpi the reconstruction efficiency of this decay mode is very low. The number of simulated events passing the stripping and going on to be used as a signal training sample was found to be too small, which resulted in overtraining of the BDT. In order to deal with this problem, a simulated sample was produced with selection applied at the point of generation, known as generator level selection. The effect of this is that events that were not likely to pass the offline stripping selection and reconstruction are removed before the computationally intensive process of simulating the event in the \lhcb detector. These generator level selection requirements result in significantly higher proportion of generated events passing the stripping, giving a larger signal sample size to be used in training.
+Generation of simulated events is computationally expensive. A small simulated sample is produced from full \lhcb simulation in order to determine efficiencies. The sample is small due to many generated events failing the reconstruction, however, BDT training requires a significantly larger sample. The available resources are insufficient to simply generate more events. A workaround is employed to remove events at generator level, which are less likely to pass the selection. This reduces the number of events required to be simulated in the \lhcb detector, which is the most computationally expensive part of the reconstruction process. Events are removed on the basis of low momentum or transverse momentum of signal tracks or intermediate particles. The advantage of this approach is that 89\% of generated events are removed, reducing the resource requirement by ?\%. However, the disadvantage is that the selection has to be more stringent than the final selection and 20\% of events that would have passed are removed. Therefore, the BDT may not be as optimal as it may have been with unlimited resources. This trade-off is deemed acceptable.
 
-The generator level selection removes 89\% of events at generator level while keeping 78\% of LL candidates and 81\% of DD candidates. Not all generator level selections are looser than those applied to the data in stripping, however the loss in good signal was deemed to be acceptable to be able to increase signal yields in the simulated sample. Any signal efficiencies required in this analysis are calculated from simulated signal samples with no generator level selection applied.
-
-For \kpipipi, signal samples of simulated events  for the decay \kpipipi without generator level selection were used. This was possible due to an artefact of the time that each stage of the analysis was performed. Events from data in the favoured \kpipipi mode in the region of \Bm mass above 5600 MeV were used as a sample of background combinatorial events. All samples used in training the BDTs are split into a training and testing sample before being used as an input to the multivariate algorithm.
+For \kpipipi, signal samples of simulated events for the decay \kpipipi without generator level selection were used. This was possible due to an artefact of the time that each stage of the analysis was performed; at this later time the resource availability improved. Events from data in the favoured \kpipipi mode in the region of \Bm mass above 5600 MeV were used as a sample of background combinatorial events. All samples used in training the BDTs are split into a training and testing sample before being used as an input to the multivariate algorithm.
 
 \subsubsection{Setup and implementation of the multivariate algorithm}
 
@@ -292,14 +257,14 @@ Initial selection requirements are applied to both the signal and background tra
 \item The reconstructed \KS mass must lie with 15\mev of the known \KS mass for LL candidates and 20\mev for DD candidates
 \end{itemize}
 
-Various input variables are used to exploit the topology of the decay; of particular importance are the \chisq per degree of freedom of the decay chain refit, with {\tt D0const}, {\tt KS0const} and {\tt PVconst} constraints, $\chisq_\text{refit}$, and the $p_T$ asymmetry between the \Bm candidate and other tracks from the same PV, defined as
+Various input variables are used to exploit the topology of the decay; of particular importance are the \chisq per degree of freedom of the decay chain refit, with constraints, $\chisq_\text{refit}$, and the $p_T$ asymmetry between the \Bm candidate and other tracks from the same PV, defined as
 \begin{equation}
 A_{p_T} = \frac{p_T^B - p_T^{\text{cone}}}{p_T^B + p_T^{\text{cone}}}
 \label{ptasy}
 \end{equation}
 where $p_T^B$ is the $p_T$ of the reconstructed \Bm signal candidate and $p_T^{\text{cone}}$ is the sum of the $p_T$ of all other tracks in a cone of radius 1.50 surrounding the \Bm candidate. This is a quantitative measure of the isolation of the \Bm candidate. Some of the variables are transformed using a logarithm function to increase their separation power. Other input variables used include the logarithm of the \chisqip for the \Bm, bachelor, \Dz and all the \Dz decay products, the logarithm of the \chisqip for the \KS and both its decay products (for LL only) and the $p_T$ of the \KS candidate (for DD candidates only). The variables used in the BDT are slightly different for LL and DD candidates, as the separation power of the \KS variables significantly differs between LL and DD candidates. 
 
-Tables \ref{BDTinputvariables2body} and \ref{BDTinputvariables4body} show the list of input variables, in the two and four-body BDTs respectively, ranked by separation power. The distributions of the two-body BDT input variables in the training signal and background samples are shown in Figures \ref{BDTinputdist2bodyLL} and \ref{BDTinputdist2bodyDD}. The equivalent distributions of the input variables for the four-body BDT are similar.
+Tables \ref{BDTinputvariables2body} and \ref{BDTinputvariables4body} show the list of input variables, in the two and four-body BDTs respectively, ranked by separation power. The distributions of the two-body BDT input variables in the training signal and background samples are shown in Figures \ref{BDTinputdist2bodyLL} and \ref{BDTinputdist2bodyDD}. The equivalent distributions of the input variables for the four-body BDT are similar. Other variables and other setup of test and training samples were investigated but found to have negligible improvement.
 
 \begin{table}
 \centering
@@ -361,30 +326,30 @@ Rank & Variable in BDT\_LL & Variable in BDT\_DD \\
 
 \subsubsection{Performance of the multivariate algorithm and choice of working point}
 
-The BDT selections, in conjunction with the \Kstarm mass window and \KS helicity angle, were optimised to reduce the fit error on the \CP observables, as detailed in Section \ref{sec:cpfit:optimisation}. Many pseudo-experiments were performed to calculate the fit uncertainty for each selection. To optimise the selection for the two-body GLW modes, the fit error was minimised for \Akk, \Rkk, \Apipi and \Rpipi. The BDT selection for the ADS modes was optimised to minimise the fit errors in \Rptwo and \Rmtwo. In cases when the figure of merits in these optimisation studies were not especially sensitive to changes in the selection, the selection giving the highest coherence factor, $\kappa$, i.e most stringent requirement on the \Kstarm, was chosen and the BDT signal and background efficiencies were taken into account.
+Selections are optimised for minimising the uncertainty in the \CP observables. This method required the full fit and is described in Section \ref{sec:cpfit:optimisation}. The final BDT requirements chosen based on the optimisation procedure are given in Table \ref{bdtrequirements}, and the signal and background efficiencies for the two- and four-mode \Dz decay modes are given in Tables \ref{BDTresults}.
 
-After performing the optimisation, a BDT selection of 0.6 is chosen for BDT\_LL and 0.7 for BDT\_DD for all the two-body \D modes except the ADS mode. The ADS mode BDT selection is chosen to be 0.6 for BDT\_LL and 0.9 for BDT\_DD. This tighter BDT selection is justified in Section \ref{sec:cpfit:optimisation}. Averaged across the whole dataset used for the analysis, the BDT selection applied to the favoured \kpi channel gives a signal efficiency of 95\% (90\%) and a background rejection of 94\% (95\%) for LL (DD) candidates. 
+\begin{table}
+\begin{tabular}{c|cc}
+ & LL & DD \\
+\hline
+All \Dz modes except the ADS modes & 0.6 & 0.7 \\
+ADS modes & 0.6 & 0.9 \\
+\end{tabular}
+\caption{BDT requirements on each of the \Dz decay modes for both LL and DD candidates.}
+\label{bdtrequirements}
+\end{table}
 
-For the four-body modes the same optimisation point was chosen 0.6 for BDT\_LL and 0.7 for BDT\_DD for the \decay{\Dz}{\Kp\pim\pip\pim} \decay{\Dz}{\pi\pi\pi\pi} mode, and 0.6 for BDT\_LL and 0.9 for BDT\_DD for the \decay{\Dz}{\Kp\pim\pip\pim} mode. The optimisation point was verified by minimising the fit error in pseudo-experiments for $A_{K\pi\pi\pi}$, $R^+_{K\pi\pi\pi}$ and $R^-_{K\pi\pi\pi}$. Averaged across the whole dataset, the four-body favoured \kpipipi channel gives a signal efficiency of 95\% (93\%) and a background rejection of 96\% (97\%) for LL (DD) candidates.
+\begin{table}
+\begin{tabular}{c|cc}
+& LL & DD \\
+\hline
+\kpi & 95 (6) & 90 (5) \\
+\kpipipi & 95 (4) & 93 (3) \\
+\end{tabular}
+\caption{Signal and background efficiencies averaged across the whole dataset for the chosen BDT requirements in both \kpi and \kpipipi modes. All numbers are given in percentages.}
+\label{BDTresults}
+\end{table}
 
-
-%\subsection{Further selection requirements}
-%
-%Some other selection requirements are implemented to isolate the signal candidates and tackle certain backgrounds. The different backgrounds and the strategies employed to deal with them are discussed in detail in Section \ref{sec:backgrounds}, but the resulting selection requirements are listed below:
-%
-%\begin{itemize}
-%\item The reconstructed \Dz mass must lie within 25 \mev of the known \Dz mass
-%\item The reconstructed \Kstarm mass must lie within 75 \mev of the known \Kstarm mass
-%\item{The absolute value of $\cos(\theta_{\KS})$ must be greater than 0.3, where $\theta_{\KS}$ is defined as the angle between the \KS and the bachelor pion in the \Kstarm rest frame. This is required to reduce the non-resonant \decay{\Bm}{\D\KS\pim} background, discussed in Section \ref{sec:backgrounds:non-resonant}. }
-%\item{\Dz flight distance (FD) significance $>$ 2 is required to remove charmless backgrounds, discussed in Section \ref{sec:backgrounds:charmless}. The FD significance of a particle $X$ is defined as, 
-%\begin{equation}
-%\text{FD significance} = \frac{z_X - z_B}{\sqrt{\sigma_X^2 + \sigma_B^2}}
-%\label{FDdefinition}
-%\end{equation}
-%where $z_{X,B}$ is the $z$ position of the decay vertex of the $X,B$ particle and $\sigma_{X,B}$ is the uncertainty in the $z$ position of the $X,B$ decay vertex.}
-%\item{\KS flight distance significance $>$ 5 (for LL candidates only) is required to remove $B \to D\pi\pi\pi$ background, discussed in Section \ref{sec:backgrounds:b2dpipipi}. The \KS FD significance is defined by Equation \ref{FDdefinition}.}
-%\item{The magnitute of the difference between $\Dz_{swapped}$ and $\Dz_{PDG}$ must be greater than 15\mev for the ADS modes, where $\Dz_{swapped}$ is the reconstructed \Dz mass with the kaon reconstructed as a pion and that same pion reconstructed as a kaon, i.e. with both daughter mass hypotheses are swapped, and $\Dz_{PDG}$ is the known \Dz mass taken from the PDG. This selection criteria, known as the \Dz double misidentification veto, is applied to remove favoured \kpi events occuring in the ADS mode due to both \Dz daughters being incorrectly identified. For four-body \Dz decays, there are two possible pions that could be incorrectly reconstructed as a kaon, therefore two \Dz double misidentification vetos are applied. This background is discussed further in Section \ref{sec:backgrounds:crossfeed}.}
-%\end{itemize}
 
 \subsection{Summary of the selection requirements}
 
