@@ -52,27 +52,44 @@ After the selection described in this section has been applied, the resulting re
 \subsection{Particle identification requirements}
 \label{sec:selection:pid}
 
-The selection requirements are almost identical for each of the different \Dz modes with the exception of the double misidentification veto applied to the ADS modes. Therefore, it is essential to apply PID selection that efficiently distinguishes between pions and kaons. The PID requirements on the daughters of the \Dz meson are designed so that no \decay{\Dz}{hh'} candidate can appear in more than one category with a change in mass hypothesis. A PID requirement must be made on the bachelor pion to reduce the combinatorial background and remove the \decay{\Bm}{\D\KS\Km} background, discussed in more detail in Section \ref{sec:backgrounds:b2dkks}. The PID requirements for this analysis are listed below:
-\begin{itemize}
-\item For all \Dz decay modes, the bachelor pion (pion coming from the \Kstarm) is required to satisfy DLLK $<$ 4.
-\item For the 2-body \Dz modes the requirements on the \Dz daughters are, kaons must satisfy DLLK $>$ 2 and pions must satifsfy DLLK $<$ -2. 
-\item For the \decay{\Dz}{K\pi\pi\pi} modes, e.g. \decay{\Dz}{\Km\pip\pim\pip}, the \Km must satisfy DLLK $>$ 2 and both \pip must satisfy DLLK $<$ -2; no PID requirement is applied for the \pim.
-\item For the \decay{\Dz}{\pip\pim\pip\pim}, the two \pip mesons must satisfy DLLK $<$ -2 and no PID requirements are placed on the \pim mesons.
-\end{itemize}
+The selection requirements are almost identical for each of the different \Dz modes with the exception of the double misidentification veto applied to the ADS modes. Therefore, it is essential to apply PID selection that efficiently distinguishes between pions and kaons. The ratio of branching fractions for different \Dz decay modes is given in Table \ref{BFdmodes}.
 
-The PID requirements are the same as those used in the \decay{\Bp}{\D\Kp} analysis~\cite{LHCb-PAPER-2016-003}. No PID requirements are made on the \KS daughters as the high purity of the \KS means that this is not necessary, as shown in Section \ref{sec:backgrounds:contamination}. The efficiency of this PID selection for the \kpi favoured mode in Run 1 is 74\% and the efficiency of \pik events in the favoured mode is 0.15\%; the equivalent \runtwo efficiencies are 82\% and 0.11\% respectively. These efficiencies are discussed in more detail in Section \ref{sec:cpfit:efficiencies:pid}. 
+\begin{table}[h]
+\centering
+\begin{tabular}{c|c}
+Mode & Branching fraction ratio \\
+\hline
+\kpi & 1 \\
+\kk & 0.10 \\
+\pipi & 0.036 \\
+\pik & 0.0036 \\
+\hline
+\hline
+\kpipipi & 1 \\
+\pipipipi & 0.092 \\
+\pikpipi & $-$ 
+\end{tabular}
+\caption{Branching fractions of the different \Dz decay modes relative to the favoured \kpi mode~\cite{PDG2016}.}
+\label{BFdmodes}
+\end{table} 
 
-Alternative particle identification variables exist, called ProbNN variables, that assign a value equivalent to a probability for a given particle being a pion or kaon. These variables are constructed using multivariate analysis techniques. A study into ProbNN variables was undertaken investigating variation of PID efficiencies using different variables and different working points, as shown in Figure \ref{pidoptimisation}. These results show that the DLLK variables outperform the ProbNN variables for this analysis. These results are based on a preliminary version of the selection and so the DLLK efficiencies are not the same as for the final selection. The same PID selection is applied to both Run 1 and Run 2 datasets, as it was found that for the optimised PID selection both PID efficiency and misidentification efficiency were improved for Run 2 compared to Run 1. More detail is given in Section \ref{sec:cpfit:efficiencies:pid}.
+Consider the two-body \Dz decay modes. The suppressed \Dz decay modes may all contain a background from the favoured \kpi mode, where one or more of the \Dz daughters has been incorrectly identified. For example, the \kk mass spectrum may contain background \kpi events, where the \pim is misidentified as a \Km meson. These types of backgrounds are called crossfeed backgrounds and are significantly reduced by applying stringent PID requirements. Figure \ref{fig:crossfeed} shows the \Dz mass spectrum for the \kk and \pipi data samples without PID requirements and with PID requirements applied. Figure \ref{crossfeedkk} (left) contains a large peak to the right of the \Dz mass peak, which corressponds to the crossfeed from \kpi events. The shift of this peak to higher reconstructed \Dz mass is due to the misidentification of the pion as a kaon. However, the low mass tail of this large distribution enters into the selected region in \Dz mass. By applying PID requirements on the two \Dz daughter kaons, this crossfeed background can be reduced such that there is negligible contribution within the \Dz mass region selected in this analysis, as shown in Figure \ref{crossfeedkk} (right). The same effect is seen in the \pipi mode, as shown in Figure \ref{crossfeedpipi}.
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{figures/selection/pidOptimisation_bachelor.pdf}
-\put(-150,100) {(a)}
+\subfloat[\kk]{\includegraphics[width=\linewidth]{figures/selection/Dmass_pidcrossfeed_KK.pdf} \label{crossfeedkk}}
 \hfill
-\includegraphics[width=0.5\linewidth]{figures/selection/pidOptimisation_Ddaughters.pdf}
-\put(-150,100) {(b)}
-\caption{PID efficiencies and misidentification efficiencies using DLLK (black), ProbNNpi (red) and ProbNNpi $\times$ (1-ProbNNk) (blue) for various working points when applied to (a) the bachelor pion, and (b) the D daughters.}
-\label{pidoptimisation}
+\subfloat[\pipi]{\includegraphics[width=\linewidth]{figures/selection/Dmass_pidcrossfeed_PiPi.pdf} \label{crossfeedpipi}}
+\caption{Reconstructed \Dz mass distributions after a prelimiary selection with no PID selection applied (left) and PID selection on the \Dz daughters applied (right), for (a) \kk and (b) \pipi. The red lines indicate the position of the \Dz mass requirement in the selection; events that fall between the red lines are kept as signal events.}
+\label{fig:crossfeed}
 \end{figure}
+
+The PID requirements on the daughters of the \Dz meson are designed so that no \decay{\Dz}{hh'} candidate can appear in more than one category with a change in mass hypothesis. For the two-body \Dz modes the requirements on the \Dz daughters are, kaons must satisfy DLLK $>$ 2 and pions must satifsfy DLLK $<$ -2. These PID requirements ensure that the probability of misidentification of the \Dz daughters is sufficiently small, such that any crossfeed background is negligible. Crossfeed from \kpi events entering the \pik mass spectrum, would require both \Dz daughters to be misidentified, therefore the resulting reconstructed \Dz mass would fall under the signal \Dz mass peak. In order to reduce this doubly misidentified crossfeed background to negligible levels, a further requirement must be applied to the \pik mode, in addition to the PID requirements discussed. This doubly misidentified crossfeed background is discussed in detail in Section \ref{sec:backgrounds:crossfeed}.
+
+The same arguements for the two-body \Dz decays modes also apply to the four-body modes. Crossfeed backgrounds may occur in the supressed \Dz modes from misidentified \kpipipi events. Tight PID requirements must be placed on the \Dz daughters in order to reduce these crossfeed backgrounds to negligible levels. For the \decay{\Dz}{K\pi\pi\pi} modes, e.g. \decay{\Dz}{\Km\pip\pim\pip}, the \Km must satisfy DLLK $>$ 2 and both \pip must satisfy DLLK $<$ -2; no PID requirement is applied for the \pim. For the \decay{\Dz}{\pip\pim\pip\pim}, the two \pip mesons must satisfy DLLK $<$ -2 and no PID requirements are placed on the \pim mesons. The doubly misidentified crossfeed background from \kpipipi events in the \pikpipi mode must be investigated further in order to reduce it to negligible levels, as detailed in Section \ref{sec:backgrounds:crossfeed}.
+
+In addition to the correct identification of the \Dz daughters, it is also necessary to consider possible misidentification of the bachelor pion (the pion originating directly from the \Kstarm decay). A PID requirement must be made on this bachelor pion to lower the combinatorial background and reduce the \decay{\Bm}{\D\KS\Km} background to negligible levels. The \decay{\Bm}{\D\KS\Km} background is discussed in more detail in Section \ref{sec:backgrounds:b2dkks}. For all \Dz decay modes, the bachelor pion is required to satisfy DLLK $<$ 4. No PID requirements are placed on the \KS daughters because it is not necessary due to the high purity of the \KS meson, as described in Section \ref{sec:backgrounds:contamination}. 
+
+The efficiency of this PID selection for the \kpi favoured mode in \runone is 74\% and the efficiency of \pik events in the favoured mode is 0.15\%; the equivalent \runtwo efficiencies are 82\% and 0.11\% respectively. These efficiencies are discussed in more detail in Section \ref{sec:cpfit:efficiencies:pid}. 
 
 \subsection{Peaking backgrounds and selection used to supress them}
 \label{sec:backgrounds}
@@ -96,7 +113,16 @@ Charmless backgrounds are classified as \Bm meson decays that do not proceed via
 \end{equation}
 where $z_{X,B}$ is the $z$ position of the decay vertex of the $X,B$ particle and $\sigma_{X,B}$ is the uncertainty in the $z$ position of the $X,B$ decay vertex.
 
-By requiring the \Dz to have a larger FD significance, it ensures that the \Dz meson is present in the decay. The charmless background is estimated by taking the \Dz mass sidebands ($>$ 50 MeV from nominal \Dz mass) in data and performing a simple fit to the invariant \B mass distribution using a Gaussian and an exponential shape. The use of DTF variables in the selection favours events towards the true \Dz mass, which would cause the charmless background to be underestimated. Therefore, in order to correctly estimate the background contribution in the \Dz mass sidebands, a modified selection is applied with the DTF vertex \chisq replaced with the vertex \chisq with no refit applied. For each \Dz decay mode, two fits are performed on data requiring the \Dz FD significance to be greater than zero and 2$\sigma$, as shown in Figure \ref{charmlesspipi} for \pipi.
+By requiring the \Dz to have a larger FD significance, it increases the probability that the events in the sample contain a true \Dz meson. The charmless background is estimated by investigating the \Bm mass distribution of the candidates in the data sample that have a reconstructed \Dz mass greater than 50 \mevcc away from the nominal \Dz mass. This region of \Dz mass is referred to here as the \Dz mass sidebands, which are illustrated in Figure \ref{Dsidebands}.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\linewidth]{figures/backgrounds/Dsidebands.pdf}
+\caption{Reconstructed \Dz mass for \kpi DD candidates with \runone and \runtwo samples combined. The red lines indicate the values 50 \mevcc away from the nominal \Dz mass, and the bins shaded in blue represent the events that contribute to the \Dz mass sidebands, These events are expected to be dominated by charmless decays, and so are subsequently plotted in \Bm mass to investigate the charmless contribution.}
+\label{Dsidebands}
+\end{figure}
+
+A simple fit is performed to the invariant \B mass distribution, formed from the data in the \Dz mass sidebands, using a Gaussian to model the signal and an exponential shape to model the background. The use of DTF variables in the selection favours events towards the true \Dz mass, which would cause the charmless background to be underestimated. Therefore, in order to correctly estimate the background contribution in the \Dz mass sidebands, a modified selection is applied with the DTF vertex \chisq replaced with the vertex \chisq with no refit applied. For each \Dz decay mode, two fits are performed on data, one requiring the \Dz FD significance to be greater than zero and the other requiring it to be greater than 2$\sigma$, as shown in Figure \ref{charmlesspipi} for \pipi.
 
 \begin{figure}
 \centering
@@ -109,16 +135,16 @@ By requiring the \Dz to have a larger FD significance, it ensures that the \Dz m
 \label{charmlesspipi}
 \end{figure}
 
-These fits give the yield of the \Bm mass peak in the \Dz mass sidebands, which are subsequently scaled to provide an estimate for this background within the \Dz mass window. By being able to quantify the number of charmless events expected in the \Bm mass spectrum after a given selection, it is possible to remove the charmless background. 
+These fits give the yield of the \Bm mass peak in the \Dz mass sidebands, which are subsequently scaled to provide an estimate for this background within the \Dz mass window. By being able to quantify the number of charmless events expected in the \Bm mass spectrum after a given selection, it is possible to determine if the charmless background has been reduced to negligible levels. 
 
-In the final selection, the \Dz FD significance is required to exceed 2$\sigma$, as all charmless contributions are consistent with zero under this requirement. The expected yields in the \kpi favoured and \kk modes are significantly less than 1\% of the signal yield and are therefore considered negligible. However, the estimated charmless contribution in the \pipi mode is greater than 1\% and so could affect the results, therefore the possible charmless contribution in the \pipi mode is considered as a source of systematic uncertainty, details are given in Section \ref{sec:systematics}. 
+In the final selection, the \Dz FD significance is required to exceed 2$\sigma$, as all charmless contributions are consistent with zero under this requirement. The expected yields in the \kpi favoured and \kk modes are significantly less than 1\% of the signal yield and are therefore considered negligible. However, the estimated charmless contribution in the \pipi mode is greater than 1\% and so could affect the results. The \Dz FD significance requirement is not tightened further for the \pipi mode, as this would results in an unacceptable loss of signal events, instead the possible charmless contribution in the \pipi mode is considered as a source of systematic uncertainty, details are given in Section \ref{sec:systematics}. 
 
 \subsubsection{\boldmath \decay{\Bm}{\D\pim\pip\pim}}
 \label{sec:backgrounds:b2dpipipi}
 
 Having considered backgrounds without the \Dz meson present, we now consider backgrounds that do not occur via a \KS meson. These \decay{\Bm}{\D\pim\pip\pim} decays, with a branching fraction of $5.7 \times 10^{-3}$~\cite{PDG2014} (about 50 times the signal \decay{\Bm}{\D\Kstarm(\KS(\pip\pim)\pim)} branching fraction), are expected to occur as a peaking background underneath the signal. In order to remove this background, events are selected with the requirement that the \KS has travelled within the detector. For DD candidates this requirement is already satisfied, however for LL candidates a minimum requirement on the flight distance significance of the \KS in the z direction, defined in Equation \ref{FDdefinition}, is used to remove this background. 
 
-The \decay{\Bm}{\D\pim\pip\pim} background is estimated by taking the \KS mass sidebands ($>$ 20 MeV from nominal \KS mass) in data and performing a fit to the invariant \Bm mass distribution. A Gaussian is used to model the signal and an exponential for the combinatorial background. A modified selection is applied that does not use any DTF variables, as described in Section \ref{sec:backgrounds:charmless}. This fit is performed on \kpi data requiring the \KS FD significance to be greater than zero and 5$\sigma$, as shown in Figure \ref{strangelessfits}. Using these fits the estimated \decay{\B}{\D\pi\pi\pi} yield in the signal region with \KS FD significance $>$ 0 is $77 \pm 11$ and with \KS FD significance $>$ 5 is $1.0 \pm 1.0$. For the final selection, the FD significance is required to be greater than 5$\sigma$ as it supresses the \decay{\Bm}{\D\pim\pip\pim} background to a negligible level.
+The \decay{\Bm}{\D\pim\pip\pim} background is estimated by taking the \KS mass sidebands ($>$ 20 MeV from nominal \KS mass) in data and performing a fit to the invariant \Bm mass distribution, as described in Section \ref{sec:backgrounds:charmless}. A Gaussian is used to model the signal and an exponential for the combinatorial background. A modified selection is applied that does not use any DTF variables, as described in Section \ref{sec:backgrounds:charmless}. This fit is performed on \kpi data requiring the \KS FD significance to be greater than zero and 5$\sigma$, as shown in Figure \ref{strangelessfits}. Using these fits the estimated \decay{\B}{\D\pi\pi\pi} yield in the signal region with \KS FD significance $>$ 0 is $77 \pm 11$ and with \KS FD significance $>$ 5 is $1.0 \pm 1.0$. For the final selection, the FD significance is required to be greater than 5$\sigma$ as it supresses the \decay{\Bm}{\D\pim\pip\pim} background to a negligible level.
 
 
 \begin{figure}
@@ -193,7 +219,14 @@ An additional source of background in the \kk \Bm mass spectrum comes from the d
 
 The decay \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} or $\Dzb K_1(1400)^0$, \decay{(K_1,K^*)}{K^{*}(892)^-\pip}, where the \pip is missed in reconstruction could contribute region of the \pik ADS mode just below the \Bm mass peak. In this analysis the low mass limit of the simultaneous fit is at 5230 \mev and therefore this background will be almost entirely removed. However, it is possible that a small contribution still remains and contributes to the signal region. 
 
-The \Bs background contribution can be estimated by using the \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} branching fraction of $\left(3.9 \pm 3.5\right) \times 10^{-4}$~\cite{PDG2016} and the efficiency of the \Bm mass requirement being greater than 5230\mev, which is $6.4 \times 10^{-4}$. This efficiency is extracted from a simulated sample of \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0}, \decay{\bar{K}^{*}(1410)^0}{K^{*}(892)^-\pip} events, where the \pip is missed in reconstruction. This gives an estimate of $2.6 \pm 2.6$ \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} events in \pik mode above 5230\mev. This estimated \Bs background is used to assign a systematic uncertainty to the \CP observables, discussed in more detail in Section \ref{sec:systematics}.
+The \Bs background contribution can be estimated by using the \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} branching fraction of $\left(3.9 \pm 3.5\right) \times 10^{-4}$~\cite{PDG2016} and the efficiency of the \Bm mass requirement being greater than 5230\mev, which is $6.4 \times 10^{-4}$. This calculation is shown in \eqn\ref{Bscalc}. This efficiency is extracted from a simulated sample of \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0}, \decay{\bar{K}^{*}(1410)^0}{K^{*}(892)^-\pip} events, where the \pip is missed in reconstruction. 
+
+\begin{multline}
+N(\decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0}) = N(\btodkst) \times \frac{\BF(\decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0})}{\BF(\btodkst)} \\ \times \frac{\epsilon_{\Bs}(B\ mass\ > 5230\mevcc)}{\epsilon_{\Bm}(B\ mass\ > 5230\mevcc)}
+\label{Bscalc}
+\end{multline}
+
+This gives an upper limit estimate of $2.6 \pm 2.6$ \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} events in \pik mode above 5230\mev. This estimated \Bs background is used to assign a systematic uncertainty to the \CP observables, discussed in more detail in Section \ref{sec:systematics}.
 
 
 \subsubsection{Lambda contamination}
