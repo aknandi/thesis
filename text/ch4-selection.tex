@@ -52,7 +52,7 @@ After the selection described in this section has been applied, the resulting re
 \subsection{Particle identification requirements}
 \label{sec:selection:pid}
 
-The selection requirements are almost identical for each of the different \Dz modes with the exception of the double misidentification veto applied to the ADS modes. Therefore, it is essential to apply PID selection that efficiently distinguishes between pions and kaons. The ratio of branching fractions for different \Dz decay modes is given in Table \ref{BFdmodes}.
+The selection requirements are almost identical for each of the different \Dz modes, therefore, it is essential to apply PID selection that efficiently distinguishes between pions and kaons. The ratio of branching fractions for different \Dz decay modes is given in Table \ref{BFdmodes}.
 
 \begin{table}[h]
 \centering
@@ -73,7 +73,7 @@ Mode & Branching fraction ratio \\
 \label{BFdmodes}
 \end{table} 
 
-Consider the two-body \Dz decay modes. The suppressed \Dz decay modes may all contain a background from the favoured \kpi mode, where one or more of the \Dz daughters has been incorrectly identified. For example, the \kk mass spectrum may contain background \kpi events, where the \pim is misidentified as a \Km meson. These types of backgrounds are called crossfeed backgrounds and are significantly reduced by applying stringent PID requirements. Figure \ref{fig:crossfeed} shows the \Dz mass spectrum for the \kk and \pipi data samples without PID requirements and with PID requirements applied. Figure \ref{crossfeedkk} (left) contains a large peak to the right of the \Dz mass peak, which corressponds to the crossfeed from \kpi events. The shift of this peak to higher reconstructed \Dz mass is due to the misidentification of the pion as a kaon. However, the low mass tail of this large distribution enters into the selected region in \Dz mass. By applying PID requirements on the two \Dz daughter kaons, this crossfeed background can be reduced such that there is negligible contribution within the \Dz mass region selected in this analysis, as shown in Figure \ref{crossfeedkk} (right). The same effect is seen in the \pipi mode, as shown in Figure \ref{crossfeedpipi}.
+Consider the two-body \Dz decay modes. The suppressed \Dz decay modes may all contain a background from the favoured \kpi mode, where one or more of the \Dz daughters has been incorrectly identified. For example, the \kk mass spectrum may contain background \kpi events, where the \pim is misidentified as a \Km meson. Without PID requirements, these types of backgrounds, referred to as crossfeed backgrounds, contribute significantly to the signal. This can be seen in Figure \ref{fig:crossfeed}, which shows the \Dz mass spectrum for the \kk and \pipi data samples both without and with PID requirements applied. Figure \ref{crossfeedkk} (left) contains a large peak to the right of the \Dz mass peak, which corresponds to the crossfeed from \kpi events. This peak occurs at higher reconstructed \Dz mass due to the misidentification of the pion as a kaon. However, the low mass tail of this large distribution enters into the selected region in \Dz mass, illustrated by the red lines. By applying PID requirements on the two \Dz daughter kaons, this crossfeed background can be reduced such that there is negligible contribution within the \Dz mass region selected in this analysis, as shown in Figure \ref{crossfeedkk} (right). The same effect is seen in the \pipi mode, illustrated in Figure \ref{crossfeedpipi}.
 
 \begin{figure}
 \subfloat[\kk]{\includegraphics[width=\linewidth]{figures/selection/Dmass_pidcrossfeed_KK.pdf} \label{crossfeedkk}}
@@ -83,13 +83,14 @@ Consider the two-body \Dz decay modes. The suppressed \Dz decay modes may all co
 \label{fig:crossfeed}
 \end{figure}
 
-The PID requirements on the daughters of the \Dz meson are designed so that no \decay{\Dz}{hh'} candidate can appear in more than one category with a change in mass hypothesis. For the two-body \Dz modes the requirements on the \Dz daughters are, kaons must satisfy DLLK $>$ 2 and pions must satifsfy DLLK $<$ -2. These PID requirements ensure that the probability of misidentification of the \Dz daughters is sufficiently small, such that any crossfeed background is negligible. Crossfeed from \kpi events entering the \pik mass spectrum, would require both \Dz daughters to be misidentified, therefore the resulting reconstructed \Dz mass would fall under the signal \Dz mass peak. In order to reduce this doubly misidentified crossfeed background to negligible levels, a further requirement must be applied to the \pik mode, in addition to the PID requirements discussed. This doubly misidentified crossfeed background is discussed in detail in Section \ref{sec:backgrounds:crossfeed}.
+The PID requirements on the daughters of the \Dz meson are designed so that no \decay{\Dz}{hh'} candidate can appear in more than one category with a change in mass hypothesis. For the two-body \Dz modes the requirements on the \Dz daughters are, kaons must satisfy DLLK $>$ 2 and pions must satifsfy DLLK $<$ -2, where DLLK is defined in Section \ref{sec:detector:rich}. {\color{red}PID and misID efficiencies}. These PID requirements ensure that the probability of misidentification of the \Dz daughters is sufficiently small, such that any crossfeed background is negligible. Crossfeed from \kpi events entering the \pik mass spectrum, would require both \Dz daughters to be misidentified, therefore the resulting reconstructed \Dz mass would fall under the signal \Dz mass peak. In order to reduce this doubly misidentified crossfeed background to negligible levels, the PID requirement cannot be tightened further as this would results in an unacceptable loss of signal. Therefore, a further requirement must be applied to the \pik mode, in addition to the PID requirements discussed. This doubly misidentified crossfeed background is discussed in detail in Section \ref{sec:backgrounds:crossfeed}.
 
-The same arguements for the two-body \Dz decays modes also apply to the four-body modes. Crossfeed backgrounds may occur in the supressed \Dz modes from misidentified \kpipipi events. Tight PID requirements must be placed on the \Dz daughters in order to reduce these crossfeed backgrounds to negligible levels. For the \decay{\Dz}{K\pi\pi\pi} modes, e.g. \decay{\Dz}{\Km\pip\pim\pip}, the \Km must satisfy DLLK $>$ 2 and both \pip must satisfy DLLK $<$ -2; no PID requirement is applied for the \pim. For the \decay{\Dz}{\pip\pim\pip\pim}, the two \pip mesons must satisfy DLLK $<$ -2 and no PID requirements are placed on the \pim mesons. The doubly misidentified crossfeed background from \kpipipi events in the \pikpipi mode must be investigated further in order to reduce it to negligible levels, as detailed in Section \ref{sec:backgrounds:crossfeed}.
+The same arguements for the two-body \Dz decays modes also apply to the four-body modes. Crossfeed backgrounds may occur in the supressed \Dz modes from misidentified \kpipipi events. Tight PID requirements must be placed on the \Dz daughters in order to reduce these crossfeed backgrounds to negligible levels. For the \decay{\Dz}{K\pi\pi\pi} modes, e.g. \decay{\Dz}{\Km\pip\pim\pip}, the \Km must satisfy DLLK $>$ 2 and both \pip must satisfy DLLK $<$ -2; no PID requirement is applied for the \pim. For the \decay{\Dz}{\pip\pim\pip\pim}, the two \pip mesons must satisfy DLLK $<$ -2 and no PID requirements are placed on the \pim mesons. {\color{red}PID and misID efficiencies} The doubly misidentified crossfeed background from \kpipipi events in the \pikpipi mode must be investigated further in order to reduce it to negligible levels, as detailed in Section \ref{sec:backgrounds:crossfeed}.
 
-In addition to the correct identification of the \Dz daughters, it is also necessary to consider possible misidentification of the bachelor pion (the pion originating directly from the \Kstarm decay). A PID requirement must be made on this bachelor pion to lower the combinatorial background and reduce the \decay{\Bm}{\D\KS\Km} background to negligible levels. The \decay{\Bm}{\D\KS\Km} background is discussed in more detail in Section \ref{sec:backgrounds:b2dkks}. For all \Dz decay modes, the bachelor pion is required to satisfy DLLK $<$ 4. No PID requirements are placed on the \KS daughters because it is not necessary due to the high purity of the \KS meson, as described in Section \ref{sec:backgrounds:contamination}. 
+In addition to the correct identification of the \Dz daughters, it is also necessary to consider possible misidentification of the bachelor pion (the pion originating directly from the \Kstarm decay). A PID requirement must be made on this bachelor pion to lower the combinatorial background and reduce the \decay{\Bm}{\D\KS\Km} background to negligible levels. The \decay{\Bm}{\D\KS\Km} background is discussed in more detail in Section \ref{sec:backgrounds:b2dkks}. For all \Dz decay modes, the bachelor pion is required to satisfy DLLK $<$ 4. {\color{red}PID and misID efficiencies} No PID requirements are placed on the \KS daughters because it is not necessary due to the high purity of the \KS meson, as described in Section \ref{sec:backgrounds:contamination}. 
 
-The efficiency of this PID selection for the \kpi favoured mode in \runone is 74\% and the efficiency of \pik events in the favoured mode is 0.15\%; the equivalent \runtwo efficiencies are 82\% and 0.11\% respectively. These efficiencies are discussed in more detail in Section \ref{sec:cpfit:efficiencies:pid}. 
+%The efficiency of this PID selection for the \kpi favoured mode in \runone is 74\% and the efficiency of \pik events in the favoured mode is 0.15\%; the equivalent \runtwo efficiencies are 82\% and 0.11\% respectively.
+The combined efficiency of this PID selection for the \kpi favoured mode is xx\%. The probability of \pik events passing the PID selection for the favoured mode is xx\%, i.e. the probability of both \Dz daughters being misidentified. The PID efficiencies are discussed in more detail in Section \ref{sec:cpfit:efficiencies:pid}. 
 
 \subsection{Peaking backgrounds and selection used to supress them}
 \label{sec:backgrounds}
@@ -104,7 +105,7 @@ The main class of backgrounds in this analysis is the partially reconstructed \d
 \subsubsection{Backgrounds of type to \boldmath$B \to K^*hh'$ decays}
 \label{sec:backgrounds:charmless}
 
-Backgrounds that involve the same final state particles, but do not proceed via one of the intermediate state particles are very important, as they would peak in the same region of \Bm mass as the signal. These backgrounds need to be properly understood and reduced to negligible levels such that they do not incorrectly contribute to the estimate of the signal yield. 
+Backgrounds that involve the same final state particles, but do not proceed via one of the intermediate state particles are very important, as they peak in the same region of \Bm mass as the signal. These backgrounds need to be properly understood and reduced to negligible levels such that they do not incorrectly contribute to the estimate of the signal yield. 
 
 Charmless backgrounds are classified as \Bm meson decays that do not proceed via a \Dz meson. This is a peaking background under the signal region which is expected to be uniform in \Dz mass. The variable used to investigate this background is the flight distance significance (FD) of the \Dz in the $z$ direction. The FD significance a particle $X$ is defined as, 
 \begin{equation}
@@ -122,7 +123,7 @@ By requiring the \Dz to have a larger FD significance, it increases the probabil
 \label{Dsidebands}
 \end{figure}
 
-A simple fit is performed to the invariant \B mass distribution, formed from the data in the \Dz mass sidebands, using a Gaussian to model the signal and an exponential shape to model the background. The use of DTF variables in the selection favours events towards the true \Dz mass, which would cause the charmless background to be underestimated. Therefore, in order to correctly estimate the background contribution in the \Dz mass sidebands, a modified selection is applied with the DTF vertex \chisq replaced with the vertex \chisq with no refit applied. For each \Dz decay mode, two fits are performed on data, one requiring the \Dz FD significance to be greater than zero and the other requiring it to be greater than 2$\sigma$, as shown in Figure \ref{charmlesspipi} for \pipi.
+A simple fit is performed to the invariant \B mass distribution, formed from the data in the \Dz mass sidebands, using a Gaussian to model the signal and an exponential shape to model the background. Variables that have been refitted with constraints, including the constraint that the \Dz is fixed to its known mass, are used in the selection, which favours events towards the true \Dz mass. This effectively removes the \Dz sidebands and therefore the charmless background cannot be estimated. In order to correctly estimate the background contribution in the \Dz mass sidebands, a modified selection is applied with the refitted vertex \chisq replaced with the vertex \chisq with no refit applied. For each \Dz decay mode, two fits are performed on data, one requiring the \Dz FD significance to be greater than zero and the other requiring it to be greater than 2$\sigma$, as shown in Figure \ref{charmlesspipi} for \pipi.
 
 \begin{figure}
 \centering
@@ -174,14 +175,6 @@ As the \Kstarm meson is a vector meson, the \decay{\Bm}{\D\Kstarm} decay is a Sc
 \end{figure}
 
 It can be observed from Figure \ref{helicitycut} that the \KS helicity angle distribution is not symmetric. The asymmetry in this variable, manifest in both data and simulation, is due to the momentum and transverse momentum selections placed on the bachelor pion in the stripping stage of the selection.
-
-\begin{figure}[h]
-\includegraphics[width=\linewidth]{figures/helicityAngleAsymmetry.pdf}
-\put(-360,150) {(a)}
-\put(-150,150) {(b)}
-\caption{Distribution of the cosine of \KS helicity angle from a simulated sample of \kpi events at generator level with (a) no selection applied, and (b) bachelor $p > 2500$ MeV and bachelor $p_T > 250$ MeV applied, as is applied in the stripping stage of the selection.}
-\label{helictyasymmetry}
-\end{figure}
 
 \subsubsection{Crossfeed background}
 \label{sec:backgrounds:crossfeed}
@@ -285,10 +278,11 @@ Initial selection requirements are applied to both the signal and background tra
 
 \begin{itemize}
 \item The \chisq of the decay chain refit per degree of freedom, $\chisq_\text{refit}$, with {\tt D0const}, {\tt KS0const} and {\tt PVconst} constraints, must lie between 0 and 100
-\item The \chisqip of the \Bm candidate, with respect to the \Bm vertex, must lie between 0 and 100
-\item The reconstructed \Kstarm mass must lie within 500\mev of the known \Kstarm mass
-\item The reconstructed \KS mass must lie with 15\mev of the known \KS mass for LL candidates and 20\mev for DD candidates
+\item The \chisqip of the \Bm candidate, with respect to the \Bm vertex, must lie between 0 and 25
+\item The reconstructed \Kstarm mass must lie within 500\mevcc of the known \Kstarm mass
+\item The reconstructed \KS mass must lie with 15\mevcc of the known \KS mass for LL candidates and 20\mevcc for DD candidates
 \end{itemize}
+These selection requirements are looser than those applied to the full selection, discussed in Section \ref{sec:selection:strippingandtrigger}. For example, here no requirement is imposed on the reconstructed \Dz mass and the \Kstarm requirement is as wide as 500\mevcc rather than the 75\mevcc used in the full selection. This is because the training samples required for the BDT must be large enough for the multivariate algorithm to distinguish between important differences in the signal and background samples rather than statistical fluctuations in the distributions. Imposing tighter selection is found to reduce the size of the samples to a point where the BDTs would be suboptimal.
 
 Various input variables are used to exploit the topology of the decay; of particular importance are the \chisq per degree of freedom of the decay chain refit, with constraints, $\chisq_\text{refit}$, and the $p_T$ asymmetry between the \Bm candidate and other tracks from the same PV, defined as
 \begin{equation}
@@ -301,6 +295,7 @@ Tables \ref{BDTinputvariables2body} and \ref{BDTinputvariables4body} show the li
 
 \begin{table}
 \centering
+\subfloat[Input variables for the two-body BDTs.][Input variables for the two-body BDTs.]{
 \begin{tabular}{lll}
 Rank & Variable in BDT\_LL & Variable in BDT\_DD \\
 \hline
@@ -315,12 +310,11 @@ Rank & Variable in BDT\_LL & Variable in BDT\_DD \\
 9 & log(\D daug pion \chisqip) & - \\
 10 & log(\B \chisqip) & - \\
 \end{tabular}
-\caption{Ranking for variables for BDTG\_LL and BDTG\_DD for the two-body BDTs.}
-\label{BDTinputvariables2body}
-\end{table}
-
-\begin{table}
-\centering
+\label{BDTinputvariables2body}}
+%\caption{Ranking for variables for BDTG\_LL and BDTG\_DD for the two-body BDTs.}
+%\label{BDTinputvariables2body}
+\qquad
+\subfloat[Input variables for the four-body BDTs.][Input variables for the four-body BDTs.]{
 \begin{tabular}{lll}
 Rank & Variable in BDT\_LL & Variable in BDT\_DD \\
 \hline
@@ -337,8 +331,10 @@ Rank & Variable in BDT\_LL & Variable in BDT\_DD \\
 11 & log(min \KS daughter \chisqip) & - \\
 12 & log(max \D daughter \chisqip) & - \\
 \end{tabular}
-\caption{Ranking for variables for BDTG\_LL and BDTG\_DD for the four-body BDTs. The particle name "D daughter ss'' refers to the pion from the \D which has the same sign of the kaon.}
-\label{BDTinputvariables4body}
+\label{BDTinputvariables4body}}
+%\caption{Ranking for variables for BDTG\_LL and BDTG\_DD for the four-body BDTs. The particle name "D daughter ss'' refers to the pion from the \D which has the same sign of the kaon.}
+%\label{BDTinputvariables4body}
+\caption{List of input variables for the (a) two-body, and (b) four-body, BDTs, ranked by separation power. For the four-body BDTs, the particle name "D daughter ss'' refers to the pion from the \D which has the same sign of the kaon.}
 \end{table}
 
 \begin{figure}
@@ -359,9 +355,10 @@ Rank & Variable in BDT\_LL & Variable in BDT\_DD \\
 
 \subsubsection{Performance of the multivariate algorithm and choice of working point}
 
-Selections are optimised for minimising the uncertainty in the \CP observables. This method required the full fit and is described in Section \ref{sec:cpfit:optimisation}. The final BDT requirements chosen based on the optimisation procedure are given in Table \ref{bdtrequirements}, and the signal and background efficiencies for the two- and four-mode \Dz decay modes are given in Tables \ref{BDTresults}.
+Selections are optimised for minimising the uncertainty in the \CP observables. This method required the full fit and is described in Section \ref{sec:cpfit:optimisation}. The final BDT requirements chosen based on this optimisation are given in Table \ref{bdtrequirements}, and the signal and background efficiencies in the two- and four-body \Dz decay modes, for the chosen BDT requirements, are given in Tables \ref{BDTresults}. The performance of the two- and four-body BDTs, as well as LL and DD categories, are very similar. In all catergories the BDT has a signal efficiency above 90\% and a background efficiency of less than 6\%. 
 
 \begin{table}
+\centering
 \begin{tabular}{c|cc}
  & LL & DD \\
 \hline
@@ -373,13 +370,14 @@ ADS modes & 0.6 & 0.9 \\
 \end{table}
 
 \begin{table}
+\centering
 \begin{tabular}{c|cc}
 & LL & DD \\
 \hline
-\kpi & 95 (6) & 90 (5) \\
-\kpipipi & 95 (4) & 93 (3) \\
+\kpi & 0.95 (0.06) & 0.90 (0.05) \\
+\kpipipi & 0.95 (0.04) & 0.93 (0.03) \\
 \end{tabular}
-\caption{Signal and background efficiencies averaged across the whole dataset for the chosen BDT requirements in both \kpi and \kpipipi modes. All numbers are given in percentages.}
+\caption{Signal and background efficiencies averaged across the whole dataset for the chosen BDT requirements in both \kpi and \kpipipi modes.}
 \label{BDTresults}
 \end{table}
 
@@ -390,27 +388,46 @@ Table \ref{selectionsummary} lists a summary of the selection requirements appli
 
 \begin{table}[h]
 \centering
+\resizebox{\textwidth}{!}{
 \begin{tabular}{c|c}
-Variable & Selection requirement \\
 \hline
-DLLK on bachelor & \\
-DLLK on D daughters & \\
-$\textbar \Dz_{swapped} - \Dz_{PDG} \textbar$ & \\
-\Dz mass & \\
-\KS mass & \\
-\Kstarm mass & \\
-$\textbar \cos(\theta_{\KS}) \textbar$ & \\
-\Dz FD significance & \\
-\KS FD significance & \\
-BDT classifier & \\
-\end{tabular}
+\textbf{Variable} & \textbf{Selection requirement} \\
+\hline \hline
+\multicolumn{1}{l}{\textbf{Mass variables}} & \\
+\hline \hline
+$\textbar$ \Dz mass - 1864.86 \mevcc $\textbar$ & $<$ 25 \mevcc \\
+$\textbar$ \KS mass - 497.614 \mevcc $\textbar$ & $<$ 15 \mevcc for LL, $<$ 20 \mevcc for DD \\
+$\textbar$ \Kstarm mass - 892 \mevcc $\textbar$ & $<$ 75 \mevcc \\
+\hline \hline
+\multicolumn{1}{l}{\textbf{PID and veto}} & \\
+\hline \hline
+DLLK of bachelor & $<$ 4 \\
+DLLK of D daughters (two-body) & $>$ 2 for all kaons, $<$ -2 for all pions \\
+DLLK of D daughters (\decay{\Dz}{\Km\pip\pim\pip}) & $>$ 2 for \Km, $<$ -2 for both \pip mesons \\
+DLLK of D daughters (\decay{\Dz}{\pim\pip\pim\pip}) & $<$ -2 for both \pip mesons \\
+$\textbar \Dz_{swapped} - 1864.86 \mevcc \textbar$ for ADS modes & $>$ 15 \mevcc \\
+\hline \hline
+\multicolumn{1}{l}{\textbf{Other backgrounds}} & \\
+\hline \hline
+$\textbar \cos(\theta_{\KS}) \textbar$ & 0.3 \\
+\Dz FD significance & $>$ 2 \\
+\KS FD significance & $>$ 5 for LL, no requirement for DD \\
+\Bm \chisqip & 0 - 25 \\
+\Bm \chisq/dof & 0 - 100 \\
+\hline \hline
+\multicolumn{1}{l}{\textbf{BDT}} & \\
+\hline \hline
+BDT classifier for CF and GLW modes & $>$ 0.6 for LL, $>$ 0.7 for DD \\
+BDT classifier for ADS modes & $>$ 0.6 for LL, $>$ 0.9 for DD \\
+\hline
+\end{tabular}}
 \caption{Summary of the selection requirements applied in this analysis}
 \label{selectionsummary}
 \end{table}
 
 \subsection{Final refitted \Bm mass distributions}
 
-The refitted \Bm mass distributions of each of the samples passing the full selection requirements, detailed in this chapter, are given in Figure \ref{fig:finalBmass}.
+The reconstructed \Bm mass distributions, with constraints applied, for each of the samples passing the full selection requirements, detailed in this chapter, are given in Figure \ref{fig:finalBmass}.
 
 \begin{figure}[h]
 \centering
