@@ -523,7 +523,7 @@ where $\mu$ is the peak position, $\sigma$ is the width of the Gaussian, $n$ par
 
 The \Bm mass distributions from simulated signal events were found to be consistent between \runone and \runtwo data samples, but slightly different for \kpi and \kpipipi modes. Therefore the signal shape for different data-taking periods is the same, but different between \kpi and \kpipipi modes. 
 
-Unbinned maximum likelihood fits are performed to simulated signal samples, as shown in Figure \ref{signalfits}, and the shape parameters obtained from these fits are detailed in Table \ref{signalparameters}. The tail parameters, $\alpha$ and $n$, are highly correlated, therefore in order to prevent arbitrary variations between the two parameters, $n$ is fixed in the fits to the simulated samples. The variation in this parameter does not have significant effect on the quality of the fit, therefore $n$ is fixed to a sensible value of unity. For the signal shape in the mass fit to data for the \kpi and \kpipipi modes, allowing all the parameters to vary would result in an unstable fit. The tail parameters, $\alpha$ and $n$, and the ratio of the widths between the CBs, $f_{\sigma}$, are fixed from simulation. However, it is necessary to allow for some variation in the signal shape for the fit to data as parameters such as the peak position and width, may take slightly different values in data due to possible imperfections simulation of reconstruction and resolution effects in \lhcb. Therefore, the peak position and width,$\mu$ and $\sigma$, are allowed to vary.
+Unbinned maximum likelihood fits are performed to simulated signal samples, as shown in Figure \ref{signalfits}, and the shape parameters obtained from these fits are detailed in Table \ref{signalparameters}. The tail parameters, $\alpha$ and $n$, are highly correlated, therefore in order to prevent arbitrary variations between the two parameters, $n$ is fixed in the fits to the simulated samples. The variation in this parameter does not have significant effect on the quality of the fit, therefore $n$ is fixed to a sensible value of unity. For the signal shape in the mass fit to data for the \kpi and \kpipipi modes, allowing all the parameters to vary would result in an unstable fit. The tail parameters, $\alpha$ and $n$, and the ratio of the widths between the CBs, $f_{\sigma}$, are fixed from simulation. However, it is necessary to allow for some variation in the signal shape when performing the fit to data, as parameters, such as the peak position and width, may take slightly different values in data due to possible imperfections in the simulation of reconstruction and resolution effects in \lhcb. Therefore, the peak position and width, $\mu$ and $\sigma$, are allowed to vary.
 
 \begin{figure}[h]
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_LL_KPi.pdf}
@@ -576,7 +576,6 @@ Partially reconstructed decays refer to those in which one or more particle, in 
 \item{\decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm}}
 \item{\decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm}}
 \end{itemize}
-
 where the particle in square brackets corresponds to the missed particle. Each \decay{\B}{\Dstar\Kstar} decay is a Scalar $\to$ Vector Vector decay, therefore due to the conservation of angular momentum there are three different helicity amplitudes to consider. Each of these helicity amplitudes produces a \Dstar particle in a different helicity state, labelled +1, 0, -1. The helicity state of the \Dstar and the spin of the missing particle in the subsequent \Dstar decay determines the distribution of the reconstructed \B mass. The helicity states +1 and -1 produce the same distribution in \Bm mass, therefore for the mass parameterisation these states are combined and collectively referred to as $\pm$1. There are the 0 and $\pm$1 \Dstar helicity states for each of the three partially reconstructed decay modes, which results in six different shapes to be modelled in the mass fit:
 \begin{itemize}
 \item{\decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, \Dstarz helicity: 0} 
@@ -593,7 +592,6 @@ All of these shapes are modelled using three analytic shapes; Horns, Hill and Li
 Consider the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz}, where the \Dstarz is in helicity state 0. The helicity of the \Dstarz, the fact that the missing \piz meson is spin-0 and the requirement that angular momentum must be conserved mean that the \piz meson will decay predominantly along $\theta = 0^{\circ}$ or $\theta = 180^{\circ}$. When $\theta = 0^{\circ}$, the fraction of momentum carried by the \piz in the \Bm rest frame is at its smallest, resulting in a larger reconstructed \Bm mass. Conversely, if $\theta = 180^{\circ}$, the fraction of momentum carried by the \piz is greatest, leading to a lower reconstructed \Bm mass. The distribution of the helicity angle of the missing particle, $\theta$, has a one-to-one correspondence with its momentum and therefore the reconstructed \Bm mass. 
 
 This distribution is modelled using the Horns function, described below. The underlying kinematic distribution is a parabola, $p_{HORNS}(x)$, with kinematics endpoints $a$ and $b$ where
-
 \begin{align}
 p_{HORNS}(x) &= \begin{cases}
 \left(x - \frac{a+b}{2}\right)^2, & \text{ if $a \leq x \leq b$}\\ 	
@@ -602,13 +600,10 @@ p_{HORNS}(x) &= \begin{cases}
 \end{align}
 
 The reconstruction of particles within the \lhcb detector gives rise to resolution effects that result in a smearing of the distribution. These resolution effects are modelled by convolving the parabola with two Gaussians. Given a Gaussian function of mean $m$ and width $\sigma$, $G(m,\sigma)$, a Double Gaussian can be constructed as,
-
 \begin{equation}
 DG(x) = f_G G(x|m,\sigma) + \left(1-f_G\right) G(x|m,R_{\sigma}\sigma) \text{ , }
 \end{equation}
-
-where $\sigma$ is the width of the first Gaussian, $f_G$ is the fraction contained by the first Gaussian and $R_{\sigma}$ is the relative width between the two. Additionally, selection effects, arising from preferentially selecting high \pt events, can affect the shape such that one peak is higher than the other. This is taken into account by introducing a linear polynomial with a slope of $1 - \xi$. At $\xi \rightarrow 1$, two two peaks are equal in height. The resulting Horns function is,
-
+where $\sigma$ is the width of the first Gaussian, $f_G$ is the fraction contained by the first Gaussian and $R_{\sigma}$ is the relative width between the two. Additionally, selection effects, arising from preferentially selecting high \pt events, can affect the shape such that one peak is higher than the other. This is taken into account by introducing a linear polynomial with a slope of $1 - \xi$. The resulting Horns function is,
 \begin{equation}
 \text{Horns}(m) = \int_a^b dx \left(x - \frac{a+b}{2}\right)^2 DG(x|m,\sigma,f_G,R_{\sigma}) \left( \frac{1 - \xi_{HORNS}}{b - a}x + \frac{b\xi_{HORNS} - a}{b - a}\right),
 \label{eqn:horns}
@@ -635,12 +630,11 @@ p_{HILL}(x) &= \begin{cases}
 \end{align}
 
 As with the Horns function, this parabola is convolved with a Double Gaussian and a linear polynomial to account for resolution and selection effects respectively. The resulting Hill function is,
-
 \begin{equation}
 \text{Hill}(m) = \int_{a'}^{b'} dx \left[-(x - a')(x - b')\right] DG(x|m,\sigma,f_G,R_{\sigma}) \left( \frac{1 - \xi_{HILL}}{b' - a'}x + \frac{b'\xi_{HILL} - a'}{b' - a'}\right),
 \label{eqn:hill}
 \end{equation}
-where $m$ is the mass variable to be fitted and $x$ is the integration variable in the convolution. The underlying kinematic distribution combined with the resolution and selection effects gives the distribution shown in Figure \ref{fig:hill}.
+where $m$ is the mass variable to be fitted and $x$ is the integration variable in the convolution. This Hill function also applies to the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz}, where the \Dstarz is in helicity state $\pm$1. The underlying kinematic distribution combined with the resolution and selection effects results in the distribution shown in Figure \ref{fig:hill}.
 
 \begin{figure}[h]
 \centering
@@ -649,7 +643,7 @@ where $m$ is the mass variable to be fitted and $x$ is the integration variable 
 \label{fig:hill}
 \end{figure}
 
-This Hill function also applies to the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz}, where the \Dstarz is in helicity state $\pm$1.
+
 
 \subsubsection{Little Horns function}
 
@@ -663,7 +657,6 @@ For the configuration \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\gamma}, w
 \end{figure}
 
 This is modelled using the Little Horns shape, described below. The underlying kinematic distribution is described by the sum of a parabola and a uniform distribution, $p_{LITTLEHORNS}(x)$, and kinematic endpoints $a''$ and $b''$ where
-
 \begin{align}
 p_{LITTLEHORNS}(x) &= \begin{cases}
 \left(x - \frac{a''+b''}{2}\right)^2 + \left(\frac{a''-b''}{2}\right)^2, & \text{ if $a'' \leq x \leq b''$}\\ 	
@@ -671,8 +664,7 @@ p_{LITTLEHORNS}(x) &= \begin{cases}
 \end{cases} 
 \end{align}
 
-Again, this distribution is convolved with a Double Gaussian and linear polynomial to describe the resolution and selection effects respectively. This results in a Little Horns function
-
+Again, this distribution is convolved with a Double Gaussian and linear polynomial to describe the resolution and selection effects respectively. This results in a Little Horns function,
 \begin{multline}
 \text{LittleHorns}(m) = \int_{a''}^{b''} dx \biggl\{ \left[ \left( x - \frac{a''+b''}{2} \right) ^2 + \left( \frac{a''-b''}{2} \right) ^2 \right] DG(x|m,\sigma,f_G,R_{\sigma}) \\
 \left( \frac{1 - \xi_{LITTLEHORNS}}{b'' - a''}x + \frac{b''\xi_{LITTLEHORNS} - a''}{b'' - a''} \right) \biggr\}
@@ -804,7 +796,9 @@ P_{tot} = N_{sig}P_{sig} + N_{comb}P_{comb} + N_{dstkst}P_{dstkst} \text{ ,}
 \end{equation}
 where $N_{sig}$, $N_{comb}$ and $N_{dstkst}$ are the yields of the signal, combinatorial and partially reconstructed yields respectively. The signal shape, $P_{sig}$, is given by Equation~\ref{DCBshape}, the partially reconstructed shape, $P_{dstkst}$, is given by Equation~\ref{partrecofunction} and the combinatorial shape is an exponential, $P_{comb} = e^{\beta m}$, where the slope parameter $\beta$ is able to vary in the fit. The yield of the signal and combinatorial shape, $N_{sig}$ and $N_{comb}$, are left to vary without constraint, as well as the peak position, $\mu$, and width, $\sigma$, of the signal shape. The only parameters able to vary in the partially reconstructed background are the yield ratio between the 0 and $\pm$1 amplitudes, $f_0$, and the overall yield, $N_{dstkst}$.
 
-Figures \ref{massfitskpi} and \ref{massfitsk3pi} show the fits to the invariant B mass distribution in the \kpi and \kpipipi favoured mode respectively for LL and DD candidates in both Run 1 and Run 2. The estimated signal yields extracted from these fits are given in Table \ref{signalyields}. It can be seen that the yield in the \kpi mode is almost twice as large as that in the \kpipipi mode, and the yield per unit of integrated luminosity is about 3 times higher in \runone compared to \runtwo. The full fit results for the \kpi and \kpipipi fits are shown in Tables \ref{fitresultskpi} and \ref{fitresultsk3pi} respectively. The values of $\mu$ are all consistent with the known \Bm mass of 5279.3\mevcc. The slight variations in the values are primarily due to the statistical uncertainty in the data. The widths of the signal shape are found to be smaller in the LL samples compared to the DD samples, which is expected as the resolution is better when forming a vertex from long tracks due to the additional precision information from the \velo. The parameter $f_0$ is the yield ratio between 0 and $\pm$1 helicity amplitudes in the partially reconstructed background, which is a purely dependent on the physics of the decay, so should not vary based on the data sample used. As observed in data, $f_0$ is found to be consistent between all of the categories in the \kpi and \kpipipi mass fits separately.
+Figures \ref{massfitskpi} and \ref{massfitsk3pi} show the fits to the invariant B mass distribution in the \kpi and \kpipipi favoured mode respectively for LL and DD candidates in both Run 1 and Run 2. The estimated signal yields extracted from these fits are given in Table \ref{signalyields}. It can be seen that the yield in the \kpi mode is almost twice as large as that in the \kpipipi mode, which is primarily a result of the lower reconstruction efficiency and additional PID requirements necessary due to the two additional tracks in the four-body mode. Table \ref{signalyields} also shows that the yield per unit of integrated luminosity is about 3 times higher in \runone compared to \runtwo, which is driven by the increase in centre-of-mass energy in \runtwo.
+
+The full fit results for the \kpi and \kpipipi fits are shown in Tables \ref{fitresultskpi} and \ref{fitresultsk3pi} respectively. The values of $\mu$ are all consistent with the known \Bm mass of 5279.3\mevcc. The slight variations in the values are primarily due to the statistical uncertainty in the data. The widths of the signal shape are found to be smaller in the LL samples compared to the DD samples, which is expected as the resolution is better when forming a vertex from long tracks due to the better precision arising from reconstructing tracks in the \velo. The parameter $f_0$ is the yield ratio between 0 and $\pm$1 helicity amplitudes in the partially reconstructed background, which is purely dependent on the physics of the decay, so should not vary depending on the data sample used. As observed in data, $f_0$ is found to be consistent between all of the categories in the \kpi and \kpipipi mass fits separately.
 
 \begin{table}
 \centering
