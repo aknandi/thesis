@@ -15,9 +15,14 @@ In this section the \CP observables are measured by performing a fit to \btodkst
 \section{Setup of \CP fit}
 \label{sec:cpfit:setup}
 
-The fit to data is performed on the invariant mass of \btodkst candidates. A simultaneous fit strategy is employed to fit each of the \Dz decay modes as well as two bins of \B charge (\Bp and \Bm), two bins of \KS track type (LL and DD) and two bins of data type (\runone and \runtwo), resulting in 56 bins in total. The parameters extracted from the \CP fit are the \CP observables, namely \Akpi, \Akk, \Apipi, \Rkk, \Rpipi, \Rptwo, \Rmtwo, \Akpipipi, \Apipipipi, \Rpipipipi, \Rpfour and \Rmfour, which relate to the physics parameters of interest as shown in Equations \ref{exp_Acp} - \ref{exp_R4pi}.
+The fit to data is performed on the invariant mass of \btodkst candidates. A simultaneous fit strategy is employed to fit each of the \Dz decay modes as well as two bins of \B charge (\Bp and \Bm), two bins of \KS reconstruction type (LL and DD) and two bins of data type (\runone and \runtwo), resulting in 56 bins in total. The parameters extracted from this simultaneous fit are the \CP observables, namely \Akpi, \Akk, \Apipi, \Rkk, \Rpipi, \Rptwo, \Rmtwo, \Akpipipi, \Apipipipi, \Rpipipipi, \Rpfour and \Rmfour, which relate to the physics parameters of interest as shown in Equations \ref{exp_Acp} - \ref{exp_R4pi}.
 
-The \CP fit is performed from 5230\mevcc, as justified in Section \ref{sec:cpfit:range}. The components and shapes of the \CP fit are the identical to those described in Section \ref{sec:massfit}, with the exception of and additional component in the \kk mass spectrum, detailed in Section \ref{sec:cpfit:Lb2LcKst}. The mean and width of the signal shape are shared across the different run periods and across modes of the same number of final state particles, but the mean and width are allowed to be different for the two- and four-body modes. The shape and yield of the partially reconstructed background is completely fixed, with different shape parameters for LL and DD candidates. The shape is fixed as described in Section \ref{sec:massfit:partreco}, using the yield ratios given in Table \ref{fixedyieldratios}. The total partially reconstructed yield is fixed from the fits in Figures \ref{massfitskpi} and \ref{massfitsk3pi}, the values for the total partially reconstructed yield in each of the simultaneous fit categories is given in Section \ref{sec:cpfit:partrecoyields}. The shape of the combinatoric background is shared across all modes of the same number of final state particles, but has different values for LL and DD candidates, as well as two and four-body D modes.
+The simultaneous fit extracts the \CP observables directly, rather than measuring the pure yields and indirectly converting them into the \CP observables. The strategy to extract the \CP observables directly avoids the need to deal with combining results from different categories, which is complicated due to the many correlations between the variables. This strategy also leaves fewer fit parameters to be dealt with. This simultaneous fit, which extracts the \CP observables, is referred to in this thesis as the \CP fit. The reason for performing a simultaneous fit is that the \CP observables being measured relate to the ratios of yields in different \Dz modes and different \B meson charges, therefore it is necessary to perform a fit that includes separate data samples associated with each of the modes and charges. Additionally, some shape parameters are found to be different in the different in different bins of \KS reconstruction type and data-taking period, and a simultaneous fit allows these differences to be easily dealt with. 
+
+This section covers the setup of the \CP fit. The components and shapes of the \CP fit are the identical to those described in Section \ref{sec:massfit}, with the exception of and additional component in the \kk mass spectrum, detailed in Section \ref{sec:cpfit:Lb2LcKst}.
+
+
+%The mean and width of the signal shape are shared across the different run periods and across modes of the same number of final state particles, but the mean and width are allowed to be different for the two- and four-body modes. The shape and yield of the partially reconstructed background is completely fixed, with different shape parameters for LL and DD candidates. The shape is fixed as described in Section \ref{sec:massfit:partreco}, using the yield ratios given in Table \ref{fixedyieldratios}. The total partially reconstructed yield is fixed from the fits in Figures \ref{massfitskpi} and \ref{massfitsk3pi}, the values for the total partially reconstructed yield in each of the simultaneous fit categories is given in Section \ref{sec:cpfit:partrecoyields}. The shape of the combinatoric background is shared across all modes of the same number of final state particles, but has different values for LL and DD candidates, as well as two and four-body D modes.
 
 \subsection{Additional background component in \kk mass spectrum}
 \label{sec:cpfit:Lb2LcKst}
@@ -61,13 +66,13 @@ $\alpha_R$ & $-0.04 \pm 0.06$ \\
 \label{fitresultsLb}
 \end{table}
 
-The shape is assumed to be the same in each \kk fit category, across \KS reconstruction types and data-taking periods. The \decay{\Lb}{\Lc(p\kaon\pi)\Kstarm} yield compared to the signal yield in the favoured \kpi mode is allowed to vary in the simultaneous fit. This fractional yield is required to be the same for all fit categories.
+The shape is assumed to be the same in each \kk fit category, across \KS reconstruction types and data-taking periods because there is such a low number of events that contribute to this background that the possible variations in the shape in these different categories has negligible effect on the results. The \decay{\Lb}{\Lc(p\kaon\pi)\Kstarm} yield compared to the signal yield in the favoured \kpi mode is allowed to vary in the simultaneous fit. This fractional yield is required to be the same for all fit categories.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Choice of fit range}
 \label{sec:cpfit:range}	
 
-Fixing the relative yields for the partially reconstructed shapes, as described in Section \ref{sec:massfit:partreco}, assumes that no \CP violation occurs, i.e. the relative yields for \Bm and \Bp are the same. This is a reasonable assumption for the favoured \kpi and \kpipipi decays considered in this section, where we do not expect \CP violation. However in the other \D final states, for example \pik, \CP violation is expected in the partially reconstructed background for which the yield ratios are entirely unknown. Therefore, it is not possible make any constraints on the yield ratios in these modes. The fit that would result from fitting six individual yields with an order of magnitude less data would be unstable and this lack of constraint in the low mass region would lead to a large amount of freedom in the combinatorial, significantly affecting the signal yield. 
+Fixing the relative yields for the partially reconstructed shapes, as described in Section \ref{sec:massfit:partreco}, assumes that no \CP violation occurs, i.e. the relative yields for \Bm and \Bp are the same. This is a reasonable assumption for the favoured \kpi and \kpipipi decays considered in this section, where we do not expect \CP violation. However in the other \D final states, for example \pik, \CP violation is expected in the partially reconstructed background for which the \CP violation parameters are not known. Therefore, it is not possible make any constraints on the yield ratios in these modes. The fit that would result from fitting six individual yields with an order of magnitude less data would be unstable and this lack of constraint in the low mass region would lead to a large amount of freedom in the combinatorial, significantly affecting the precision of the signal yield. 
 
 The overlap of the partially reconstructed and signal peaks is very small. There are a number of advantages to raising the lower range of the mass parameterisation up to 5230 \mev, which only removes 0.4\% of signal. The advantages include avoiding the need to fit the various partially reconstructed yields in each of the other D decays modes. These cannot use the same assumptions and fractions as determined in the Cabibbo-favoured mode due to expected CP violation. Further benefits are that low level broad backgrounds that may be present in the range 4900 - 5200 \mev do not need to considered as sources of systematics uncertainty. The shape and yield of the small amount of partially reconstructed background present in all \D decay categories above 5230 \mev is determined and fixed from the fits to data of the \kpi and \kpipipi decays, taking into account the smaller branching fractions of the \D decays. It is less than an event for all the CP violating modes. Due to the assumptions present in the initial fit, uncertainties in the yield and shape and possible asymmetries in distribution between \Bp and \Bm are evaluated as systematic uncertainties. This systematic uncertainty is dealt with in Section \ref{sec:systematics:partreco}.
 
@@ -153,7 +158,7 @@ $\epsilon_{sel}(\pi\pi\pi\pi)$ & $0.0272 \pm 0.0013$ & $0.0825 \pm 0.0022$ & $0.
 \label{seleff}
 \end{table}
 
-The BDT signal efficiency is defined as the probability a true signal event passes the BDT selection imposed. The BDT efficiency for the two- and four-body ADS modes is required as a correction, as shown in Equations \ref{effcorrectionads2body} and \ref{effcorrectionads4body}, which is obtained from samples of simulated signal events. The results are given in Table \ref{bdteff}.
+The BDT signal efficiency is defined as the probability a true signal event passes the BDT selection imposed. The BDT efficiency, defined as the number of events that pass the BDT selection compared to the number that already pass the stripping and mass requirements, for the two- and four-body ADS modes is required as a correction, as shown in Equations \ref{effcorrectionads2body} and \ref{effcorrectionads4body}. These efficiencies are obtained from samples of simulated signal events. The results are given in Table \ref{bdteff}.
 
 \begin{table}[h]
 \centering
@@ -179,7 +184,7 @@ $\epsilon_{bdt}(\pi K\pi\pi)$ & $0.938 \pm 0.010$ & $0.838 \pm 0.009$ & $0.952 \
 
 In this analysis the selection for the different \Dz decays modes is almost identical apart for the particle identification requirements. Therefore it is very important to apply an efficient PID selection to remove possible backgrounds containing misidentified particles, as described in Section \ref{sec:selection:pid}. The efficiencies for the various PID selections are determined using background free calibration samples of protons, kaons and pions. PID efficiency is a function of momentum and psuedorapidity, therefore when calculating of the overall PID efficiency, the sample is reweighted based on the momentum and pseudorapidity distribution of the signal candidates. The uncertainties in the PID efficiencies are systematic and come from, the limited size of the calibration samples, the limited size of the simulated signal samples and the reweighting procedure itself.
 
-The PID efficiencies are calculated individually for each year of data-taking and each magnet polarity and are subsequently combined according to the efficiency corrected yields in each of the samples. They are combined separately for \runone and \runtwo. The results of the PID efficienies are given in Table \ref{pideff}. These efficiencies are used in the \CP fit as described in Equations \ref{effcorrectionglw2body} and \ref{effcorrectionglw4body}. 
+The PID efficiencies are calculated individually for each year of data-taking and each magnet polarity and are subsequently combined according to the efficiency corrected yields in each of the samples. They are combined separately for \runone and \runtwo. The results of the PID efficiencies are given in Table \ref{pideff}. These efficiencies are used in the \CP fit as described in Equations \ref{effcorrectionglw2body} and \ref{effcorrectionglw4body}. 
 
 \begin{table}[h]
 \centering
@@ -200,6 +205,8 @@ $\epsilon_{pid}(\pi\pi\pi\pi)$ & $0.675 \pm 0.002$ & $0.687 \pm 0.002$ & $0.822 
 \label{pideff}
 \end{table}
 
+It can be seen from Table \ref{pideff} that the PID efficiency in \runtwo is higher than \runone for the PID selection used in this analysis. This is primarily due to the removal of the aerogel radiator in \runtwo, which is discussed in Section \ref{sec:detector:rich}. The misidentification rate of the PID selection remains under control, for example, it has been shown in Section \ref{sec:selection:vetos} that there is only a negligible level of this crossfeed background present in both \runone and \runtwo. Therefore, the same PID selection is applied to both data-taking periods.
+
 Another input to the fit is the efficiency of the double misidentification veto, which is required as a correction to the ADS observables, as in Equations \ref{effcorrectionads2body} and \ref{effcorrectionads4body}. Veto efficiencies calculated from data are used in the \CP fit for both two- and four-body modes, given in Table \ref{vetoeff}.
 
 \begin{table}[h]
@@ -218,44 +225,6 @@ $\epsilon_{veto}(\pi K \pi\pi)$ & $0.895 \pm 0.005$ & $0.882 \pm 0.003$ & $0.916
 \label{vetoeff}
 \end{table}
 
-It can be seen from Table \ref{pideff} that the PID efficiency in \runtwo is higher than \runone for the PID selection used in this analysis. In order to compare the performance of the PID selection between \runone and \runtwo, the misidentification efficiency (efficiency of a \kpi candidate passing the \pik PID selection) was investigated. For the two-body mode, both the PID efficiency and misidentification efficiency is improved in \runtwo compared to \runone so the same PID selection is applied to both data-taking periods. For the four-body mode the misidentification efficiency is slightly worse in \runtwo compared to \runone. A low misidentification rate is required to reduce the crossfeed background discussed in Section \ref{sec:backgrounds:crossfeed}, which reports a negligible level of this crossfeed background in both \runone and \runtwo, therefore the misidentification rate is already sufficiently low and so the same PID selection is applied to both data-taking periods.
-
-%\subsubsection{Summary of efficiency corrections}
-%\label{sec:cpfit:efficiencies:summary}
-%
-%The \CP fit uses signal efficiencies, BDT efficiencies, PID efficiencies and double misID veto efficiencies from simulation, as well as branching ratios from Ref~\cite{PDG2016}. Table \ref{fitinputs} summarises the values used in the \CP fit. 
-%
-%\begin{table}[h]
-%\centering
-%\begin{tabular}{c|cc|cc}
-%\hline
-%& \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
-%& LL & DD & LL & DD \\
-%\hline
-%$BF(\decay{\Dz}{\Km\pip})$ & \multicolumn{4}{c}{$0.0393 \pm 0.0004$} \\
-%$BF(\decay{\Dz}{\Kp\Km})$ & \multicolumn{4}{c}{$0.00401 \pm 0.00007$} \\
-%$BF(\decay{\Dz}{\pip\pim})$ & \multicolumn{4}{c}{$0.001421 \pm 0.000025$} \\
-%$\epsilon_{sel}(K\pi)$ & $0.0939 \pm 0.0011$ & $0.2519 \pm 0.0018$ & $0.1266 \pm 0.0011$ & $0.3155 \pm 0.0017$ \\
-%$\epsilon_{sel}(KK)$ & $0.0919 \pm 0.0011$ & $0.2450 \pm 0.0018$ & $0.1189 \pm 0.0010$ & $0.2923 \pm 0.0016$ \\
-%$\epsilon_{sel}(\pi\pi)$ & $0.1015 \pm 0.0012$ & $0.2584 \pm 0.0018$ & $0.1292 \pm 0.0011$ & $0.3309 \pm 0.0017$ \\
-%$\epsilon_{pid}(K\pi)$ & $0.734 \pm 0.002$ & $0.747 \pm 0.002$ & $0.811 \pm 0.002$ & $0.821 \pm 0.002$ \\
-%$\epsilon_{pid}(KK)$ & $0.812 \pm 0.002$ & $0.825 \pm 0.002$ & $0.844 \pm 0.002$ & $0.853 \pm 0.002$ \\
-%$\epsilon_{pid}(\pi\pi)$ & $0.670 \pm 0.002$ & $0.676 \pm 0.002$ & $0.779 \pm 0.002$ & $0.790 \pm 0.002$ \\
-%$\epsilon_{bdt}(K\pi)$ & $0.947 \pm 0.005$ & $0.896 \pm 0.004$ & $0.949 \pm 0.003$ & $0.907 \pm 0.002$ \\
-%$\epsilon_{bdt}(\pi K)$ & $0.947 \pm 0.005$ & $0.802 \pm 0.005$ & $0.949 \pm 0.003$ & $0.826 \pm 0.003$ \\
-%$\epsilon_{veto}(\pi K)$ & $0.905 \pm 0.009$ & $0.919 \pm 0.005$ & $0.915 \pm 0.007$ & $0.917 \pm 0.004$ \\
-%$\epsilon_{sel}(K\pi\pi\pi)$ & $0.0288 \pm 0.0006$ & $0.0816 \pm 0.0020$ & $0.0484 \pm 0.0004$ & $0.1229 \pm 0.0007$ \\
-%$\epsilon_{sel}(\pi\pi\pi\pi)$ & $0.0272 \pm 0.0013$ & $0.0825 \pm 0.0022$ & $0.0436 \pm 0.0011$ & $0.1185 \pm 0.0017$ \\
-%$\epsilon_{pid}(K\pi\pi\pi)$ & $0.630 \pm 0.002$ & $0.636 \pm 0.002$ & $0.784 \pm 0.002$ & $0.798 \pm 0.002$ \\
-%$\epsilon_{pid}(\pi\pi\pi\pi)$ & $0.675 \pm 0.002$ & $0.687 \pm 0.002$ & $0.822 \pm 0.002$ & $0.835 \pm 0.002$ \\
-%$\epsilon_{bdt}(K\pi\pi\pi)$ & $0.938 \pm 0.010$ & $0.903 \pm 0.007$ & $0.952 \pm 0.003$ & $0.928 \pm 0.002$ \\
-%$\epsilon_{bdt}(\pi K\pi\pi)$ & $0.938 \pm 0.010$ & $0.838 \pm 0.009$ & $0.952 \pm 0.003$ & $0.870 \pm 0.003$ \\
-%$\epsilon_{veto}(\pi K \pi\pi)$ & $0.895 \pm 0.005$ & $0.882 \pm 0.003$ & $0.916 \pm 0.003$ & $0.906 \pm 0.002$ \\
-%\hline
-%\end{tabular}
-%\caption{Table of branching fractions and efficiencies used in the \CP fit. Branching ratios are taken from the PDG~\cite{PDG2016}. All these values are fixed inputs and systematics are assigned based on the uncertainties, as detailed in Section \ref{sec:systematics}.}
-%\label{fitinputs}
-%\end{table}
 
 
 \subsection{Corrections to asymmetries}
@@ -264,23 +233,23 @@ It can be seen from Table \ref{pideff} that the PID efficiency in \runtwo is hig
 In \CP fit, the data samples are split by charge in order to measure various asymmetries between \Bp and \Bm, namely \Akpi, \Akk, \Apipi and \Apipipipi, as well as yield ratios in \Bp and \Bm samples separately, namely \Rptwo, \Rmtwo, \Rpfour and \Rmfour. Each observed asymmetry in the data fit contains contributions from several effects. Firstly, there is the physics asymmetry due to \CP violation effects, $A_{phys}$, which is the physical parameter to be measured. In order to make an accurate measurement of the physics asymmetries of interest it is necessary to consider and correct for other sources of asymmetry that would affect the measurement. These asymmetries are:
 \begin{itemize}
 \item Production asymmetry $A_{prod}$: asymmetry in the rate of production of \Bp compared to \Bm mesons in the $pp$ collisions,
-\item Detection asymmetry $A_{det}$: asymmetry from differences in the efficiency of the detector for detecting a pion compared to a kaon,
+\item Detection asymmetry $A_{det}$: asymmetry from differences in the efficiency of the detector for detecting a positively charged particle compared to a negatively charge particle,
 \item PID asymmetry, $A_{pid}$: asymmetry in PID efficiencies between positively charged and negatively charged tracks.
 \end{itemize}
-These asymmetries all contribute to produce the raw observed asymmetry measured in data,
+These asymmetries all contribute to produce the raw observed asymmetry measured in data, therefore to calculate the physical asymmetry it is necessary to correct for these additional sources of asymmetry,
 \begin{equation}
-A_{raw} = A_{phys} + A_{prod} + A_{det} + A_{pid} \text{ .}
+A_{phys} = A_{raw} - A_{prod} - A_{det} - A_{pid} \text{ .}
 \label{asymmetries}
 \end{equation} 
 Corrections are provided for the production asymmetry, detector asymmetry and PID asymmetry such that the \CP fit provides a direct measurement of the physics asymmetries of interest.
 
 \subsubsection{Production asymmetry}
 
-The \Bpm production asymmetry is estimated using the previous measurements of production asymmetries in \runone at \lhcb, binned in $p$ and $\eta$, using \decay{\Bp}{\Dzb\pip} decays~\cite{LHCb-PAPER-2016-054}. The production asymmetry in this thesis is calculated by performing a weighted average based on the $p$ and $\eta$ distribution in the simulated signal samples for this analysis. The values obtained are $(-0.61 \pm 0.97) \times 10^{-2}$ for 2011 data and $(-0.52 \pm 0.64) \times 10^{-2}$ for 2012 data. This gives a combined \runone value of $(-0.54 \pm 0.54) \times 10^{-2}$, with the uncertainty applied as a systematic. The equivalent results for \runtwo data are not currently available, as such the production asymmetry for \runtwo is taken to have the same central value as \runone with twice the uncertainty, $(-0.54 \pm 1.08) \times 10^{-2}$, which is considered sufficient to cover any unknown difference in the production asymmetry due to the increased centre-of-mass energy. These central values are applied as a fixed correction directly in the \CP fit, and the uncertainties are considered as a source of systematic uncertainty.
+The \Bpm production asymmetry is estimated using the previous measurements of production asymmetries in \runone at \lhcb, binned in $p$ and $\eta$, using \decay{\Bp}{\Dzb\pip} decays~\cite{LHCb-PAPER-2016-054}. The production asymmetry in this thesis is calculated by performing a weighted average based on the $p$ and $\eta$ distribution in the simulated signal samples for this analysis. The values obtained are $(-0.61 \pm 0.97) \times 10^{-2}$ for 2011 data and $(-0.52 \pm 0.64) \times 10^{-2}$ for 2012 data. This gives a combined \runone value of $(-0.54 \pm 0.54) \times 10^{-2}$, with the uncertainty applied as a systematic. The equivalent results for \runtwo data are not currently available, therefore the production asymmetry for \runtwo is taken to have the same central value as \runone with twice the uncertainty, $(-0.54 \pm 1.08) \times 10^{-2}$, which is considered sufficient to cover any unknown difference in the production asymmetry due to the increased centre-of-mass energy. These central values are applied as a fixed correction directly in the \CP fit, and the uncertainties are considered as a source of systematic uncertainty.
 
 \subsubsection{Detection asymmetry}
 
-The detection asymmetry arises from differences of matter and antimatter particles as they travel through the detector. The \btodkst decay presented in this thesis contains a final state consisting of purely pions and kaons, therefore the pion and kaon detection asymmetry are the values of interest. The pion detection asymmetry has been measured at \lhcb at $(0.08 \pm 0.30)\%$~\cite{pi_det_asym}. However, for the kaon asymmetry the best measured value at \lhcb is not the pure kaon asymmetry, but $A_{K\pi}$, where $A_{K\pi} = A_K - A_{\pi}$. The $K\pi$ asymmetry has been measured in bins of kaon momentum, therefore the value of $A_{K\pi}$ for this thesis is calculated performing a weighted average based on the kaon momentum distribution in the simulated signal sample. The value of $A_{K\pi}$ obtained is $(-1.06 \pm 0.16)\%$~\cite{k_det_asym}. The values are obtained using \runone data, but the same results are used for \runtwo data. The changes to the detector between the data-taking periods are not expected to significantly affect the $A_{\text{det}}$ measurement. The total detection asymmetry correction to be applied varies for the different \CP observables, depending on the number of charged kaons and pions in the final state and the structure of the \CP observable being measured. Table \ref{detectionasymmetry} summarises the different detection asymmetry factors that apply to each observable. The fixed central values are used in the \CP fit and the uncertainties are in these values are considered as a source of systematic uncertainty.
+The detection asymmetry arises from differences of matter and antimatter particles as they travel through the detector. The \btodkst decay presented in this thesis contains a final state consisting of purely pions and kaons, therefore the pion and kaon detection asymmetry are the values of interest. The pion detection asymmetry has been measured at \lhcb at $(0.08 \pm 0.30)\%$~\cite{pi_det_asym}. However, for the kaon asymmetry the best measured value at \lhcb is not the pure kaon asymmetry, but $A_{K\pi} = A_K - A_{\pi}$, where $A_K$ is the pure kaon asymmetry and $A_{\pi}$ is the pure pion asymmetry. The $K\pi$ asymmetry has been measured in bins of kaon momentum, therefore the value of $A_{K\pi}$ for this thesis is calculated performing a weighted average based on the kaon momentum distribution in the simulated signal sample. The value of $A_{K\pi}$ obtained is $(-1.06 \pm 0.16)\%$~\cite{k_det_asym}. The values are obtained using \runone data, but the same results are used for \runtwo data. The changes to the detector between the data-taking periods are not expected to significantly affect the $A_{\text{det}}$ measurement. The total detection asymmetry correction to be applied varies for the different \CP observables, depending on the number of charged kaons and pions in the final state and the structure of the \CP observable being measured. Table \ref{detectionasymmetry} summarises the different detection asymmetry factors that apply to each observable. The fixed central values are used in the \CP fit and the uncertainties are in these values are considered as a source of systematic uncertainty.
 
 {\footnotesize
 \begin{table}[h]
@@ -306,7 +275,7 @@ $R_{K\pi\pi\pi}^-$ & $B^- \to [K^+\pi^-\pi^+\pi^-]_D[K_s^0\pi^-]_{K^*}$ & $\epsi
 
 \subsubsection{PID asymmetry}
 
-The PID asymmetry arises from the asymmetry of the detector. Due to the \lhcb dipole magnet, positively charged particles are bent in the opposite direction to negatively charged particles, therefore asymmetry in the detector would manifest itself as a different in the detection of positive and negatively charged particles. However, as discussed in Section \ref{sec:detector:tracking}, the direction of the magnetic field in \lhcb is reversed at certain points throughout data-taking in order to correct for such effects. Calculating the PID efficiency of the bachelor pion for \Bp and \Bm tracks, allows us to measure any residual PID asymmetry to be included as a correction to the measured asymmetry. Tables \ref{bachpidBminus} and \ref{bachpidBplus} show the bachelor PID efficiency in the \kpi mode for each year, \KS track type and magnet polarity. The values are combined for \runone and \runtwo, by performing a weighted average based on the efficiency corrected yields in each sample. The PID asymmetry $A_{pid}$, defined as,
+The PID asymmetry arises from the asymmetry of the detector. Due to the \lhcb dipole magnet, positively charged particles are bent in the opposite direction to negatively charged particles, therefore asymmetry in the detector would manifest itself as a different in the detection of positive and negatively charged particles. However, as discussed in Section \ref{sec:detector:tracking}, the direction of the magnetic field in \lhcb is reversed at certain points throughout data-taking in order to mitigate for such effects. Calculating the PID efficiency of the bachelor pion for \Bp and \Bm tracks, allows us to measure any residual PID asymmetry to be included as a correction to the measured asymmetry. Tables \ref{bachpidBminus} and \ref{bachpidBplus} show the bachelor PID efficiency in the \kpi mode for each year, \KS track type and magnet polarity. The values are combined for \runone and \runtwo, by performing a weighted average based on the efficiency corrected yields in each sample. The PID asymmetry $A_{pid}$, defined as,
 \begin{equation*}
 A_{pid} = \frac{\epsilon_{\pi^-}^{pid} - \epsilon_{\pi^+}^{pid}}{\epsilon_{\pi^-}^{pid} + \epsilon_{\pi^+}^{pid}}
 \end{equation*}
@@ -321,13 +290,13 @@ is calculated to be $(-9.56 \pm 0.19) \times 10^{-4}$ for \runone and $(-1.40 \p
 & \multicolumn{2}{c}{MagDown} & \multicolumn{2}{c}{MagUp} \\
 & LL & DD & LL & DD \\
 \hline
-2011 & $94.1781 \pm 0.007$ & $95.1257 \pm 0.0034$ & $94.3937 \pm 0.0083$ & $94.8994 \pm 0.004$ \\
-2012 & $95.086 \pm 0.0048$ & $95.6587 \pm 0.0065$ & $94.704 \pm 0.014$ & $95.2391 \pm 0.0016$ \\
-2015 & $97.8299 \pm 0.0029$ & $97.7307 \pm 0.0017$ & $98.0431 \pm 0.0039$ & $97.8097 \pm 0.002$ \\
-2016 & $97.7678 \pm 0.0031$ & $97.6973 \pm 0.0018$ & $98.1126 \pm 0.0018$ & $97.91574 \pm 0.00093$ \\
+2011 & $0.941781 \pm 0.00007$ & $0.951257 \pm 0.000034$ & $0.943937 \pm 0.000083$ & $0.948994 \pm 0.00004$ \\
+2012 & $0.95086 \pm 0.000048$ & $0.956587 \pm 0.000065$ & $0.94704 \pm 0.00014$ & $0.952391 \pm 0.000016$ \\
+2015 & $0.978299 \pm 0.000029$ & $0.977307 \pm 0.000017$ & $0.980431 \pm 0.000039$ & $0.978097 \pm 0.00002$ \\
+2016 & $0.977678 \pm 0.000031$ & $0.976973 \pm 0.000018$ & $0.981126 \pm 0.000018$ & $0.9791574 \pm 0.0000093$ \\
 \hline
-Run 1 combined & \multicolumn{4}{c}{$95.004 \pm 0.003$} \\
-Run 2 combined & \multicolumn{4}{c}{$97.9145 \pm 0.0008$} \\
+Run 1 combined & \multicolumn{4}{c}{$0.95004 \pm 0.00003$} \\
+Run 2 combined & \multicolumn{4}{c}{$0.979145 \pm 0.000008$} \\
 \hline
 \end{tabular}}
 \caption{PID efficiency of the bachelor pion for $B^-$ tracks.}
@@ -342,13 +311,13 @@ Run 2 combined & \multicolumn{4}{c}{$97.9145 \pm 0.0008$} \\
 & \multicolumn{2}{c}{MagDown} & \multicolumn{2}{c}{MagUp} \\
 & LL & DD & LL & DD \\
 \hline
-2011 & $94.9503 \pm 0.0056$ & $94.893 \pm 0.003$ & $94.3573 \pm 0.0072$ & $95.0011 \pm 0.003$ \\
-2012 & $95.2161 \pm 0.0033$ & $95.888 \pm 0.0023$ & $95.0666 \pm 0.004$ & $95.2721 \pm 0.0017$ \\
-2015 & $98.0043 \pm 0.0024$ & $97.8299 \pm 0.0015$ & $97.9034 \pm 0.0031$ & $97.8799 \pm 0.002$ \\
-2016 & $97.9242 \pm 0.0027$ & $97.7934 \pm 0.0016$ & $97.9803 \pm 0.0014$ & $97.98793 \pm 0.00091$ \\
+2011 & $0.949503 \pm 0.000056$ & $0.94893 \pm 0.00003$ & $0.943573 \pm 0.000072$ & $0.950011 \pm 0.00003$ \\
+2012 & $0.952161 \pm 0.000033$ & $0.95888 \pm 0.000023$ & $0.950666 \pm 0.00004$ & $0.952721 \pm 0.000017$ \\
+2015 & $0.980043 \pm 0.000024$ & $0.978299 \pm 0.000015$ & $0.979034 \pm 0.000031$ & $0.978799 \pm 0.00002$ \\
+2016 & $0.979242 \pm 0.000027$ & $0.977934 \pm 0.000016$ & $0.979803 \pm 0.000014$ & $0.9798793 \pm 0.0000091$ \\
 \hline
-Run 1 combined & \multicolumn{4}{c}{$95.1860 \pm 0.0013$} \\
-Run 2 combined & \multicolumn{4}{c}{$97.9420 \pm 0.0007$} \\
+Run 1 combined & \multicolumn{4}{c}{$0.951860 \pm 0.000013$} \\
+Run 2 combined & \multicolumn{4}{c}{$0.979420 \pm 0.000007$} \\
 \hline
 \end{tabular}}
 \caption{PID efficiency of the bachelor pion for $B^+$ tracks.}
@@ -383,7 +352,7 @@ P_x = \begin{cases}
 	\frac{x_{gen} - x_{fit}}{\sigma_x^+}, & \text{if $x_{fit} - x_{gen} <$ 0}.
 	\end{cases}
 \end{equation*}
-where $x_{fit}$ is the value of the parameter returned by the fit, $x_{gen}$ is the generated value of the parameter, and $\sigma_x^+$ and $\sigma_x^-$ are the upper and lower asymmetric errors respectively. The results of the pseudoexperiments for the \CP observables are shown in Figures \ref{pulls1} and \ref{pulls2}. For each of the pull distributions a Gaussian fit is performed. All of these fitted Gaussians are all consistent with a mean of zero and width of one, which shows that the setup of the \CP fit is stable and unbiased. 
+where $x_{fit}$ is the value of the parameter returned by the fit, $x_{gen}$ is the generated value of the parameter, and $\sigma_x^+$ and $\sigma_x^-$ are the upper and lower asymmetric errors respectively. The results of the pseudoexperiments for the \CP observables are shown in Figures \ref{pulls1} and \ref{pulls2}. For each of the pull distributions a Gaussian fit is performed. All of these fitted Gaussians are all consistent with a mean of zero and width of one, which shows that the setup of the \CP fit is unbiased and the uncertainties are correctly determined. Additionally, all of the fits coverge, therefore the fit is stable. 
  
 \begin{figure}[!h]
 \centering
