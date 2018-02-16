@@ -436,7 +436,9 @@ where $x_{fit}$ is the value of the parameter returned by the fit, $x_{gen}$ is 
 \section{Fit results}
 \label{sec:cpfit:results}
 
-The \CP fit, setup as described in Section \ref{sec:cpfit:setup}, is performed on data. The mass projection is each of the bins of the \CP fit, when performed on data, are shown in Figures \ref{datafit2bodyRun1}, \ref{datafit4bodyRun1}, \ref{datafit2bodyRun2} and \ref{datafit4bodyRun2}. Table \ref{cpfitresultsphysics} shows the \CP fit results of the \CP observables of interest. There is no significant asymmetry observed in the GLW and quasi-GLW modes, i.e. \Akk, \Apipi and \Apipipipi are all consistent with zero. However, for the two-body ADS mode, \Rptwo is significantly larger than \Rmtwo, showing asymmetry in this mode. The four-body ADS mode shows a similar behaviour, however the asymmetry is less significant. It can also be seen that \Akpi and \Akpipipi are consistent with zero, as expected. Additionally, \Akk and \Apipi are in agreement with each other and \Rkk and \Rpipi are in agreement with each other. 
+The \CP fit, setup as described in Section \ref{sec:cpfit:setup}, is performed on data. The mass projections from the \CP fit performed on data are shown in Figures \ref{resultskpi} - \ref{resultspikpipi}, for DD canidates in \runtwo. The projections look similar in the other bins, corresponding to LL candidates and \runone candidates. The bin corresponding to DD canidates in \runtwo is shown as it is the bin containing the highest number of events. A slight asymmetry can be observed in the \kk and \pipi modes, however, there is a much more obvious asymmetry observed in the \pik mode, which occurs in the opposite direction. In the \pik in the \Bp decay has a higher yield than the \Bm decay, whereas in the \kk and \pipi modes the \Bm decay has a higher yield than the \Bp decay. The four-body modes show the same characteristics, but with fewer events.
+
+Table \ref{cpfitresultsphysics} shows the \CP fit results of the \CP observables of interest. There is no significant asymmetry observed in the GLW and quasi-GLW modes, i.e. \Akk, \Apipi and \Apipipipi are all consistent with zero. However, for the two-body ADS mode, \Rptwo is significantly larger than \Rmtwo, showing asymmetry in this mode. The four-body ADS mode shows a similar behaviour, however the asymmetry is less significant. It can also be seen that \Akpi and \Akpipipi are consistent with zero, as expected. Additionally, \Akk and \Apipi are in agreement with each other and \Rkk and \Rpipi are in agreement with each other. 
 
 Table \ref{cpfitresultsshapes} shows the fit results for the favoured \kpi and \kpipipi signal yields and the shape parameters. It can be seen that both the mean and the width of the signal peak in the two-body and four-body modes are consistent with each other. The yields are significantly higher in \runtwo compared to \runone even though the intergrated luminosity in \runtwo is lower. In fact, the yield per unit of integrated luminosity is about 3 times higher in \runone compared to \runtwo, which is driven by the increase in centre-of-mass energy in \runtwo.
 
@@ -444,81 +446,34 @@ All the combinatoric yields are left to vary in the \CP fit for each of the diff
 
 The fitted signal yields obtained for running the fit with \Bp and \Bm samples combined are given in Table \ref{fittedyields}. When comparing the ratio of the two-body signal yields with the favoured mode, with the ratio of the branching fractions of the different \Dz modes, it can be observed that the results are consistent with the branching fractions. Both the \kk mode and \pik mode showing a slight excess compared to the expected yield. For the four-body modes, the ratio of \kpipipi to \pipipipi signal yilds is consistent with their relative branching fractions.
 
-\begin{sidewaysfigure}[h]
-\centering
-\subfloat[$K\pi$, LL]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2kpi_LL_run1.pdf}}
-\hfill
-\subfloat[$KK$, LL]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2kk_LL_run1.pdf}}
-\hfill
-\subfloat[$\pi\pi$, LL]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2pipi_LL_run1.pdf}}
-\hfill
-\subfloat[$\pi K$, LL]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2pik_LL_run1.pdf}}
-\hfill
-\subfloat[$K\pi$, DD]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2kpi_DD_run1.pdf}}
-\hfill
-\subfloat[$KK$, DD]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2kk_DD_run1.pdf}}
-\hfill
-\subfloat[$\pi\pi$, DD]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2pipi_DD_run1.pdf}}
-\hfill
-\subfloat[$\pi K$, DD]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2pik_DD_run1.pdf}}
-\caption{Results of the simultaneous fit for \runone data for two-body modes. In each pair the top plot is for \Bp decays and the bottom plot is for \Bm decays.}
-\label{datafit2bodyRun1}
-\end{sidewaysfigure}
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{figures/results/canvas_d2kpi_DD_run2.pdf}
+\includegraphics[width=0.5\linewidth]{figures/results/canvas_d2kk_DD_run2.pdf}
+\caption{Results of the simultaneous fit for the \kpi and \kk modes, showing DD candidates in \runtwo data. In each pair the top plot is for \Bp decays and the bottom plot is for \Bm decays.}
+\label{resultskpi}
+\end{figure}
 
-\begin{sidewaysfigure}[h]
-\centering
-\subfloat[$K\pi\pi\pi$, LL]{\includegraphics[width=0.3\linewidth]{figures/results/canvas_d2kpipipi_LL_run1.pdf}}
-\hfill
-\subfloat[$\pi\pi\pi\pi$, LL]{\includegraphics[width=0.3\linewidth]{figures/results/canvas_d2pipipipi_LL_run1.pdf}}
-\hfill
-\subfloat[$\pi K\pi\pi$, LL]{\includegraphics[width=0.3\linewidth]{figures/results/canvas_d2pikpipi_LL_run1.pdf}}
-\hfill
-\subfloat[$K\pi\pi\pi$, DD]{\includegraphics[width=0.3\linewidth]{figures/results/canvas_d2kpipipi_DD_run1.pdf}}
-\hfill
-\subfloat[$\pi\pi\pi\pi$, DD]{\includegraphics[width=0.3\linewidth]{figures/results/canvas_d2pipipipi_DD_run1.pdf}}
-\hfill
-\subfloat[$\pi K\pi\pi$, DD]{\includegraphics[width=0.3\linewidth]{figures/results/canvas_d2pikpipi_DD_run1.pdf}}
-\caption{Results of the simultaneous fit for \runone data for four-body modes. In each pair the top plot is for \Bp decays and the bottom plot is for \Bm decays.}
-\label{datafit4bodyRun1}
-\end{sidewaysfigure}
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{figures/results/canvas_d2pipi_DD_run2.pdf}
+\includegraphics[width=0.5\linewidth]{figures/results/canvas_d2pik_DD_run2.pdf}
+\caption{Results of the simultaneous fit for the \pipi and \pik modes, showing DD candidates in \runtwo data. In each pair the top plot is for \Bp decays and the bottom plot is for \Bm decays.}
+\label{resultspipi}
+\end{figure}
 
-\begin{sidewaysfigure}[h]
-\centering
-\subfloat[$K\pi$, LL]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2kpi_LL_run2.pdf}}
-\hfill
-\subfloat[$KK$, LL]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2kk_LL_run2.pdf}}
-\hfill
-\subfloat[$\pi\pi$, LL]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2pipi_LL_run2.pdf}}
-\hfill
-\subfloat[$\pi K$, LL]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2pik_LL_run2.pdf}}
-\hfill
-\subfloat[$K\pi$, DD]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2kpi_DD_run2.pdf}}
-\hfill
-\subfloat[$KK$, DD]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2kk_DD_run2.pdf}}
-\hfill
-\subfloat[$\pi\pi$, DD]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2pipi_DD_run2.pdf}}
-\hfill
-\subfloat[$\pi K$, DD]{\includegraphics[width=0.25\linewidth]{figures/results/canvas_d2pik_DD_run2.pdf}}
-\caption{Results of the simultaneous fit for \runtwo data for two-body modes. In each pair the top plot is for \Bp decays and the bottom plot is for \Bm decays.}
-\label{datafit2bodyRun2}
-\end{sidewaysfigure}
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{figures/results/canvas_d2kpipipi_DD_run2.pdf}
+\includegraphics[width=0.5\linewidth]{figures/results/canvas_d2pipipipi_DD_run2.pdf}
+\caption{Results of the simultaneous fit for the \kpipipi and \pipipipi modes, showing DD candidates in \runtwo data. In each pair the top plot is for \Bp decays and the bottom plot is for \Bm decays.}
+\label{resultskpipipi}
+\end{figure}
 
-\begin{sidewaysfigure}[h]
+\begin{figure}
 \centering
-\subfloat[$K\pi\pi\pi$, LL]{\includegraphics[width=0.3\linewidth]{figures/results/canvas_d2kpipipi_LL_run2.pdf}}
-\hfill
-\subfloat[$\pi\pi\pi\pi$, LL]{\includegraphics[width=0.3\linewidth]{figures/results/canvas_d2pipipipi_LL_run2.pdf}}
-\hfill
-\subfloat[$\pi K\pi\pi$, LL]{\includegraphics[width=0.3\linewidth]{figures/results/canvas_d2pikpipi_LL_run2.pdf}}
-\hfill
-\subfloat[$K\pi\pi\pi$, DD]{\includegraphics[width=0.3\linewidth]{figures/results/canvas_d2kpipipi_DD_run2.pdf}}
-\hfill
-\subfloat[$\pi\pi\pi\pi$, DD]{\includegraphics[width=0.3\linewidth]{figures/results/canvas_d2pipipipi_DD_run2.pdf}}
-\hfill
-\subfloat[$\pi K\pi\pi$, DD]{\includegraphics[width=0.3\linewidth]{figures/results/canvas_d2pikpipi_DD_run2.pdf}}
-\caption{Results of the simultaneous fit for \runtwo data for four-body modes. In each pair the top plot is for \Bp decays and the bottom plot is for \Bm decays.}
-\label{datafit4bodyRun2}
-\end{sidewaysfigure}
+\includegraphics[width=0.5\linewidth]{figures/results/canvas_d2pikpipi_DD_run2.pdf}
+\caption{Results of the simultaneous fit for the \pikpipi mode, showing DD candidates in \runtwo data. The top plot is for \Bp decays and the bottom plot is for \Bm decays.}
+\label{resultspikpipi}
+\end{figure}
+
 
 \begin{table}[h]
 \centering
@@ -574,7 +529,7 @@ $\beta$ four-body LL & $-0.0003$ & $-0.0014$ & $0.0015$ \\
 \centering
 \begin{tabular}{c|c}
 \hline
-Decay mode & Total yield \\
+Decay mode & Total signal yield \\
 \hline
 \kpi & $2030 \pm 49$ \\
 \kk & $257 \pm 18$ \\
@@ -727,7 +682,7 @@ The partially reconstructed decays have a completely fixed shape and yield contr
 
 \subsubsection{Charmless}
 
-Section \ref{sec:backgrounds:charmless} shows that there is a possibility for residual charmless contribution to be present in \pipi mode. In order to estimate the systematic uncertainty associated with this possible charmless contribution, Method 2 is used, where the generated yield of charmless events in the \pipi mode is drawn from a Gaussian distribution that has mean and width corresponding to the expected number of charmless events calculated in Section \ref{sec:selection:charmless}. The number of events is O(1) in each of the bins for the \pipi mode. For each pseudoexperiment, the value taken from the Gaussian is rounded to a whole number and randomly distributed between \Bp and \Bm, as an additional contribution to the yield in the signal region. 
+Section \ref{sec:backgrounds:charmless} shows that there is a possibility for residual charmless contribution to be present in \pipi mode. In order to estimate the systematic uncertainty associated with this possible charmless contribution, Method 2 is used, where the yield of charmless events to be generated in the \pipi mode is drawn from a Gaussian distribution that has mean and width corresponding to the expected number of charmless events calculated in Section \ref{sec:selection:charmless}. The number of events is O(1) in each of the bins for the \pipi mode. For each pseudoexperiment, the value taken from the Gaussian distribution is rounded to a whole number and randomly distributed between \Bp and \Bm, as an additional contribution to the yield in the signal region. 
 
 \subsubsection{\boldmath \decay{\Lb}{\Lc(p\kaon\pi)\Kstarm} background}
 
