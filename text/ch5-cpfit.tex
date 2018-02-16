@@ -436,7 +436,13 @@ where $x_{fit}$ is the value of the parameter returned by the fit, $x_{gen}$ is 
 \section{Fit results}
 \label{sec:cpfit:results}
 
-The \CP fit, setup as described in Section \ref{sec:cpfit:setup}, is performed on data. The mass projection is each of the bins of the \CP fit, when performed on data, are shown in Figures \ref{datafit2bodyRun1}, \ref{datafit4bodyRun1}, \ref{datafit2bodyRun2} and \ref{datafit4bodyRun2}. Table \ref{cpfitresultsphysics} shows the \CP fit results of the \CP observables of interest and Table \ref{cpfitresultsshapes} shows the fit results for the favoured \kpi and \kpipipi signal yields and the shape parameters. All the combinatoric yields are left to vary in the \CP fit and these results are shown in Table \ref{cpfitresultscomb}. The fitted yields obtained for running the fit with \Bp and \Bm samples combined are given in Table \ref{fittedyields}. 
+The \CP fit, setup as described in Section \ref{sec:cpfit:setup}, is performed on data. The mass projection is each of the bins of the \CP fit, when performed on data, are shown in Figures \ref{datafit2bodyRun1}, \ref{datafit4bodyRun1}, \ref{datafit2bodyRun2} and \ref{datafit4bodyRun2}. Table \ref{cpfitresultsphysics} shows the \CP fit results of the \CP observables of interest. There is no significant asymmetry observed in the GLW and quasi-GLW modes, i.e. \Akk, \Apipi and \Apipipipi are all consistent with zero. However, for the two-body ADS mode, \Rptwo is significantly larger than \Rmtwo, showing asymmetry in this mode. The four-body ADS mode shows a similar behaviour, however the asymmetry is less significant. It can also be seen that \Akpi and \Akpipipi are consistent with zero, as expected. Additionally, \Akk and \Apipi are in agreement with each other and \Rkk and \Rpipi are in agreement with each other. 
+
+Table \ref{cpfitresultsshapes} shows the fit results for the favoured \kpi and \kpipipi signal yields and the shape parameters. It can be seen that both the mean and the width of the signal peak in the two-body and four-body modes are consistent with each other. The yields are significantly higher in \runtwo compared to \runone even though the intergrated luminosity in \runtwo is lower. In fact, the yield per unit of integrated luminosity is about 3 times higher in \runone compared to \runtwo, which is driven by the increase in centre-of-mass energy in \runtwo.
+
+All the combinatoric yields are left to vary in the \CP fit for each of the different bins. It is found that all of these combinatoric yield are consistent between \Bm and \Bp, as expected. However, there is a significantly higher combinatoric yield in the \kpi mode than the \pik mode. This difference is also observed between the \kpipipi and \pikpipi modes, but to a lesser extent. This observed difference in background level is consistent with a significant fraction of the combinatorial background is expected to come from \decay{\Bm}{\D\pim X} decays combined with a real but unrelated \KS meson. 
+
+The fitted signal yields obtained for running the fit with \Bp and \Bm samples combined are given in Table \ref{fittedyields}. When comparing the ratio of the two-body signal yields with the favoured mode, with the ratio of the branching fractions of the different \Dz modes, it can be observed that the results are consistent with the branching fractions. Both the \kk mode and \pik mode showing a slight excess compared to the expected yield. For the four-body modes, the ratio of \kpipipi to \pipipipi signal yilds is consistent with their relative branching fractions.
 
 \begin{sidewaysfigure}[h]
 \centering
@@ -543,107 +549,40 @@ $R^-_{K\pi\pi\pi}$ & $0.006$ & $-0.005$ & $0.006$ \\
 \begin{tabular}{cccc}
 Parameter & Fitted value & Negative error & Positive error \\
 \hline
-N\_d2kpi\_DD\_run1 & $503$ & $-22$ & $23$ \\
-N\_d2kpi\_DD\_run2 & $911$ & $-32$ & $32$ \\
-N\_d2kpi\_LL\_run1 & $228$ & $-14$ & $15$ \\
-N\_d2kpi\_LL\_run2 & $388$ & $-19$ & $19$ \\
-N\_d2kpipipi\_DD\_run1 & $233$ & $-15$ & $16$ \\
-N\_d2kpipipi\_DD\_run2 & $560$ & $-26$ & $26$ \\
-N\_d2kpipipi\_LL\_run1 & $101$ & $-9$ & $10$ \\
-N\_d2kpipipi\_LL\_run2 & $251$ & $-16$ & $16$ \\
-bu\_mean\_kpi & $5279.4$ & $-0.3$ & $0.3$ \\
-bu\_mean\_kpipipi & $5279.5$ & $-0.5$ & $0.5$ \\
-bu\_width\_kpi & $12.1$ & $-0.3$ & $0.3$ \\
-bu\_width\_kpipipi & $12.6$ & $-0.4$ & $0.4$ \\
-exp\_kpi\_DD\_combs\_slope & $-0.0008$ & $-0.0006$ & $0.0006$ \\
-exp\_kpi\_LL\_combs\_slope & $0.0002$ & $-0.0011$ & $0.0012$ \\
-exp\_kpipipi\_DD\_combs\_slope & $-0.0014$ & $-0.0006$ & $0.0006$ \\
-exp\_kpipipi\_LL\_combs\_slope & $-0.0003$ & $-0.0014$ & $0.0015$ \\
+$N_{sig}^{K\pi}$ DD \runone & $503$ & $-22$ & $23$ \\
+$N_{sig}^{K\pi}$ DD \runtwo & $911$ & $-32$ & $32$ \\
+$N_{sig}^{K\pi}$ LL \runone & $228$ & $-14$ & $15$ \\
+$N_{sig}^{K\pi}$ LL \runtwo & $388$ & $-19$ & $19$ \\
+$N_{sig}^{K\pi\pi\pi}$ DD \runone  & $233$ & $-15$ & $16$ \\
+$N_{sig}^{K\pi\pi\pi}$ DD \runtwo & $560$ & $-26$ & $26$ \\
+$N_{sig}^{K\pi\pi\pi}$ LL \runone & $101$ & $-9$ & $10$ \\
+$N_{sig}^{K\pi\pi\pi}$ LL \runtwo & $251$ & $-16$ & $16$ \\
+$\mu$ two-body & $5279.4$ & $-0.3$ & $0.3$ \\
+$\mu$ four-body & $5279.5$ & $-0.5$ & $0.5$ \\
+$\sigma$ two-body & $12.1$ & $-0.3$ & $0.3$ \\
+$\sigma$ four-body & $12.6$ & $-0.4$ & $0.4$ \\
+$\beta$ two-body DD & $-0.0008$ & $-0.0006$ & $0.0006$ \\
+$\beta$ two-body LL & $0.0002$ & $-0.0011$ & $0.0012$ \\
+$\beta$ four-body DD & $-0.0014$ & $-0.0006$ & $0.0006$ \\
+$\beta$ four-body LL & $-0.0003$ & $-0.0014$ & $0.0015$ \\
 \end{tabular}}
-\caption{Fitted values of the signal yields and shape parameters from the \CP fit.}
+\caption{Fitted values of the signal yields and shape parameters from the \CP fit, where $\mu$ is the mean of the signal peak, $\sigma$ is the width of the signal peak and $\beta$ is the slope of the combinatorial background.}
 \label{cpfitresultsshapes}
-\end{table}
-
-\begin{table}[h]
-\centering
-{\tiny
-\begin{tabular}{cccc}
-Parameter & Fitted value & Negative error & Positive error \\
-\hline
-n\_comb\_d2kk\_minus\_DD\_run1 & $9.2644$ & $-3.2413$ & $4.1306$ \\
-n\_comb\_d2kk\_minus\_DD\_run2 & $29.5912$ & $-5.8248$ & $6.6312$ \\
-n\_comb\_d2kk\_minus\_LL\_run1 & $0.0000$ & $0.0000$ & $0.8409$ \\
-n\_comb\_d2kk\_minus\_LL\_run2 & $10.2769$ & $-3.2586$ & $4.0635$ \\
-n\_comb\_d2kk\_plus\_DD\_run1 & $11.0377$ & $-3.2611$ & $4.0359$ \\
-n\_comb\_d2kk\_plus\_DD\_run2 & $28.5043$ & $-5.6729$ & $6.4917$ \\
-n\_comb\_d2kk\_plus\_LL\_run1 & $6.9477$ & $-2.7573$ & $3.6031$ \\
-n\_comb\_d2kk\_plus\_LL\_run2 & $4.1843$ & $-1.9720$ & $2.8582$ \\
-n\_comb\_d2kpi\_minus\_DD\_run1 & $54.6504$ & $-8.3230$ & $9.2240$ \\
-n\_comb\_d2kpi\_minus\_DD\_run2 & $155.8847$ & $-14.5137$ & $15.4315$ \\
-n\_comb\_d2kpi\_minus\_LL\_run1 & $7.9888$ & $-2.8410$ & $3.7060$ \\
-n\_comb\_d2kpi\_minus\_LL\_run2 & $15.9239$ & $-4.2968$ & $5.2111$ \\
-n\_comb\_d2kpi\_plus\_DD\_run1 & $64.6413$ & $-9.1168$ & $10.0035$ \\
-n\_comb\_d2kpi\_plus\_DD\_run2 & $154.8678$ & $-14.5472$ & $15.4779$ \\
-n\_comb\_d2kpi\_plus\_LL\_run1 & $13.0412$ & $-3.8827$ & $4.7734$ \\
-n\_comb\_d2kpi\_plus\_LL\_run2 & $19.8632$ & $-4.8676$ & $5.7870$ \\
-n\_comb\_d2kpipipi\_minus\_DD\_run1 & $43.3016$ & $-7.2924$ & $8.1779$ \\
-n\_comb\_d2kpipipi\_minus\_DD\_run2 & $135.8805$ & $-13.5205$ & $14.4923$ \\
-n\_comb\_d2kpipipi\_minus\_LL\_run1 & $1.2423$ & $-0.8669$ & $1.6936$ \\
-n\_comb\_d2kpipipi\_minus\_LL\_run2 & $9.5762$ & $-3.1916$ & $4.1240$ \\
-n\_comb\_d2kpipipi\_plus\_DD\_run1 & $26.9317$ & $-5.7903$ & $6.6844$ \\
-n\_comb\_d2kpipipi\_plus\_DD\_run2 & $99.1967$ & $-11.8452$ & $12.8635$ \\
-n\_comb\_d2kpipipi\_plus\_LL\_run1 & $3.2506$ & $-1.7378$ & $2.6474$ \\
-n\_comb\_d2kpipipi\_plus\_LL\_run2 & $13.2367$ & $-3.9555$ & $4.9514$ \\
-n\_comb\_d2pik\_minus\_DD\_run1 & $4.9988$ & $-1.9166$ & $2.5806$ \\
-n\_comb\_d2pik\_minus\_DD\_run2 & $22.0339$ & $-4.6793$ & $5.3881$ \\
-n\_comb\_d2pik\_minus\_LL\_run1 & $5.7087$ & $-2.1669$ & $2.8313$ \\
-n\_comb\_d2pik\_minus\_LL\_run2 & $8.7460$ & $-2.6869$ & $3.3592$ \\
-n\_comb\_d2pik\_plus\_DD\_run1 & $3.5811$ & $-1.7805$ & $2.5381$ \\
-n\_comb\_d2pik\_plus\_DD\_run2 & $18.5923$ & $-4.4531$ & $5.1798$ \\
-n\_comb\_d2pik\_plus\_LL\_run1 & $6.2716$ & $-2.3435$ & $3.0760$ \\
-n\_comb\_d2pik\_plus\_LL\_run2 & $10.1699$ & $-3.0098$ & $3.7295$ \\
-n\_comb\_d2pikpipi\_minus\_DD\_run1 & $2.3189$ & $-1.2711$ & $1.9952$ \\
-n\_comb\_d2pikpipi\_minus\_DD\_run2 & $17.6630$ & $-4.0703$ & $4.7570$ \\
-n\_comb\_d2pikpipi\_minus\_LL\_run1 & $2.8918$ & $-1.4152$ & $2.0824$ \\
-n\_comb\_d2pikpipi\_minus\_LL\_run2 & $8.0364$ & $-2.7499$ & $3.4109$ \\
-n\_comb\_d2pikpipi\_plus\_DD\_run1 & $8.5916$ & $-2.7559$ & $3.4576$ \\
-n\_comb\_d2pikpipi\_plus\_DD\_run2 & $11.3239$ & $-3.2068$ & $3.9408$ \\
-n\_comb\_d2pikpipi\_plus\_LL\_run1 & $0.5468$ & $0.0000$ & $1.5795$ \\
-n\_comb\_d2pikpipi\_plus\_LL\_run2 & $8.1112$ & $-2.7664$ & $3.5289$ \\
-n\_comb\_d2pipi\_minus\_DD\_run1 & $2.5555$ & $-1.3991$ & $2.1909$ \\
-n\_comb\_d2pipi\_minus\_DD\_run2 & $22.3622$ & $-5.1858$ & $6.0198$ \\
-n\_comb\_d2pipi\_minus\_LL\_run1 & $2.8497$ & $-1.5111$ & $2.2778$ \\
-n\_comb\_d2pipi\_minus\_LL\_run2 & $4.5092$ & $-1.8921$ & $2.6286$ \\
-n\_comb\_d2pipi\_plus\_DD\_run1 & $6.3000$ & $-2.4807$ & $3.2589$ \\
-n\_comb\_d2pipi\_plus\_DD\_run2 & $20.7800$ & $-4.7887$ & $5.5926$ \\
-n\_comb\_d2pipi\_plus\_LL\_run1 & $1.2180$ & $-0.8483$ & $1.6131$ \\
-n\_comb\_d2pipi\_plus\_LL\_run2 & $4.4715$ & $-1.9438$ & $2.6960$ \\
-n\_comb\_d2pipipipi\_minus\_DD\_run1 & $6.4229$ & $-2.4483$ & $3.2700$ \\
-n\_comb\_d2pipipipi\_minus\_DD\_run2 & $39.6563$ & $-6.6510$ & $7.4336$ \\
-n\_comb\_d2pipipipi\_minus\_LL\_run1 & $4.4140$ & $-1.9854$ & $2.7711$ \\
-n\_comb\_d2pipipipi\_minus\_LL\_run2 & $14.1558$ & $-3.8758$ & $4.6747$ \\
-n\_comb\_d2pipipipi\_plus\_DD\_run1 & $8.7170$ & $-3.0106$ & $3.8208$ \\
-n\_comb\_d2pipipipi\_plus\_DD\_run2 & $38.6850$ & $-6.5763$ & $7.3661$ \\
-n\_comb\_d2pipipipi\_plus\_LL\_run1 & $3.0998$ & $-1.4649$ & $2.1490$ \\
-n\_comb\_d2pipipipi\_plus\_LL\_run2 & $9.5359$ & $-3.1792$ & $4.0340$ \\
-\end{tabular}}
-\caption{Fitted values of all the combinatoric yields from the \CP fit.}
-\label{cpfitresultscomb}
 \end{table}
 
 \begin{table}
 \centering
 \begin{tabular}{c|c}
 \hline
-\D mode & Total yield \\
+Decay mode & Total yield \\
 \hline
-$K\pi$ & $2030 \pm 49$ \\
-$KK$ & $257 \pm 18$ \\
-$\pi\pi$ & $80 \pm 11$ \\
-$\pi K$ & $20 \pm 7$ \\
-$K\pi\pi\pi$ & $1144 \pm 37$ \\
-$\pi\pi\pi\pi$ & $115 \pm 13$ \\
-$\pi K\pi\pi$ & $13 \pm 7$ \\
+\kpi & $2030 \pm 49$ \\
+\kk & $257 \pm 18$ \\
+\pipi & $80 \pm 11$ \\
+\pik & $20 \pm 7$ \\
+\kpipipi & $1144 \pm 37$ \\
+\pipipipi & $115 \pm 13$ \\
+\pikpipi & $13 \pm 7$ \\
 \hline
 \end{tabular}
 \caption{Total fitted yields in each of the \Dz decay modes extracted from the simultaneous fit performed with \Bm and \Bp charges combined.}
@@ -740,7 +679,7 @@ Vary parameters & $2.3 \times 10^{-4}$ & $1.1 \times 10^{-3}$ & $1.4 \times 10^{
 Total & $1.1 \times 10^{-3}$ & $3.1 \times 10^{-3}$ & $1.1 \times 10^{-2}$ & $3.0 \times 10^{-2}$ & $2.7 \times 10^{-2}$ & $1.1 \times 10^{-3}$ & $1.3 \times 10^{-3}$ \\
 \hline
 \end{tabular}}
-{\footnotesize
+\resizebox{0.78\textwidth}{!}{
 \begin{tabular}{cccccc}
 \hline
 & $A_{K\pi\pi\pi}$ & $A_{\pi\pi\pi\pi}$ & $R_{\pi\pi\pi\pi}$ & $R^+_{K3\pi}$ & $R^-_{K3\pi}$ \\
@@ -781,14 +720,14 @@ The systematic is assigned using Method 2, with the combinatoric slope parameter
 The partially reconstructed decays have a completely fixed shape and yield contributing to the \CP fit. The shape parameters are fixed from fits to simulated samples, yield ratios are fixed from branching ratios and simulation efficiencies and total yield is fixed from the fit to \kpi invariant mass, as described in Section \ref{sec:massfit:partreco}. The estimated yield is divided equally between \Bp and \Bm bins. Method 2 is used to assign a systematic uncertainty, making three different modifications simultaneously to the partially reconstructed region. These modifications are:
 
 \begin{itemize}
-\item The yield is increased by 20\%. The uncertainty in the yield from the fit to \kpi invariant mass is about 5\%, but this is considered to be an underestimate, therefore a conservative systematic of 20\% is used,
+\item The yield is increased by 20\%. The uncertainty in the yield from the fit to \kpi invariant mass is about 5\%, but this is considered to be an underestimate as other partially reconstructed low mass backgrounds, such as \decay{\Bm}{\D\Kstarm\piz}, may contribute a very small amount at low reconstructed \Bm mass, outside of the \CP fit range. This could have a slight effect on the estimate for the yield of partially reconstructed background in the \CP fit, therefore a conservative systematic of 20\% is used,
 \item All partially reconstructed shapes are smeared by the difference in signal width between simulated samples and data. The width for all partially reconstructed shapes is increased by 4\% of LL bins and 5\% for DD bins,
 \item A 10\% asymmetry is introduced for the partially reconstructed shapes.
 \end{itemize}
 
 \subsubsection{Charmless}
 
-Section \ref{sec:backgrounds:charmless} shows that there is a possibility for residual charmless contribution to be present in \pipi mode. In order to estimate the systematic uncertainty associated with this possible charmless contribution, Method 2 is used by generating charmless events in the \pipi mode according to a Gaussian whose mean is the expected number of charmless events and the width is the corresponding uncertainty. This expected value is rounded to a whole number and randomly distributed between \Bp and \Bm as an additional contribution to the yield in the signal region. 
+Section \ref{sec:backgrounds:charmless} shows that there is a possibility for residual charmless contribution to be present in \pipi mode. In order to estimate the systematic uncertainty associated with this possible charmless contribution, Method 2 is used, where the generated yield of charmless events in the \pipi mode is drawn from a Gaussian distribution that has mean and width corresponding to the expected number of charmless events calculated in Section \ref{sec:selection:charmless}. The number of events is O(1) in each of the bins for the \pipi mode. For each pseudoexperiment, the value taken from the Gaussian is rounded to a whole number and randomly distributed between \Bp and \Bm, as an additional contribution to the yield in the signal region. 
 
 \subsubsection{\boldmath \decay{\Lb}{\Lc(p\kaon\pi)\Kstarm} background}
 
@@ -855,7 +794,7 @@ where the first uncertainty is statistical and the second is systematic. The cor
 R_{\CP+} &= &\ &1.18&\ &\pm&\ &0.08&\ &\pm&\ &0.01& \\
 A_{\CP+} &= &\ &0.08&\ &\pm&\ &0.06&\ &\pm&\ &0.01&
 \end{alignat*}
-where the first uncertainty is statistical and the second is systematic. In addition, $R^+$ and $R^-$ for the \Kp\pim and \Kp\pim\pip\pim decay modes can be transformed into the more commonly used $R_{ADS} = \left(R^- + R^+\right)/2\ $and \mbox{$A_{ADS} = \left(R^- - R^+\right)/\left(R^- + R^+\right)$}. These results, taking correlations into account, are
+where the first uncertainty is statistical and the second is systematic. In addition, $R^+$ and $R^-$ for the \Kp\pim and \Kp\pim\pip\pim decay modes can be transformed into $R_{ADS} = \left(R^- + R^+\right)/2\ $and \mbox{$A_{ADS} = \left(R^- - R^+\right)/\left(R^- + R^+\right)$} in order to compare with the results from \babar~\cite{BaBarDKstar}. These results, taking correlations into account, are
 \begin{alignat*}{13}
 R_{ADS}^{K\pi} &= &\ &0.011&\ &\pm&\ &0.004&\ &\pm&\ &0.001& \\
 A_{ADS}^{K\pi} &= &\ -&0.81&\ &\pm&\ &0.17&\ &\pm&\ &0.04& \\
