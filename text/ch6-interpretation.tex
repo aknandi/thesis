@@ -10,7 +10,7 @@
 
 \minitoc
 
-The \CP observables from \btodkst decays are used to determine the physics parameters, \rb, \deltab and \Pgamma, via Eqs.~\ref{exp_Acp} - \ref{exp_Rpm4body}. In this determination, other parameters that appear in Eqs.~\ref{exp_Acp} - \ref{exp_Rpm4body} are taken from previous experiments to be used as external inputs. The coherence factor $\kappa$, discussed in Section \ref{sec:theory:gamma}, is estimated, as described in Section \ref{sec:interpretation:coherence}, and used as an extra constraint when determining \rb, \deltab and \Pgamma. The variations in acceptance across the four-body phase space and the effect of this on the interpretation is considered in Section \ref{sec:interpretation:inputs}. Section \ref{sec:interpretation:gammadini} discusses the determination of the physics parameters: \rb, \deltab and \Pgamma from measurements of \btodkst decays. Finally, Section \ref{sec:interpretation:futuresensitivity} discusses the expected sensitivity of the \btodkst channel to \rb, \deltab and \Pgamma, with an increased dataset after further running periods of the LHC.
+The \CP observables from \btodkst decays are used to determine the physics parameters, \rb, \deltab and \Pgamma, via Eqs.~\ref{exp_Acp} - \ref{exp_Rpm4body}. In this determination, other parameters that appear in Eqs.~\ref{exp_Acp} - \ref{exp_Rpm4body} are taken from previous measurements, given in Table \ref{inputparameters}, to be used as external inputs. The coherence factor $\kappa$, discussed in Section \ref{sec:theory:gamma}, is estimated, as described in Section \ref{sec:interpretation:coherence}, and used as an extra constraint when determining \rb, \deltab and \Pgamma. The variations in acceptance across the four-body phase space and the effect of this on the interpretation is considered in Section \ref{sec:interpretation:inputs}. Section \ref{sec:interpretation:gammadini} discusses the determination of the physics parameters: \rb, \deltab and \Pgamma from measurements of \btodkst decays. Finally, Section \ref{sec:interpretation:futuresensitivity} discusses the expected sensitivity of the \btodkst channel to \rb, \deltab and \Pgamma, with an increased dataset after further running periods of the LHC.
 
 \section{Coherence factor, $\kappa$}
 \label{sec:interpretation:coherence}
@@ -29,7 +29,7 @@ An amplitude model of \decay{\Bm}{\D X^-} decays is developed, where $X^-$ repre
 \item $\decay{\Bp}{\Dz K^*_0(1430)^+}$ and $\decay{\Bp}{\Dzb K^*_0(1430)^+}$
 \end{itemize}
 
-A non resonant LASS component is used in the model, which is part of the $K^*_0(1430)^+$. Other resonances e.g. $K^*(1680)^+$ and $D_2^*(2460)^-$, are considered to be negligible in the region being considered and so are not included in the decay model. The parameters of the resonances are listed in Table \ref{resonances}.
+A non-resonant component is used in the model as part of the $K^*_0(1430)^+$ using a parameterisation developed by the LASS experiment~\cite{LASS}. Other resonances e.g. $K^*(1680)^+$ and $D_2^*(2460)^-$, are considered to be negligible in the region being considered and so are not included in the decay model. The parameters of the resonances are listed in Table \ref{resonances}.
 
 \begin{table}[h]
 \centering
@@ -58,7 +58,7 @@ A_{\cquark\bquark} =\ & a_{\cquark\bquark}^{K^*(892)^+}e^{-i\delta_{\cquark\bqua
 & a_{\cquark\bquark}^{K^*_0(1430)^+}e^{-i\delta_{\cquark\bquark}^{K^*_0(1430)^+}}LASS\_BW(p;M_{K^*_0(1430)^+},\Gamma_{K^*_0(1430)^+},0)\ + \\
 & a_{\cquark\bquark}^{NR}e^{-i\delta_{\cquark\bquark}^{NR}}LASS\_NR
 \end{align*}
-where, $RelBW$, $LASS\_BW$ and $LASS\_NR$ refer to the relativistic Breit-Wigner, LASS Breit-Wigner and LASS non-resonance shapes.% as implemented in Laura++~\cite{Laura}. 
+where, $RelBW$, $LASS\_BW$ and $LASS\_NR$ refer to the relativistic Breit-Wigner, LASS Breit-Wigner and LASS non-resonance shapes~\cite{LASS}. The arguments of given resonance $R(p;M,\Gamma,J)$ correspond to the position in \decay{\Bm}{\D\KS\pim} phasespace ($p$), and the mass ($M$), width ($\Gamma$) and spin ($J$) of the resonance $R$.% as implemented in Laura++~\cite{Laura}. 
 
 The relative square of the magnitude of the various components is equal to the relative branching fractions in the limit of no interference. This scenario of no interference is assumed. The only available branching fraction measurement is,
 \begin{equation*}
@@ -101,7 +101,7 @@ Figure \ref{dalitzplot} shows an example of the amplitude model described. The \
 \subsection{Estimation of the coherence factor, $\kappa$}
 \label{sec:interpretation:kappa}
 
-Samples are generated 1000 times, based on the amplitude model described in Section \ref{sec:interpretation:model}. For each data sample the amplitudes and phases of the different resonances are varied within limits; the limits for the amplitudes are given in Section \ref{sec:interpretation:model} and all phases are generated randomly according to a flat distribution between $-\pi$ and $\pi$. The masses and widths of the resonances are kept constant at their central values, given in Table \ref{resonances}. 
+One thousand samples are generated based on the amplitude model described in Section \ref{sec:interpretation:model}. For each sample the amplitudes and phases of the different resonances are varied within limits; the limits for the amplitudes are given in Section \ref{sec:interpretation:model} and all phases are generated randomly according to a flat distribution between $-\pi$ and $\pi$. The masses and widths of the resonances are kept constant at their central values, given in Table \ref{resonances}. 
 
 For each sample, $\kappa$ is computed, as the magnitude of the expression in Equation \ref{kappadefinition}, resulting in a distribution of $\kappa$ values estimated by the model, shown in Figure \ref{kappadistribution}. The mean and standard deviation of the resulting distribution provides an estimate of the central value and uncertainty of $\kappa$,  $0.95 \pm 0.04$. However, it is considered necessary to enhance the uncertainty of this estimate in order to account for the skewness of the distribution, therefore a final value of $\kappa = 0.95 \pm 0.06$ is used in this thesis to extract the physics parameters of interest.
 
@@ -143,7 +143,26 @@ Further studies are performed to assess whether the parameters $R_{K3\pi}$ and $
 \section{Results in terms of $r_B$, $\delta_B$ and \Pgamma}
 \label{sec:interpretation:gammadini}
 
-The \CP observables, measured in the \CP fit and listed in Section \ref{sec:cpfit:summary}, can be used to gain information on the physics parameters of interest: $r_B$, $\delta_B$ and \Pgamma. These observables can be related to the physics parameters via Equations ~\ref{exp_Acp} - ~\ref{exp_Rpm4body}. The coherence factor is estimated, as described in the Section \ref{sec:interpretation:coherence}, and used as an input in the extraction of information on $r_B$, $\delta_B$ and \Pgamma. The parameters $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $R_{K3\pi}$ and $F_{4\pi}$ are required as external inputs and are taken from Ref.~\cite{HFAG,charmk3pi,LHCb-PAPER-2015-057,charm4pi}. The \CP observables and other parameters are combined, with the parameters $\kappa$, $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $R_{K3\pi}$ and $F_{4\pi}$ constrained to their previously determined values. A global $\chi^2$ minimisation is performed where
+The \CP observables, measured in the \CP fit and listed in Section \ref{sec:cpfit:summary}, can be used to gain information on the physics parameters of interest: $r_B$, $\delta_B$ and \Pgamma. These observables can be related to the physics parameters via Equations ~\ref{exp_Acp} - ~\ref{exp_Rpm4body}. The coherence factor is estimated, as described in the Section \ref{sec:interpretation:coherence}, and used as an input in the extraction of information on $r_B$, $\delta_B$ and \Pgamma. The parameters $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $R_{K3\pi}$ and $F_{4\pi}$ are required as external inputs and are taken from Ref.~\cite{HFAG,charmk3pi,LHCb-PAPER-2015-057,charm4pi}. The \CP observables and other parameters are combined, with the parameters $\kappa$, $r_D^{K\pi}$, $\delta_D^{K\pi}$, $r_D^{K3\pi}$, $\delta_D^{K3\pi}$, $R_{K3\pi}$ and $F_{4\pi}$ constrained to the values given in Table \ref{inputparameters}. 
+
+\begin{table}
+\centering
+\begin{tabular}{cc}
+Fit parameter & Value \\
+\hline
+$\kappa$ & $0.96 \pm 0.06$ \\
+$r_D^{K\pi}$ & $0.0591 \pm 0.0003$ \\
+$\delta_D^{K\pi}$ & $191.8 \pm 12.1$ \\
+$r_D^{K3\pi}$ & $0.0549 \pm 0.0006$ \\
+$\delta_D^{K3\pi}$ & $128 \pm 28$ \\
+$R_{K3\pi}$ & $0.43 \pm 0.17$ \\
+$F_{CP}$ & $0.737 \pm 0.028$
+\end{tabular}
+\caption{Values of the external inputs used as constraints.}
+\label{inputparameters}
+\end{table}
+
+Constainting these parameters, as opposed to using them as fixed inputs, allows the possibility of the \CP observables providing additional information on the values of these parameters. A global $\chi^2$ minimisation is performed, taking correlations into account, where
 \begin{equation}
 \chi^2 = \sum_i \chi^2_i = (x(\theta) - x_0)^TV_0^{-1}(x(\theta)-x_0) \text{ . }
 \end{equation}
@@ -151,14 +170,15 @@ In this expression, $x(\theta)$ is the set of observables calculated from the fu
 
 Using the measured values of the \CP observables, their uncertainties and the covariance matrices, a global $\chi^2$ minimisation is performed, resulting in a minimum $\chi^2$ of 3.0 with 9 degrees of freedom. A scan of physics parameters is performed for a range of values and the difference in $\chi^2$ between the parameter scan values and the global minimum, $\Delta\chi^2$, is evaluated. The confidence level for any pair of parameters is calculated assuming that these are normally distributed, which enables the $\Delta \chi^2 = 2.30,\ 6.18,\ 11.8$ contours to be drawn, corresponding to 68.3\%, 95.5\%, 99.7\% confidence levels, respectively. 
 
-The results of the parameters, from this $\chi^2$ minimisation procedure, are shown in Table \ref{gammadinifit}. Figures \ref{gammadiniplots2body} and \ref{gammadiniplotsallmodes} give 2D contour plots of $r_B$ versus \Pgamma and $\delta_B$ versus \Pgamma. Figure \ref{gammadiniplots2body} shows the contour plots using the \CP observables from the two-body modes only and Figure \ref{gammadiniplotsallmodes} show the contour plots using the \CP observables from both the two- and four-body decays. The addition of the four-body modes improves the constraints on the physics parameters and provides additional distinction between the two minima. The data are consistent with the value of $\gamma$ indicated by previous measurements~\cite{LHCb-PAPER-2016-032, CKMFitter}, $\sim 70^\circ$. The values of $r_B$, $\delta_B$ and \Pgamma are determined at the point where the global $\chi^2$ of the fit is minimised. The values of these physics parameters are calculated to be:
+Figures \ref{gammadiniplots2body} and \ref{gammadiniplotsallmodes} give 2D contour plots of $r_B$ versus \Pgamma and $\delta_B$ versus \Pgamma. Figure \ref{gammadiniplots2body} shows the contour plots using the \CP observables from the two-body modes only and Figure \ref{gammadiniplotsallmodes} show the contour plots using the \CP observables from both the two- and four-body decays. The addition of the four-body modes improves the constraints on the physics parameters and provides additional distinction between the two minima. The results of the values of the external inputs, from this $\chi^2$ minimisation procedure, remain effectively unchanged, hence there is little sensitivity to these parameters with the exisiting data.
+
+The data are consistent with the value of $\gamma$ indicated by previous measurements~\cite{LHCb-PAPER-2016-032, CKMFitter}, $\sim 70^\circ$. The values of $r_B$, $\delta_B$ and \Pgamma are determined at the point where the global $\chi^2$ of the fit is minimised. The values of these physics parameters are calculated to be:
 \begin{align*}
 r_B &= 0.113^{+0.015}_{-0.021} \\
 \delta_B &= \left(43.3^{+19.0}_{-19.0}\right)^{\circ} \\
 \Pgamma &= \left(40.0^{+18.0}_{-16.0}\right)^{\circ} 
 \end{align*}
-
-The confidence level distributions for $r_B$, $\delta_B$ and \Pgamma are not Gaussian beyond 1$\sigma$, and $\delta_B$ and \Pgamma contain a second minimum, as can be seen from Figure \ref{gammadiniplotsallmodes}. Therefore, the results quoted cannot be extrapolated to consider 2$\sigma$ or 3$\sigma$ values. 
+The confidence level distributions for $r_B$, $\delta_B$ and \Pgamma are not Gaussian beyond 1$\sigma$, and $\delta_B$ and \Pgamma contain a second minimum, as can be seen from Figure \ref{gammadiniplotsallmodes}. Therefore, the 1$\sigma$ intervals quoted cannot be extrapolated to consider 2$\sigma$ or 3$\sigma$ values. 
 
 \begin{figure}[h]
 \centering
@@ -176,32 +196,34 @@ The confidence level distributions for $r_B$, $\delta_B$ and \Pgamma are not Gau
 \label{gammadiniplotsallmodes}
 \end{figure}
 
-\begin{table}
-\centering
-\begin{tabular}{cccc}
-Fit parameter & Value & Negative error & Positive error \\
-\hline
-\Pgamma & 41 & -16 & 19 \\
-$r_B$ & 0.113 & -0.019 & 0.016 \\
-$\delta_B$ & 43 & -20 & 19 \\
-$\kappa$ & 0.96 & -0.06 & 0.06 \\
-$r_D^{K\pi}$ & 0.0591 & -0.0003 & 0.0003 \\
-$\delta_D^{K\pi}$ & 193 & -11 & 11 \\
-$r_D^{K3\pi}$ & 0.0549 & -0.0006 & 0.0006 \\
-$\delta_D^{K3\pi}$ & 134 & -22 & 22 \\
-$R_{K3\pi}$ & 0.44 & -0.15 & 0.15 \\
-$F_{CP}$ & 0.74 & -0.03 & 0.03
-\end{tabular}
-\caption{Results of fit parameters.}
-\label{gammadinifit}
-\end{table}
+%\begin{table}
+%\centering
+%\begin{tabular}{cccc}
+%Fit parameter & Value & Negative error & Positive error \\
+%\hline
+%\Pgamma & 41 & -16 & 19 \\
+%$r_B$ & 0.113 & -0.019 & 0.016 \\
+%$\delta_B$ & 43 & -20 & 19 \\
+%$\kappa$ & 0.96 & -0.06 & 0.06 \\
+%$r_D^{K\pi}$ & 0.0591 & -0.0003 & 0.0003 \\
+%$\delta_D^{K\pi}$ & 193 & -11 & 11 \\
+%$r_D^{K3\pi}$ & 0.0549 & -0.0006 & 0.0006 \\
+%$\delta_D^{K3\pi}$ & 134 & -22 & 22 \\
+%$R_{K3\pi}$ & 0.44 & -0.15 & 0.15 \\
+%$F_{CP}$ & 0.74 & -0.03 & 0.03
+%\end{tabular}
+%\caption{Results of fit parameters.}
+%\label{gammadinifit}
+%\end{table}
 
 \section{Expected future sensitivity to $r_B$, $\delta_B$ and \Pgamma}
 \label{sec:interpretation:futuresensitivity}
 
-In this thesis, the \btodkst mode has shown an increase of three times the yield per unit integrated luminosity from \runone to \runtwo, mainly due to the increase in centre of mass energy of the $pp$ collisions from 7 and 8\tev to 13\tev. As previously stated, the data used in this analysis was collected in 2011 and 2012, forming the \runone \dataset, and 2015 and 2016, forming part of the \runtwo \dataset. The current running period of the LHC, namely \runtwo, is currently ongoing. 
+In this thesis, the \btodkst mode has shown an increase of three times the yield per unit integrated luminosity from \runone to \runtwo, mainly due to the increase in centre of mass energy of the $pp$ collisions from 7 and 8\tev to 13\tev. As previously stated, the data used in this analysis was collected in 2011 and 2012, forming the \runone \dataset, and 2015 and 2016, forming part of the \runtwo \dataset. The current running period of the LHC, namely \runtwo, is currently ongoing until the end of 2018. The next running period, Run 3, will take place between 2021 and 2023.
 
-The projected yields for the end of Run 2 and the end of Run 3 are estimated using the forecasts for the stored integrated luminosity during these data-taking periods. The projections of the integrated luminosities can be found in \tab~\ref{projectedyields}. In order to do make projections about the future sensitivity of the \btodkst mode, it is assumed that the yield per unit integrated luminosity remains the same for the rest of \runtwo and for Run 3, during which time the centre-of-mass energy is not expected to increase. There are many large uncertainties in these projections partially due to the speculative nature of the predicted integrated luminosity. Another limitation is due to that fact that the centre of mass energy may increase to 14\tev in Run 3, which is the design centre-of-mass-energy of the machine, resulting in an increase in the yield per unit integrated luminosity.  Also, between Run 2 and Run 3 many upgrades to the detector will be performed to improve detector performance. Improvements to the detector and reconstruction have not been taken into account for these projections.
+The projected yields for the end of Run 2 and the end of Run 3 are estimated using the forecasts for the stored integrated luminosity and expected improvements in detector performance during these data-taking periods. The projections of the integrated luminosities can be found in \tab~\ref{projectedyields}. In order to do make projections about the future sensitivity of the \btodkst mode, it is assumed that the yield per unit integrated luminosity remains the same for the rest of \runtwo, which is a reasonable assumption as there are not expected to be any significant changes to the running conditions. 
+
+However, between Run 2 and Run 3 the detector will undergo an upgrade to improve detector performance. Improvements to the detector, trigger and reconstruction will be made, including moving to a fully software-based trigger~\cite{CERN-LHCC-2014-016} and the rebuilding of many detector components. These improvements to the detector allow the experiment to run at an instantaneous luminosity of $2 \times 10^{33} cm^{-2}s^{-1}$, five times larger than the current conditions~\cite{CERN-LHCC-2014-016}. Therefore, Run 3 is expected to produce a minimum of 7\invfb per year for two years. However, the upgrade not only increases the integrated luminosity collected, but also increases the yield obtained per unit of intergrated luminosity. The upgrade to a fully software-based trigger improves the trigger efficiencies for the fully hadronic modes by about a factor of two compared to \runone. Additionally, the centre of mass energy is expected to increase to 14\tev. Due to the observed improvement in \runtwo due to the increased centre of mass energy and the expected improvements in Run 3 from the upgrade of the detector, yields of \B meson decay in Run 3 are expected to increase by a factor of $\sim$17.6 compared to \runone, assuming no improvements in the analysis procedure. The result of these assumptions are shown in the projected estimates in Table~\ref{projectedyields}.
 
 \begin{table}
 \resizebox{\textwidth}{!}{
@@ -212,10 +234,10 @@ Year & Integrated Luminosity & \kpi yield & Yield per \invfb \\
 \runone & 3\invfb & 725 & 242 \\
 \runtwo (up to 2016) & 1.8\invfb & 1390 & 771 \\
 \textbf{Run 2 (after 2016)} & \textbf{3.2\invfb} & \textbf{2466} & \textbf{771} \\
-\textbf{Run 3} & \textbf{14\invfb} & \textbf{10800} & \textbf{771} \\
+\textbf{Run 3} & \textbf{14\invfb} & \textbf{23240} & \textbf{1660} \\
 \hline
 \end{tabular}}
-\caption{Yields and projected yields for different data-taking periods of the LHC. The entries in bold are projected yields, whereas the other entries refer to data used in this thesis.}
+\caption{Yields and projected yields for different data-taking periods of the LHC. The entries in bold are projected yields, whereas the other entries refer to data used in this thesis. Projected results are justified in the text, with information taken from Ref.~\cite{CERN-LHCC-2014-016}.}
 \label{projectedyields}
 \end{table}
 
@@ -239,6 +261,10 @@ Using the assumptions made in \tab~\ref{projectedyields}, the projected future s
 \caption{Contour plots showing projected 2D scans of the physics parameters at the end of Run 3, assuming the central values remain the same. The dashed lines represent the $\Delta \chi^2 = 2.30,\ 6.18,\ 11.8$ contours, corresponding to 68.3\%, 95.5\%, 99.7\% confidence levels (CL), respectively. The colour scale represents 1 - CL.}
 \label{gammadiniplotsrun3}
 \end{figure}
+
+It can be seen that the sensitivity continues to improve with more data, because the uncertainties are dominated by statistical uncertainty. With an increase in data in the \decay{\Bm}{\D\Km} channel, the statisitical uncertainties will become of the same order as the sysytematic uncertainties. At this point increasing the sensitivity to \Pgamma will not continue to decrease with the size of the dataset. As the \btodkst channel will continue to be statisitcally dominated, it will continue to benefit from the increased dataset in Run 3 and beyond.
+
+At the end of Run 3 the uncertainty on \Pgamma has reduced to about $8^{\circ}$. 
 
 
 \clearpage
