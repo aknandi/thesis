@@ -503,6 +503,35 @@ This section describes the \Bm mass parameterisation developed for the two- and 
 
 The shape of each component of the model, constraints in the signal and background shapes, and partially reconstructed yield constraints, are discussed in the following sections. Data samples are considered separately for LL and DD \KS reconstruction types as well as \runone and \runtwo data-taking periods. When developing the mass parameterisation of the \kpi and \kpipipi modes, these samples are considered separately unless the distributions were found not to be significantly different. It is expected that shapes for the LL and DD \KS reconstruction categories will be different due to their different reconstructed \Bm mass resolutions.
 
+\subsection{Maximum and extended maximum likelihood}
+\label{sec:massfit:likelihood}
+
+In this section and Chapter \ref{ch:5-cpfit} models are constructed and the (extended) likelihood technique is used to find the best model parameters to describe the data~\cite{MLandEML,EML}. This (extended) likelihood technique is explained in this section.
+
+A model consists of a probability density function (PDF), $f(x;\theta)$, which is a function of a continuous random variable, $x$, and depends on various parameters, $\theta$, that control the shape of the distribution. The integral across an interval gives the probability that the value is within that interval, therefore the PDF is normalised to unity. An experiment performs $n$ independent observations of $x$, $\{x_1, x_2, ..., x_n\}$. The likelihood is the probability, for given values of the parameters, of observing a particular dataset,
+\begin{equation}
+L(\theta;x) = \prod_{i=1}^{n} f(x_i;\theta).
+\end{equation}
+
+In this chapter, the parameters are extracted for a given dataset by finding the best combination of the parameters that maximise the likelihood. The maximum likelihood technique can be extended to use the yield of the PDF as an extra freely varying parameter. In this case, the likelihood is multiplied by a Poisson probability (of mean $N$) for observing a sample size $n$,
+\begin{equation}
+L(\theta, N;x) = \frac{e^{-N}}{n!}N^n \prod_{i=1}^{n} f(x_i;\theta) = \frac{e^{-N}}{n!} \prod_{i=1}^{n} N f(x_i;\theta).
+\end{equation}
+
+where $N$ is the expected number of events; a parameter to be detemined. Maximising the extended likelihood, based on a given dataset, gives estimates for the shape parameters and yield of the PDF.
+
+In practice, it is easier to minimise the negative log likelihood, $-2\log(L(\theta, N;x))$. The uncertainties in the parameter estimates are given by the change in the parameter necessary to increase the $-2\log L$ by one, as illustrated in Figure \ref{fig:likelihood}. For a non-symmetric likelihood distribution, this can result in a different positive and negative uncertainty. 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{figures/fitComponents/likelihood.pdf}
+\caption{Distribution of $-2\log L$ as a function of the parameter $\theta$. The unceratinty is detemined by the variation in $-2\log L$ about the minimum.}
+\label{fig:likelihood}
+\end{figure}
+
+Figure \ref{fig:likelihood} illustrates $-2\log L$ as a function of a single parameter for illustrative purposes, however, it is usually a multi-dimentional minimisation being considered. Additionally, a model is often constructed comtaining multiple PDFs. Due to the complexity of the problem the minimisation is performed using numerical methods by MINUIT~\cite{minuit}, and employing algorithms MIGRAD and HESSE/MINOS.
+
+
 \subsection{Signal shape}
 \label{sec:massfit:signal}
 
