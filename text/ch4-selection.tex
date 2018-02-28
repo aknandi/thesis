@@ -506,7 +506,7 @@ The shape of each component of the model, constraints in the signal and backgrou
 \subsection{Maximum and extended maximum likelihood}
 \label{sec:massfit:likelihood}
 
-In this section and Chapter \ref{ch:5-cpfit} models are constructed and the (extended) likelihood technique is used to find the best model parameters to describe the data~\cite{MLandEML,EML}. This (extended) likelihood technique is explained in this section.
+In Chapters \ref{ch:4-selection} and \ref{ch:5-cpfit} models are constructed and a fit is performed to data  using the (extended) likelihood technique to find the best model parameters to describe the data~\cite{MLandEML,EML}. This (extended) likelihood technique is explained in this section.
 
 A model consists of a probability density function (PDF), $f(x;\theta)$, which is a function of a continuous random variable, $x$, and depends on various parameters, $\theta$, that control the shape of the distribution. The integral across an interval gives the probability that the value is within that interval, therefore the PDF is normalised to unity. An experiment performs $n$ independent observations of $x$, $\{x_1, x_2, ..., x_n\}$. The likelihood is the probability, for given values of the parameters, of observing a particular dataset,
 \begin{equation}
@@ -524,12 +524,12 @@ In practice, it is easier to minimise the negative log likelihood, $-2\log(L(\th
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/likelihood.pdf}
+\includegraphics[width=0.7\linewidth]{figures/fitComponents/likelihood.pdf}
 \caption{Distribution of $-2\log L$ as a function of the parameter $\theta$. The unceratinty is detemined by the variation in $-2\log L$ about the minimum.}
 \label{fig:likelihood}
 \end{figure}
 
-Figure \ref{fig:likelihood} illustrates $-2\log L$ as a function of a single parameter for illustrative purposes, however, it is usually a multi-dimentional minimisation being considered. Additionally, a model is often constructed comtaining multiple PDFs. Due to the complexity of the problem the minimisation is performed using numerical methods by MINUIT~\cite{minuit}, and employing algorithms MIGRAD and HESSE/MINOS.
+Figure \ref{fig:likelihood} illustrates $-2\log L$ as a function of a single parameter for illustrative purposes, however, it is usually a multi-dimentional minimisation being considered. Additionally, a model is often constructed comtaining multiple PDFs. Due to the complexity of the problem the minimisation is performed using numerical methods~\cite{minuit}.
 
 
 \subsection{Signal shape}
@@ -548,7 +548,10 @@ where
    \left ( \frac{n}{|\alpha|} \right ) ^n e^{-|\alpha|^2/2} \left ( \frac{n}{|\alpha|} - |\alpha| - \left ( \frac{m-\mu}{\sigma} \right ) \right ) ^{-n} ,    & \text{otherwise.}
 \end{cases}
 \end{equation*}
-where $\mu$ is the peak position, $\sigma$ is the width of the Gaussian, $n$ parameterises the power-law tail, which starts $\alpha\sigma$ away from the peak position. The parameters $f_{cb}$ and $(1-f_{cb})$ are the fraction of the yield given to each CB and $f_{\sigma}$ is the ratio of the widths between the two CBs.
+where $\mu$ is the peak position, $\sigma$ is the width of the Gaussian, $n$ parameterises the power-law tail, which starts $\alpha\sigma$ away from the peak position. The parameters $f_{cb}$ and $(1-f_{cb})$ are the fraction of the yield given to each CB and $f_{\sigma}$ is the ratio of the widths between the two CBs. The signal PDF, $P_{sig}(m)$, must be normalised to unity with normalisation constant, $N$, such that,
+\begin{equation}
+P_{sig}(m) = N . DCB(m| \mu,\sigma,\alpha,n,f_{\sigma}) \text{	where, } \int_{0}^{\infty} P_{sig}(m)\ dm = 1
+\end{equation}
 
 The \Bm mass distributions from simulated signal events were found to be consistent between \runone and \runtwo data samples, but slightly different for \kpi and \kpipipi modes. Therefore the signal shape for different data-taking periods is the same, but different between \kpi and \kpipipi modes. 
 
@@ -591,7 +594,7 @@ $f_{cb}$ & $0.82 \pm 0.03$ & $0.84 \pm 0.02$ & $0.80 \pm 0.03$ & $0.81 \pm 0.04	
 \subsection{Combinatorial background}
 \label{sec:massfit:combinatorial}
 
-The combinatorial background is formed of random tracks that do not correspond to the signal decay, being combined in the reconstruction. Examples of this background include, random kaon and pion tracks in the detector incorrectly reconstructed to form a \Dz meson, real reconstructed \Dz mesons combined with a random \KS meson, or random pion tracks combined to make a incorrectly reconstructed \KS meson. The combinatorial background is modelled using an exponential function, given by $e^{\beta m}$, with a slope parameter, $\beta$, that is allowed to vary. 
+The combinatorial background is formed of random tracks that do not correspond to the signal decay, being combined in the reconstruction. Examples of this background include, random kaon and pion tracks in the detector incorrectly reconstructed to form a \Dz meson, real reconstructed \Dz mesons combined with a random \KS meson, or random pion tracks combined to make a incorrectly reconstructed \KS meson. The combinatorial background is modelled using an exponential function, using a PDF given by $P_{bkg} = \beta e^{\beta m}$, with a slope parameter, $\beta$, that is allowed to vary. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -763,7 +766,7 @@ In order to obtain values for the various parameters in these shapes simulated s
 
 These partially reconstructed decays contribute six shapes in the same region of the \Bm mass fit at a lower invariant mass compared to the signal, from 4900 - 5230 MeV. The shape parameters are all fixed in the mass fit, however, each of the shapes also has an associated yield. As the shapes all occur in the same region of \Bm mass, allowing the six individual yields to vary leads to an unstable fit. Therefore, it is necessary to apply additional constraints, in the form of fixing ratios of different yields in order to have a stable fit. 
 
-The total partially reconstructed shape is given by,
+The total partially reconstructed PDF, $P_{partreco}$, normalised to unity, is given by,
 \begin{equation}
 P_{partreco} = f_0P_0 + (1 - f_0)P_{\pm 1}
 \label{partrecofunction}
@@ -774,13 +777,11 @@ P_0 &= P^{Bu,\pi}_0 + c^{Bu,\gamma}_0P^{Bu,\gamma}_0 + c^{Bd,\pi}_0P^{Bd,\pi}_0 
 P_{\pm 1} &= P^{Bu,\pi}_{\pm 1} + c^{Bu,\gamma}_{\pm 1}P^{Bu,\gamma}_{\pm 1} + c^{Bd,\pi}_{\pm 1}P^{Bd,\pi}_{\pm 1} \text{ .}
 \end{align*}
 The yield ratios between \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} and \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} are fixed separately for the 0 and $\pm$1 helicity states of the \Dstar. The expected yield ratios, $c^{Bu,\gamma}_0$, $c^{Bd,\pi}_0$, $c^{Bu,\gamma}_{\pm 1}$ and $c^{Bd,\pi}_{\pm 1}$, can be individually calculated from knowledge of the ratio of production of the relevant decays and the ratio of the efficiencies of the relevant decays passing the selection, detailed in Section \ref{sec:selection}, for example, 
-
 \begin{align}
 c^{Bu,\gamma}_0 &= \frac{N(\decay{\Bm}{(\decay{\Dstarz}{\Dz\gamma})\Kstarm}\ 0)}{N(\decay{\Bm}{(\decay{\Dstarz}{\Dz\piz})\Kstarm}\ 0)} \nonumber \\ 
 &= \frac{\mathcal{B}(\decay{\Bm}{(\decay{\Dstarz}{\Dz\gamma})\Kstarm}\ 0)}{\mathcal{B}(\decay{\Bm}{(\decay{\Dstarz}{\Dz\piz})\Kstarm}\ 0)} \times \frac{\epsilon_{sel}(\decay{\Bm}{(\decay{\Dstarz}{\Dz\gamma})\Kstarm}\ 0)}{\epsilon_{sel}(\decay{\Bm}{(\decay{\Dstarz}{\Dz\piz})\Kstarm}\ 0)}
 \label{partrecoexample}
 \end{align}
-
 where $N$ represents the yield, $\mathcal{B}$ represents the branching fraction and $\epsilon_{sel}$ represents the selection efficiency of the partially reconstructed decay. The ratio of branching fractions is used to estimate the expected ratio of production in the collision of the two partially reconstructed decays being considered, these branching fractions are given in Table \ref{partrecoBRs}. The selection efficiency, $\epsilon_{sel}$, calculated using simulated partially reconstructed samples, is defined as the number of simulated events passing the selection compared to the number of simulated events generated. This gives ratio of the probability of the two partially reconstructed decays under consideration passing the selection. Using Equation \ref{partrecoexample} and equivalent calculations for the other yield ratios, the estimated yield ratios given in Table \ref{fixedyieldratios}; these values are fixed in the mass fit. 
 
 \begin{table}[h]
@@ -818,7 +819,7 @@ Other backgrounds investigated in this analysis, but not included in the mass fi
 \subsection{Mass fit to the data in the favoured modes}
 \label{sec:massfit:fit}
 
-A fit to the invariant B mass in the \kpi and \kpipipi favoured mode is performed using the shapes discussed in Sections \ref{sec:massfit:signal}, \ref{sec:massfit:combinatorial} and \ref{sec:massfit:partreco}. The total shape used to model the data is given by
+An extended maximum likelihood fit to the invariant B mass in the \kpi and \kpipipi favoured mode is performed using the shapes discussed in Sections \ref{sec:massfit:signal}, \ref{sec:massfit:combinatorial} and \ref{sec:massfit:partreco}. The total shape used to model the data is given by
 \begin{equation}
 P_{tot} = N_{sig}P_{sig} + N_{comb}P_{comb} + N_{dstkst}P_{dstkst} \text{ ,}
 \label{totalpdf}
