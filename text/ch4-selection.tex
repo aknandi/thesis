@@ -535,7 +535,7 @@ Figure \ref{fig:likelihood} illustrates $-2\log L$ as a function of a single par
 \subsection{Signal shape}
 \label{sec:massfit:signal}
 
-The signal shape is described as the sum of two Gaussians each with a tail extending towards lower invariant mass to account for radiative effects. These modified Gaussians are known as Crystal Ball (CB) functions~\cite{Skwarnicki:1986xj}. This Double Crystal Ball shape used is defined by,
+The signal shape is described as the sum of two Gaussians each with a tail extending towards lower invariant mass to account for radiative effects. These modified Gaussians are known as Crystal Ball (CB) functions~\cite{Skwarnicki:1986xj}. This Double Crystal Ball shape, as a function of reconstructed mass, $m$, is defined by,
 \begin{equation}
 \mathrm{DCB}(m| \mu,\sigma,\alpha,n,f_{\sigma}) = f_{cb} \cdot \mathrm{CB}(m| \mu,\sigma,\alpha,n) + (1-f_{cb}) \cdot \mathrm{CB}(m|\mu,f_{\sigma}\sigma,\alpha,n),
 \label{DCBshape}
@@ -550,8 +550,9 @@ where
 \end{equation*}
 where $\mu$ is the peak position, $\sigma$ is the width of the Gaussian, $n$ parameterises the power-law tail, which starts $\alpha\sigma$ away from the peak position. The parameters $f_{cb}$ and $(1-f_{cb})$ are the fraction of the yield given to each CB and $f_{\sigma}$ is the ratio of the widths between the two CBs. The signal PDF, $P_{sig}(m)$, must be normalised to unity with normalisation constant, $N$, such that,
 \begin{equation}
-P_{sig}(m) = N . DCB(m| \mu,\sigma,\alpha,n,f_{\sigma}) \text{	where, } \int_{0}^{\infty} P_{sig}(m)\ dm = 1
+P_{sig}(m) = \mathcal{N}_{sig} . DCB(m| \mu,\sigma,\alpha,n,f_{\sigma}) \text{	where, } \int_{m_0}^{m_1} P_{sig}(m)\ dm = 1 \text{ , }
 \end{equation}
+and $m_0$ and $m_1$ are the lower and upper limits of the mass fit, respectively.
 
 The \Bm mass distributions from simulated signal events were found to be consistent between \runone and \runtwo data samples, but slightly different for \kpi and \kpipipi modes. Therefore the signal shape for different data-taking periods is the same, but different between \kpi and \kpipipi modes. 
 
@@ -594,7 +595,12 @@ $f_{cb}$ & $0.82 \pm 0.03$ & $0.84 \pm 0.02$ & $0.80 \pm 0.03$ & $0.81 \pm 0.04	
 \subsection{Combinatorial background}
 \label{sec:massfit:combinatorial}
 
-The combinatorial background is formed of random tracks that do not correspond to the signal decay, being combined in the reconstruction. Examples of this background include, random kaon and pion tracks in the detector incorrectly reconstructed to form a \Dz meson, real reconstructed \Dz mesons combined with a random \KS meson, or random pion tracks combined to make a incorrectly reconstructed \KS meson. The combinatorial background is modelled using an exponential function, using a PDF given by $P_{bkg} = \beta e^{\beta m}$, with a slope parameter, $\beta$, that is allowed to vary. 
+The combinatorial background is formed of random tracks that do not correspond to the signal decay, being combined in the reconstruction. Examples of this background include, random kaon and pion tracks in the detector incorrectly reconstructed to form a \Dz meson, real reconstructed \Dz mesons combined with a random \KS meson, or random pion tracks combined to make a incorrectly reconstructed \KS meson. The combinatorial background is modelled using an exponential function, using a PDF, $P_{bkg}$, given by,
+\begin{equation}
+P_{bkg} = \mathcal{N}_{bkg}\ e^{\beta m} \text{\hspace{5pt} with, } \mathcal{N}_{bkg} = \frac{\beta}{e^{\beta m_1} - e^{\beta m_0}} \text{ , }
+\label{combpdf}
+\end{equation}
+where $m_0$ and $m_1$ are the lower and upper limits of the mass fit, respectively, and $\beta$ is the slope parameter that is allowed to vary. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -635,12 +641,13 @@ The reconstruction of particles within the \lhcb detector gives rise to resoluti
 \begin{equation}
 DG(x) = f_G G(x|m,\sigma) + \left(1-f_G\right) G(x|m,R_{\sigma}\sigma) \text{ , }
 \end{equation}
-where $\sigma$ is the width of the first Gaussian, $f_G$ is the fraction contained by the first Gaussian and $R_{\sigma}$ is the relative width between the two. Additionally, selection effects, arising from preferentially selecting high \pt events, can affect the shape such that one peak is higher than the other. This is taken into account by introducing a linear polynomial with a slope of $1 - \xi$. The resulting Horns function is,
-\begin{equation}
-\text{Horns}(m) = \int_a^b dx \left(x - \frac{a+b}{2}\right)^2 DG(x|m,\sigma,f_G,R_{\sigma}) \left( \frac{1 - \xi_{HORNS}}{b - a}x + \frac{b\xi_{HORNS} - a}{b - a}\right),
+where $\sigma$ is the width of the first Gaussian, $f_G$ is the fraction contained by the first Gaussian and $R_{\sigma}$ is the relative width between the two. Additionally, selection effects, arising from preferentially selecting high \pt events, can affect the shape such that one peak is higher than the other. This is taken into account by introducing a linear polynomial with a slope of $1 - \xi$. The resulting Horns PDF is,
+\begin{multline}
+\text{Horns}(m) = \mathcal{N}_{Horns}\ \int_a^b dx \left(x - \frac{a+b}{2}\right)^2 DG(x|m,\sigma,f_G,R_{\sigma}) \\
+\left( \frac{1 - \xi_{HORNS}}{b - a}x + \frac{b\xi_{HORNS} - a}{b - a}\right),
 \label{eqn:horns}
-\end{equation}
-where $m$ is the mass variable to be fitted and $x$ is the integration variable in the convolution. The underlying kinematic distribution combined with the resolution and selection effects gives rise to a double peak structure, as shown in Figure \ref{fig:horns}.
+\end{multline}
+where $m$ is the mass variable to be fitted, $x$ is the integration variable in the convolution and $\mathcal{N}_{Horns}$ is the normalisation constant required for the PDF. The underlying kinematic distribution combined with the resolution and selection effects gives rise to a double peak structure, as shown in Figure \ref{fig:horns}.
 
 \begin{figure}[h]
 \centering
@@ -662,11 +669,12 @@ p_{HILL}(x) &= \begin{cases}
 \end{align}
 
 As with the Horns function, this parabola is convolved with a Double Gaussian and a linear polynomial to account for resolution and selection effects respectively. The resulting Hill function is,
-\begin{equation}
-\text{Hill}(m) = \int_{a'}^{b'} dx \left[-(x - a')(x - b')\right] DG(x|m,\sigma,f_G,R_{\sigma}) \left( \frac{1 - \xi_{HILL}}{b' - a'}x + \frac{b'\xi_{HILL} - a'}{b' - a'}\right),
+\begin{multline}
+\text{Hill}(m) = \mathcal{N}_{Hill}\ \int_{a'}^{b'} dx \left[-(x - a')(x - b')\right] DG(x|m,\sigma,f_G,R_{\sigma}) \\
+\left( \frac{1 - \xi_{HILL}}{b' - a'}x + \frac{b'\xi_{HILL} - a'}{b' - a'}\right),
 \label{eqn:hill}
-\end{equation}
-where $m$ is the mass variable to be fitted and $x$ is the integration variable in the convolution. This Hill function also applies to the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz}, where the \Dstarz is in helicity state $\pm$1. The underlying kinematic distribution combined with the resolution and selection effects results in the distribution shown in Figure \ref{fig:hill}.
+\end{multline}
+where $m$ is the mass variable to be fitted, $x$ is the integration variable in the convolution and $\mathcal{N}_{Hill}$ is the normalisation constant required for the PDF. This Hill function also applies to the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz}, where the \Dstarz is in helicity state $\pm$1. The underlying kinematic distribution combined with the resolution and selection effects results in the distribution shown in Figure \ref{fig:hill}.
 
 \begin{figure}[h]
 \centering
@@ -698,12 +706,15 @@ p_{LITTLEHORNS}(x) &= \begin{cases}
 
 Again, this distribution is convolved with a Double Gaussian and linear polynomial to describe the resolution and selection effects respectively. This results in a Little Horns function,
 \begin{multline}
-\text{LittleHorns}(m) = \int_{a''}^{b''} dx \biggl\{ \left[ \left( x - \frac{a''+b''}{2} \right) ^2 + \left( \frac{a''-b''}{2} \right) ^2 \right] DG(x|m,\sigma,f_G,R_{\sigma}) \\
-\left( \frac{1 - \xi_{LITTLEHORNS}}{b'' - a''}x + \frac{b''\xi_{LITTLEHORNS} - a''}{b'' - a''} \right) \biggr\}
+\text{LittleHorns}(m) = \mathcal{N}_{LittleHorns}\ \int_{a''}^{b''} dx \biggl\{ \left[ \left( x - \frac{a''+b''}{2} \right) ^2 + \left( \frac{a''-b''}{2} \right) ^2 \right] \\
+ DG(x|m,\sigma,f_G,R_{\sigma}) \left( \frac{1 - \xi_{LITTLEHORNS}}{b'' - a''}x + \frac{b''\xi_{LITTLEHORNS} - a''}{b'' - a''} \right) \biggr\}
 \label{eqn:littlehorns}
 \end{multline}
+where $m$ is the mass variable to be fitted, $x$ is the integration variable in the convolution and $\mathcal{N}_{LittleHorns}$ is the normalisation constant required for the PDF.
 
 \subsubsection{Total partially reconstructed function}
+
+The normalisation constants, $\mathcal{N}_{Horns}$, $\mathcal{N}_{Hill}$ and $\mathcal{N}_{LittleHorns}$, in Eqs~\ref{eqn:horns}, \ref{eqn:hill} and \ref{eqn:littlehorns} respectively, are required for the PDFs to be correctly normalised. This requires, $\int_{m_0}^{m_1} P(m) dm = 1$, for each of the PDFs, $P(m)$, where $m_0$ and $m_1$ are the lower and upper limits of the mass fit. Due to the complexitey of the shapes, the normalisation constant is calculated numerically. 
 
 Each of these partially reconstructed shapes contribute to the mass fit in the \Bm mass region below the signal peak. Table \ref{helicityamplitudes} summarises the use of the different analytic shapes described: Horns, Hill and Little Horns functions. 
 
@@ -711,7 +722,7 @@ Each of these partially reconstructed shapes contribute to the mass fit in the \
 \centering
 \resizebox{\textwidth}{!}{
 \begin{tabular}{cccc}
-Decay mode & Helicity of \Dstar & $\theta$ dependence & Function \\
+Decay mode & Helicity of \Dstar & $\theta$ dependence & PDF \\
 \hline
 \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} & 0 & $\left(x - \frac{a_1+b_1}{2}\right)^2$ & Horns, from Eq.~\ref{eqn:horns} \\
 \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} & $\pm$1 & $-(x - a_2)(x - b_2)$ & Hill, from Eq.~\ref{eqn:hill} \\
@@ -773,10 +784,10 @@ P_{partreco} = f_0P_0 + (1 - f_0)P_{\pm 1}
 \end{equation}
 where $P_0$ and $P_{\pm 1}$, which represent the full shape for the \Dstar helicity states 0 and $\pm$1 respectively, are given by
 \begin{align*}
-P_0 &= P^{Bu,\pi}_0 + c^{Bu,\gamma}_0P^{Bu,\gamma}_0 + c^{Bd,\pi}_0P^{Bd,\pi}_0 \\
-P_{\pm 1} &= P^{Bu,\pi}_{\pm 1} + c^{Bu,\gamma}_{\pm 1}P^{Bu,\gamma}_{\pm 1} + c^{Bd,\pi}_{\pm 1}P^{Bd,\pi}_{\pm 1} \text{ .}
+P_0 &= \frac{1}{1 + c^{Bu,\gamma}_0 + c^{Bd,\pi}_0} \left( P^{Bu,\pi}_0 + c^{Bu,\gamma}_0P^{Bu,\gamma}_0 + c^{Bd,\pi}_0P^{Bd,\pi}_0 \right) \\
+P_{\pm 1} &= \frac{1}{1 + c^{Bu,\gamma}_{\pm 1} + c^{Bd,\pi}_{\pm 1}} \left( P^{Bu,\pi}_{\pm 1} + c^{Bu,\gamma}_{\pm 1}P^{Bu,\gamma}_{\pm 1} + c^{Bd,\pi}_{\pm 1}P^{Bd,\pi}_{\pm 1} \right) \text{ ,}
 \end{align*}
-The yield ratios between \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} and \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} are fixed separately for the 0 and $\pm$1 helicity states of the \Dstar. The expected yield ratios, $c^{Bu,\gamma}_0$, $c^{Bd,\pi}_0$, $c^{Bu,\gamma}_{\pm 1}$ and $c^{Bd,\pi}_{\pm 1}$, can be individually calculated from knowledge of the ratio of production of the relevant decays and the ratio of the efficiencies of the relevant decays passing the selection, detailed in Section \ref{sec:selection}, for example, 
+where $P_x^{y,z}$ represents a partially reconstructed PDF, where $x$ is the \Dstar helicity state ($0$ or $\pm 1$), $y$ is the type of \B meson ($Bu$ or $Bd$) and $z$ is the particle missed in the reconstruction (\pion or \Pgamma). Similarly, $c_x^{y,z}$ are the ratios between the yields. The yield ratios between \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} and \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} are fixed separately for the 0 and $\pm$1 helicity states of the \Dstar. The expected yield ratios, $c^{Bu,\gamma}_0$, $c^{Bd,\pi}_0$, $c^{Bu,\gamma}_{\pm 1}$ and $c^{Bd,\pi}_{\pm 1}$, can be individually calculated from knowledge of the ratio of production of the relevant decays and the ratio of the efficiencies of the relevant decays passing the selection, detailed in Section \ref{sec:selection}, for example, 
 \begin{align}
 c^{Bu,\gamma}_0 &= \frac{N(\decay{\Bm}{(\decay{\Dstarz}{\Dz\gamma})\Kstarm}\ 0)}{N(\decay{\Bm}{(\decay{\Dstarz}{\Dz\piz})\Kstarm}\ 0)} \nonumber \\ 
 &= \frac{\mathcal{B}(\decay{\Bm}{(\decay{\Dstarz}{\Dz\gamma})\Kstarm}\ 0)}{\mathcal{B}(\decay{\Bm}{(\decay{\Dstarz}{\Dz\piz})\Kstarm}\ 0)} \times \frac{\epsilon_{sel}(\decay{\Bm}{(\decay{\Dstarz}{\Dz\gamma})\Kstarm}\ 0)}{\epsilon_{sel}(\decay{\Bm}{(\decay{\Dstarz}{\Dz\piz})\Kstarm}\ 0)}
@@ -819,12 +830,12 @@ Other backgrounds investigated in this analysis, but not included in the mass fi
 \subsection{Mass fit to the data in the favoured modes}
 \label{sec:massfit:fit}
 
-An extended maximum likelihood fit to the invariant B mass in the \kpi and \kpipipi favoured mode is performed using the shapes discussed in Sections \ref{sec:massfit:signal}, \ref{sec:massfit:combinatorial} and \ref{sec:massfit:partreco}. The total shape used to model the data is given by
+An extended maximum likelihood fit to the invariant B mass in the \kpi and \kpipipi favoured mode is performed using the shapes discussed in Sections \ref{sec:massfit:signal}, \ref{sec:massfit:combinatorial} and \ref{sec:massfit:partreco}. The total exetended likelihood PDF used to model the data is given by,
 \begin{equation}
-P_{tot} = N_{sig}P_{sig} + N_{comb}P_{comb} + N_{dstkst}P_{dstkst} \text{ ,}
+P_{tot}(x_i;\theta) = N_{sig}P_{sig} + N_{comb}P_{comb} + N_{dstkst}P_{dstkst} \text{ ,}
 \label{totalpdf}
 \end{equation}
-where $N_{sig}$, $N_{comb}$ and $N_{dstkst}$ are the yields of the signal, combinatorial and partially reconstructed yields respectively. The signal shape, $P_{sig}$, is given by Equation~\ref{DCBshape}, the partially reconstructed shape, $P_{dstkst}$, is given by Equation~\ref{partrecofunction} and the combinatorial shape is an exponential, $P_{comb} = e^{\beta m}$, where the slope parameter $\beta$ is able to vary in the fit. The yield of the signal and combinatorial shape, $N_{sig}$ and $N_{comb}$, are left to vary without constraint, as well as the peak position, $\mu$, and width, $\sigma$, of the signal shape. The only parameters able to vary in the partially reconstructed background are the yield ratio between the 0 and $\pm$1 amplitudes, $f_0$, and the overall yield, $N_{dstkst}$.
+where $x_i$ are the masses of the candidates and $\theta$ are the set of paramaters to be optimised, namely $\{\mu, \sigma, \beta, f_0\}$, with the expected yields of the signal, combinatorial and partially reconstructed yields, $N_{sig}$, $N_{comb}$ and $N_{dstkst}$, as additional freely varying parameters to be detemined, as described in Section \ref{sec:massfit:likelihood}. The signal PDF, $P_{sig}$, is given by Equation~\ref{DCBshape}, the partially reconstructed PDF, $P_{dstkst}$, is given by Equation~\ref{partrecofunction} and the combinatorial PDF, $P_{comb}$, is given by Equation~\ref{combpdf}, where the slope parameter $\beta$ is able to vary in the fit. The yield of the signal and combinatorial PDFs, $N_{sig}$ and $N_{comb}$, are left to vary without constraint, as well as the peak position, $\mu$, and width, $\sigma$, of the signal PDF. The only parameters able to vary in the partially reconstructed background are the yield ratio between the 0 and $\pm$1 amplitudes, $f_0$, and the overall yield, $N_{dstkst}$.
 
 Figures \ref{massfitskpi} and \ref{massfitsk3pi} show the fits to the invariant B mass distribution in the \kpi and \kpipipi favoured mode respectively for LL and DD candidates in both Run 1 and Run 2. The estimated signal yields extracted from these fits are given in Table \ref{signalyields}. It can be seen that the yield in the \kpi mode is almost twice as large as that in the \kpipipi mode, which is primarily a result of the lower reconstruction efficiency and additional PID requirements necessary due to the two additional tracks in the four-body mode. Table \ref{signalyields} also shows that the yield per unit of integrated luminosity is about 3 times higher in \runone compared to \runtwo, which is driven by the increase in centre-of-mass energy in \runtwo.
 
