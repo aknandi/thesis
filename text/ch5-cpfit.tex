@@ -29,18 +29,18 @@ This section covers the setup of the \CP fit. The components and shapes of the \
 
 The mass fit model described in Section \ref{sec:massfit} is used to model all \Dz modes in the \CP fit, however, there is an additional source of background included in the \kk model that does not occur in the other modes. This background in the \kk \Bm mass spectrum comes from the decay \decay{\Lb}{\Lc(p\Km\pip)\Kstarm}, where the proton is misidentified as a kaon and the \pion is missed in the reconstruction. The decay mode \decay{\Lc}{p\Km\pip} accounts for over 6\% of the \Lc branching fraction~\cite{PDG2016}, whereas \Lc decays that may contribute as background to the other \Dz decay modes, e.g. \decay{\Lc}{p\pim\pip}, are suppressed by an order of magnitude. Additionally, the probability of incorrectly identifying a proton as a kaon is much larger than a pion, as they are much closer in mass. Other backgrounds that involve the proton being missed in the reconstruction are not considered as the reconstructed \Bm mass would not fall in the range under consideration. Therefore, for this family of decay modes, only the \decay{\Lb}{\Lc(p\Km\pip)\Kstarm} background, contributing to the \kk decay model, is considered.
 
-The shape used to model this \decay{\Lb}{\Lc(p\Km\pip)\Kstarm} contribution is a Cruijff function, defined as,
+The shape used to model this \decay{\Lb}{\Lc(p\Km\pip)\Kstarm} contribution is a Cruijff PDF, defined as,
 \begin{equation}
-  \mathrm{Cruijff}(m; \mu,\sigma_L,\sigma_R,\alpha_L,\alpha_R)=
+  P_{\Lambda}(m; \mu,\sigma_L,\sigma_R,\alpha_L,\alpha_R)=
 \begin{cases}
-    exp \left( -\frac{(m-\mu)^2}{2\sigma_L^2 + \alpha_L(m-\mu)^2} \right) ,     & \text{if } m-\mu < 0, \\
-    exp \left( -\frac{(m-\mu)^2}{2\sigma_R^2 + \alpha_R(m-\mu)^2} \right) ,     & \text{otherwise.}
+    \mathcal{N}_{L} exp \left( -\frac{(m-\mu)^2}{2\sigma_L^2 + \alpha_L(m-\mu)^2} \right) ,     & \text{if } m-\mu < 0, \\
+    \mathcal{N}_{R} exp \left( -\frac{(m-\mu)^2}{2\sigma_R^2 + \alpha_R(m-\mu)^2} \right) ,     & \text{otherwise.}
 \end{cases}
 \label{Cruijff}
 \end{equation}%
-where $\mu$ is the peak position, $\sigma_{L,R}$ is the width on the left and right sides of the peak and $\alpha_{L,R}$ is a modification constant. The shape parameters can be taken from using a simulated sample of \decay{\Lc}{p\Km\pip} events, reconstructed as \decay{\Bm}{\D\Kstarm} signal events, and performing a fit to the \Bm mass distribution. However, due to reasons relating to timing and speed of generation, a simulated sample of \decay{\Lc}{p\Km\pip} events was not available. Instead, the shape parameters are taken from a fit to a simulated sample of \decay{\Lb}{\Lc\Km} events reconstructed as \decay{\Bm}{\D\Km} events; this shape is expected to be similar to \decay{\Lc}{p\Km\pip}, and any uncertainty in the shape is accounted for as a systematic uncertainty, described in Section \ref{sec:systematics}.
+where $\mu$ is the peak position, $\sigma_{L,R}$ is the width on the left and right sides of the peak, $\alpha_{L,R}$ is a modification constant and $\mathcal{N}_{L,R}$ are the normalisation constants required for the PDF. The parameters of the PDF can be taken from using a simulated sample of \decay{\Lc}{p\Km\pip} events, reconstructed as \decay{\Bm}{\D\Kstarm} signal events, and performing a fit to the \Bm mass distribution. However, due to reasons relating to timing and speed of generation, a simulated sample of \decay{\Lc}{p\Km\pip} events was not available. Instead, the parameters of the PDF are taken from a fit to a simulated sample of \decay{\Lb}{\Lc\Km} events reconstructed as \decay{\Bm}{\D\Km} events; this PDF is expected to be similar to \decay{\Lc}{p\Km\pip}, and any uncertainty in the shape is accounted for as a systematic uncertainty, described in Section \ref{sec:systematics}.
 
-The fit to the \Bm mass spectrum is shown in Figure \ref{Lbfit}, where it can be seen that the reconstructed \Bm mass falls between 4800 and 5500 \mevcc, and the results from this fit are shown in Table \ref{fitresultsLb}. All the values for the shape parameters are fixed in the simultaneous fit to the values in Table \ref{fitresultsLb}; these fixed values are considered to be a source of systematic uncertainty, detailed in Section \ref{sec:systematics}. 
+A maximum likelihood fit, as described in Section \ref{sec:massfit:likelihood}, is performed to the \Bm mass spectrum is shown in Figure \ref{Lbfit}, where it can be seen that the reconstructed \Bm mass falls between 4800 and 5500 \mevcc, and the results from this fit are shown in Table \ref{fitresultsLb}. All the values for the shape parameters are fixed in the simultaneous fit to the values in Table \ref{fitresultsLb}; these fixed values are considered to be a source of systematic uncertainty, detailed in Section \ref{sec:systematics}. 
 
 \begin{figure}[h]
 \centering
@@ -66,7 +66,7 @@ $\alpha_R$ & $-0.04 \pm 0.06$ \\
 \label{fitresultsLb}
 \end{table}
 
-The shape is assumed to be the same in each \kk fit category, across \KS reconstruction types and data-taking periods because there is such a low number of events that contribute to this background that the possible variations in the shape in these different categories has negligible effect on the results. The \decay{\Lb}{\Lc(p\kaon\pi)\Kstarm} yield compared to the signal yield in the favoured \kpi mode is allowed to vary in the simultaneous fit. This fractional yield is required to be the same for all fit categories.
+The PDF is assumed to be the same in each \kk fit category, across \KS reconstruction types and data-taking periods because there is such a low number of events that contribute to this background that the possible variations in the shape in these different categories has negligible effect on the results. The \decay{\Lb}{\Lc(p\kaon\pi)\Kstarm} yield as a fraction of the signal yield in the favoured \kpi mode, $f_{\Lambda}$, is allowed to vary in the simultaneous fit. This fractional yield is required to be the same for all fit categories.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Choice of fit range}
@@ -182,7 +182,7 @@ $\epsilon_{bdt}(\pi K\pi\pi)$ & $0.938 \pm 0.010$ & $0.838 \pm 0.009$ & $0.952 \
 \subsubsection{PID efficiencies}
 \label{sec:cpfit:efficiencies:pid}
 
-In this analysis the selection for the different \Dz decays modes is almost identical apart for the particle identification requirements. Therefore it is very important to apply an efficient PID selection to remove possible backgrounds containing misidentified particles, as described in Section \ref{sec:selection:pid}. The PID power of the detector originates primarily from the \rich detectors~\cite{LHCb-DP-2012-003,LHCb-PUB-2017-012}. The efficiencies for the various PID selections are determined using background free calibration samples of protons, kaons and pions~\cite{LHCb-PUB-2016-021,LHCb-PUB-2016-005}. PID efficiency is a function of momentum and psuedorapidity, therefore when calculating of the overall PID efficiency, the sample is reweighted based on the momentum and pseudorapidity distribution of the signal candidates. The uncertainties in the PID efficiencies are systematic and come from, the limited size of the calibration samples, the limited size of the simulated signal samples and the reweighting procedure itself.
+In this analysis the selection for the different \Dz decays modes is almost identical apart for the particle identification requirements. Therefore it is very important to apply an efficient PID selection to remove possible backgrounds containing misidentified particles, as described in Section \ref{sec:selection:pid}. The PID power of the detector originates primarily from the \rich detectors~\cite{LHCb-DP-2012-003,richrun2}. The efficiencies for the various PID selections are determined using background free calibration samples of protons, kaons and pions~\cite{LHCb-PUB-2016-021,LHCb-PUB-2016-005}. PID efficiency is a function of momentum and psuedorapidity, therefore when calculating of the overall PID efficiency, the sample is reweighted based on the momentum and pseudorapidity distribution of the signal candidates. The uncertainties in the PID efficiencies are systematic and come from, the limited size of the calibration samples, the limited size of the simulated signal samples and the reweighting procedure itself.
 
 The PID efficiencies are calculated individually for each year of data-taking and each magnet polarity and are subsequently combined according to the efficiency corrected yields in each of the samples. They are combined separately for \runone and \runtwo. The results of the PID efficiencies are given in Table \ref{pideff}. These efficiencies are used in the \CP fit as described in Equations \ref{effcorrectionglw2body} and \ref{effcorrectionglw4body}. 
 
@@ -205,7 +205,7 @@ $\epsilon_{pid}(\pi\pi\pi\pi)$ & $0.675 \pm 0.002$ & $0.687 \pm 0.002$ & $0.822 
 \label{pideff}
 \end{table}
 
-It can be seen from Table \ref{pideff} that the PID efficiency in \runtwo is higher than \runone for the PID selection used in this analysis. This is primarily due to the removal of the aerogel radiator in \runtwo, which is discussed in Section \ref{sec:detector:rich}. The misidentification rate of the PID selection remains under control, for example, it has been shown in Section \ref{sec:selection:vetos} that there is only a negligible level of this crossfeed background present in both \runone and \runtwo. Therefore, the same PID selection is applied to both data-taking periods.
+It can be seen from Table \ref{pideff} that the PID efficiency in \runtwo is higher than \runone for the PID selection used in this analysis. This is primarily due to the removal of the aerogel radiator in \runtwo, which is discussed in Section \ref{sec:detector:rich}. The misidentification rate of the PID selection remains under control, for example, it has been shown in Section \ref{sec:backgrounds:crossfeed} that there is only a negligible level of this crossfeed background present in both \runone and \runtwo. Therefore, the same PID selection is applied to both data-taking periods.
 
 Another input to the fit is the efficiency of the double misidentification veto, which is required as a correction to the ADS observables, as in Equations \ref{effcorrectionads2body} and \ref{effcorrectionads4body}. Veto efficiencies calculated from data are used in the \CP fit for both two- and four-body modes, given in Table \ref{vetoeff}.
 
@@ -325,18 +325,45 @@ Run 2 combined & \multicolumn{4}{c}{$0.979420 \pm 0.000007$} \\
 \subsection{Likelihood function}
 \label{sec:cpfit:likelihood}
 
-The \CP fit is performed by constructing a likelihood function that is to be maximised. A likelihood is assigned to each candidate in a given category by constructing the signal and background PDFs. The total log-likelihood is the sum of the log-likelihoods for each of the different categories.
-
+An extended maximum likelihood fit, as described in Section \ref{sec:massfit:likelihood}, is performed to extract the \CP observables. A likelihood is assigned to each candidate in a given category by constructing the signal and background PDFs. The total extended log-likelihood is the sum of the extended log-likelihoods for the individual canididates in each of the different categories: \B charge (charge), \KS reconstruction type (track), data type (run) and \Dz decay mode (mode). This is described by,
 \begin{equation}
-\log\mathcal{L} = \sum_{\Bp,\Bm}\sum_{\text{LL,DD}}\mathop{\sum_{\text{Run 1,}}}_{\text{Run 2}} \left( \log\mathcal{L}_{\D\Kstar}^{\text{2-body}} + \log\mathcal{L}_{\D\Kstar}^{\text{4-body}} \right)
+\log\mathcal{L} = \sum_{x_i} \left[ \sum_{\{\text{charge}\}}\sum_{\{\text{track}\}}\sum_{\{\text{run}\}}\sum_{\{\text{mode}\}} \log{\mathcal{L}}_{\D\Kstar}\left( \theta, N; x_i \right) \right]
 \end{equation}
+where $\theta$ are the set of parameters that describe the shapes of the PDFs in the model,
+\begin{multline}
+\theta = \{\mu_\text{two-body}, \sigma_\text{two-body}, \mu_\text{four-body}, \sigma_\text{four-body}, \\ \beta_\text{two-body LL}, \beta_\text{two-body DD}, \beta_\text{four-body LL}, \beta_\text{four-body DD}\} \text{ , }
+\end{multline} 
+$N$ are the set of parameters relating to the yields of the PDFs, 
+\begin{multline}
+N = \{\Akpi, \Akk, \Apipi, \Akpipipi, \Apipipipi, \Rkk, \Rpipi, \Rptwo, \Rmtwo, \\ \Rpipipipi, \Rpfour, \Rmfour, 4\{N_{K\pi}\}, 4\{N_{K\pi\pi\pi}\}, 56\{N_{comb}\}\} \text{ , }
+\end{multline}
+where $4\{N_{K\pi}\}$ ($4\{N_{K\pi\pi\pi}\}$) refers to the yield in the \kpi (\kpipipi) mode in each of the \KS reconstruction type and data type bins, and $56\{N_{comb}\}\}$ refers to the combinatorial yield in each of the 56 bins. The parameter $x_i$ is  the reconstructed mass of a given candidate.
 
-The expressions $\log\mathcal{L}_{\D\Kstar}^{\text{2-body}}$ and $\log\mathcal{L}_{\D\Kstar}^{\text{4-body}}$ consist of the sum of the log-likelihoods for each of the two-body modes and four-body modes respectively. The log-likelihood for each mode is constructed from model containing the signal, combinatorial and partially reconstructed PDFs, namely $P_{\text{sig}}$, $P_{\text{comb}}$ and $P_{\text{\Dstar\Kstar}}$, respectively, with corresponding yields $N_{\text{sig}}$, $N_{\text{comb}}$ and $N_{\text{\Dstar\Kstar}}$. The two- and four-body log-likelihoods are slightly different due to the slightly different shapes used for the signal and combinatorial PDFs. The total log-likelihood is given by,
-\begin{equation}
-\log\mathcal{L}_{\D\Kstar} = \mathop{\sum_{\text{(2/4)-body}}}_{\text{modes}} \log\left(N_{\text{sig}}P_{\text{sig}}^{\text{(2/4)-body}} + N_{\text{comb}}P_{\text{comb}}^{\text{(2/4)-body}} + N_{\text{\Dstar\Kstar}}P_{\text{\Dstar\Kstar}}\right) \text{ .}
-\label{likelihood}
-\end{equation}
-The log-likelihood for  the \kk mode has an additional $N_{\Lambda}P_{\Lambda}$ term from the $\decay{\Lb}{\Lc\Kstar}$ background, discussed in Section \ref{sec:cpfit:Lb2LcKst}. The signal yields $N_{\text{sig}}$ in each category are not calculated directly, but from the total signal yields in the \kpi and \kpipipi modes across all categories and the \CP observables.
+The extended likelihood for each bin is constructed from the model containing the signal, combinatorial and partially reconstructed PDFs, namely $P_{\text{sig}}$, $P_{\text{comb}}$ and $P_{\text{dstkst}}$, respectively, and information about the yields of these PDFs, as described in Section \ref{sec:massfit}. The extended likelihood functions for each of the bins is given by,
+\begin{multline}
+\mathcal{L}_{K\pi, t, r}^{\pm} = \frac{1}{2}\mathbf{N_{K\pi, t, r}}\left(1 \mp \mathbf{\Akpi}\right)P_{sig}\left(\mathbf{\mu_\text{\textbf{two-body}}},\mathbf{\sigma_\text{\textbf{two-body}}}\right) + \\ \mathbf{N_{comb, K\pi, t, r}^{\pm}}P_{comb}\left(\mathbf{\beta_\text{\textbf{two-body, t}}}\right) + N_{dstkst}P_{dstkst}
+\label{kpilikelihood}
+\end{multline}
+\begin{multline}
+\mathcal{L}_{KK, t, r}^{\pm} = \frac{1}{2}\mathbf{N_{K\pi, t, r}}\left(1 \mp \mathbf{\Akk}\right)\mathbf{\Rkk} P_{sig}\left(\mathbf{\mu_\text{\textbf{two-body}}},\mathbf{\sigma_\text{\textbf{two-body}}}\right) + \\ \mathbf{N_{comb, KK, t, r}}P_{comb}\left(\mathbf{\beta_\text{\textbf{two-body, t}}}\right) + N_{dstkst}P_{dstkst} + \mathbf{N_{K\pi, t, r}}\mathbf{f_{\Lambda}}P_{\Lambda}
+\end{multline}
+\begin{multline}
+\mathcal{L}_{\pi\pi, t, r}^{\pm} = \frac{1}{2}\mathbf{N_{K\pi, t, r}}\left(1 \mp \mathbf{\Apipi}\right)\mathbf{\Rpipi} P_{sig}\left(\mathbf{\mu_\text{\textbf{two-body}}},\mathbf{\sigma_\text{\textbf{two-body}}}\right) + \\ \mathbf{N_{comb, \pi\pi, t, r}}P_{comb}\left(\mathbf{\beta_\text{\textbf{two-body, t}}}\right) + N_{dstkst}P_{dstkst}
+\end{multline}
+\begin{multline}
+\mathcal{L}_{\pi K, t, r}^{\pm} = \frac{1}{2}\mathbf{N_{K\pi, t, r}}\left(1 \mp \mathbf{\Akpi}\right)\mathbf{R_{K\pi}^{\pm}} P_{sig}\left(\mathbf{\mu_\text{\textbf{two-body}}},\mathbf{\sigma_\text{\textbf{two-body}}}\right) + \\ \mathbf{N_{comb, \pi K, t, r}}P_{comb}\left(\mathbf{\beta_\text{\textbf{two-body, t}}}\right) + N_{dstkst}P_{dstkst}
+\end{multline}
+\begin{multline}
+\mathcal{L}_{K\pi\pi\pi, t, r}^{\pm} = \frac{1}{2}\mathbf{N_{K\pi\pi\pi, t, r}}\left(1 \mp \mathbf{\Akpipipi}\right)P_{sig}\left(\mathbf{\mu_\text{\textbf{four-body}}},\mathbf{\sigma_\text{\textbf{four-body}}}\right) + \\ \mathbf{N_{comb, K\pi\pi\pi, t, r}}P_{comb}\left(\mathbf{\beta_\text{\textbf{four-body, t}}}\right) + N_{dstkst}P_{dstkst}
+\end{multline}
+\begin{multline}
+\mathcal{L}_{\pi\pi\pi\pi, t, r}^{\pm} = \frac{1}{2}\mathbf{N_{K\pi\pi\pi, t, r}}\left(1 \mp \mathbf{\Apipipipi}\right)\mathbf{\Rpipipipi} P_{sig}\left(\mathbf{\mu_\text{\textbf{four-body}}},\mathbf{\sigma_\text{\textbf{four-body}}}\right) + \\ \mathbf{N_{comb, \pi\pi\pi\pi, t, r}}P_{comb}\left(\mathbf{\beta_\text{\textbf{four-body, t}}}\right) + N_{dstkst}P_{dstkst}
+\end{multline}
+\begin{multline}
+\mathcal{L}_{\pi K\pi\pi, t, r}^{\pm} = \frac{1}{2}\mathbf{N_{K\pi\pi\pi, t, r}}\left(1 \mp \mathbf{\Akpipipi}\right)\mathbf{R_{K\pi\pi\pi}^{\pm}} P_{sig}\left(\mathbf{\mu_\text{\textbf{four-body}}},\mathbf{\sigma_\text{\textbf{four-body}}}\right) + \\ \mathbf{N_{comb, \pi K\pi\pi, t, r}}P_{comb}\left(\mathbf{\beta_\text{\textbf{four-body, t}}}\right) + N_{dstkst}P_{dstkst}
+\label{pikpipilikelihood}
+\end{multline}
+where the parameters in bold are measured in the fit and the indices $\pm$, $t$ and $r$ refers to the different bins of \B charge, \KS reconstruction type and data type, respectively. The extended likelihood for the \kk mode has an additional PDF component from the $\decay{\Lb}{\Lc\Kstar}$ background, discussed in Section \ref{sec:cpfit:Lb2LcKst}. The signal yields are constructed as a function of the asymmetries, yield ratios and yields in the favoured mode, therefore it is these quantities that are freely varying parameters to be optimised in the \CP fit. The combinatoric yields in each of the 56 bins are included as a freely varying parameters, however the partially reconstructed yields are not included in the extended log-likelihood as they are fixed, as described in Section \ref{sec:cpfit:partrecoyields}. Efficiency corrections and asymmetry corrections are not included in Equations \ref{kpilikelihood} - \ref{pikpipilikelihood} for simpliticty, however these corrections are included in the \CP fit as described in Sections \ref{sec:cpfit:efficiencies} and \ref{sec:cpfit:asymmetries}.
 
 \subsection{Optimisation of BDT and \Kstar selection}
 \label{sec:cpfit:optimisation}
@@ -395,7 +422,7 @@ P_x = \begin{cases}
 	\frac{x_{gen} - x_{fit}}{\sigma_x^+}, & \text{if $x_{fit} - x_{gen} <$ 0}.
 	\end{cases}
 \end{equation*}
-where $x_{fit}$ is the value of the parameter returned by the fit, $x_{gen}$ is the generated value of the parameter, and $\sigma_x^+$ and $\sigma_x^-$ are the upper and lower asymmetric errors respectively. The results of the pseudoexperiments for the \CP observables are shown in Figure \ref{pulls}. For each of the pull distributions a Gaussian fit is performed. All of these fitted Gaussians are all consistent with a mean of zero and width of one, which shows that the setup of the \CP fit is unbiased and the uncertainties are correctly determined. Additionally, all of the fits coverge, therefore the fit is stable. 
+where $x_{fit}$ is the value of the parameter returned by the fit, $x_{gen}$ is the generated value of the parameter, and $\sigma_x^+$ and $\sigma_x^-$ are the upper and lower asymmetric uncertainties respectively. These asymmetric uncertainties are determined as described in Section \ref{sec:massfit:likelihood}. The results of the pseudoexperiments for the \CP observables are shown in Figure \ref{pulls}. For each of the pull distributions a Gaussian fit is performed. All of these fitted Gaussians are all consistent with a mean of zero and width of one, which shows that the setup of the \CP fit is unbiased and the uncertainties are correctly determined. Additionally, all of the fits coverge, therefore the fit is stable. 
  
 %\begin{figure}[!h]
 %\centering
