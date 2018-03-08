@@ -641,11 +641,11 @@ DG(x) = f_G G(x|m,\sigma) + \left(1-f_G\right) G(x|m,R_{\sigma}\sigma) \text{ , 
 \end{equation}
 where $\sigma$ is the width of the first Gaussian, $f_G$ is the fraction contained by the first Gaussian and $R_{\sigma}$ is the relative width between the two. Additionally, selection effects, arising from preferentially selecting high \pt events, can affect the shape such that one peak is higher than the other. This is taken into account by introducing a linear polynomial with a slope of $1 - \xi$. The resulting Horns PDF is,
 \begin{multline}
-\text{Horns}(m) = \mathcal{N}_{Horns}\ \int_a^b dx \left(x - \frac{a+b}{2}\right)^2 DG(x|m,\sigma,f_G,R_{\sigma}) \\
+\text{Horns}(m) = \mathcal{K}_{Horns}\ \int_a^b dx \left(x - \frac{a+b}{2}\right)^2 DG(x|m,\sigma,f_G,R_{\sigma}) \\
 \left( \frac{1 - \xi_{HORNS}}{b - a}x + \frac{b\xi_{HORNS} - a}{b - a}\right),
 \label{eqn:horns}
 \end{multline}
-where $m$ is the mass variable to be fitted, $x$ is the integration variable in the convolution and $\mathcal{N}_{Horns}$ is the normalisation constant required for the PDF. The underlying kinematic distribution combined with the resolution and selection effects gives rise to a double peak structure, as shown in Figure \ref{fig:horns}.
+where $m$ is the mass variable to be fitted, $x$ is the integration variable in the convolution and $\mathcal{K}_{Horns}$ is the normalisation constant required for the PDF. The underlying kinematic distribution combined with the resolution and selection effects gives rise to a double peak structure, as shown in Figure \ref{fig:horns}.
 
 \begin{figure}[h]
 \centering
@@ -668,11 +668,11 @@ p_{HILL}(x) &= \begin{cases}
 
 As with the Horns function, this parabola is convolved with a Double Gaussian and a linear polynomial to account for resolution and selection effects respectively. The resulting Hill function is,
 \begin{multline}
-\text{Hill}(m) = \mathcal{N}_{Hill}\ \int_{a'}^{b'} dx \left[-(x - a')(x - b')\right] DG(x|m,\sigma,f_G,R_{\sigma}) \\
+\text{Hill}(m) = \mathcal{K}_{Hill}\ \int_{a'}^{b'} dx \left[-(x - a')(x - b')\right] DG(x|m,\sigma,f_G,R_{\sigma}) \\
 \left( \frac{1 - \xi_{HILL}}{b' - a'}x + \frac{b'\xi_{HILL} - a'}{b' - a'}\right),
 \label{eqn:hill}
 \end{multline}
-where $m$ is the mass variable to be fitted, $x$ is the integration variable in the convolution and $\mathcal{N}_{Hill}$ is the normalisation constant required for the PDF. This Hill function also applies to the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz}, where the \Dstarz is in helicity state $\pm$1. The underlying kinematic distribution combined with the resolution and selection effects results in the distribution shown in Figure \ref{fig:hill}.
+where $m$ is the mass variable to be fitted, $x$ is the integration variable in the convolution and $\mathcal{K}_{Hill}$ is the normalisation constant required for the PDF. This Hill function also applies to the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz}, where the \Dstarz is in helicity state $\pm$1. The underlying kinematic distribution combined with the resolution and selection effects results in the distribution shown in Figure \ref{fig:hill}.
 
 \begin{figure}[h]
 \centering
@@ -702,15 +702,15 @@ p_{LITTLEHORNS}(x) &= \begin{cases}
 
 Again, this distribution is convolved with a Double Gaussian and linear polynomial to describe the resolution and selection effects respectively. This results in a Little Horns function,
 \begin{multline}
-\text{LittleHorns}(m) = \mathcal{N}_{LittleHorns}\ \int_{a''}^{b''} dx \biggl\{ \left[ \left( x - \frac{a''+b''}{2} \right) ^2 + \left( \frac{a''-b''}{2} \right) ^2 \right] \\
+\text{LittleHorns}(m) = \mathcal{K}_{LittleHorns}\ \int_{a''}^{b''} dx \biggl\{ \left[ \left( x - \frac{a''+b''}{2} \right) ^2 + \left( \frac{a''-b''}{2} \right) ^2 \right] \\
  DG(x|m,\sigma,f_G,R_{\sigma}) \left( \frac{1 - \xi_{LITTLEHORNS}}{b'' - a''}x + \frac{b''\xi_{LITTLEHORNS} - a''}{b'' - a''} \right) \biggr\}
 \label{eqn:littlehorns}
 \end{multline}
-where $m$ is the mass variable to be fitted, $x$ is the integration variable in the convolution and $\mathcal{N}_{LittleHorns}$ is the normalisation constant required for the PDF.
+where $m$ is the mass variable to be fitted, $x$ is the integration variable in the convolution and $\mathcal{K}_{LittleHorns}$ is the normalisation constant required for the PDF.
 
 \subsubsection{Total partially reconstructed function}
 
-The normalisation constants, $\mathcal{N}_{Horns}$, $\mathcal{N}_{Hill}$ and $\mathcal{N}_{LittleHorns}$, in Eqs~\ref{eqn:horns}, \ref{eqn:hill} and \ref{eqn:littlehorns} respectively, are required for the PDFs to be correctly normalised. This requires, $\int_{m_0}^{m_1} P(m) dm = 1$, for each of the PDFs, $P(m)$, where $m_0$ and $m_1$ are the lower and upper limits of the mass fit. Due to the complexity of the shapes, the normalisation constant is calculated numerically. 
+The normalisation constants, $\mathcal{K}_{Horns}$, $\mathcal{K}_{Hill}$ and $\mathcal{K}_{LittleHorns}$, in Eqs~\ref{eqn:horns}, \ref{eqn:hill} and \ref{eqn:littlehorns} respectively, are required for the PDFs to be correctly normalised. This requires, $\int_{m_0}^{m_1} P(m) dm = 1$, for each of the PDFs, $P(m)$, where $m_0$ and $m_1$ are the lower and upper limits of the mass fit. Due to the complexity of the shapes, the normalisation constant is calculated numerically. 
 
 Each of these partially reconstructed shapes contribute to the mass fit in the \Bm mass region below the signal peak. Table \ref{helicityamplitudes} summarises the use of the different analytic shapes described: Horns, Hill and Little Horns functions. 
 
