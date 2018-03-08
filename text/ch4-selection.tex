@@ -497,26 +497,24 @@ The reconstructed \Bm mass distributions, with constraints applied, for each of 
 This section describes the \Bm mass parameterisation developed for the two- and four-body favoured \Dz modes, namely \kpi and \kpipipi. The aim is to first develop a model that parameterises the invariant \Bm mass, and then perform fits to the \kpi and \kpipipi data from which various parameters can be extracted. This model is later applied to the suppressed \Dz decay modes when performing the simultaneous fit to measure the \CP observables, as described in Section \ref{ch:5-cpfit}. There are three components considered in the model to parameterise the \kpi and \kpipipi\ \Bm mass distributions:
 \begin{enumerate}
 \item Signal, \decay{\Bm}{\D\Kstarm} decays,
-\item Combinatorial background, where random tracks are combined in the reconstruction ,
-\item Partially reconstructed background, where one particle has been missed in the reconstruction, for example \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, where the \piz is not reconstructed.
+\item Combinatorial background,
+\item Partially reconstructed background.
 \end{enumerate}
 
-The shape of each component of the model, constraints in the signal and background shapes, and partially reconstructed yield constraints, are discussed in the following sections. Data samples are considered separately for LL and DD \KS reconstruction types as well as \runone and \runtwo data-taking periods. When developing the mass parameterisation of the \kpi and \kpipipi modes, these samples are considered separately unless the distributions were found not to be significantly different. It is expected that shapes for the LL and DD \KS reconstruction categories will be different due to their different reconstructed \Bm mass resolutions.
+Data samples are split into the following categories: LL and DD \KS reconstruction types, \runone and \runtwo data-taking periods and two-body and four-body modes, as some differences are found. 
 
 \subsection{Maximum and extended maximum likelihood}
 \label{sec:massfit:likelihood}
 
-In Chapters \ref{ch:4-selection} and \ref{ch:5-cpfit} models are constructed and a fit is performed to data  using the (extended) likelihood technique to find the best model parameters to describe the data~\cite{MLandEML,EML}. This (extended) likelihood technique is explained in this section.
-
-A model consists of a probability density function (PDF), $f(x;\theta)$, which is a function of a continuous random variable, $x$, and depends on various parameters, $\theta$, that control the shape of the distribution. The integral across an interval gives the probability that the value is within that interval, therefore the PDF is normalised to unity. An experiment performs $n$ independent observations of $x$, $\{x_1, x_2, ..., x_n\}$. The likelihood is the probability, for given values of the parameters, of observing a particular dataset,
+The maximum likelihood, or extended maximum likelihood, technique is used to find the best model parameters to describe the data~\cite{MLandEML,EML}. A model consists of a probability density function (PDF), $f(x;\theta)$, which is a function of a continuous random variable, $x$, and depends on various parameters, $\theta$, that control the shape of the distribution. The integral across an interval gives the probability that the value is within that interval, therefore the PDF is normalised to unity. An experiment performs $n$ independent observations of $x$, $\{x_1, x_2, ..., x_n\}$. The likelihood is the probability, for given values of the parameters, of observing a particular dataset,
 \begin{equation}
 L(\theta;x) = \prod_{i=1}^{n} f(x_i;\theta).
 \end{equation}
-The parameters are extracted for a given dataset by finding the best combination of the parameters that maximise the likelihood. The maximum likelihood technique can be extended to use the yield of the PDF as an extra freely varying parameter. In this case, the likelihood is multiplied by a Poisson probability (of mean $N$) for observing a sample size $n$,
+The parameters are extracted for a given dataset by finding the best combination of the parameters that maximise the likelihood~\cite{MLandEML}. The maximum likelihood technique can be extended to use the number of events described by the PDF as an extra freely varying parameter~\cite{EML}. In this case, the likelihood is multiplied by a Poisson probability (of mean $N$) for observing a sample size $n$,
 \begin{equation}
 L(\theta, N;x) = \frac{e^{-N}}{n!}N^n \prod_{i=1}^{n} f(x_i;\theta) = \frac{e^{-N}}{n!} \prod_{i=1}^{n} N f(x_i;\theta).
 \end{equation}
-where $N$ is the expected number of events; a parameter to be determined. Maximising the extended likelihood, based on a given dataset, gives estimates for the shape parameters and yield of the PDF.
+where $N$ is the expected number of events; a parameter to be determined. Maximising the extended likelihood, based on a given dataset, gives estimates for the shape parameters and number of events described by the PDF.
 
 In practice, it is easier to minimise the negative log likelihood, $-2\log(L(\theta, N;x))$. The uncertainties in the parameter estimates are given by the change in the parameter necessary to increase $-2\log L$ by one, as illustrated in Figure \ref{fig:likelihood}. For a non-symmetric likelihood distribution, this can result in different values for the positive and negative uncertainties. 
 
@@ -533,7 +531,7 @@ Figure \ref{fig:likelihood} illustrates $-2\log L$ as a function of a single par
 \subsection{Signal shape}
 \label{sec:massfit:signal}
 
-The signal shape is described as the sum of two Gaussians each with a tail extending towards lower invariant mass to account for radiative effects. These modified Gaussians are known as Crystal Ball (CB) functions~\cite{Skwarnicki:1986xj}. This Double Crystal Ball shape, as a function of reconstructed mass, $m$, is defined by,
+A single Gaussian is not sufficient to model the signal shape as the detector resolution is not straightforward, it varied with momentum and location of the tracks within the detector. The signal shape is described as the sum of two Gaussians each with a tail extending towards lower invariant mass to account for radiative effects. These modified Gaussians are known as Crystal Ball (CB) functions~\cite{Skwarnicki:1986xj}. This Double Crystal Ball shape, as a function of reconstructed mass, $m$, is defined by,
 \begin{equation}
 \mathrm{DCB}(m| \mu,\sigma,\alpha,n,f_{\sigma}) = f_{cb} \cdot \mathrm{CB}(m| \mu,\sigma,\alpha,n) + (1-f_{cb}) \cdot \mathrm{CB}(m|\mu,f_{\sigma}\sigma,\alpha,n),
 \label{DCBshape}
@@ -548,13 +546,13 @@ where
 \end{equation*}
 where $\mu$ is the peak position, $\sigma$ is the width of the Gaussian, $n$ parameterises the power-law tail, which starts $\alpha\sigma$ away from the peak position. The parameters $f_{cb}$ and $(1-f_{cb})$ are the fraction of the yield given to each CB and $f_{\sigma}$ is the ratio of the widths between the two CBs. The signal PDF, $P_{sig}(m)$, must be normalised to unity with normalisation constant, $\mathcal{N}_{sig}$, such that,
 \begin{equation}
-P_{sig}(m) = \mathcal{N}_{sig} . DCB(m| \mu,\sigma,\alpha,n,f_{\sigma}) \text{	where, } \int_{m_0}^{m_1} P_{sig}(m)\ dm = 1 \text{ , }
+P_{sig}(m) = \mathcal{K}_{sig} . DCB(m| \mu,\sigma,\alpha,n,f_{\sigma}) \text{	where, } \int_{m_0}^{m_1} P_{sig}(m)\ dm = 1 \text{ , }
 \end{equation}
 and $m_0$ and $m_1$ are the lower and upper limits of the mass fit, respectively.
 
 The \Bm mass distributions from simulated signal events were found to be consistent between \runone and \runtwo data samples, but slightly different for \kpi and \kpipipi modes. Therefore the signal shape for different data-taking periods is the same, but different between \kpi and \kpipipi modes. 
 
-Unbinned maximum likelihood fits are performed to simulated signal samples, as shown in Figure \ref{signalfits}, and the shape parameters obtained from these fits are detailed in Table \ref{signalparameters}. The tail parameters, $\alpha$ and $n$, are highly correlated, therefore in order to prevent arbitrary variations between the two parameters, $n$ is fixed in the fits to the simulated samples. The variation in this parameter does not have significant effect on the quality of the fit, therefore $n$ is fixed to a sensible value of unity. For the signal shape in the mass fit to data for the \kpi and \kpipipi modes, allowing all the parameters to vary would result in an unstable fit. The tail parameters, $\alpha$ and $n$, and the ratio of the widths between the CBs, $f_{\sigma}$, are fixed from simulation. However, it is necessary to allow for some variation in the signal shape when performing the fit to data, as parameters, such as the peak position and width, may take slightly different values in data due to possible imperfections in the simulation of reconstruction and resolution effects in \lhcb. Therefore, the peak position and width, $\mu$ and $\sigma$, are allowed to vary.
+Unbinned maximum likelihood fits are performed to simulated signal samples, as shown in Figure \ref{signalfits}, and the shape parameters obtained from these fits are detailed in Table \ref{signalparameters}. The residuals in these plots are defined as the difference between the data and the projection of the PDF in the centre of the bin, divided by the Poisson error on the number of candidates in that bin. The tail parameters, $\alpha$ and $n$, are highly correlated, therefore in order to prevent arbitrary variations between the two parameters, $n$ is fixed in the fits to the simulated samples. The variation in this parameter does not have significant effect on the quality of the fit, therefore $n$ is fixed to one. Allowing all the parameters of the signal shape to vary would result in an unstable fit. The tail parameters, $\alpha$ and $n$, and the ratio of the widths between the CBs, $f_{\sigma}$, are fixed from simulation. However, it is necessary to allow for some variation in the signal shape when performing the fit to data, as parameters, such as the peak position and width, may take slightly different values in data due to imperfections in the simulation of reconstruction and resolution effects of the \lhcb detector. Therefore, the peak position and width, $\mu$ and $\sigma$, are allowed to vary.
 
 \begin{figure}[h]
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_LL_KPi.pdf}
@@ -566,7 +564,7 @@ Unbinned maximum likelihood fits are performed to simulated signal samples, as s
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_DD_KPiPiPi.pdf}
 \put(-390,70) {(c)}
 \put(-180,70) {(d)}
-\caption{Results of the unbinned maximum likelihood fits to the \Bm mass distribution from simulated signal samples with \runone and \runtwo data combined for (a) \kpi LL, (b) \kpi DD, (c) \kpipipi LL, and (d) \kpipipi DD. The black points represent the data, while the blue curve is the projection of the optimised shape of the form given in Eq.~\ref{DCBshape}. The residuals are shown at the bottom of each plot; these are defined as the difference between the data and the projection of the PDF in the centre of the bin, divided by the uncertainty in the data.}
+\caption{Results of the unbinned maximum likelihood fits to the \Bm mass distribution from simulated signal samples with \runone and \runtwo data combined for (a) \kpi LL, (b) \kpi DD, (c) \kpipipi LL, and (d) \kpipipi DD. The black points represent the data, while the blue curve is the projection of the optimised shape of the form given in Eq.~\ref{DCBshape}. The residuals are shown at the bottom of each plot.}
 \label{signalfits}
 \end{figure}
 
@@ -593,9 +591,11 @@ $f_{cb}$ & $0.82 \pm 0.03$ & $0.84 \pm 0.02$ & $0.80 \pm 0.03$ & $0.81 \pm 0.04	
 \subsection{Combinatorial background}
 \label{sec:massfit:combinatorial}
 
-The combinatorial background is formed of random tracks that do not correspond to the signal decay, being combined in the reconstruction. Examples of this background include, random kaon and pion tracks in the detector incorrectly reconstructed to form a \Dz meson, real reconstructed \Dz mesons combined with a random \KS meson, or random pion tracks combined to make a incorrectly reconstructed \KS meson. The combinatorial background is modelled using an exponential PDF, $P_{bkg}$, given by,
+The combinatorial background is formed of random tracks that do not correspond to the signal decay, being combined in the reconstruction. 
+%Examples of this background include, random kaon and pion tracks in the detector incorrectly reconstructed to form a \Dz meson, real reconstructed \Dz mesons combined with a random \KS meson, or random pion tracks combined to make a incorrectly reconstructed \KS meson. 
+The combinatorial background is modelled using an exponential PDF, $P_{bkg}$, given by,
 \begin{equation}
-P_{bkg} = \mathcal{N}_{bkg}\ e^{\beta m} \text{\hspace{5pt} with, } \mathcal{N}_{bkg} = \frac{\beta}{e^{\beta m_1} - e^{\beta m_0}} \text{ , }
+P_{bkg} = \mathcal{K}_{bkg}\ e^{\beta m} \text{\hspace{5pt} with, } \mathcal{K}_{bkg} = \frac{\beta}{e^{\beta m_1} - e^{\beta m_0}} \text{ , }
 \label{combpdf}
 \end{equation}
 where $m_0$ and $m_1$ are the lower and upper limits of the mass fit, respectively, and $\beta$ is the slope parameter that is allowed to vary. 
@@ -605,14 +605,14 @@ where $m_0$ and $m_1$ are the lower and upper limits of the mass fit, respective
 \subsection{Partially reconstructed backgrounds}
 \label{sec:massfit:partreco}
 
-Partially reconstructed decays refer to those in which one or more particle, in a \B decay similar to the signal decay, has failed to be reconstructed, resulting in peaking structures in the \B mass spectrum at a reconstructed mass below the signal peak. The partially reconstructed decays in this analysis are of the form \decay{\B}{\Dstar\Kstar}, where the \Dstar decays to a \Dz meson and a pion or photon that is missed when reconstructing the decay. These backgrounds are observed at a reconstructed invariant mass below the signal peak due to the single particle missed from the invariant mass sum. Three partially reconstructed decays contribute to the invariant mass fit:
+Partially reconstructed decays refer to those in which one or more particle, in a \B decay similar to the signal decay, has failed to be reconstructed, resulting in peaking structures in the \B mass spectrum at a reconstructed mass below the signal peak. The partially reconstructed decays in this analysis are of the form \decay{\B}{\Dstar\Kstar}, where the \Dstar decays to a \Dz meson and a pion or photon that is missed when reconstructing the decay. Three partially reconstructed decays contribute to the invariant mass fit:
 
 \begin{itemize}
 \item{\decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}}
 \item{\decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm}}
 \item{\decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm}}
 \end{itemize}
-where the particle in square brackets corresponds to the missed particle. Each \decay{\B}{\Dstar\Kstar} decay is a Scalar $\to$ Vector Vector decay, therefore due to the conservation of angular momentum there are three different helicity amplitudes to consider. Each of these helicity amplitudes produces a \Dstar particle in a different helicity state, labelled +1, 0, -1. The helicity state of the \Dstar and the spin of the missing particle in the subsequent \Dstar decay determines the distribution of the reconstructed \B mass. The helicity states +1 and -1 produce the same distribution in \Bm mass, therefore for the mass parameterisation these states are combined and collectively referred to as $\pm$1. There are the 0 and $\pm$1 \Dstar helicity states for each of the three partially reconstructed decay modes, which results in six different shapes to be modelled in the mass fit:
+where the particle in square brackets corresponds to the missed particle. Each \decay{\B}{\Dstar\Kstar} decay is a Scalar $\to$ Vector Vector decay, therefore due to the conservation of angular momentum there are three different helicity amplitudes to consider. Each of these helicity amplitudes produces a \Dstar particle in a different helicity state, labelled +1, 0, -1. The helicity state of the \Dstar and the spin of the missing particle in the subsequent \Dstar decay determines the distribution of the reconstructed \B mass. The helicity states +1 and -1 produce the same distribution in \Bm mass, therefore for the mass parameterisation these states are combined and collectively referred to as $\pm$1. Therefore, there are six different shapes to be modelled in the mass fit:
 \begin{itemize}
 \item{\decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, \Dstarz helicity: 0} 
 \item{\decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, \Dstarz helicity: $\pm$1} 
@@ -621,13 +621,13 @@ where the particle in square brackets corresponds to the missed particle. Each \
 \item{\decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm}, \Dstarp helicity: 0}
 \item{\decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm}, \Dstarp helicity: $\pm$1}
 \end{itemize}
-All of these shapes are modelled using three analytic PDFs; Horns, Hill and Little Horns, developed by Paolo Gandini and Shu-Faye Cheung for the study of \decay{\Bm}{\D(hh')\Km} and \decay{\Bz}{\D\Kstarz} decays~\cite{LHCb-PAPER-2017-021,LHCb-PAPER-2016-006}. These shapes, described in the following sections, are physically motivated, exploiting the decay kinematics of these partially reconstructed decays.
+All of these shapes are modelled using three analytic PDFs; Horns, Hill and Little Horns, developed by Paolo Gandini and Shu-Faye Cheung for the study of \decay{\Bm}{\D(hh')\Km} and \decay{\Bz}{\D\Kstarz} decays~\cite{LHCb-PAPER-2017-021,LHCb-PAPER-2016-006}. These shapes are physically motivated, exploiting the decay kinematics of these partially reconstructed decays.
 
 \subsubsection{Horns function}
 
 Consider the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz}, where the \Dstarz is in helicity state 0. The helicity of the \Dstarz, the fact that the missing \piz meson is spin-0 and the requirement that angular momentum must be conserved mean that the \piz meson will decay predominantly along $\theta = 0^{\circ}$ or $\theta = 180^{\circ}$. When $\theta = 0^{\circ}$, the fraction of momentum carried by the \piz in the \Bm rest frame is at its smallest, resulting in a larger reconstructed \Bm mass. Conversely, if $\theta = 180^{\circ}$, the fraction of momentum carried by the \piz is greatest, leading to a lower reconstructed \Bm mass. The distribution of the helicity angle of the missing particle, $\theta$, has a one-to-one correspondence with its momentum and therefore the reconstructed \Bm mass. 
 
-This distribution is modelled using the Horns function, described below. The underlying kinematic distribution is a parabola, $p_{HORNS}(x)$, with kinematics endpoints $a$ and $b$ where
+This distribution is modelled using the Horns function. The underlying kinematic distribution is a parabola, $p_{HORNS}(x)$, with kinematics endpoints $a$ and $b$, determined in the fit, where
 \begin{align}
 p_{HORNS}(x) &= \begin{cases}
 \left(x - \frac{a+b}{2}\right)^2, & \text{ if $a \leq x \leq b$}\\ 	
@@ -731,26 +731,26 @@ Decay mode & Helicity of \Dstar & $\theta$ dependence & PDF \\
 \label{helicityamplitudes}
 \end{table}
 
-In order to obtain values for the various parameters in these shapes simulated samples were generated and the full reconstruction and selection was applied. The parameters for the partially reconstructed shapes are obtained from performing individual fits to the simulated samples using the functions given by equations \ref{eqn:horns}, \ref{eqn:hill} and \ref{eqn:littlehorns}, the fits are shown in Figures \ref{partrecofitsLL} and \ref{partrecofitsDD}. All the parameters for these shapes are fixed in the mass fit from these fits to simulated distributions. These simulated samples forced the \Dz meson to decay to \Km\pip. The kinematics of the \Dz meson decay does not have a significant effect on the shape of the partially reconstructed background, therefore the same shapes are used for all \Dz decay modes. Distributions in \Bm mass of \runone and \runtwo simulated events for partially reconstructed decays are considered sufficiently similar to use the same shapes for both data-taking periods.
+In order to obtain values for the various parameters in these shapes simulated samples were generated and the full reconstruction and selection was applied. The parameters for the partially reconstructed shapes are obtained from performing individual unbinned maximum likelihood fits to the simulated samples using the functions given by equations \ref{eqn:horns}, \ref{eqn:hill} and \ref{eqn:littlehorns}. The fits to the samples containing DD events are shown in Figure \ref{partrecofitsDD}, those for the LL samples are similar. All the parameters for these shapes are fixed in the mass fit from these fits to simulated distributions. These simulated samples forced the \Dz meson to decay to \Km\pip. The decay mode of the \Dz meson does not have a significant effect on the shape of the partially reconstructed background, therefore the same shapes are used for all \Dz decay modes. Distributions in \Bm mass of \runone and \runtwo simulated events for partially reconstructed decays are considered sufficiently similar to use the same shapes for both data-taking periods.
 
-\begin{figure}[h]
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi010_LL.pdf}
-\put(-170,70) {(a)}
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi101_LL.pdf}
-\put(-170,70) {(b)}
-\hfill
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bugamma010_LL.pdf}
-\put(-170,70) {(c)}
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bugamma101_LL.pdf}
-\put(-170,70) {(d)}
-\hfill
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi010_LL.pdf}
-\put(-170,70) {(e)}
-\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi101_LL.pdf}
-\put(-170,70) {(f)}
-\caption{Results of the unbinned maximum likelihood fits to the \Bm mass distribution for $B \to D^*K^*$ \runone simulated samples in all the different modes for LL candidates (a) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 0, (b) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} $\pm$1, (c) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 0, (d) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} $\pm$1, (e) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 0, and (f) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} $\pm$1. The residuals are shown at the bottom of each plot; these are defined as the difference between the data and the projection divided by the uncertainty in the data.}
-\label{partrecofitsLL}
-\end{figure}
+%\begin{figure}[h]
+%\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi010_LL.pdf}
+%\put(-170,70) {(a)}
+%\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi101_LL.pdf}
+%\put(-170,70) {(b)}
+%\hfill
+%\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bugamma010_LL.pdf}
+%\put(-170,70) {(c)}
+%\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bugamma101_LL.pdf}
+%\put(-170,70) {(d)}
+%\hfill
+%\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi010_LL.pdf}
+%\put(-170,70) {(e)}
+%\includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi101_LL.pdf}
+%\put(-170,70) {(f)}
+%\caption{Results of the unbinned maximum likelihood fits to the \Bm mass distribution for $B \to D^*K^*$ \runone simulated samples in all the different modes for LL candidates (a) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 0, (b) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} $\pm$1, (c) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 0, (d) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} $\pm$1, (e) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 0, and (f) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} $\pm$1. The residuals are shown at the bottom of each plot.}
+%\label{partrecofitsLL}
+%\end{figure}
 
 \begin{figure}[h]
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/Bupi010_DD.pdf}
@@ -767,7 +767,7 @@ In order to obtain values for the various parameters in these shapes simulated s
 \put(-170,70) {(e)}
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/Bdpi101_DD.pdf}
 \put(-170,70) {(f)}
-\caption{Results of the unbinned maximum likelihood fits to the \Bm mass distribution for $B \to D^*K^*$ \runone simulated samples in all the different modes for DD candidates (a) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 0, (b) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} $\pm$1, (c) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 0, (d) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} $\pm$1, (e) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 0, and (f) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} $\pm$1. The residuals are shown at the bottom of each plot; these are defined as the difference between the data and the projection divided by the uncertainty in the data.}
+\caption{Results of the unbinned maximum likelihood fits to the \Bm mass distribution for $B \to D^*K^*$ \runone simulated samples in all the different modes for DD candidates (a) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} 0, (b) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm} $\pm$1, (c) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} 0, (d) \decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm} $\pm$1, (e) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} 0, and (f) \decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm} $\pm$1. The residuals are shown at the bottom of each plot.}
 \label{partrecofitsDD}
 \end{figure}
 
@@ -800,7 +800,7 @@ Mode & Branching ratio \\
 \decay{\Bm}{(\decay{\Dstarz}{\Dz\gamma})\Kstarm} & $(3.1 \pm 0.6) \times 10^{-4}$ \\
 \decay{\Bd}{(\decay{\Dstarp}{\Dz\pip})\Kstarm} & $(2.2 \pm 0.4) \times 10^{-4}$ \\
 \end{tabular}
-\caption{Branching ratios for the different partially reconstructed decay modes.}
+\caption{Branching ratios for the different partially reconstructed decay modes. These are taken from Ref~\cite{PDG2016}, constructed by multiplying the relevant \B and \Dstar branching fractions.}
 \label{partrecoBRs}
 \end{table}
 
@@ -833,7 +833,7 @@ P_{tot}(x_i;\theta, N) = N_{sig}P_{sig} + N_{comb}P_{comb} + N_{partreco}P_{part
 \end{equation}
 where $x_i$ is the reconstructed \Bm mass of the candidate and $\theta$ are the set of parameters to be optimised, namely $\{\mu, \sigma, \beta, f_0\}$, along with the expected yields, $N$, of the signal, combinatorial and partially reconstructed PDFs, $\{N_{sig}, N_{comb}, N_{partreco}\}$, as additional freely varying parameters to be determined, as described in Section \ref{sec:massfit:likelihood}. The signal PDF, $P_{sig}$, is given by Equation~\ref{DCBshape}, the combinatorial PDF, $P_{comb}$, is given by Equation~\ref{combpdf}, where the slope parameter $\beta$ is able to vary in the fit, and the partially reconstructed PDF, $P_{partreco}$, is given by Equation~\ref{partrecofunction}. The yield of the signal and combinatorial PDFs, $N_{sig}$ and $N_{comb}$, are left to vary without constraint, as well as the peak position, $\mu$, and width, $\sigma$, of the signal PDF. The only parameters able to vary in the partially reconstructed background are the yield ratio between the 0 and $\pm$1 amplitudes, $f_0$, and the overall yield, $N_{partreco}$.
 
-Figures \ref{massfitskpi} and \ref{massfitsk3pi} show the results of the extended maximum likelihood fits to the invariant B mass distribution in the \kpi and \kpipipi favoured modes respectively for LL and DD candidates in both Run 1 and Run 2. The estimated signal yields extracted from these fits are given in Table \ref{signalyields}. It can be seen that the yield in the \kpi mode is almost twice as large as that in the \kpipipi mode, which is primarily a result of the lower reconstruction efficiency and additional PID requirements necessary due to the two additional tracks in the four-body mode. Table \ref{signalyields} also shows that the yield per unit of integrated luminosity is about 3 times higher in \runone compared to \runtwo, which is driven by the increase in centre-of-mass energy in \runtwo.
+Figures \ref{massfitskpi} and \ref{massfitsk3pi} show the results of the extended maximum likelihood fits to the invariant B mass distribution in the \kpi and \kpipipi favoured modes respectively for LL and DD candidates in both Run 1 and Run 2. The estimated signal yields extracted from these fits are given in Table \ref{signalyields}. It can be seen that the yield in the \kpi mode is almost twice as large as that in the \kpipipi mode, which is primarily a result of the lower reconstruction efficiency due to the two additional tracks in the four-body mode, and additional PID requirements necessary to reduce faking backgrounds. Table \ref{signalyields} also shows that the yield per unit of integrated luminosity is about 3 times higher in \runone (3\invfb) compared to \runtwo (1.8\invfb), which is driven by the increase in centre-of-mass energy in \runtwo. The gain in yield between Run 1 and Run 2 is not the same for the two- and four-body modes due to the difference in trigger efficiencies.
 
 The full fit results for the \kpi and \kpipipi fits are shown in Tables \ref{fitresultskpi} and \ref{fitresultsk3pi} respectively. The values of $\mu$ are all consistent with the known \Bm mass of 5279.3\mevcc. The slight variations in the values are primarily due to the statistical uncertainty in the data. The widths of the signal shape are found to be smaller in the LL samples compared to the DD samples, which is expected as the resolution is better when forming a vertex from long tracks due to the better precision arising from reconstructing tracks in the \velo. The parameter $f_0$ is the yield ratio between 0 and $\pm$1 helicity amplitudes in the partially reconstructed background, which is purely dependent on the physics of the decay, so should not vary depending on the data sample used. As observed in data, $f_0$ is found to be consistent between all of the categories in the \kpi and \kpipipi mass fits separately.
 
