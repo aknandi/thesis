@@ -10,19 +10,49 @@
 
 %\minitoc
 
-In this section the \CP observables are measured by performing an extended maximum likelihood fit to \btodkst candidates in data simultaneously for each \Dz decay mode for both \Bp and \Bm decays. This fit is referred to in this thesis as the \CP fit. The setup of the \CP fit is outlined in Section \ref{sec:cpfit:setup}, followed by the fit results in Section \ref{sec:cpfit:results}. Section \ref{sec:systematics} outlines the systematic uncertainties and the results of the \CP observables are summarised in Section \ref{sec:cpfit:summary}.
+In this section the \CP observables are measured by performing an extended maximum likelihood fit to \btodkst candidates in data simultaneously for each \Dz decay mode for both \Bp and \Bm decays. This fit is referred to in this thesis as the \CP fit. The mass parametersation used in the \CP fit is described in Section \ref{sec:cpfit:model}, before detailing the setup of the \CP fit in Section \ref{sec:cpfit:setup}. The \CP fit results are given in Section \ref{sec:cpfit:results}, followed by an outline of the systematic uncertainties in Section \ref{sec:systematics}. Section \ref{sec:cpfit:summary} presents a summary of the results of the \CP observables.
 
-\section{Setup of \CP fit}
-\label{sec:cpfit:setup}
+\section{Mass parameterisation of the \CP fit}
+\label{sec:cpfit:model}
 
-The \CP fit is performed on the invariant mass of \btodkst candidates. A simultaneous fit strategy is employed to fit each of the 7 \Dz decay modes as well as two bins of \B charge (\Bp and \Bm), two bins of \KS reconstruction type (LL and DD) and two bins of data type (\runone and \runtwo), resulting in 56 bins in total. The parameters extracted from this simultaneous fit are the \CP observables: \Akpi, \Akk, \Apipi, \Rkk, \Rpipi, \Rptwo, \Rmtwo, \Akpipipi, \Apipipipi, \Rpipipipi, \Rpfour and \Rmfour, which relate to the physics parameters of interest as shown in Equations \ref{exp_Acp} - \ref{exp_R4pi}.The fit is performed simultaneously as the \CP observables being measured relate to the ratios of yields in different \Dz modes and different \B meson charges, therefore it is necessary to perform a fit that includes separate data samples associated with each of the modes and charges. 
+The mass fit model described in Section \ref{sec:massfit} is used to model all \Dz modes and \B charges in the \CP fit. However, when generalising the model developed for the charge combined favoured modes there must be additional factors taken into consideration, such as \CP violation in the background components and additional sources of backgrounds in other \Dz decay modes.
 
-The simultaneous fit extracts the \CP observables directly, rather than measuring the pure yields and indirectly converting them into the \CP observables. The strategy avoids the need to deal with combining results from different categories, which is complicated due to the many correlations between the variables, and leaves fewer fit parameters to be dealt with. 
+\subsection{Choice of fit range}
+\label{sec:cpfit:range}	
+
+The relatve yields for the partially reconstructed decays are fixed in the charge combined mass fit to the favoured modes, as described in Section \ref{sec:massfit:partreco}. However, the \CP is performed to all of the different \Dz modes separated by \B charge. For the favoured \kpi and \kpipipi decays is reasonable to assume that no \CP violation occurs, i.e. the relative yields for \Bm and \Bp are the same. However in the other \Dz final states, for example \pik, \CP violation is expected in the partially reconstructed background for which the \CP violation parameters are not known. Therefore, it is not possible make any constraints on the yield ratios in these modes. The fit that would result from fitting six individual yields with an order of magnitude less data would be unstable and this lack of constraint in the low mass region would lead to a large amount of freedom in the combinatorial background, significantly affecting the precision of the signal yield. 
+
+The overlap of the partially reconstructed and signal peaks is very small. There are a number of advantages to raising the lower range of the mass parameterisation up to 5230 \mev, which only removes 0.4\% of signal. The advantages include avoiding the need to fit the various partially reconstructed yields in each of the other \Dz decays modes, which is problematic due to expected \CP violation. A further benefit is that low level broad backgrounds, for example \decay{\Bm}{\D\Kstarm\piz} and \decay{\Bd}{\Kp\pim\pip\pim}, which may be present in the range 4900 - 5200 \mev do not need to considered as sources of systematics uncertainty. 
+
+\subsection{Partially reconstructed yield in \CP fit}
+\label{sec:cpfit:partrecoyields}
+
+The modelling of the partially reconstructed background is described in detail in Section \ref{sec:massfit:partreco}. The low mass limit in the \CP fit is 5230\mevcc, which removes almost all of the partially reconstructed background. The shape and yield of the small amount of partially reconstructed background present in all \Dz decay mode categories above 5230 \mev is determined and fixed from the fits to data of the \kpi and \kpipipi decays, taking into account the smaller branching fractions of the \Dz decays. Table \ref{partrecofixedyields} shows the fixed values of the total partially reconstructed yield in the \CP fit. Due to the assumptions present in the initial fit, uncertainties in the yield and shape and possible asymmetries in distribution between \Bp and \Bm are evaluated as systematic uncertainties, as discussed in Section \ref{sec:systematics:partreco}. 
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c|cc|cc}
+\hline
+& \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
+& LL & DD & LL & DD \\
+\hline
+$K\pi$ & 0.55 & 1.03 & 1.18 & 1.35 \\
+$KK$ & 0.060 & 0.112 & 0.116 & 0.131 \\
+$\pi\pi$ & 0.019 & 0.034 & 0.041 & 0.049 \\
+$\pi K$ & 0.008 & 0.012 & 0.017 & 0.016 \\
+$K\pi\pi\pi$ & 0.34 & 0.52 & 0.55 & 1.31 \\
+$\pi\pi\pi\pi$ & 0.031 & 0.045 & 0.050 & 0.122  \\
+$\pi K\pi\pi$ & 0.004 & 0.006 & 0.007 & 0.014 \\
+\hline
+\end{tabular}
+\caption{Partially reconstructed yields fixed in the \CP fit. The values show \Bp and \Bm combined; each of these numbers are divided equally between the \Bp and \Bm categories. Uncertainties for these values are O(10\%).}
+\label{partrecofixedyields}
+\end{table}
 
 \subsection{Additional background component in \kk mass spectrum}
 \label{sec:cpfit:Lb2LcKst}
 
-The mass fit model described in Section \ref{sec:massfit} is used to model all \Dz modes in the \CP fit. However, there is an additional source of background from \decay{\Lb}{\Lc\Kstarm}, described in Section \ref{sec:backgrounds:Lb2LcKst}, which is included in the \kk model only. The shape used to model this \decay{\Lb}{\Lc\Kstarm} contribution is a Cruijff PDF, defined as,
+An additional source of background is present in the \kk mass spectrum from \decay{\Lb}{\Lc\Kstarm}, described in Section \ref{sec:backgrounds:Lb2LcKst}. The shape used to model this \decay{\Lb}{\Lc\Kstarm} contribution is a Cruijff PDF, defined as,
 \begin{equation}
   P_{\Lambda}(m; \mu,\sigma_L,\sigma_R,\alpha_L,\alpha_R)=
 \begin{cases}
@@ -61,38 +91,12 @@ $\alpha_R$ & $-0.04 \pm 0.06$ \\
 
 The PDF is assumed to be the same in each \kk category of the \CP fit because there is such a low number of events that contribute to this background that the possible variations in the shape in the different categories has negligible effect on the results. The \decay{\Lb}{\Lc(p\kaon\pi)\Kstarm} yield as a fraction of the signal yield in the favoured \kpi mode, $f_{\Lambda}$, is allowed to vary in the simultaneous fit. This fractional yield is required to be the same for all fit categories.
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Choice of fit range}
-\label{sec:cpfit:range}	
+\section{Setup of \CP fit}
+\label{sec:cpfit:setup}
 
-The relatve yields for the partially reconstructed decays are fixed in the charge combined mass fit to the favoured modes, as described in Section \ref{sec:massfit:partreco}. However, the \CP is performed to all of the different \Dz modes separated by \B charge. For the favoured \kpi and \kpipipi decays is reasonable to assume that no \CP violation occurs, i.e. the relative yields for \Bm and \Bp are the same. However in the other \Dz final states, for example \pik, \CP violation is expected in the partially reconstructed background for which the \CP violation parameters are not known. Therefore, it is not possible make any constraints on the yield ratios in these modes. The fit that would result from fitting six individual yields with an order of magnitude less data would be unstable and this lack of constraint in the low mass region would lead to a large amount of freedom in the combinatorial background, significantly affecting the precision of the signal yield. 
+The \CP fit is performed on the invariant mass of \btodkst candidates. A simultaneous fit strategy is employed to fit each of the 7 \Dz decay modes as well as two bins of \B charge (\Bp and \Bm), two bins of \KS reconstruction type (LL and DD) and two bins of data type (\runone and \runtwo), resulting in 56 bins in total. The parameters extracted from this simultaneous fit are the \CP observables: \Akpi, \Akk, \Apipi, \Rkk, \Rpipi, \Rptwo, \Rmtwo, \Akpipipi, \Apipipipi, \Rpipipipi, \Rpfour and \Rmfour, which relate to the physics parameters of interest as shown in Equations \ref{exp_Acp} - \ref{exp_R4pi}.The fit is performed simultaneously as the \CP observables being measured relate to the ratios of yields in different \Dz modes and different \B meson charges, therefore it is necessary to perform a fit that includes separate data samples associated with each of the modes and charges. 
 
-The overlap of the partially reconstructed and signal peaks is very small. There are a number of advantages to raising the lower range of the mass parameterisation up to 5230 \mev, which only removes 0.4\% of signal. The advantages include avoiding the need to fit the various partially reconstructed yields in each of the other \Dz decays modes, which is problematic due to expected \CP violation. A further benefit is that low level broad backgrounds, for example \decay{\Bm}{\D\Kstarm\piz} and \decay{\Bd}{\Kp\pim\pip\pim}, which may be present in the range 4900 - 5200 \mev do not need to considered as sources of systematics uncertainty. 
-
-\subsection{Partially reconstructed yield in \CP fit}
-\label{sec:cpfit:partrecoyields}
-
-The modelling of the partially reconstructed background is described in detail in Section \ref{sec:massfit:partreco}. The low mass limit in the \CP fit is 5230\mevcc, which removes almost all of the partially reconstructed background. The shape and yield of the small amount of partially reconstructed background present in all \Dz decay mode categories above 5230 \mev is determined and fixed from the fits to data of the \kpi and \kpipipi decays, taking into account the smaller branching fractions of the \Dz decays. Table \ref{partrecofixedyields} shows the fixed values of the total partially reconstructed yield in the \CP fit. Due to the assumptions present in the initial fit, uncertainties in the yield and shape and possible asymmetries in distribution between \Bp and \Bm are evaluated as systematic uncertainties, as discussed in Section \ref{sec:systematics:partreco}. 
-
-\begin{table}[h]
-\centering
-\begin{tabular}{c|cc|cc}
-\hline
-& \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
-& LL & DD & LL & DD \\
-\hline
-$K\pi$ & 0.55 & 1.03 & 1.18 & 1.35 \\
-$KK$ & 0.060 & 0.112 & 0.116 & 0.131 \\
-$\pi\pi$ & 0.019 & 0.034 & 0.041 & 0.049 \\
-$\pi K$ & 0.008 & 0.012 & 0.017 & 0.016 \\
-$K\pi\pi\pi$ & 0.34 & 0.52 & 0.55 & 1.31 \\
-$\pi\pi\pi\pi$ & 0.031 & 0.045 & 0.050 & 0.122  \\
-$\pi K\pi\pi$ & 0.004 & 0.006 & 0.007 & 0.014 \\
-\hline
-\end{tabular}
-\caption{Partially reconstructed yields fixed in the \CP fit. The values show \Bp and \Bm combined; each of these numbers are divided equally between the \Bp and \Bm categories. Uncertainties for these values are O(10\%).}
-\label{partrecofixedyields}
-\end{table}
+The simultaneous fit extracts the \CP observables directly, rather than measuring the pure yields and indirectly converting them into the \CP observables. The strategy avoids the need to deal with combining results from different categories, which is complicated due to the many correlations between the variables, and leaves fewer fit parameters to be dealt with. 
 
 \subsection{Corrections to yield ratios}
 \label{sec:cpfit:efficiencies}
@@ -218,7 +222,7 @@ $\epsilon_{veto}(\pi K \pi\pi)$ & $0.895 \pm 0.005$ & $0.882 \pm 0.003$ & $0.916
 \label{vetoeff}
 \end{table}
 
-\subsection{Corrections to asymmetries}
+\subsection{Asymmetry corrections}
 \label{sec:cpfit:asymmetries}
 
 Raw asymmetries calculated directly from the yields contain contributions from several effects. Firstly, there is the physics asymmetry due to \CP violation effects, $A_{phys}$, which is the physical parameter to be measured. In order to make an accurate measurement of the physics asymmetries of interest it is necessary to consider and correct for other sources of asymmetry that would affect the measurement. These asymmetries are:
@@ -231,7 +235,7 @@ These asymmetries all contribute to produce the raw observed asymmetry measured 
 A_{phys} = A_{raw} - A_{prod} - A_{det} \text{ .}
 \label{asymmetries}
 \end{equation} 
-Corrections are determined for the production asymmetry and detector asymmetry, which are then applied as a fixed input such that the \CP fit provides a direct measurement of the physics asymmetries of interest. The corresponding uncertainties are considered as a source of systematic uncertainty, as described in Section \ref{sec:systematics}.
+The detection asymmetry also affects the charge dependent yield ratios in the ADS modes. Corrections are determined for the production asymmetry and detector asymmetry, which are then applied as a fixed input such that the \CP fit provides a direct measurement of the physics asymmetries of interest. The corresponding uncertainties are considered as a source of systematic uncertainty, as described in Section \ref{sec:systematics}.
 
 \subsubsection{Production asymmetry}
 
@@ -241,7 +245,7 @@ The \Bpm production asymmetry is estimated using the measurements of production 
 
 The detection asymmetry arises from differences in interactions of matter and antimatter particles with the matter detector. The \btodkst decay presented in this thesis contains a final state consisting of purely pions and kaons, therefore the pion and kaon detection asymmetry are the values of interest. The pion detection asymmetry has been measured at \lhcb to be $(0.08 \pm 0.30)\%$~\cite{pi_det_asym}. However, for the kaon asymmetry the best measured value at \lhcb is not the pure kaon asymmetry, but $A_{K\pi} = A_K - A_{\pi}$, where $A_K$ is the pure kaon asymmetry and $A_{\pi}$ is the pure pion asymmetry. The $K\pi$ asymmetry has been measured in bins of kaon momentum~\cite{k_det_asym}, therefore the value of $A_{K\pi}$ for this thesis is calculated performing a weighted average based on the kaon momentum distribution in the simulated signal sample. The value of $A_{K\pi}$ obtained is $(-1.06 \pm 0.16)\%$. Both $A_{\pi}$ and $A_{K\pi}$ values are obtained using \runone data. The changes to the detector between the data-taking periods are not expected to significantly affect the $A_{\text{det}}$ measurement, therefore the same results are applied to \runone and \runtwo data. 
 
-The total detection asymmetry correction to be applied varies for the different \CP observables, depending on the number of charged kaons and pions in the final state and the structure of the \CP observable being measured. Table \ref{detectionasymmetry} summarises the different detection asymmetry factors that apply to each observable. 
+This effect must be corrected for any \CP observable that is sensitive to the charge of the \B meson decay. Therefore, it affects both the asymmetries and the yield ratios in the ADS modes, which are considered separately for \Bm and \Bp. The total detection asymmetry correction to be applied varies for the different \CP observables, depending on the number of charged kaons and pions in the final state and the structure of the \CP observable being measured. Table \ref{detectionasymmetry} summarises the different detection asymmetry factors that apply to each observable. The correction for the asymmetries is additive as given in Equation \ref{asymmetries}, however, when dealing with the yield ratios the correction is a ratio of efficiencies, which must be multiplied by the raw yield ratio to correct for the detection asymmetry effect.
 
 {\footnotesize
 \begin{table}[h]
@@ -268,9 +272,9 @@ $R_{K\pi\pi\pi}^-$ & $B^- \to [K^+\pi^-\pi^+\pi^-]_D[K_s^0\pi^-]_{K^*}$ & $\epsi
 \subsection{Likelihood function}
 \label{sec:cpfit:likelihood}
 
-The \CP fit involves performing an extended maximum likelihood fit, as described in Section \ref{sec:massfit:likelihood}, in order to extract the \CP observables. A likelihood is assigned to each candidate in a given category by constructing the signal and background PDFs. The total extended log-likelihood, $\log\mathcal{L}_{tot}$, is the sum of the extended log-likelihoods for the individual candidates in each of the different categories: \B charge ($\{+,-\}$, indexed $q$), \KS reconstruction type ($\{\text{LL},\text{DD}\}$, indexed $t$), data type ($\{\text{Run 1},\text{Run 2}\}$, indexed $r$) and \Dz decay mode ($\{\Km\pip,\Km\Kp,\pim\pip,\pim\Kp,\Km\pip\pim\pip,\pim\pip\pim\pip,\pim\Kp\pim\pip\}$, indexed $m$). This is described by,
+The \CP fit involves performing an extended maximum likelihood fit, as described in Section \ref{sec:massfit:likelihood}, in order to extract the \CP observables. A likelihood is assigned to each candidate in a given category by constructing the signal and background PDFs. The total extended log-likelihood, $\log\mathcal{L}_{tot}$, is the sum of the extended log-likelihoods for the individual candidates in each of the different categories: \B charge (\mbox{$\{+,-\}$}, indexed $q$), \KS reconstruction type (\mbox{\{LL, DD\}}, indexed $t$), data type (\mbox{\{Run 1, Run 2\}}, indexed $r$) and \Dz decay mode (\{\Km\pip, \Km\Kp, \pim\pip, \pim\Kp, \Km\pip\pim\pip, \pim\pip\pim\pip, \pim\Kp\pim\pip\}), indexed $m$). This is described by,
 \begin{equation}
-\log\mathcal{L}_{tot} =  \sum_{m}\sum_{q}\sum_{t}\sum_{r}\left[\sum_{x_i} \log{\mathcal{L}}_{m,t,r}^q\left( \theta, N; x_i \right) \right]
+\log\mathcal{L}_{tot} =  \sum_{m}\sum_{q}\sum_{t}\sum_{r}\left[\sum_{x_i} \log{\mathcal{L}}_{m,t,r}^q\left( \theta, N; x_i \right) \right] \text{ , }
 \end{equation}
 where $\theta$ are the set of parameters that describe the shapes of the PDFs in the model,
 \begin{multline}
@@ -325,7 +329,7 @@ Using both the signal yields extracted from the loose selection scenario describ
 
 For a given selection, pseudoexperiment samples are generated for each of the bins according to the model described and then by performing the \CP fit on the generated data, the \CP observables and their uncertainty are extracted. This process is repeated 1000 times for the same selection, where each time the generated yields take a different value, drawn from the same Poisson distribution, as described, resulting in distributions of the \CP observables and their uncertainties. The fit uncertainty is taken to be the mean of the uncertainty distribution. These pseudoexperiments are performed for each of the different selections to calculate the fit uncertainty for each selection scenario.  
 
-For optimising the selection for the GLW modes, the fit uncertainty was minimised for \Akk, \Rkk, \Apipi and \Rpipi. Figure \ref{optimisation} shows the fit uncertainty in \Rkk as a function of the \KS helicity angle selection point, for different \Kstarm mass requirements. The minimum uncertainty is achieved by requiring the reconstructed \Kstarm mass to lie within 75\mevcc of the known \Kstarm mass and the magnitude of the \KS helicity angle to be greater than 0.3. A similar study is performed on the \CP observables \Akk, \Apipi and \Rpipi, and these are found be relatively insensitive to changes in the selection, but showing reasonable agreement with the minimum indicated in Figure \ref{optimisation}. This minimum corresponds to the \Kstarm requirements chosen for the final selection. Similarly, the requirement on the BDT classifier is chosen to be greater than 0.6 for LL candidates and 0.7 for DD candidates. The BDT selection for the ADS modes was optimised to minimise the fit errors in \Rptwo and \Rmtwo. Studies were performed to investigate a tighter BDT selection for the ADS mode as illustrated in Figure \ref{adsoptimisation}, showing that the uncertainty in \Rptwo continues to decrease as the BDT requirement is tightened. A tighter BDT cut of 0.9 in the ADS mode for DD candidates was chosen as it resulted in a lower uncertainty on \Rptwo and \Rmtwo due to a increase in the background rejection from 93\% to 98\%, while retaining 80\% of the signal. Due to some unreliability in this procedure, the signal efficiency and background rejection are also taken into account to ensure that the selection chosen from the optimisation procedure does not result in a damaging loss of signal. For example, although the uncertainty continues to decrease for a BDT cut of 0.95, this resulted in a significant drop in signal efficiency. The final selection chosen is:
+For optimising the selection for the GLW modes, the fit uncertainty was minimised for \Akk, \Rkk, \Apipi and \Rpipi. Figure \ref{optimisation} shows the fit uncertainty in \Rkk as a function of the \KS helicity angle selection point, for different \Kstarm mass requirements. The minimum uncertainty is achieved by requiring the reconstructed \Kstarm mass to lie within 75\mevcc of the known \Kstarm mass and the magnitude of the \KS helicity angle to be greater than 0.3. A similar study is performed on the \CP observables \Akk, \Apipi and \Rpipi, and these are found be relatively insensitive to changes in the selection, but showing reasonable agreement with the minimum indicated in Figure \ref{optimisation}. This minimum corresponds to the \Kstarm requirements chosen for the final selection. Similarly, the requirement on the BDT classifier is chosen to be greater than 0.6 for LL candidates and 0.7 for DD candidates. The BDT selection for the ADS modes was optimised to minimise the fit errors in \Rptwo and \Rmtwo. Studies were performed to investigate a tighter BDT selection for the ADS mode as illustrated in Figure \ref{adsoptimisation}, showing that the uncertainty in \Rptwo continues to decrease as the BDT requirement is tightened. A tighter BDT cut of 0.9 in the ADS mode for DD candidates was chosen as it resulted in a lower uncertainty on \Rptwo and \Rmtwo due to a increase in the background rejection from 93\% to 98\%, while retaining 80\% of the signal. Due to some unreliability in this procedure, the signal efficiency and background rejection are also taken into account when considering the optimal selection. Although the uncertainty continues to decrease for a BDT cut of 0.95, this resulted in a significant drop in signal efficiency. The final selection chosen is:
 
 \begin{itemize}
 \item{The reconstructed \Kstarm mass must lie within 75\mev of the known \Kstarm mass.}
@@ -418,7 +422,7 @@ The fitted signal yields obtained from running the fit with \Bp and \Bm samples 
 \includegraphics[width=\linewidth]{figures/results/canvas_d2pipi.pdf}
 \hfill
 \includegraphics[width=\linewidth]{figures/results/canvas_d2pik.pdf}
-\caption{Results of the \CP fit for the two-body modes, summed over all \KS reconstruction types and data-taking periods after the fit is performed, for \Bp (left) and \Bm (right) decays.}
+\caption{Results of the \CP fit for the two-body modes, summed over all \KS reconstruction types and data-taking periods after the fit is performed, for \Bp (left) and \Bm (right) decays. The signal is represented by the red shaded area, the combinatorial background by the dotted blue line and the partially reconstructed background by the solid green line. In the \kk fits the \decay{\Lb}{\Lc\Kstarm} background is represented by the dashed purple line. The total fit is given by the black line.}
 \label{results2body}
 \end{figure}
 
@@ -428,7 +432,7 @@ The fitted signal yields obtained from running the fit with \Bp and \Bm samples 
 \includegraphics[width=\linewidth]{figures/results/canvas_d2pipipipi.pdf}
 \hfill
 \includegraphics[width=\linewidth]{figures/results/canvas_d2pikpipi.pdf}
-\caption{Results of the \CP fit for the four-body modes, summed over all \KS reconstruction types and data-taking periods after the fit is performed, for \Bp (left) and \Bm (right) decays.}
+\caption{Results of the \CP fit for the four-body modes, summed over all \KS reconstruction types and data-taking periods after the fit is performed, for \Bp (left) and \Bm (right) decays. The signal is represented by the red shaded area, the combinatorial background by the dotted blue line and the partially reconstructed background by the solid green line. The total fit is given by the black line.}
 \label{results4body}
 \end{figure}
 
