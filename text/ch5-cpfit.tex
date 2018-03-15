@@ -10,17 +10,17 @@
 
 %\minitoc
 
-In this section the \CP observables are measured by performing an extended maximum likelihood fit to \btodkst candidates in data simultaneously for each \Dz decay mode for both \Bp and \Bm decays. This fit is referred to in this thesis as the \CP fit. The mass parametersation used in the \CP fit is described in Section \ref{sec:cpfit:model}, before detailing the setup of the \CP fit in Section \ref{sec:cpfit:setup}. The \CP fit results are given in Section \ref{sec:cpfit:results}, followed by an outline of the systematic uncertainties in Section \ref{sec:systematics}. Section \ref{sec:cpfit:summary} presents a summary of the results of the \CP observables.
+In this section the \CP observables are measured by performing an extended maximum likelihood fit to \btodkst candidates in data simultaneously for each \Dz decay mode for both \Bp and \Bm decays. This fit is referred to in this thesis as the \CP fit. The mass parameterisation used in the \CP fit is described in Section \ref{sec:cpfit:model}, before detailing the setup of the \CP fit in Section \ref{sec:cpfit:setup}. The \CP fit results are given in Section \ref{sec:cpfit:results}, followed by an outline of the systematic uncertainties in Section \ref{sec:systematics}. Section \ref{sec:cpfit:summary} presents a summary of the results of the \CP observables.
 
 \section{Mass parameterisation of the \CP fit}
 \label{sec:cpfit:model}
 
-The mass fit model described in Section \ref{sec:massfit} is used to model all \Dz modes and \B charges in the \CP fit. However, when generalising the model developed for the charge combined favoured modes there must be additional factors taken into consideration, such as \CP violation in the background components and additional sources of backgrounds in other \Dz decay modes.
+The mass fit model described in Section \ref{sec:massfit} is used to model all \Dz modes and \B charges in the \CP fit. However, when generalising the model, developed for the charge combined favoured modes, there must be additional factors taken into consideration, such as \CP violation in the background components and additional sources of backgrounds in other \Dz decay modes.
 
 \subsection{Choice of fit range}
 \label{sec:cpfit:range}	
 
-The relatve yields for the partially reconstructed decays are fixed in the charge combined mass fit to the favoured modes, as described in Section \ref{sec:massfit:partreco}. However, the \CP is performed to all of the different \Dz modes separated by \B charge. For the favoured \kpi and \kpipipi decays is reasonable to assume that no \CP violation occurs, i.e. the relative yields for \Bm and \Bp are the same. However in the other \Dz final states, for example \pik, \CP violation is expected in the partially reconstructed background for which the \CP violation parameters are not known. Therefore, it is not possible make any constraints on the yield ratios in these modes. The fit that would result from fitting six individual yields with an order of magnitude less data would be unstable and this lack of constraint in the low mass region would lead to a large amount of freedom in the combinatorial background, significantly affecting the precision of the signal yield. 
+The relative yields for the partially reconstructed decays are fixed in the charge combined mass fit to the favoured modes, as described in Section \ref{sec:massfit:partreco}. However, the \CP is performed to all of the different \Dz modes separated by \B charge. For the favoured \kpi and \kpipipi decays it is reasonable to assume that no \CP violation occurs, i.e. the relative yields for \Bm and \Bp are the same. However in the other \Dz final states, for example \pik, \CP violation is expected in the partially reconstructed background for which the \CP violation parameters are not known. Therefore, it is not possible make any constraints on the yield ratios in these modes. The fit that would result from fitting six individual yields with an order of magnitude less data would be unstable and this lack of constraint in the low mass region would lead to a large amount of freedom in the combinatorial background, significantly affecting the precision of the signal yield. 
 
 The overlap of the partially reconstructed and signal peaks is very small. There are a number of advantages to raising the lower range of the mass parameterisation up to 5230 \mev, which only removes 0.4\% of signal. The advantages include avoiding the need to fit the various partially reconstructed yields in each of the other \Dz decays modes, which is problematic due to expected \CP violation. A further benefit is that low level broad backgrounds, for example \decay{\Bm}{\D\Kstarm\piz} and \decay{\Bd}{\Kp\pim\pip\pim}, which may be present in the range 4900 - 5200 \mev do not need to considered as sources of systematics uncertainty. 
 
@@ -52,7 +52,7 @@ $\pi K\pi\pi$ & 0.004 & 0.006 & 0.007 & 0.014 \\
 \subsection{Additional background component in \kk mass spectrum}
 \label{sec:cpfit:Lb2LcKst}
 
-An additional source of background is present in the \kk mass spectrum from \decay{\Lb}{\Lc\Kstarm}, described in Section \ref{sec:backgrounds:Lb2LcKst}. The shape used to model this \decay{\Lb}{\Lc\Kstarm} contribution is a Cruijff PDF, defined as,
+An additional source of background is present in the \kk mass spectrum from \decay{\Lb}{\Lc\Kstarm} decays, described in Section \ref{sec:backgrounds:Lb2LcKst}. The shape used to model this \decay{\Lb}{\Lc\Kstarm} contribution is a Cruijff PDF, defined as,
 \begin{equation}
   P_{\Lambda}(m; \mu,\sigma_L,\sigma_R,\alpha_L,\alpha_R)=
 \begin{cases}
@@ -61,7 +61,7 @@ An additional source of background is present in the \kk mass spectrum from \dec
 \end{cases}
 \label{Cruijff}
 \end{equation}%
-where $\mu$ is the peak position, $\sigma_{L,R}$ are the widths on the left and right sides of the peak, $\alpha_{L,R}$ are modification constants and $\mathcal{K}_{L,R}$ are the normalisation constants required for the PDF. Due to reasons relating to timing and speed of generation, a simulated sample of \decay{\Lb}{\Lc\Kstarm} events is not available. Therefore, the parameters of the PDF are taken from a maximum likelihood fit to a simulated sample of \decay{\Lb}{\Lc\Km} events reconstructed as \decay{\Lb}{\Lc\Km} events; this PDF is expected to be similar to one taken from a \decay{\Lb}{\Lc\Kstarm} sample, and any uncertainty in the shape is accounted for as a systematic uncertainty, described in Section \ref{sec:systematics}.
+where $\mu$ is the peak position, $\sigma_{L,R}$ are the widths on the left and right sides of the peak, $\alpha_{L,R}$ are modification constants and $\mathcal{K}_{L,R}$ are the normalisation constants required for the PDF. Due to reasons relating to timing and speed of generation, a simulated sample of \decay{\Lb}{\Lc\Kstarm} events is not available. Therefore, the parameters of the PDF are taken from a maximum likelihood fit to a simulated sample of \decay{\Lb}{\Lc\Km} events reconstructed as \decay{\Bm}{\D\Km} events; this PDF is expected to be similar to one taken from a \decay{\Lb}{\Lc\Kstarm} sample, and any uncertainty in the shape is accounted for as a systematic uncertainty, described in Section \ref{sec:systematics}.
 
 A maximum likelihood fit, as described in Section \ref{sec:massfit:likelihood}, is performed to the \Bm mass spectrum of the simulated sample. This fit is shown in Figure \ref{Lbfit}, where it can be seen that the reconstructed \Bm mass falls between 4800 and 5500 \mevcc. The results from this fit are shown in Table \ref{fitresultsLb}. All the values for the shape parameters are fixed in the simultaneous fit to the values in Table \ref{fitresultsLb}.
 
@@ -204,7 +204,8 @@ $\epsilon_{pid}(\pi\pi\pi\pi)$ & $0.675 \pm 0.002$ & $0.687 \pm 0.002$ & $0.822 
 
 It can be seen from Table \ref{pideff} that the PID efficiency in \runtwo is higher than \runone for the PID selection used in this analysis. This is primarily due to the removal of the aerogel radiator in \runtwo, which is discussed in Section \ref{sec:detector:rich}. 
 
-Another input to the fit is the efficiency of the double misidentification veto, which is required as a correction to the ADS observables, as in Equations \ref{effcorrectionads2body} and \ref{effcorrectionads4body}. Veto efficiencies calculated from data are used in the \CP fit for both two- and four-body modes, given in Table \ref{vetoeff}.
+Another input to the fit is the efficiency of the double misidentification veto, which is required as a correction to the ADS observables, as in Equations \ref{effcorrectionads2body} and \ref{effcorrectionads4body}. The veto efficiency, defined as the probability a true signal event passes the veto selection, is calculated as the number of events in data that pass the veto selection compared to the number that pass the rest of the selection~\footnote{For the four-body modes, the efficiency is calculated compared to the number that pass the selection before BDT and PID requirements. This inconsistency results in smaller uncertainties on the four-body veto efficiencies, as they are calculated from a larger sample, however it has no significant effect on the final results.}. The values of the veto efficiencies are given in Table \ref{vetoeff}.
+%Veto efficiencies calculated from data are used in the \CP fit for both two- and four-body modes, given in Table \ref{vetoeff}.
 
 \begin{table}[h]
 \centering
@@ -351,7 +352,7 @@ For optimising the selection for the GLW modes, the fit uncertainty was minimise
 \label{adsoptimisation}
 \end{figure}
 
-The pseudoexperiments described in this section are originally generated with an equal combinatorial rate in each of the \Dz decay modes. However, a significantly lower combinatorial rate is observed in data in the ADS modes compared to the corresponding favoured \kpi and \kpipipi modes. Consequently, changes in the combinatorial rate corresponding to differences observed in data are investigated. The choice of BDT selection for the ADS modes is found to remain optimal when tested against a scenario of the observed low combinatorial in the ADS mode. 
+The pseudoexperiments described in this section are originally generated with an equal combinatorial rate in each of the \Dz decay modes. However, a significantly lower combinatorial rate is observed in data in the ADS modes compared to the corresponding favoured \kpi and \kpipipi modes. Consequently, changes in the combinatorial rate corresponding to differences observed in data are investigated. The choice of BDT selection for the ADS modes is found to remain optimal when tested against a scenario of the observed low combinatorial in the ADS modes. 
 
 \subsection{Fitter bias in \CP fit}
 \label{sec:cpfit:fitterbias}
@@ -404,7 +405,7 @@ where $x_{fit}$ is the value of the parameter returned by the fit, $x_{gen}$ is 
 \section{Fit results}
 \label{sec:cpfit:results}
 
-The \CP fit described in Section \ref{sec:cpfit:setup} is performed on data, with mass projections shown in Figures \ref{results2body} and \ref{results4body}. These results are summed across all \KS reconstruction types and data types after the fit is performed for ease of illustration. Figure \ref{results2body} shows a slight asymmetry in the \kk and \pipi and \pik modes, with the asymmetry in the \pik mode occuring in the opposite direction. The four-body modes, shown in Figure \ref{results4body}, display the same characteristics, but with fewer events.
+The \CP fit described in Section \ref{sec:cpfit:setup} is performed on data, with mass projections shown in Figures \ref{results2body} and \ref{results4body}. These results are summed across all \KS reconstruction types and data types after the fit is performed for ease of illustration. Figure \ref{results2body} shows a slight asymmetry in the \kk and \pipi and \pik modes, with the asymmetry in the \pik mode occurring in the opposite direction. The four-body modes, shown in Figure \ref{results4body}, display the same characteristics, but with fewer events.
 
 Table \ref{cpfitresultsphysics} shows the \CP fit results for the \CP observables of interest. There is no significant asymmetry observed in the GLW and quasi-GLW modes, i.e. \Akk, \Apipi and \Apipipipi are all consistent with zero. However, asymmetry can be seen in the two-body ADS mode, where \Rptwo is significantly larger than \Rmtwo. The four-body ADS mode shows a similar behaviour, however the asymmetry is less significant. It can also be seen that \Akpi and \Akpipipi are consistent with zero, as expected due to the very low level of interference in these modes. Additionally, \Akk and \Apipi are in agreement with each other and \Rkk and \Rpipi are in agreement with each other, which is consistent with expectation. These \CP observables are expected to have the same value corresponding to the observables $A_{CP+}$ and $R_{CP+}$ respectively, given in Equations \ref{exp_Acp} and \ref{exp_Rcp}.
 
@@ -412,7 +413,7 @@ Table \ref{cpfitresultsshapes} shows the fit results for the favoured \kpi and \
 
 All the combinatorial yields are left to vary in the \CP fit for each of the different bins, and they are found to be consistent between \Bm and \Bp, as expected. However, there is a significantly higher combinatorial yield in the \kpi mode compared to the \pik mode. This difference is also observed between the \kpipipi and \pikpipi modes, but to a lesser extent. This observed difference in background level is consistent with a significant fraction of the combinatorial background coming from \decay{\Bm}{\D\pim X} decays combined with a real but unrelated \KS meson. 
 
-The fitted signal yields obtained from running the fit with \Bp and \Bm samples combined are given in Table \ref{fittedyields}. When comparing the ratio of the two-body signal yields with the favoured mode, with the ratio of the branching fractions of the different \Dz modes, it can be observed that the results are consistent with the branching fractions. For the four-body modes, the ratio of \kpipipi to \pipipipi signal yields is consistent with their relative branching fractions.
+The fitted signal yields obtained from running the fit with \Bp and \Bm samples combined are given in Table \ref{fittedyields}. When comparing the ratio of the two-body signal yields with the favoured mode, with the ratio of the branching fractions of the different \Dz modes, it can be observed that the results are consistent with the branching fractions. For the four-body modes, the ratio of \kpipipi to \pipipipi signal yield is consistent with their relative branching fractions.
 
 \begin{figure}
 \includegraphics[width=\linewidth]{figures/results/canvas_d2kpi.pdf}
