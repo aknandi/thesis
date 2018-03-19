@@ -270,11 +270,26 @@
 %i.e. tabbed in at both sides, and on its own page.
 
 \renewenvironment{abstract}%
-{   \begin{alwayssingle}\chapter*{Abstract}
-    \thispagestyle{empty}
-    \pagestyle{empty}
-   \setlength{\baselineskip}{\frontmatterbaselineskip}}
-{\end{alwayssingle}}
+{   \begin{alwayssingle}%\chapter*{Abstract}
+%    \thispagestyle{empty}
+%    \pagestyle{empty}
+%   \setlength{\baselineskip}{\frontmatterbaselineskip}}
+     \begin{center}
+    { \LARGE {\bfseries {\@title}} \par}
+    \vspace*{20mm}
+    {{\Large \@author} \par}
+{\large \vspace*{1ex}
+    {{\@college}, University of Oxford \par}
+    \vspace*{1ex}
+    {{\submittedtext} \it {\@degree} \par}
+\vspace*{2ex}
+    {\@degreedate} \par}
+  \vspace*{15mm} 
+  	{\large \bfseries Abstract} 
+  \end{center}
+  \vspace*{5mm}
+  \input{text/abstract}
+\end{alwayssingle}}
 
 %The abstractseparate environment is for running of a page with the abstract
 %on including title and author etc as required to be handed in separately
