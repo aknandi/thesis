@@ -281,7 +281,7 @@
 {\large \vspace*{1ex}
     {{\@college}, University of Oxford \par}
     \vspace*{1ex}
-    {{\submittedtext} \it {\@degree} \par}
+    {{\submittedtext} {\@degree} \par}
 \vspace*{2ex}
     {\@degreedate} \par}
   \vspace*{15mm} 
