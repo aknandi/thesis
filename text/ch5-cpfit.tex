@@ -121,7 +121,7 @@ The \Bpm production asymmetry is estimated from \lhcb \runone data, binned in $p
 
 \subsubsection{Detection asymmetry}
 
-The detection asymmetry arises from differences in interactions of matter and antimatter particles with the matter detector. The \btodkst decay contains a final state consisting of purely pions and kaons, therefore the pion and kaon detection asymmetry are the values of interest. The pion detection asymmetry is consistent with zero and has been measured at \lhcb to be $(0.08 \pm 0.30)\%$~\cite{pi_det_asym}. However, for the kaon asymmetry the best measured value at \lhcb is the $K\pi$ asymmetry difference $A_{K\pi} = A_K - A_{\pi}$, where $A_K$ is the kaon asymmetry and $A_{\pi}$ is the pion asymmetry. The $K\pi$ asymmetry has been measured in bins of kaon momentum~\cite{k_det_asym}, therefore the value of $A_{K\pi}$ for \btodkst is calculated by performing a weighted average based on the kaon momentum distribution in the simulated signal sample. The value of $A_{K\pi}$ thus obtained is $(-1.06 \pm 0.16)\%$. Both $A_{\pi}$ and $A_{K\pi}$ values are obtained using \runone data. The changes to the detector between the data-taking periods are not expected to significantly affect the $A_{\text{det}}$ measurement, therefore the same results are applied to both \runone and \runtwo data. 
+The detection asymmetry arises from differences in interactions of matter and antimatter particles with the matter detector. The \btodkst decay contains a final state consisting of purely pions and kaons, therefore the pion and kaon detection asymmetry are the values of interest. The pion detection asymmetry is consistent with zero and has been measured at \lhcb to be $(0.08 \pm 0.30)\%$~\cite{pi_det_asym}. However, for the kaon asymmetry the best measured value at \lhcb is the $K\pi$ asymmetry difference $A_{\text{det}}^{K\pi} = A_{\text{det}}^K - A_{\text{det}}^{\pi}$, where $A_{\text{det}}^K$ is the kaon asymmetry and $A_{\text{det}}^{\pi}$ is the pion asymmetry. The $K\pi$ asymmetry has been measured in bins of kaon momentum~\cite{k_det_asym}, therefore the value of $A_{\text{det}}^{K\pi}$ for \btodkst is calculated by performing a weighted average based on the kaon momentum distribution in the simulated signal sample. The value of $A_{\text{det}}^{K\pi}$ thus obtained is $(-1.06 \pm 0.16)\%$. Both $A_{\text{det}}^{\pi}$ and $A_{\text{det}}^{K\pi}$ values are obtained using \runone data. The changes to the detector between the data-taking periods are not expected to significantly affect the $A_{\text{det}}$ measurement, therefore the same results are applied to both \runone and \runtwo data. 
 
 The detection asymmetry must be corrected for any \CP observable that is sensitive to the charge of the \B meson decay. Therefore, it affects both the asymmetries and the yield ratios in the ADS modes, which are considered separately for \Bm and \Bp. The correction varies for the different \CP observables, depending on the number of charged kaons and pions in the final state and the structure of the \CP observable being measured, summarised in \Tab\ref{detectionasymmetry}. The correction for the asymmetries is additive as seen by \eqn\ref{asymmetries}, however when dealing with the yield ratios, the correction is a ratio of efficiencies, which must be multiplied by the raw yield ratio to correct for the detection asymmetry effect.
 
@@ -130,17 +130,17 @@ The detection asymmetry must be corrected for any \CP observable that is sensiti
 \resizebox{\textwidth}{!}{
 \begin{tabular}{cccc}
 \hline
-Observable & Mode & Detection asymmetry & In terms of $A_{K\pi}$ \\
+Observable & Mode & Detection asymmetry & In terms of $A_{\text{det}}^{K\pi}$ \\
 \hline
-$A_{K\pi}$ & $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D[K_s^0\pi^{\pm}]_{K^*}$ & $A_K - A_{\pi} + A_{\pi}$ & $A_{K\pi} + A_{\pi}$ \\
-$A_{KK}$ & $B^{\pm} \to [K^{\pm}K^{\mp}]_D[K_s^0\pi^{\pm}]_{K^*}$ & $A_K - A_K + A_{\pi}$ & $A_{\pi}$ \\
-$A_{\pi\pi}$ & $B^{\pm} \to [\pi^{\pm}\pi^{\mp}]_D[K_s^0\pi^{\pm}]_{K^*}$ & $A_{\pi} - A_{\pi} + A_{\pi}$ & $A_{\pi}$ \\
-$R_{K\pi}^+$ & $B^+ \to [K^-\pi^+]_D[K_s^0\pi^+]_{K^*}$ & $\epsilon_{K^+\pi^-}/\epsilon_{K^-\pi^+}$ & $2A_{K\pi} + 1$ \\
-$R_{K\pi}^-$ & $B^- \to [K^+\pi^-]_D[K_s^0\pi^-]_{K^*}$ & $\epsilon_{K^-\pi^+}/\epsilon_{K^+\pi^-}$ & $1/(2A_{K\pi} - 1)$ \\
-$A_{K\pi\pi\pi}$ & $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D[K_s^0\pi^{\pm}]_{K^*}$ & $A_K - A_{\pi} + A_{\pi} - A_{\pi} + A_{\pi}$  & $A_{K\pi} + A_{\pi}$ \\
-$A_{\pi\pi\pi\pi}$ & $B^{\pm} \to [\pi^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D[K_s^0\pi^{\pm}]_{K^*}$ & $A_{\pi} - A_{\pi} + A_{\pi} - A_{\pi} + A_{\pi}$ & $A_{\pi}$ \\
-$R_{K\pi\pi\pi}^+$ & $B^+ \to [K^-\pi^+\pi^-\pi^+]_D[K_s^0\pi^+]_{K^*}$ & $\epsilon_{K^+\pi^-}/\epsilon_{K^-\pi^+}$ & $2A_{K\pi} + 1$ \\
-$R_{K\pi\pi\pi}^-$ & $B^- \to [K^+\pi^-\pi^+\pi^-]_D[K_s^0\pi^-]_{K^*}$ & $\epsilon_{K^-\pi^+}/\epsilon_{K^+\pi^-}$ & $1/(2A_{K\pi} - 1)$ \\
+$A_{K\pi}$ & $B^{\pm} \to [K^{\pm}\pi^{\mp}]_D[K_s^0\pi^{\pm}]_{K^*}$ & $A_{\text{det}}^K - A_{\text{det}}^{\pi} + A_{\text{det}}^{\pi}$ & $A_{\text{det}}^{K\pi} + A_{\text{det}}^{\pi}$ \\
+$A_{KK}$ & $B^{\pm} \to [K^{\pm}K^{\mp}]_D[K_s^0\pi^{\pm}]_{K^*}$ & $A_{\text{det}}^K - A_{\text{det}}^K + A_{\text{det}}^{\pi}$ & $A_{\text{det}}^{\pi}$ \\
+$A_{\pi\pi}$ & $B^{\pm} \to [\pi^{\pm}\pi^{\mp}]_D[K_s^0\pi^{\pm}]_{K^*}$ & $A_{\text{det}}^{\pi} - A_{\text{det}}^{\pi} + A_{\text{det}}^{\pi}$ & $A_{\text{det}}^{\pi}$ \\
+$R_{K\pi}^+$ & $B^+ \to [K^-\pi^+]_D[K_s^0\pi^+]_{K^*}$ & $\epsilon_{K^+\pi^-}/\epsilon_{K^-\pi^+}$ & $2A_{\text{det}}^{K\pi} + 1$ \\
+$R_{K\pi}^-$ & $B^- \to [K^+\pi^-]_D[K_s^0\pi^-]_{K^*}$ & $\epsilon_{K^-\pi^+}/\epsilon_{K^+\pi^-}$ & $1/(2A_{\text{det}}^{K\pi} - 1)$ \\
+$A_{K\pi\pi\pi}$ & $B^{\pm} \to [K^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D[K_s^0\pi^{\pm}]_{K^*}$ & $A_{\text{det}}^K - A_{\text{det}}^{\pi} + A_{\text{det}}^{\pi} - A_{\text{det}}^{\pi} + A_{\text{det}}^{\pi}$  & $A_{\text{det}}^{K\pi} + A_{\text{det}}^{\pi}$ \\
+$A_{\pi\pi\pi\pi}$ & $B^{\pm} \to [\pi^{\pm}\pi^{\mp}\pi^{\pm}\pi^{\mp}]_D[K_s^0\pi^{\pm}]_{K^*}$ & $A_{\text{det}}^{\pi} - A_{\text{det}}^{\pi} + A_{\text{det}}^{\pi} - A_{\text{det}}^{\pi} + A_{\text{det}}^{\pi}$ & $A_{\text{det}}^{\pi}$ \\
+$R_{K\pi\pi\pi}^+$ & $B^+ \to [K^-\pi^+\pi^-\pi^+]_D[K_s^0\pi^+]_{K^*}$ & $\epsilon_{K^+\pi^-}/\epsilon_{K^-\pi^+}$ & $2A_{\text{det}}^{K\pi} + 1$ \\
+$R_{K\pi\pi\pi}^-$ & $B^- \to [K^+\pi^-\pi^+\pi^-]_D[K_s^0\pi^-]_{K^*}$ & $\epsilon_{K^-\pi^+}/\epsilon_{K^+\pi^-}$ & $1/(2A_{\text{det}}^{K\pi} - 1)$ \\
 \hline
 \end{tabular}}
 \caption{Detection asymmetry factors for each of the observables in the \CP fit.}
@@ -330,41 +330,45 @@ where $\epsilon_{m, \text{corr}}$ refers to the relevant efficiency correction g
 
 To select \btodkst events, a BDT is implemented and selection requirements are applied to the \Kstarm mass and \KS helicity angle to preferentially select events that proceed via a \Kstarm meson, as described in \sect\ref{sec:selection}. These selection requirements are optimised simultaneously with the aim of minimising the uncertainty on the \CP observables. 
 
-In order to perform this optimisation procedure, the sensitivity is investigated in pseudoexperiments. To setup each pseudoexperiment the selection is applied to data excluding any requirements on the \Kstarm mass or \KS helicity angle, and with only a loose BDT selection, requiring the BDT classifier to be greater than $-0.8$. With this setup, a single fit was performed to the two- and four-body favoured modes, similar to the fit in \sect\ref{sec:massfit:fit}, to extract the signal, combinatorial and partially reconstructed yields. Signal and background yields under other selection scenarios are then determined via these yields and the signal and background efficiencies. The selections explored are:
+In order to perform the optimisation procedure, the sensitivity is investigated in ''pseudo-experiments''. To set up each pseudo-experiment, the selection is applied to data excluding any requirements on the \Kstarm mass or \KS helicity angle, and with only a loose BDT selection, requiring the BDT classifier to be greater than $-0.8$. With this setup, a single fit is performed to each of the two- and four-body favoured modes, similar to the fit in \sect\ref{sec:massfit:fit}, to extract the signal, combinatorial and partially reconstructed yields. Signal and background yields under other selection scenarios are then determined via these yields and the signal and background efficiencies. The selections explored are:
 
 \begin{itemize}
-\item{The reconstructed \Kstarm mass lies within 50~\mevcc, 75~\mevcc, 100~\mevcc of the known \Kstarm mass,}
-\item{The magnitude of $\cos(\theta_{\KS})$ is greater than: 0, 0.1, 0.2, 0.3 and 0.4,}
-\item{The BDT classifier is greater than: -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.7, 0.8, 0.9, 0.95.}
+\item{The reconstructed \Kstarm mass lies within 50~\mevcc, 75~\mevcc or 100~\mevcc of the known \Kstarm mass,}
+\item{The magnitude of $\cos(\theta_{\KS})$ is greater than: 0, 0.1, 0.2, 0.3 or 0.4,}
+\item{The BDT classifier is greater than: -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.7, 0.8, 0.9 or 0.95.}
 \end{itemize}
 
-The central value of the yields in the other \Dz decay modes are extracted using the yield ratios and asymmetries, which are calculated based the physics parameters, $r_B$, $\delta_B$ and \Pgamma, using \eqns\ref{exp_Acp} - \ref{exp_R4pi}. For this study values of $r_B = 0.1$, $\delta_B = 150^{\circ}$ and $\gamma = 70^{\circ}$ were assumed, where \Pgamma and $r_B$ are consistent with the best knowledge. Although the value of $\delta_B$ is completely unknown, the optimisation was repeated for various values of $\delta_B$ and it was found that the choice of selection is not sensitive to $\delta_B$. 
+The central value of the yields in the other \Dz decay modes are extracted using the yield ratios and asymmetries which are calculated based on the physics parameters, $r_B$, $\delta_B$ and \Pgamma using \eqns\ref{exp_Acp} - \ref{exp_R4pi}. For this study, values of $r_B = 0.1$, $\delta_B = 150^{\circ}$ and $\gamma = 70^{\circ}$ are assumed, where \Pgamma and $r_B$ are consistent with the current world averages~\ref{CKMfitter}. Although the value of $\delta_B$ is completely unknown, the optimisation has been repeated for various values of $\delta_B$ and is found to be insensitive to this choice. 
 
-For a given selection, pseudoexperiment samples are generated for each of the bins according to the model described and then by performing the \CP fit on the generated data, the \CP observables and their uncertainty are extracted. This process is repeated 1000 times for the same selection, where each time the generated yields take a different value, drawn from the same Poisson distribution resulting in distributions of the \CP observables and their uncertainties. The fit uncertainty is taken to be the mean of the uncertainty distribution. These pseudoexperiments are performed for each of the different selections to calculate the fit uncertainty for each selection scenario.  
+For a given selection, pseudo-experiment samples are generated for each of the bins according to the model described. Then by performing the \CP fit to the generated data, the \CP observables and their uncertainty can be extracted. This process is repeated 1000 times for the same selection, where each time the generated yields take a different value, drawn from the same Poisson distribution. This results in distributions of the \CP observables and their uncertainties. The fit uncertainty for each selection scenario is taken to be the mean of the corresponding distribution of the uncertainties extracted. These pseudo-experiments are performed for each of the different selections to calculate the fit uncertainty for each selection scenario.  
 
-For optimising the selection for the GLW modes, the fit uncertainty was minimised for \Akk, \Rkk, \Apipi and \Rpipi. \Fig\ref{optimisation} shows the fit uncertainty in \Rkk as a function of the \KS helicity angle selection point, for different \Kstarm mass requirements. The minimum uncertainty is achieved by requiring the reconstructed \Kstarm mass to lie within 75~\mevcc of the known \Kstarm mass and the magnitude of the \KS helicity angle to be greater than 0.3. A similar study is performed on the \CP observables \Akk, \Apipi and \Rpipi, and these are found show reasonable agreement with the minimum indicated in \fig\ref{optimisation}. This minimum corresponds to the \Kstarm requirements chosen for the final selection. Similarly, the requirement on the BDT classifier is chosen to be greater than 0.6 for LL candidates and 0.7 for DD candidates. The BDT selection for the ADS modes was optimised to minimise the fit errors in \Rptwo and \Rmtwo. Studies were performed to investigate a tighter BDT selection for the ADS mode as illustrated in \fig\ref{adsoptimisation}, showing that the uncertainty in \Rptwo continues to decrease as the BDT requirement is tightened. A tighter BDT cut of 0.9 in the ADS mode for DD candidates was chosen as it resulted in a lower uncertainty on \Rptwo and \Rmtwo due to a increase in the background rejection from 93\% to 98\%, while retaining 80\% of the signal. Although the uncertainty appears to decrease for a BDT cut of 0.95, this tighter selection results in a significant drop in signal efficiency to 73\%. The apparent small drop in uncertainty between 0.9 and 0.95 is not considered significant enough to compensate for such a large drop in signal efficiency. The final selection chosen is:
+For optimising the selection for the GLW modes, the fit uncertainty was minimised for \Akk, \Rkk, \Apipi and \Rpipi. As an example, \fig\ref{optimisation} shows the fit uncertainty in \Rkk as a function of the \KS helicity angle selection point, for different \Kstarm mass requirements. The minimum uncertainty is achieved by requiring the reconstructed \Kstarm mass to lie within 75~\mevcc of the known \Kstarm mass and the magnitude of the \KS helicity angle to be greater than 0.3. A similar study is performed on the \CP observables \Akk, \Apipi and \Rpipi, which show reasonable agreement with the same position of the minimum as indicated in \fig\ref{optimisation}; therefore the above \Kstarm requirements are chosen for the final selection. Similarly, the requirement on the BDT classifier for the GLW modes is chosen to be greater than 0.6 for LL candidates and 0.7 for DD candidates. 
+
+The BDT selection for the ADS modes was optimised to minimise the fit errors in \Rptwo and \Rmtwo. Studies were performed to investigate a tighter BDT selection for the ADS mode as illustrated in \fig\ref{adsoptimisation}, showing that the uncertainty in \Rptwo continues to decrease as the BDT requirement is tightened. A tighter BDT cut of 0.9 in the ADS mode for DD candidates was chosen as it results in a lower uncertainty on \Rptwo and \Rmtwo due to an increase in the background rejection from 93\% to 98\%, while retaining 80\% of the signal. Although the uncertainty appears to decrease for a BDT cut of 0.95, this tighter selection results in a significant drop in signal efficiency to 73\%. The small drop in uncertainty between 0.9 and 0.95 is statistically insignificant and does not justify such a large drop in signal efficiency. 
+
+In summary, the final selection chosen is:
 
 \begin{itemize}
 \item{The reconstructed \Kstarm mass must lie within 75~\mevcc of the known \Kstarm mass.}
-\item{The magnitude of $\cos(\theta_{\KS})$ is required to be greater than 0.3}
+\item{The magnitude of $\cos(\theta_{\KS})$ is required to be greater than 0.3.}
 \item{The BDT classifier is required to be greater than 0.6 for LL candidates and greater than 0.7 for DD candidates, except in the ADS mode where it is required to be greater than 0.6 for LL candidates and 0.9 for DD candidates.}
 \end{itemize}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.8\linewidth]{figures/selection/optimisation.pdf}
-\caption{Value of the uncertainty on \Rkk as a function of \KS helicity angle selection for different \Kstar mass selections. The reconstructed \Kstarm mass is required to lie within 50~\mevcc (blue), 75~\mevcc (red), or 100~\mevcc (black) of the known \Kstar mass.}
+\caption{Value of the uncertainty on \Rkk as a function of the \KS helicity angle selection for different \Kstar mass selections. The reconstructed \Kstarm mass is required to lie within 50~\mevcc (blue), 75~\mevcc (red), or 100~\mevcc (black) of the known \Kstar mass.}
 \label{optimisation}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.8\linewidth]{figures/selection/ADSoptimisation.pdf}
-\caption{Value of the uncertainty on \Rptwo (black) and \Rmtwo (red) as a function of BDT\_DD cut in the ADS mode. These pseudoexperiments are run with a BDT\_LL cut of 0.6 on all modes and BDT\_DD cut of 0.7 on all modes other than the ADS.}
+\caption{Value of the uncertainty on \Rptwo (black) and \Rmtwo (red) as a function of BDT\_DD cut in the ADS mode. These pseudo-experiments are run with a BDT\_LL cut of 0.6 on all modes and BDT\_DD cut of 0.7 on all modes other than the ADS.}
 \label{adsoptimisation}
 \end{figure}
 
-The pseudoexperiments described in this section were originally generated with an equal combinatorial rate in each of the \Dz decay modes. However, a significantly lower combinatorial rate is observed in data in the ADS modes compared to the corresponding favoured \kpi and \kpipipi modes. Consequently, the sensitivity to changes in the combinatorial rate are investigated. The choice of BDT selection for the ADS modes is found to remain optimal when tested against a scenario of the observed low combinatorial in the ADS modes. 
+The pseudo-experiments described in this section were originally generated with an equal combinatorial rate in each of the \Dz decay modes. However, a significantly lower combinatorial rate is observed in data in the ADS modes compared to the corresponding favoured \kpi and \kpipipi decay channels. Consequently, the sensitivity to changes in the combinatorial rate were investigated, and showed the choice of BDT selection for the ADS modes remained insensitive to to a lower fraction of combinatorial background. 
 
 \subsection{Fitter bias in \CP fit}
 \label{sec:cpfit:fitterbias}
@@ -379,22 +383,6 @@ P_x = \begin{cases}
 where $x_{\text{fit}}$ is the value of the parameter returned by the fit, $x_{\text{gen}}$ is the generated value of the parameter, and $\sigma_x^+$ and $\sigma_x^-$ are the upper and lower asymmetric uncertainties respectively. These asymmetric uncertainties are determined as described in \sect\ref{sec:massfit:likelihood}. 
 
 The pull distributions for each of the \CP observables are shown in \fig\ref{pulls}, where for each distribution a Gaussian fit is performed. All fitted Gaussians are consistent with a mean of zero and width of unity, which shows that the \CP fit is unbiased and the uncertainties are correctly determined. Additionally, all fits converge, therefore the fit is stable. 
- 
-%\begin{figure}[!h]
-%\centering
-%\includegraphics[page=1,trim = 0mm 24mm 0mm 15mm,clip,width=0.85\linewidth]{figures/results/toys.pdf}
-%\includegraphics[page=2,trim = 0mm 165mm 0mm 15mm,clip,width=0.85\linewidth]{figures/results/toys.pdf}
-%\caption{Results from pseudoexperiments for the two-body \CP observables in the fit. The left-hand column shows the fitted parameter distribution, the middle column shows the fit error distribution and the right-hand column are the pull distributions fitted with a Gaussian.}
-%\label{pulls1}
-%\end{figure}
-%
-%\begin{figure}[!h]
-%\centering
-%\includegraphics[page=2,trim = 0mm 24mm 0mm 113mm,clip,width=0.85\linewidth]{figures/results/toys.pdf}
-%\includegraphics[page=3,trim = 0mm 165mm 0mm 15mm,clip,width=0.85\linewidth]{figures/results/toys.pdf}
-%\caption{Results from pseudoexperiments for the four-body \CP observables in the fit. The left-hand column shows the fitted parameter distribution, the middle column shows the fit error distribution and the right-hand column are the pull distributions fitted with a Gaussian.}
-%\label{pulls2}
-%\end{figure}
 
 \begin{figure}
 \centering

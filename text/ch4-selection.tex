@@ -272,7 +272,7 @@ The resulting calculation gives an upper limit estimate of $2.6 \pm 2.6$ \decay{
 \subsubsection{Lambda contamination}
 \label{sec:backgrounds:contamination}
 
-The \decay{\KS}{\pip\pim} decay could have contamination coming from \decay{\Lz}{\proton\pim}, where the proton is reconstructed as a pion. It is not possible to determine possible \Lz contamination from the \KS invariant mass spectrum where one of the \KS daughters is assigned the proton mass, because a peak at the \Lz mass cannot be distinguished from the variation near the low mass threshold. In order to distinguish between \KS decays and \Lz contamination, the Armenteros-Podolanski (AP) plot is used~\cite{APplot}. The transverse momentum of the daughters with respect to the mother particle, $p_T$, is plotted as a function of the longitudinal momentum asymmetry, defined as
+The \decay{\KS}{\pip\pim} decay could have contamination coming from \decay{\Lz}{\proton\pim}, where the proton is reconstructed as a pion. In order to distinguish between \KS decays and \Lz contamination, the Armenteros-Podolanski (AP) plot is used~\cite{APplot}. The transverse momentum of the daughters with respect to the mother particle, $p_T$, is plotted as a function of the longitudinal momentum asymmetry, defined as
 
 \begin{equation}
 \frac{p_L^+ - p_L^-}{p_L^+ + p_L^-} \text{ ,}
@@ -316,7 +316,7 @@ The MVA implemented in this analysis is a Boosted Decision Tree (BDT)~\cite{Brei
 
 A BDT with the gradient boost (BDTG) method using the Toolkit for Multivariate Analysis (TMVA) framework~\cite{TMVA} is employed in order to reduce the combinatorial background level. A separate BDT is trained for LL and DD candidates, named BDTG\_LL and BDTG\_DD respectively. The BDTs are mainly based on topological variables, so are insensitive as to whether the \Dz daughters are kaons or pions. Therefore, the same BDT is used for all of the two-body \Dz decay modes, trained using \kpi decays, and another BDT is used for all the four-body \Dz decay modes, trained using \kpipipi decays. 
 
-For the two body modes, simulated samples for the decay \kpi are used to provide a signal sample. Events from data in the favoured \kpi mode in the region of \Bm mass above 5600 MeV are used as a sample of background combinatorial events. Generation of simulated events is computationally expensive. A small simulated sample is produced from full \lhcb simulation in order to determine efficiencies. The sample is small due to the mode being very low efficiency, so many generated events fail the reconstruction. However, BDT training requires a significantly larger sample, and the available resources are insufficient to simply generate more events. A work-around is employed to remove events, which are less likely to pass the selection, at generator level. Events are removed on the basis of low momentum or transverse momentum of signal tracks or intermediate particles. This reduces the number of events required to be simulated in the \lhcb detector, which is the most computationally expensive part of the reconstruction process. The advantage of this approach is that 89\% of generated events are removed, significantly reducing the resource requirement. However, the disadvantage is that the selection has to be more stringent than the final selection and 20\% of events that would have passed are removed. Therefore, the BDT may not be as optimal as it may have been with unlimited resources, however this trade-off is deemed acceptable.
+For the two body modes, simulated samples for the decay \kpi are used to provide a signal sample. Events from data in the favoured \kpi mode in the region of \Bm mass above 5600 MeV are used as a sample of background combinatorial events. Generation of simulated events is computationally expensive. A small simulated sample is produced from full \lhcb simulation in order to determine efficiencies. The sample is small due to the mode being very low efficiency, so many generated events fail the reconstruction. However, BDT training requires a significantly larger sample, and the available resources are insufficient to simply generate more events. A work-around is employed to remove events, which are less likely to pass the selection, at generator level. Events are removed on the basis of low momentum or transverse momentum of signal tracks or intermediate particles. This reduces the number of events required to be simulated in the \lhcb detector, which is the most computationally expensive part of the reconstruction process. The advantage of this approach is that 89\% of generated events are removed, significantly reducing the resource requirement. However, the disadvantage is that the selection has to be more stringent than the final selection and 20\% of events that would have passed are removed. Therefore, the BDT may not be as optimal as it may have been with unlimited resources, however this trade-off is deemed acceptable given the BDT's high performance, as discussed later in this section.
 
 For \kpipipi, signal samples of simulated events for the decay without any selection requirements at generator level are used. This is possible due to an artefact of the time that each stage of the analysis was performed; at this later time the resource availability improved. Events from data in the favoured \kpipipi mode in the region of \Bm mass above 5600 MeV are used as a sample of background combinatorial events. All samples used in training the BDTs are split into a training and testing sample before being used as an input to the multivariate algorithm.
 
@@ -334,7 +334,7 @@ These selection requirements are looser than those applied to the full selection
 
 Various input variables are used to exploit the topologies of the two- and four-body decays. Of particular importance are the \chisq per degree of freedom of the decay chain refit, $\chisq_\text{refit}$, and the $p_T$ asymmetry between the \Bm candidate and other tracks from the same PV, defined as
 \begin{equation}
-A_{p_T} = \frac{p_T^B - p_T^{\text{cone}}}{p_T^B + p_T^{\text{cone}}} \text{ ,}
+A_{\pt} = \frac{p_T^B - p_T^{\text{cone}}}{p_T^B + p_T^{\text{cone}}} \text{ ,}
 \label{ptasy}
 \end{equation}
 where $p_T^B$ is the $p_T$ of the reconstructed \Bm signal candidate and $p_T^{\text{cone}}$ is the sum of the $p_T$ of all other tracks in a cone of radius 1.50 surrounding the \Bm candidate. This is a quantitative measure of the isolation of the \Bm candidate. Some of the variables are transformed using a logarithm function to increase their separation power. Other input variables used include the logarithm of the \chisqip for the \Bm, bachelor, \Dz and all the \Dz decay products, the logarithm of the \chisqip for the \KS and both its decay products (for LL only) and the $p_T$ of the \KS candidate (for DD candidates only). The variables used in the BDT are slightly different for LL and DD candidates since the separation power of the \KS variables significantly differs between these samples. 
@@ -348,15 +348,15 @@ Tables~\ref{BDTinputvariables2body} and \ref{BDTinputvariables4body} show the li
 Rank & Variable in BDT\_LL & Variable in BDT\_DD \\
 \hline
 1 & log($\chisq_\text{refit}$) & log($\chisq_\text{refit}$) \\
-2 & log(\KS \chisqip) & log(\D daughter kaon \chisqip) \\
+2 & log(\KS \chisqip) & log(\Dz daughter kaon \chisqip) \\
 3 & log(max \KS daughter \chisqip) & log(Bachelor \chisqip) \\
-4 & \B ptasy 1.50 & \B ptasy 1.50 \\
-5 & log(\D daug kaon \chisqip) & log(\D daughter pion \chisqip) \\
-6 & log(Bachelor \chisqip) & log(\D \chisqip) \\
-7 & log(\D \chisqip) & log(\B \chisqip) \\
+4 & A_{\pt} & A_{\pt} \\
+5 & log(\Dz daughter kaon \chisqip) & log(\Dz daughter pion \chisqip) \\
+6 & log(Bachelor \chisqip) & log(\Dz \chisqip) \\
+7 & log(\Dz \chisqip) & log(\Bm \chisqip) \\
 8 & log(min \KS daughter \chisqip) & \KS $p_T$ \\
-9 & log(\D daug pion \chisqip) & - \\
-10 & log(\B \chisqip) & - \\
+9 & log(\Dz daughter pion \chisqip) & - \\
+10 & log(\Bm \chisqip) & - \\
 \end{tabular}
 \label{BDTinputvariables2body}}
 %\caption{Ranking for variables for BDTG\_LL and BDTG\_DD for the two-body BDTs.}
@@ -368,28 +368,26 @@ Rank & Variable in BDT\_LL & Variable in BDT\_DD \\
 \hline
 1 & log($\chisq_\text{refit}$) & log($\chisq_\text{refit}$) \\
 2 & log(\KS \chisqip) & $A_{\pt}$ \\
-3 & $A_{\pt}$ & log(\B \chisqip) \\
-4 & log(\B \chisqip) & log(Bachelor \chisqip) \\
-5 & log(\D \chisqip) & \KS $p_T$ \\
-6 & log(\D daughter kaon \chisqip) & log(\D \chisqip) \\
-7 & log(Bachelor \chisqip) & log(max \D daughter \chisqip) \\
-8 & log(min \D daughter \chisqip) & log(\D daughter ss \chisqip) \\
-9 & log(max \KS daughter \chisqip) & log(\D daughter kaon \chisqip) \\
-10 & log(\D daughter ss \chisqip) & log(min \D daughter \chisqip) \\
+3 & $A_{\pt}$ & log(\Bm \chisqip) \\
+4 & log(\Bm \chisqip) & log(Bachelor \chisqip) \\
+5 & log(\Dz \chisqip) & \KS $p_T$ \\
+6 & log(\Dz daughter kaon \chisqip) & log(\Dz \chisqip) \\
+7 & log(Bachelor \chisqip) & log(max \Dz daughter \chisqip) \\
+8 & log(min \Dz daughter \chisqip) & log(\Dz daughter ss \chisqip) \\
+9 & log(max \KS daughter \chisqip) & log(\Dz daughter kaon \chisqip) \\
+10 & log(\Dz daughter ss \chisqip) & log(min \Dz daughter \chisqip) \\
 11 & log(min \KS daughter \chisqip) & - \\
-12 & log(max \D daughter \chisqip) & - \\
+12 & log(max \Dz daughter \chisqip) & - \\
 \end{tabular}
 \label{BDTinputvariables4body}}
-%\caption{Ranking for variables for BDTG\_LL and BDTG\_DD for the four-body BDTs. The particle name "D daughter ss'' refers to the pion from the \D which has the same sign of the kaon.}
-%\label{BDTinputvariables4body}
-\caption{List of input variables for the (a) two-body, and (b) four-body, BDTs, ranked by separation power. For the four-body BDTs, the particle name ''D daughter ss'' refers to the pion from the \D which has the same sign of the kaon.}
+\caption{List of input variables for the (a) two-body, and (b) four-body, BDTs, ranked by separation power. The variable $A_{\pt}$ represents the \pt asymmetry as defined in \eqn~\ref{ptasy} and ''max (min) \Dz daughter \chisqip'' refers to the \chisqip of the \Dz daughter which has the largest (smallest) \chisqip. For the four-body BDTs, the particle name ''D daughter ss'' refers to the pion from the \Dz meson which has the same sign of the kaon.}
 \end{table}
 
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{figures/selection/inputvariables_KPi_LL_run1_1.pdf}
 \includegraphics[width=\linewidth]{figures/selection/inputvariables_KPi_LL_run1_2.pdf}
-\caption{Distributions of the input variables using the signal and background training samples for two-body LL BDT.}
+\caption{Distributions of the input variables using the signal (red) and background (blue) training samples for the two-body LL BDT.}
 \label{BDTinputdist2bodyLL}
 \end{figure}
 
@@ -397,7 +395,7 @@ Rank & Variable in BDT\_LL & Variable in BDT\_DD \\
 \centering
 \includegraphics[width=\linewidth]{figures/selection/inputvariables_KPi_DD_run1_1.pdf}
 \includegraphics[trim = 0mm 50mm 0mm 0mm, clip,width=\linewidth]{figures/selection/inputvariables_KPi_DD_run1_2.pdf}
-\caption{Distributions of the input variables using the signal and background training samples for two-body DD BDT.}
+\caption{Distributions of the input variables using the signal (red) and background (blue) training samples for the two-body DD BDT.}
 \label{BDTinputdist2bodyDD}
 \end{figure}
 
@@ -551,7 +549,7 @@ and $m_0$ and $m_1$ are the lower and upper limits of the mass fit, respectively
 
 The \Bm mass distributions from simulated signal events are found to be consistent between \runone and \runtwo data samples, but slightly different for \kpi and \kpipipi modes. Therefore the signal shape for different data-taking periods is the same, but different between \kpi and \kpipipi modes. 
 
-Unbinned maximum likelihood fits are performed to simulated signal samples, as shown in \fig\ref{signalfits}, and the shape parameters obtained from these fits are detailed in \tab\ref{signalparameters}. The residuals in these plots are defined as the difference between the data and the projection of the PDF in the centre of the bin, divided by the Poisson error on the number of candidates in that bin. The tail parameters, $\alpha$ and $n$, are highly correlated, therefore in order to prevent arbitrary variations between the two parameters and to ensure a stable fit, $n$ is fixed in the fits to the simulated samples. The variation in this parameter does not have significant effect on the quality of the fit, therefore $n$ is fixed to unity. In addition to $n$, the tail parameters $\alpha$ and the ratio of the widths between the CBs, $f_{\sigma}$, are also fixed from simulation. However, it is necessary to allow for some variation in the signal shape when performing the fit to data, as parameters, such as the peak position and width, may take slightly different values in data due to imperfections in the simulation of reconstruction and resolution effects of the \lhcb detector. Therefore, the peak position and width, $\mu$ and $\sigma$, are allowed to vary.
+Unbinned maximum likelihood fits are performed to simulated signal samples, as shown in \fig\ref{signalfits}, and the shape parameters obtained from these fits are detailed in \tab\ref{signalparameters}. The residuals in these plots are defined as the difference between the data and the projection of the PDF in the centre of the bin, divided by the Poisson error on the number of candidates in that bin. The tail parameters, $\alpha$ and $n$, are highly correlated, therefore in order to prevent arbitrary variations between the two parameters and to ensure a stable fit, $n$ is fixed in the fits to the simulated samples. The variation in this parameter does not have significant effect on the quality of the fit, therefore $n$ is fixed to unity. In addition to $n$, the tail parameters $\alpha$ and the ratio of the widths between the CBs, $f_{\sigma}$, are fixed from simulation. However, it is necessary to allow for some variation in the signal shape when performing the fit to data, as parameters, such as the peak position and width, may take slightly different values in data due to imperfections in the simulation of reconstruction and resolution effects of the \lhcb detector. Therefore, the peak position and width, $\mu$ and $\sigma$, are allowed to vary.
 
 \begin{figure}[h]
 \includegraphics[width=0.5\linewidth]{figures/fitComponents/signalShape_LL_KPi.pdf}
@@ -611,7 +609,7 @@ Partially reconstructed decays refer to those in which one or more particle, in 
 \item{\decay{\Bm}{(\decay{\Dstarz}{\Dz[\gamma]})\Kstarm},}
 \item{\decay{\Bd}{(\decay{\Dstarp}{\Dz[\pip]})\Kstarm},}
 \end{itemize}
-where the particle in square brackets corresponds to the missed particle. Each \decay{\B}{\Dstar\Kstar} decay is a Scalar $\to$ Vector Vector decay, therefore, due to the conservation of angular momentum, there are three different helicity amplitudes to consider. Each of these helicity amplitudes produces a \Dstar particle in a different helicity state, labelled +1, 0, -1. The helicity state of the \Dstar and the spin of the missing particle in the subsequent \Dstar decay determines the distribution of the reconstructed \B mass. The states +1 and -1 produce the same distribution in \Bm mass, therefore for the mass parameterisation these states are combined and collectively referred to as $\pm$1. This results in six different shapes to be modelled in the mass fit:
+where the particle in square brackets corresponds to the missed particle. Each \decay{\B}{\Dstar\Kstar} decay is a \it{Scalar $\to$ Vector Vector} decay, therefore, due to the conservation of angular momentum, there are three different helicity amplitudes to consider, labelled +1, 0, -1 corresponding to the helicity state of the \Dstar particle. The helicity state of the \Dstar and the spin of the missing particle in the subsequent \Dstar decay determines the distribution of the reconstructed \B mass. The states +1 and -1 produce the same distribution in \Bm mass, therefore for the mass parameterisation these states are combined and collectively referred to as $\pm$1. This results in six different shapes to be modelled in the mass fit:
 \begin{itemize}
 \item{\decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, \Dstarz helicity: 0,} 
 \item{\decay{\Bm}{(\decay{\Dstarz}{\Dz[\piz]})\Kstarm}, \Dstarz helicity: $\pm$1,} 
@@ -644,7 +642,7 @@ where $\sigma$ is the width of the first Gaussian, $f_G$ is the fraction contain
 \left( \frac{1 - \xi_{HORNS}}{b - a}x + \frac{b\xi_{HORNS} - a}{b - a}\right),
 \label{eqn:horns}
 \end{multline}
-where $m$ is the mass variable to be fitted, $x$ is the integration variable in the convolution, and $\mathcal{K}_{Horns}$ is the normalisation constant required for the PDF. The underlying kinematic distribution combined with the resolution and selection effects gives rise to a double peak structure, as shown in \fig\ref{fig:horns}.
+where $m$ is the mass variable to be fitted, $x$ is the integration variable in the convolution, and $\mathcal{K}_{Horns}$ is the normalisation constant required for the PDF. An example of such a double peak structure is shown in \fig\ref{fig:horns} for simulated data.
 
 \begin{figure}[h]
 \centering
@@ -671,7 +669,7 @@ As with the Horns function, this parabola is convolved with a Double Gaussian an
 \left( \frac{1 - \xi_{HILL}}{b' - a'}x + \frac{b'\xi_{HILL} - a'}{b' - a'}\right),
 \label{eqn:hill}
 \end{multline}
-where $m$ is the mass variable to be fitted, $x$ is the integration variable in the convolution and $\mathcal{K}_{Hill}$ is the normalisation constant required for the PDF. This Hill function also applies to the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz} decay, where the \Dstarz is in helicity state $\pm$1. The underlying kinematic distribution combined with the resolution and selection effects results in the distribution shown in \fig\ref{fig:hill}.
+where $m$ is the mass variable to be fitted, $x$ is the integration variable in the convolution and $\mathcal{K}_{Hill}$ is the normalisation constant required for the PDF. This Hill function also applies to the \decay{\Bm}{\Dstarz\Kstarm}, \decay{\Dstarz}{\Dz\piz} decay, where the \Dstarz is in helicity state $\pm$1. An example of such a distribution is shown in \fig\ref{fig:hill} for simulated data.
 
 \begin{figure}[h]
 \centering
@@ -826,10 +824,10 @@ Other backgrounds investigated in this analysis, but not included in the mass fi
 
 Extended maximum likelihood fits to the invariant B mass in the \kpi and \kpipipi favoured modes are performed using the shapes discussed in Secs.~\ref{sec:massfit:signal}, \ref{sec:massfit:combinatorial} and \ref{sec:massfit:partreco}. The total extended likelihood PDFs used to model the data are given by
 \begin{equation}
-P_{tot}(x_i;\theta, N) = N_{sig}P_{sig} + N_{comb}P_{comb} + N_{partreco}P_{partreco} \text{ ,}
+P_{tot}(x_i;\mathbb{O}, N) = N_{sig}P_{sig} + N_{comb}P_{comb} + N_{partreco}P_{partreco} \text{ ,}
 \label{totalpdf}
 \end{equation}
-where $x_i$ is the reconstructed \Bm mass of the candidate and $\theta$ are the set of parameters to be optimised, namely $\{\mu, \sigma, \beta, f_0\}$, along with the expected yields, $N$, of the signal, combinatorial and partially reconstructed PDFs, $\{N_{sig}, N_{comb}, N_{partreco}\}$, as additional freely varying parameters to be determined, as described in \sect\ref{sec:massfit:likelihood}. The signal PDF, $P_{sig}$, is given by \eqn\ref{DCBshape}, the combinatorial PDF, $P_{comb}$, is given by \eqn\ref{combpdf}, where the slope parameter $\beta$ varies in the fit, and the partially reconstructed PDF, $P_{partreco}$, is given by \eqn\ref{partrecofunction}. The yield of the signal and combinatorial PDFs, $N_{sig}$ and $N_{comb}$, are left to vary without constraint, as well as the peak position, $\mu$, and width, $\sigma$, of the signal PDF. The only parameters not fixed in the partially reconstructed background are the yield ratio between the 0 and $\pm$1 amplitudes, $f_0$, and the overall yield, $N_{partreco}$.
+where $x_i$ is the reconstructed \Bm mass of the candidate and $\mathbb{O}$ are the set of parameters to be optimised, namely $\{\mu, \sigma, \beta, f_0\}$, along with the expected yields, $N$, of the signal, combinatorial and partially reconstructed PDFs, $\{N_{sig}, N_{comb}, N_{partreco}\}$, as additional freely varying parameters to be determined, as described in \sect\ref{sec:massfit:likelihood}. The signal PDF, $P_{sig}$, is given by \eqn\ref{DCBshape}, the combinatorial PDF, $P_{comb}$, is given by \eqn\ref{combpdf}, where the slope parameter $\beta$ varies in the fit, and the partially reconstructed PDF, $P_{partreco}$, is given by \eqn\ref{partrecofunction}. The yield of the signal and combinatorial PDFs, $N_{sig}$ and $N_{comb}$, are left to vary without constraint, as well as the peak position, $\mu$, and width, $\sigma$, of the signal PDF. The only parameters not fixed in the partially reconstructed background are the yield ratio between the 0 and $\pm$1 amplitudes, $f_0$, and the overall yield, $N_{partreco}$.
 
 Figures~\ref{massfitskpi} and \ref{massfitsk3pi} show the results of the extended maximum likelihood fits to the invariant B mass distribution in the \kpi and \kpipipi favoured modes respectively, for LL and DD candidates in both Run 1 and Run 2. The estimated signal yields extracted from these fits are given in \tab\ref{signalyields}. It can be seen that the yield in the \kpi mode is almost twice as large as that in the \kpipipi mode, which is primarily a result of the lower reconstruction efficiency due to the two additional tracks in the four-body mode, and additional PID requirements necessary to reduce faking backgrounds. \Tab\ref{signalyields} also shows that the yield per unit of integrated luminosity is about 3 times higher in \runone (3\invfb) compared to \runtwo (1.8\invfb), which is driven by the increase in centre-of-mass energy in \runtwo. The gain in yield between Run 1 and Run 2 is not the same for the two- and four-body modes due to the difference in trigger efficiencies.
 
