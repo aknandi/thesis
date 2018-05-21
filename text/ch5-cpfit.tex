@@ -183,7 +183,8 @@ The \CP observables relating to the yield ratios \Rkk, \Rpipi, \Rptwo,  \Rmtwo \
 \subsubsection{Signal efficiencies from simulation}
 \label{sec:cpfit:efficiencies:signal}
 
-The signal efficiency, $\epsilon_{\text{sel}}$, defined as the probability that a true signal candidate passes the full selection imposed, including acceptance and trigger requirements. This is extracted from samples of simulated signal events by calculating the number of events that pass the selection as a fraction of those generated. The values are then used as fixed inputs in the \CP fit according to \eqns\ref{effcorrectionglw2body} and \ref{effcorrectionglw4body}. These values have been calculated separately for \runone and \runtwo samples as well as LL and DD categories, as shown in \tab\ref{seleff}. It can be seen that the LL selection efficiency drops in \runtwo, which is attributed to the \KS momentum being slightly higher than in Run 1, giving fewer \KS mesons that decay within the \velo. 
+The signal efficiency, $\epsilon_{\text{sel}}$, defined as the probability that a true signal candidate passes the full selection imposed, including acceptance and trigger requirements. This is extracted from samples of simulated signal events by calculating the number of events that pass the selection as a fraction of those generated. The values are then used as fixed inputs in the \CP fit according to \eqns\ref{effcorrectionglw2body} and \ref{effcorrectionglw4body}. These values have been calculated separately for \runone and \runtwo samples as well as LL and DD categories, as shown in \tab\ref{seleff}. 
+%It can be seen that the LL selection efficiency drops in \runtwo, which is attributed to the \KS momentum being slightly higher than in Run 1, giving fewer \KS mesons that decay within the \velo. 
 
 \begin{table}[h]
 \centering
@@ -330,21 +331,19 @@ where $\epsilon_{m, \text{corr}}$ refers to the relevant efficiency correction g
 
 To select \btodkst events, a BDT is implemented and selection requirements are applied to the \Kstarm mass and \KS helicity angle to preferentially select events that proceed via a \Kstarm meson, as described in \sect\ref{sec:selection}. These selection requirements are optimised simultaneously with the aim of minimising the uncertainty on the \CP observables. 
 
-In order to perform the optimisation procedure, the sensitivity is investigated in ''pseudo-experiments''. To set up each pseudo-experiment, the selection is applied to data excluding any requirements on the \Kstarm mass or \KS helicity angle, and with only a loose BDT selection, requiring the BDT classifier to be greater than $-0.8$. With this setup, a single fit is performed to each of the two- and four-body favoured modes, similar to the fit in \sect\ref{sec:massfit:fit}, to extract the signal, combinatorial and partially reconstructed yields. Signal and background yields under other selection scenarios are then determined via these yields and the signal and background efficiencies. The selections explored are:
+In order to perform the optimisation procedure, "pseudo-experiments'' are carried out to estimate the expected uncertainty on the \CP observables for different selection requirements. For a single pseudo-experiment, samples are generated for each of the \CP fit categories based on the model used for the \CP fit. The signal, combinatorial and partially reconstructed expected yields for the two- and four-body favoured \Dz decay modes are extracted -by performing a single fit to data-, as described below. The expected yields in the other \Dz decay modes are extracted using the yield ratios and asymmetries which are calculated based on the physics parameters, $r_B$, $\delta_B$ and \Pgamma, using \eqns\ref{exp_Acp} - \ref{exp_R4pi}. For this study, values of $r_B = 0.1$, $\delta_B = 150^{\circ}$ and $\gamma = 70^{\circ}$ are assumed, where \Pgamma and $r_B$ are consistent with the current world averages~\ref{CKMfitter}.\footnote{Although the value of $\delta_B$ is completely unknown, the optimisation has been repeated for various values of $\delta_B$ and is found to be insensitive to this choice.}  An equal combinatorial background rate is generated in each of the \Dz decay modes and spilt equally between \Bm and \Bp categories. Then by performing the \CP fit to the generated data, the \CP observables and their uncertainties can be extracted. Within a single pseudo-experiment this generation and fitting process is repeated 1000 times, where each time the generated yields take a different value, drawn from a Poisson distribution with a mean of the corresponding expected yield. Therefore, each pseudo-experiment results in a distribution of each \CP observable and as well as a corresponding uncertainty distribution. The value of the expected uncertainty for a given \CP observable is taken to be the mean of its uncertainty distribution.
 
+Pseudo-experiments are performed for a range of different selections:
 \begin{itemize}
 \item{The reconstructed \Kstarm mass lies within 50~\mevcc, 75~\mevcc or 100~\mevcc of the known \Kstarm mass,}
-\item{The magnitude of $\cos(\theta_{\KS})$ is greater than: 0, 0.1, 0.2, 0.3 or 0.4,}
-\item{The BDT classifier is greater than: -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.7, 0.8, 0.9 or 0.95.}
+\item{The magnitude of $\cos(\theta_{\KS})$ is greater than 0, 0.1, 0.2, 0.3 or 0.4,}
+\item{The BDT classifier is greater than -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.7, 0.8, 0.9 or 0.95.}
 \end{itemize}
-
-The central value of the yields in the other \Dz decay modes are extracted using the yield ratios and asymmetries which are calculated based on the physics parameters, $r_B$, $\delta_B$ and \Pgamma using \eqns\ref{exp_Acp} - \ref{exp_R4pi}. For this study, values of $r_B = 0.1$, $\delta_B = 150^{\circ}$ and $\gamma = 70^{\circ}$ are assumed, where \Pgamma and $r_B$ are consistent with the current world averages~\ref{CKMfitter}. Although the value of $\delta_B$ is completely unknown, the optimisation has been repeated for various values of $\delta_B$ and is found to be insensitive to this choice. 
-
-For a given selection, pseudo-experiment samples are generated for each of the bins according to the model described. Then by performing the \CP fit to the generated data, the \CP observables and their uncertainty can be extracted. This process is repeated 1000 times for the same selection, where each time the generated yields take a different value, drawn from the same Poisson distribution. This results in distributions of the \CP observables and their uncertainties. The fit uncertainty for each selection scenario is taken to be the mean of the corresponding distribution of the uncertainties extracted. These pseudo-experiments are performed for each of the different selections to calculate the fit uncertainty for each selection scenario.  
+To calculate the appropriate expected yields for each selection requirement in the favoured \Dz decay modes, the following procedure is performed. The selection described in \sect\ref{sec:selection} is applied to data excluding any requirements on the \Kstarm mass or \KS helicity angle, and with only a loose BDT selection, requiring the BDT classifier to be greater than $-0.8$. With this setup, a single fit is performed to each of the two- and four-body favoured modes, similar to the fit in \sect\ref{sec:massfit:fit}, to extract the signal, combinatorial and partially reconstructed yields for this loose selection. The signal and background efficiencies for each of the selection requirements listed above are calculated using simulated samples and high \Bm mass data respectively. For a given pseudo-experiment, the expected signal and background yields are then estimated based on both the yields extracted using the loose selection, and the signal and background efficiencies for the selection requirement under investigation.
 
 For optimising the selection for the GLW modes, the fit uncertainty was minimised for \Akk, \Rkk, \Apipi and \Rpipi. As an example, \fig\ref{optimisation} shows the fit uncertainty in \Rkk as a function of the \KS helicity angle selection point, for different \Kstarm mass requirements. The minimum uncertainty is achieved by requiring the reconstructed \Kstarm mass to lie within 75~\mevcc of the known \Kstarm mass and the magnitude of the \KS helicity angle to be greater than 0.3. A similar study is performed on the \CP observables \Akk, \Apipi and \Rpipi, which show reasonable agreement with the same position of the minimum as indicated in \fig\ref{optimisation}; therefore the above \Kstarm requirements are chosen for the final selection. Similarly, the requirement on the BDT classifier for the GLW modes is chosen to be greater than 0.6 for LL candidates and 0.7 for DD candidates. 
 
-The BDT selection for the ADS modes was optimised to minimise the fit errors in \Rptwo and \Rmtwo. Studies were performed to investigate a tighter BDT selection for the ADS mode as illustrated in \fig\ref{adsoptimisation}, showing that the uncertainty in \Rptwo continues to decrease as the BDT requirement is tightened. A tighter BDT cut of 0.9 in the ADS mode for DD candidates was chosen as it results in a lower uncertainty on \Rptwo and \Rmtwo due to an increase in the background rejection from 93\% to 98\%, while retaining 80\% of the signal. Although the uncertainty appears to decrease for a BDT cut of 0.95, this tighter selection results in a significant drop in signal efficiency to 73\%. The small drop in uncertainty between 0.9 and 0.95 is statistically insignificant and does not justify such a large drop in signal efficiency. 
+The BDT selection for the ADS modes was optimised to minimise the fit uncertainties in \Rptwo and \Rmtwo. Studies were performed to investigate a tighter BDT selection for the ADS mode as illustrated in \fig\ref{adsoptimisation}, showing that the uncertainty in \Rptwo continues to decrease as the BDT requirement is tightened. A tighter BDT cut of 0.9 in the ADS mode for DD candidates was chosen as it results in a lower uncertainty on \Rptwo and \Rmtwo due to an increase in the background rejection from 93\% to 98\%, while retaining 80\% of the signal. Although the uncertainty appears to decrease for a BDT cut of 0.95, this tighter selection results in a significant drop in signal efficiency to 73\%. The small drop in uncertainty between 0.9 and 0.95 is statistically insignificant and does not justify such a large drop in signal efficiency. 
 
 In summary, the final selection chosen is:
 
@@ -368,7 +367,7 @@ In summary, the final selection chosen is:
 \label{adsoptimisation}
 \end{figure}
 
-The pseudo-experiments described in this section were originally generated with an equal combinatorial rate in each of the \Dz decay modes. However, a significantly lower combinatorial rate is observed in data in the ADS modes compared to the corresponding favoured \kpi and \kpipipi decay channels. Consequently, the sensitivity to changes in the combinatorial rate were investigated, and showed the choice of BDT selection for the ADS modes remained insensitive to to a lower fraction of combinatorial background. 
+As mentioned earlier, the pseudo-experiments described in this section were originally generated with an equal combinatorial rate in each of the \Dz decay modes. However, a significantly lower combinatorial rate is observed in data in the ADS modes compared to the corresponding favoured \kpi and \kpipipi decay channels. Consequently, the sensitivity to changes in the combinatorial rate were investigated, and showed the choice of BDT selection for the ADS modes remained insensitive to a lower fraction of combinatorial background. 
 
 \subsection{Fitter bias in \CP fit}
 \label{sec:cpfit:fitterbias}
@@ -658,7 +657,7 @@ The model for the \kk mass spectrum in the \CP fit contains an additional backgr
 
 \subsubsection{\boldmath \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} background}
 
-The decay \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} is a background for the \pik mode, as described in \sect\ref{sec:backgrounds:bs}. The shape is taken from a maximum likelihood fit to simulated events and the yield is estimated to be $2.6 \pm 2.6$ events. The systematic uncertainty corresponding to this model component is estimated using Method 2, where the generated yield is drawn from a Gaussian distribution that has mean of $2.6$ and a width of $2.6$, rounded to a whole number.
+The decay \decay{\Bs}{\Dzb\bar{K}^{*}(1410)^0} is a background for the \pik mode, as described in \sect\ref{sec:backgrounds:bs}. The shape is taken from a maximum likelihood fit to simulated events and the fractional yield compared to the the \pik signal yield is taken to be $(1.28 \pm 1.26) \times 10^{-3}$. The systematic uncertainty corresponding to this model component is estimated using Method 2, where the generated fractional yield is drawn from a Gaussian distribution defined by $(1.28 \pm 1.26) \times 10^{-3}$.
 
 \subsection{Summary of systematic uncertainties}
 
@@ -690,7 +689,7 @@ Charmless  & $0.0008$ & $-$ & $0.003$ & $0.002$ & $0.007$ & $-$ & $0.0003$ & $0.
 Total systematic uncertainty & $0.0083$ & $0.009$ & $0.012$ & $0.022$ & $0.032$ & $0.0012$ & $0.0014$ & $0.0088$ & $0.0093$ & $0.032$ & $0.0034$ & $0.0038$ \\
 \hline
 \end{tabular}}
-\caption{Summary of systematic uncertainties on the fitted \CP observables. Uncertainties are not shown if they are more than two orders of magnitude smaller than the statistical uncertainty.}
+\caption{Summary of systematic uncertainties on the fitted \CP observables. The total systematic uncertainty for each \CP obseravble is calculated by summing each component in quadrature. Uncertainties are not shown if they are more than two orders of magnitude smaller than the statistical uncertainty.}
 \label{systematics}
 \end{sidewaystable}
 
@@ -712,21 +711,26 @@ R_{\pi\pi\pi\pi} &= &&1.08&\ &\pm&\ &0.13&\ &\pm&\ &0.03& \\
 R^+_{K\pi\pi\pi} &= &&0.016&\ &\pm&\ &0.007&\ &\pm&\ &0.003& \\ 
 R^-_{K\pi\pi\pi} &= &&0.006&\ &\pm&\ &0.006&\ &\pm&\ &0.004&
 \end{alignat*}
-where the first uncertainty is statistical and the second is systematic. The correlation matrices for the statistical and systematic uncertainties are given in Tables~\ref{statisticalcorrelations} and \ref{systematiccorrelations}, respectively. The large correlations of the systematic uncertainties are mainly due to contributions from production and detection asymmetries. Combined results from the \Kp\Km and \pip\pim decay modes, taking correlations into account, are
+where the first uncertainty is statistical and the second is systematic. The correlation matrices for the statistical and systematic uncertainties are given in Tables~\ref{statisticalcorrelations} and \ref{systematiccorrelations}, respectively. For the systematic uncertaities, the correlation matrices are calcualted separately for each component to the systematic uncertainties listed in \sec\ref{sec:systematics}, then these correlation matrices are combined. The large correlations of the systematic uncertainties are mainly due to the contributions from production and detection asymmetries. Combined results from the \CP-even \kk and \pipi decay modes, taking correlations into account, are
 \begin{alignat*}{13}
-R_{\CP+} &= &\ &1.18&\ &\pm&\ &0.08&\ &\pm&\ &0.02& \\
-A_{\CP+} &= &\ &0.08&\ &\pm&\ &0.06&\ &\pm&\ &0.01&
+A_{\CP+} &= &\ &0.08&\ &\pm&\ &0.06&\ &\pm&\ &0.01& \\
+R_{\CP+} &= &\ &1.18&\ &\pm&\ &0.08&\ &\pm&\ &0.02& \text{ ,}
 \end{alignat*}
-where the first uncertainty is statistical and the second is systematic. The asymmetry in the GLW modes is not statistically significant. The \CP observables $R^+$ and $R^-$, for the \pik and \pikpipi decay modes, can be transformed into $R_{ADS} = \left(R^- + R^+\right)/2\ $and \mbox{$A_{ADS} = \left(R^- - R^+\right)/\left(R^- + R^+\right)$} in order to compare with the results from \babar~\cite{BaBarDKstar}. These results, taking correlations into account, are
+where the first uncertainty is statistical and the second is systematic. The parameters $A_{\CP+}$ and $R_{\CP+}$ are defined in \eqns\ref{exp_Acp} and \ref{exp_Rcp} respectively. It can be seen that the asymmetry in the GLW modes, $A_{\CP+}$, is not statistically significant. The \CP observables $R^+_m$ and $R^-_m$, where $m$ represents $K\pi$ or $K\pi\pi\pi$, can be transformed into $R_{ADS}^m = \left(R^-_m + R^+_m\right)/2\ $and \mbox{$A_{ADS}^m = \left(R^-_m - R^+_m\right)/\left(R^-_m + R^+_m\right)$} in order to compare with the results from \babar~\cite{BaBarDKstar}. The results rom the analysis presented in this thesis, taking correlations into account, are
 \begin{alignat*}{13}
-R_{ADS}^{K\pi} &= &\ &0.011&\ &\pm&\ &0.004&\ &\pm&\ &0.001& \\
 A_{ADS}^{K\pi} &= &\ -&0.81&\ &\pm&\ &0.17&\ &\pm&\ &0.04& \\
-R_{ADS}^{K\pi\pi\pi} &= &\ &0.011&\ &\pm&\ &0.005&\ &\pm&\ &0.003& \\
-A_{ADS}^{K\pi\pi\pi} &= &\ -&0.45&\ &\pm&\ &0.21&\ &\pm&\ &0.14&
+R_{ADS}^{K\pi} &= &\ &0.011&\ &\pm&\ &0.004&\ &\pm&\ &0.001& \\
+A_{ADS}^{K\pi\pi\pi} &= &\ -&0.45&\ &\pm&\ &0.21&\ &\pm&\ &0.14& \\
+R_{ADS}^{K\pi\pi\pi} &= &\ &0.011&\ &\pm&\ &0.005&\ &\pm&\ &0.003& \text{ ,}
 \end{alignat*}
-where the first uncertainty is statistical and the second is systematic. The measured asymmetries and ratios for the two-body \Dz meson decay modes are consistent with, and more precise than, the previous measurements from \babar~\cite{BaBarDKstar}. 
+where the first uncertainty is statistical and the second is systematic. The measured asymmetries and ratios for the two-body \Dz meson decay modes are consistent with, and more precise than, the previous measurements from \babar~\cite{BaBarDKstar}:
+\begin{alignat*}{13}
+A_{ADS}^{K\pi} &= &\ -&0.34&\ &\pm&\ &0.43&\ &\pm&\ &0.16& \\
+R_{ADS}^{K\pi} &= &\ &0.066&\ &\pm&\ &0.031&\ &\pm&\ &0.010& \text{ ,}
+\end{alignat*}
+where the first uncertainty is statistical and the second is systematic.
 
-The Wilks' theorem statistical significance~\cite{Wilks:1938dza} of the two-body and four-body ADS decay modes, is defined as,
+The Wilks' theorem statistical significance~\cite{Wilks:1938dza} for the two-body and four-body ADS decay modes, is defined as:
 \begin{equation}
 \sqrt{-2ln\left(\frac{L_0}{L_i}\right)}
 \end{equation}
