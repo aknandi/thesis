@@ -12,9 +12,9 @@
 
 \section{The Standard Model}
 
-The Standard Model (SM) of particle physics describes all known fundamental particles and their interactions. Its predictions have been rigorously tested over several decades and have found to be consistent with our observations to remarkable levels of precision~\cite{SMprecision}. Although the SM has proven to be extremely accurate it has several limitations, for example the model does not incorporate gravitational interactions, provide a dark matter candidate, or explain the huge asymmetry observed between matter and antimatter. These problems suggest that the SM is an incomplete theory, hence experimental particle physics is driven by the search for direct or indirect signs of New Physics.
+The Standard Model (SM) of particle physics describes all known fundamental particles and their interactions. Its predictions have been rigorously tested over several decades and have been found to be consistent with our observations to remarkable levels of precision~\cite{SMprecision}. Although the SM has proven to be extremely accurate it has several limitations, for example the model does not incorporate gravitational interactions, provide a dark matter candidate, or explain the huge asymmetry observed between matter and antimatter. These problems suggest that the SM is an incomplete theory, hence experimental particle physics is driven by the search for direct or indirect signs of New Physics.
 
-The SM contains twelve spin-1/2 fermions in three generations, which are grouped into quarks and leptons, listed in \tab\ref{SMfermions}. All these elementary particles have corresponding antiparticles. The fermions interact via the electromagnetic, weak and strong forces, which are mediated by gauge bosons listed in \tab\ref{SMbosons}. The Brout-Englert-Higgs boson ($BEH$) is the only elementary scalar particle, and it couples to all particles with mass. The Brout-Englert-Higgs mechanism explains why weak gauge bosons have mass, while the photon is massless. 
+The SM contains twelve spin-1/2 fermions in three generations, which are grouped into quarks and leptons, listed in \tab\ref{SMfermions}. All these elementary particles have corresponding antiparticles. The fermions interact via the electromagnetic, weak and strong forces, which are mediated by gauge bosons listed in \tab\ref{SMbosons}. The Higgs boson ($H$) is the only elementary scalar particle, and it couples to all particles with mass. The Higgs boson is not a Gauge boson, but a neutral scalar boson, which couples to all particles with mass. The Higgs mechanism explains why weak gauge bosons have mass, while the photon is massless. 
 
 Quarks do not exist as free particles, but always exist in bound states with other quarks, referred to as hadrons. There are different types of hadrons: most commonly mesons and baryons, in addition to the recently discovered pentaquarks and tetraquarks~\cite{pentaquark,tetraquark_BESIII,tetraquark_lhcb}. Mesons are two-particle bound states composed of a quark and an antiquark, and baryons are three-particle bound states composed of three quarks. Examples of mesons include \B mesons, containing a \bquark or \bquarkbar quark (\eg~\Bm, \Bp, \Bz), and \D mesons, containing a \cquark or \cquarkbar quark (\eg~\Dm, \Dp, \Dz). Examples of baryons include protons, which are composed of \uquark\uquark\dquark quarks, and \Lz baryons, which are composed of \uquark\dquark\squark quarks. Tetraquarks consist of two quarks and two antiquarks, and pentaquarks consist of four quarks and one antiquark.
 
@@ -47,18 +47,18 @@ photon (\g) & Electromagnetic & $0$ \\
 \Wpm & Weak & $\pm 1$ \\
 gluon ($g$) & Strong & $0$ \\
 \hline
-BEH (scalar) & - & $0$
+$H$ (scalar) & - & $0$
 \end{tabular}
-\caption{Gauge bosons in the Standard Model. The Brout-Englert-Higgs boson ($BEH$) is not a Gauge boson, but a neutral scalar boson, which couples to all particles with mass.}
+\caption{Gauge and Higgs bosons in the Standard Model.}
 \label{SMbosons}
 \end{table}
 
 \section{\CP violation}
 
-One of the key problems with the SM is that is does not explain why our universe consists almost entirely of matter, with hardly any antimatter present. This asymmetry is commonly quantified by the baryon-antibaryon asymmetry, $\frac{n_{B} - n_{\bar{B}}}{n_{\g}} \approx \frac{n_{B}}{n_{\g}}$, where $n_{B}$, $n_{\bar{B}}$ and $n_{\g}$ are the baryon, anti-baryon and photon number densities respectively. Astrophysical observations have measured the baryon-antibaryon asymmetry to be of the order of $10^{-10}$~\cite{astrophysicalasy}. The requirements for this asymmetry to be generated from a symmetrical initial state, known as baryogenesis, were first proposed by Andrei Sakharov in 1967~\cite{sakharov}. The three Sakharov conditions are: baryon number violation, the violation of charge ($C$) symmetry and charge-parity (\CP) symmetry, and departure from thermal equilibrium. These components are required in all baryogenesis models. The definitions of the $C$ and $P$ symmetries are given by their operators:
+One of the key problems with the SM is that it does not explain why our universe consists almost entirely of matter, with hardly any antimatter present. This asymmetry is commonly quantified by the baryon-antibaryon asymmetry, $\frac{n_{B} - n_{\bar{B}}}{n_{\g}} \approx \frac{n_{B}}{n_{\g}}$, where $n_{B}$, $n_{\bar{B}}$ and $n_{\g}$ are the baryon, anti-baryon and photon number densities respectively. Astrophysical observations have measured the baryon-antibaryon asymmetry to be of the order of $10^{-10}$~\cite{astrophysicalasy}. The requirements for this asymmetry to be generated from a symmetrical initial state, known as baryogenesis, were first proposed by Andrei Sakharov in 1967~\cite{sakharov}. The three Sakharov conditions are: baryon number violation, the violation of charge ($C$) symmetry and charge-parity (\CP) symmetry, and departure from thermal equilibrium. These components are required in all baryogenesis models. The definitions of the $C$ and $P$ symmetries are given by their operators:
 \begin{itemize}
 \item The charge conjugation operator, $\hat{C}$, converts particles into their antiparticles,
-\item The parity operator, $\hat{P}$, reverses the spatial axis so all vectors change sign.
+\item The parity operator, $\hat{P}$, reverses the spatial axes so all vectors change sign.
 \end{itemize}
 \CP symmetry is violated if the system changes under the combined $\hat{C}\hat{P}$ transformation.
 
@@ -68,17 +68,24 @@ The SM satisfies the \CP violation condition for baryogenesis, however the amoun
 \begin{itemize}
 \item \textbf{Direct \CP violation in decay}: this is when the rate of decay of a particle is not equal to the rate of the decay of the corresponding antiparticle \eg
 \begin{equation*}
-\Gamma\left(\decay{\Bm}{\D\Km}\right) \neq \Gamma\left(\decay{\Bp}{\D\Kp}\right)
+\Gamma\left(\decay{\Bm}{\D\Km}\right) \neq \Gamma\left(\decay{\Bp}{\D\Kp}\right) \text{ ,}
 \end{equation*}
 where \D represents a  superposition of \Dz and \Dzb mesons.
-\item \textbf{Indirect \CP violation in mixing}: Neutral mesons can oscillate between their particle and antiparticle states, $\Bz \leftrightarrow \Bzb$, as shown in \fig\ref{mixing}. Indirect \CP violation occurs when \decay{\Bz}{\Bzb} and \decay{\Bzb}{\Bz} proceed at different rates. 
+\item \textbf{Indirect \CP violation in mixing}: Neutral mesons can oscillate between their particle and antiparticle states, $\Bz \leftrightarrow \Bzb$, as shown in \fig\ref{mixing}. Indirect \CP violation occurs when \decay{\Bz}{\Bzb} and \decay{\Bzb}{\Bz} proceed at different rates, \eg
+\begin{equation*}
+\Gamma\left(\decay{\Bz}{\decay{\Bzb}{X}}\right) \neq \Gamma\left(\decay{\Bzb}{\decay{\Bz} \text{ ,}{\bar{X}}}\right)
+\end{equation*}
+where $X$ is some measured final state accessible to both \Bz and \Bzb.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\linewidth]{figures/theory/mixing.pdf}
 \caption{Feynman diagram of mixing between $\Bz_q$ and $\Bzb_q$, where $q$ represents a \dquark or \squark quark.}
 \label{mixing}
 \end{figure}
-\item \textbf{\CP violation from the interference of mixing and decay}: This is best illustrated by an example. A \Bs meson (containing a \bquark quark and \squark antiquark) can decay to a \Dsm\Kp or \Dsp\Km final state. However, this process can also proceed via \decay{\Bs}{\Bsb} mixing, where the \Bsb decays to \Dsm\Kp or \Dsp\Km. These decay paths to the same final state interfere with each other, which results the third form of \CP violation.
+\item \textbf{\CP violation from the interference of mixing and decay}: This is best illustrated by an example. A \Bs meson (containing a \bquark quark and \squark antiquark) can decay to a \Dsm\Kp or \Dsp\Km final state. However, this process can also proceed via \decay{\Bs}{\Bsb} mixing, where the \Bsb decays to \Dsm\Kp or \Dsp\Km. These decay paths to the same final state interfere with each other, which results in the third form of \CP violation, illustrated by 
+\begin{equation*}
+\Gamma\left(\decay{\Bs}{\Dsm\Kp}\right) \neq \Gamma\left(\decay{\Bs}{\decay{\Bsb}{\Dsm\Kp}}\right)
+\end{equation*}
 \end{itemize} 
 
 Each of these three types of \CP violation can be investigated. This thesis focuses on measurements of direct \CP violation within the Standard Model.
@@ -115,7 +122,7 @@ If the CKM matrix was equivalent to the identity matrix there would be no cross-
 \begin{equation}
 | V_{CKM} | = \begin{pmatrix} 0.97434^{+0.00011}_{0.00012} & 0.22506 \pm 0.00050 & 0.00357 \pm 0.00015 \\ 0.22492 \pm 0.00050 & 0.97351 \pm 0.00013 & 0.0411 \pm 0.0013 \\ 0.00875^{+0.00032}_{-0.00033} & 0.0403 \pm 0.0013 & 0.99915 \pm 0.00005 \end{pmatrix} \text{ .}
 \end{equation}
-It can be seen that quark transitions within the same generation are highly favoured, these are known as Cabibbo-favoured decays. Quark transitions across one generation are suppressed, and the suppression is even stronger across two generations. These are known as Cabibbo-suppressed transitions. 
+It can be seen that quark transitions within the same generation are highly favoured; these are known as Cabibbo-favoured decays. Quark transitions across one generation are suppressed, and the suppression is even stronger across two generations. These are known as Cabibbo-suppressed transitions. 
 
 The structure in the CKM matrix can be illustrated by the Wolfenstein parameterisation, given in \eqn\ref{wolf}, which uses parameters $A$, $\lambda$, $\rho$ and $\eta$. 
 \begin{equation}
@@ -169,12 +176,12 @@ There are three parameters in \eqn\ref{ratiodiagrams}: $\rb^{DK^*}$, $\deltab^{D
 \centering
 %\includegraphics[trim = 20mm 120mm 100mm 20mm,clip,width=0.7\linewidth]{figures/theory/test.pdf}
 \includegraphics[trim = 0mm 120mm 0mm 30mm,clip,width=\linewidth]{figures/theory/pathDiagrams.pdf}
-\put(-420,70) {\tiny $\rb^{DK^*} e^{i(\deltab^{DK^*} - \gamma)}$}
-\put(-210,70) {\tiny $\rb^{DK^*} e^{i(\deltab^{DK^*} + \gamma)}$}
-\put(-285,70) {\tiny $A_{\bar{D}}$}
-\put(-285,17) {\tiny $A_D$}
-\put(-75,70) {\tiny $A_D$}
-\put(-75,17) {\tiny $A_{\bar{D}}$}
+\put(-425,75) {\small $\rb^{DK^*} e^{i(\deltab^{DK^*} - \gamma)}$}
+\put(-215,75) {\small $\rb^{DK^*} e^{i(\deltab^{DK^*} + \gamma)}$}
+\put(-285,70) {\small $\bar{A_{D}}$}
+\put(-285,12) {\small $A_D$}
+\put(-75,70) {\small $A_D$}
+\put(-75,12) {\small $\bar{A_{D}}$}
 \caption{Diagram of the interfering amplitudes of \decay{\Bm}{\D\Kstarm} (left) and \decay{\Bp}{\D\Kstarp} (right), where $A_D$ is the amplitude of \decay{\Dz}{f(D)} and $\bar{A_{D}}$ is the amplitude of \decay{\Dzb}{f(D)}.}
 \label{paths}
 \end{figure}
@@ -190,14 +197,14 @@ The values of the complex amplitudes, $A_{D}$ and $\bar{A_{D}}$, depend on the \
 \subsection{The GLW and quasi-GLW methods}
 \label{sec:theory:glw}
 
-The theorists Gronau, London and Wyler proposed the study of \decay{\Bm}{\D\Km} modes with the \D decays into a \CP eigenstate, referred to as the GLW method~\cite{GL,GW}, such as the eigenstates \decay{\Dz}{\Kp\Km} and \decay{\Dz}{\pip\pim}. As these final states are \CP-even, $A_{D} = \bar{A_{D}}$, the expressions from \eqns\ref{pwminus} and \ref{pwplus} can be simplified to
+The theorists Gronau, London and Wyler proposed the study of \decay{\Bm}{\D\Km} modes with the \D decays into a \CP eigenstate, referred to as the GLW method~\cite{GL,GW}, such as the eigenstates \decay{\Dz}{\Kp\Km} and \decay{\Dz}{\pip\pim}. A \CP eigenstate is a state which is preserved under a \CP transformation. As these final states are \CP-even, $A_{D} = \bar{A_{D}}$, and hence the expressions from \eqns\ref{pwminus} and \ref{pwplus} can be simplified to
 \begin{align}
 \Gamma\left(\decay{\Bm}{[f_{GLW}]\Kstarm}\right) &\propto 1 + (\rb^{DK^*})^2 + 2\rb^{DK^*}\cos(\deltab^{DK^*} - \gamma) \label{widthBm} \\
 \Gamma\left(\decay{\Bp}{[f_{GLW}]\Kstarp}\right) &\propto 1 + (\rb^{DK^*})^2 + 2\rb^{DK^*}\cos(\deltab^{DK^*} + \gamma) \text { ,}\label{widthBp}
 \end{align}
 assuming that \CP violation in \D decays is negligible and $\mathcal{A}\left(\decay{\Bm}{\Dz\Kstarm}\right) = \mathcal{A}\left(\decay{\Bp}{\Dzb\Kstarp}\right)$. 
 
-The four-body \D decay mode \decay{\D}{\pip\pim\pip\pim} is a self-conjugate decay mode, containing a mixture of \CP-even and \CP-odd states, which can be used to measure \Pgamma via the GLW method provided the fractional \CP-even content is known~\cite{NAYAK20151}. As this mode is not a pure \CP eigenstate, it is referred to as a quasi-GLW (qGLW) mode, and its sensitivity to \Pgamma is reduced. The \CP-even fraction, $F_{4\pi}$, measured to be $\sim 0.75$~\cite{charm4pi}, accounts for the dilution effect. The partial widths for this self-conjugate qGLW mode~\cite{NAYAK20151,charm4pi}, corresponding to \eqns\ref{widthBm} and \ref{widthBp}, are
+The four-body \D decay mode \decay{\D}{\pip\pim\pip\pim} is a self-conjugate decay mode, containing a mixture of \CP-even and \CP-odd states, which can be used to measure \Pgamma via the GLW method provided the fractional \CP-even content is known~\cite{NAYAK20151}. As this mode is not a pure \CP eigenstate, it is referred to as a quasi-GLW (qGLW) mode, and its sensitivity to \Pgamma is reduced. The \CP-even fraction, $F_{4\pi}$, measured to be $0.737 \pm 0.028$~\cite{charm4pi}, accounts for the dilution effect. The partial widths for this self-conjugate qGLW mode~\cite{NAYAK20151,charm4pi}, corresponding to \eqns\ref{widthBm} and \ref{widthBp}, are
 \begin{align}
 \Gamma\left(\decay{\Bm}{[f_{qGLW}]\Kstarm}\right) \propto 1 + (\rb^{DK^*})^2 + 2\rb^{DK^*}\left(2F_{4\pi} - 1\right)\cos(\deltab^{DK^*} - \gamma) \label{widthBm4body} \\
 \Gamma\left(\decay{\Bp}{[f_{GLW}]\Kstarp}\right) \propto 1 + (\rb^{DK^*})^2 + 2\rb^{DK^*}\left(2F_{4\pi} - 1\right)\cos(\deltab^{DK^*} + \gamma) \text { .} \label{widthBp4body}
@@ -211,12 +218,12 @@ In \eqns\ref{widthBm4body} and \ref{widthBp4body}, it can be seen that the expre
 The theorists Atwood, Dunietz and Soni proposed looking at \D decay modes where $f(D)$ is a non-\CP eigenstate, \eg~\decay{\D}{\Km\pip}, referred to as the ADS method~\cite{ADS,ADS-2001}. A key feature of this method is that although the \Dz and \Dzb decay to the same final state, they proceed by very different amplitudes. The Feynman diagrams for the doubly Cabibbo-favoured \decay{\Dz}{\Km\pip} decay and the doubly Cabibbo-suppressed \decay{\Dz}{\Kp\pim} decay are shown in \fig\ref{fig:D2KPidiagram}.
 \input{text/FD_D2KPi}
 
-The ratio of the amplitudes of \decay{\Dzb}{\Km\pip} and \decay{\Dz}{\Km\pip} is given by\footnote{The \CP operator acting on the state $\ket{\Dz}$ can result in either, $\CP\ket{\Dz} = \ket{\Dzb}$ or $\CP\ket{\Dz} = - \ket{\Dzb}$. This has consequences for the definition of the strong phase difference. In the ADS formalism, which is used here, the definition $\CP\ket{\Dz} = \ket{\Dzb}$ is used, resulting in \eqn\ref{ratioads}. The alternative definition, $\CP\ket{\Dz} = - \ket{\Dzb}$, used by HFLAV and in the CLEO-c analysis in Ref~\cite{charmkpi_deltab}, would result in $r_D^{K\pi}e^{-i(\pi + \delta_D^{K\pi})}$. The consequence of this is is that the measured value of the strong phase difference taken from Ref.~\cite{charmkpi_deltab} must be offset by $180^{\circ}$ when used in the analysis presented in this thesis.}
+The ratio of the amplitudes of \decay{\Dzb}{\Km\pip} and \decay{\Dz}{\Km\pip} is given by\footnote{The \CP operator acting on the state $\ket{\Dz}$ can result in either $\CP\ket{\Dz} = \ket{\Dzb}$ or $\CP\ket{\Dz} = - \ket{\Dzb}$. This has consequences for the definition of the strong phase difference. In the ADS formalism, which is used here, the definition $\CP\ket{\Dz} = \ket{\Dzb}$ is used, resulting in \eqn\ref{ratioads}. The alternative definition, $\CP\ket{\Dz} = - \ket{\Dzb}$, used by HFLAV and in the CLEO-c analysis in Ref~\cite{charmkpi_deltab}, would result in $r_D^{K\pi}e^{-i(\pi + \delta_D^{K\pi})}$. The consequence of this is that the measured value of the strong phase difference taken from Ref.~\cite{charmkpi_deltab} must be offset by $180^{\circ}$ when used in the analysis presented in this thesis.}
 \begin{equation}
 \frac{\mathcal{A}\left(\decay{\Dzb}{\Km\pip}\right)}{\mathcal{A}\left(\decay{\Dz}{\Km\pip}\right)} = r_D^{K\pi}e^{-i\delta_D^{K\pi}} \text { ,}
 \label{ratioads}
 \end{equation}
-where the parameter $r_D^{K\pi}$ is the magnitude of the ratio of amplitudes and $\delta_D^{K\pi}$ is difference in strong phase between the suppressed and favoured decays. These parameters have been previously measured to be $r_D^{K\pi} \sim 0.06$ and $\delta_D^{K\pi} \sim 192^{\circ}$~\cite{HFAG}.
+where the parameter $r_D^{K\pi}$ is the magnitude of the ratio of amplitudes and $\delta_D^{K\pi}$ is the difference in strong phase between the suppressed and favoured decays. These parameters have been previously measured to be $r_D^{K\pi} = 0.0591 \pm 0.0003$ and $\delta_D^{K\pi} = \left(191.8 \pm 12.1\right)^{\circ}$~\cite{HFAG}.
 
 \Eqn\ref{ratioads} can be expressed as $\bar{A_{D}}/A_{D} = r_D^{K\pi}e^{-i\delta_D^{K\pi}}$ for the case where $f(D)$ is \Km\pip, and similarly, $A_{D}/\bar{A_{D}} = r_D^{K\pi}e^{-i\delta_D^{K\pi}}$ for the case where $f(D)$ is \Kp\pim. Using these expressions, the partial widths from \eqns\ref{pwminus} and \ref{pwplus} for the various \decay{\Bpm}{\D\Kstarpm} ADS decay modes are given by
 \begin{align}
@@ -237,7 +244,7 @@ and
 R_{K3\pi} e^{i\delta_D^{K3\pi}} &= \frac{\int \mathrm{d}p A_{fav}(p)A_{sup}(p)}{\sqrt{\int \mathrm{d}p \left|A_{fav}(p)\right|^2 \int \mathrm{d}p \left|A_{sup}(p)\right|^2}} \text { ,}
 \label{Rddefinition}
 \end{align}
-where $r_D^{K3\pi}$ is the amplitude ratio between suppressed and favoured \decay{\D}{\Km\pip\pim\pip} decays (analogous to $r_D^{K\pi}$), $R_{K3\pi}$ is a coherence factor to account for the dilution of the interference effects due to averaging over phase space, and $\delta_D^{K3\pi}$ is the strong phase difference (analogous to $\delta_D^{K\pi}$). These parameters have been measured to be $r_D^{K3\pi} \sim 0.0006$, $R_{K3\pi} \sim 0.17$ and $\delta_D^{K3\pi} \sim 28^{\circ}$~\cite{charmk3pi,charmk3pi_errata,LHCb-PAPER-2015-057}. Based on the definitions in \eqns\ref{rddefinition} and \ref{Rddefinition}, the partial widths are given by
+where $r_D^{K3\pi}$ is the amplitude ratio between suppressed and favoured \decay{\D}{\Km\pip\pim\pip} decays (analogous to $r_D^{K\pi}$), $R_{K3\pi}$ is a coherence factor to account for the dilution of the interference effects due to averaging over phase space, and $\delta_D^{K3\pi}$ is the strong phase difference (analogous to $\delta_D^{K\pi}$). These parameters have been measured to be $r_D^{K3\pi} = 0.0549 \pm 0.0006$, $R_{K3\pi} = 0.43 \pm 0.17$ and $\delta_D^{K3\pi} = \left(128 \pm 28\right){\circ}$~\cite{charmk3pi,charmk3pi_errata,LHCb-PAPER-2015-057}. Based on the definitions in \eqns\ref{rddefinition} and \ref{Rddefinition}, the partial widths are given by
 \begin{align}
 \Gamma\left(\decay{\Bm}{[\Kp\pim]\Kstarm}\right) &\propto (\rb^{DK^*})^2 + (r_D^{K3\pi})^2 + 2\rb^{DK^*}R_{K3\pi}r_D^{K3\pi}\cos(\deltab^{DK^*} + \delta_D^{K3\pi} - \gamma) \label{adsBdecaym4body} \\
 \Gamma\left(\decay{\Bp}{[\Km\pip]\Kstarp}\right) &\propto (\rb^{DK^*})^2 + (r_D^{K3\pi})^2 + 2\rb^{DK^*}R_{K3\pi}r_D^{K3\pi}\cos(\deltab^{DK^*} + \delta_D^{K3\pi} + \gamma) \label{adsBdecayp4body} \\
@@ -253,7 +260,7 @@ This thesis aims to measure \Pgamma as well as the hadronic parameters of \btodk
 \subsubsection{Coherence factor}
 \label{sec:theory:kappa}
 
-As discussed earlier in this chapter, this thesis considers \decay{\Bm}{\D\Kstarm}, \decay{\Kstarm}{\KS\pim} decays. The \Kstarm meson could be reconstructed in either of the \KS\piz or \Km\piz final states, however, due to the higher reconstruction efficiency of the \KS meson compared to the \piz meson, the \KS\pim final state is pursued. As the \Kstarm meson has a large natural width (about 50~\mevcc~\cite{PDG2016}), it is necessary to consider the effect of other resonant and non-resonant \decay{\Bm}{\D\KS\pim} decays on the experimental measurements of the physics parameters, $\rb^{DK^*}$, $\rb^{DK^*}$ and \Pgamma. The amplitudes and phases of the different decays will vary at each point in \decay{\Bm}{\D\KS\pim} phasespace, as given by
+As discussed earlier in this chapter, this thesis considers \decay{\Bm}{\D\Kstarm}, \decay{\Kstarm}{\KS\pim} decays. The \Kstarm meson could be reconstructed in either of the \KS\pim or \Km\piz final states, however, due to the higher reconstruction efficiency of the \KS meson compared to the \piz meson, the \KS\pim final state is pursued. As the \Kstarm meson has a large natural width (about 50~\mevcc~\cite{PDG2016}), it is necessary to consider the effect of other resonant and non-resonant \decay{\Bm}{\D\KS\pim} decays on the experimental measurements of the physics parameters, $\rb^{DK^*}$, $\rb^{DK^*}$ and \Pgamma. The amplitudes and phases of the different decays will vary at each point in \decay{\Bm}{\D\KS\pim} phase space, as given by
 \begin{align*}
 A(B^- \to D^0 X^-) &= A_c(p) e^{i\delta_c(p)} \\
 A(B^- \to \bar{D^0} X^-) &= A_u(p) e^{i(\delta_u(p) - \gamma)} \text{ ,}
@@ -265,7 +272,7 @@ A(\decay{\Bp}{\Dz X^+}) &= A_u(p) e^{i(\delta_u(p) + \gamma)} \text{ .}
 \end{align*}
 Due to the large natural width of the \Kstarm meson, interference may occur in the region near the \Kstarm mass between the signal \Kstarm decay amplitude and amplitudes due to other \decay{\Bm}{\D\KS\pim} contributions, for example higher \KS\pim resonances and non-resonant decays. The interfering contributions dilute the sensitivity to \Pgamma, which is quantified by the \btodkst coherence factor, $\kappa$, where $0 \leq \kappa \leq 1$, and $\kappa = 1$ denotes a pure $K^{*-}$ contribution giving maximum sensitivity to \Pgamma. The parameters \rb, \deltab and $\kappa$ are then defined for \btodkst decays as
 \begin{align}
-r_B &= \frac{\Gamma(B^- \to \bar{D^0}X^-)}{\Gamma(B^- \to D^0X^-)} = \frac{\int \left|A_u(p)\right|^2 \mathrm{d}p}{\int \left|A_c(p)\right|^2 \mathrm{d}p}
+r_B^2 &= \frac{\Gamma(B^- \to \bar{D^0}X^-)}{\Gamma(B^- \to D^0X^-)} = \frac{\int \left|A_u(p)\right|^2 \mathrm{d}p}{\int \left|A_c(p)\right|^2 \mathrm{d}p}
 \label{rbdefinition}
 \end{align}
 \begin{align}
@@ -398,7 +405,7 @@ The angles \deltab and \Pgamma relate to the \CP observables via the trigonometr
 %{\color{red}{I am struggling with this paragraph}}
 %Out of the three CKM angles, $\alpha$, $\beta$ and \Pgamma, the measurement of \Pgamma has the largest uncertainty, despite it being the only angle whose measurements are dominated by tree-level processes. This is due to the experimental considerations of the decays sensitive to each of the CKM angles. For example, $\beta$ is measured primarily using \decay{\Bz}{\jpsi\KS}, where \decay{\jpsi}{\mup}{\mun}, which is very easy to reconstruct due to the two charged leptons in the final state, and so can be reconstructed with a very high efficiency. However, \Pgamma is measured primarily from \decay{\Bm}{\D\Km} decays, which is a purely hadronic decay and so more difficult to reconstruct due to the possibility of misidentification of the kaons and pions. This was especially true at the B factories, namely the BaBar and Belle experiments, as they did not have the particle identification power of \lhcb. The extraction of $\alpha$ is obtained by performing measurements of \decay{\Bz}{\pip\pim} and \decay{\Bz}{\rhop\rhom}. These experimental difficulties are the reason for \Pgamma having a larger uncertainty than $\alpha$ and $\beta$.
 
-The \decay{\Bm}{\D\Km} channel is a very important mode for tree level \Pgamma measurements, as it is straightforward to reconstruct and has a fairly high branching fraction of $3.7 \times 10^{-4}$~\cite{PDG2016}. This \decay{\Bm}{\D\Km} channel is thoroughly exploited at \lhcb having yielded many \Pgamma sensitive measurements using an extensive range of \D meson final states:
+The \decay{\Bm}{\D\Km} channel is a very important mode for tree level \Pgamma measurements, as it is straightforward to reconstruct and has a fairly high branching fraction of $3.7 \times 10^{-4}$~\cite{PDG2016}. This \decay{\Bm}{\D\Km} channel is thoroughly exploited at \lhcb, having yielded many \Pgamma-sensitive measurements using an extensive range of \D meson final states:
 \begin{itemize}
 \item \decay{\D}{\Kp\pim}, \Kp\Km, \pip\pim~\cite{LHCb-PAPER-2017-021},
 \item \decay{\D}{\Kp\pim\pip\pim}, \pip\pim\pip\pim~\cite{LHCb-PAPER-2016-003},
@@ -408,7 +415,7 @@ The \decay{\Bm}{\D\Km} channel is a very important mode for tree level \Pgamma m
 \end{itemize}
 A combination of these \Pgamma-sensitive \CP violation measurements performed by \lhcb, in addition to other modes, has yielded a combined result of $\Pgamma = \left(72.2^{+6.8}_{-7.3}\right)^{\circ}$~\cite{LHCb-PAPER-2016-032}, which is the most precise direct determination of \Pgamma to date.
 
-Other modes used to constrain \Pgamma at \lhcb include, \decay{\Bz}{\D\Kstarz} decays and the time-dependent \decay{\Bs}{\Dspm\Kmp} decays yielding individual measurements of $\Pgamma = (71 \pm 20)^{\circ}$ and $\Pgamma = (115^{+28}_{-43})^{\circ}$ (mod $180^{\circ}$) respectively~\cite{LHCb-PAPER-2016-006,LHCb-PAPER-2014-038}. Previous \B-factory experiments, namely the BaBar and Belle experiments, have also produced constraints on the CKM angle \Pgamma from charged and neutral \B decays. For example, decays of \decay{\Bm}{\D\Km}, $\D^*\Km$, \D\Kstarm and neutral \B decays to $\D^{(*)}K^{(*)}$ have been reported~\cite{BabarGLW_latest,BabarADS_latest,BaBar-Gamma-2013,BaBarGGSZ,BaBar_B0,BelleGLW_latest,BelleADS_latest,BelleGGSZ}. A combination of measurements from BaBar and Belle experiments separately obtained results of $\Pgamma = (69^{+17}_{-16})^{\circ}$ and $\Pgamma = (68^{+15}_{-14})^{\circ}$ respectively~\cite{Babar_gamma,Belle_gamma}.
+Other modes used to constrain \Pgamma at \lhcb include, \decay{\Bz}{\D\Kstarz} decays and the time-dependent \decay{\Bs}{\Dspm\Kmp} decays yielding individual measurements of $\Pgamma = (71 \pm 20)^{\circ}$ and $\Pgamma = (115^{+28}_{-43})^{\circ}$ (mod $180^{\circ}$) respectively~\cite{LHCb-PAPER-2016-006,LHCb-PAPER-2014-038}. Previous \B-factory experiments, namely the BaBar and Belle experiments, have also produced constraints on the CKM angle \Pgamma from charged and neutral \B decays. For example, decays of \decay{\Bm}{\D\Km}, $\D^*\Km$, \D\Kstarm and neutral \B decays to $\D^{(*)}K^{(*)}$ have been reported~\cite{BabarGLW_latest,BabarADS_latest,BaBar-Gamma-2013,BaBarGGSZ,BaBar_B0,BelleGLW_latest,BelleADS_latest,BelleGGSZ}. A combination of measurements from BaBar and Belle experiments separately obtained results of $\Pgamma = (69^{+17}_{-16})^{\circ}$ and $\Pgamma = (68^{+15}_{-14})^{\circ}$ respectively, where the first uncertainty is statistical, the second is systematic and the third is model uncertainty~\cite{Babar_gamma,Belle_gamma}.
 
 The \decay{\Bm}{\D\Kstarm} channel is analogous to the frequently used \decay{\Bm}{\D\Km} decay in its physical properties, as well as having a comparable branching fraction of $5.3 \times 10^{-4}$~\cite{PDG2016}. However, prior to the work presented in this thesis, the \decay{\Bm}{\D\Kstarm} channel had not been investigated at \lhcb. The \Kstarm decays almost exclusively to \Kz\pim and \Km\piz final states, both of which involve a neutral particle. This makes \decay{\Bm}{\D\Kstarm} decays much more difficult to reconstruct at \lhcb than \decay{\Bm}{\D\Km} decays, resulting in the \decay{\Bm}{\D\Kstarm} channel having a lower sensitivity to \Pgamma. However, the \decay{\Bm}{\D\Kstarm} channel contains fewer problematic backgrounds, and the unknown hadronic parameters of the \decay{\Bm}{\D\Kstarm} decay, \rb and \deltab, can be accessed. Furthermore, by measuring \Pgamma in as many different channels as possible, the uncertainty on the combined measurement of \Pgamma will be reduced, and the consistency of the result between channels can be verified. 
 
@@ -418,4 +425,4 @@ In this analysis, the \decay{\Bm}{\D\Kstarm} channel is investigated, with \deca
 
 \section{Analysis overview}
 
-The work presented in this thesis measures the \CP observables in \decay{\Bm}{\D\Kstarm} decays as well as considering the interpretation of these observables in terms of \rb, \deltab and \Pgamma. The analysis strategy is to first develop a procedure, based on our understanding of the data, to select \decay{\Bm}{\D(\Km\pip)\Kstarm} and \kpipipi signal decays while removing unwanted background events, discussed in \sect\ref{sec:selection}. The same selection with a few adjustments can subsequently be applied to the other two- and four-body \D decay modes. After applying this selection, a fit model is developed to describe the \B mass distribution of the remaining \decay{\Bm}{\D(\Km\pip)\Kstarm} and \kpipipi candidates, detailed in \sect\ref{sec:massfit}. Using the fit model developed based on these modes, a simultaneous fit is then performed to all seven \D modes, separated by \B charge, to extract the \CP observables, detailed in Chapter \ref{ch:5-cpfit}. Chapter \ref{ch:6-interpretation} discusses a determination of $\kappa$ using \eqn\ref{kappadefinition} as well as the interpretation of the \CP observables, using \eqns\ref{exp_Acp} - \ref{exp_Rpm4body}, in terms of the physics parameters \rb, \deltab and \Pgamma.
+The work presented in this thesis measures the \CP observables in \decay{\Bm}{\D\Kstarm} decays as well as considering the interpretation of these observables in terms of \rb, \deltab and \Pgamma. The analysis strategy is first to develop a procedure, based on our understanding of the data, to select \decay{\Bm}{\D(\Km\pip)\Kstarm} and \kpipipi signal decays while removing unwanted background events, discussed in \sect\ref{sec:selection}. The same selection with a few adjustments can subsequently be applied to the other two- and four-body \D decay modes. After applying this selection, a fit model is developed to describe the \B mass distribution of the remaining \decay{\Bm}{\D(\Km\pip)\Kstarm} and \kpipipi candidates, detailed in \sect\ref{sec:massfit}. Using the fit model developed based on these modes, a simultaneous fit is then performed to all seven \D modes, separated by \B charge, to extract the \CP observables, detailed in Chapter \ref{ch:5-cpfit}. Chapter \ref{ch:6-interpretation} discusses a determination of $\kappa$ using \eqn\ref{kappadefinition} as well as the interpretation of the \CP observables, using \eqns\ref{exp_Acp} - \ref{exp_Rpm4body}, in terms of the physics parameters \rb, \deltab and \Pgamma.
