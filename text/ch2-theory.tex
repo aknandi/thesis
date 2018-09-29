@@ -73,15 +73,16 @@ The SM satisfies the \CP violation condition for baryogenesis, however the amoun
 where \D represents a  superposition of \Dz and \Dzb mesons.
 \item \textbf{Indirect \CP violation in mixing}: Neutral mesons can oscillate between their particle and antiparticle states, $\Bz \leftrightarrow \Bzb$, as shown in \fig\ref{mixing}. Indirect \CP violation occurs when \decay{\Bz}{\Bzb} and \decay{\Bzb}{\Bz} proceed at different rates, \eg
 \begin{equation*}
-\Gamma\left(\decay{\Bz}{\decay{\Bzb}{X}}\right) \neq \Gamma\left(\decay{\Bzb}{\decay{\Bz} \text{ ,}{\bar{X}}}\right)
+\Gamma\left(\decay{\Bz}{\decay{\Bzb}{X}}\right) \neq \Gamma\left(\decay{\Bzb}{\decay{\Bz}{\bar{X}}}\right) \text{ ,}
 \end{equation*}
 where $X$ is some measured final state accessible to both \Bz and \Bzb.
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.5\linewidth]{figures/theory/mixing.pdf}
-\caption{Feynman diagram of mixing between $\Bz_q$ and $\Bzb_q$, where $q$ represents a \dquark or \squark quark.}
-\label{mixing}
-\end{figure}
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=0.5\linewidth]{figures/theory/mixing.pdf}
+%\caption{Feynman diagram of mixing between $\Bz_q$ and $\Bzb_q$, where $q$ represents a \dquark or \squark quark.}
+%\label{mixing}
+%\end{figure}
+\input{text/FD_Bmixing}
 \item \textbf{\CP violation from the interference of mixing and decay}: This is best illustrated by an example. A \Bs meson (containing a \bquark quark and \squark antiquark) can decay to a \Dsm\Kp or \Dsp\Km final state. However, this process can also proceed via \decay{\Bs}{\Bsb} mixing, where the \Bsb decays to \Dsm\Kp or \Dsp\Km. These decay paths to the same final state interfere with each other, which results in the third form of \CP violation, illustrated by 
 \begin{equation*}
 \Gamma\left(\decay{\Bs}{\Dsm\Kp}\right) \neq \Gamma\left(\decay{\Bs}{\decay{\Bsb}{\Dsm\Kp}}\right)
@@ -145,7 +146,7 @@ Verifying the unitarity of the CKM matrix is of the utmost importance since non-
 
 The values of $\alpha$, $\beta$ and \Pgamma can be accessed by looking at various \B meson decays. The current best measurements for these values are $\alpha = \left(87.6^{+3.5}_{-3.3}\right)^{\circ}$, $\beta = 21.85^{+0.68}_{-0.67}$ and $\Pgamma = \left(72.2^{+6.8}_{-7.3}\right)^{\circ}$~\cite{PDG2016,LHCb-PAPER-2016-032}. Overconstraining this unitarity triangle allows verification as to whether or not the triangle closes, i.e. whether it truly is a triangle. Obtaining inconsistent results from overconstraining would suggest that the CKM matrix is not unitary, which would be incompatible with the SM. 
 
-The CKM angle $\Pgamma \equiv \arg\left(-\frac{\Vud{\Vub}^*}{\Vcd{\Vcb}^*}\right)$ is the angle with the largest uncertainty. This angle is measured using the \lhcb detector from the rates of charged and neutral \B decays to a \D meson (reconstructed in one of a variety of final states) and kaons or pions. These are known as direct measurements. In order to obtain the most precise direct measurement of \Pgamma, the individual measurements from each of these \Pgamma-sensitive decays are combined to produce a single value with a lower uncertainty. The latest published \lhcb combination is $\Pgamma = \left(72.2^{+6.8}_{-7.3}\right)^{\circ}$~\cite{LHCb-PAPER-2016-032}. This is the most precise determination of \Pgamma from direct measurements from a single experiment; other experiments are consistent, but less precise~\cite{Babar_gamma,Belle_gamma}. These measurements involve only tree level process, making them theoretically clean. New particles that are not predicted in the SM can only contribute at higher order, and are therefore highly suppressed. As \Pgamma can be determined at tree-level, direct measurements of this angle are dominated by SM contributions.
+The CKM angle $\Pgamma \equiv \arg\left(-\frac{\Vud{\Vub}^*}{\Vcd{\Vcb}^*}\right)$ is the angle with the largest uncertainty. This angle is measured using the \lhcb detector from the rates of charged and neutral \B decays to a \D meson (reconstructed in one of a variety of final states) and kaons or pions. These are known as direct measurements. In order to obtain the most precise direct measurement of \Pgamma, the individual measurements from each of these \Pgamma-sensitive decays are combined to produce a single value with a lower uncertainty. The latest published \lhcb combination is $\Pgamma = \left(72.2^{+6.8}_{-7.3}\right)^{\circ}$~\cite{LHCb-PAPER-2016-032}. This is the most precise determination of \Pgamma from direct measurements from a single experiment; other experiments are consistent, but less precise~\cite{Babar_gamma,Belle_gamma}. These measurements involve only tree level process, making them theoretically clean. New particles that are not predicted in the SM can only contribute at higher order, and are therefore highly suppressed.
 
 A global fit to the CKM triangle from CKMfitter~\cite{CKMFitter}, shown in \fig\ref{globalfit}, uses the current best measurements of various quantities, such as $\beta$, $\Delta m_d$ and $\Delta m_s$, as inputs, where $\Delta m_d$ and $\Delta m_s$ are the mass differences between the mass eigenstates of \Bz-\Bzb and \Bs-\Bsb respectively. When performing this fit any information on \Pgamma from direct measurements can be ignored. Assuming the SM, i.e. unitarity of CKM matrix, \Pgamma can be extracted from the global fit. This is known as an indirect measurement. The measurements for the inputs used include loop processes. The presence of loops in the corresponding Feynman diagrams allows additional Beyond the Standard Model diagrams, where new particles appear in the loop contributing to the amplitude at the same order. Therefore, these loop processes, and by extension the extracted indirect measurement of \Pgamma, are sensitive to New Physics. This method obtains a \Pgamma measurement of $(65.3^{+1.0}_{-2.5})^{\circ}$, where this determination of \Pgamma excludes all direct measurements and assumes the SM. The leading theoretical uncertainties on the indirect measurement are from lattice QCD, therefore these uncertainties are expected to decrease as lattice QCD calculations become more accurate. 
 \begin{figure}[!ht]

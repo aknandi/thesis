@@ -229,7 +229,7 @@ $\epsilon_{\text{bdt}}(\pi K\pi\pi)$ & $0.938 \pm 0.010$ & $0.838 \pm 0.009$ & $
 \subsubsection{PID efficiencies}
 \label{sec:cpfit:efficiencies:pid}
 
-The selections for the different \Dz decays modes are almost identical apart from the PID requirements. The PID power of the detector for hadrons originates primarily from the \rich detectors~\cite{LHCb-DP-2012-003,richrun2}. As PID variables are poorly modelled in \lhcb simulation, the efficiencies for the various PID selections are determined from data using calibration samples containing a known particle type for protons, kaons and pions, \eg~\decay{\Dz}{\Km\pip} and \decay{\KS}{\pim\pip}~\cite{LHCb-PUB-2016-021,LHCb-PUB-2016-005}. The PID efficiency varies as a function of momentum and pseudorapidity, therefore when calculating the PID efficiency for a specific decay channel, the calibration sample is reweighted based on the momentum and pseudorapidity distribution of the signal candidates. The uncertainties in the PID efficiencies originate from the limited size of the calibration samples, the limited size of the simulated signal samples, the reweighting procedure itself and the purity of the calibration samples.
+The selections for the different \Dz decays modes are almost identical apart from the PID requirements. The PID power of the detector for hadrons originates primarily from the \rich detectors~\cite{LHCb-DP-2012-003,richrun2}. As PID variables are poorly modelled in \lhcb simulation, the efficiencies for the various PID selections are determined from data using calibration samples containing a known particle type for protons, kaons and pions, \eg~\decay{\Dz}{\Km\pip} and \decay{\KS}{\pim\pip}. The PID efficiency varies as a function of momentum and pseudorapidity, therefore when calculating the PID efficiency for a specific decay channel, the calibration sample is reweighted based on the momentum and pseudorapidity distribution of the signal candidates. The uncertainties in the PID efficiencies originate from the limited size of the calibration samples, the limited size of the simulated signal samples, the reweighting procedure itself and the purity of the calibration samples.%~\cite{LHCb-PUB-2016-021,LHCb-PUB-2016-005}
 
 The PID efficiencies are calculated individually for each year of data-taking and each magnet polarity and are subsequently combined according to the efficiency-corrected yields in each of the samples. The results of the PID efficiencies are given in \tab\ref{pideff}. These efficiencies are used as fixed inputs in the \CP fit as described by \eqns\ref{effcorrectionglw2body} and \ref{effcorrectionglw4body}. 
 
@@ -546,21 +546,13 @@ $\mathcal{B}(\decay{\Dz}{\Km\pip\pim\pip})$ & $0.0811 \pm 0.0015$ \\
 $\mathcal{B}(\decay{\Dz}{\pip\pim\pip\pim})$ & $0.00745 \pm 0.00020$ \\
 \hline
 \end{tabular}
-\caption{Branching ratios for the different \Dz decay modes, which are used as fixed inputs in the \CP fit~\cite{PDG2014}.}
+\caption{Branching ratios for the different \Dz decay modes, which are used as fixed inputs in the \CP fit~\cite{PDG2016}.}
 \label{BR}
 \end{table}
 
-\subsubsection{Simulation efficiencies}
+\subsubsection{Selection, PID and veto efficiencies}
 
-Selection and BDT efficiencies enter into the \CP fit as in \eqns\ref{effcorrectionglw2body}, \ref{effcorrectionglw4body}, \ref{effcorrectionads2body} and \ref{effcorrectionads4body}. The values used in the \CP fit are shown in Tables~\ref{seleff} and \ref{bdteff} along with their uncertainties. The systematic uncertainty, due to using the efficiencies as fixed values in the \CP fit, is calculated using Method 1, where the uncertainties in the efficiencies are used as the scale of the variation.
-
-\subsubsection{PID efficiencies}
-
-PID efficiencies are used as fixed inputs in the \CP fit as shown in \eqns\ref{effcorrectionglw2body} and \ref{effcorrectionglw4body}, and the values used are shown in \tab\ref{pideff}. The systematic uncertainty is calculated using Method 1, where the uncertainties in the efficiencies are used as the scale of the variation.
-
-\subsubsection{Veto efficiencies}
-
-Efficiencies enter into the \CP fit to correct for the veto applied in the two- and four-body ADS modes, as in \eqns\ref{effcorrectionads2body} and \ref{effcorrectionads4body}, with the actual values used shown in \tab\ref{vetoeff} along with their uncertainties. The systematic uncertainty from using these values as fixed inputs is calculated using Method 1, where the uncertainties in the efficiencies are used as the scale of the variation.
+Selection, BDT, PID and veto efficiencies enter into the \CP fit as in \eqns\ref{effcorrectionglw2body}, \ref{effcorrectionglw4body}, \ref{effcorrectionads2body} and \ref{effcorrectionads4body}. The values used in the \CP fit are shown in Tables~\ref{seleff}, \ref{bdteff}, \ref{pideff} and \ref{vetoeff} along with their uncertainties. The systematic uncertainty, due to using the efficiencies as fixed values in the \CP fit, is calculated using Method 1, where the uncertainties in the efficiencies are used as the scale of the variation.
 
 \subsubsection{Asymmetry corrections}
 
@@ -628,13 +620,13 @@ The shape parameter of the combinatorial background, $\beta$, defined in \sect~\
 \begin{figure}[h]
 \centering
 \includegraphics[width=\linewidth]{figures/fitComponents/combinatoricFits_DD.pdf}
-\put(-380,150) {(a)}
-\put(-270,150) {(b)}
-\put(-160,150) {(c)}
-\put(-50,150) {(d)}
-\put(-380,50) {(e)}
-\put(-270,50) {(f)}
-\put(-160,50) {(g)}
+\put(-365,345) {(a)}
+\put(-230,345) {(b)}
+\put(-95,345) {(c)}
+\put(-365,210) {(d)}
+\put(-230,210) {(e)}
+\put(-95,210) {(f)}
+\put(-230,75) {(g)}
 \caption{Maximum likelihood fits to the combinatorial background in the high \Bm mass region for DD candidates for the \Dz decay to (a) \Km\pip, (b) \Km\Kp, (c) \pim\pip, (d) \pim\Kp, (e) \Km\pip\pim\pip, (f) \pim\pip\pim\pip, and (g) \pim\Kp\pim\pip. The fitted values for the exponential slope parameter, $\beta$, are given on each plot in units $\mevcc^{-1}$.}
 \label{combinatoricDD}
 \end{figure}
@@ -729,7 +721,7 @@ R_{ADS}^{K\pi} &= &\ &0.011&\ &\pm&\ &0.004&\ &\pm&\ &0.001& \\
 A_{ADS}^{K\pi\pi\pi} &= &\ -&0.45&\ &\pm&\ &0.21&\ &\pm&\ &0.14& \\
 R_{ADS}^{K\pi\pi\pi} &= &\ &0.011&\ &\pm&\ &0.005&\ &\pm&\ &0.003& \text{ ,}
 \end{alignat*}
-where the first uncertainty is statistical and the second is systematic. The measured asymmetries and ratios for the two-body \Dz meson decay modes are consistent with, and more precise than, the previous measurements from \babar~\cite{BaBarDKstar}, which are
+where the first uncertainty is statistical and the second is systematic. These uncertainties a factor of 3 to 5 larger than those obtained from the equivalent modes in the \decay{\Bm}{\D\Km} channel. The measured asymmetries and ratios for the two-body \Dz meson decay modes are consistent with, and more precise than, the previous measurements from \babar~\cite{BaBarDKstar}, which are
 \begin{alignat*}{13}
 A_{ADS}^{K\pi} &= &\ -&0.34&\ &\pm&\ &0.43&\ &\pm&\ &0.16& \\
 R_{ADS}^{K\pi} &= &\ &0.066&\ &\pm&\ &0.031&\ &\pm&\ &0.010& \text{ ,}

@@ -7,43 +7,50 @@
 
 \clearpage
 
-\chapter{\label{sec:app:stripping}Stripping requirements}
+\chapter{\label{sec:app:variables}Distributions of BDT input variables}
 
-\minitoc
+%\minitoc
 
-$B^{\pm} \to DK^{*\pm}$ candidates were selected using stripping lines in the {\tt BHADRON} stripping stream, {\tt B2D0KsPiLLD2HHBeauty2CharmLine} and {\tt B2D0KsPiDDD2HHBeauty2CharmLine}. The stripping requirements are summarized in Table \ref{strippingrequirements}. These stripping lines also have the requirement that one of the following Hlt2 trigger lines must be fired: Hlt2Topo.*DecisionTIS, Hlt2Topo.*DecisionTOS, Hlt2IncPhi.*DecisionTIS or Hlt2IncPhi.*DecisionTOS.
+Figures \ref{BDTinputdist4bodyLL} and \ref{BDTinputdist4bodyDD} show the distributions of the four-body BDT input variables in the signal and background training samples.
 
-\begin{table}[h]
+\begin{figure}
 \centering
-\begin{tabular}{lll}
-\hline
-Particle & Variable & Cut value \\
-\hline
-Charged track & $p_T$ & $>$ 100 \mevc \\
-& $p$ & $>$ 1000 \mevc \\
-& Min IP $\chi^2$ & $>$ 4 \\
-\hline
-\KS & $p_T$ & $>$ 250 \mevc \\
-& Vertex $\chi^2$/ndof & $<$ 25 \\
-& \textbar M(\KS) - 497.6 \mevcc \textbar & $<$ 35 \mevcc for LL, 64 \mevcc for DD \\
-& Measured mass (MM) & $\in$ [467,527] \mevcc \\
-\hline
-\KS daughters & $p$ & $>$ 2 \gevc \\
-& Min IP $\chi2$ PV & $>$ 9 for LL, 4 for DD \\ 
-\hline
-Bachelor pion & Track $\chi^2$/ndof & $<$ 2.5 ($<$ 4 in S26) \\
-& $p_T$ & $>$ 250 \mevc \\
-& $p$ & $>$ 2500 \mevc \\
-\hline
-\Bpm & Vertex $\chi^2$/ndof & $<$ 10 \\
-& Min IP $\chi^2$ & $<$ 25 \\
-& $\tau$ & $>$ 0.2 ps \\
-& cos($\theta_{dira}$) & $>$ 0.999 \\
-& M(\Dz\KS\pion) & $\in$ [4750,5800] \mevcc \\
-\hline
-\end{tabular}
-\caption{Summary of the stripping selection requirements for \decay{\Bpm}{\D\Kstarpm} candidates}
-\label{strippingrequirements}
-\end{table}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_LL_log_Ks_IPCHI2_OWNPV_.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_LL_log_max_Ksh_IPCHI2_OWNPV_.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_LL_log_min_Ksh_IPCHI2_OWNPV_.pdf}
+\hfill
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_LL_log_D0_IPCHI2_OWNPV_.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_LL_log_Dh1_IPCHI2_OWNPV_.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_LL_log_Dhss_IPCHI2_OWNPV_.pdf}
+\hfill
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_LL_log_Bu_D0constKS0constPVconst_CHI2NDOF_.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_LL_log_Bu_IPCHI2_OWNPV_.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_LL_log_Bach_IPCHI2_OWNPV_.pdf}
+\hfill
+\includegraphics[width=0.3\linewidth]{{figures/selection/BDTvariables/BDT_Var_KPiPiPi_LL_Bu_ptasy_1.50}.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_LL_log_max_Dh_IPCHI2_OWNPV_.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_LL_log_min_Dh_IPCHI2_OWNPV_.pdf}
+\caption{Distributions of the input variables using the signal (blue) and background (red) training samples for the four-body LL BDT. The variable $A_{\pt}$ represents the \pt asymmetry as defined in \eqn~\ref{ptasy} and ``max (min) \KS daughter \chisqip'' refers to the \chisqip of the \KS daughter which has the largest (smallest) \chisqip. The particle name ``D daughter ss'' refers to the pion from the \Dz meson which has the same sign as the kaon. All distributions have been normalised to unity in order to easily compare their shape, therefore the vertical axis is not labelled as it is not of interest here.}
+\label{BDTinputdist4bodyLL}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_DD_log_D0_IPCHI2_OWNPV_.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_DD_log_Dh1_IPCHI2_OWNPV_.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_DD_log_Dhss_IPCHI2_OWNPV_.pdf}
+\hfill
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_DD_log_Bu_D0constKS0constPVconst_CHI2NDOF_.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_DD_log_Bu_IPCHI2_OWNPV_.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_DD_log_Bach_IPCHI2_OWNPV_.pdf}
+\hfill
+\includegraphics[width=0.3\linewidth]{{figures/selection/BDTvariables/BDT_Var_KPiPiPi_DD_Bu_ptasy_1.50}.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_DD_Ks_PT.pdf}
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_DD_log_max_Dh_IPCHI2_OWNPV_.pdf}
+\hfill
+\includegraphics[width=0.3\linewidth]{figures/selection/BDTvariables/BDT_Var_KPiPiPi_LL_log_min_Dh_IPCHI2_OWNPV_.pdf}
+\caption{Distributions of the input variables using the signal (blue) and background (red) training samples for the four-body DD BDT. The variable $A_{\pt}$ represents the \pt asymmetry as defined in \eqn~\ref{ptasy}. The particle name ``D daughter ss'' refers to the pion from the \Dz meson which has the same sign as the kaon. All distributions have been normalised to unity in order to easily compare their shape, therefore the vertical axis is not labelled as it is not of interest here.}
+\label{BDTinputdist4bodyDD}
+\end{figure}
 
 \clearpage

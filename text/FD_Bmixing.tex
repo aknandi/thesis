@@ -1,0 +1,41 @@
+\begin{figure}[!h]
+\centering
+	\begin{tikzpicture}[scale=0.98]
+        % MAP OUT VERTICES (I have 8 of them)
+        \coordinate (a) at (0,3); %b quark start
+        \coordinate (b) at (0,1); %ubar quark start
+        \coordinate (c) at (6,1); %ubar quark end
+        \coordinate (d) at (6,3); %c quark end
+        \coordinate (e) at (2,1); %start the W-
+        \coordinate (f) at (4,1); %start the W+
+        \coordinate (g) at (2,3); %end the W-
+        \coordinate (h) at (4,3); %end the W+
+        % DRAW LINES
+        \draw[antiparticle] (a)  -- (g); %dbar quark
+        \draw[antiparticle] (g)  -- (h); %u,c,t bar quark
+        \draw[antiparticle] (h)  -- (d); %bbar quark
+        \draw[particle] (b)  -- (e); %b quark
+        \draw[particle] (e)  -- (f); %u,c,t quark 
+        \draw[particle] (f)  -- (c); %d quark 
+        \draw[photon] (e) -- (g); %W-
+        \draw[photon] (f) -- (h); %W+
+        %DRAW LABELS
+        \node at ($(a)$) [label={[label distance=-4mm] $\bar{\rm d}$},left] {};
+        \node at ($(b)$) [label={[label distance=-4mm] b},left] {};
+        \node at ($(c)$) [label={[label distance=-4mm] d},right]{};
+        \node at ($(d)$) [label={[label distance=-4mm] $\bar{\rm b}$},right] {};
+        \node at ($(e)$) [label={[xshift=20pt,yshift=-25pt] u, c, t},right] {};
+        \node at ($(g)$) [label={[xshift=20pt,yshift=-3pt] $\bar{\rm u}$, $\bar{\rm c}$, $\bar{\rm t}$},right] {};
+        \node at ($(e)$) [label={[xshift=-20pt,yshift=10pt] $W^-$},above] {};
+		\node at ($(f)$) [label={[xshift=20pt,yshift=10pt] $W^+$},above] {};
+		
+        %ADD BRACES
+        \draw
+        [black,decorate,decoration={brace,amplitude=5pt},xshift=-20pt,yshift=0pt]
+          (0,0.8)  -- (0,3.2) node [black,midway,left=0pt,xshift=-5pt]{$\Bz$};
+         \draw 	[black,decorate,decoration={brace,amplitude=5pt},xshift=20pt,yshift=0pt]
+          (6,3.2)  -- (6,0.8) node [black,midway,right=0pt,xshift=5pt] {$\Bzb$};
+	\end{tikzpicture}
+\caption{Feynman diagram of mixing between \Bz and \Bzb.}
+\label{mixing}
+\end{figure}
