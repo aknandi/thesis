@@ -310,7 +310,22 @@ The decay \decay{\Bm}{\D\KS\Km} has a branching fraction of $5.5 \times 10^{-4}$
 
 Various selection requirements are placed on individual variables relating to particles in the decay chain in order to reduce specific background contributions. However, to achieve a much lower combinatorial background while retaining signal events requires more sophisticated classification techniques. As many variables are correlated with one another, the ability to separate signal from combinatorial background can be improved by using a multivariate analysis (MVA) method, which exploits correlations between the variables. 
 
-The MVA implemented in this analysis is a Boosted Decision Tree (BDT)~\cite{Breiman}. Decision trees take a given set of variables from signal and background training samples and construct an algorithm to decide whether a given event corresponds to signal or background. Firstly, the best combination of variable and value is found to split events into two subsets in order to maximise separation signal and background. This process is then repeated with a different variable for each of the two subsets. Further repetitions of this process occur in order to build a tree, where the nodes at the end are called leaves. If more than half of the weight of a leaf corresponds to signal, it is a signal leaf, where each event is given a value of +1, otherwise it is a background leaf, where each event is given a value of -1. Signal events on a background leaf and background events on a signal leaf are deemed misclassified. In order to stabilise this process, many trees are built to construct a weighted average over all the trees. After each tree is built, the misclassified events are reweighted (boosted) and a new tree is build with the reweighted events. The boosting makes misclassified events more likely to be correctly classified in future trees; a particular type of boosting, called gradient boost, is used in this analysis. The result of the process assigns each event a weight from -1 (most background-like) to +1 (most signal-like). 
+The MVA implemented in this analysis is a Boosted Decision Tree (BDT)~\cite{Breiman}. Decision trees take a given set of variables from signal and background training samples and construct an algorithm to decide whether a given event corresponds to signal or background. Firstly, the best combination of variable and value is found to split events into two subsets in order to maximise separation signal and background. This process is then repeated with a different variable for each of the two subsets. Further repetitions of this process occur in order to build a tree, where the nodes at the end are called leaves, as illustrated in \fig\ref{decisiontree}. If more than half of the weight of a leaf corresponds to signal, it is a signal leaf, where each event is given a value of +1, otherwise it is a background leaf, where each event is given a value of -1. Signal events on a background leaf and background events on a signal leaf are deemed misclassified. In order to stabilise this process, many trees are built to construct a weighted average over all the trees. After each tree is built, the misclassified events are reweighted (boosted) and a new tree is build with the reweighted events. The boosting makes misclassified events more likely to be correctly classified in future trees; a particular type of boosting, called gradient boost, is used in this analysis. The result of the process assigns each event a weight from -1 (most background-like) to +1 (most signal-like). 
+
+\begin{figure}
+\centering
+\includegraphics[trim = 0mm 30mm 0mm 20mm, clip, width=0.5\linewidth]{figures/selection/BDTtree.pdf}
+\put(-160,80) {$x > 5$}
+\put(-80,80) {$x < 5$}
+\put(-200,40) {$y > 3$}
+\put(-135,43) {$y < 3$} %(-125,33)
+\put(-100,49) {$z > 1$}
+\put(-35,40) {$z < 1$}
+\put(-43,60) {Node}
+\put(-13,10) {Leaf}
+\caption{Schematic diagram of a decision tree, where $x$, $y$, and $z$ represent variable names.}
+\label{decisiontree}
+\end{figure}
 
 \subsubsection{Training samples}
 
@@ -538,7 +553,7 @@ As some differences are found, data samples are split into the following categor
 \subsection{Maximum and extended maximum likelihood}
 \label{sec:massfit:likelihood}
 
-The maximum likelihood, or extended maximum likelihood, technique is used to find the best model parameters to describe the data~\cite{MLandEML,EML}. A model consists of a probability density function (PDF), $f(x;\theta)$, which is a function of a continuous random variable, $x$, and depends on various parameters, $\theta$, that control the shape of the distribution. The integral across an interval gives the probability that the value is within that interval, therefore the total PDF is normalised to unity. An experiment performs $n$ independent observations of $x$, $\{x_1, x_2, ..., x_n\}$. The likelihood is the probability, for given values of the parameters, of observing a particular dataset,
+The maximum likelihood, or extended maximum likelihood, technique is used to find the best model parameters to describe the data~\cite{MLandEML,EML}. A model consists of a probability density function (PDF), $f(x;\theta)$, which is a function of a continuous random variable, $x$, and depends on various parameters, $\theta$, that control the shape of the distribution. The integral across an interval gives the probability that the value is within that interval. Therefore the total PDF is normalised to unity. An experiment performs $n$ independent observations of $x$, $\{x_1, x_2, ..., x_n\}$. The likelihood is the probability, for given values of the parameters, of observing a particular dataset,
 \begin{equation}
 L(\theta;x) = \prod_{i=1}^{n} f(\theta;x_i).
 \end{equation}
