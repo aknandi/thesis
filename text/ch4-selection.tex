@@ -555,11 +555,11 @@ As some differences are found, data samples are split into the following categor
 
 The maximum likelihood, or extended maximum likelihood, technique is used to find the best model parameters to describe the data~\cite{MLandEML,EML}. A model consists of a probability density function (PDF), $f(x;\theta)$, which is a function of a continuous random variable, $x$, and depends on various parameters, $\theta$, that control the shape of the distribution. The integral across an interval gives the probability that the value is within that interval. Therefore the total PDF is normalised to unity. An experiment performs $n$ independent observations of $x$, $\{x_1, x_2, ..., x_n\}$. The likelihood is the probability, for given values of the parameters, of observing a particular dataset,
 \begin{equation}
-L(\theta;x) = \prod_{i=1}^{n} f(\theta;x_i).
+L(\theta) = \prod_{i=1}^{n} f(x_i;\theta).
 \end{equation}
 The parameters are extracted for a given dataset by finding the best combination of these parameters that maximise the likelihood~\cite{MLandEML}. The maximum likelihood technique can be extended to use the number of events described by the PDF as an extra freely-varying parameter~\cite{EML}. In this case, the likelihood is multiplied by a Poisson probability (of mean $N$) for observing a sample size $n$,
 \begin{equation}
-L(\theta, N;x) = \frac{e^{-N}}{n!}N^n \prod_{i=1}^{n} f(x_i;\theta) = \frac{e^{-N}}{n!} \prod_{i=1}^{n} N f(x_i;\theta) \text{ ,}
+L(\theta, N) = \frac{e^{-N}}{n!}N^n \prod_{i=1}^{n} f(x_i;\theta) = \frac{e^{-N}}{n!} \prod_{i=1}^{n} N f(x_i;\theta) \text{ ,}
 \end{equation}
 where $N$ is the expected number of events, a parameter to be determined. Maximising the extended likelihood, based on a given dataset, gives estimates for the shape parameters and number of events described by the PDF.
 
